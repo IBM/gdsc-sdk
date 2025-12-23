@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Information about aggregation.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3AggregationViewListObject {
   public static final String SERIALIZED_NAME_AGG_ACTION_ERROR = "agg_action_error";
   @SerializedName(SERIALIZED_NAME_AGG_ACTION_ERROR)
+  @javax.annotation.Nullable
   private String aggActionError;
 
   public static final String SERIALIZED_NAME_AGG_ACTION_HEALTH_STATUS = "agg_action_health_status";
   @SerializedName(SERIALIZED_NAME_AGG_ACTION_HEALTH_STATUS)
+  @javax.annotation.Nullable
   private Integer aggActionHealthStatus;
 
   public static final String SERIALIZED_NAME_AGG_TYPE = "agg_type";
   @SerializedName(SERIALIZED_NAME_AGG_TYPE)
+  @javax.annotation.Nullable
   private String aggType;
 
   public static final String SERIALIZED_NAME_ERROR = "error";
   @SerializedName(SERIALIZED_NAME_ERROR)
+  @javax.annotation.Nullable
   private Integer error;
 
   public static final String SERIALIZED_NAME_UNIT = "unit";
   @SerializedName(SERIALIZED_NAME_UNIT)
+  @javax.annotation.Nullable
   private String unit;
 
   public Guardiumconnectorv3AggregationViewListObject() {
   }
 
-  public Guardiumconnectorv3AggregationViewListObject aggActionError(String aggActionError) {
+  public Guardiumconnectorv3AggregationViewListObject aggActionError(@javax.annotation.Nullable String aggActionError) {
     this.aggActionError = aggActionError;
     return this;
   }
 
-   /**
+  /**
    * Aggregation action error.
    * @return aggActionError
-  **/
+   */
   @javax.annotation.Nullable
   public String getAggActionError() {
     return aggActionError;
   }
 
-  public void setAggActionError(String aggActionError) {
+  public void setAggActionError(@javax.annotation.Nullable String aggActionError) {
     this.aggActionError = aggActionError;
   }
 
 
-  public Guardiumconnectorv3AggregationViewListObject aggActionHealthStatus(Integer aggActionHealthStatus) {
+  public Guardiumconnectorv3AggregationViewListObject aggActionHealthStatus(@javax.annotation.Nullable Integer aggActionHealthStatus) {
     this.aggActionHealthStatus = aggActionHealthStatus;
     return this;
   }
 
-   /**
+  /**
    * Aggregation health status.
    * @return aggActionHealthStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getAggActionHealthStatus() {
     return aggActionHealthStatus;
   }
 
-  public void setAggActionHealthStatus(Integer aggActionHealthStatus) {
+  public void setAggActionHealthStatus(@javax.annotation.Nullable Integer aggActionHealthStatus) {
     this.aggActionHealthStatus = aggActionHealthStatus;
   }
 
 
-  public Guardiumconnectorv3AggregationViewListObject aggType(String aggType) {
+  public Guardiumconnectorv3AggregationViewListObject aggType(@javax.annotation.Nullable String aggType) {
     this.aggType = aggType;
     return this;
   }
 
-   /**
+  /**
    * Aggregation type.
    * @return aggType
-  **/
+   */
   @javax.annotation.Nullable
   public String getAggType() {
     return aggType;
   }
 
-  public void setAggType(String aggType) {
+  public void setAggType(@javax.annotation.Nullable String aggType) {
     this.aggType = aggType;
   }
 
 
-  public Guardiumconnectorv3AggregationViewListObject error(Integer error) {
+  public Guardiumconnectorv3AggregationViewListObject error(@javax.annotation.Nullable Integer error) {
     this.error = error;
     return this;
   }
 
-   /**
+  /**
    * Error code.
    * @return error
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getError() {
     return error;
   }
 
-  public void setError(Integer error) {
+  public void setError(@javax.annotation.Nullable Integer error) {
     this.error = error;
   }
 
 
-  public Guardiumconnectorv3AggregationViewListObject unit(String unit) {
+  public Guardiumconnectorv3AggregationViewListObject unit(@javax.annotation.Nullable String unit) {
     this.unit = unit;
     return this;
   }
 
-   /**
+  /**
    * Aggregator host name or IP address.
    * @return unit
-  **/
+   */
   @javax.annotation.Nullable
   public String getUnit() {
     return unit;
   }
 
-  public void setUnit(String unit) {
+  public void setUnit(@javax.annotation.Nullable String unit) {
     this.unit = unit;
   }
 
@@ -221,27 +227,22 @@ public class Guardiumconnectorv3AggregationViewListObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("agg_action_error");
-    openapiFields.add("agg_action_health_status");
-    openapiFields.add("agg_type");
-    openapiFields.add("error");
-    openapiFields.add("unit");
+    openapiFields = new HashSet<String>(Arrays.asList("agg_action_error", "agg_action_health_status", "agg_type", "error", "unit"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3AggregationViewListObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3AggregationViewListObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3AggregationViewListObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3AggregationViewListObject is not found in the empty JSON string", Guardiumconnectorv3AggregationViewListObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3AggregationViewListObject is not found in the empty JSON string", Guardiumconnectorv3AggregationViewListObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,18 +250,18 @@ public class Guardiumconnectorv3AggregationViewListObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3AggregationViewListObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3AggregationViewListObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3AggregationViewListObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("agg_action_error") != null && !jsonObj.get("agg_action_error").isJsonNull()) && !jsonObj.get("agg_action_error").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `agg_action_error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("agg_action_error").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `agg_action_error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("agg_action_error").toString()));
       }
       if ((jsonObj.get("agg_type") != null && !jsonObj.get("agg_type").isJsonNull()) && !jsonObj.get("agg_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `agg_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("agg_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `agg_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("agg_type").toString()));
       }
       if ((jsonObj.get("unit") != null && !jsonObj.get("unit").isJsonNull()) && !jsonObj.get("unit").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `unit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `unit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit").toString()));
       }
   }
 
@@ -293,22 +294,22 @@ public class Guardiumconnectorv3AggregationViewListObject {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3AggregationViewListObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3AggregationViewListObject
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3AggregationViewListObject
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3AggregationViewListObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3AggregationViewListObject
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3AggregationViewListObject
+   */
   public static Guardiumconnectorv3AggregationViewListObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3AggregationViewListObject.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3AggregationViewListObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3AggregationViewListObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

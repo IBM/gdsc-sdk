@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **classifications** | **List[str]** |  | [optional] 
-**pivot_type** | [**Riskanalyticsenginev3PivotType**](Riskanalyticsenginev3PivotType.md) |  | [optional] 
+**pivot_type** | [**Riskanalyticsenginev3PivotType**](Riskanalyticsenginev3PivotType.md) |  | [optional] [default to Riskanalyticsenginev3PivotType.UNDEFINED_PIVOT_TYPE]
 
 ## Example
 

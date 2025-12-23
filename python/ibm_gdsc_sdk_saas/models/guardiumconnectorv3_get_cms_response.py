@@ -75,9 +75,9 @@ class Guardiumconnectorv3GetCMsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in cms (list)
         _items = []
         if self.cms:
-            for _item in self.cms:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cms in self.cms:
+                if _item_cms:
+                    _items.append(_item_cms.to_dict())
             _dict['cms'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

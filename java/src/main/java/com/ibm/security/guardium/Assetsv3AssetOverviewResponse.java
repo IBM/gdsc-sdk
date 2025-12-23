@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,122 +53,137 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3AssetOverviewResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetOverviewResponse {
   public static final String SERIALIZED_NAME_ASSET_CLASSIFICATION = "asset_classification";
   @SerializedName(SERIALIZED_NAME_ASSET_CLASSIFICATION)
+  @javax.annotation.Nullable
   private Assetsv3AssetClassification assetClassification;
 
   public static final String SERIALIZED_NAME_ASSET_CONTROL = "asset_control";
   @SerializedName(SERIALIZED_NAME_ASSET_CONTROL)
+  @javax.annotation.Nullable
   private Assetsv3AssetControl assetControl;
 
   public static final String SERIALIZED_NAME_ASSET_ENDPOINTS = "asset_endpoints";
   @SerializedName(SERIALIZED_NAME_ASSET_ENDPOINTS)
+  @javax.annotation.Nullable
   private List<Assetsv3AssetEndpoint> assetEndpoints = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ASSET_INFORMATION = "asset_information";
   @SerializedName(SERIALIZED_NAME_ASSET_INFORMATION)
+  @javax.annotation.Nullable
   private Assetsv3AssetInformation assetInformation;
 
   public static final String SERIALIZED_NAME_ASSET_RESOURCE = "asset_resource";
   @SerializedName(SERIALIZED_NAME_ASSET_RESOURCE)
+  @javax.annotation.Nullable
   private Assetsv3AssetResourcesInfo assetResource;
 
   public static final String SERIALIZED_NAME_ASSET_RISK_EVENTS = "asset_risk_events";
   @SerializedName(SERIALIZED_NAME_ASSET_RISK_EVENTS)
+  @javax.annotation.Nullable
   private Assetsv3AssetRiskEvents assetRiskEvents;
 
   public static final String SERIALIZED_NAME_ASSET_SUBSCRIPTIONS = "asset_subscriptions";
   @SerializedName(SERIALIZED_NAME_ASSET_SUBSCRIPTIONS)
+  @javax.annotation.Nullable
   private List<Assetsv3AssetSubscription> assetSubscriptions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ASSET_TAGS = "asset_tags";
   @SerializedName(SERIALIZED_NAME_ASSET_TAGS)
+  @javax.annotation.Nullable
   private List<Assetsv3AssetTags> assetTags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ASSET_VA = "asset_va";
   @SerializedName(SERIALIZED_NAME_ASSET_VA)
+  @javax.annotation.Nullable
   private Assetsv3AssetVa assetVa;
 
   public static final String SERIALIZED_NAME_DROPDOWN_FLAG = "dropdown_flag";
   @SerializedName(SERIALIZED_NAME_DROPDOWN_FLAG)
+  @javax.annotation.Nullable
   private Integer dropdownFlag;
 
   public static final String SERIALIZED_NAME_ENTITY_TYPE = "entity_type";
   @SerializedName(SERIALIZED_NAME_ENTITY_TYPE)
+  @javax.annotation.Nullable
   private String entityType;
 
   public static final String SERIALIZED_NAME_EXTENDED_PROPERTIES = "extended_properties";
   @SerializedName(SERIALIZED_NAME_EXTENDED_PROPERTIES)
+  @javax.annotation.Nullable
   private List<Assetsv3ExtendedProp> extendedProperties = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MODEL_APPLICATION = "model_application";
   @SerializedName(SERIALIZED_NAME_MODEL_APPLICATION)
+  @javax.annotation.Nullable
   private List<Assetsv3ModelApplication> modelApplication = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MODEL_DATA = "model_data";
   @SerializedName(SERIALIZED_NAME_MODEL_DATA)
+  @javax.annotation.Nullable
   private List<Assetsv3ModelData> modelData = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_OVERVIEW_PARAMETERS = "overview_parameters";
   @SerializedName(SERIALIZED_NAME_OVERVIEW_PARAMETERS)
+  @javax.annotation.Nullable
   private List<Assetsv3OverviewParameter> overviewParameters = new ArrayList<>();
 
   public Assetsv3AssetOverviewResponse() {
   }
 
-  public Assetsv3AssetOverviewResponse assetClassification(Assetsv3AssetClassification assetClassification) {
+  public Assetsv3AssetOverviewResponse assetClassification(@javax.annotation.Nullable Assetsv3AssetClassification assetClassification) {
     this.assetClassification = assetClassification;
     return this;
   }
 
-   /**
+  /**
    * Get assetClassification
    * @return assetClassification
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3AssetClassification getAssetClassification() {
     return assetClassification;
   }
 
-  public void setAssetClassification(Assetsv3AssetClassification assetClassification) {
+  public void setAssetClassification(@javax.annotation.Nullable Assetsv3AssetClassification assetClassification) {
     this.assetClassification = assetClassification;
   }
 
 
-  public Assetsv3AssetOverviewResponse assetControl(Assetsv3AssetControl assetControl) {
+  public Assetsv3AssetOverviewResponse assetControl(@javax.annotation.Nullable Assetsv3AssetControl assetControl) {
     this.assetControl = assetControl;
     return this;
   }
 
-   /**
+  /**
    * Get assetControl
    * @return assetControl
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3AssetControl getAssetControl() {
     return assetControl;
   }
 
-  public void setAssetControl(Assetsv3AssetControl assetControl) {
+  public void setAssetControl(@javax.annotation.Nullable Assetsv3AssetControl assetControl) {
     this.assetControl = assetControl;
   }
 
 
-  public Assetsv3AssetOverviewResponse assetEndpoints(List<Assetsv3AssetEndpoint> assetEndpoints) {
+  public Assetsv3AssetOverviewResponse assetEndpoints(@javax.annotation.Nullable List<Assetsv3AssetEndpoint> assetEndpoints) {
     this.assetEndpoints = assetEndpoints;
     return this;
   }
@@ -180,78 +196,78 @@ public class Assetsv3AssetOverviewResponse {
     return this;
   }
 
-   /**
+  /**
    * Get assetEndpoints
    * @return assetEndpoints
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3AssetEndpoint> getAssetEndpoints() {
     return assetEndpoints;
   }
 
-  public void setAssetEndpoints(List<Assetsv3AssetEndpoint> assetEndpoints) {
+  public void setAssetEndpoints(@javax.annotation.Nullable List<Assetsv3AssetEndpoint> assetEndpoints) {
     this.assetEndpoints = assetEndpoints;
   }
 
 
-  public Assetsv3AssetOverviewResponse assetInformation(Assetsv3AssetInformation assetInformation) {
+  public Assetsv3AssetOverviewResponse assetInformation(@javax.annotation.Nullable Assetsv3AssetInformation assetInformation) {
     this.assetInformation = assetInformation;
     return this;
   }
 
-   /**
+  /**
    * Get assetInformation
    * @return assetInformation
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3AssetInformation getAssetInformation() {
     return assetInformation;
   }
 
-  public void setAssetInformation(Assetsv3AssetInformation assetInformation) {
+  public void setAssetInformation(@javax.annotation.Nullable Assetsv3AssetInformation assetInformation) {
     this.assetInformation = assetInformation;
   }
 
 
-  public Assetsv3AssetOverviewResponse assetResource(Assetsv3AssetResourcesInfo assetResource) {
+  public Assetsv3AssetOverviewResponse assetResource(@javax.annotation.Nullable Assetsv3AssetResourcesInfo assetResource) {
     this.assetResource = assetResource;
     return this;
   }
 
-   /**
+  /**
    * Get assetResource
    * @return assetResource
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3AssetResourcesInfo getAssetResource() {
     return assetResource;
   }
 
-  public void setAssetResource(Assetsv3AssetResourcesInfo assetResource) {
+  public void setAssetResource(@javax.annotation.Nullable Assetsv3AssetResourcesInfo assetResource) {
     this.assetResource = assetResource;
   }
 
 
-  public Assetsv3AssetOverviewResponse assetRiskEvents(Assetsv3AssetRiskEvents assetRiskEvents) {
+  public Assetsv3AssetOverviewResponse assetRiskEvents(@javax.annotation.Nullable Assetsv3AssetRiskEvents assetRiskEvents) {
     this.assetRiskEvents = assetRiskEvents;
     return this;
   }
 
-   /**
+  /**
    * Get assetRiskEvents
    * @return assetRiskEvents
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3AssetRiskEvents getAssetRiskEvents() {
     return assetRiskEvents;
   }
 
-  public void setAssetRiskEvents(Assetsv3AssetRiskEvents assetRiskEvents) {
+  public void setAssetRiskEvents(@javax.annotation.Nullable Assetsv3AssetRiskEvents assetRiskEvents) {
     this.assetRiskEvents = assetRiskEvents;
   }
 
 
-  public Assetsv3AssetOverviewResponse assetSubscriptions(List<Assetsv3AssetSubscription> assetSubscriptions) {
+  public Assetsv3AssetOverviewResponse assetSubscriptions(@javax.annotation.Nullable List<Assetsv3AssetSubscription> assetSubscriptions) {
     this.assetSubscriptions = assetSubscriptions;
     return this;
   }
@@ -264,21 +280,21 @@ public class Assetsv3AssetOverviewResponse {
     return this;
   }
 
-   /**
+  /**
    * Get assetSubscriptions
    * @return assetSubscriptions
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3AssetSubscription> getAssetSubscriptions() {
     return assetSubscriptions;
   }
 
-  public void setAssetSubscriptions(List<Assetsv3AssetSubscription> assetSubscriptions) {
+  public void setAssetSubscriptions(@javax.annotation.Nullable List<Assetsv3AssetSubscription> assetSubscriptions) {
     this.assetSubscriptions = assetSubscriptions;
   }
 
 
-  public Assetsv3AssetOverviewResponse assetTags(List<Assetsv3AssetTags> assetTags) {
+  public Assetsv3AssetOverviewResponse assetTags(@javax.annotation.Nullable List<Assetsv3AssetTags> assetTags) {
     this.assetTags = assetTags;
     return this;
   }
@@ -291,78 +307,78 @@ public class Assetsv3AssetOverviewResponse {
     return this;
   }
 
-   /**
+  /**
    * Get assetTags
    * @return assetTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3AssetTags> getAssetTags() {
     return assetTags;
   }
 
-  public void setAssetTags(List<Assetsv3AssetTags> assetTags) {
+  public void setAssetTags(@javax.annotation.Nullable List<Assetsv3AssetTags> assetTags) {
     this.assetTags = assetTags;
   }
 
 
-  public Assetsv3AssetOverviewResponse assetVa(Assetsv3AssetVa assetVa) {
+  public Assetsv3AssetOverviewResponse assetVa(@javax.annotation.Nullable Assetsv3AssetVa assetVa) {
     this.assetVa = assetVa;
     return this;
   }
 
-   /**
+  /**
    * Get assetVa
    * @return assetVa
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3AssetVa getAssetVa() {
     return assetVa;
   }
 
-  public void setAssetVa(Assetsv3AssetVa assetVa) {
+  public void setAssetVa(@javax.annotation.Nullable Assetsv3AssetVa assetVa) {
     this.assetVa = assetVa;
   }
 
 
-  public Assetsv3AssetOverviewResponse dropdownFlag(Integer dropdownFlag) {
+  public Assetsv3AssetOverviewResponse dropdownFlag(@javax.annotation.Nullable Integer dropdownFlag) {
     this.dropdownFlag = dropdownFlag;
     return this;
   }
 
-   /**
+  /**
    * Get dropdownFlag
    * @return dropdownFlag
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDropdownFlag() {
     return dropdownFlag;
   }
 
-  public void setDropdownFlag(Integer dropdownFlag) {
+  public void setDropdownFlag(@javax.annotation.Nullable Integer dropdownFlag) {
     this.dropdownFlag = dropdownFlag;
   }
 
 
-  public Assetsv3AssetOverviewResponse entityType(String entityType) {
+  public Assetsv3AssetOverviewResponse entityType(@javax.annotation.Nullable String entityType) {
     this.entityType = entityType;
     return this;
   }
 
-   /**
+  /**
    * Get entityType
    * @return entityType
-  **/
+   */
   @javax.annotation.Nullable
   public String getEntityType() {
     return entityType;
   }
 
-  public void setEntityType(String entityType) {
+  public void setEntityType(@javax.annotation.Nullable String entityType) {
     this.entityType = entityType;
   }
 
 
-  public Assetsv3AssetOverviewResponse extendedProperties(List<Assetsv3ExtendedProp> extendedProperties) {
+  public Assetsv3AssetOverviewResponse extendedProperties(@javax.annotation.Nullable List<Assetsv3ExtendedProp> extendedProperties) {
     this.extendedProperties = extendedProperties;
     return this;
   }
@@ -375,21 +391,21 @@ public class Assetsv3AssetOverviewResponse {
     return this;
   }
 
-   /**
+  /**
    * Get extendedProperties
    * @return extendedProperties
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ExtendedProp> getExtendedProperties() {
     return extendedProperties;
   }
 
-  public void setExtendedProperties(List<Assetsv3ExtendedProp> extendedProperties) {
+  public void setExtendedProperties(@javax.annotation.Nullable List<Assetsv3ExtendedProp> extendedProperties) {
     this.extendedProperties = extendedProperties;
   }
 
 
-  public Assetsv3AssetOverviewResponse modelApplication(List<Assetsv3ModelApplication> modelApplication) {
+  public Assetsv3AssetOverviewResponse modelApplication(@javax.annotation.Nullable List<Assetsv3ModelApplication> modelApplication) {
     this.modelApplication = modelApplication;
     return this;
   }
@@ -402,21 +418,21 @@ public class Assetsv3AssetOverviewResponse {
     return this;
   }
 
-   /**
+  /**
    * Get modelApplication
    * @return modelApplication
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ModelApplication> getModelApplication() {
     return modelApplication;
   }
 
-  public void setModelApplication(List<Assetsv3ModelApplication> modelApplication) {
+  public void setModelApplication(@javax.annotation.Nullable List<Assetsv3ModelApplication> modelApplication) {
     this.modelApplication = modelApplication;
   }
 
 
-  public Assetsv3AssetOverviewResponse modelData(List<Assetsv3ModelData> modelData) {
+  public Assetsv3AssetOverviewResponse modelData(@javax.annotation.Nullable List<Assetsv3ModelData> modelData) {
     this.modelData = modelData;
     return this;
   }
@@ -429,21 +445,21 @@ public class Assetsv3AssetOverviewResponse {
     return this;
   }
 
-   /**
+  /**
    * Get modelData
    * @return modelData
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ModelData> getModelData() {
     return modelData;
   }
 
-  public void setModelData(List<Assetsv3ModelData> modelData) {
+  public void setModelData(@javax.annotation.Nullable List<Assetsv3ModelData> modelData) {
     this.modelData = modelData;
   }
 
 
-  public Assetsv3AssetOverviewResponse overviewParameters(List<Assetsv3OverviewParameter> overviewParameters) {
+  public Assetsv3AssetOverviewResponse overviewParameters(@javax.annotation.Nullable List<Assetsv3OverviewParameter> overviewParameters) {
     this.overviewParameters = overviewParameters;
     return this;
   }
@@ -456,16 +472,16 @@ public class Assetsv3AssetOverviewResponse {
     return this;
   }
 
-   /**
+  /**
    * Get overviewParameters
    * @return overviewParameters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3OverviewParameter> getOverviewParameters() {
     return overviewParameters;
   }
 
-  public void setOverviewParameters(List<Assetsv3OverviewParameter> overviewParameters) {
+  public void setOverviewParameters(@javax.annotation.Nullable List<Assetsv3OverviewParameter> overviewParameters) {
     this.overviewParameters = overviewParameters;
   }
 
@@ -542,37 +558,22 @@ public class Assetsv3AssetOverviewResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("asset_classification");
-    openapiFields.add("asset_control");
-    openapiFields.add("asset_endpoints");
-    openapiFields.add("asset_information");
-    openapiFields.add("asset_resource");
-    openapiFields.add("asset_risk_events");
-    openapiFields.add("asset_subscriptions");
-    openapiFields.add("asset_tags");
-    openapiFields.add("asset_va");
-    openapiFields.add("dropdown_flag");
-    openapiFields.add("entity_type");
-    openapiFields.add("extended_properties");
-    openapiFields.add("model_application");
-    openapiFields.add("model_data");
-    openapiFields.add("overview_parameters");
+    openapiFields = new HashSet<String>(Arrays.asList("asset_classification", "asset_control", "asset_endpoints", "asset_information", "asset_resource", "asset_risk_events", "asset_subscriptions", "asset_tags", "asset_va", "dropdown_flag", "entity_type", "extended_properties", "model_application", "model_data", "overview_parameters"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetOverviewResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetOverviewResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetOverviewResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetOverviewResponse is not found in the empty JSON string", Assetsv3AssetOverviewResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetOverviewResponse is not found in the empty JSON string", Assetsv3AssetOverviewResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -580,7 +581,7 @@ public class Assetsv3AssetOverviewResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetOverviewResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetOverviewResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetOverviewResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -597,7 +598,7 @@ public class Assetsv3AssetOverviewResponse {
         if (jsonArrayassetEndpoints != null) {
           // ensure the json data is an array
           if (!jsonObj.get("asset_endpoints").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `asset_endpoints` to be an array in the JSON string but got `%s`", jsonObj.get("asset_endpoints").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_endpoints` to be an array in the JSON string but got `%s`", jsonObj.get("asset_endpoints").toString()));
           }
 
           // validate the optional field `asset_endpoints` (array)
@@ -623,7 +624,7 @@ public class Assetsv3AssetOverviewResponse {
         if (jsonArrayassetSubscriptions != null) {
           // ensure the json data is an array
           if (!jsonObj.get("asset_subscriptions").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `asset_subscriptions` to be an array in the JSON string but got `%s`", jsonObj.get("asset_subscriptions").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_subscriptions` to be an array in the JSON string but got `%s`", jsonObj.get("asset_subscriptions").toString()));
           }
 
           // validate the optional field `asset_subscriptions` (array)
@@ -637,7 +638,7 @@ public class Assetsv3AssetOverviewResponse {
         if (jsonArrayassetTags != null) {
           // ensure the json data is an array
           if (!jsonObj.get("asset_tags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `asset_tags` to be an array in the JSON string but got `%s`", jsonObj.get("asset_tags").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_tags` to be an array in the JSON string but got `%s`", jsonObj.get("asset_tags").toString()));
           }
 
           // validate the optional field `asset_tags` (array)
@@ -651,14 +652,14 @@ public class Assetsv3AssetOverviewResponse {
         Assetsv3AssetVa.validateJsonElement(jsonObj.get("asset_va"));
       }
       if ((jsonObj.get("entity_type") != null && !jsonObj.get("entity_type").isJsonNull()) && !jsonObj.get("entity_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entity_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `entity_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_type").toString()));
       }
       if (jsonObj.get("extended_properties") != null && !jsonObj.get("extended_properties").isJsonNull()) {
         JsonArray jsonArrayextendedProperties = jsonObj.getAsJsonArray("extended_properties");
         if (jsonArrayextendedProperties != null) {
           // ensure the json data is an array
           if (!jsonObj.get("extended_properties").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
           }
 
           // validate the optional field `extended_properties` (array)
@@ -672,7 +673,7 @@ public class Assetsv3AssetOverviewResponse {
         if (jsonArraymodelApplication != null) {
           // ensure the json data is an array
           if (!jsonObj.get("model_application").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `model_application` to be an array in the JSON string but got `%s`", jsonObj.get("model_application").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `model_application` to be an array in the JSON string but got `%s`", jsonObj.get("model_application").toString()));
           }
 
           // validate the optional field `model_application` (array)
@@ -686,7 +687,7 @@ public class Assetsv3AssetOverviewResponse {
         if (jsonArraymodelData != null) {
           // ensure the json data is an array
           if (!jsonObj.get("model_data").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `model_data` to be an array in the JSON string but got `%s`", jsonObj.get("model_data").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `model_data` to be an array in the JSON string but got `%s`", jsonObj.get("model_data").toString()));
           }
 
           // validate the optional field `model_data` (array)
@@ -700,7 +701,7 @@ public class Assetsv3AssetOverviewResponse {
         if (jsonArrayoverviewParameters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("overview_parameters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `overview_parameters` to be an array in the JSON string but got `%s`", jsonObj.get("overview_parameters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `overview_parameters` to be an array in the JSON string but got `%s`", jsonObj.get("overview_parameters").toString()));
           }
 
           // validate the optional field `overview_parameters` (array)
@@ -740,22 +741,22 @@ public class Assetsv3AssetOverviewResponse {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetOverviewResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetOverviewResponse
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetOverviewResponse
-  */
+  /**
+   * Create an instance of Assetsv3AssetOverviewResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetOverviewResponse
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetOverviewResponse
+   */
   public static Assetsv3AssetOverviewResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetOverviewResponse.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetOverviewResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetOverviewResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

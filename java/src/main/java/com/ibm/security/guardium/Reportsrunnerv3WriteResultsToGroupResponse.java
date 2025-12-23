@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * WriteResultsToGroupResponse is the return type of the WriteResultsToGroupByReportID() and WriteResultsToGroupByDefinition() apis.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3WriteResultsToGroupResponse {
   public static final String SERIALIZED_NAME_JOB_ID = "job_id";
   @SerializedName(SERIALIZED_NAME_JOB_ID)
+  @javax.annotation.Nullable
   private String jobId;
 
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String message;
 
   public Reportsrunnerv3WriteResultsToGroupResponse() {
   }
 
-  public Reportsrunnerv3WriteResultsToGroupResponse jobId(String jobId) {
+  public Reportsrunnerv3WriteResultsToGroupResponse jobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
     return this;
   }
 
-   /**
+  /**
    * Token that identifies the writing results to file job.
    * @return jobId
-  **/
+   */
   @javax.annotation.Nullable
   public String getJobId() {
     return jobId;
   }
 
-  public void setJobId(String jobId) {
+  public void setJobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
   }
 
 
-  public Reportsrunnerv3WriteResultsToGroupResponse message(String message) {
+  public Reportsrunnerv3WriteResultsToGroupResponse message(@javax.annotation.Nullable String message) {
     this.message = message;
     return this;
   }
 
-   /**
+  /**
    * Return message after writing results to file job was scheduled.
    * @return message
-  **/
+   */
   @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setMessage(@javax.annotation.Nullable String message) {
     this.message = message;
   }
 
@@ -146,24 +149,22 @@ public class Reportsrunnerv3WriteResultsToGroupResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("job_id");
-    openapiFields.add("message");
+    openapiFields = new HashSet<String>(Arrays.asList("job_id", "message"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3WriteResultsToGroupResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3WriteResultsToGroupResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3WriteResultsToGroupResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3WriteResultsToGroupResponse is not found in the empty JSON string", Reportsrunnerv3WriteResultsToGroupResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3WriteResultsToGroupResponse is not found in the empty JSON string", Reportsrunnerv3WriteResultsToGroupResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Reportsrunnerv3WriteResultsToGroupResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3WriteResultsToGroupResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3WriteResultsToGroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3WriteResultsToGroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("job_id") != null && !jsonObj.get("job_id").isJsonNull()) && !jsonObj.get("job_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
       }
       if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Reportsrunnerv3WriteResultsToGroupResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3WriteResultsToGroupResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3WriteResultsToGroupResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3WriteResultsToGroupResponse
-  */
+  /**
+   * Create an instance of Reportsrunnerv3WriteResultsToGroupResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3WriteResultsToGroupResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3WriteResultsToGroupResponse
+   */
   public static Reportsrunnerv3WriteResultsToGroupResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3WriteResultsToGroupResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3WriteResultsToGroupResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3WriteResultsToGroupResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

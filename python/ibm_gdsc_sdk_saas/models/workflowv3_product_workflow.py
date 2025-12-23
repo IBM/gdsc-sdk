@@ -28,7 +28,7 @@ class Workflowv3ProductWorkflow(BaseModel):
     """
     Workflowv3ProductWorkflow
     """ # noqa: E501
-    audit_type: Optional[Schedulerv3AuditType] = None
+    audit_type: Optional[Schedulerv3AuditType] = Schedulerv3AuditType.UNDEFINED_TYPE
     config_types: Optional[List[StrictStr]] = None
     workflow_investigation_links: Optional[List[Schedulerv3ConfigurationItem]] = None
     workflow_response_template: Optional[Schedulerv3ConfigurationItem] = None
@@ -77,9 +77,9 @@ class Workflowv3ProductWorkflow(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in workflow_investigation_links (list)
         _items = []
         if self.workflow_investigation_links:
-            for _item in self.workflow_investigation_links:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_workflow_investigation_links in self.workflow_investigation_links:
+                if _item_workflow_investigation_links:
+                    _items.append(_item_workflow_investigation_links.to_dict())
             _dict['workflow_investigation_links'] = _items
         # override the default output from pydantic by calling `to_dict()` of workflow_response_template
         if self.workflow_response_template:
@@ -96,7 +96,7 @@ class Workflowv3ProductWorkflow(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "audit_type": obj.get("audit_type"),
+            "audit_type": obj.get("audit_type") if obj.get("audit_type") is not None else Schedulerv3AuditType.UNDEFINED_TYPE,
             "config_types": obj.get("config_types"),
             "workflow_investigation_links": [Schedulerv3ConfigurationItem.from_dict(_item) for _item in obj["workflow_investigation_links"]] if obj.get("workflow_investigation_links") is not None else None,
             "workflow_response_template": Schedulerv3ConfigurationItem.from_dict(obj["workflow_response_template"]) if obj.get("workflow_response_template") is not None else None,

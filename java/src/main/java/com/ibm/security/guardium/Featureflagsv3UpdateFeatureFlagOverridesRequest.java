@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateFeatureFlagOverridesRequest request body of update featureflag API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Featureflagsv3UpdateFeatureFlagOverridesRequest {
   public static final String SERIALIZED_NAME_FEATURE_FLAG = "feature_flag";
   @SerializedName(SERIALIZED_NAME_FEATURE_FLAG)
+  @javax.annotation.Nullable
   private Featureflagsv3FeatureFlag featureFlag;
 
   public static final String SERIALIZED_NAME_TENANT_ID = "tenant_id";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
+  @javax.annotation.Nullable
   private String tenantId;
 
   public Featureflagsv3UpdateFeatureFlagOverridesRequest() {
   }
 
-  public Featureflagsv3UpdateFeatureFlagOverridesRequest featureFlag(Featureflagsv3FeatureFlag featureFlag) {
+  public Featureflagsv3UpdateFeatureFlagOverridesRequest featureFlag(@javax.annotation.Nullable Featureflagsv3FeatureFlag featureFlag) {
     this.featureFlag = featureFlag;
     return this;
   }
 
-   /**
+  /**
    * Get featureFlag
    * @return featureFlag
-  **/
+   */
   @javax.annotation.Nullable
   public Featureflagsv3FeatureFlag getFeatureFlag() {
     return featureFlag;
   }
 
-  public void setFeatureFlag(Featureflagsv3FeatureFlag featureFlag) {
+  public void setFeatureFlag(@javax.annotation.Nullable Featureflagsv3FeatureFlag featureFlag) {
     this.featureFlag = featureFlag;
   }
 
 
-  public Featureflagsv3UpdateFeatureFlagOverridesRequest tenantId(String tenantId) {
+  public Featureflagsv3UpdateFeatureFlagOverridesRequest tenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
     return this;
   }
 
-   /**
+  /**
    * Optional tenant id.
    * @return tenantId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTenantId() {
     return tenantId;
   }
 
-  public void setTenantId(String tenantId) {
+  public void setTenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
   }
 
@@ -147,24 +150,22 @@ public class Featureflagsv3UpdateFeatureFlagOverridesRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("feature_flag");
-    openapiFields.add("tenant_id");
+    openapiFields = new HashSet<String>(Arrays.asList("feature_flag", "tenant_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Featureflagsv3UpdateFeatureFlagOverridesRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Featureflagsv3UpdateFeatureFlagOverridesRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Featureflagsv3UpdateFeatureFlagOverridesRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Featureflagsv3UpdateFeatureFlagOverridesRequest is not found in the empty JSON string", Featureflagsv3UpdateFeatureFlagOverridesRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Featureflagsv3UpdateFeatureFlagOverridesRequest is not found in the empty JSON string", Featureflagsv3UpdateFeatureFlagOverridesRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,7 +173,7 @@ public class Featureflagsv3UpdateFeatureFlagOverridesRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Featureflagsv3UpdateFeatureFlagOverridesRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Featureflagsv3UpdateFeatureFlagOverridesRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Featureflagsv3UpdateFeatureFlagOverridesRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -181,7 +182,7 @@ public class Featureflagsv3UpdateFeatureFlagOverridesRequest {
         Featureflagsv3FeatureFlag.validateJsonElement(jsonObj.get("feature_flag"));
       }
       if ((jsonObj.get("tenant_id") != null && !jsonObj.get("tenant_id").isJsonNull()) && !jsonObj.get("tenant_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
       }
   }
 
@@ -214,22 +215,22 @@ public class Featureflagsv3UpdateFeatureFlagOverridesRequest {
     }
   }
 
- /**
-  * Create an instance of Featureflagsv3UpdateFeatureFlagOverridesRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Featureflagsv3UpdateFeatureFlagOverridesRequest
-  * @throws IOException if the JSON string is invalid with respect to Featureflagsv3UpdateFeatureFlagOverridesRequest
-  */
+  /**
+   * Create an instance of Featureflagsv3UpdateFeatureFlagOverridesRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Featureflagsv3UpdateFeatureFlagOverridesRequest
+   * @throws IOException if the JSON string is invalid with respect to Featureflagsv3UpdateFeatureFlagOverridesRequest
+   */
   public static Featureflagsv3UpdateFeatureFlagOverridesRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Featureflagsv3UpdateFeatureFlagOverridesRequest.class);
   }
 
- /**
-  * Convert an instance of Featureflagsv3UpdateFeatureFlagOverridesRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Featureflagsv3UpdateFeatureFlagOverridesRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

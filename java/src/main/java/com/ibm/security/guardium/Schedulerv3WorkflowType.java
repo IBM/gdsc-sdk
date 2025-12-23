@@ -14,9 +14,11 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -29,11 +31,11 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(Schedulerv3WorkflowType.Adapter.class)
 public enum Schedulerv3WorkflowType {
   
-  NONE("REVIEW_NONE"),
+  REVIEW_NONE("REVIEW_NONE"),
   
-  ENTIRE("REVIEW_ENTIRE"),
+  REVIEW_ENTIRE("REVIEW_ENTIRE"),
   
-  ONE_ROW("REVIEW_ONE_ROW");
+  REVIEW_ONE_ROW("REVIEW_ONE_ROW");
 
   private String value;
 

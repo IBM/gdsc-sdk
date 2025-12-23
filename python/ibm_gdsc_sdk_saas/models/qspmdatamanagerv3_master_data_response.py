@@ -72,9 +72,9 @@ class Qspmdatamanagerv3MasterDataResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in masterdata (list)
         _items = []
         if self.masterdata:
-            for _item in self.masterdata:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_masterdata in self.masterdata:
+                if _item_masterdata:
+                    _items.append(_item_masterdata.to_dict())
             _dict['masterdata'] = _items
         return _dict
 

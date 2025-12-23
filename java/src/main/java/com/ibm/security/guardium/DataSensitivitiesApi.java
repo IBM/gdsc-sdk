@@ -85,13 +85,14 @@ public class DataSensitivitiesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getSensitivitiesSummaryCall(ListSensitivitiesFilterParameter filter, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSensitivitiesSummaryCall(@javax.annotation.Nullable ListSensitivitiesFilterParameter filter, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -140,7 +141,7 @@ public class DataSensitivitiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSensitivitiesSummaryValidateBeforeCall(ListSensitivitiesFilterParameter filter, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSensitivitiesSummaryValidateBeforeCall(@javax.annotation.Nullable ListSensitivitiesFilterParameter filter, final ApiCallback _callback) throws ApiException {
         return getSensitivitiesSummaryCall(filter, _callback);
 
     }
@@ -152,13 +153,14 @@ public class DataSensitivitiesApi {
      * @return SensitivitiesSummary
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public SensitivitiesSummary getSensitivitiesSummary(ListSensitivitiesFilterParameter filter) throws ApiException {
+    public SensitivitiesSummary getSensitivitiesSummary(@javax.annotation.Nullable ListSensitivitiesFilterParameter filter) throws ApiException {
         ApiResponse<SensitivitiesSummary> localVarResp = getSensitivitiesSummaryWithHttpInfo(filter);
         return localVarResp.getData();
     }
@@ -170,13 +172,14 @@ public class DataSensitivitiesApi {
      * @return ApiResponse&lt;SensitivitiesSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<SensitivitiesSummary> getSensitivitiesSummaryWithHttpInfo(ListSensitivitiesFilterParameter filter) throws ApiException {
+    public ApiResponse<SensitivitiesSummary> getSensitivitiesSummaryWithHttpInfo(@javax.annotation.Nullable ListSensitivitiesFilterParameter filter) throws ApiException {
         okhttp3.Call localVarCall = getSensitivitiesSummaryValidateBeforeCall(filter, null);
         Type localVarReturnType = new TypeToken<SensitivitiesSummary>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -190,13 +193,14 @@ public class DataSensitivitiesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getSensitivitiesSummaryAsync(ListSensitivitiesFilterParameter filter, final ApiCallback<SensitivitiesSummary> _callback) throws ApiException {
+    public okhttp3.Call getSensitivitiesSummaryAsync(@javax.annotation.Nullable ListSensitivitiesFilterParameter filter, final ApiCallback<SensitivitiesSummary> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getSensitivitiesSummaryValidateBeforeCall(filter, _callback);
         Type localVarReturnType = new TypeToken<SensitivitiesSummary>(){}.getType();
@@ -210,13 +214,14 @@ public class DataSensitivitiesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getSensitivityCall(String sensitivityId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSensitivityCall(@javax.annotation.Nonnull String sensitivityId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -262,7 +267,7 @@ public class DataSensitivitiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSensitivityValidateBeforeCall(String sensitivityId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSensitivityValidateBeforeCall(@javax.annotation.Nonnull String sensitivityId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'sensitivityId' is set
         if (sensitivityId == null) {
             throw new ApiException("Missing the required parameter 'sensitivityId' when calling getSensitivity(Async)");
@@ -279,13 +284,14 @@ public class DataSensitivitiesApi {
      * @return Sensitivity
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public Sensitivity getSensitivity(String sensitivityId) throws ApiException {
+    public Sensitivity getSensitivity(@javax.annotation.Nonnull String sensitivityId) throws ApiException {
         ApiResponse<Sensitivity> localVarResp = getSensitivityWithHttpInfo(sensitivityId);
         return localVarResp.getData();
     }
@@ -297,13 +303,14 @@ public class DataSensitivitiesApi {
      * @return ApiResponse&lt;Sensitivity&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<Sensitivity> getSensitivityWithHttpInfo(String sensitivityId) throws ApiException {
+    public ApiResponse<Sensitivity> getSensitivityWithHttpInfo(@javax.annotation.Nonnull String sensitivityId) throws ApiException {
         okhttp3.Call localVarCall = getSensitivityValidateBeforeCall(sensitivityId, null);
         Type localVarReturnType = new TypeToken<Sensitivity>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -317,13 +324,14 @@ public class DataSensitivitiesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getSensitivityAsync(String sensitivityId, final ApiCallback<Sensitivity> _callback) throws ApiException {
+    public okhttp3.Call getSensitivityAsync(@javax.annotation.Nonnull String sensitivityId, final ApiCallback<Sensitivity> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getSensitivityValidateBeforeCall(sensitivityId, _callback);
         Type localVarReturnType = new TypeToken<Sensitivity>(){}.getType();
@@ -340,13 +348,14 @@ public class DataSensitivitiesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listSensitivitiesCall(ListSensitivitiesFilterParameter filter, LastSeenSortSchema sort, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listSensitivitiesCall(@javax.annotation.Nullable ListSensitivitiesFilterParameter filter, @javax.annotation.Nullable LastSeenSortSchema sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -407,7 +416,7 @@ public class DataSensitivitiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listSensitivitiesValidateBeforeCall(ListSensitivitiesFilterParameter filter, LastSeenSortSchema sort, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listSensitivitiesValidateBeforeCall(@javax.annotation.Nullable ListSensitivitiesFilterParameter filter, @javax.annotation.Nullable LastSeenSortSchema sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         return listSensitivitiesCall(filter, sort, pageSize, nextToken, _callback);
 
     }
@@ -422,13 +431,14 @@ public class DataSensitivitiesApi {
      * @return ListSensitivities200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ListSensitivities200Response listSensitivities(ListSensitivitiesFilterParameter filter, LastSeenSortSchema sort, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ListSensitivities200Response listSensitivities(@javax.annotation.Nullable ListSensitivitiesFilterParameter filter, @javax.annotation.Nullable LastSeenSortSchema sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         ApiResponse<ListSensitivities200Response> localVarResp = listSensitivitiesWithHttpInfo(filter, sort, pageSize, nextToken);
         return localVarResp.getData();
     }
@@ -443,13 +453,14 @@ public class DataSensitivitiesApi {
      * @return ApiResponse&lt;ListSensitivities200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ListSensitivities200Response> listSensitivitiesWithHttpInfo(ListSensitivitiesFilterParameter filter, LastSeenSortSchema sort, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ApiResponse<ListSensitivities200Response> listSensitivitiesWithHttpInfo(@javax.annotation.Nullable ListSensitivitiesFilterParameter filter, @javax.annotation.Nullable LastSeenSortSchema sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         okhttp3.Call localVarCall = listSensitivitiesValidateBeforeCall(filter, sort, pageSize, nextToken, null);
         Type localVarReturnType = new TypeToken<ListSensitivities200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -466,13 +477,14 @@ public class DataSensitivitiesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listSensitivitiesAsync(ListSensitivitiesFilterParameter filter, LastSeenSortSchema sort, BigDecimal pageSize, String nextToken, final ApiCallback<ListSensitivities200Response> _callback) throws ApiException {
+    public okhttp3.Call listSensitivitiesAsync(@javax.annotation.Nullable ListSensitivitiesFilterParameter filter, @javax.annotation.Nullable LastSeenSortSchema sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback<ListSensitivities200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listSensitivitiesValidateBeforeCall(filter, sort, pageSize, nextToken, _callback);
         Type localVarReturnType = new TypeToken<ListSensitivities200Response>(){}.getType();

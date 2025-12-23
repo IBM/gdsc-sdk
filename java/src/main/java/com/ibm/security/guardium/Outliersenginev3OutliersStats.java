@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Statistics of the types of outliers found during various time periods.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Outliersenginev3OutliersStats {
   public static final String SERIALIZED_NAME_OUTLIER_TYPE_STATS1H = "outlier_type_stats_1h";
   @SerializedName(SERIALIZED_NAME_OUTLIER_TYPE_STATS1H)
+  @javax.annotation.Nullable
   private List<Outliersenginev3OutlierTypeStats> outlierTypeStats1h = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_OUTLIER_TYPE_STATS24H = "outlier_type_stats_24h";
   @SerializedName(SERIALIZED_NAME_OUTLIER_TYPE_STATS24H)
+  @javax.annotation.Nullable
   private List<Outliersenginev3OutlierTypeStats> outlierTypeStats24h = new ArrayList<>();
 
   public Outliersenginev3OutliersStats() {
   }
 
-  public Outliersenginev3OutliersStats outlierTypeStats1h(List<Outliersenginev3OutlierTypeStats> outlierTypeStats1h) {
+  public Outliersenginev3OutliersStats outlierTypeStats1h(@javax.annotation.Nullable List<Outliersenginev3OutlierTypeStats> outlierTypeStats1h) {
     this.outlierTypeStats1h = outlierTypeStats1h;
     return this;
   }
@@ -78,21 +81,21 @@ public class Outliersenginev3OutliersStats {
     return this;
   }
 
-   /**
+  /**
    * Types of outliers found in the last hour.
    * @return outlierTypeStats1h
-  **/
+   */
   @javax.annotation.Nullable
   public List<Outliersenginev3OutlierTypeStats> getOutlierTypeStats1h() {
     return outlierTypeStats1h;
   }
 
-  public void setOutlierTypeStats1h(List<Outliersenginev3OutlierTypeStats> outlierTypeStats1h) {
+  public void setOutlierTypeStats1h(@javax.annotation.Nullable List<Outliersenginev3OutlierTypeStats> outlierTypeStats1h) {
     this.outlierTypeStats1h = outlierTypeStats1h;
   }
 
 
-  public Outliersenginev3OutliersStats outlierTypeStats24h(List<Outliersenginev3OutlierTypeStats> outlierTypeStats24h) {
+  public Outliersenginev3OutliersStats outlierTypeStats24h(@javax.annotation.Nullable List<Outliersenginev3OutlierTypeStats> outlierTypeStats24h) {
     this.outlierTypeStats24h = outlierTypeStats24h;
     return this;
   }
@@ -105,16 +108,16 @@ public class Outliersenginev3OutliersStats {
     return this;
   }
 
-   /**
+  /**
    * Types of outliers found in the past 24 hours.
    * @return outlierTypeStats24h
-  **/
+   */
   @javax.annotation.Nullable
   public List<Outliersenginev3OutlierTypeStats> getOutlierTypeStats24h() {
     return outlierTypeStats24h;
   }
 
-  public void setOutlierTypeStats24h(List<Outliersenginev3OutlierTypeStats> outlierTypeStats24h) {
+  public void setOutlierTypeStats24h(@javax.annotation.Nullable List<Outliersenginev3OutlierTypeStats> outlierTypeStats24h) {
     this.outlierTypeStats24h = outlierTypeStats24h;
   }
 
@@ -165,24 +168,22 @@ public class Outliersenginev3OutliersStats {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("outlier_type_stats_1h");
-    openapiFields.add("outlier_type_stats_24h");
+    openapiFields = new HashSet<String>(Arrays.asList("outlier_type_stats_1h", "outlier_type_stats_24h"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3OutliersStats
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3OutliersStats
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Outliersenginev3OutliersStats.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Outliersenginev3OutliersStats is not found in the empty JSON string", Outliersenginev3OutliersStats.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Outliersenginev3OutliersStats is not found in the empty JSON string", Outliersenginev3OutliersStats.openapiRequiredFields.toString()));
         }
       }
 
@@ -190,7 +191,7 @@ public class Outliersenginev3OutliersStats {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Outliersenginev3OutliersStats.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Outliersenginev3OutliersStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Outliersenginev3OutliersStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -199,7 +200,7 @@ public class Outliersenginev3OutliersStats {
         if (jsonArrayoutlierTypeStats1h != null) {
           // ensure the json data is an array
           if (!jsonObj.get("outlier_type_stats_1h").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `outlier_type_stats_1h` to be an array in the JSON string but got `%s`", jsonObj.get("outlier_type_stats_1h").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `outlier_type_stats_1h` to be an array in the JSON string but got `%s`", jsonObj.get("outlier_type_stats_1h").toString()));
           }
 
           // validate the optional field `outlier_type_stats_1h` (array)
@@ -213,7 +214,7 @@ public class Outliersenginev3OutliersStats {
         if (jsonArrayoutlierTypeStats24h != null) {
           // ensure the json data is an array
           if (!jsonObj.get("outlier_type_stats_24h").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `outlier_type_stats_24h` to be an array in the JSON string but got `%s`", jsonObj.get("outlier_type_stats_24h").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `outlier_type_stats_24h` to be an array in the JSON string but got `%s`", jsonObj.get("outlier_type_stats_24h").toString()));
           }
 
           // validate the optional field `outlier_type_stats_24h` (array)
@@ -253,22 +254,22 @@ public class Outliersenginev3OutliersStats {
     }
   }
 
- /**
-  * Create an instance of Outliersenginev3OutliersStats given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Outliersenginev3OutliersStats
-  * @throws IOException if the JSON string is invalid with respect to Outliersenginev3OutliersStats
-  */
+  /**
+   * Create an instance of Outliersenginev3OutliersStats given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Outliersenginev3OutliersStats
+   * @throws IOException if the JSON string is invalid with respect to Outliersenginev3OutliersStats
+   */
   public static Outliersenginev3OutliersStats fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Outliersenginev3OutliersStats.class);
   }
 
- /**
-  * Convert an instance of Outliersenginev3OutliersStats to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Outliersenginev3OutliersStats to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

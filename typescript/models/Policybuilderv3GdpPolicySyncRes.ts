@@ -37,6 +37,8 @@ export class Policybuilderv3GdpPolicySyncRes {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "centralManager",
@@ -100,6 +102,5 @@ export class Policybuilderv3GdpPolicySyncRes {
     public constructor() {
     }
 }
-
 
 

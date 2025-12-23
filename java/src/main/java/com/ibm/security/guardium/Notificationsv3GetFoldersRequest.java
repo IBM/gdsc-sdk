@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Get folders from the integratioin provided. The configuration properties vary by integration and must match the required content.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Notificationsv3GetFoldersRequest {
   public static final String SERIALIZED_NAME_FOLDER_NAME = "folder_name";
   @SerializedName(SERIALIZED_NAME_FOLDER_NAME)
+  @javax.annotation.Nullable
   private String folderName;
 
   public static final String SERIALIZED_NAME_INTEGRATION_ID = "integration_id";
   @SerializedName(SERIALIZED_NAME_INTEGRATION_ID)
+  @javax.annotation.Nullable
   private String integrationId;
 
   public Notificationsv3GetFoldersRequest() {
   }
 
-  public Notificationsv3GetFoldersRequest folderName(String folderName) {
+  public Notificationsv3GetFoldersRequest folderName(@javax.annotation.Nullable String folderName) {
     this.folderName = folderName;
     return this;
   }
 
-   /**
+  /**
    * The folder_name field is provided to fetch all folders in the folder_name provided.
    * @return folderName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFolderName() {
     return folderName;
   }
 
-  public void setFolderName(String folderName) {
+  public void setFolderName(@javax.annotation.Nullable String folderName) {
     this.folderName = folderName;
   }
 
 
-  public Notificationsv3GetFoldersRequest integrationId(String integrationId) {
+  public Notificationsv3GetFoldersRequest integrationId(@javax.annotation.Nullable String integrationId) {
     this.integrationId = integrationId;
     return this;
   }
 
-   /**
+  /**
    * The integration id to get the folders for.
    * @return integrationId
-  **/
+   */
   @javax.annotation.Nullable
   public String getIntegrationId() {
     return integrationId;
   }
 
-  public void setIntegrationId(String integrationId) {
+  public void setIntegrationId(@javax.annotation.Nullable String integrationId) {
     this.integrationId = integrationId;
   }
 
@@ -146,24 +149,22 @@ public class Notificationsv3GetFoldersRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("folder_name");
-    openapiFields.add("integration_id");
+    openapiFields = new HashSet<String>(Arrays.asList("folder_name", "integration_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Notificationsv3GetFoldersRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Notificationsv3GetFoldersRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Notificationsv3GetFoldersRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Notificationsv3GetFoldersRequest is not found in the empty JSON string", Notificationsv3GetFoldersRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Notificationsv3GetFoldersRequest is not found in the empty JSON string", Notificationsv3GetFoldersRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Notificationsv3GetFoldersRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Notificationsv3GetFoldersRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Notificationsv3GetFoldersRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Notificationsv3GetFoldersRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("folder_name") != null && !jsonObj.get("folder_name").isJsonNull()) && !jsonObj.get("folder_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `folder_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("folder_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `folder_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("folder_name").toString()));
       }
       if ((jsonObj.get("integration_id") != null && !jsonObj.get("integration_id").isJsonNull()) && !jsonObj.get("integration_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `integration_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("integration_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `integration_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("integration_id").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Notificationsv3GetFoldersRequest {
     }
   }
 
- /**
-  * Create an instance of Notificationsv3GetFoldersRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Notificationsv3GetFoldersRequest
-  * @throws IOException if the JSON string is invalid with respect to Notificationsv3GetFoldersRequest
-  */
+  /**
+   * Create an instance of Notificationsv3GetFoldersRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Notificationsv3GetFoldersRequest
+   * @throws IOException if the JSON string is invalid with respect to Notificationsv3GetFoldersRequest
+   */
   public static Notificationsv3GetFoldersRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Notificationsv3GetFoldersRequest.class);
   }
 
- /**
-  * Convert an instance of Notificationsv3GetFoldersRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Notificationsv3GetFoldersRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

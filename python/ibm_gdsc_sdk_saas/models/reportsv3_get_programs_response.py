@@ -72,9 +72,9 @@ class Reportsv3GetProgramsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in programs (list)
         _items = []
         if self.programs:
-            for _item in self.programs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_programs in self.programs:
+                if _item_programs:
+                    _items.append(_item_programs.to_dict())
             _dict['programs'] = _items
         return _dict
 

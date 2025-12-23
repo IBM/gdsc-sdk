@@ -74,9 +74,9 @@ class Assetsv3FilterSubCatagory(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in selected_children_list (list)
         _items = []
         if self.selected_children_list:
-            for _item in self.selected_children_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_selected_children_list in self.selected_children_list:
+                if _item_selected_children_list:
+                    _items.append(_item_selected_children_list.to_dict())
             _dict['selected_children_list'] = _items
         return _dict
 

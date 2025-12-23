@@ -72,9 +72,9 @@ class Connectionsv3UpdateConnectorsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in connectors (list)
         _items = []
         if self.connectors:
-            for _item in self.connectors:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_connectors in self.connectors:
+                if _item_connectors:
+                    _items.append(_item_connectors.to_dict())
             _dict['connectors'] = _items
         return _dict
 

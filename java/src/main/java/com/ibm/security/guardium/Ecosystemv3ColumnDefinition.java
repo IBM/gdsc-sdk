@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,157 +39,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ColumnDefinition defines a column in database.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Ecosystemv3ColumnDefinition {
   public static final String SERIALIZED_NAME_ALLOW_NULL = "allow_null";
   @SerializedName(SERIALIZED_NAME_ALLOW_NULL)
+  @javax.annotation.Nullable
   private Boolean allowNull;
 
   public static final String SERIALIZED_NAME_COLUMN_ID = "column_id";
   @SerializedName(SERIALIZED_NAME_COLUMN_ID)
+  @javax.annotation.Nullable
   private Integer columnId;
 
   public static final String SERIALIZED_NAME_COLUMN_NAME = "column_name";
   @SerializedName(SERIALIZED_NAME_COLUMN_NAME)
+  @javax.annotation.Nullable
   private String columnName;
 
   public static final String SERIALIZED_NAME_COLUMN_SIZE = "column_size";
   @SerializedName(SERIALIZED_NAME_COLUMN_SIZE)
+  @javax.annotation.Nullable
   private String columnSize;
 
   public static final String SERIALIZED_NAME_COLUMN_TYPE = "column_type";
   @SerializedName(SERIALIZED_NAME_COLUMN_TYPE)
+  @javax.annotation.Nullable
   private Ecosystemv3DataType columnType = Ecosystemv3DataType.UNDEFINED_DATA_TYPE;
 
   public static final String SERIALIZED_NAME_UNIQUE = "unique";
   @SerializedName(SERIALIZED_NAME_UNIQUE)
+  @javax.annotation.Nullable
   private Boolean unique;
 
   public Ecosystemv3ColumnDefinition() {
   }
 
-  public Ecosystemv3ColumnDefinition allowNull(Boolean allowNull) {
+  public Ecosystemv3ColumnDefinition allowNull(@javax.annotation.Nullable Boolean allowNull) {
     this.allowNull = allowNull;
     return this;
   }
 
-   /**
+  /**
    * If null is allowed.
    * @return allowNull
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getAllowNull() {
     return allowNull;
   }
 
-  public void setAllowNull(Boolean allowNull) {
+  public void setAllowNull(@javax.annotation.Nullable Boolean allowNull) {
     this.allowNull = allowNull;
   }
 
 
-  public Ecosystemv3ColumnDefinition columnId(Integer columnId) {
+  public Ecosystemv3ColumnDefinition columnId(@javax.annotation.Nullable Integer columnId) {
     this.columnId = columnId;
     return this;
   }
 
-   /**
+  /**
    * The id of the column.
    * @return columnId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getColumnId() {
     return columnId;
   }
 
-  public void setColumnId(Integer columnId) {
+  public void setColumnId(@javax.annotation.Nullable Integer columnId) {
     this.columnId = columnId;
   }
 
 
-  public Ecosystemv3ColumnDefinition columnName(String columnName) {
+  public Ecosystemv3ColumnDefinition columnName(@javax.annotation.Nullable String columnName) {
     this.columnName = columnName;
     return this;
   }
 
-   /**
+  /**
    * The name of the column.
    * @return columnName
-  **/
+   */
   @javax.annotation.Nullable
   public String getColumnName() {
     return columnName;
   }
 
-  public void setColumnName(String columnName) {
+  public void setColumnName(@javax.annotation.Nullable String columnName) {
     this.columnName = columnName;
   }
 
 
-  public Ecosystemv3ColumnDefinition columnSize(String columnSize) {
+  public Ecosystemv3ColumnDefinition columnSize(@javax.annotation.Nullable String columnSize) {
     this.columnSize = columnSize;
     return this;
   }
 
-   /**
+  /**
    * Data size of the column.
    * @return columnSize
-  **/
+   */
   @javax.annotation.Nullable
   public String getColumnSize() {
     return columnSize;
   }
 
-  public void setColumnSize(String columnSize) {
+  public void setColumnSize(@javax.annotation.Nullable String columnSize) {
     this.columnSize = columnSize;
   }
 
 
-  public Ecosystemv3ColumnDefinition columnType(Ecosystemv3DataType columnType) {
+  public Ecosystemv3ColumnDefinition columnType(@javax.annotation.Nullable Ecosystemv3DataType columnType) {
     this.columnType = columnType;
     return this;
   }
 
-   /**
+  /**
    * Get columnType
    * @return columnType
-  **/
+   */
   @javax.annotation.Nullable
   public Ecosystemv3DataType getColumnType() {
     return columnType;
   }
 
-  public void setColumnType(Ecosystemv3DataType columnType) {
+  public void setColumnType(@javax.annotation.Nullable Ecosystemv3DataType columnType) {
     this.columnType = columnType;
   }
 
 
-  public Ecosystemv3ColumnDefinition unique(Boolean unique) {
+  public Ecosystemv3ColumnDefinition unique(@javax.annotation.Nullable Boolean unique) {
     this.unique = unique;
     return this;
   }
 
-   /**
+  /**
    * If the column is unique.
    * @return unique
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getUnique() {
     return unique;
   }
 
-  public void setUnique(Boolean unique) {
+  public void setUnique(@javax.annotation.Nullable Boolean unique) {
     this.unique = unique;
   }
 
@@ -247,28 +254,22 @@ public class Ecosystemv3ColumnDefinition {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("allow_null");
-    openapiFields.add("column_id");
-    openapiFields.add("column_name");
-    openapiFields.add("column_size");
-    openapiFields.add("column_type");
-    openapiFields.add("unique");
+    openapiFields = new HashSet<String>(Arrays.asList("allow_null", "column_id", "column_name", "column_size", "column_type", "unique"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3ColumnDefinition
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3ColumnDefinition
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Ecosystemv3ColumnDefinition.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Ecosystemv3ColumnDefinition is not found in the empty JSON string", Ecosystemv3ColumnDefinition.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Ecosystemv3ColumnDefinition is not found in the empty JSON string", Ecosystemv3ColumnDefinition.openapiRequiredFields.toString()));
         }
       }
 
@@ -276,15 +277,15 @@ public class Ecosystemv3ColumnDefinition {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Ecosystemv3ColumnDefinition.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Ecosystemv3ColumnDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Ecosystemv3ColumnDefinition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("column_name") != null && !jsonObj.get("column_name").isJsonNull()) && !jsonObj.get("column_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `column_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("column_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `column_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("column_name").toString()));
       }
       if ((jsonObj.get("column_size") != null && !jsonObj.get("column_size").isJsonNull()) && !jsonObj.get("column_size").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `column_size` to be a primitive type in the JSON string but got `%s`", jsonObj.get("column_size").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `column_size` to be a primitive type in the JSON string but got `%s`", jsonObj.get("column_size").toString()));
       }
       // validate the optional field `column_type`
       if (jsonObj.get("column_type") != null && !jsonObj.get("column_type").isJsonNull()) {
@@ -321,22 +322,22 @@ public class Ecosystemv3ColumnDefinition {
     }
   }
 
- /**
-  * Create an instance of Ecosystemv3ColumnDefinition given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Ecosystemv3ColumnDefinition
-  * @throws IOException if the JSON string is invalid with respect to Ecosystemv3ColumnDefinition
-  */
+  /**
+   * Create an instance of Ecosystemv3ColumnDefinition given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Ecosystemv3ColumnDefinition
+   * @throws IOException if the JSON string is invalid with respect to Ecosystemv3ColumnDefinition
+   */
   public static Ecosystemv3ColumnDefinition fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Ecosystemv3ColumnDefinition.class);
   }
 
- /**
-  * Convert an instance of Ecosystemv3ColumnDefinition to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Ecosystemv3ColumnDefinition to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

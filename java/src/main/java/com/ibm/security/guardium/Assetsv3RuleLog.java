@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3RuleLog
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3RuleLog {
   public static final String SERIALIZED_NAME_RULE_ID = "rule_id";
   @SerializedName(SERIALIZED_NAME_RULE_ID)
+  @javax.annotation.Nullable
   private String ruleId;
 
   public static final String SERIALIZED_NAME_RULE_NAME = "rule_name";
   @SerializedName(SERIALIZED_NAME_RULE_NAME)
+  @javax.annotation.Nullable
   private String ruleName;
 
   public Assetsv3RuleLog() {
   }
 
-  public Assetsv3RuleLog ruleId(String ruleId) {
+  public Assetsv3RuleLog ruleId(@javax.annotation.Nullable String ruleId) {
     this.ruleId = ruleId;
     return this;
   }
 
-   /**
+  /**
    * Get ruleId
    * @return ruleId
-  **/
+   */
   @javax.annotation.Nullable
   public String getRuleId() {
     return ruleId;
   }
 
-  public void setRuleId(String ruleId) {
+  public void setRuleId(@javax.annotation.Nullable String ruleId) {
     this.ruleId = ruleId;
   }
 
 
-  public Assetsv3RuleLog ruleName(String ruleName) {
+  public Assetsv3RuleLog ruleName(@javax.annotation.Nullable String ruleName) {
     this.ruleName = ruleName;
     return this;
   }
 
-   /**
+  /**
    * Get ruleName
    * @return ruleName
-  **/
+   */
   @javax.annotation.Nullable
   public String getRuleName() {
     return ruleName;
   }
 
-  public void setRuleName(String ruleName) {
+  public void setRuleName(@javax.annotation.Nullable String ruleName) {
     this.ruleName = ruleName;
   }
 
@@ -146,24 +149,22 @@ public class Assetsv3RuleLog {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("rule_id");
-    openapiFields.add("rule_name");
+    openapiFields = new HashSet<String>(Arrays.asList("rule_id", "rule_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3RuleLog
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3RuleLog
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3RuleLog.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3RuleLog is not found in the empty JSON string", Assetsv3RuleLog.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3RuleLog is not found in the empty JSON string", Assetsv3RuleLog.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Assetsv3RuleLog {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3RuleLog.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3RuleLog` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3RuleLog` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("rule_id") != null && !jsonObj.get("rule_id").isJsonNull()) && !jsonObj.get("rule_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_id").toString()));
       }
       if ((jsonObj.get("rule_name") != null && !jsonObj.get("rule_name").isJsonNull()) && !jsonObj.get("rule_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rule_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_name").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Assetsv3RuleLog {
     }
   }
 
- /**
-  * Create an instance of Assetsv3RuleLog given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3RuleLog
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3RuleLog
-  */
+  /**
+   * Create an instance of Assetsv3RuleLog given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3RuleLog
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3RuleLog
+   */
   public static Assetsv3RuleLog fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3RuleLog.class);
   }
 
- /**
-  * Convert an instance of Assetsv3RuleLog to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3RuleLog to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

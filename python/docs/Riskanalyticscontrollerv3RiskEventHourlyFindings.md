@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **hourly_category** | **str** | Classification of the risk in the given hour. | [optional] 
 **hourly_category_description** | **str** | Classification description of the risk in the given hour. | [optional] 
 **hourly_description** | **str** | Description of the risk. | [optional] 
-**hourly_severity_level** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] 
+**hourly_severity_level** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] [default to Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL]
 **indicators** | [**List[Riskanalyticscontrollerv3Indicator]**](Riskanalyticscontrollerv3Indicator.md) | list of all the indicators - Optional (depending on include_indicators). | [optional] 
 
 ## Example

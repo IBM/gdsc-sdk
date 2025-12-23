@@ -33,7 +33,7 @@ class Connectionsv3ConnectorSetting(BaseModel):
     headers: Optional[List[StrictStr]] = Field(default=None, description="The headers used when this setting is active.")
     id: Optional[StrictStr] = Field(default=None, description="The id of the setting.")
     name: Optional[StrictStr] = Field(default=None, description="The name of the Preset.")
-    order: Optional[Connectionsv3OrderType] = None
+    order: Optional[Connectionsv3OrderType] = Connectionsv3OrderType.NONE
     sorted_by: Optional[StrictStr] = Field(default=None, description="The header key used for sorting.", alias="sortedBy")
     __properties: ClassVar[List[str]] = ["description", "filters", "headers", "id", "name", "order", "sortedBy"]
 
@@ -79,9 +79,9 @@ class Connectionsv3ConnectorSetting(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in filters (list)
         _items = []
         if self.filters:
-            for _item in self.filters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_filters in self.filters:
+                if _item_filters:
+                    _items.append(_item_filters.to_dict())
             _dict['filters'] = _items
         return _dict
 
@@ -100,7 +100,7 @@ class Connectionsv3ConnectorSetting(BaseModel):
             "headers": obj.get("headers"),
             "id": obj.get("id"),
             "name": obj.get("name"),
-            "order": obj.get("order"),
+            "order": obj.get("order") if obj.get("order") is not None else Connectionsv3OrderType.NONE,
             "sortedBy": obj.get("sortedBy")
         })
         return _obj

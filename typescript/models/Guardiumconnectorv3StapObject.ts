@@ -70,6 +70,8 @@ export class Guardiumconnectorv3StapObject {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "collectorHostname",
@@ -157,4 +159,3 @@ export class Guardiumconnectorv3StapObject {
     public constructor() {
     }
 }
-

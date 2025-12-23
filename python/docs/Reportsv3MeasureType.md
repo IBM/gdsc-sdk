@@ -1,10 +1,11 @@
 # Reportsv3MeasureType
 
 
-## Properties
+## Enum
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+* `SNAPSHOT` (value: `'SNAPSHOT'`)
+
+* `CUMULATIVE` (value: `'CUMULATIVE'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -79,23 +79,23 @@ class Assetsv3AssetChangeLog(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in after (list)
         _items = []
         if self.after:
-            for _item in self.after:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_after in self.after:
+                if _item_after:
+                    _items.append(_item_after.to_dict())
             _dict['after'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in before (list)
         _items = []
         if self.before:
-            for _item in self.before:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_before in self.before:
+                if _item_before:
+                    _items.append(_item_before.to_dict())
             _dict['before'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in rule (list)
         _items = []
         if self.rule:
-            for _item in self.rule:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_rule in self.rule:
+                if _item_rule:
+                    _items.append(_item_rule.to_dict())
             _dict['rule'] = _items
         return _dict
 

@@ -72,9 +72,9 @@ class AuthserverListOauthClientResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in oauth_clients (list)
         _items = []
         if self.oauth_clients:
-            for _item in self.oauth_clients:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_oauth_clients in self.oauth_clients:
+                if _item_oauth_clients:
+                    _items.append(_item_oauth_clients.to_dict())
             _dict['oauth_clients'] = _items
         return _dict
 

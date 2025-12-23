@@ -78,9 +78,9 @@ class Assetsv3FetchAssetChangeLogRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in filter (list)
         _items = []
         if self.filter:
-            for _item in self.filter:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_filter in self.filter:
+                if _item_filter:
+                    _items.append(_item_filter.to_dict())
             _dict['filter'] = _items
         return _dict
 

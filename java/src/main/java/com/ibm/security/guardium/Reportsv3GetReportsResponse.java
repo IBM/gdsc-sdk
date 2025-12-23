@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,36 +42,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetReportsResponse is the return type which encapsulates a list of reports from the GetReports() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3GetReportsResponse {
   public static final String SERIALIZED_NAME_IN_REPORT_CHILDREN_LIST = "in_report_children_list";
   @SerializedName(SERIALIZED_NAME_IN_REPORT_CHILDREN_LIST)
+  @javax.annotation.Nullable
   private List<String> inReportChildrenList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REPORTS_LIST = "reports_list";
   @SerializedName(SERIALIZED_NAME_REPORTS_LIST)
+  @javax.annotation.Nullable
   private List<Reportsv3BriefReport> reportsList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REPORTS_TAGS = "reports_tags";
   @SerializedName(SERIALIZED_NAME_REPORTS_TAGS)
+  @javax.annotation.Nullable
   private List<Reportsv3ReportTag> reportsTags = new ArrayList<>();
 
   public Reportsv3GetReportsResponse() {
   }
 
-  public Reportsv3GetReportsResponse inReportChildrenList(List<String> inReportChildrenList) {
+  public Reportsv3GetReportsResponse inReportChildrenList(@javax.annotation.Nullable List<String> inReportChildrenList) {
     this.inReportChildrenList = inReportChildrenList;
     return this;
   }
@@ -83,21 +87,21 @@ public class Reportsv3GetReportsResponse {
     return this;
   }
 
-   /**
+  /**
    * List of report ids of children that are children of in reports.
    * @return inReportChildrenList
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getInReportChildrenList() {
     return inReportChildrenList;
   }
 
-  public void setInReportChildrenList(List<String> inReportChildrenList) {
+  public void setInReportChildrenList(@javax.annotation.Nullable List<String> inReportChildrenList) {
     this.inReportChildrenList = inReportChildrenList;
   }
 
 
-  public Reportsv3GetReportsResponse reportsList(List<Reportsv3BriefReport> reportsList) {
+  public Reportsv3GetReportsResponse reportsList(@javax.annotation.Nullable List<Reportsv3BriefReport> reportsList) {
     this.reportsList = reportsList;
     return this;
   }
@@ -110,21 +114,21 @@ public class Reportsv3GetReportsResponse {
     return this;
   }
 
-   /**
+  /**
    * A new reports list.
    * @return reportsList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3BriefReport> getReportsList() {
     return reportsList;
   }
 
-  public void setReportsList(List<Reportsv3BriefReport> reportsList) {
+  public void setReportsList(@javax.annotation.Nullable List<Reportsv3BriefReport> reportsList) {
     this.reportsList = reportsList;
   }
 
 
-  public Reportsv3GetReportsResponse reportsTags(List<Reportsv3ReportTag> reportsTags) {
+  public Reportsv3GetReportsResponse reportsTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportsTags) {
     this.reportsTags = reportsTags;
     return this;
   }
@@ -137,16 +141,16 @@ public class Reportsv3GetReportsResponse {
     return this;
   }
 
-   /**
+  /**
    * The Reports&#39; tags.
    * @return reportsTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ReportTag> getReportsTags() {
     return reportsTags;
   }
 
-  public void setReportsTags(List<Reportsv3ReportTag> reportsTags) {
+  public void setReportsTags(@javax.annotation.Nullable List<Reportsv3ReportTag> reportsTags) {
     this.reportsTags = reportsTags;
   }
 
@@ -199,25 +203,22 @@ public class Reportsv3GetReportsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("in_report_children_list");
-    openapiFields.add("reports_list");
-    openapiFields.add("reports_tags");
+    openapiFields = new HashSet<String>(Arrays.asList("in_report_children_list", "reports_list", "reports_tags"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetReportsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetReportsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3GetReportsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3GetReportsResponse is not found in the empty JSON string", Reportsv3GetReportsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3GetReportsResponse is not found in the empty JSON string", Reportsv3GetReportsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -225,20 +226,20 @@ public class Reportsv3GetReportsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3GetReportsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3GetReportsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3GetReportsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("in_report_children_list") != null && !jsonObj.get("in_report_children_list").isJsonNull() && !jsonObj.get("in_report_children_list").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `in_report_children_list` to be an array in the JSON string but got `%s`", jsonObj.get("in_report_children_list").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `in_report_children_list` to be an array in the JSON string but got `%s`", jsonObj.get("in_report_children_list").toString()));
       }
       if (jsonObj.get("reports_list") != null && !jsonObj.get("reports_list").isJsonNull()) {
         JsonArray jsonArrayreportsList = jsonObj.getAsJsonArray("reports_list");
         if (jsonArrayreportsList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("reports_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `reports_list` to be an array in the JSON string but got `%s`", jsonObj.get("reports_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `reports_list` to be an array in the JSON string but got `%s`", jsonObj.get("reports_list").toString()));
           }
 
           // validate the optional field `reports_list` (array)
@@ -252,7 +253,7 @@ public class Reportsv3GetReportsResponse {
         if (jsonArrayreportsTags != null) {
           // ensure the json data is an array
           if (!jsonObj.get("reports_tags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `reports_tags` to be an array in the JSON string but got `%s`", jsonObj.get("reports_tags").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `reports_tags` to be an array in the JSON string but got `%s`", jsonObj.get("reports_tags").toString()));
           }
 
           // validate the optional field `reports_tags` (array)
@@ -292,22 +293,22 @@ public class Reportsv3GetReportsResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsv3GetReportsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3GetReportsResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3GetReportsResponse
-  */
+  /**
+   * Create an instance of Reportsv3GetReportsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3GetReportsResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3GetReportsResponse
+   */
   public static Reportsv3GetReportsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3GetReportsResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsv3GetReportsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3GetReportsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

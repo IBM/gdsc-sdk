@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmpolicymanagerv3FetchObjectStoreFileResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmpolicymanagerv3FetchObjectStoreFileResponse {
   public static final String SERIALIZED_NAME_BUCKET_NAME = "bucket_name";
   @SerializedName(SERIALIZED_NAME_BUCKET_NAME)
+  @javax.annotation.Nullable
   private String bucketName;
 
   public static final String SERIALIZED_NAME_FILE_NAME = "file_name";
   @SerializedName(SERIALIZED_NAME_FILE_NAME)
+  @javax.annotation.Nullable
   private Qspmpolicymanagerv3FileName fileName;
 
   public static final String SERIALIZED_NAME_FOLDER_NAME = "folder_name";
   @SerializedName(SERIALIZED_NAME_FOLDER_NAME)
+  @javax.annotation.Nullable
   private String folderName;
 
   public Qspmpolicymanagerv3FetchObjectStoreFileResponse() {
   }
 
-  public Qspmpolicymanagerv3FetchObjectStoreFileResponse bucketName(String bucketName) {
+  public Qspmpolicymanagerv3FetchObjectStoreFileResponse bucketName(@javax.annotation.Nullable String bucketName) {
     this.bucketName = bucketName;
     return this;
   }
 
-   /**
+  /**
    * Get bucketName
    * @return bucketName
-  **/
+   */
   @javax.annotation.Nullable
   public String getBucketName() {
     return bucketName;
   }
 
-  public void setBucketName(String bucketName) {
+  public void setBucketName(@javax.annotation.Nullable String bucketName) {
     this.bucketName = bucketName;
   }
 
 
-  public Qspmpolicymanagerv3FetchObjectStoreFileResponse fileName(Qspmpolicymanagerv3FileName fileName) {
+  public Qspmpolicymanagerv3FetchObjectStoreFileResponse fileName(@javax.annotation.Nullable Qspmpolicymanagerv3FileName fileName) {
     this.fileName = fileName;
     return this;
   }
 
-   /**
+  /**
    * Get fileName
    * @return fileName
-  **/
+   */
   @javax.annotation.Nullable
   public Qspmpolicymanagerv3FileName getFileName() {
     return fileName;
   }
 
-  public void setFileName(Qspmpolicymanagerv3FileName fileName) {
+  public void setFileName(@javax.annotation.Nullable Qspmpolicymanagerv3FileName fileName) {
     this.fileName = fileName;
   }
 
 
-  public Qspmpolicymanagerv3FetchObjectStoreFileResponse folderName(String folderName) {
+  public Qspmpolicymanagerv3FetchObjectStoreFileResponse folderName(@javax.annotation.Nullable String folderName) {
     this.folderName = folderName;
     return this;
   }
 
-   /**
+  /**
    * Get folderName
    * @return folderName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFolderName() {
     return folderName;
   }
 
-  public void setFolderName(String folderName) {
+  public void setFolderName(@javax.annotation.Nullable String folderName) {
     this.folderName = folderName;
   }
 
@@ -172,25 +176,22 @@ public class Qspmpolicymanagerv3FetchObjectStoreFileResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("bucket_name");
-    openapiFields.add("file_name");
-    openapiFields.add("folder_name");
+    openapiFields = new HashSet<String>(Arrays.asList("bucket_name", "file_name", "folder_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3FetchObjectStoreFileResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3FetchObjectStoreFileResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmpolicymanagerv3FetchObjectStoreFileResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmpolicymanagerv3FetchObjectStoreFileResponse is not found in the empty JSON string", Qspmpolicymanagerv3FetchObjectStoreFileResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmpolicymanagerv3FetchObjectStoreFileResponse is not found in the empty JSON string", Qspmpolicymanagerv3FetchObjectStoreFileResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,19 +199,19 @@ public class Qspmpolicymanagerv3FetchObjectStoreFileResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmpolicymanagerv3FetchObjectStoreFileResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3FetchObjectStoreFileResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3FetchObjectStoreFileResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("bucket_name") != null && !jsonObj.get("bucket_name").isJsonNull()) && !jsonObj.get("bucket_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `bucket_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bucket_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `bucket_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bucket_name").toString()));
       }
       // validate the optional field `file_name`
       if (jsonObj.get("file_name") != null && !jsonObj.get("file_name").isJsonNull()) {
         Qspmpolicymanagerv3FileName.validateJsonElement(jsonObj.get("file_name"));
       }
       if ((jsonObj.get("folder_name") != null && !jsonObj.get("folder_name").isJsonNull()) && !jsonObj.get("folder_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `folder_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("folder_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `folder_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("folder_name").toString()));
       }
   }
 
@@ -243,22 +244,22 @@ public class Qspmpolicymanagerv3FetchObjectStoreFileResponse {
     }
   }
 
- /**
-  * Create an instance of Qspmpolicymanagerv3FetchObjectStoreFileResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmpolicymanagerv3FetchObjectStoreFileResponse
-  * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3FetchObjectStoreFileResponse
-  */
+  /**
+   * Create an instance of Qspmpolicymanagerv3FetchObjectStoreFileResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmpolicymanagerv3FetchObjectStoreFileResponse
+   * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3FetchObjectStoreFileResponse
+   */
   public static Qspmpolicymanagerv3FetchObjectStoreFileResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmpolicymanagerv3FetchObjectStoreFileResponse.class);
   }
 
- /**
-  * Convert an instance of Qspmpolicymanagerv3FetchObjectStoreFileResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmpolicymanagerv3FetchObjectStoreFileResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

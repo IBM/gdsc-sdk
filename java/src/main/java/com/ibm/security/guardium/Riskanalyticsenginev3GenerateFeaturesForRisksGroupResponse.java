@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GenerateFeaturesForRisksGroupResponse is the response object for GenerateFeaturesForGroup API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse {
   public static final String SERIALIZED_NAME_RISKS = "risks";
   @SerializedName(SERIALIZED_NAME_RISKS)
+  @javax.annotation.Nullable
   private List<Riskanalyticsenginev3Risk> risks = new ArrayList<>();
 
   public Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse() {
   }
 
-  public Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse risks(List<Riskanalyticsenginev3Risk> risks) {
+  public Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse risks(@javax.annotation.Nullable List<Riskanalyticsenginev3Risk> risks) {
     this.risks = risks;
     return this;
   }
@@ -74,16 +76,16 @@ public class Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse {
     return this;
   }
 
-   /**
+  /**
    * Returns an array with risks with pivot , leads and features.
    * @return risks
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsenginev3Risk> getRisks() {
     return risks;
   }
 
-  public void setRisks(List<Riskanalyticsenginev3Risk> risks) {
+  public void setRisks(@javax.annotation.Nullable List<Riskanalyticsenginev3Risk> risks) {
     this.risks = risks;
   }
 
@@ -132,23 +134,22 @@ public class Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("risks");
+    openapiFields = new HashSet<String>(Arrays.asList("risks"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse is not found in the empty JSON string", Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse is not found in the empty JSON string", Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse {
         if (jsonArrayrisks != null) {
           // ensure the json data is an array
           if (!jsonObj.get("risks").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `risks` to be an array in the JSON string but got `%s`", jsonObj.get("risks").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `risks` to be an array in the JSON string but got `%s`", jsonObj.get("risks").toString()));
           }
 
           // validate the optional field `risks` (array)
@@ -205,22 +206,22 @@ public class Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse
-  */
+  /**
+   * Create an instance of Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse
+   */
   public static Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsenginev3GenerateFeaturesForRisksGroupResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

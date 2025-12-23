@@ -24,6 +24,8 @@ export class SensitivityListItem {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "sensitivityId",
@@ -81,4 +83,3 @@ export class SensitivityListItem {
     public constructor() {
     }
 }
-

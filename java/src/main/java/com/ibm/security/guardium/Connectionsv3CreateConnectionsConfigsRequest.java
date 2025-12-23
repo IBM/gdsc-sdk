@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,111 +41,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Request parameters for create connection.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3CreateConnectionsConfigsRequest {
   public static final String SERIALIZED_NAME_CONNECTION_ID = "connection_id";
   @SerializedName(SERIALIZED_NAME_CONNECTION_ID)
+  @javax.annotation.Nullable
   private String connectionId;
 
   public static final String SERIALIZED_NAME_STREAM_CONNECTION = "stream_connection";
   @SerializedName(SERIALIZED_NAME_STREAM_CONNECTION)
+  @javax.annotation.Nullable
   private Connectionsv3StreamConnection streamConnection;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Connectionsv3ConnectorType type = Connectionsv3ConnectorType.UNDEFINED_TYPE;
 
   public static final String SERIALIZED_NAME_UC_CONNECTION = "uc_connection";
   @SerializedName(SERIALIZED_NAME_UC_CONNECTION)
+  @javax.annotation.Nullable
   private Connectionsv3UCConnectionSummary ucConnection;
 
   public Connectionsv3CreateConnectionsConfigsRequest() {
   }
 
-  public Connectionsv3CreateConnectionsConfigsRequest connectionId(String connectionId) {
+  public Connectionsv3CreateConnectionsConfigsRequest connectionId(@javax.annotation.Nullable String connectionId) {
     this.connectionId = connectionId;
     return this;
   }
 
-   /**
+  /**
    * Optional: connection id.
    * @return connectionId
-  **/
+   */
   @javax.annotation.Nullable
   public String getConnectionId() {
     return connectionId;
   }
 
-  public void setConnectionId(String connectionId) {
+  public void setConnectionId(@javax.annotation.Nullable String connectionId) {
     this.connectionId = connectionId;
   }
 
 
-  public Connectionsv3CreateConnectionsConfigsRequest streamConnection(Connectionsv3StreamConnection streamConnection) {
+  public Connectionsv3CreateConnectionsConfigsRequest streamConnection(@javax.annotation.Nullable Connectionsv3StreamConnection streamConnection) {
     this.streamConnection = streamConnection;
     return this;
   }
 
-   /**
+  /**
    * Get streamConnection
    * @return streamConnection
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3StreamConnection getStreamConnection() {
     return streamConnection;
   }
 
-  public void setStreamConnection(Connectionsv3StreamConnection streamConnection) {
+  public void setStreamConnection(@javax.annotation.Nullable Connectionsv3StreamConnection streamConnection) {
     this.streamConnection = streamConnection;
   }
 
 
-  public Connectionsv3CreateConnectionsConfigsRequest type(Connectionsv3ConnectorType type) {
+  public Connectionsv3CreateConnectionsConfigsRequest type(@javax.annotation.Nullable Connectionsv3ConnectorType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3ConnectorType getType() {
     return type;
   }
 
-  public void setType(Connectionsv3ConnectorType type) {
+  public void setType(@javax.annotation.Nullable Connectionsv3ConnectorType type) {
     this.type = type;
   }
 
 
-  public Connectionsv3CreateConnectionsConfigsRequest ucConnection(Connectionsv3UCConnectionSummary ucConnection) {
+  public Connectionsv3CreateConnectionsConfigsRequest ucConnection(@javax.annotation.Nullable Connectionsv3UCConnectionSummary ucConnection) {
     this.ucConnection = ucConnection;
     return this;
   }
 
-   /**
+  /**
    * Get ucConnection
    * @return ucConnection
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3UCConnectionSummary getUcConnection() {
     return ucConnection;
   }
 
-  public void setUcConnection(Connectionsv3UCConnectionSummary ucConnection) {
+  public void setUcConnection(@javax.annotation.Nullable Connectionsv3UCConnectionSummary ucConnection) {
     this.ucConnection = ucConnection;
   }
 
@@ -199,26 +204,22 @@ public class Connectionsv3CreateConnectionsConfigsRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("connection_id");
-    openapiFields.add("stream_connection");
-    openapiFields.add("type");
-    openapiFields.add("uc_connection");
+    openapiFields = new HashSet<String>(Arrays.asList("connection_id", "stream_connection", "type", "uc_connection"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3CreateConnectionsConfigsRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3CreateConnectionsConfigsRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3CreateConnectionsConfigsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3CreateConnectionsConfigsRequest is not found in the empty JSON string", Connectionsv3CreateConnectionsConfigsRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3CreateConnectionsConfigsRequest is not found in the empty JSON string", Connectionsv3CreateConnectionsConfigsRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -226,12 +227,12 @@ public class Connectionsv3CreateConnectionsConfigsRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3CreateConnectionsConfigsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3CreateConnectionsConfigsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3CreateConnectionsConfigsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("connection_id") != null && !jsonObj.get("connection_id").isJsonNull()) && !jsonObj.get("connection_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `connection_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connection_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_id").toString()));
       }
       // validate the optional field `stream_connection`
       if (jsonObj.get("stream_connection") != null && !jsonObj.get("stream_connection").isJsonNull()) {
@@ -276,22 +277,22 @@ public class Connectionsv3CreateConnectionsConfigsRequest {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3CreateConnectionsConfigsRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3CreateConnectionsConfigsRequest
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3CreateConnectionsConfigsRequest
-  */
+  /**
+   * Create an instance of Connectionsv3CreateConnectionsConfigsRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3CreateConnectionsConfigsRequest
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3CreateConnectionsConfigsRequest
+   */
   public static Connectionsv3CreateConnectionsConfigsRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3CreateConnectionsConfigsRequest.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3CreateConnectionsConfigsRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3CreateConnectionsConfigsRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

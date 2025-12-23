@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Workflowv3StatusCount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3StatusCount {
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Workflowv3Status status = Workflowv3Status.UNDEFINED_STATUS;
 
   public static final String SERIALIZED_NAME_TOTAL = "total";
   @SerializedName(SERIALIZED_NAME_TOTAL)
+  @javax.annotation.Nullable
   private Long total;
 
   public Workflowv3StatusCount() {
   }
 
-  public Workflowv3StatusCount status(Workflowv3Status status) {
+  public Workflowv3StatusCount status(@javax.annotation.Nullable Workflowv3Status status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3Status getStatus() {
     return status;
   }
 
-  public void setStatus(Workflowv3Status status) {
+  public void setStatus(@javax.annotation.Nullable Workflowv3Status status) {
     this.status = status;
   }
 
 
-  public Workflowv3StatusCount total(Long total) {
+  public Workflowv3StatusCount total(@javax.annotation.Nullable Long total) {
     this.total = total;
     return this;
   }
 
-   /**
+  /**
    * Get total
    * @return total
-  **/
+   */
   @javax.annotation.Nullable
   public Long getTotal() {
     return total;
   }
 
-  public void setTotal(Long total) {
+  public void setTotal(@javax.annotation.Nullable Long total) {
     this.total = total;
   }
 
@@ -147,24 +150,22 @@ public class Workflowv3StatusCount {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("status");
-    openapiFields.add("total");
+    openapiFields = new HashSet<String>(Arrays.asList("status", "total"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3StatusCount
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3StatusCount
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3StatusCount.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3StatusCount is not found in the empty JSON string", Workflowv3StatusCount.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3StatusCount is not found in the empty JSON string", Workflowv3StatusCount.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,7 +173,7 @@ public class Workflowv3StatusCount {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3StatusCount.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3StatusCount` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3StatusCount` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -211,22 +212,22 @@ public class Workflowv3StatusCount {
     }
   }
 
- /**
-  * Create an instance of Workflowv3StatusCount given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3StatusCount
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3StatusCount
-  */
+  /**
+   * Create an instance of Workflowv3StatusCount given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3StatusCount
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3StatusCount
+   */
   public static Workflowv3StatusCount fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3StatusCount.class);
   }
 
- /**
-  * Convert an instance of Workflowv3StatusCount to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3StatusCount to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

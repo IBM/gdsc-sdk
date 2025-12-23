@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3ValidateAzureConnectionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3ValidateAzureConnectionRequest {
   public static final String SERIALIZED_NAME_EVENT_HUB_NAME = "event_hub_name";
   @SerializedName(SERIALIZED_NAME_EVENT_HUB_NAME)
+  @javax.annotation.Nullable
   private String eventHubName;
 
   public static final String SERIALIZED_NAME_STORAGE_CONNECTION_STRING = "storage_connection_string";
   @SerializedName(SERIALIZED_NAME_STORAGE_CONNECTION_STRING)
+  @javax.annotation.Nullable
   private String storageConnectionString;
 
   public Connectionsv3ValidateAzureConnectionRequest() {
   }
 
-  public Connectionsv3ValidateAzureConnectionRequest eventHubName(String eventHubName) {
+  public Connectionsv3ValidateAzureConnectionRequest eventHubName(@javax.annotation.Nullable String eventHubName) {
     this.eventHubName = eventHubName;
     return this;
   }
 
-   /**
+  /**
    * Get eventHubName
    * @return eventHubName
-  **/
+   */
   @javax.annotation.Nullable
   public String getEventHubName() {
     return eventHubName;
   }
 
-  public void setEventHubName(String eventHubName) {
+  public void setEventHubName(@javax.annotation.Nullable String eventHubName) {
     this.eventHubName = eventHubName;
   }
 
 
-  public Connectionsv3ValidateAzureConnectionRequest storageConnectionString(String storageConnectionString) {
+  public Connectionsv3ValidateAzureConnectionRequest storageConnectionString(@javax.annotation.Nullable String storageConnectionString) {
     this.storageConnectionString = storageConnectionString;
     return this;
   }
 
-   /**
+  /**
    * Get storageConnectionString
    * @return storageConnectionString
-  **/
+   */
   @javax.annotation.Nullable
   public String getStorageConnectionString() {
     return storageConnectionString;
   }
 
-  public void setStorageConnectionString(String storageConnectionString) {
+  public void setStorageConnectionString(@javax.annotation.Nullable String storageConnectionString) {
     this.storageConnectionString = storageConnectionString;
   }
 
@@ -146,24 +149,22 @@ public class Connectionsv3ValidateAzureConnectionRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("event_hub_name");
-    openapiFields.add("storage_connection_string");
+    openapiFields = new HashSet<String>(Arrays.asList("event_hub_name", "storage_connection_string"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ValidateAzureConnectionRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ValidateAzureConnectionRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3ValidateAzureConnectionRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3ValidateAzureConnectionRequest is not found in the empty JSON string", Connectionsv3ValidateAzureConnectionRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3ValidateAzureConnectionRequest is not found in the empty JSON string", Connectionsv3ValidateAzureConnectionRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Connectionsv3ValidateAzureConnectionRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3ValidateAzureConnectionRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3ValidateAzureConnectionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3ValidateAzureConnectionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("event_hub_name") != null && !jsonObj.get("event_hub_name").isJsonNull()) && !jsonObj.get("event_hub_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `event_hub_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("event_hub_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `event_hub_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("event_hub_name").toString()));
       }
       if ((jsonObj.get("storage_connection_string") != null && !jsonObj.get("storage_connection_string").isJsonNull()) && !jsonObj.get("storage_connection_string").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storage_connection_string` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_connection_string").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_connection_string` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_connection_string").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Connectionsv3ValidateAzureConnectionRequest {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3ValidateAzureConnectionRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3ValidateAzureConnectionRequest
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3ValidateAzureConnectionRequest
-  */
+  /**
+   * Create an instance of Connectionsv3ValidateAzureConnectionRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3ValidateAzureConnectionRequest
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3ValidateAzureConnectionRequest
+   */
   public static Connectionsv3ValidateAzureConnectionRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3ValidateAzureConnectionRequest.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3ValidateAzureConnectionRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3ValidateAzureConnectionRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

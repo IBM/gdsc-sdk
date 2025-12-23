@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **search_key** | **str** |  | [optional] 
 **sort** | **str** |  | [optional] 
 **sort_by** | **str** |  | [optional] 
-**view_type** | [**Assetsv3AssetView**](Assetsv3AssetView.md) |  | [optional] 
+**view_type** | [**Assetsv3AssetView**](Assetsv3AssetView.md) |  | [optional] [default to Assetsv3AssetView.DB]
 
 ## Example
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -46,260 +47,281 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DataStore
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class DataStore {
   public static final String SERIALIZED_NAME_DATA_STORE_ID = "dataStoreId";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_ID)
+  @javax.annotation.Nonnull
   private String dataStoreId;
 
   public static final String SERIALIZED_NAME_DATA_STORE_TYPE = "dataStoreType";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_TYPE)
+  @javax.annotation.Nonnull
   private String dataStoreType;
 
   public static final String SERIALIZED_NAME_DATA_STORE_NAME = "dataStoreName";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_NAME)
+  @javax.annotation.Nonnull
   private String dataStoreName;
 
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_DETAILS = "cloudAccountDetails";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_DETAILS)
+  @javax.annotation.Nonnull
   private CloudAccountDetails cloudAccountDetails;
 
   public static final String SERIALIZED_NAME_CLOUD_REGION = "cloudRegion";
   @SerializedName(SERIALIZED_NAME_CLOUD_REGION)
+  @javax.annotation.Nullable
   private String cloudRegion;
 
   public static final String SERIALIZED_NAME_COUNTRY = "country";
   @SerializedName(SERIALIZED_NAME_COUNTRY)
+  @javax.annotation.Nullable
   private String country;
 
   public static final String SERIALIZED_NAME_CLASSIFICATION_STATUS = "classificationStatus";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION_STATUS)
+  @javax.annotation.Nullable
   private StoreClassificationStatus classificationStatus;
 
   public static final String SERIALIZED_NAME_ENCRYPTION_STATUS = "encryptionStatus";
   @SerializedName(SERIALIZED_NAME_ENCRYPTION_STATUS)
+  @javax.annotation.Nullable
   private DataStoreEncryptionStatus encryptionStatus;
 
   public static final String SERIALIZED_NAME_CUSTOM_DATA = "customData";
   @SerializedName(SERIALIZED_NAME_CUSTOM_DATA)
+  @javax.annotation.Nullable
   private List<StringKeyValue> customData = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_LABEL = "label";
   @SerializedName(SERIALIZED_NAME_LABEL)
+  @javax.annotation.Nullable
   private String label;
 
   public static final String SERIALIZED_NAME_DATA_CUSTODIAN = "dataCustodian";
   @SerializedName(SERIALIZED_NAME_DATA_CUSTODIAN)
+  @javax.annotation.Nullable
   private String dataCustodian;
 
   public static final String SERIALIZED_NAME_CLOUD_TAGS = "cloudTags";
   @SerializedName(SERIALIZED_NAME_CLOUD_TAGS)
+  @javax.annotation.Nullable
   private List<StringKeyValue> cloudTags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_IS_BACKED_UP = "isBackedUp";
   @SerializedName(SERIALIZED_NAME_IS_BACKED_UP)
+  @javax.annotation.Nullable
   private Boolean isBackedUp;
 
   public static final String SERIALIZED_NAME_MANAGED = "managed";
   @SerializedName(SERIALIZED_NAME_MANAGED)
+  @javax.annotation.Nullable
   private Boolean managed;
 
   public static final String SERIALIZED_NAME_VPC_ID = "vpcId";
   @SerializedName(SERIALIZED_NAME_VPC_ID)
+  @javax.annotation.Nullable
   private String vpcId;
 
   public static final String SERIALIZED_NAME_STATS = "stats";
   @SerializedName(SERIALIZED_NAME_STATS)
+  @javax.annotation.Nullable
   private DataStoreStats stats;
 
   public static final String SERIALIZED_NAME_SOURCE = "source";
   @SerializedName(SERIALIZED_NAME_SOURCE)
+  @javax.annotation.Nullable
   private DataStoreSource source;
 
   public static final String SERIALIZED_NAME_DATA_STORE_URL = "dataStoreUrl";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_URL)
+  @javax.annotation.Nullable
   private String dataStoreUrl;
 
   public static final String SERIALIZED_NAME_CLASSIFICATION_ERROR_MESSAGE = "classificationErrorMessage";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION_ERROR_MESSAGE)
+  @javax.annotation.Nullable
   private String classificationErrorMessage;
 
   public static final String SERIALIZED_NAME_LAST_CLASSIFICATION_DATE = "lastClassificationDate";
   @SerializedName(SERIALIZED_NAME_LAST_CLASSIFICATION_DATE)
+  @javax.annotation.Nullable
   private BigDecimal lastClassificationDate;
 
   public static final String SERIALIZED_NAME_UNSUPPORTED_REASON = "unsupportedReason";
   @SerializedName(SERIALIZED_NAME_UNSUPPORTED_REASON)
+  @javax.annotation.Nullable
   private String unsupportedReason;
 
   public DataStore() {
   }
 
-  public DataStore dataStoreId(String dataStoreId) {
+  public DataStore dataStoreId(@javax.annotation.Nonnull String dataStoreId) {
     this.dataStoreId = dataStoreId;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreId
    * @return dataStoreId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataStoreId() {
     return dataStoreId;
   }
 
-  public void setDataStoreId(String dataStoreId) {
+  public void setDataStoreId(@javax.annotation.Nonnull String dataStoreId) {
     this.dataStoreId = dataStoreId;
   }
 
 
-  public DataStore dataStoreType(String dataStoreType) {
+  public DataStore dataStoreType(@javax.annotation.Nonnull String dataStoreType) {
     this.dataStoreType = dataStoreType;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreType
    * @return dataStoreType
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataStoreType() {
     return dataStoreType;
   }
 
-  public void setDataStoreType(String dataStoreType) {
+  public void setDataStoreType(@javax.annotation.Nonnull String dataStoreType) {
     this.dataStoreType = dataStoreType;
   }
 
 
-  public DataStore dataStoreName(String dataStoreName) {
+  public DataStore dataStoreName(@javax.annotation.Nonnull String dataStoreName) {
     this.dataStoreName = dataStoreName;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreName
    * @return dataStoreName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataStoreName() {
     return dataStoreName;
   }
 
-  public void setDataStoreName(String dataStoreName) {
+  public void setDataStoreName(@javax.annotation.Nonnull String dataStoreName) {
     this.dataStoreName = dataStoreName;
   }
 
 
-  public DataStore cloudAccountDetails(CloudAccountDetails cloudAccountDetails) {
+  public DataStore cloudAccountDetails(@javax.annotation.Nonnull CloudAccountDetails cloudAccountDetails) {
     this.cloudAccountDetails = cloudAccountDetails;
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountDetails
    * @return cloudAccountDetails
-  **/
+   */
   @javax.annotation.Nonnull
   public CloudAccountDetails getCloudAccountDetails() {
     return cloudAccountDetails;
   }
 
-  public void setCloudAccountDetails(CloudAccountDetails cloudAccountDetails) {
+  public void setCloudAccountDetails(@javax.annotation.Nonnull CloudAccountDetails cloudAccountDetails) {
     this.cloudAccountDetails = cloudAccountDetails;
   }
 
 
-  public DataStore cloudRegion(String cloudRegion) {
+  public DataStore cloudRegion(@javax.annotation.Nullable String cloudRegion) {
     this.cloudRegion = cloudRegion;
     return this;
   }
 
-   /**
+  /**
    * Get cloudRegion
    * @return cloudRegion
-  **/
+   */
   @javax.annotation.Nullable
   public String getCloudRegion() {
     return cloudRegion;
   }
 
-  public void setCloudRegion(String cloudRegion) {
+  public void setCloudRegion(@javax.annotation.Nullable String cloudRegion) {
     this.cloudRegion = cloudRegion;
   }
 
 
-  public DataStore country(String country) {
+  public DataStore country(@javax.annotation.Nullable String country) {
     this.country = country;
     return this;
   }
 
-   /**
+  /**
    * Get country
    * @return country
-  **/
+   */
   @javax.annotation.Nullable
   public String getCountry() {
     return country;
   }
 
-  public void setCountry(String country) {
+  public void setCountry(@javax.annotation.Nullable String country) {
     this.country = country;
   }
 
 
-  public DataStore classificationStatus(StoreClassificationStatus classificationStatus) {
+  public DataStore classificationStatus(@javax.annotation.Nullable StoreClassificationStatus classificationStatus) {
     this.classificationStatus = classificationStatus;
     return this;
   }
 
-   /**
+  /**
    * Get classificationStatus
    * @return classificationStatus
-  **/
+   */
   @javax.annotation.Nullable
   public StoreClassificationStatus getClassificationStatus() {
     return classificationStatus;
   }
 
-  public void setClassificationStatus(StoreClassificationStatus classificationStatus) {
+  public void setClassificationStatus(@javax.annotation.Nullable StoreClassificationStatus classificationStatus) {
     this.classificationStatus = classificationStatus;
   }
 
 
-  public DataStore encryptionStatus(DataStoreEncryptionStatus encryptionStatus) {
+  public DataStore encryptionStatus(@javax.annotation.Nullable DataStoreEncryptionStatus encryptionStatus) {
     this.encryptionStatus = encryptionStatus;
     return this;
   }
 
-   /**
+  /**
    * Get encryptionStatus
    * @return encryptionStatus
-  **/
+   */
   @javax.annotation.Nullable
   public DataStoreEncryptionStatus getEncryptionStatus() {
     return encryptionStatus;
   }
 
-  public void setEncryptionStatus(DataStoreEncryptionStatus encryptionStatus) {
+  public void setEncryptionStatus(@javax.annotation.Nullable DataStoreEncryptionStatus encryptionStatus) {
     this.encryptionStatus = encryptionStatus;
   }
 
 
-  public DataStore customData(List<StringKeyValue> customData) {
+  public DataStore customData(@javax.annotation.Nullable List<StringKeyValue> customData) {
     this.customData = customData;
     return this;
   }
@@ -312,59 +334,59 @@ public class DataStore {
     return this;
   }
 
-   /**
+  /**
    * Get customData
    * @return customData
-  **/
+   */
   @javax.annotation.Nullable
   public List<StringKeyValue> getCustomData() {
     return customData;
   }
 
-  public void setCustomData(List<StringKeyValue> customData) {
+  public void setCustomData(@javax.annotation.Nullable List<StringKeyValue> customData) {
     this.customData = customData;
   }
 
 
-  public DataStore label(String label) {
+  public DataStore label(@javax.annotation.Nullable String label) {
     this.label = label;
     return this;
   }
 
-   /**
+  /**
    * Get label
    * @return label
-  **/
+   */
   @javax.annotation.Nullable
   public String getLabel() {
     return label;
   }
 
-  public void setLabel(String label) {
+  public void setLabel(@javax.annotation.Nullable String label) {
     this.label = label;
   }
 
 
-  public DataStore dataCustodian(String dataCustodian) {
+  public DataStore dataCustodian(@javax.annotation.Nullable String dataCustodian) {
     this.dataCustodian = dataCustodian;
     return this;
   }
 
-   /**
+  /**
    * Get dataCustodian
    * @return dataCustodian
-  **/
+   */
   @javax.annotation.Nullable
   public String getDataCustodian() {
     return dataCustodian;
   }
 
-  public void setDataCustodian(String dataCustodian) {
+  public void setDataCustodian(@javax.annotation.Nullable String dataCustodian) {
     this.dataCustodian = dataCustodian;
   }
 
 
-  public DataStore cloudTags(List<StringKeyValue> cloudTags) {
+  public DataStore cloudTags(@javax.annotation.Nullable List<StringKeyValue> cloudTags) {
     this.cloudTags = cloudTags;
     return this;
   }
@@ -377,187 +399,187 @@ public class DataStore {
     return this;
   }
 
-   /**
+  /**
    * Get cloudTags
    * @return cloudTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<StringKeyValue> getCloudTags() {
     return cloudTags;
   }
 
-  public void setCloudTags(List<StringKeyValue> cloudTags) {
+  public void setCloudTags(@javax.annotation.Nullable List<StringKeyValue> cloudTags) {
     this.cloudTags = cloudTags;
   }
 
 
-  public DataStore isBackedUp(Boolean isBackedUp) {
+  public DataStore isBackedUp(@javax.annotation.Nullable Boolean isBackedUp) {
     this.isBackedUp = isBackedUp;
     return this;
   }
 
-   /**
+  /**
    * Get isBackedUp
    * @return isBackedUp
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsBackedUp() {
     return isBackedUp;
   }
 
-  public void setIsBackedUp(Boolean isBackedUp) {
+  public void setIsBackedUp(@javax.annotation.Nullable Boolean isBackedUp) {
     this.isBackedUp = isBackedUp;
   }
 
 
-  public DataStore managed(Boolean managed) {
+  public DataStore managed(@javax.annotation.Nullable Boolean managed) {
     this.managed = managed;
     return this;
   }
 
-   /**
+  /**
    * Get managed
    * @return managed
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getManaged() {
     return managed;
   }
 
-  public void setManaged(Boolean managed) {
+  public void setManaged(@javax.annotation.Nullable Boolean managed) {
     this.managed = managed;
   }
 
 
-  public DataStore vpcId(String vpcId) {
+  public DataStore vpcId(@javax.annotation.Nullable String vpcId) {
     this.vpcId = vpcId;
     return this;
   }
 
-   /**
+  /**
    * Get vpcId
    * @return vpcId
-  **/
+   */
   @javax.annotation.Nullable
   public String getVpcId() {
     return vpcId;
   }
 
-  public void setVpcId(String vpcId) {
+  public void setVpcId(@javax.annotation.Nullable String vpcId) {
     this.vpcId = vpcId;
   }
 
 
-  public DataStore stats(DataStoreStats stats) {
+  public DataStore stats(@javax.annotation.Nullable DataStoreStats stats) {
     this.stats = stats;
     return this;
   }
 
-   /**
+  /**
    * Get stats
    * @return stats
-  **/
+   */
   @javax.annotation.Nullable
   public DataStoreStats getStats() {
     return stats;
   }
 
-  public void setStats(DataStoreStats stats) {
+  public void setStats(@javax.annotation.Nullable DataStoreStats stats) {
     this.stats = stats;
   }
 
 
-  public DataStore source(DataStoreSource source) {
+  public DataStore source(@javax.annotation.Nullable DataStoreSource source) {
     this.source = source;
     return this;
   }
 
-   /**
+  /**
    * Get source
    * @return source
-  **/
+   */
   @javax.annotation.Nullable
   public DataStoreSource getSource() {
     return source;
   }
 
-  public void setSource(DataStoreSource source) {
+  public void setSource(@javax.annotation.Nullable DataStoreSource source) {
     this.source = source;
   }
 
 
-  public DataStore dataStoreUrl(String dataStoreUrl) {
+  public DataStore dataStoreUrl(@javax.annotation.Nullable String dataStoreUrl) {
     this.dataStoreUrl = dataStoreUrl;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreUrl
    * @return dataStoreUrl
-  **/
+   */
   @javax.annotation.Nullable
   public String getDataStoreUrl() {
     return dataStoreUrl;
   }
 
-  public void setDataStoreUrl(String dataStoreUrl) {
+  public void setDataStoreUrl(@javax.annotation.Nullable String dataStoreUrl) {
     this.dataStoreUrl = dataStoreUrl;
   }
 
 
-  public DataStore classificationErrorMessage(String classificationErrorMessage) {
+  public DataStore classificationErrorMessage(@javax.annotation.Nullable String classificationErrorMessage) {
     this.classificationErrorMessage = classificationErrorMessage;
     return this;
   }
 
-   /**
+  /**
    * Get classificationErrorMessage
    * @return classificationErrorMessage
-  **/
+   */
   @javax.annotation.Nullable
   public String getClassificationErrorMessage() {
     return classificationErrorMessage;
   }
 
-  public void setClassificationErrorMessage(String classificationErrorMessage) {
+  public void setClassificationErrorMessage(@javax.annotation.Nullable String classificationErrorMessage) {
     this.classificationErrorMessage = classificationErrorMessage;
   }
 
 
-  public DataStore lastClassificationDate(BigDecimal lastClassificationDate) {
+  public DataStore lastClassificationDate(@javax.annotation.Nullable BigDecimal lastClassificationDate) {
     this.lastClassificationDate = lastClassificationDate;
     return this;
   }
 
-   /**
+  /**
    * Get lastClassificationDate
    * @return lastClassificationDate
-  **/
+   */
   @javax.annotation.Nullable
   public BigDecimal getLastClassificationDate() {
     return lastClassificationDate;
   }
 
-  public void setLastClassificationDate(BigDecimal lastClassificationDate) {
+  public void setLastClassificationDate(@javax.annotation.Nullable BigDecimal lastClassificationDate) {
     this.lastClassificationDate = lastClassificationDate;
   }
 
 
-  public DataStore unsupportedReason(String unsupportedReason) {
+  public DataStore unsupportedReason(@javax.annotation.Nullable String unsupportedReason) {
     this.unsupportedReason = unsupportedReason;
     return this;
   }
 
-   /**
+  /**
    * Get unsupportedReason
    * @return unsupportedReason
-  **/
+   */
   @javax.annotation.Nullable
   public String getUnsupportedReason() {
     return unsupportedReason;
   }
 
-  public void setUnsupportedReason(String unsupportedReason) {
+  public void setUnsupportedReason(@javax.annotation.Nullable String unsupportedReason) {
     this.unsupportedReason = unsupportedReason;
   }
 
@@ -646,47 +668,22 @@ public class DataStore {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dataStoreId");
-    openapiFields.add("dataStoreType");
-    openapiFields.add("dataStoreName");
-    openapiFields.add("cloudAccountDetails");
-    openapiFields.add("cloudRegion");
-    openapiFields.add("country");
-    openapiFields.add("classificationStatus");
-    openapiFields.add("encryptionStatus");
-    openapiFields.add("customData");
-    openapiFields.add("label");
-    openapiFields.add("dataCustodian");
-    openapiFields.add("cloudTags");
-    openapiFields.add("isBackedUp");
-    openapiFields.add("managed");
-    openapiFields.add("vpcId");
-    openapiFields.add("stats");
-    openapiFields.add("source");
-    openapiFields.add("dataStoreUrl");
-    openapiFields.add("classificationErrorMessage");
-    openapiFields.add("lastClassificationDate");
-    openapiFields.add("unsupportedReason");
+    openapiFields = new HashSet<String>(Arrays.asList("dataStoreId", "dataStoreType", "dataStoreName", "cloudAccountDetails", "cloudRegion", "country", "classificationStatus", "encryptionStatus", "customData", "label", "dataCustodian", "cloudTags", "isBackedUp", "managed", "vpcId", "stats", "source", "dataStoreUrl", "classificationErrorMessage", "lastClassificationDate", "unsupportedReason"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("dataStoreId");
-    openapiRequiredFields.add("dataStoreType");
-    openapiRequiredFields.add("dataStoreName");
-    openapiRequiredFields.add("cloudAccountDetails");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("dataStoreId", "dataStoreType", "dataStoreName", "cloudAccountDetails"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to DataStore
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to DataStore
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!DataStore.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in DataStore is not found in the empty JSON string", DataStore.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in DataStore is not found in the empty JSON string", DataStore.openapiRequiredFields.toString()));
         }
       }
 
@@ -694,33 +691,33 @@ public class DataStore {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!DataStore.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DataStore` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DataStore` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : DataStore.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dataStoreId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
       }
       if (!jsonObj.get("dataStoreType").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreType").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreType").toString()));
       }
       if (!jsonObj.get("dataStoreName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreName").toString()));
       }
       // validate the required field `cloudAccountDetails`
       CloudAccountDetails.validateJsonElement(jsonObj.get("cloudAccountDetails"));
       if ((jsonObj.get("cloudRegion") != null && !jsonObj.get("cloudRegion").isJsonNull()) && !jsonObj.get("cloudRegion").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudRegion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudRegion").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudRegion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudRegion").toString()));
       }
       if ((jsonObj.get("country") != null && !jsonObj.get("country").isJsonNull()) && !jsonObj.get("country").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
       }
       // validate the optional field `classificationStatus`
       if (jsonObj.get("classificationStatus") != null && !jsonObj.get("classificationStatus").isJsonNull()) {
@@ -735,7 +732,7 @@ public class DataStore {
         if (jsonArraycustomData != null) {
           // ensure the json data is an array
           if (!jsonObj.get("customData").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `customData` to be an array in the JSON string but got `%s`", jsonObj.get("customData").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `customData` to be an array in the JSON string but got `%s`", jsonObj.get("customData").toString()));
           }
 
           // validate the optional field `customData` (array)
@@ -745,17 +742,17 @@ public class DataStore {
         }
       }
       if ((jsonObj.get("label") != null && !jsonObj.get("label").isJsonNull()) && !jsonObj.get("label").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
       }
       if ((jsonObj.get("dataCustodian") != null && !jsonObj.get("dataCustodian").isJsonNull()) && !jsonObj.get("dataCustodian").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataCustodian` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataCustodian").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataCustodian` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataCustodian").toString()));
       }
       if (jsonObj.get("cloudTags") != null && !jsonObj.get("cloudTags").isJsonNull()) {
         JsonArray jsonArraycloudTags = jsonObj.getAsJsonArray("cloudTags");
         if (jsonArraycloudTags != null) {
           // ensure the json data is an array
           if (!jsonObj.get("cloudTags").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `cloudTags` to be an array in the JSON string but got `%s`", jsonObj.get("cloudTags").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudTags` to be an array in the JSON string but got `%s`", jsonObj.get("cloudTags").toString()));
           }
 
           // validate the optional field `cloudTags` (array)
@@ -765,7 +762,7 @@ public class DataStore {
         }
       }
       if ((jsonObj.get("vpcId") != null && !jsonObj.get("vpcId").isJsonNull()) && !jsonObj.get("vpcId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vpcId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vpcId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vpcId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vpcId").toString()));
       }
       // validate the optional field `stats`
       if (jsonObj.get("stats") != null && !jsonObj.get("stats").isJsonNull()) {
@@ -776,13 +773,13 @@ public class DataStore {
         DataStoreSource.validateJsonElement(jsonObj.get("source"));
       }
       if ((jsonObj.get("dataStoreUrl") != null && !jsonObj.get("dataStoreUrl").isJsonNull()) && !jsonObj.get("dataStoreUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreUrl").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreUrl").toString()));
       }
       if ((jsonObj.get("classificationErrorMessage") != null && !jsonObj.get("classificationErrorMessage").isJsonNull()) && !jsonObj.get("classificationErrorMessage").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `classificationErrorMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("classificationErrorMessage").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `classificationErrorMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("classificationErrorMessage").toString()));
       }
       if ((jsonObj.get("unsupportedReason") != null && !jsonObj.get("unsupportedReason").isJsonNull()) && !jsonObj.get("unsupportedReason").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `unsupportedReason` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unsupportedReason").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `unsupportedReason` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unsupportedReason").toString()));
       }
   }
 
@@ -815,22 +812,22 @@ public class DataStore {
     }
   }
 
- /**
-  * Create an instance of DataStore given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of DataStore
-  * @throws IOException if the JSON string is invalid with respect to DataStore
-  */
+  /**
+   * Create an instance of DataStore given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of DataStore
+   * @throws IOException if the JSON string is invalid with respect to DataStore
+   */
   public static DataStore fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, DataStore.class);
   }
 
- /**
-  * Convert an instance of DataStore to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of DataStore to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

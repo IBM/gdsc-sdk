@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **export_file_name** | **str** | Export file name. | [optional] 
 **job_id** | **str** | Token that identifies the export job. | [optional] 
-**job_status** | [**Reportsrunnerv3ExportJobStatus**](Reportsrunnerv3ExportJobStatus.md) |  | [optional] 
+**job_status** | [**Reportsrunnerv3ExportJobStatus**](Reportsrunnerv3ExportJobStatus.md) |  | [optional] [default to Reportsrunnerv3ExportJobStatus.UNDEFINED_JOB_STATUS]
 
 ## Example
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,28 +40,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Single date entry format.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Ecosystemv3DataEntry {
   public static final String SERIALIZED_NAME_ENTRY = "entry";
   @SerializedName(SERIALIZED_NAME_ENTRY)
+  @javax.annotation.Nullable
   private Map<String, String> entry = new HashMap<>();
 
   public Ecosystemv3DataEntry() {
   }
 
-  public Ecosystemv3DataEntry entry(Map<String, String> entry) {
+  public Ecosystemv3DataEntry entry(@javax.annotation.Nullable Map<String, String> entry) {
     this.entry = entry;
     return this;
   }
@@ -73,16 +75,16 @@ public class Ecosystemv3DataEntry {
     return this;
   }
 
-   /**
+  /**
    * Column name and value.
    * @return entry
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getEntry() {
     return entry;
   }
 
-  public void setEntry(Map<String, String> entry) {
+  public void setEntry(@javax.annotation.Nullable Map<String, String> entry) {
     this.entry = entry;
   }
 
@@ -131,23 +133,22 @@ public class Ecosystemv3DataEntry {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("entry");
+    openapiFields = new HashSet<String>(Arrays.asList("entry"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3DataEntry
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3DataEntry
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Ecosystemv3DataEntry.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Ecosystemv3DataEntry is not found in the empty JSON string", Ecosystemv3DataEntry.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Ecosystemv3DataEntry is not found in the empty JSON string", Ecosystemv3DataEntry.openapiRequiredFields.toString()));
         }
       }
 
@@ -155,7 +156,7 @@ public class Ecosystemv3DataEntry {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Ecosystemv3DataEntry.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Ecosystemv3DataEntry` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Ecosystemv3DataEntry` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -190,22 +191,22 @@ public class Ecosystemv3DataEntry {
     }
   }
 
- /**
-  * Create an instance of Ecosystemv3DataEntry given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Ecosystemv3DataEntry
-  * @throws IOException if the JSON string is invalid with respect to Ecosystemv3DataEntry
-  */
+  /**
+   * Create an instance of Ecosystemv3DataEntry given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Ecosystemv3DataEntry
+   * @throws IOException if the JSON string is invalid with respect to Ecosystemv3DataEntry
+   */
   public static Ecosystemv3DataEntry fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Ecosystemv3DataEntry.class);
   }
 
- /**
-  * Convert an instance of Ecosystemv3DataEntry to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Ecosystemv3DataEntry to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

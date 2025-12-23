@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,71 +43,78 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Message format for actions.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3Action {
   public static final String SERIALIZED_NAME_ACTION_NAME = "action_name";
   @SerializedName(SERIALIZED_NAME_ACTION_NAME)
+  @javax.annotation.Nullable
   private String actionName;
 
   public static final String SERIALIZED_NAME_NOTIFICATIONS = "notifications";
   @SerializedName(SERIALIZED_NAME_NOTIFICATIONS)
+  @javax.annotation.Nullable
   private List<Policybuilderv3TargetReceiver> notifications = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ORDER = "order";
   @SerializedName(SERIALIZED_NAME_ORDER)
+  @javax.annotation.Nullable
   private Integer order;
 
   public static final String SERIALIZED_NAME_PARAMETERS = "parameters";
   @SerializedName(SERIALIZED_NAME_PARAMETERS)
+  @javax.annotation.Nullable
   private List<Policybuilderv3ActionParameter> parameters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_QR_DEFINTION_ID = "qr_defintion_id";
   @SerializedName(SERIALIZED_NAME_QR_DEFINTION_ID)
+  @javax.annotation.Nullable
   private Integer qrDefintionId;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Policybuilderv3ActionType type = Policybuilderv3ActionType.UNDEFINED_ACTIONTYPE;
 
   public static final String SERIALIZED_NAME_UI_LABEL = "ui_label";
   @SerializedName(SERIALIZED_NAME_UI_LABEL)
+  @javax.annotation.Nullable
   private String uiLabel;
 
   public Policybuilderv3Action() {
   }
 
-  public Policybuilderv3Action actionName(String actionName) {
+  public Policybuilderv3Action actionName(@javax.annotation.Nullable String actionName) {
     this.actionName = actionName;
     return this;
   }
 
-   /**
+  /**
    * Name of the action.
    * @return actionName
-  **/
+   */
   @javax.annotation.Nullable
   public String getActionName() {
     return actionName;
   }
 
-  public void setActionName(String actionName) {
+  public void setActionName(@javax.annotation.Nullable String actionName) {
     this.actionName = actionName;
   }
 
 
-  public Policybuilderv3Action notifications(List<Policybuilderv3TargetReceiver> notifications) {
+  public Policybuilderv3Action notifications(@javax.annotation.Nullable List<Policybuilderv3TargetReceiver> notifications) {
     this.notifications = notifications;
     return this;
   }
@@ -119,40 +127,40 @@ public class Policybuilderv3Action {
     return this;
   }
 
-   /**
+  /**
    * Notification object if for alert action.
    * @return notifications
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3TargetReceiver> getNotifications() {
     return notifications;
   }
 
-  public void setNotifications(List<Policybuilderv3TargetReceiver> notifications) {
+  public void setNotifications(@javax.annotation.Nullable List<Policybuilderv3TargetReceiver> notifications) {
     this.notifications = notifications;
   }
 
 
-  public Policybuilderv3Action order(Integer order) {
+  public Policybuilderv3Action order(@javax.annotation.Nullable Integer order) {
     this.order = order;
     return this;
   }
 
-   /**
+  /**
    * Order of the action being used in the rules.
    * @return order
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getOrder() {
     return order;
   }
 
-  public void setOrder(Integer order) {
+  public void setOrder(@javax.annotation.Nullable Integer order) {
     this.order = order;
   }
 
 
-  public Policybuilderv3Action parameters(List<Policybuilderv3ActionParameter> parameters) {
+  public Policybuilderv3Action parameters(@javax.annotation.Nullable List<Policybuilderv3ActionParameter> parameters) {
     this.parameters = parameters;
     return this;
   }
@@ -165,73 +173,73 @@ public class Policybuilderv3Action {
     return this;
   }
 
-   /**
+  /**
    * Action parameters.
    * @return parameters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3ActionParameter> getParameters() {
     return parameters;
   }
 
-  public void setParameters(List<Policybuilderv3ActionParameter> parameters) {
+  public void setParameters(@javax.annotation.Nullable List<Policybuilderv3ActionParameter> parameters) {
     this.parameters = parameters;
   }
 
 
-  public Policybuilderv3Action qrDefintionId(Integer qrDefintionId) {
+  public Policybuilderv3Action qrDefintionId(@javax.annotation.Nullable Integer qrDefintionId) {
     this.qrDefintionId = qrDefintionId;
     return this;
   }
 
-   /**
+  /**
    * Query rewrite definition id.
    * @return qrDefintionId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getQrDefintionId() {
     return qrDefintionId;
   }
 
-  public void setQrDefintionId(Integer qrDefintionId) {
+  public void setQrDefintionId(@javax.annotation.Nullable Integer qrDefintionId) {
     this.qrDefintionId = qrDefintionId;
   }
 
 
-  public Policybuilderv3Action type(Policybuilderv3ActionType type) {
+  public Policybuilderv3Action type(@javax.annotation.Nullable Policybuilderv3ActionType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3ActionType getType() {
     return type;
   }
 
-  public void setType(Policybuilderv3ActionType type) {
+  public void setType(@javax.annotation.Nullable Policybuilderv3ActionType type) {
     this.type = type;
   }
 
 
-  public Policybuilderv3Action uiLabel(String uiLabel) {
+  public Policybuilderv3Action uiLabel(@javax.annotation.Nullable String uiLabel) {
     this.uiLabel = uiLabel;
     return this;
   }
 
-   /**
+  /**
    * Ui label for the action.
    * @return uiLabel
-  **/
+   */
   @javax.annotation.Nullable
   public String getUiLabel() {
     return uiLabel;
   }
 
-  public void setUiLabel(String uiLabel) {
+  public void setUiLabel(@javax.annotation.Nullable String uiLabel) {
     this.uiLabel = uiLabel;
   }
 
@@ -292,29 +300,22 @@ public class Policybuilderv3Action {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("action_name");
-    openapiFields.add("notifications");
-    openapiFields.add("order");
-    openapiFields.add("parameters");
-    openapiFields.add("qr_defintion_id");
-    openapiFields.add("type");
-    openapiFields.add("ui_label");
+    openapiFields = new HashSet<String>(Arrays.asList("action_name", "notifications", "order", "parameters", "qr_defintion_id", "type", "ui_label"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3Action
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3Action
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3Action.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3Action is not found in the empty JSON string", Policybuilderv3Action.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3Action is not found in the empty JSON string", Policybuilderv3Action.openapiRequiredFields.toString()));
         }
       }
 
@@ -322,19 +323,19 @@ public class Policybuilderv3Action {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3Action.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3Action` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3Action` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("action_name") != null && !jsonObj.get("action_name").isJsonNull()) && !jsonObj.get("action_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `action_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `action_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_name").toString()));
       }
       if (jsonObj.get("notifications") != null && !jsonObj.get("notifications").isJsonNull()) {
         JsonArray jsonArraynotifications = jsonObj.getAsJsonArray("notifications");
         if (jsonArraynotifications != null) {
           // ensure the json data is an array
           if (!jsonObj.get("notifications").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `notifications` to be an array in the JSON string but got `%s`", jsonObj.get("notifications").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `notifications` to be an array in the JSON string but got `%s`", jsonObj.get("notifications").toString()));
           }
 
           // validate the optional field `notifications` (array)
@@ -348,7 +349,7 @@ public class Policybuilderv3Action {
         if (jsonArrayparameters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("parameters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `parameters` to be an array in the JSON string but got `%s`", jsonObj.get("parameters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parameters` to be an array in the JSON string but got `%s`", jsonObj.get("parameters").toString()));
           }
 
           // validate the optional field `parameters` (array)
@@ -362,7 +363,7 @@ public class Policybuilderv3Action {
         Policybuilderv3ActionType.validateJsonElement(jsonObj.get("type"));
       }
       if ((jsonObj.get("ui_label") != null && !jsonObj.get("ui_label").isJsonNull()) && !jsonObj.get("ui_label").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ui_label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ui_label").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ui_label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ui_label").toString()));
       }
   }
 
@@ -395,22 +396,22 @@ public class Policybuilderv3Action {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3Action given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3Action
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3Action
-  */
+  /**
+   * Create an instance of Policybuilderv3Action given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3Action
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3Action
+   */
   public static Policybuilderv3Action fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3Action.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3Action to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3Action to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

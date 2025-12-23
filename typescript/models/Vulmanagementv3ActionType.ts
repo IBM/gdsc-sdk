@@ -16,9 +16,9 @@ import { HttpFile } from '../http/http';
 * - ACTION_TYPE_UNKNOWN: UNKNOWN Type.  - ACTION_TYPE_COMMENT: Comment Type.  - ACTION_TYPE_ASSIGN: Assign Type.  - ACTION_TYPE_CHANGE_STATUS: Status Changing Type.  - ACTION_TYPE_CHANGE_SEVERITY: Severity Changing Type.
 */
 export enum Vulmanagementv3ActionType {
-    Unknown = 'ACTION_TYPE_UNKNOWN',
-    Comment = 'ACTION_TYPE_COMMENT',
-    Assign = 'ACTION_TYPE_ASSIGN',
-    ChangeStatus = 'ACTION_TYPE_CHANGE_STATUS',
-    ChangeSeverity = 'ACTION_TYPE_CHANGE_SEVERITY'
+    ActionTypeUnknown = 'ACTION_TYPE_UNKNOWN',
+    ActionTypeComment = 'ACTION_TYPE_COMMENT',
+    ActionTypeAssign = 'ACTION_TYPE_ASSIGN',
+    ActionTypeChangeStatus = 'ACTION_TYPE_CHANGE_STATUS',
+    ActionTypeChangeSeverity = 'ACTION_TYPE_CHANGE_SEVERITY'
 }

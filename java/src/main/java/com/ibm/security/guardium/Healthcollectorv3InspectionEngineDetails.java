@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,203 +38,211 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * InspectionEngineDetails gets additional information about inspection engines.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3InspectionEngineDetails {
   public static final String SERIALIZED_NAME_IE = "ie";
   @SerializedName(SERIALIZED_NAME_IE)
+  @javax.annotation.Nullable
   private String ie;
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
+  @javax.annotation.Nullable
   private String port;
 
   public static final String SERIALIZED_NAME_PROTOCOL = "protocol";
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
+  @javax.annotation.Nullable
   private String protocol;
 
   public static final String SERIALIZED_NAME_STAP = "stap";
   @SerializedName(SERIALIZED_NAME_STAP)
+  @javax.annotation.Nullable
   private String stap;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Integer status;
 
   public static final String SERIALIZED_NAME_VERIFICATION_RESULT = "verification_result";
   @SerializedName(SERIALIZED_NAME_VERIFICATION_RESULT)
+  @javax.annotation.Nullable
   private String verificationResult;
 
   public static final String SERIALIZED_NAME_VERIFICATION_STATE = "verification_state";
   @SerializedName(SERIALIZED_NAME_VERIFICATION_STATE)
+  @javax.annotation.Nullable
   private String verificationState;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public Healthcollectorv3InspectionEngineDetails() {
   }
 
-  public Healthcollectorv3InspectionEngineDetails ie(String ie) {
+  public Healthcollectorv3InspectionEngineDetails ie(@javax.annotation.Nullable String ie) {
     this.ie = ie;
     return this;
   }
 
-   /**
+  /**
    * Inspection engine.
    * @return ie
-  **/
+   */
   @javax.annotation.Nullable
   public String getIe() {
     return ie;
   }
 
-  public void setIe(String ie) {
+  public void setIe(@javax.annotation.Nullable String ie) {
     this.ie = ie;
   }
 
 
-  public Healthcollectorv3InspectionEngineDetails port(String port) {
+  public Healthcollectorv3InspectionEngineDetails port(@javax.annotation.Nullable String port) {
     this.port = port;
     return this;
   }
 
-   /**
+  /**
    * Port.
    * @return port
-  **/
+   */
   @javax.annotation.Nullable
   public String getPort() {
     return port;
   }
 
-  public void setPort(String port) {
+  public void setPort(@javax.annotation.Nullable String port) {
     this.port = port;
   }
 
 
-  public Healthcollectorv3InspectionEngineDetails protocol(String protocol) {
+  public Healthcollectorv3InspectionEngineDetails protocol(@javax.annotation.Nullable String protocol) {
     this.protocol = protocol;
     return this;
   }
 
-   /**
+  /**
    * Protocol.
    * @return protocol
-  **/
+   */
   @javax.annotation.Nullable
   public String getProtocol() {
     return protocol;
   }
 
-  public void setProtocol(String protocol) {
+  public void setProtocol(@javax.annotation.Nullable String protocol) {
     this.protocol = protocol;
   }
 
 
-  public Healthcollectorv3InspectionEngineDetails stap(String stap) {
+  public Healthcollectorv3InspectionEngineDetails stap(@javax.annotation.Nullable String stap) {
     this.stap = stap;
     return this;
   }
 
-   /**
+  /**
    * S-TAP of the inspection engine.
    * @return stap
-  **/
+   */
   @javax.annotation.Nullable
   public String getStap() {
     return stap;
   }
 
-  public void setStap(String stap) {
+  public void setStap(@javax.annotation.Nullable String stap) {
     this.stap = stap;
   }
 
 
-  public Healthcollectorv3InspectionEngineDetails status(Integer status) {
+  public Healthcollectorv3InspectionEngineDetails status(@javax.annotation.Nullable Integer status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Status of inspection engine.
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStatus() {
     return status;
   }
 
-  public void setStatus(Integer status) {
+  public void setStatus(@javax.annotation.Nullable Integer status) {
     this.status = status;
   }
 
 
-  public Healthcollectorv3InspectionEngineDetails verificationResult(String verificationResult) {
+  public Healthcollectorv3InspectionEngineDetails verificationResult(@javax.annotation.Nullable String verificationResult) {
     this.verificationResult = verificationResult;
     return this;
   }
 
-   /**
+  /**
    * Verification result.
    * @return verificationResult
-  **/
+   */
   @javax.annotation.Nullable
   public String getVerificationResult() {
     return verificationResult;
   }
 
-  public void setVerificationResult(String verificationResult) {
+  public void setVerificationResult(@javax.annotation.Nullable String verificationResult) {
     this.verificationResult = verificationResult;
   }
 
 
-  public Healthcollectorv3InspectionEngineDetails verificationState(String verificationState) {
+  public Healthcollectorv3InspectionEngineDetails verificationState(@javax.annotation.Nullable String verificationState) {
     this.verificationState = verificationState;
     return this;
   }
 
-   /**
+  /**
    * Verification state.
    * @return verificationState
-  **/
+   */
   @javax.annotation.Nullable
   public String getVerificationState() {
     return verificationState;
   }
 
-  public void setVerificationState(String verificationState) {
+  public void setVerificationState(@javax.annotation.Nullable String verificationState) {
     this.verificationState = verificationState;
   }
 
 
-  public Healthcollectorv3InspectionEngineDetails version(String version) {
+  public Healthcollectorv3InspectionEngineDetails version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Version.
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
@@ -296,30 +305,22 @@ public class Healthcollectorv3InspectionEngineDetails {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("ie");
-    openapiFields.add("port");
-    openapiFields.add("protocol");
-    openapiFields.add("stap");
-    openapiFields.add("status");
-    openapiFields.add("verification_result");
-    openapiFields.add("verification_state");
-    openapiFields.add("version");
+    openapiFields = new HashSet<String>(Arrays.asList("ie", "port", "protocol", "stap", "status", "verification_result", "verification_state", "version"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3InspectionEngineDetails
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3InspectionEngineDetails
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3InspectionEngineDetails.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3InspectionEngineDetails is not found in the empty JSON string", Healthcollectorv3InspectionEngineDetails.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3InspectionEngineDetails is not found in the empty JSON string", Healthcollectorv3InspectionEngineDetails.openapiRequiredFields.toString()));
         }
       }
 
@@ -327,30 +328,30 @@ public class Healthcollectorv3InspectionEngineDetails {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3InspectionEngineDetails.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3InspectionEngineDetails` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3InspectionEngineDetails` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("ie") != null && !jsonObj.get("ie").isJsonNull()) && !jsonObj.get("ie").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ie` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ie").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ie` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ie").toString()));
       }
       if ((jsonObj.get("port") != null && !jsonObj.get("port").isJsonNull()) && !jsonObj.get("port").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
       }
       if ((jsonObj.get("protocol") != null && !jsonObj.get("protocol").isJsonNull()) && !jsonObj.get("protocol").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `protocol` to be a primitive type in the JSON string but got `%s`", jsonObj.get("protocol").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `protocol` to be a primitive type in the JSON string but got `%s`", jsonObj.get("protocol").toString()));
       }
       if ((jsonObj.get("stap") != null && !jsonObj.get("stap").isJsonNull()) && !jsonObj.get("stap").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `stap` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `stap` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap").toString()));
       }
       if ((jsonObj.get("verification_result") != null && !jsonObj.get("verification_result").isJsonNull()) && !jsonObj.get("verification_result").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `verification_result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("verification_result").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `verification_result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("verification_result").toString()));
       }
       if ((jsonObj.get("verification_state") != null && !jsonObj.get("verification_state").isJsonNull()) && !jsonObj.get("verification_state").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `verification_state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("verification_state").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `verification_state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("verification_state").toString()));
       }
       if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
   }
 
@@ -383,22 +384,22 @@ public class Healthcollectorv3InspectionEngineDetails {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3InspectionEngineDetails given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3InspectionEngineDetails
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3InspectionEngineDetails
-  */
+  /**
+   * Create an instance of Healthcollectorv3InspectionEngineDetails given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3InspectionEngineDetails
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3InspectionEngineDetails
+   */
   public static Healthcollectorv3InspectionEngineDetails fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3InspectionEngineDetails.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3InspectionEngineDetails to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3InspectionEngineDetails to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

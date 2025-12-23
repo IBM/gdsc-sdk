@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,205 +43,217 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Audit scheduling configuration.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Complianceacceleratorv3AuditConfig {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_ENABLED = "enabled";
   @SerializedName(SERIALIZED_NAME_ENABLED)
+  @javax.annotation.Nullable
   private Boolean enabled;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_INSTRUCTIONS = "instructions";
   @SerializedName(SERIALIZED_NAME_INSTRUCTIONS)
+  @javax.annotation.Nullable
   private String instructions;
 
   public static final String SERIALIZED_NAME_IS_DELETION = "is_deletion";
   @SerializedName(SERIALIZED_NAME_IS_DELETION)
+  @javax.annotation.Nullable
   private Boolean isDeletion;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_OWNER = "owner";
   @SerializedName(SERIALIZED_NAME_OWNER)
+  @javax.annotation.Nullable
   private Schedulerv3Recipient owner;
 
   public static final String SERIALIZED_NAME_RECIPIENTS = "recipients";
   @SerializedName(SERIALIZED_NAME_RECIPIENTS)
+  @javax.annotation.Nullable
   private List<Schedulerv3Recipient> recipients = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REPORT_KEY = "report_key";
   @SerializedName(SERIALIZED_NAME_REPORT_KEY)
+  @javax.annotation.Nullable
   private String reportKey;
 
   public static final String SERIALIZED_NAME_RUN_ONCE_NOW = "run_once_now";
   @SerializedName(SERIALIZED_NAME_RUN_ONCE_NOW)
+  @javax.annotation.Nullable
   private Boolean runOnceNow;
 
   public static final String SERIALIZED_NAME_SCHEDULER = "scheduler";
   @SerializedName(SERIALIZED_NAME_SCHEDULER)
+  @javax.annotation.Nullable
   private Complianceacceleratorv3AuditScheduler scheduler;
 
   public static final String SERIALIZED_NAME_TASKS = "tasks";
   @SerializedName(SERIALIZED_NAME_TASKS)
+  @javax.annotation.Nullable
   private List<Schedulerv3ScheduledTask> tasks = new ArrayList<>();
 
   public Complianceacceleratorv3AuditConfig() {
   }
 
-  public Complianceacceleratorv3AuditConfig description(String description) {
+  public Complianceacceleratorv3AuditConfig description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Audit description.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Complianceacceleratorv3AuditConfig enabled(Boolean enabled) {
+  public Complianceacceleratorv3AuditConfig enabled(@javax.annotation.Nullable Boolean enabled) {
     this.enabled = enabled;
     return this;
   }
 
-   /**
+  /**
    * If audit is enabled to run.
    * @return enabled
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getEnabled() {
     return enabled;
   }
 
-  public void setEnabled(Boolean enabled) {
+  public void setEnabled(@javax.annotation.Nullable Boolean enabled) {
     this.enabled = enabled;
   }
 
 
-  public Complianceacceleratorv3AuditConfig id(String id) {
+  public Complianceacceleratorv3AuditConfig id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Audit id.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Complianceacceleratorv3AuditConfig instructions(String instructions) {
+  public Complianceacceleratorv3AuditConfig instructions(@javax.annotation.Nullable String instructions) {
     this.instructions = instructions;
     return this;
   }
 
-   /**
+  /**
    * Audit instructions.
    * @return instructions
-  **/
+   */
   @javax.annotation.Nullable
   public String getInstructions() {
     return instructions;
   }
 
-  public void setInstructions(String instructions) {
+  public void setInstructions(@javax.annotation.Nullable String instructions) {
     this.instructions = instructions;
   }
 
 
-  public Complianceacceleratorv3AuditConfig isDeletion(Boolean isDeletion) {
+  public Complianceacceleratorv3AuditConfig isDeletion(@javax.annotation.Nullable Boolean isDeletion) {
     this.isDeletion = isDeletion;
     return this;
   }
 
-   /**
+  /**
    * Delete flag.
    * @return isDeletion
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsDeletion() {
     return isDeletion;
   }
 
-  public void setIsDeletion(Boolean isDeletion) {
+  public void setIsDeletion(@javax.annotation.Nullable Boolean isDeletion) {
     this.isDeletion = isDeletion;
   }
 
 
-  public Complianceacceleratorv3AuditConfig name(String name) {
+  public Complianceacceleratorv3AuditConfig name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Audit name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Complianceacceleratorv3AuditConfig owner(Schedulerv3Recipient owner) {
+  public Complianceacceleratorv3AuditConfig owner(@javax.annotation.Nullable Schedulerv3Recipient owner) {
     this.owner = owner;
     return this;
   }
 
-   /**
+  /**
    * Get owner
    * @return owner
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3Recipient getOwner() {
     return owner;
   }
 
-  public void setOwner(Schedulerv3Recipient owner) {
+  public void setOwner(@javax.annotation.Nullable Schedulerv3Recipient owner) {
     this.owner = owner;
   }
 
 
-  public Complianceacceleratorv3AuditConfig recipients(List<Schedulerv3Recipient> recipients) {
+  public Complianceacceleratorv3AuditConfig recipients(@javax.annotation.Nullable List<Schedulerv3Recipient> recipients) {
     this.recipients = recipients;
     return this;
   }
@@ -253,78 +266,78 @@ public class Complianceacceleratorv3AuditConfig {
     return this;
   }
 
-   /**
+  /**
    * Recepients.
    * @return recipients
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3Recipient> getRecipients() {
     return recipients;
   }
 
-  public void setRecipients(List<Schedulerv3Recipient> recipients) {
+  public void setRecipients(@javax.annotation.Nullable List<Schedulerv3Recipient> recipients) {
     this.recipients = recipients;
   }
 
 
-  public Complianceacceleratorv3AuditConfig reportKey(String reportKey) {
+  public Complianceacceleratorv3AuditConfig reportKey(@javax.annotation.Nullable String reportKey) {
     this.reportKey = reportKey;
     return this;
   }
 
-   /**
+  /**
    * Which reports set will be used.
    * @return reportKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportKey() {
     return reportKey;
   }
 
-  public void setReportKey(String reportKey) {
+  public void setReportKey(@javax.annotation.Nullable String reportKey) {
     this.reportKey = reportKey;
   }
 
 
-  public Complianceacceleratorv3AuditConfig runOnceNow(Boolean runOnceNow) {
+  public Complianceacceleratorv3AuditConfig runOnceNow(@javax.annotation.Nullable Boolean runOnceNow) {
     this.runOnceNow = runOnceNow;
     return this;
   }
 
-   /**
+  /**
    * Flag if run once right away.
    * @return runOnceNow
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getRunOnceNow() {
     return runOnceNow;
   }
 
-  public void setRunOnceNow(Boolean runOnceNow) {
+  public void setRunOnceNow(@javax.annotation.Nullable Boolean runOnceNow) {
     this.runOnceNow = runOnceNow;
   }
 
 
-  public Complianceacceleratorv3AuditConfig scheduler(Complianceacceleratorv3AuditScheduler scheduler) {
+  public Complianceacceleratorv3AuditConfig scheduler(@javax.annotation.Nullable Complianceacceleratorv3AuditScheduler scheduler) {
     this.scheduler = scheduler;
     return this;
   }
 
-   /**
+  /**
    * Get scheduler
    * @return scheduler
-  **/
+   */
   @javax.annotation.Nullable
   public Complianceacceleratorv3AuditScheduler getScheduler() {
     return scheduler;
   }
 
-  public void setScheduler(Complianceacceleratorv3AuditScheduler scheduler) {
+  public void setScheduler(@javax.annotation.Nullable Complianceacceleratorv3AuditScheduler scheduler) {
     this.scheduler = scheduler;
   }
 
 
-  public Complianceacceleratorv3AuditConfig tasks(List<Schedulerv3ScheduledTask> tasks) {
+  public Complianceacceleratorv3AuditConfig tasks(@javax.annotation.Nullable List<Schedulerv3ScheduledTask> tasks) {
     this.tasks = tasks;
     return this;
   }
@@ -337,16 +350,16 @@ public class Complianceacceleratorv3AuditConfig {
     return this;
   }
 
-   /**
+  /**
    * Array of tasks.
    * @return tasks
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3ScheduledTask> getTasks() {
     return tasks;
   }
 
-  public void setTasks(List<Schedulerv3ScheduledTask> tasks) {
+  public void setTasks(@javax.annotation.Nullable List<Schedulerv3ScheduledTask> tasks) {
     this.tasks = tasks;
   }
 
@@ -417,34 +430,22 @@ public class Complianceacceleratorv3AuditConfig {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("description");
-    openapiFields.add("enabled");
-    openapiFields.add("id");
-    openapiFields.add("instructions");
-    openapiFields.add("is_deletion");
-    openapiFields.add("name");
-    openapiFields.add("owner");
-    openapiFields.add("recipients");
-    openapiFields.add("report_key");
-    openapiFields.add("run_once_now");
-    openapiFields.add("scheduler");
-    openapiFields.add("tasks");
+    openapiFields = new HashSet<String>(Arrays.asList("description", "enabled", "id", "instructions", "is_deletion", "name", "owner", "recipients", "report_key", "run_once_now", "scheduler", "tasks"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3AuditConfig
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3AuditConfig
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Complianceacceleratorv3AuditConfig.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Complianceacceleratorv3AuditConfig is not found in the empty JSON string", Complianceacceleratorv3AuditConfig.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Complianceacceleratorv3AuditConfig is not found in the empty JSON string", Complianceacceleratorv3AuditConfig.openapiRequiredFields.toString()));
         }
       }
 
@@ -452,21 +453,21 @@ public class Complianceacceleratorv3AuditConfig {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Complianceacceleratorv3AuditConfig.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3AuditConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3AuditConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("instructions") != null && !jsonObj.get("instructions").isJsonNull()) && !jsonObj.get("instructions").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `instructions` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instructions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `instructions` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instructions").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       // validate the optional field `owner`
       if (jsonObj.get("owner") != null && !jsonObj.get("owner").isJsonNull()) {
@@ -477,7 +478,7 @@ public class Complianceacceleratorv3AuditConfig {
         if (jsonArrayrecipients != null) {
           // ensure the json data is an array
           if (!jsonObj.get("recipients").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `recipients` to be an array in the JSON string but got `%s`", jsonObj.get("recipients").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `recipients` to be an array in the JSON string but got `%s`", jsonObj.get("recipients").toString()));
           }
 
           // validate the optional field `recipients` (array)
@@ -487,7 +488,7 @@ public class Complianceacceleratorv3AuditConfig {
         }
       }
       if ((jsonObj.get("report_key") != null && !jsonObj.get("report_key").isJsonNull()) && !jsonObj.get("report_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_key").toString()));
       }
       // validate the optional field `scheduler`
       if (jsonObj.get("scheduler") != null && !jsonObj.get("scheduler").isJsonNull()) {
@@ -498,7 +499,7 @@ public class Complianceacceleratorv3AuditConfig {
         if (jsonArraytasks != null) {
           // ensure the json data is an array
           if (!jsonObj.get("tasks").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tasks` to be an array in the JSON string but got `%s`", jsonObj.get("tasks").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tasks` to be an array in the JSON string but got `%s`", jsonObj.get("tasks").toString()));
           }
 
           // validate the optional field `tasks` (array)
@@ -538,22 +539,22 @@ public class Complianceacceleratorv3AuditConfig {
     }
   }
 
- /**
-  * Create an instance of Complianceacceleratorv3AuditConfig given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Complianceacceleratorv3AuditConfig
-  * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3AuditConfig
-  */
+  /**
+   * Create an instance of Complianceacceleratorv3AuditConfig given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Complianceacceleratorv3AuditConfig
+   * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3AuditConfig
+   */
   public static Complianceacceleratorv3AuditConfig fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Complianceacceleratorv3AuditConfig.class);
   }
 
- /**
-  * Convert an instance of Complianceacceleratorv3AuditConfig to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Complianceacceleratorv3AuditConfig to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

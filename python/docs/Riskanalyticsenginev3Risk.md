@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **leads** | [**List[Riskanalyticsenginev3Lead]**](Riskanalyticsenginev3Lead.md) | The risk leads. | [optional] 
 **pivot** | [**Riskanalyticsenginev3Pivot**](Riskanalyticsenginev3Pivot.md) |  | [optional] 
 **score** | **int** | The risk score. | [optional] 
-**severity_level** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] 
+**severity_level** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] [default to Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL]
 **start_time** | **datetime** | The leads start time in format YYYY-MM-DDTHH:mm:ss.sssZ. | [optional] 
 
 ## Example

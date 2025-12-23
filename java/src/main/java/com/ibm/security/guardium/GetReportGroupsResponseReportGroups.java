@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,51 +41,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ReportGroups contains the group ID and the reports used by that group ID.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class GetReportGroupsResponseReportGroups {
   public static final String SERIALIZED_NAME_GROUP_ID = "group_id";
   @SerializedName(SERIALIZED_NAME_GROUP_ID)
+  @javax.annotation.Nullable
   private String groupId;
 
   public static final String SERIALIZED_NAME_REPORTS = "reports";
   @SerializedName(SERIALIZED_NAME_REPORTS)
+  @javax.annotation.Nullable
   private List<ReportGroupsReport> reports = new ArrayList<>();
 
   public GetReportGroupsResponseReportGroups() {
   }
 
-  public GetReportGroupsResponseReportGroups groupId(String groupId) {
+  public GetReportGroupsResponseReportGroups groupId(@javax.annotation.Nullable String groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
+  /**
    * The group ID that is being used by the reports.
    * @return groupId
-  **/
+   */
   @javax.annotation.Nullable
   public String getGroupId() {
     return groupId;
   }
 
-  public void setGroupId(String groupId) {
+  public void setGroupId(@javax.annotation.Nullable String groupId) {
     this.groupId = groupId;
   }
 
 
-  public GetReportGroupsResponseReportGroups reports(List<ReportGroupsReport> reports) {
+  public GetReportGroupsResponseReportGroups reports(@javax.annotation.Nullable List<ReportGroupsReport> reports) {
     this.reports = reports;
     return this;
   }
@@ -97,16 +100,16 @@ public class GetReportGroupsResponseReportGroups {
     return this;
   }
 
-   /**
+  /**
    * A list of reports being used by the groupID.
    * @return reports
-  **/
+   */
   @javax.annotation.Nullable
   public List<ReportGroupsReport> getReports() {
     return reports;
   }
 
-  public void setReports(List<ReportGroupsReport> reports) {
+  public void setReports(@javax.annotation.Nullable List<ReportGroupsReport> reports) {
     this.reports = reports;
   }
 
@@ -157,24 +160,22 @@ public class GetReportGroupsResponseReportGroups {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("group_id");
-    openapiFields.add("reports");
+    openapiFields = new HashSet<String>(Arrays.asList("group_id", "reports"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GetReportGroupsResponseReportGroups
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetReportGroupsResponseReportGroups
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!GetReportGroupsResponseReportGroups.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in GetReportGroupsResponseReportGroups is not found in the empty JSON string", GetReportGroupsResponseReportGroups.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in GetReportGroupsResponseReportGroups is not found in the empty JSON string", GetReportGroupsResponseReportGroups.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,19 +183,19 @@ public class GetReportGroupsResponseReportGroups {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!GetReportGroupsResponseReportGroups.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetReportGroupsResponseReportGroups` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `GetReportGroupsResponseReportGroups` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("group_id") != null && !jsonObj.get("group_id").isJsonNull()) && !jsonObj.get("group_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `group_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `group_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group_id").toString()));
       }
       if (jsonObj.get("reports") != null && !jsonObj.get("reports").isJsonNull()) {
         JsonArray jsonArrayreports = jsonObj.getAsJsonArray("reports");
         if (jsonArrayreports != null) {
           // ensure the json data is an array
           if (!jsonObj.get("reports").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `reports` to be an array in the JSON string but got `%s`", jsonObj.get("reports").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `reports` to be an array in the JSON string but got `%s`", jsonObj.get("reports").toString()));
           }
 
           // validate the optional field `reports` (array)
@@ -234,22 +235,22 @@ public class GetReportGroupsResponseReportGroups {
     }
   }
 
- /**
-  * Create an instance of GetReportGroupsResponseReportGroups given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetReportGroupsResponseReportGroups
-  * @throws IOException if the JSON string is invalid with respect to GetReportGroupsResponseReportGroups
-  */
+  /**
+   * Create an instance of GetReportGroupsResponseReportGroups given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetReportGroupsResponseReportGroups
+   * @throws IOException if the JSON string is invalid with respect to GetReportGroupsResponseReportGroups
+   */
   public static GetReportGroupsResponseReportGroups fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetReportGroupsResponseReportGroups.class);
   }
 
- /**
-  * Convert an instance of GetReportGroupsResponseReportGroups to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetReportGroupsResponseReportGroups to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

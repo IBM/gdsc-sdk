@@ -19,14 +19,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, StreamsServiceApi } from '';
+import type { StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .StreamsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new StreamsServiceApi(configuration);
 
-let body:.StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest = {
-  // Streamsv3CheckAWSCredentialsRequest
+const request: StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest = {
+  
   streamsv3CheckAWSCredentialsRequest: {
     accessKeyId: "accessKeyId_example",
     authType: "SECURITY_CREDENTIALS",
@@ -39,9 +39,8 @@ let body:.StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest = {
   },
 };
 
-apiInstance.streamsServiceCheckAWSCredentials(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.streamsServiceCheckAWSCredentials(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -82,14 +81,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, StreamsServiceApi } from '';
+import type { StreamsServiceApiStreamsServiceCheckAzureEventHubRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .StreamsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new StreamsServiceApi(configuration);
 
-let body:.StreamsServiceApiStreamsServiceCheckAzureEventHubRequest = {
-  // Streamsv3CheckAzureEventHubRequest
+const request: StreamsServiceApiStreamsServiceCheckAzureEventHubRequest = {
+  
   streamsv3CheckAzureEventHubRequest: {
     accessKeyId: "accessKeyId_example",
     id: "id_example",
@@ -100,9 +99,8 @@ let body:.StreamsServiceApiStreamsServiceCheckAzureEventHubRequest = {
   },
 };
 
-apiInstance.streamsServiceCheckAzureEventHub(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.streamsServiceCheckAzureEventHub(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -143,22 +141,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, StreamsServiceApi } from '';
+import type { StreamsServiceApiStreamsServiceCheckAzureStorageStringRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .StreamsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new StreamsServiceApi(configuration);
 
-let body:.StreamsServiceApiStreamsServiceCheckAzureStorageStringRequest = {
-  // Streamsv3CheckAzureStorageStringRequest
+const request: StreamsServiceApiStreamsServiceCheckAzureStorageStringRequest = {
+  
   streamsv3CheckAzureStorageStringRequest: {
     connectionString: "connectionString_example",
   },
 };
 
-apiInstance.streamsServiceCheckAzureStorageString(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.streamsServiceCheckAzureStorageString(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -199,17 +196,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, StreamsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .StreamsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new StreamsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.streamsServiceGetAWSRegions(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.streamsServiceGetAWSRegions(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -247,14 +242,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, StreamsServiceApi } from '';
+import type { StreamsServiceApiStreamsServiceListAWSStreamsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .StreamsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new StreamsServiceApi(configuration);
 
-let body:.StreamsServiceApiStreamsServiceListAWSStreamsRequest = {
-  // Streamsv3ListAWSStreamsRequest
+const request: StreamsServiceApiStreamsServiceListAWSStreamsRequest = {
+  
   streamsv3ListAWSStreamsRequest: {
     accessKeyId: "accessKeyId_example",
     authType: "SECURITY_CREDENTIALS",
@@ -268,9 +263,8 @@ let body:.StreamsServiceApiStreamsServiceListAWSStreamsRequest = {
   },
 };
 
-apiInstance.streamsServiceListAWSStreams(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.streamsServiceListAWSStreams(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

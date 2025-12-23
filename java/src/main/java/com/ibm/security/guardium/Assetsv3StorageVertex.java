@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,207 +43,229 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3StorageVertex
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3StorageVertex {
   public static final String SERIALIZED_NAME_CITY = "city";
   @SerializedName(SERIALIZED_NAME_CITY)
+  @javax.annotation.Nullable
   private String city;
 
   public static final String SERIALIZED_NAME_COUNTRY = "country";
   @SerializedName(SERIALIZED_NAME_COUNTRY)
+  @javax.annotation.Nullable
   private String country;
 
   public static final String SERIALIZED_NAME_CRITICALITY = "criticality";
   @SerializedName(SERIALIZED_NAME_CRITICALITY)
-  private Assetsv3Level criticality = Assetsv3Level.UNKNOWN;
+  @javax.annotation.Nullable
+  private Assetsv3Level criticality = Assetsv3Level.LEVEL_UNKNOWN;
 
   public static final String SERIALIZED_NAME_DATA_CENTER = "data_center";
   @SerializedName(SERIALIZED_NAME_DATA_CENTER)
+  @javax.annotation.Nullable
   private String dataCenter;
 
   public static final String SERIALIZED_NAME_DNS = "dns";
   @SerializedName(SERIALIZED_NAME_DNS)
+  @javax.annotation.Nullable
   private String dns;
 
   public static final String SERIALIZED_NAME_EXTENDED_PROPERTIES = "extended_properties";
   @SerializedName(SERIALIZED_NAME_EXTENDED_PROPERTIES)
+  @javax.annotation.Nullable
   private List<Assetsv3CustomProperty> extendedProperties = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_FOLDER_PATH = "folder_path";
   @SerializedName(SERIALIZED_NAME_FOLDER_PATH)
+  @javax.annotation.Nullable
   private String folderPath;
 
   public static final String SERIALIZED_NAME_OWNER = "owner";
   @SerializedName(SERIALIZED_NAME_OWNER)
+  @javax.annotation.Nullable
   private List<String> owner = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
+  @javax.annotation.Nullable
   private String region;
 
   public static final String SERIALIZED_NAME_RESOLUTION_KEY = "resolution_key";
   @SerializedName(SERIALIZED_NAME_RESOLUTION_KEY)
+  @javax.annotation.Nullable
   private String resolutionKey;
 
   public static final String SERIALIZED_NAME_RISK_LEVEL = "risk_level";
   @SerializedName(SERIALIZED_NAME_RISK_LEVEL)
-  private Assetsv3Level riskLevel = Assetsv3Level.UNKNOWN;
+  @javax.annotation.Nullable
+  private Assetsv3Level riskLevel = Assetsv3Level.LEVEL_UNKNOWN;
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
+  @javax.annotation.Nullable
   private String size;
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
+  @javax.annotation.Nullable
   private String state;
 
   public static final String SERIALIZED_NAME_STORAGE_ACCOUNT = "storage_account";
   @SerializedName(SERIALIZED_NAME_STORAGE_ACCOUNT)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> storageAccount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STORAGE_HOST = "storage_host";
   @SerializedName(SERIALIZED_NAME_STORAGE_HOST)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> storageHost = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STORAGE_ID = "storage_id";
   @SerializedName(SERIALIZED_NAME_STORAGE_ID)
+  @javax.annotation.Nullable
   private String storageId;
 
   public static final String SERIALIZED_NAME_STORAGE_IP = "storage_ip";
   @SerializedName(SERIALIZED_NAME_STORAGE_IP)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> storageIp = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STORAGE_NAME = "storage_name";
   @SerializedName(SERIALIZED_NAME_STORAGE_NAME)
+  @javax.annotation.Nullable
   private String storageName;
 
   public static final String SERIALIZED_NAME_STORAGE_RESOURCES = "storage_resources";
   @SerializedName(SERIALIZED_NAME_STORAGE_RESOURCES)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> storageResources = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STORAGE_SUB_TYPE = "storage_sub_type";
   @SerializedName(SERIALIZED_NAME_STORAGE_SUB_TYPE)
+  @javax.annotation.Nullable
   private String storageSubType;
 
   public static final String SERIALIZED_NAME_STORAGE_SUBSCRIPTION = "storage_subscription";
   @SerializedName(SERIALIZED_NAME_STORAGE_SUBSCRIPTION)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> storageSubscription = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STORAGE_TYPE = "storage_type";
   @SerializedName(SERIALIZED_NAME_STORAGE_TYPE)
+  @javax.annotation.Nullable
   private String storageType;
 
   public Assetsv3StorageVertex() {
   }
 
-  public Assetsv3StorageVertex city(String city) {
+  public Assetsv3StorageVertex city(@javax.annotation.Nullable String city) {
     this.city = city;
     return this;
   }
 
-   /**
+  /**
    * Get city
    * @return city
-  **/
+   */
   @javax.annotation.Nullable
   public String getCity() {
     return city;
   }
 
-  public void setCity(String city) {
+  public void setCity(@javax.annotation.Nullable String city) {
     this.city = city;
   }
 
 
-  public Assetsv3StorageVertex country(String country) {
+  public Assetsv3StorageVertex country(@javax.annotation.Nullable String country) {
     this.country = country;
     return this;
   }
 
-   /**
+  /**
    * Get country
    * @return country
-  **/
+   */
   @javax.annotation.Nullable
   public String getCountry() {
     return country;
   }
 
-  public void setCountry(String country) {
+  public void setCountry(@javax.annotation.Nullable String country) {
     this.country = country;
   }
 
 
-  public Assetsv3StorageVertex criticality(Assetsv3Level criticality) {
+  public Assetsv3StorageVertex criticality(@javax.annotation.Nullable Assetsv3Level criticality) {
     this.criticality = criticality;
     return this;
   }
 
-   /**
+  /**
    * Get criticality
    * @return criticality
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3Level getCriticality() {
     return criticality;
   }
 
-  public void setCriticality(Assetsv3Level criticality) {
+  public void setCriticality(@javax.annotation.Nullable Assetsv3Level criticality) {
     this.criticality = criticality;
   }
 
 
-  public Assetsv3StorageVertex dataCenter(String dataCenter) {
+  public Assetsv3StorageVertex dataCenter(@javax.annotation.Nullable String dataCenter) {
     this.dataCenter = dataCenter;
     return this;
   }
 
-   /**
+  /**
    * Get dataCenter
    * @return dataCenter
-  **/
+   */
   @javax.annotation.Nullable
   public String getDataCenter() {
     return dataCenter;
   }
 
-  public void setDataCenter(String dataCenter) {
+  public void setDataCenter(@javax.annotation.Nullable String dataCenter) {
     this.dataCenter = dataCenter;
   }
 
 
-  public Assetsv3StorageVertex dns(String dns) {
+  public Assetsv3StorageVertex dns(@javax.annotation.Nullable String dns) {
     this.dns = dns;
     return this;
   }
 
-   /**
+  /**
    * Get dns
    * @return dns
-  **/
+   */
   @javax.annotation.Nullable
   public String getDns() {
     return dns;
   }
 
-  public void setDns(String dns) {
+  public void setDns(@javax.annotation.Nullable String dns) {
     this.dns = dns;
   }
 
 
-  public Assetsv3StorageVertex extendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public Assetsv3StorageVertex extendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
     return this;
   }
@@ -255,40 +278,40 @@ public class Assetsv3StorageVertex {
     return this;
   }
 
-   /**
+  /**
    * Get extendedProperties
    * @return extendedProperties
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3CustomProperty> getExtendedProperties() {
     return extendedProperties;
   }
 
-  public void setExtendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public void setExtendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
   }
 
 
-  public Assetsv3StorageVertex folderPath(String folderPath) {
+  public Assetsv3StorageVertex folderPath(@javax.annotation.Nullable String folderPath) {
     this.folderPath = folderPath;
     return this;
   }
 
-   /**
+  /**
    * Get folderPath
    * @return folderPath
-  **/
+   */
   @javax.annotation.Nullable
   public String getFolderPath() {
     return folderPath;
   }
 
-  public void setFolderPath(String folderPath) {
+  public void setFolderPath(@javax.annotation.Nullable String folderPath) {
     this.folderPath = folderPath;
   }
 
 
-  public Assetsv3StorageVertex owner(List<String> owner) {
+  public Assetsv3StorageVertex owner(@javax.annotation.Nullable List<String> owner) {
     this.owner = owner;
     return this;
   }
@@ -301,116 +324,116 @@ public class Assetsv3StorageVertex {
     return this;
   }
 
-   /**
+  /**
    * Get owner
    * @return owner
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getOwner() {
     return owner;
   }
 
-  public void setOwner(List<String> owner) {
+  public void setOwner(@javax.annotation.Nullable List<String> owner) {
     this.owner = owner;
   }
 
 
-  public Assetsv3StorageVertex region(String region) {
+  public Assetsv3StorageVertex region(@javax.annotation.Nullable String region) {
     this.region = region;
     return this;
   }
 
-   /**
+  /**
    * Get region
    * @return region
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegion() {
     return region;
   }
 
-  public void setRegion(String region) {
+  public void setRegion(@javax.annotation.Nullable String region) {
     this.region = region;
   }
 
 
-  public Assetsv3StorageVertex resolutionKey(String resolutionKey) {
+  public Assetsv3StorageVertex resolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
     return this;
   }
 
-   /**
+  /**
    * Get resolutionKey
    * @return resolutionKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getResolutionKey() {
     return resolutionKey;
   }
 
-  public void setResolutionKey(String resolutionKey) {
+  public void setResolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
   }
 
 
-  public Assetsv3StorageVertex riskLevel(Assetsv3Level riskLevel) {
+  public Assetsv3StorageVertex riskLevel(@javax.annotation.Nullable Assetsv3Level riskLevel) {
     this.riskLevel = riskLevel;
     return this;
   }
 
-   /**
+  /**
    * Get riskLevel
    * @return riskLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3Level getRiskLevel() {
     return riskLevel;
   }
 
-  public void setRiskLevel(Assetsv3Level riskLevel) {
+  public void setRiskLevel(@javax.annotation.Nullable Assetsv3Level riskLevel) {
     this.riskLevel = riskLevel;
   }
 
 
-  public Assetsv3StorageVertex size(String size) {
+  public Assetsv3StorageVertex size(@javax.annotation.Nullable String size) {
     this.size = size;
     return this;
   }
 
-   /**
+  /**
    * Get size
    * @return size
-  **/
+   */
   @javax.annotation.Nullable
   public String getSize() {
     return size;
   }
 
-  public void setSize(String size) {
+  public void setSize(@javax.annotation.Nullable String size) {
     this.size = size;
   }
 
 
-  public Assetsv3StorageVertex state(String state) {
+  public Assetsv3StorageVertex state(@javax.annotation.Nullable String state) {
     this.state = state;
     return this;
   }
 
-   /**
+  /**
    * Get state
    * @return state
-  **/
+   */
   @javax.annotation.Nullable
   public String getState() {
     return state;
   }
 
-  public void setState(String state) {
+  public void setState(@javax.annotation.Nullable String state) {
     this.state = state;
   }
 
 
-  public Assetsv3StorageVertex storageAccount(List<Assetsv3ConnectionEdge> storageAccount) {
+  public Assetsv3StorageVertex storageAccount(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> storageAccount) {
     this.storageAccount = storageAccount;
     return this;
   }
@@ -423,21 +446,21 @@ public class Assetsv3StorageVertex {
     return this;
   }
 
-   /**
+  /**
    * Get storageAccount
    * @return storageAccount
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getStorageAccount() {
     return storageAccount;
   }
 
-  public void setStorageAccount(List<Assetsv3ConnectionEdge> storageAccount) {
+  public void setStorageAccount(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> storageAccount) {
     this.storageAccount = storageAccount;
   }
 
 
-  public Assetsv3StorageVertex storageHost(List<Assetsv3ConnectionEdge> storageHost) {
+  public Assetsv3StorageVertex storageHost(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> storageHost) {
     this.storageHost = storageHost;
     return this;
   }
@@ -450,40 +473,40 @@ public class Assetsv3StorageVertex {
     return this;
   }
 
-   /**
+  /**
    * Get storageHost
    * @return storageHost
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getStorageHost() {
     return storageHost;
   }
 
-  public void setStorageHost(List<Assetsv3ConnectionEdge> storageHost) {
+  public void setStorageHost(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> storageHost) {
     this.storageHost = storageHost;
   }
 
 
-  public Assetsv3StorageVertex storageId(String storageId) {
+  public Assetsv3StorageVertex storageId(@javax.annotation.Nullable String storageId) {
     this.storageId = storageId;
     return this;
   }
 
-   /**
+  /**
    * Get storageId
    * @return storageId
-  **/
+   */
   @javax.annotation.Nullable
   public String getStorageId() {
     return storageId;
   }
 
-  public void setStorageId(String storageId) {
+  public void setStorageId(@javax.annotation.Nullable String storageId) {
     this.storageId = storageId;
   }
 
 
-  public Assetsv3StorageVertex storageIp(List<Assetsv3ConnectionEdge> storageIp) {
+  public Assetsv3StorageVertex storageIp(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> storageIp) {
     this.storageIp = storageIp;
     return this;
   }
@@ -496,40 +519,40 @@ public class Assetsv3StorageVertex {
     return this;
   }
 
-   /**
+  /**
    * Get storageIp
    * @return storageIp
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getStorageIp() {
     return storageIp;
   }
 
-  public void setStorageIp(List<Assetsv3ConnectionEdge> storageIp) {
+  public void setStorageIp(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> storageIp) {
     this.storageIp = storageIp;
   }
 
 
-  public Assetsv3StorageVertex storageName(String storageName) {
+  public Assetsv3StorageVertex storageName(@javax.annotation.Nullable String storageName) {
     this.storageName = storageName;
     return this;
   }
 
-   /**
+  /**
    * Get storageName
    * @return storageName
-  **/
+   */
   @javax.annotation.Nullable
   public String getStorageName() {
     return storageName;
   }
 
-  public void setStorageName(String storageName) {
+  public void setStorageName(@javax.annotation.Nullable String storageName) {
     this.storageName = storageName;
   }
 
 
-  public Assetsv3StorageVertex storageResources(List<Assetsv3ConnectionEdge> storageResources) {
+  public Assetsv3StorageVertex storageResources(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> storageResources) {
     this.storageResources = storageResources;
     return this;
   }
@@ -542,40 +565,40 @@ public class Assetsv3StorageVertex {
     return this;
   }
 
-   /**
+  /**
    * Get storageResources
    * @return storageResources
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getStorageResources() {
     return storageResources;
   }
 
-  public void setStorageResources(List<Assetsv3ConnectionEdge> storageResources) {
+  public void setStorageResources(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> storageResources) {
     this.storageResources = storageResources;
   }
 
 
-  public Assetsv3StorageVertex storageSubType(String storageSubType) {
+  public Assetsv3StorageVertex storageSubType(@javax.annotation.Nullable String storageSubType) {
     this.storageSubType = storageSubType;
     return this;
   }
 
-   /**
+  /**
    * Get storageSubType
    * @return storageSubType
-  **/
+   */
   @javax.annotation.Nullable
   public String getStorageSubType() {
     return storageSubType;
   }
 
-  public void setStorageSubType(String storageSubType) {
+  public void setStorageSubType(@javax.annotation.Nullable String storageSubType) {
     this.storageSubType = storageSubType;
   }
 
 
-  public Assetsv3StorageVertex storageSubscription(List<Assetsv3ConnectionEdge> storageSubscription) {
+  public Assetsv3StorageVertex storageSubscription(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> storageSubscription) {
     this.storageSubscription = storageSubscription;
     return this;
   }
@@ -588,35 +611,35 @@ public class Assetsv3StorageVertex {
     return this;
   }
 
-   /**
+  /**
    * Get storageSubscription
    * @return storageSubscription
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getStorageSubscription() {
     return storageSubscription;
   }
 
-  public void setStorageSubscription(List<Assetsv3ConnectionEdge> storageSubscription) {
+  public void setStorageSubscription(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> storageSubscription) {
     this.storageSubscription = storageSubscription;
   }
 
 
-  public Assetsv3StorageVertex storageType(String storageType) {
+  public Assetsv3StorageVertex storageType(@javax.annotation.Nullable String storageType) {
     this.storageType = storageType;
     return this;
   }
 
-   /**
+  /**
    * Get storageType
    * @return storageType
-  **/
+   */
   @javax.annotation.Nullable
   public String getStorageType() {
     return storageType;
   }
 
-  public void setStorageType(String storageType) {
+  public void setStorageType(@javax.annotation.Nullable String storageType) {
     this.storageType = storageType;
   }
 
@@ -707,44 +730,22 @@ public class Assetsv3StorageVertex {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("city");
-    openapiFields.add("country");
-    openapiFields.add("criticality");
-    openapiFields.add("data_center");
-    openapiFields.add("dns");
-    openapiFields.add("extended_properties");
-    openapiFields.add("folder_path");
-    openapiFields.add("owner");
-    openapiFields.add("region");
-    openapiFields.add("resolution_key");
-    openapiFields.add("risk_level");
-    openapiFields.add("size");
-    openapiFields.add("state");
-    openapiFields.add("storage_account");
-    openapiFields.add("storage_host");
-    openapiFields.add("storage_id");
-    openapiFields.add("storage_ip");
-    openapiFields.add("storage_name");
-    openapiFields.add("storage_resources");
-    openapiFields.add("storage_sub_type");
-    openapiFields.add("storage_subscription");
-    openapiFields.add("storage_type");
+    openapiFields = new HashSet<String>(Arrays.asList("city", "country", "criticality", "data_center", "dns", "extended_properties", "folder_path", "owner", "region", "resolution_key", "risk_level", "size", "state", "storage_account", "storage_host", "storage_id", "storage_ip", "storage_name", "storage_resources", "storage_sub_type", "storage_subscription", "storage_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3StorageVertex
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3StorageVertex
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3StorageVertex.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3StorageVertex is not found in the empty JSON string", Assetsv3StorageVertex.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3StorageVertex is not found in the empty JSON string", Assetsv3StorageVertex.openapiRequiredFields.toString()));
         }
       }
 
@@ -752,32 +753,32 @@ public class Assetsv3StorageVertex {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3StorageVertex.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3StorageVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3StorageVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("city") != null && !jsonObj.get("city").isJsonNull()) && !jsonObj.get("city").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `city` to be a primitive type in the JSON string but got `%s`", jsonObj.get("city").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `city` to be a primitive type in the JSON string but got `%s`", jsonObj.get("city").toString()));
       }
       if ((jsonObj.get("country") != null && !jsonObj.get("country").isJsonNull()) && !jsonObj.get("country").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
       }
       // validate the optional field `criticality`
       if (jsonObj.get("criticality") != null && !jsonObj.get("criticality").isJsonNull()) {
         Assetsv3Level.validateJsonElement(jsonObj.get("criticality"));
       }
       if ((jsonObj.get("data_center") != null && !jsonObj.get("data_center").isJsonNull()) && !jsonObj.get("data_center").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `data_center` to be a primitive type in the JSON string but got `%s`", jsonObj.get("data_center").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `data_center` to be a primitive type in the JSON string but got `%s`", jsonObj.get("data_center").toString()));
       }
       if ((jsonObj.get("dns") != null && !jsonObj.get("dns").isJsonNull()) && !jsonObj.get("dns").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dns` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dns").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dns` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dns").toString()));
       }
       if (jsonObj.get("extended_properties") != null && !jsonObj.get("extended_properties").isJsonNull()) {
         JsonArray jsonArrayextendedProperties = jsonObj.getAsJsonArray("extended_properties");
         if (jsonArrayextendedProperties != null) {
           // ensure the json data is an array
           if (!jsonObj.get("extended_properties").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
           }
 
           // validate the optional field `extended_properties` (array)
@@ -787,34 +788,34 @@ public class Assetsv3StorageVertex {
         }
       }
       if ((jsonObj.get("folder_path") != null && !jsonObj.get("folder_path").isJsonNull()) && !jsonObj.get("folder_path").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `folder_path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("folder_path").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `folder_path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("folder_path").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("owner") != null && !jsonObj.get("owner").isJsonNull() && !jsonObj.get("owner").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `owner` to be an array in the JSON string but got `%s`", jsonObj.get("owner").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `owner` to be an array in the JSON string but got `%s`", jsonObj.get("owner").toString()));
       }
       if ((jsonObj.get("region") != null && !jsonObj.get("region").isJsonNull()) && !jsonObj.get("region").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
       }
       if ((jsonObj.get("resolution_key") != null && !jsonObj.get("resolution_key").isJsonNull()) && !jsonObj.get("resolution_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
       }
       // validate the optional field `risk_level`
       if (jsonObj.get("risk_level") != null && !jsonObj.get("risk_level").isJsonNull()) {
         Assetsv3Level.validateJsonElement(jsonObj.get("risk_level"));
       }
       if ((jsonObj.get("size") != null && !jsonObj.get("size").isJsonNull()) && !jsonObj.get("size").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `size` to be a primitive type in the JSON string but got `%s`", jsonObj.get("size").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `size` to be a primitive type in the JSON string but got `%s`", jsonObj.get("size").toString()));
       }
       if ((jsonObj.get("state") != null && !jsonObj.get("state").isJsonNull()) && !jsonObj.get("state").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("state").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("state").toString()));
       }
       if (jsonObj.get("storage_account") != null && !jsonObj.get("storage_account").isJsonNull()) {
         JsonArray jsonArraystorageAccount = jsonObj.getAsJsonArray("storage_account");
         if (jsonArraystorageAccount != null) {
           // ensure the json data is an array
           if (!jsonObj.get("storage_account").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `storage_account` to be an array in the JSON string but got `%s`", jsonObj.get("storage_account").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_account` to be an array in the JSON string but got `%s`", jsonObj.get("storage_account").toString()));
           }
 
           // validate the optional field `storage_account` (array)
@@ -828,7 +829,7 @@ public class Assetsv3StorageVertex {
         if (jsonArraystorageHost != null) {
           // ensure the json data is an array
           if (!jsonObj.get("storage_host").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `storage_host` to be an array in the JSON string but got `%s`", jsonObj.get("storage_host").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_host` to be an array in the JSON string but got `%s`", jsonObj.get("storage_host").toString()));
           }
 
           // validate the optional field `storage_host` (array)
@@ -838,14 +839,14 @@ public class Assetsv3StorageVertex {
         }
       }
       if ((jsonObj.get("storage_id") != null && !jsonObj.get("storage_id").isJsonNull()) && !jsonObj.get("storage_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storage_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_id").toString()));
       }
       if (jsonObj.get("storage_ip") != null && !jsonObj.get("storage_ip").isJsonNull()) {
         JsonArray jsonArraystorageIp = jsonObj.getAsJsonArray("storage_ip");
         if (jsonArraystorageIp != null) {
           // ensure the json data is an array
           if (!jsonObj.get("storage_ip").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `storage_ip` to be an array in the JSON string but got `%s`", jsonObj.get("storage_ip").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_ip` to be an array in the JSON string but got `%s`", jsonObj.get("storage_ip").toString()));
           }
 
           // validate the optional field `storage_ip` (array)
@@ -855,14 +856,14 @@ public class Assetsv3StorageVertex {
         }
       }
       if ((jsonObj.get("storage_name") != null && !jsonObj.get("storage_name").isJsonNull()) && !jsonObj.get("storage_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storage_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_name").toString()));
       }
       if (jsonObj.get("storage_resources") != null && !jsonObj.get("storage_resources").isJsonNull()) {
         JsonArray jsonArraystorageResources = jsonObj.getAsJsonArray("storage_resources");
         if (jsonArraystorageResources != null) {
           // ensure the json data is an array
           if (!jsonObj.get("storage_resources").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `storage_resources` to be an array in the JSON string but got `%s`", jsonObj.get("storage_resources").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_resources` to be an array in the JSON string but got `%s`", jsonObj.get("storage_resources").toString()));
           }
 
           // validate the optional field `storage_resources` (array)
@@ -872,14 +873,14 @@ public class Assetsv3StorageVertex {
         }
       }
       if ((jsonObj.get("storage_sub_type") != null && !jsonObj.get("storage_sub_type").isJsonNull()) && !jsonObj.get("storage_sub_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storage_sub_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_sub_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_sub_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_sub_type").toString()));
       }
       if (jsonObj.get("storage_subscription") != null && !jsonObj.get("storage_subscription").isJsonNull()) {
         JsonArray jsonArraystorageSubscription = jsonObj.getAsJsonArray("storage_subscription");
         if (jsonArraystorageSubscription != null) {
           // ensure the json data is an array
           if (!jsonObj.get("storage_subscription").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `storage_subscription` to be an array in the JSON string but got `%s`", jsonObj.get("storage_subscription").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_subscription` to be an array in the JSON string but got `%s`", jsonObj.get("storage_subscription").toString()));
           }
 
           // validate the optional field `storage_subscription` (array)
@@ -889,7 +890,7 @@ public class Assetsv3StorageVertex {
         }
       }
       if ((jsonObj.get("storage_type") != null && !jsonObj.get("storage_type").isJsonNull()) && !jsonObj.get("storage_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storage_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_type").toString()));
       }
   }
 
@@ -922,22 +923,22 @@ public class Assetsv3StorageVertex {
     }
   }
 
- /**
-  * Create an instance of Assetsv3StorageVertex given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3StorageVertex
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3StorageVertex
-  */
+  /**
+   * Create an instance of Assetsv3StorageVertex given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3StorageVertex
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3StorageVertex
+   */
   public static Assetsv3StorageVertex fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3StorageVertex.class);
   }
 
- /**
-  * Convert an instance of Assetsv3StorageVertex to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3StorageVertex to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,98 +44,107 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * A lead for each pivot which triggers the whole process - to find a risk for this pivot.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsenginev3Lead {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nullable
   private Integer count;
 
   public static final String SERIALIZED_NAME_CREATION_TIME = "creation_time";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime creationTime;
 
   public static final String SERIALIZED_NAME_INFO = "info";
   @SerializedName(SERIALIZED_NAME_INFO)
+  @javax.annotation.Nullable
   private List<Riskanalyticsenginev3AdditionalInfo> info = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_IS_OBSERVATION = "is_observation";
   @SerializedName(SERIALIZED_NAME_IS_OBSERVATION)
+  @javax.annotation.Nullable
   private Boolean isObservation;
 
   public static final String SERIALIZED_NAME_LEAD_KEY = "lead_key";
   @SerializedName(SERIALIZED_NAME_LEAD_KEY)
+  @javax.annotation.Nullable
   private String leadKey;
 
   public static final String SERIALIZED_NAME_PIVOT = "pivot";
   @SerializedName(SERIALIZED_NAME_PIVOT)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3Pivot pivot;
 
   public static final String SERIALIZED_NAME_SCORE = "score";
   @SerializedName(SERIALIZED_NAME_SCORE)
+  @javax.annotation.Nullable
   private Float score;
 
   public static final String SERIALIZED_NAME_SEVERITY = "severity";
   @SerializedName(SERIALIZED_NAME_SEVERITY)
+  @javax.annotation.Nullable
   private Integer severity;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3LeadType type = Riskanalyticsenginev3LeadType.UNDEFINED_LEAD_TYPE;
 
   public Riskanalyticsenginev3Lead() {
   }
 
-  public Riskanalyticsenginev3Lead count(Integer count) {
+  public Riskanalyticsenginev3Lead count(@javax.annotation.Nullable Integer count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Count of events.
    * @return count
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getCount() {
     return count;
   }
 
-  public void setCount(Integer count) {
+  public void setCount(@javax.annotation.Nullable Integer count) {
     this.count = count;
   }
 
 
-  public Riskanalyticsenginev3Lead creationTime(OffsetDateTime creationTime) {
+  public Riskanalyticsenginev3Lead creationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
     return this;
   }
 
-   /**
+  /**
    * The lead creation time in format YYYY-MM-DDTHH:mm:ss.sssZ.
    * @return creationTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(OffsetDateTime creationTime) {
+  public void setCreationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
   }
 
 
-  public Riskanalyticsenginev3Lead info(List<Riskanalyticsenginev3AdditionalInfo> info) {
+  public Riskanalyticsenginev3Lead info(@javax.annotation.Nullable List<Riskanalyticsenginev3AdditionalInfo> info) {
     this.info = info;
     return this;
   }
@@ -147,130 +157,130 @@ public class Riskanalyticsenginev3Lead {
     return this;
   }
 
-   /**
+  /**
    * Additional info.
    * @return info
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsenginev3AdditionalInfo> getInfo() {
     return info;
   }
 
-  public void setInfo(List<Riskanalyticsenginev3AdditionalInfo> info) {
+  public void setInfo(@javax.annotation.Nullable List<Riskanalyticsenginev3AdditionalInfo> info) {
     this.info = info;
   }
 
 
-  public Riskanalyticsenginev3Lead isObservation(Boolean isObservation) {
+  public Riskanalyticsenginev3Lead isObservation(@javax.annotation.Nullable Boolean isObservation) {
     this.isObservation = isObservation;
     return this;
   }
 
-   /**
+  /**
    * Is observation flag for the lead to set true based on lead information.
    * @return isObservation
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsObservation() {
     return isObservation;
   }
 
-  public void setIsObservation(Boolean isObservation) {
+  public void setIsObservation(@javax.annotation.Nullable Boolean isObservation) {
     this.isObservation = isObservation;
   }
 
 
-  public Riskanalyticsenginev3Lead leadKey(String leadKey) {
+  public Riskanalyticsenginev3Lead leadKey(@javax.annotation.Nullable String leadKey) {
     this.leadKey = leadKey;
     return this;
   }
 
-   /**
+  /**
    * The Lead Key name.
    * @return leadKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getLeadKey() {
     return leadKey;
   }
 
-  public void setLeadKey(String leadKey) {
+  public void setLeadKey(@javax.annotation.Nullable String leadKey) {
     this.leadKey = leadKey;
   }
 
 
-  public Riskanalyticsenginev3Lead pivot(Riskanalyticsenginev3Pivot pivot) {
+  public Riskanalyticsenginev3Lead pivot(@javax.annotation.Nullable Riskanalyticsenginev3Pivot pivot) {
     this.pivot = pivot;
     return this;
   }
 
-   /**
+  /**
    * Get pivot
    * @return pivot
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3Pivot getPivot() {
     return pivot;
   }
 
-  public void setPivot(Riskanalyticsenginev3Pivot pivot) {
+  public void setPivot(@javax.annotation.Nullable Riskanalyticsenginev3Pivot pivot) {
     this.pivot = pivot;
   }
 
 
-  public Riskanalyticsenginev3Lead score(Float score) {
+  public Riskanalyticsenginev3Lead score(@javax.annotation.Nullable Float score) {
     this.score = score;
     return this;
   }
 
-   /**
+  /**
    * The lead score (normalized score between 0 and 1).
    * @return score
-  **/
+   */
   @javax.annotation.Nullable
   public Float getScore() {
     return score;
   }
 
-  public void setScore(Float score) {
+  public void setScore(@javax.annotation.Nullable Float score) {
     this.score = score;
   }
 
 
-  public Riskanalyticsenginev3Lead severity(Integer severity) {
+  public Riskanalyticsenginev3Lead severity(@javax.annotation.Nullable Integer severity) {
     this.severity = severity;
     return this;
   }
 
-   /**
+  /**
    * Lead severity.
    * @return severity
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSeverity() {
     return severity;
   }
 
-  public void setSeverity(Integer severity) {
+  public void setSeverity(@javax.annotation.Nullable Integer severity) {
     this.severity = severity;
   }
 
 
-  public Riskanalyticsenginev3Lead type(Riskanalyticsenginev3LeadType type) {
+  public Riskanalyticsenginev3Lead type(@javax.annotation.Nullable Riskanalyticsenginev3LeadType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3LeadType getType() {
     return type;
   }
 
-  public void setType(Riskanalyticsenginev3LeadType type) {
+  public void setType(@javax.annotation.Nullable Riskanalyticsenginev3LeadType type) {
     this.type = type;
   }
 
@@ -335,31 +345,22 @@ public class Riskanalyticsenginev3Lead {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("count");
-    openapiFields.add("creation_time");
-    openapiFields.add("info");
-    openapiFields.add("is_observation");
-    openapiFields.add("lead_key");
-    openapiFields.add("pivot");
-    openapiFields.add("score");
-    openapiFields.add("severity");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("count", "creation_time", "info", "is_observation", "lead_key", "pivot", "score", "severity", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3Lead
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3Lead
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsenginev3Lead.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsenginev3Lead is not found in the empty JSON string", Riskanalyticsenginev3Lead.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsenginev3Lead is not found in the empty JSON string", Riskanalyticsenginev3Lead.openapiRequiredFields.toString()));
         }
       }
 
@@ -367,7 +368,7 @@ public class Riskanalyticsenginev3Lead {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsenginev3Lead.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3Lead` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3Lead` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -376,7 +377,7 @@ public class Riskanalyticsenginev3Lead {
         if (jsonArrayinfo != null) {
           // ensure the json data is an array
           if (!jsonObj.get("info").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `info` to be an array in the JSON string but got `%s`", jsonObj.get("info").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `info` to be an array in the JSON string but got `%s`", jsonObj.get("info").toString()));
           }
 
           // validate the optional field `info` (array)
@@ -386,7 +387,7 @@ public class Riskanalyticsenginev3Lead {
         }
       }
       if ((jsonObj.get("lead_key") != null && !jsonObj.get("lead_key").isJsonNull()) && !jsonObj.get("lead_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `lead_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("lead_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `lead_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("lead_key").toString()));
       }
       // validate the optional field `pivot`
       if (jsonObj.get("pivot") != null && !jsonObj.get("pivot").isJsonNull()) {
@@ -427,22 +428,22 @@ public class Riskanalyticsenginev3Lead {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsenginev3Lead given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsenginev3Lead
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3Lead
-  */
+  /**
+   * Create an instance of Riskanalyticsenginev3Lead given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsenginev3Lead
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3Lead
+   */
   public static Riskanalyticsenginev3Lead fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsenginev3Lead.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsenginev3Lead to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsenginev3Lead to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

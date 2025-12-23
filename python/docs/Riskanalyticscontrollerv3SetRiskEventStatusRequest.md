@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **justification** | **str** | Justification. | [optional] 
 **risk_ids** | **List[int]** | One or more risk id. This API can be called for multiple risks. | [optional] 
-**status** | [**Riskanalyticscontrollerv3Status**](Riskanalyticscontrollerv3Status.md) |  | [optional] 
+**status** | [**Riskanalyticscontrollerv3Status**](Riskanalyticscontrollerv3Status.md) |  | [optional] [default to Riskanalyticscontrollerv3Status.UNDEFINED_STATUS]
 
 ## Example
 

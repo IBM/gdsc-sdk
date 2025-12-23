@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CreateApiKeyResponse API Key creation response format.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3CreateApiKeyResponse {
   public static final String SERIALIZED_NAME_APIKEY = "apikey";
   @SerializedName(SERIALIZED_NAME_APIKEY)
+  @javax.annotation.Nullable
   private String apikey;
 
   public static final String SERIALIZED_NAME_ENCODED = "encoded";
   @SerializedName(SERIALIZED_NAME_ENCODED)
+  @javax.annotation.Nullable
   private String encoded;
 
   public static final String SERIALIZED_NAME_SECRET = "secret";
   @SerializedName(SERIALIZED_NAME_SECRET)
+  @javax.annotation.Nullable
   private String secret;
 
   public Tenantuserv3CreateApiKeyResponse() {
   }
 
-  public Tenantuserv3CreateApiKeyResponse apikey(String apikey) {
+  public Tenantuserv3CreateApiKeyResponse apikey(@javax.annotation.Nullable String apikey) {
     this.apikey = apikey;
     return this;
   }
 
-   /**
+  /**
    * Apikey.
    * @return apikey
-  **/
+   */
   @javax.annotation.Nullable
   public String getApikey() {
     return apikey;
   }
 
-  public void setApikey(String apikey) {
+  public void setApikey(@javax.annotation.Nullable String apikey) {
     this.apikey = apikey;
   }
 
 
-  public Tenantuserv3CreateApiKeyResponse encoded(String encoded) {
+  public Tenantuserv3CreateApiKeyResponse encoded(@javax.annotation.Nullable String encoded) {
     this.encoded = encoded;
     return this;
   }
 
-   /**
+  /**
    * Encoded apikey.
    * @return encoded
-  **/
+   */
   @javax.annotation.Nullable
   public String getEncoded() {
     return encoded;
   }
 
-  public void setEncoded(String encoded) {
+  public void setEncoded(@javax.annotation.Nullable String encoded) {
     this.encoded = encoded;
   }
 
 
-  public Tenantuserv3CreateApiKeyResponse secret(String secret) {
+  public Tenantuserv3CreateApiKeyResponse secret(@javax.annotation.Nullable String secret) {
     this.secret = secret;
     return this;
   }
 
-   /**
+  /**
    * Apikey secret.
    * @return secret
-  **/
+   */
   @javax.annotation.Nullable
   public String getSecret() {
     return secret;
   }
 
-  public void setSecret(String secret) {
+  public void setSecret(@javax.annotation.Nullable String secret) {
     this.secret = secret;
   }
 
@@ -171,25 +175,22 @@ public class Tenantuserv3CreateApiKeyResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("apikey");
-    openapiFields.add("encoded");
-    openapiFields.add("secret");
+    openapiFields = new HashSet<String>(Arrays.asList("apikey", "encoded", "secret"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3CreateApiKeyResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3CreateApiKeyResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3CreateApiKeyResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3CreateApiKeyResponse is not found in the empty JSON string", Tenantuserv3CreateApiKeyResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3CreateApiKeyResponse is not found in the empty JSON string", Tenantuserv3CreateApiKeyResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Tenantuserv3CreateApiKeyResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3CreateApiKeyResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3CreateApiKeyResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3CreateApiKeyResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("apikey") != null && !jsonObj.get("apikey").isJsonNull()) && !jsonObj.get("apikey").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `apikey` to be a primitive type in the JSON string but got `%s`", jsonObj.get("apikey").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `apikey` to be a primitive type in the JSON string but got `%s`", jsonObj.get("apikey").toString()));
       }
       if ((jsonObj.get("encoded") != null && !jsonObj.get("encoded").isJsonNull()) && !jsonObj.get("encoded").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `encoded` to be a primitive type in the JSON string but got `%s`", jsonObj.get("encoded").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `encoded` to be a primitive type in the JSON string but got `%s`", jsonObj.get("encoded").toString()));
       }
       if ((jsonObj.get("secret") != null && !jsonObj.get("secret").isJsonNull()) && !jsonObj.get("secret").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `secret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `secret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Tenantuserv3CreateApiKeyResponse {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3CreateApiKeyResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3CreateApiKeyResponse
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3CreateApiKeyResponse
-  */
+  /**
+   * Create an instance of Tenantuserv3CreateApiKeyResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3CreateApiKeyResponse
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3CreateApiKeyResponse
+   */
   public static Tenantuserv3CreateApiKeyResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3CreateApiKeyResponse.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3CreateApiKeyResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3CreateApiKeyResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

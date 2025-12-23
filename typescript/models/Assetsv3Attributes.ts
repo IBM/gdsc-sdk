@@ -29,6 +29,8 @@ export class Assetsv3Attributes {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "criticalVulnerabilityCount",
@@ -92,6 +94,5 @@ export class Assetsv3Attributes {
     public constructor() {
     }
 }
-
 
 

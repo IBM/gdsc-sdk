@@ -33,12 +33,12 @@ class Assetsv3Asset(BaseModel):
     application_version: Optional[StrictStr] = None
     asset_subtype: Optional[StrictStr] = None
     asset_type: Optional[StrictStr] = None
-    connectivity: Optional[Assetsv3HealthType] = None
+    connectivity: Optional[Assetsv3HealthType] = Assetsv3HealthType.UNSPECIFIED
     critical_va_count: Optional[StrictInt] = None
     database: Optional[StrictStr] = None
     db_id: Optional[StrictStr] = None
     deployment: Optional[StrictStr] = None
-    encryption: Optional[Assetsv3StatusType] = None
+    encryption: Optional[Assetsv3StatusType] = Assetsv3StatusType.NA
     endpoint_name: Optional[StrictStr] = None
     entity_id: Optional[StrictStr] = Field(default=None, description="entity ID which was inserted/updated.")
     entity_type: Optional[StrictStr] = None
@@ -53,7 +53,7 @@ class Assetsv3Asset(BaseModel):
     is_splittable: Optional[StrictBool] = None
     mac_address: Optional[StrictStr] = None
     model_name: Optional[StrictStr] = None
-    monitoring: Optional[Assetsv3StatusType] = None
+    monitoring: Optional[Assetsv3StatusType] = Assetsv3StatusType.NA
     name: Optional[StrictStr] = None
     origin: Optional[List[StrictStr]] = None
     risk_level: Optional[StrictStr] = None
@@ -63,7 +63,7 @@ class Assetsv3Asset(BaseModel):
     subscription: Optional[StrictStr] = None
     tags: Optional[List[StrictStr]] = None
     total_va_count: Optional[StrictInt] = None
-    traffic: Optional[Assetsv3HealthType] = None
+    traffic: Optional[Assetsv3HealthType] = Assetsv3HealthType.UNSPECIFIED
     type: Optional[StrictStr] = None
     user_accounts: Optional[List[StrictStr]] = None
     vertex_id: Optional[StrictStr] = None
@@ -111,9 +111,9 @@ class Assetsv3Asset(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in extended_properties (list)
         _items = []
         if self.extended_properties:
-            for _item in self.extended_properties:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extended_properties in self.extended_properties:
+                if _item_extended_properties:
+                    _items.append(_item_extended_properties.to_dict())
             _dict['extended_properties'] = _items
         return _dict
 
@@ -131,12 +131,12 @@ class Assetsv3Asset(BaseModel):
             "application_version": obj.get("application_version"),
             "asset_subtype": obj.get("asset_subtype"),
             "asset_type": obj.get("asset_type"),
-            "connectivity": obj.get("connectivity"),
+            "connectivity": obj.get("connectivity") if obj.get("connectivity") is not None else Assetsv3HealthType.UNSPECIFIED,
             "critical_va_count": obj.get("critical_va_count"),
             "database": obj.get("database"),
             "db_id": obj.get("db_id"),
             "deployment": obj.get("deployment"),
-            "encryption": obj.get("encryption"),
+            "encryption": obj.get("encryption") if obj.get("encryption") is not None else Assetsv3StatusType.NA,
             "endpoint_name": obj.get("endpoint_name"),
             "entity_id": obj.get("entity_id"),
             "entity_type": obj.get("entity_type"),
@@ -151,7 +151,7 @@ class Assetsv3Asset(BaseModel):
             "is_splittable": obj.get("is_splittable"),
             "mac_address": obj.get("mac_address"),
             "model_name": obj.get("model_name"),
-            "monitoring": obj.get("monitoring"),
+            "monitoring": obj.get("monitoring") if obj.get("monitoring") is not None else Assetsv3StatusType.NA,
             "name": obj.get("name"),
             "origin": obj.get("origin"),
             "risk_level": obj.get("risk_level"),
@@ -161,7 +161,7 @@ class Assetsv3Asset(BaseModel):
             "subscription": obj.get("subscription"),
             "tags": obj.get("tags"),
             "total_va_count": obj.get("total_va_count"),
-            "traffic": obj.get("traffic"),
+            "traffic": obj.get("traffic") if obj.get("traffic") is not None else Assetsv3HealthType.UNSPECIFIED,
             "type": obj.get("type"),
             "user_accounts": obj.get("user_accounts"),
             "vertex_id": obj.get("vertex_id")

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,36 +41,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateScheduledJobRequest message for Put v3/schedules/ api.  The both fields are required, all other fields are optional.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3UpdateScheduledJobRequest {
   public static final String SERIALIZED_NAME_QUERY = "query";
   @SerializedName(SERIALIZED_NAME_QUERY)
+  @javax.annotation.Nullable
   private Map<String, String> query = new HashMap<>();
 
   public static final String SERIALIZED_NAME_SCHEDULE_ID = "schedule_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULE_ID)
+  @javax.annotation.Nullable
   private String scheduleId;
 
   public static final String SERIALIZED_NAME_SCHEDULED_JOB = "scheduled_job";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_JOB)
+  @javax.annotation.Nullable
   private Schedulerv3CreateScheduledJobRequest scheduledJob;
 
   public Schedulerv3UpdateScheduledJobRequest() {
   }
 
-  public Schedulerv3UpdateScheduledJobRequest query(Map<String, String> query) {
+  public Schedulerv3UpdateScheduledJobRequest query(@javax.annotation.Nullable Map<String, String> query) {
     this.query = query;
     return this;
   }
@@ -82,54 +86,54 @@ public class Schedulerv3UpdateScheduledJobRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Update field name and value.
    * @return query
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getQuery() {
     return query;
   }
 
-  public void setQuery(Map<String, String> query) {
+  public void setQuery(@javax.annotation.Nullable Map<String, String> query) {
     this.query = query;
   }
 
 
-  public Schedulerv3UpdateScheduledJobRequest scheduleId(String scheduleId) {
+  public Schedulerv3UpdateScheduledJobRequest scheduleId(@javax.annotation.Nullable String scheduleId) {
     this.scheduleId = scheduleId;
     return this;
   }
 
-   /**
+  /**
    * Unique ID, required for update.
    * @return scheduleId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScheduleId() {
     return scheduleId;
   }
 
-  public void setScheduleId(String scheduleId) {
+  public void setScheduleId(@javax.annotation.Nullable String scheduleId) {
     this.scheduleId = scheduleId;
   }
 
 
-  public Schedulerv3UpdateScheduledJobRequest scheduledJob(Schedulerv3CreateScheduledJobRequest scheduledJob) {
+  public Schedulerv3UpdateScheduledJobRequest scheduledJob(@javax.annotation.Nullable Schedulerv3CreateScheduledJobRequest scheduledJob) {
     this.scheduledJob = scheduledJob;
     return this;
   }
 
-   /**
+  /**
    * Get scheduledJob
    * @return scheduledJob
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3CreateScheduledJobRequest getScheduledJob() {
     return scheduledJob;
   }
 
-  public void setScheduledJob(Schedulerv3CreateScheduledJobRequest scheduledJob) {
+  public void setScheduledJob(@javax.annotation.Nullable Schedulerv3CreateScheduledJobRequest scheduledJob) {
     this.scheduledJob = scheduledJob;
   }
 
@@ -182,25 +186,22 @@ public class Schedulerv3UpdateScheduledJobRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("query");
-    openapiFields.add("schedule_id");
-    openapiFields.add("scheduled_job");
+    openapiFields = new HashSet<String>(Arrays.asList("query", "schedule_id", "scheduled_job"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3UpdateScheduledJobRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3UpdateScheduledJobRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3UpdateScheduledJobRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3UpdateScheduledJobRequest is not found in the empty JSON string", Schedulerv3UpdateScheduledJobRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3UpdateScheduledJobRequest is not found in the empty JSON string", Schedulerv3UpdateScheduledJobRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,12 +209,12 @@ public class Schedulerv3UpdateScheduledJobRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3UpdateScheduledJobRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3UpdateScheduledJobRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3UpdateScheduledJobRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("schedule_id") != null && !jsonObj.get("schedule_id").isJsonNull()) && !jsonObj.get("schedule_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schedule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `schedule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule_id").toString()));
       }
       // validate the optional field `scheduled_job`
       if (jsonObj.get("scheduled_job") != null && !jsonObj.get("scheduled_job").isJsonNull()) {
@@ -250,22 +251,22 @@ public class Schedulerv3UpdateScheduledJobRequest {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3UpdateScheduledJobRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3UpdateScheduledJobRequest
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3UpdateScheduledJobRequest
-  */
+  /**
+   * Create an instance of Schedulerv3UpdateScheduledJobRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3UpdateScheduledJobRequest
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3UpdateScheduledJobRequest
+   */
   public static Schedulerv3UpdateScheduledJobRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3UpdateScheduledJobRequest.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3UpdateScheduledJobRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3UpdateScheduledJobRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -31,9 +31,9 @@ class Reportsv3Metric(BaseModel):
     """ # noqa: E501
     column: Optional[Reportsv3MetricsColumn] = None
     measure_id: Optional[StrictInt] = None
-    measure_type: Optional[Reportsv3MeasureType] = None
+    measure_type: Optional[Reportsv3MeasureType] = Reportsv3MeasureType.SNAPSHOT
     metric_id: Optional[StrictInt] = None
-    metric_type: Optional[Reportsv3MetricType] = None
+    metric_type: Optional[Reportsv3MetricType] = Reportsv3MetricType.PERCENTAGE
     report_id: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["column", "measure_id", "measure_type", "metric_id", "metric_type", "report_id"]
 
@@ -93,9 +93,9 @@ class Reportsv3Metric(BaseModel):
         _obj = cls.model_validate({
             "column": Reportsv3MetricsColumn.from_dict(obj["column"]) if obj.get("column") is not None else None,
             "measure_id": obj.get("measure_id"),
-            "measure_type": obj.get("measure_type"),
+            "measure_type": obj.get("measure_type") if obj.get("measure_type") is not None else Reportsv3MeasureType.SNAPSHOT,
             "metric_id": obj.get("metric_id"),
-            "metric_type": obj.get("metric_type"),
+            "metric_type": obj.get("metric_type") if obj.get("metric_type") is not None else Reportsv3MetricType.PERCENTAGE,
             "report_id": obj.get("report_id")
         })
         return _obj

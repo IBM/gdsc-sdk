@@ -19,6 +19,8 @@ export class GetJiraIntegrationParameters200Response {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "companyDomainName",
@@ -46,4 +48,3 @@ export class GetJiraIntegrationParameters200Response {
     public constructor() {
     }
 }
-

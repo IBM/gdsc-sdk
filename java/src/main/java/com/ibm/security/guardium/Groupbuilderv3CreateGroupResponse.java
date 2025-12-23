@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CreateGroupResponse returns the group ID of a new group.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3CreateGroupResponse {
   public static final String SERIALIZED_NAME_NEW_GROUP_ID = "new_group_id";
   @SerializedName(SERIALIZED_NAME_NEW_GROUP_ID)
+  @javax.annotation.Nullable
   private Integer newGroupId;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Groupbuilderv3StatusResponseBase status;
 
   public Groupbuilderv3CreateGroupResponse() {
   }
 
-  public Groupbuilderv3CreateGroupResponse newGroupId(Integer newGroupId) {
+  public Groupbuilderv3CreateGroupResponse newGroupId(@javax.annotation.Nullable Integer newGroupId) {
     this.newGroupId = newGroupId;
     return this;
   }
 
-   /**
+  /**
    * New group ID.
    * @return newGroupId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNewGroupId() {
     return newGroupId;
   }
 
-  public void setNewGroupId(Integer newGroupId) {
+  public void setNewGroupId(@javax.annotation.Nullable Integer newGroupId) {
     this.newGroupId = newGroupId;
   }
 
 
-  public Groupbuilderv3CreateGroupResponse status(Groupbuilderv3StatusResponseBase status) {
+  public Groupbuilderv3CreateGroupResponse status(@javax.annotation.Nullable Groupbuilderv3StatusResponseBase status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Groupbuilderv3StatusResponseBase getStatus() {
     return status;
   }
 
-  public void setStatus(Groupbuilderv3StatusResponseBase status) {
+  public void setStatus(@javax.annotation.Nullable Groupbuilderv3StatusResponseBase status) {
     this.status = status;
   }
 
@@ -147,24 +150,22 @@ public class Groupbuilderv3CreateGroupResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("new_group_id");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("new_group_id", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3CreateGroupResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3CreateGroupResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3CreateGroupResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3CreateGroupResponse is not found in the empty JSON string", Groupbuilderv3CreateGroupResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3CreateGroupResponse is not found in the empty JSON string", Groupbuilderv3CreateGroupResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,7 +173,7 @@ public class Groupbuilderv3CreateGroupResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3CreateGroupResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3CreateGroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3CreateGroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -211,22 +212,22 @@ public class Groupbuilderv3CreateGroupResponse {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3CreateGroupResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3CreateGroupResponse
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3CreateGroupResponse
-  */
+  /**
+   * Create an instance of Groupbuilderv3CreateGroupResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3CreateGroupResponse
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3CreateGroupResponse
+   */
   public static Groupbuilderv3CreateGroupResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3CreateGroupResponse.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3CreateGroupResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3CreateGroupResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

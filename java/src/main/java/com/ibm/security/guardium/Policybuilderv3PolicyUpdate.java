@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,126 +44,142 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Create and update policy request message.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3PolicyUpdate {
   public static final String SERIALIZED_NAME_ACTIVATION_STATUS = "activation_status";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_STATUS)
+  @javax.annotation.Nullable
   private Integer activationStatus;
 
   public static final String SERIALIZED_NAME_CONTROL_FLOW = "control_flow";
   @SerializedName(SERIALIZED_NAME_CONTROL_FLOW)
+  @javax.annotation.Nullable
   private Policybuilderv3ControlFlow controlFlow = Policybuilderv3ControlFlow.STANDARD;
 
   public static final String SERIALIZED_NAME_DELETED_RULE_IDS = "deletedRuleIds";
   @SerializedName(SERIALIZED_NAME_DELETED_RULE_IDS)
+  @javax.annotation.Nullable
   private List<String> deletedRuleIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_INSTALLED_FLAG = "installed_flag";
   @SerializedName(SERIALIZED_NAME_INSTALLED_FLAG)
+  @javax.annotation.Nullable
   private Boolean installedFlag;
 
   public static final String SERIALIZED_NAME_INSTALLED_ORDER = "installed_order";
   @SerializedName(SERIALIZED_NAME_INSTALLED_ORDER)
+  @javax.annotation.Nullable
   private Integer installedOrder;
 
   public static final String SERIALIZED_NAME_INSTALLED_TIMESTAMP = "installed_timestamp";
   @SerializedName(SERIALIZED_NAME_INSTALLED_TIMESTAMP)
+  @javax.annotation.Nullable
   private String installedTimestamp;
 
   public static final String SERIALIZED_NAME_LAST_EDITED_TIMESTAMP = "last_edited_timestamp";
   @SerializedName(SERIALIZED_NAME_LAST_EDITED_TIMESTAMP)
+  @javax.annotation.Nullable
   private String lastEditedTimestamp;
 
   public static final String SERIALIZED_NAME_LOG_FLAT = "log_flat";
   @SerializedName(SERIALIZED_NAME_LOG_FLAT)
+  @javax.annotation.Nullable
   private Boolean logFlat;
 
   public static final String SERIALIZED_NAME_POLICY_ID = "policy_id";
   @SerializedName(SERIALIZED_NAME_POLICY_ID)
+  @javax.annotation.Nullable
   private String policyId;
 
   public static final String SERIALIZED_NAME_POLICY_NAME = "policy_name";
   @SerializedName(SERIALIZED_NAME_POLICY_NAME)
+  @javax.annotation.Nullable
   private String policyName;
 
   public static final String SERIALIZED_NAME_POLICY_TYPE = "policy_type";
   @SerializedName(SERIALIZED_NAME_POLICY_TYPE)
+  @javax.annotation.Nullable
   private Policybuilderv3PolicyType policyType = Policybuilderv3PolicyType.DATA_POLICY;
 
   public static final String SERIALIZED_NAME_PRODUCT_ID = "product_id";
   @SerializedName(SERIALIZED_NAME_PRODUCT_ID)
+  @javax.annotation.Nullable
   private Policybuilderv3ProductType productId = Policybuilderv3ProductType.NO_PRODUCT;
 
   public static final String SERIALIZED_NAME_RULES = "rules";
   @SerializedName(SERIALIZED_NAME_RULES)
+  @javax.annotation.Nullable
   private List<Policybuilderv3Rule> rules = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RULES_ON_FLAT = "rules_on_flat";
   @SerializedName(SERIALIZED_NAME_RULES_ON_FLAT)
+  @javax.annotation.Nullable
   private Boolean rulesOnFlat;
 
   public static final String SERIALIZED_NAME_TEMPLATE = "template";
   @SerializedName(SERIALIZED_NAME_TEMPLATE)
+  @javax.annotation.Nullable
   private Boolean template;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private Integer version;
 
   public Policybuilderv3PolicyUpdate() {
   }
 
-  public Policybuilderv3PolicyUpdate activationStatus(Integer activationStatus) {
+  public Policybuilderv3PolicyUpdate activationStatus(@javax.annotation.Nullable Integer activationStatus) {
     this.activationStatus = activationStatus;
     return this;
   }
 
-   /**
+  /**
    * Activation status identifier: 1001 -&gt; install with no issues, 1002-&gt; installed with issues, 1003 -&gt; not installed.
    * @return activationStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getActivationStatus() {
     return activationStatus;
   }
 
-  public void setActivationStatus(Integer activationStatus) {
+  public void setActivationStatus(@javax.annotation.Nullable Integer activationStatus) {
     this.activationStatus = activationStatus;
   }
 
 
-  public Policybuilderv3PolicyUpdate controlFlow(Policybuilderv3ControlFlow controlFlow) {
+  public Policybuilderv3PolicyUpdate controlFlow(@javax.annotation.Nullable Policybuilderv3ControlFlow controlFlow) {
     this.controlFlow = controlFlow;
     return this;
   }
 
-   /**
+  /**
    * Get controlFlow
    * @return controlFlow
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3ControlFlow getControlFlow() {
     return controlFlow;
   }
 
-  public void setControlFlow(Policybuilderv3ControlFlow controlFlow) {
+  public void setControlFlow(@javax.annotation.Nullable Policybuilderv3ControlFlow controlFlow) {
     this.controlFlow = controlFlow;
   }
 
 
-  public Policybuilderv3PolicyUpdate deletedRuleIds(List<String> deletedRuleIds) {
+  public Policybuilderv3PolicyUpdate deletedRuleIds(@javax.annotation.Nullable List<String> deletedRuleIds) {
     this.deletedRuleIds = deletedRuleIds;
     return this;
   }
@@ -175,192 +192,192 @@ public class Policybuilderv3PolicyUpdate {
     return this;
   }
 
-   /**
+  /**
    * The rule ids which are supposed to be deleted on a update policy request.
    * @return deletedRuleIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDeletedRuleIds() {
     return deletedRuleIds;
   }
 
-  public void setDeletedRuleIds(List<String> deletedRuleIds) {
+  public void setDeletedRuleIds(@javax.annotation.Nullable List<String> deletedRuleIds) {
     this.deletedRuleIds = deletedRuleIds;
   }
 
 
-  public Policybuilderv3PolicyUpdate installedFlag(Boolean installedFlag) {
+  public Policybuilderv3PolicyUpdate installedFlag(@javax.annotation.Nullable Boolean installedFlag) {
     this.installedFlag = installedFlag;
     return this;
   }
 
-   /**
+  /**
    * Flag to indicate whether policy is installed or not.
    * @return installedFlag
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getInstalledFlag() {
     return installedFlag;
   }
 
-  public void setInstalledFlag(Boolean installedFlag) {
+  public void setInstalledFlag(@javax.annotation.Nullable Boolean installedFlag) {
     this.installedFlag = installedFlag;
   }
 
 
-  public Policybuilderv3PolicyUpdate installedOrder(Integer installedOrder) {
+  public Policybuilderv3PolicyUpdate installedOrder(@javax.annotation.Nullable Integer installedOrder) {
     this.installedOrder = installedOrder;
     return this;
   }
 
-   /**
+  /**
    * Variable to indicate the order of the installed policy.
    * @return installedOrder
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getInstalledOrder() {
     return installedOrder;
   }
 
-  public void setInstalledOrder(Integer installedOrder) {
+  public void setInstalledOrder(@javax.annotation.Nullable Integer installedOrder) {
     this.installedOrder = installedOrder;
   }
 
 
-  public Policybuilderv3PolicyUpdate installedTimestamp(String installedTimestamp) {
+  public Policybuilderv3PolicyUpdate installedTimestamp(@javax.annotation.Nullable String installedTimestamp) {
     this.installedTimestamp = installedTimestamp;
     return this;
   }
 
-   /**
+  /**
    * Timestamp to indicate when the policy was installed.
    * @return installedTimestamp
-  **/
+   */
   @javax.annotation.Nullable
   public String getInstalledTimestamp() {
     return installedTimestamp;
   }
 
-  public void setInstalledTimestamp(String installedTimestamp) {
+  public void setInstalledTimestamp(@javax.annotation.Nullable String installedTimestamp) {
     this.installedTimestamp = installedTimestamp;
   }
 
 
-  public Policybuilderv3PolicyUpdate lastEditedTimestamp(String lastEditedTimestamp) {
+  public Policybuilderv3PolicyUpdate lastEditedTimestamp(@javax.annotation.Nullable String lastEditedTimestamp) {
     this.lastEditedTimestamp = lastEditedTimestamp;
     return this;
   }
 
-   /**
+  /**
    * Timestamp to indicate when the policy was last edited.
    * @return lastEditedTimestamp
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastEditedTimestamp() {
     return lastEditedTimestamp;
   }
 
-  public void setLastEditedTimestamp(String lastEditedTimestamp) {
+  public void setLastEditedTimestamp(@javax.annotation.Nullable String lastEditedTimestamp) {
     this.lastEditedTimestamp = lastEditedTimestamp;
   }
 
 
-  public Policybuilderv3PolicyUpdate logFlat(Boolean logFlat) {
+  public Policybuilderv3PolicyUpdate logFlat(@javax.annotation.Nullable Boolean logFlat) {
     this.logFlat = logFlat;
     return this;
   }
 
-   /**
+  /**
    * Flag to indicate whether the policy has log flat enabled or not.
    * @return logFlat
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getLogFlat() {
     return logFlat;
   }
 
-  public void setLogFlat(Boolean logFlat) {
+  public void setLogFlat(@javax.annotation.Nullable Boolean logFlat) {
     this.logFlat = logFlat;
   }
 
 
-  public Policybuilderv3PolicyUpdate policyId(String policyId) {
+  public Policybuilderv3PolicyUpdate policyId(@javax.annotation.Nullable String policyId) {
     this.policyId = policyId;
     return this;
   }
 
-   /**
+  /**
    * Policy Id.
    * @return policyId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyId() {
     return policyId;
   }
 
-  public void setPolicyId(String policyId) {
+  public void setPolicyId(@javax.annotation.Nullable String policyId) {
     this.policyId = policyId;
   }
 
 
-  public Policybuilderv3PolicyUpdate policyName(String policyName) {
+  public Policybuilderv3PolicyUpdate policyName(@javax.annotation.Nullable String policyName) {
     this.policyName = policyName;
     return this;
   }
 
-   /**
+  /**
    * Policy Name.
    * @return policyName
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyName() {
     return policyName;
   }
 
-  public void setPolicyName(String policyName) {
+  public void setPolicyName(@javax.annotation.Nullable String policyName) {
     this.policyName = policyName;
   }
 
 
-  public Policybuilderv3PolicyUpdate policyType(Policybuilderv3PolicyType policyType) {
+  public Policybuilderv3PolicyUpdate policyType(@javax.annotation.Nullable Policybuilderv3PolicyType policyType) {
     this.policyType = policyType;
     return this;
   }
 
-   /**
+  /**
    * Get policyType
    * @return policyType
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3PolicyType getPolicyType() {
     return policyType;
   }
 
-  public void setPolicyType(Policybuilderv3PolicyType policyType) {
+  public void setPolicyType(@javax.annotation.Nullable Policybuilderv3PolicyType policyType) {
     this.policyType = policyType;
   }
 
 
-  public Policybuilderv3PolicyUpdate productId(Policybuilderv3ProductType productId) {
+  public Policybuilderv3PolicyUpdate productId(@javax.annotation.Nullable Policybuilderv3ProductType productId) {
     this.productId = productId;
     return this;
   }
 
-   /**
+  /**
    * Get productId
    * @return productId
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3ProductType getProductId() {
     return productId;
   }
 
-  public void setProductId(Policybuilderv3ProductType productId) {
+  public void setProductId(@javax.annotation.Nullable Policybuilderv3ProductType productId) {
     this.productId = productId;
   }
 
 
-  public Policybuilderv3PolicyUpdate rules(List<Policybuilderv3Rule> rules) {
+  public Policybuilderv3PolicyUpdate rules(@javax.annotation.Nullable List<Policybuilderv3Rule> rules) {
     this.rules = rules;
     return this;
   }
@@ -373,73 +390,73 @@ public class Policybuilderv3PolicyUpdate {
     return this;
   }
 
-   /**
+  /**
    * Get rules
    * @return rules
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3Rule> getRules() {
     return rules;
   }
 
-  public void setRules(List<Policybuilderv3Rule> rules) {
+  public void setRules(@javax.annotation.Nullable List<Policybuilderv3Rule> rules) {
     this.rules = rules;
   }
 
 
-  public Policybuilderv3PolicyUpdate rulesOnFlat(Boolean rulesOnFlat) {
+  public Policybuilderv3PolicyUpdate rulesOnFlat(@javax.annotation.Nullable Boolean rulesOnFlat) {
     this.rulesOnFlat = rulesOnFlat;
     return this;
   }
 
-   /**
+  /**
    * Flag to indicate whether the policy has rules on flat enabled or not.
    * @return rulesOnFlat
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getRulesOnFlat() {
     return rulesOnFlat;
   }
 
-  public void setRulesOnFlat(Boolean rulesOnFlat) {
+  public void setRulesOnFlat(@javax.annotation.Nullable Boolean rulesOnFlat) {
     this.rulesOnFlat = rulesOnFlat;
   }
 
 
-  public Policybuilderv3PolicyUpdate template(Boolean template) {
+  public Policybuilderv3PolicyUpdate template(@javax.annotation.Nullable Boolean template) {
     this.template = template;
     return this;
   }
 
-   /**
+  /**
    * Flag to indicate whether the policy is a template policy or not.
    * @return template
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getTemplate() {
     return template;
   }
 
-  public void setTemplate(Boolean template) {
+  public void setTemplate(@javax.annotation.Nullable Boolean template) {
     this.template = template;
   }
 
 
-  public Policybuilderv3PolicyUpdate version(Integer version) {
+  public Policybuilderv3PolicyUpdate version(@javax.annotation.Nullable Integer version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Version of the policy.
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getVersion() {
     return version;
   }
 
-  public void setVersion(Integer version) {
+  public void setVersion(@javax.annotation.Nullable Integer version) {
     this.version = version;
   }
 
@@ -518,38 +535,22 @@ public class Policybuilderv3PolicyUpdate {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("activation_status");
-    openapiFields.add("control_flow");
-    openapiFields.add("deletedRuleIds");
-    openapiFields.add("installed_flag");
-    openapiFields.add("installed_order");
-    openapiFields.add("installed_timestamp");
-    openapiFields.add("last_edited_timestamp");
-    openapiFields.add("log_flat");
-    openapiFields.add("policy_id");
-    openapiFields.add("policy_name");
-    openapiFields.add("policy_type");
-    openapiFields.add("product_id");
-    openapiFields.add("rules");
-    openapiFields.add("rules_on_flat");
-    openapiFields.add("template");
-    openapiFields.add("version");
+    openapiFields = new HashSet<String>(Arrays.asList("activation_status", "control_flow", "deletedRuleIds", "installed_flag", "installed_order", "installed_timestamp", "last_edited_timestamp", "log_flat", "policy_id", "policy_name", "policy_type", "product_id", "rules", "rules_on_flat", "template", "version"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3PolicyUpdate
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3PolicyUpdate
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3PolicyUpdate.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3PolicyUpdate is not found in the empty JSON string", Policybuilderv3PolicyUpdate.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3PolicyUpdate is not found in the empty JSON string", Policybuilderv3PolicyUpdate.openapiRequiredFields.toString()));
         }
       }
 
@@ -557,7 +558,7 @@ public class Policybuilderv3PolicyUpdate {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3PolicyUpdate.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3PolicyUpdate` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3PolicyUpdate` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -567,19 +568,19 @@ public class Policybuilderv3PolicyUpdate {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("deletedRuleIds") != null && !jsonObj.get("deletedRuleIds").isJsonNull() && !jsonObj.get("deletedRuleIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `deletedRuleIds` to be an array in the JSON string but got `%s`", jsonObj.get("deletedRuleIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `deletedRuleIds` to be an array in the JSON string but got `%s`", jsonObj.get("deletedRuleIds").toString()));
       }
       if ((jsonObj.get("installed_timestamp") != null && !jsonObj.get("installed_timestamp").isJsonNull()) && !jsonObj.get("installed_timestamp").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `installed_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installed_timestamp").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `installed_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installed_timestamp").toString()));
       }
       if ((jsonObj.get("last_edited_timestamp") != null && !jsonObj.get("last_edited_timestamp").isJsonNull()) && !jsonObj.get("last_edited_timestamp").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_edited_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_edited_timestamp").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_edited_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_edited_timestamp").toString()));
       }
       if ((jsonObj.get("policy_id") != null && !jsonObj.get("policy_id").isJsonNull()) && !jsonObj.get("policy_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));
       }
       if ((jsonObj.get("policy_name") != null && !jsonObj.get("policy_name").isJsonNull()) && !jsonObj.get("policy_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_name").toString()));
       }
       // validate the optional field `policy_type`
       if (jsonObj.get("policy_type") != null && !jsonObj.get("policy_type").isJsonNull()) {
@@ -594,7 +595,7 @@ public class Policybuilderv3PolicyUpdate {
         if (jsonArrayrules != null) {
           // ensure the json data is an array
           if (!jsonObj.get("rules").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `rules` to be an array in the JSON string but got `%s`", jsonObj.get("rules").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rules` to be an array in the JSON string but got `%s`", jsonObj.get("rules").toString()));
           }
 
           // validate the optional field `rules` (array)
@@ -634,22 +635,22 @@ public class Policybuilderv3PolicyUpdate {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3PolicyUpdate given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3PolicyUpdate
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3PolicyUpdate
-  */
+  /**
+   * Create an instance of Policybuilderv3PolicyUpdate given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3PolicyUpdate
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3PolicyUpdate
+   */
   public static Policybuilderv3PolicyUpdate fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3PolicyUpdate.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3PolicyUpdate to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3PolicyUpdate to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

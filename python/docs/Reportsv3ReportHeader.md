@@ -6,17 +6,17 @@ Report header.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aggregation_type** | [**Reportsv3AggregationType**](Reportsv3AggregationType.md) |  | [optional] 
+**aggregation_type** | [**Reportsv3AggregationType**](Reportsv3AggregationType.md) |  | [optional] [default to Reportsv3AggregationType.UNDEFINED_AGG_TYPE]
 **field_name** | [**Reportsv3FieldName**](Reportsv3FieldName.md) |  | [optional] 
 **group_type_id** | **int** | Group type id for the filter. | [optional] 
-**header_data_type** | [**Reportsv3HeaderDataType**](Reportsv3HeaderDataType.md) |  | [optional] 
+**header_data_type** | [**Reportsv3HeaderDataType**](Reportsv3HeaderDataType.md) |  | [optional] [default to Reportsv3HeaderDataType.UNDEFINED_REPORT_HEADER_TYPE]
 **header_description** | [**Reportsv3HeaderDescription**](Reportsv3HeaderDescription.md) |  | [optional] 
 **header_id** | **str** | Header ID. | [optional] 
 **header_name** | **str** | The header name. | [optional] 
-**header_type** | [**Reportsv3HeaderType**](Reportsv3HeaderType.md) |  | [optional] 
+**header_type** | [**Reportsv3HeaderType**](Reportsv3HeaderType.md) |  | [optional] [default to Reportsv3HeaderType.UNDEFINED_TYPE]
 **header_type_length** | **int** | Header type length. | [optional] 
 **literal** | [**Reportsv3Literal**](Reportsv3Literal.md) |  | [optional] 
-**order_by** | [**Reportsv3OrderBy**](Reportsv3OrderBy.md) |  | [optional] 
+**order_by** | [**Reportsv3OrderBy**](Reportsv3OrderBy.md) |  | [optional] [default to Reportsv3OrderBy.UNDEFINED_ORDER_BY]
 **order_by_seq** | **int** | Order by sequence. | [optional] 
 **schema_name** | **str** | Schema name. | [optional] 
 **sequence** | **int** | Column sequence number. | [optional] 

@@ -36,8 +36,8 @@ class Workflowv3CaseEdit(BaseModel):
     comment: Optional[StrictStr] = Field(default=None, description="Optional: Comment - this text will be added to the comments history.")
     date_due: Optional[datetime] = Field(default=None, description="Optional: Date due.")
     description: Optional[StrictStr] = Field(default=None, description="Optional: Multiline description of the case.")
-    priority: Optional[Workflowv3Priority] = None
-    status: Optional[Workflowv3Status] = None
+    priority: Optional[Workflowv3Priority] = Workflowv3Priority.UNDEFINED_PRIORITY
+    status: Optional[Workflowv3Status] = Workflowv3Status.UNDEFINED_STATUS
     title: Optional[StrictStr] = Field(default=None, description="Optional: Case title (subject).")
     __properties: ClassVar[List[str]] = ["artifacts", "assignments", "case_id", "comment", "date_due", "description", "priority", "status", "title"]
 
@@ -83,9 +83,9 @@ class Workflowv3CaseEdit(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in assignments (list)
         _items = []
         if self.assignments:
-            for _item in self.assignments:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_assignments in self.assignments:
+                if _item_assignments:
+                    _items.append(_item_assignments.to_dict())
             _dict['assignments'] = _items
         return _dict
 
@@ -105,8 +105,8 @@ class Workflowv3CaseEdit(BaseModel):
             "comment": obj.get("comment"),
             "date_due": obj.get("date_due"),
             "description": obj.get("description"),
-            "priority": obj.get("priority"),
-            "status": obj.get("status"),
+            "priority": obj.get("priority") if obj.get("priority") is not None else Workflowv3Priority.UNDEFINED_PRIORITY,
+            "status": obj.get("status") if obj.get("status") is not None else Workflowv3Status.UNDEFINED_STATUS,
             "title": obj.get("title")
         })
         return _obj

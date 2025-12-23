@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,59 +44,63 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * PotentialFlowsSummary
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class PotentialFlowsSummary {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nonnull
   private BigDecimal count;
 
   public static final String SERIALIZED_NAME_TYPES_COUNT = "typesCount";
   @SerializedName(SERIALIZED_NAME_TYPES_COUNT)
+  @javax.annotation.Nonnull
   private List<TypesCountInner> typesCount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_COUNT = "cloudAccountCount";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_COUNT)
+  @javax.annotation.Nonnull
   private List<CloudAccountCountInner> cloudAccountCount = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_REGION_COUNT = "cloudRegionCount";
   @SerializedName(SERIALIZED_NAME_CLOUD_REGION_COUNT)
+  @javax.annotation.Nonnull
   private List<CloudRegionCountInner> cloudRegionCount = new ArrayList<>();
 
   public PotentialFlowsSummary() {
   }
 
-  public PotentialFlowsSummary count(BigDecimal count) {
+  public PotentialFlowsSummary count(@javax.annotation.Nonnull BigDecimal count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Get count
    * @return count
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getCount() {
     return count;
   }
 
-  public void setCount(BigDecimal count) {
+  public void setCount(@javax.annotation.Nonnull BigDecimal count) {
     this.count = count;
   }
 
 
-  public PotentialFlowsSummary typesCount(List<TypesCountInner> typesCount) {
+  public PotentialFlowsSummary typesCount(@javax.annotation.Nonnull List<TypesCountInner> typesCount) {
     this.typesCount = typesCount;
     return this;
   }
@@ -108,21 +113,21 @@ public class PotentialFlowsSummary {
     return this;
   }
 
-   /**
+  /**
    * Get typesCount
    * @return typesCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<TypesCountInner> getTypesCount() {
     return typesCount;
   }
 
-  public void setTypesCount(List<TypesCountInner> typesCount) {
+  public void setTypesCount(@javax.annotation.Nonnull List<TypesCountInner> typesCount) {
     this.typesCount = typesCount;
   }
 
 
-  public PotentialFlowsSummary cloudAccountCount(List<CloudAccountCountInner> cloudAccountCount) {
+  public PotentialFlowsSummary cloudAccountCount(@javax.annotation.Nonnull List<CloudAccountCountInner> cloudAccountCount) {
     this.cloudAccountCount = cloudAccountCount;
     return this;
   }
@@ -135,21 +140,21 @@ public class PotentialFlowsSummary {
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountCount
    * @return cloudAccountCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CloudAccountCountInner> getCloudAccountCount() {
     return cloudAccountCount;
   }
 
-  public void setCloudAccountCount(List<CloudAccountCountInner> cloudAccountCount) {
+  public void setCloudAccountCount(@javax.annotation.Nonnull List<CloudAccountCountInner> cloudAccountCount) {
     this.cloudAccountCount = cloudAccountCount;
   }
 
 
-  public PotentialFlowsSummary cloudRegionCount(List<CloudRegionCountInner> cloudRegionCount) {
+  public PotentialFlowsSummary cloudRegionCount(@javax.annotation.Nonnull List<CloudRegionCountInner> cloudRegionCount) {
     this.cloudRegionCount = cloudRegionCount;
     return this;
   }
@@ -162,16 +167,16 @@ public class PotentialFlowsSummary {
     return this;
   }
 
-   /**
+  /**
    * Get cloudRegionCount
    * @return cloudRegionCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CloudRegionCountInner> getCloudRegionCount() {
     return cloudRegionCount;
   }
 
-  public void setCloudRegionCount(List<CloudRegionCountInner> cloudRegionCount) {
+  public void setCloudRegionCount(@javax.annotation.Nonnull List<CloudRegionCountInner> cloudRegionCount) {
     this.cloudRegionCount = cloudRegionCount;
   }
 
@@ -226,30 +231,22 @@ public class PotentialFlowsSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("count");
-    openapiFields.add("typesCount");
-    openapiFields.add("cloudAccountCount");
-    openapiFields.add("cloudRegionCount");
+    openapiFields = new HashSet<String>(Arrays.asList("count", "typesCount", "cloudAccountCount", "cloudRegionCount"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("count");
-    openapiRequiredFields.add("typesCount");
-    openapiRequiredFields.add("cloudAccountCount");
-    openapiRequiredFields.add("cloudRegionCount");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("count", "typesCount", "cloudAccountCount", "cloudRegionCount"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PotentialFlowsSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PotentialFlowsSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!PotentialFlowsSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in PotentialFlowsSummary is not found in the empty JSON string", PotentialFlowsSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in PotentialFlowsSummary is not found in the empty JSON string", PotentialFlowsSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -257,20 +254,20 @@ public class PotentialFlowsSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!PotentialFlowsSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PotentialFlowsSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `PotentialFlowsSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : PotentialFlowsSummary.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("typesCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `typesCount` to be an array in the JSON string but got `%s`", jsonObj.get("typesCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `typesCount` to be an array in the JSON string but got `%s`", jsonObj.get("typesCount").toString()));
       }
 
       JsonArray jsonArraytypesCount = jsonObj.getAsJsonArray("typesCount");
@@ -280,7 +277,7 @@ public class PotentialFlowsSummary {
       };
       // ensure the json data is an array
       if (!jsonObj.get("cloudAccountCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccountCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudAccountCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccountCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudAccountCount").toString()));
       }
 
       JsonArray jsonArraycloudAccountCount = jsonObj.getAsJsonArray("cloudAccountCount");
@@ -290,7 +287,7 @@ public class PotentialFlowsSummary {
       };
       // ensure the json data is an array
       if (!jsonObj.get("cloudRegionCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudRegionCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudRegionCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudRegionCount` to be an array in the JSON string but got `%s`", jsonObj.get("cloudRegionCount").toString()));
       }
 
       JsonArray jsonArraycloudRegionCount = jsonObj.getAsJsonArray("cloudRegionCount");
@@ -329,22 +326,22 @@ public class PotentialFlowsSummary {
     }
   }
 
- /**
-  * Create an instance of PotentialFlowsSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of PotentialFlowsSummary
-  * @throws IOException if the JSON string is invalid with respect to PotentialFlowsSummary
-  */
+  /**
+   * Create an instance of PotentialFlowsSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PotentialFlowsSummary
+   * @throws IOException if the JSON string is invalid with respect to PotentialFlowsSummary
+   */
   public static PotentialFlowsSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, PotentialFlowsSummary.class);
   }
 
- /**
-  * Convert an instance of PotentialFlowsSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of PotentialFlowsSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

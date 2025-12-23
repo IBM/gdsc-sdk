@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,67 +41,73 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3PortVertex
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3PortVertex {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_EXTENDED_PROPERTIES = "extended_properties";
   @SerializedName(SERIALIZED_NAME_EXTENDED_PROPERTIES)
+  @javax.annotation.Nullable
   private List<Assetsv3CustomProperty> extendedProperties = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PORT_NUMBER = "port_number";
   @SerializedName(SERIALIZED_NAME_PORT_NUMBER)
+  @javax.annotation.Nullable
   private String portNumber;
 
   public static final String SERIALIZED_NAME_PROTOCOL = "protocol";
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
+  @javax.annotation.Nullable
   private String protocol;
 
   public static final String SERIALIZED_NAME_PROTOCOL_VERSION = "protocol_version";
   @SerializedName(SERIALIZED_NAME_PROTOCOL_VERSION)
+  @javax.annotation.Nullable
   private String protocolVersion;
 
   public static final String SERIALIZED_NAME_RESOLUTION_KEY = "resolution_key";
   @SerializedName(SERIALIZED_NAME_RESOLUTION_KEY)
+  @javax.annotation.Nullable
   private String resolutionKey;
 
   public Assetsv3PortVertex() {
   }
 
-  public Assetsv3PortVertex description(String description) {
+  public Assetsv3PortVertex description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Get description
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Assetsv3PortVertex extendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public Assetsv3PortVertex extendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
     return this;
   }
@@ -113,92 +120,92 @@ public class Assetsv3PortVertex {
     return this;
   }
 
-   /**
+  /**
    * Get extendedProperties
    * @return extendedProperties
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3CustomProperty> getExtendedProperties() {
     return extendedProperties;
   }
 
-  public void setExtendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public void setExtendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
   }
 
 
-  public Assetsv3PortVertex portNumber(String portNumber) {
+  public Assetsv3PortVertex portNumber(@javax.annotation.Nullable String portNumber) {
     this.portNumber = portNumber;
     return this;
   }
 
-   /**
+  /**
    * Get portNumber
    * @return portNumber
-  **/
+   */
   @javax.annotation.Nullable
   public String getPortNumber() {
     return portNumber;
   }
 
-  public void setPortNumber(String portNumber) {
+  public void setPortNumber(@javax.annotation.Nullable String portNumber) {
     this.portNumber = portNumber;
   }
 
 
-  public Assetsv3PortVertex protocol(String protocol) {
+  public Assetsv3PortVertex protocol(@javax.annotation.Nullable String protocol) {
     this.protocol = protocol;
     return this;
   }
 
-   /**
+  /**
    * Get protocol
    * @return protocol
-  **/
+   */
   @javax.annotation.Nullable
   public String getProtocol() {
     return protocol;
   }
 
-  public void setProtocol(String protocol) {
+  public void setProtocol(@javax.annotation.Nullable String protocol) {
     this.protocol = protocol;
   }
 
 
-  public Assetsv3PortVertex protocolVersion(String protocolVersion) {
+  public Assetsv3PortVertex protocolVersion(@javax.annotation.Nullable String protocolVersion) {
     this.protocolVersion = protocolVersion;
     return this;
   }
 
-   /**
+  /**
    * Get protocolVersion
    * @return protocolVersion
-  **/
+   */
   @javax.annotation.Nullable
   public String getProtocolVersion() {
     return protocolVersion;
   }
 
-  public void setProtocolVersion(String protocolVersion) {
+  public void setProtocolVersion(@javax.annotation.Nullable String protocolVersion) {
     this.protocolVersion = protocolVersion;
   }
 
 
-  public Assetsv3PortVertex resolutionKey(String resolutionKey) {
+  public Assetsv3PortVertex resolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
     return this;
   }
 
-   /**
+  /**
    * Get resolutionKey
    * @return resolutionKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getResolutionKey() {
     return resolutionKey;
   }
 
-  public void setResolutionKey(String resolutionKey) {
+  public void setResolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
   }
 
@@ -257,28 +264,22 @@ public class Assetsv3PortVertex {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("description");
-    openapiFields.add("extended_properties");
-    openapiFields.add("port_number");
-    openapiFields.add("protocol");
-    openapiFields.add("protocol_version");
-    openapiFields.add("resolution_key");
+    openapiFields = new HashSet<String>(Arrays.asList("description", "extended_properties", "port_number", "protocol", "protocol_version", "resolution_key"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3PortVertex
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3PortVertex
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3PortVertex.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3PortVertex is not found in the empty JSON string", Assetsv3PortVertex.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3PortVertex is not found in the empty JSON string", Assetsv3PortVertex.openapiRequiredFields.toString()));
         }
       }
 
@@ -286,19 +287,19 @@ public class Assetsv3PortVertex {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3PortVertex.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3PortVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3PortVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if (jsonObj.get("extended_properties") != null && !jsonObj.get("extended_properties").isJsonNull()) {
         JsonArray jsonArrayextendedProperties = jsonObj.getAsJsonArray("extended_properties");
         if (jsonArrayextendedProperties != null) {
           // ensure the json data is an array
           if (!jsonObj.get("extended_properties").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
           }
 
           // validate the optional field `extended_properties` (array)
@@ -308,16 +309,16 @@ public class Assetsv3PortVertex {
         }
       }
       if ((jsonObj.get("port_number") != null && !jsonObj.get("port_number").isJsonNull()) && !jsonObj.get("port_number").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `port_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port_number").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `port_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port_number").toString()));
       }
       if ((jsonObj.get("protocol") != null && !jsonObj.get("protocol").isJsonNull()) && !jsonObj.get("protocol").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `protocol` to be a primitive type in the JSON string but got `%s`", jsonObj.get("protocol").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `protocol` to be a primitive type in the JSON string but got `%s`", jsonObj.get("protocol").toString()));
       }
       if ((jsonObj.get("protocol_version") != null && !jsonObj.get("protocol_version").isJsonNull()) && !jsonObj.get("protocol_version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `protocol_version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("protocol_version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `protocol_version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("protocol_version").toString()));
       }
       if ((jsonObj.get("resolution_key") != null && !jsonObj.get("resolution_key").isJsonNull()) && !jsonObj.get("resolution_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
       }
   }
 
@@ -350,22 +351,22 @@ public class Assetsv3PortVertex {
     }
   }
 
- /**
-  * Create an instance of Assetsv3PortVertex given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3PortVertex
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3PortVertex
-  */
+  /**
+   * Create an instance of Assetsv3PortVertex given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3PortVertex
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3PortVertex
+   */
   public static Assetsv3PortVertex fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3PortVertex.class);
   }
 
- /**
-  * Convert an instance of Assetsv3PortVertex to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3PortVertex to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

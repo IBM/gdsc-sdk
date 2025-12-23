@@ -31,6 +31,8 @@ export class Groupbuilderv3NestedGroupMember {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "groupId",
@@ -58,4 +60,3 @@ export class Groupbuilderv3NestedGroupMember {
     public constructor() {
     }
 }
-

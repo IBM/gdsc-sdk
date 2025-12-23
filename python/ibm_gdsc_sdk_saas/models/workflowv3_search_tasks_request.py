@@ -33,7 +33,7 @@ class Workflowv3SearchTasksRequest(BaseModel):
     limit: Optional[StrictInt] = Field(default=None, description="Optional: The max amount of cases to return for pagination.")
     offset: Optional[StrictInt] = Field(default=None, description="Optional: The amount to offset the cases for pagination.")
     sort_field: Optional[StrictStr] = None
-    sort_order: Optional[Reportsv3OrderBy] = None
+    sort_order: Optional[Reportsv3OrderBy] = Reportsv3OrderBy.UNDEFINED_ORDER_BY
     task_id: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["case_id", "filter", "limit", "offset", "sort_field", "sort_order", "task_id"]
 
@@ -96,7 +96,7 @@ class Workflowv3SearchTasksRequest(BaseModel):
             "limit": obj.get("limit"),
             "offset": obj.get("offset"),
             "sort_field": obj.get("sort_field"),
-            "sort_order": obj.get("sort_order"),
+            "sort_order": obj.get("sort_order") if obj.get("sort_order") is not None else Reportsv3OrderBy.UNDEFINED_ORDER_BY,
             "task_id": obj.get("task_id")
         })
         return _obj

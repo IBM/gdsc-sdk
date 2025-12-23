@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,28 +40,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmdatamanagerv3Row
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmdatamanagerv3Row {
   public static final String SERIALIZED_NAME_COLUMNS = "columns";
   @SerializedName(SERIALIZED_NAME_COLUMNS)
+  @javax.annotation.Nullable
   private Map<String, String> columns = new HashMap<>();
 
   public Qspmdatamanagerv3Row() {
   }
 
-  public Qspmdatamanagerv3Row columns(Map<String, String> columns) {
+  public Qspmdatamanagerv3Row columns(@javax.annotation.Nullable Map<String, String> columns) {
     this.columns = columns;
     return this;
   }
@@ -73,16 +75,16 @@ public class Qspmdatamanagerv3Row {
     return this;
   }
 
-   /**
+  /**
    * Get columns
    * @return columns
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getColumns() {
     return columns;
   }
 
-  public void setColumns(Map<String, String> columns) {
+  public void setColumns(@javax.annotation.Nullable Map<String, String> columns) {
     this.columns = columns;
   }
 
@@ -131,23 +133,22 @@ public class Qspmdatamanagerv3Row {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("columns");
+    openapiFields = new HashSet<String>(Arrays.asList("columns"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3Row
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3Row
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmdatamanagerv3Row.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmdatamanagerv3Row is not found in the empty JSON string", Qspmdatamanagerv3Row.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmdatamanagerv3Row is not found in the empty JSON string", Qspmdatamanagerv3Row.openapiRequiredFields.toString()));
         }
       }
 
@@ -155,7 +156,7 @@ public class Qspmdatamanagerv3Row {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmdatamanagerv3Row.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3Row` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3Row` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -190,22 +191,22 @@ public class Qspmdatamanagerv3Row {
     }
   }
 
- /**
-  * Create an instance of Qspmdatamanagerv3Row given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmdatamanagerv3Row
-  * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3Row
-  */
+  /**
+   * Create an instance of Qspmdatamanagerv3Row given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmdatamanagerv3Row
+   * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3Row
+   */
   public static Qspmdatamanagerv3Row fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmdatamanagerv3Row.class);
   }
 
- /**
-  * Convert an instance of Qspmdatamanagerv3Row to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmdatamanagerv3Row to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

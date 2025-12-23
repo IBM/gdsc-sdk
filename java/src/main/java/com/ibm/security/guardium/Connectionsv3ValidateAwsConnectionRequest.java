@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,180 +38,187 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3ValidateAwsConnectionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3ValidateAwsConnectionRequest {
   public static final String SERIALIZED_NAME_ACCESS_KEY = "access_key";
   @SerializedName(SERIALIZED_NAME_ACCESS_KEY)
+  @javax.annotation.Nullable
   private String accessKey;
 
   public static final String SERIALIZED_NAME_BUCKET_NAME = "bucket_name";
   @SerializedName(SERIALIZED_NAME_BUCKET_NAME)
+  @javax.annotation.Nullable
   private String bucketName;
 
   public static final String SERIALIZED_NAME_GROUP_NAME = "group_name";
   @SerializedName(SERIALIZED_NAME_GROUP_NAME)
+  @javax.annotation.Nullable
   private String groupName;
 
   public static final String SERIALIZED_NAME_INPUT_PLUGIN_TYPE = "input_plugin_type";
   @SerializedName(SERIALIZED_NAME_INPUT_PLUGIN_TYPE)
+  @javax.annotation.Nullable
   private String inputPluginType;
 
   public static final String SERIALIZED_NAME_QUEUE_URL = "queue_url";
   @SerializedName(SERIALIZED_NAME_QUEUE_URL)
+  @javax.annotation.Nullable
   private String queueUrl;
 
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
+  @javax.annotation.Nullable
   private String region;
 
   public static final String SERIALIZED_NAME_SECRET_KEY = "secret_key";
   @SerializedName(SERIALIZED_NAME_SECRET_KEY)
+  @javax.annotation.Nullable
   private String secretKey;
 
   public Connectionsv3ValidateAwsConnectionRequest() {
   }
 
-  public Connectionsv3ValidateAwsConnectionRequest accessKey(String accessKey) {
+  public Connectionsv3ValidateAwsConnectionRequest accessKey(@javax.annotation.Nullable String accessKey) {
     this.accessKey = accessKey;
     return this;
   }
 
-   /**
+  /**
    * Get accessKey
    * @return accessKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getAccessKey() {
     return accessKey;
   }
 
-  public void setAccessKey(String accessKey) {
+  public void setAccessKey(@javax.annotation.Nullable String accessKey) {
     this.accessKey = accessKey;
   }
 
 
-  public Connectionsv3ValidateAwsConnectionRequest bucketName(String bucketName) {
+  public Connectionsv3ValidateAwsConnectionRequest bucketName(@javax.annotation.Nullable String bucketName) {
     this.bucketName = bucketName;
     return this;
   }
 
-   /**
+  /**
    * Get bucketName
    * @return bucketName
-  **/
+   */
   @javax.annotation.Nullable
   public String getBucketName() {
     return bucketName;
   }
 
-  public void setBucketName(String bucketName) {
+  public void setBucketName(@javax.annotation.Nullable String bucketName) {
     this.bucketName = bucketName;
   }
 
 
-  public Connectionsv3ValidateAwsConnectionRequest groupName(String groupName) {
+  public Connectionsv3ValidateAwsConnectionRequest groupName(@javax.annotation.Nullable String groupName) {
     this.groupName = groupName;
     return this;
   }
 
-   /**
+  /**
    * Get groupName
    * @return groupName
-  **/
+   */
   @javax.annotation.Nullable
   public String getGroupName() {
     return groupName;
   }
 
-  public void setGroupName(String groupName) {
+  public void setGroupName(@javax.annotation.Nullable String groupName) {
     this.groupName = groupName;
   }
 
 
-  public Connectionsv3ValidateAwsConnectionRequest inputPluginType(String inputPluginType) {
+  public Connectionsv3ValidateAwsConnectionRequest inputPluginType(@javax.annotation.Nullable String inputPluginType) {
     this.inputPluginType = inputPluginType;
     return this;
   }
 
-   /**
+  /**
    * aws connection input type as Cloudwatch, SQS, S3, ...
    * @return inputPluginType
-  **/
+   */
   @javax.annotation.Nullable
   public String getInputPluginType() {
     return inputPluginType;
   }
 
-  public void setInputPluginType(String inputPluginType) {
+  public void setInputPluginType(@javax.annotation.Nullable String inputPluginType) {
     this.inputPluginType = inputPluginType;
   }
 
 
-  public Connectionsv3ValidateAwsConnectionRequest queueUrl(String queueUrl) {
+  public Connectionsv3ValidateAwsConnectionRequest queueUrl(@javax.annotation.Nullable String queueUrl) {
     this.queueUrl = queueUrl;
     return this;
   }
 
-   /**
+  /**
    * Get queueUrl
    * @return queueUrl
-  **/
+   */
   @javax.annotation.Nullable
   public String getQueueUrl() {
     return queueUrl;
   }
 
-  public void setQueueUrl(String queueUrl) {
+  public void setQueueUrl(@javax.annotation.Nullable String queueUrl) {
     this.queueUrl = queueUrl;
   }
 
 
-  public Connectionsv3ValidateAwsConnectionRequest region(String region) {
+  public Connectionsv3ValidateAwsConnectionRequest region(@javax.annotation.Nullable String region) {
     this.region = region;
     return this;
   }
 
-   /**
+  /**
    * Get region
    * @return region
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegion() {
     return region;
   }
 
-  public void setRegion(String region) {
+  public void setRegion(@javax.annotation.Nullable String region) {
     this.region = region;
   }
 
 
-  public Connectionsv3ValidateAwsConnectionRequest secretKey(String secretKey) {
+  public Connectionsv3ValidateAwsConnectionRequest secretKey(@javax.annotation.Nullable String secretKey) {
     this.secretKey = secretKey;
     return this;
   }
 
-   /**
+  /**
    * Get secretKey
    * @return secretKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getSecretKey() {
     return secretKey;
   }
 
-  public void setSecretKey(String secretKey) {
+  public void setSecretKey(@javax.annotation.Nullable String secretKey) {
     this.secretKey = secretKey;
   }
 
@@ -271,29 +279,22 @@ public class Connectionsv3ValidateAwsConnectionRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("access_key");
-    openapiFields.add("bucket_name");
-    openapiFields.add("group_name");
-    openapiFields.add("input_plugin_type");
-    openapiFields.add("queue_url");
-    openapiFields.add("region");
-    openapiFields.add("secret_key");
+    openapiFields = new HashSet<String>(Arrays.asList("access_key", "bucket_name", "group_name", "input_plugin_type", "queue_url", "region", "secret_key"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ValidateAwsConnectionRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ValidateAwsConnectionRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3ValidateAwsConnectionRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3ValidateAwsConnectionRequest is not found in the empty JSON string", Connectionsv3ValidateAwsConnectionRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3ValidateAwsConnectionRequest is not found in the empty JSON string", Connectionsv3ValidateAwsConnectionRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -301,30 +302,30 @@ public class Connectionsv3ValidateAwsConnectionRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3ValidateAwsConnectionRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3ValidateAwsConnectionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3ValidateAwsConnectionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("access_key") != null && !jsonObj.get("access_key").isJsonNull()) && !jsonObj.get("access_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `access_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("access_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `access_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("access_key").toString()));
       }
       if ((jsonObj.get("bucket_name") != null && !jsonObj.get("bucket_name").isJsonNull()) && !jsonObj.get("bucket_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `bucket_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bucket_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `bucket_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bucket_name").toString()));
       }
       if ((jsonObj.get("group_name") != null && !jsonObj.get("group_name").isJsonNull()) && !jsonObj.get("group_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `group_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `group_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group_name").toString()));
       }
       if ((jsonObj.get("input_plugin_type") != null && !jsonObj.get("input_plugin_type").isJsonNull()) && !jsonObj.get("input_plugin_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `input_plugin_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("input_plugin_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `input_plugin_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("input_plugin_type").toString()));
       }
       if ((jsonObj.get("queue_url") != null && !jsonObj.get("queue_url").isJsonNull()) && !jsonObj.get("queue_url").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `queue_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("queue_url").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `queue_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("queue_url").toString()));
       }
       if ((jsonObj.get("region") != null && !jsonObj.get("region").isJsonNull()) && !jsonObj.get("region").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
       }
       if ((jsonObj.get("secret_key") != null && !jsonObj.get("secret_key").isJsonNull()) && !jsonObj.get("secret_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `secret_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `secret_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret_key").toString()));
       }
   }
 
@@ -357,22 +358,22 @@ public class Connectionsv3ValidateAwsConnectionRequest {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3ValidateAwsConnectionRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3ValidateAwsConnectionRequest
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3ValidateAwsConnectionRequest
-  */
+  /**
+   * Create an instance of Connectionsv3ValidateAwsConnectionRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3ValidateAwsConnectionRequest
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3ValidateAwsConnectionRequest
+   */
   public static Connectionsv3ValidateAwsConnectionRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3ValidateAwsConnectionRequest.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3ValidateAwsConnectionRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3ValidateAwsConnectionRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

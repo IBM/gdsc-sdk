@@ -35,6 +35,8 @@ export class ListDataStoresFilterParameter {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "storeTypesFamily",
@@ -128,7 +130,6 @@ export class ListDataStoresFilterParameter {
     public constructor() {
     }
 }
-
 
 export enum ListDataStoresFilterParameterStoreTypesFamilyEnum {
     Saas = 'SAAS',

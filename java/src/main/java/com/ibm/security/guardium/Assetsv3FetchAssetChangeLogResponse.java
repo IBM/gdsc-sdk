@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3FetchAssetChangeLogResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3FetchAssetChangeLogResponse {
   public static final String SERIALIZED_NAME_ASSET_CHANGE_LOG = "asset_change_log";
   @SerializedName(SERIALIZED_NAME_ASSET_CHANGE_LOG)
+  @javax.annotation.Nullable
   private List<Assetsv3AssetChangeLog> assetChangeLog = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "total_count";
   @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
+  @javax.annotation.Nullable
   private String totalCount;
 
   public Assetsv3FetchAssetChangeLogResponse() {
   }
 
-  public Assetsv3FetchAssetChangeLogResponse assetChangeLog(List<Assetsv3AssetChangeLog> assetChangeLog) {
+  public Assetsv3FetchAssetChangeLogResponse assetChangeLog(@javax.annotation.Nullable List<Assetsv3AssetChangeLog> assetChangeLog) {
     this.assetChangeLog = assetChangeLog;
     return this;
   }
@@ -78,35 +81,35 @@ public class Assetsv3FetchAssetChangeLogResponse {
     return this;
   }
 
-   /**
+  /**
    * Get assetChangeLog
    * @return assetChangeLog
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3AssetChangeLog> getAssetChangeLog() {
     return assetChangeLog;
   }
 
-  public void setAssetChangeLog(List<Assetsv3AssetChangeLog> assetChangeLog) {
+  public void setAssetChangeLog(@javax.annotation.Nullable List<Assetsv3AssetChangeLog> assetChangeLog) {
     this.assetChangeLog = assetChangeLog;
   }
 
 
-  public Assetsv3FetchAssetChangeLogResponse totalCount(String totalCount) {
+  public Assetsv3FetchAssetChangeLogResponse totalCount(@javax.annotation.Nullable String totalCount) {
     this.totalCount = totalCount;
     return this;
   }
 
-   /**
+  /**
    * Get totalCount
    * @return totalCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(String totalCount) {
+  public void setTotalCount(@javax.annotation.Nullable String totalCount) {
     this.totalCount = totalCount;
   }
 
@@ -157,24 +160,22 @@ public class Assetsv3FetchAssetChangeLogResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("asset_change_log");
-    openapiFields.add("total_count");
+    openapiFields = new HashSet<String>(Arrays.asList("asset_change_log", "total_count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3FetchAssetChangeLogResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3FetchAssetChangeLogResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3FetchAssetChangeLogResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3FetchAssetChangeLogResponse is not found in the empty JSON string", Assetsv3FetchAssetChangeLogResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3FetchAssetChangeLogResponse is not found in the empty JSON string", Assetsv3FetchAssetChangeLogResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Assetsv3FetchAssetChangeLogResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3FetchAssetChangeLogResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3FetchAssetChangeLogResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3FetchAssetChangeLogResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,7 +192,7 @@ public class Assetsv3FetchAssetChangeLogResponse {
         if (jsonArrayassetChangeLog != null) {
           // ensure the json data is an array
           if (!jsonObj.get("asset_change_log").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `asset_change_log` to be an array in the JSON string but got `%s`", jsonObj.get("asset_change_log").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_change_log` to be an array in the JSON string but got `%s`", jsonObj.get("asset_change_log").toString()));
           }
 
           // validate the optional field `asset_change_log` (array)
@@ -201,7 +202,7 @@ public class Assetsv3FetchAssetChangeLogResponse {
         }
       }
       if ((jsonObj.get("total_count") != null && !jsonObj.get("total_count").isJsonNull()) && !jsonObj.get("total_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `total_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `total_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_count").toString()));
       }
   }
 
@@ -234,22 +235,22 @@ public class Assetsv3FetchAssetChangeLogResponse {
     }
   }
 
- /**
-  * Create an instance of Assetsv3FetchAssetChangeLogResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3FetchAssetChangeLogResponse
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3FetchAssetChangeLogResponse
-  */
+  /**
+   * Create an instance of Assetsv3FetchAssetChangeLogResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3FetchAssetChangeLogResponse
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3FetchAssetChangeLogResponse
+   */
   public static Assetsv3FetchAssetChangeLogResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3FetchAssetChangeLogResponse.class);
   }
 
- /**
-  * Convert an instance of Assetsv3FetchAssetChangeLogResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3FetchAssetChangeLogResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

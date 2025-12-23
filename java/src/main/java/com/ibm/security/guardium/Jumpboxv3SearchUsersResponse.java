@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,51 +41,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Jumpboxv3SearchUsersResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Jumpboxv3SearchUsersResponse {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String message;
 
   public static final String SERIALIZED_NAME_USERS = "users";
   @SerializedName(SERIALIZED_NAME_USERS)
+  @javax.annotation.Nullable
   private List<Jumpboxv3DirectoryEntry> users = new ArrayList<>();
 
   public Jumpboxv3SearchUsersResponse() {
   }
 
-  public Jumpboxv3SearchUsersResponse message(String message) {
+  public Jumpboxv3SearchUsersResponse message(@javax.annotation.Nullable String message) {
     this.message = message;
     return this;
   }
 
-   /**
+  /**
    * Get message
    * @return message
-  **/
+   */
   @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setMessage(@javax.annotation.Nullable String message) {
     this.message = message;
   }
 
 
-  public Jumpboxv3SearchUsersResponse users(List<Jumpboxv3DirectoryEntry> users) {
+  public Jumpboxv3SearchUsersResponse users(@javax.annotation.Nullable List<Jumpboxv3DirectoryEntry> users) {
     this.users = users;
     return this;
   }
@@ -97,16 +100,16 @@ public class Jumpboxv3SearchUsersResponse {
     return this;
   }
 
-   /**
+  /**
    * Get users
    * @return users
-  **/
+   */
   @javax.annotation.Nullable
   public List<Jumpboxv3DirectoryEntry> getUsers() {
     return users;
   }
 
-  public void setUsers(List<Jumpboxv3DirectoryEntry> users) {
+  public void setUsers(@javax.annotation.Nullable List<Jumpboxv3DirectoryEntry> users) {
     this.users = users;
   }
 
@@ -157,24 +160,22 @@ public class Jumpboxv3SearchUsersResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("message");
-    openapiFields.add("users");
+    openapiFields = new HashSet<String>(Arrays.asList("message", "users"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3SearchUsersResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3SearchUsersResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Jumpboxv3SearchUsersResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Jumpboxv3SearchUsersResponse is not found in the empty JSON string", Jumpboxv3SearchUsersResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Jumpboxv3SearchUsersResponse is not found in the empty JSON string", Jumpboxv3SearchUsersResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,19 +183,19 @@ public class Jumpboxv3SearchUsersResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Jumpboxv3SearchUsersResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Jumpboxv3SearchUsersResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Jumpboxv3SearchUsersResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
       if (jsonObj.get("users") != null && !jsonObj.get("users").isJsonNull()) {
         JsonArray jsonArrayusers = jsonObj.getAsJsonArray("users");
         if (jsonArrayusers != null) {
           // ensure the json data is an array
           if (!jsonObj.get("users").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `users` to be an array in the JSON string but got `%s`", jsonObj.get("users").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `users` to be an array in the JSON string but got `%s`", jsonObj.get("users").toString()));
           }
 
           // validate the optional field `users` (array)
@@ -234,22 +235,22 @@ public class Jumpboxv3SearchUsersResponse {
     }
   }
 
- /**
-  * Create an instance of Jumpboxv3SearchUsersResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Jumpboxv3SearchUsersResponse
-  * @throws IOException if the JSON string is invalid with respect to Jumpboxv3SearchUsersResponse
-  */
+  /**
+   * Create an instance of Jumpboxv3SearchUsersResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Jumpboxv3SearchUsersResponse
+   * @throws IOException if the JSON string is invalid with respect to Jumpboxv3SearchUsersResponse
+   */
   public static Jumpboxv3SearchUsersResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Jumpboxv3SearchUsersResponse.class);
   }
 
- /**
-  * Convert an instance of Jumpboxv3SearchUsersResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Jumpboxv3SearchUsersResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

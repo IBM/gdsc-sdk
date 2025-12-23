@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3CreateConnectionsAccountsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3CreateConnectionsAccountsRequest {
   public static final String SERIALIZED_NAME_ACCOUNT = "account";
   @SerializedName(SERIALIZED_NAME_ACCOUNT)
+  @javax.annotation.Nullable
   private Connectionsv3Account account;
 
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "account_id";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  @javax.annotation.Nullable
   private String accountId;
 
   public Connectionsv3CreateConnectionsAccountsRequest() {
   }
 
-  public Connectionsv3CreateConnectionsAccountsRequest account(Connectionsv3Account account) {
+  public Connectionsv3CreateConnectionsAccountsRequest account(@javax.annotation.Nullable Connectionsv3Account account) {
     this.account = account;
     return this;
   }
 
-   /**
+  /**
    * Get account
    * @return account
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3Account getAccount() {
     return account;
   }
 
-  public void setAccount(Connectionsv3Account account) {
+  public void setAccount(@javax.annotation.Nullable Connectionsv3Account account) {
     this.account = account;
   }
 
 
-  public Connectionsv3CreateConnectionsAccountsRequest accountId(String accountId) {
+  public Connectionsv3CreateConnectionsAccountsRequest accountId(@javax.annotation.Nullable String accountId) {
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * Optional: account id.
    * @return accountId
-  **/
+   */
   @javax.annotation.Nullable
   public String getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(String accountId) {
+  public void setAccountId(@javax.annotation.Nullable String accountId) {
     this.accountId = accountId;
   }
 
@@ -147,24 +150,22 @@ public class Connectionsv3CreateConnectionsAccountsRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("account");
-    openapiFields.add("account_id");
+    openapiFields = new HashSet<String>(Arrays.asList("account", "account_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3CreateConnectionsAccountsRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3CreateConnectionsAccountsRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3CreateConnectionsAccountsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3CreateConnectionsAccountsRequest is not found in the empty JSON string", Connectionsv3CreateConnectionsAccountsRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3CreateConnectionsAccountsRequest is not found in the empty JSON string", Connectionsv3CreateConnectionsAccountsRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,7 +173,7 @@ public class Connectionsv3CreateConnectionsAccountsRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3CreateConnectionsAccountsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3CreateConnectionsAccountsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3CreateConnectionsAccountsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -181,7 +182,7 @@ public class Connectionsv3CreateConnectionsAccountsRequest {
         Connectionsv3Account.validateJsonElement(jsonObj.get("account"));
       }
       if ((jsonObj.get("account_id") != null && !jsonObj.get("account_id").isJsonNull()) && !jsonObj.get("account_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `account_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("account_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `account_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("account_id").toString()));
       }
   }
 
@@ -214,22 +215,22 @@ public class Connectionsv3CreateConnectionsAccountsRequest {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3CreateConnectionsAccountsRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3CreateConnectionsAccountsRequest
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3CreateConnectionsAccountsRequest
-  */
+  /**
+   * Create an instance of Connectionsv3CreateConnectionsAccountsRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3CreateConnectionsAccountsRequest
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3CreateConnectionsAccountsRequest
+   */
   public static Connectionsv3CreateConnectionsAccountsRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3CreateConnectionsAccountsRequest.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3CreateConnectionsAccountsRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3CreateConnectionsAccountsRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -28,9 +28,9 @@ class Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse(BaseModel):
     """
     GetRiskEventProcessStatusResponse is the request object for GetRiskEventProcessStatus API.
     """ # noqa: E501
-    feedback_status: Optional[Riskanalyticscontrollerv3ProcessStatus] = None
+    feedback_status: Optional[Riskanalyticscontrollerv3ProcessStatus] = Riskanalyticscontrollerv3ProcessStatus.UNDEFINED_PROCESS_STATUS_TYPE
     last_run_date: Optional[datetime] = Field(default=None, description="Last run date in format YYYY-MM-DDTHH:mm:ssZ.")
-    process_status: Optional[Riskanalyticscontrollerv3ProcessStatus] = None
+    process_status: Optional[Riskanalyticscontrollerv3ProcessStatus] = Riskanalyticscontrollerv3ProcessStatus.UNDEFINED_PROCESS_STATUS_TYPE
     __properties: ClassVar[List[str]] = ["feedback_status", "last_run_date", "process_status"]
 
     model_config = ConfigDict(
@@ -84,9 +84,9 @@ class Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "feedback_status": obj.get("feedback_status"),
+            "feedback_status": obj.get("feedback_status") if obj.get("feedback_status") is not None else Riskanalyticscontrollerv3ProcessStatus.UNDEFINED_PROCESS_STATUS_TYPE,
             "last_run_date": obj.get("last_run_date"),
-            "process_status": obj.get("process_status")
+            "process_status": obj.get("process_status") if obj.get("process_status") is not None else Riskanalyticscontrollerv3ProcessStatus.UNDEFINED_PROCESS_STATUS_TYPE
         })
         return _obj
 

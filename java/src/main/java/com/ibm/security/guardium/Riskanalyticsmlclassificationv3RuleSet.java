@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Riskanalyticsmlclassificationv3RuleSet
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsmlclassificationv3RuleSet {
   public static final String SERIALIZED_NAME_FEATURE_NAME = "feature_name";
   @SerializedName(SERIALIZED_NAME_FEATURE_NAME)
+  @javax.annotation.Nullable
   private String featureName;
 
   public static final String SERIALIZED_NAME_OPERATOR = "operator";
   @SerializedName(SERIALIZED_NAME_OPERATOR)
+  @javax.annotation.Nullable
   private String operator;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private Float value;
 
   public Riskanalyticsmlclassificationv3RuleSet() {
   }
 
-  public Riskanalyticsmlclassificationv3RuleSet featureName(String featureName) {
+  public Riskanalyticsmlclassificationv3RuleSet featureName(@javax.annotation.Nullable String featureName) {
     this.featureName = featureName;
     return this;
   }
 
-   /**
+  /**
    * Get featureName
    * @return featureName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFeatureName() {
     return featureName;
   }
 
-  public void setFeatureName(String featureName) {
+  public void setFeatureName(@javax.annotation.Nullable String featureName) {
     this.featureName = featureName;
   }
 
 
-  public Riskanalyticsmlclassificationv3RuleSet operator(String operator) {
+  public Riskanalyticsmlclassificationv3RuleSet operator(@javax.annotation.Nullable String operator) {
     this.operator = operator;
     return this;
   }
 
-   /**
+  /**
    * Get operator
    * @return operator
-  **/
+   */
   @javax.annotation.Nullable
   public String getOperator() {
     return operator;
   }
 
-  public void setOperator(String operator) {
+  public void setOperator(@javax.annotation.Nullable String operator) {
     this.operator = operator;
   }
 
 
-  public Riskanalyticsmlclassificationv3RuleSet value(Float value) {
+  public Riskanalyticsmlclassificationv3RuleSet value(@javax.annotation.Nullable Float value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * Get value
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public Float getValue() {
     return value;
   }
 
-  public void setValue(Float value) {
+  public void setValue(@javax.annotation.Nullable Float value) {
     this.value = value;
   }
 
@@ -171,25 +175,22 @@ public class Riskanalyticsmlclassificationv3RuleSet {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("feature_name");
-    openapiFields.add("operator");
-    openapiFields.add("value");
+    openapiFields = new HashSet<String>(Arrays.asList("feature_name", "operator", "value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsmlclassificationv3RuleSet
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsmlclassificationv3RuleSet
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsmlclassificationv3RuleSet.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsmlclassificationv3RuleSet is not found in the empty JSON string", Riskanalyticsmlclassificationv3RuleSet.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsmlclassificationv3RuleSet is not found in the empty JSON string", Riskanalyticsmlclassificationv3RuleSet.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,15 +198,15 @@ public class Riskanalyticsmlclassificationv3RuleSet {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsmlclassificationv3RuleSet.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsmlclassificationv3RuleSet` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsmlclassificationv3RuleSet` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("feature_name") != null && !jsonObj.get("feature_name").isJsonNull()) && !jsonObj.get("feature_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `feature_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("feature_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `feature_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("feature_name").toString()));
       }
       if ((jsonObj.get("operator") != null && !jsonObj.get("operator").isJsonNull()) && !jsonObj.get("operator").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `operator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("operator").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `operator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("operator").toString()));
       }
   }
 
@@ -238,22 +239,22 @@ public class Riskanalyticsmlclassificationv3RuleSet {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsmlclassificationv3RuleSet given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsmlclassificationv3RuleSet
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsmlclassificationv3RuleSet
-  */
+  /**
+   * Create an instance of Riskanalyticsmlclassificationv3RuleSet given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsmlclassificationv3RuleSet
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsmlclassificationv3RuleSet
+   */
   public static Riskanalyticsmlclassificationv3RuleSet fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsmlclassificationv3RuleSet.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsmlclassificationv3RuleSet to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsmlclassificationv3RuleSet to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

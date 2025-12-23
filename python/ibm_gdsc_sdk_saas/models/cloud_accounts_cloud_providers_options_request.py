@@ -74,9 +74,9 @@ class CloudAccountsCloudProvidersOptionsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in cloud_accounts (list)
         _items = []
         if self.cloud_accounts:
-            for _item in self.cloud_accounts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cloud_accounts in self.cloud_accounts:
+                if _item_cloud_accounts:
+                    _items.append(_item_cloud_accounts.to_dict())
             _dict['cloudAccounts'] = _items
         return _dict
 

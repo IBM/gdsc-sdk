@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,226 +40,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3Artifact
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3Artifact {
   public static final String SERIALIZED_NAME_ARTIFACT_ID = "artifact_id";
   @SerializedName(SERIALIZED_NAME_ARTIFACT_ID)
+  @javax.annotation.Nullable
   private String artifactId;
 
   public static final String SERIALIZED_NAME_CREATE_USER_ID = "create_user_id";
   @SerializedName(SERIALIZED_NAME_CREATE_USER_ID)
+  @javax.annotation.Nullable
   private String createUserId;
 
   public static final String SERIALIZED_NAME_CREATE_USER_NAME = "create_user_name";
   @SerializedName(SERIALIZED_NAME_CREATE_USER_NAME)
+  @javax.annotation.Nullable
   private String createUserName;
 
   public static final String SERIALIZED_NAME_DATE_CREATED = "date_created";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  @javax.annotation.Nullable
   private OffsetDateTime dateCreated;
 
   public static final String SERIALIZED_NAME_DATE_UPDATED = "date_updated";
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  @javax.annotation.Nullable
   private OffsetDateTime dateUpdated;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3ArtifactType type = Reportsv3ArtifactType.ARTIFACT_UNKNOWN;
 
   public static final String SERIALIZED_NAME_UPDATE_USER_ID = "update_user_id";
   @SerializedName(SERIALIZED_NAME_UPDATE_USER_ID)
+  @javax.annotation.Nullable
   private String updateUserId;
 
   public static final String SERIALIZED_NAME_UPDATE_USER_NAME = "update_user_name";
   @SerializedName(SERIALIZED_NAME_UPDATE_USER_NAME)
+  @javax.annotation.Nullable
   private String updateUserName;
 
   public Reportsv3Artifact() {
   }
 
-  public Reportsv3Artifact artifactId(String artifactId) {
+  public Reportsv3Artifact artifactId(@javax.annotation.Nullable String artifactId) {
     this.artifactId = artifactId;
     return this;
   }
 
-   /**
+  /**
    * Get artifactId
    * @return artifactId
-  **/
+   */
   @javax.annotation.Nullable
   public String getArtifactId() {
     return artifactId;
   }
 
-  public void setArtifactId(String artifactId) {
+  public void setArtifactId(@javax.annotation.Nullable String artifactId) {
     this.artifactId = artifactId;
   }
 
 
-  public Reportsv3Artifact createUserId(String createUserId) {
+  public Reportsv3Artifact createUserId(@javax.annotation.Nullable String createUserId) {
     this.createUserId = createUserId;
     return this;
   }
 
-   /**
+  /**
    * Get createUserId
    * @return createUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreateUserId() {
     return createUserId;
   }
 
-  public void setCreateUserId(String createUserId) {
+  public void setCreateUserId(@javax.annotation.Nullable String createUserId) {
     this.createUserId = createUserId;
   }
 
 
-  public Reportsv3Artifact createUserName(String createUserName) {
+  public Reportsv3Artifact createUserName(@javax.annotation.Nullable String createUserName) {
     this.createUserName = createUserName;
     return this;
   }
 
-   /**
+  /**
    * Get createUserName
    * @return createUserName
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreateUserName() {
     return createUserName;
   }
 
-  public void setCreateUserName(String createUserName) {
+  public void setCreateUserName(@javax.annotation.Nullable String createUserName) {
     this.createUserName = createUserName;
   }
 
 
-  public Reportsv3Artifact dateCreated(OffsetDateTime dateCreated) {
+  public Reportsv3Artifact dateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
     return this;
   }
 
-   /**
+  /**
    * Get dateCreated
    * @return dateCreated
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
-  public void setDateCreated(OffsetDateTime dateCreated) {
+  public void setDateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
-  public Reportsv3Artifact dateUpdated(OffsetDateTime dateUpdated) {
+  public Reportsv3Artifact dateUpdated(@javax.annotation.Nullable OffsetDateTime dateUpdated) {
     this.dateUpdated = dateUpdated;
     return this;
   }
 
-   /**
+  /**
    * Get dateUpdated
    * @return dateUpdated
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateUpdated() {
     return dateUpdated;
   }
 
-  public void setDateUpdated(OffsetDateTime dateUpdated) {
+  public void setDateUpdated(@javax.annotation.Nullable OffsetDateTime dateUpdated) {
     this.dateUpdated = dateUpdated;
   }
 
 
-  public Reportsv3Artifact description(String description) {
+  public Reportsv3Artifact description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Get description
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Reportsv3Artifact type(Reportsv3ArtifactType type) {
+  public Reportsv3Artifact type(@javax.annotation.Nullable Reportsv3ArtifactType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ArtifactType getType() {
     return type;
   }
 
-  public void setType(Reportsv3ArtifactType type) {
+  public void setType(@javax.annotation.Nullable Reportsv3ArtifactType type) {
     this.type = type;
   }
 
 
-  public Reportsv3Artifact updateUserId(String updateUserId) {
+  public Reportsv3Artifact updateUserId(@javax.annotation.Nullable String updateUserId) {
     this.updateUserId = updateUserId;
     return this;
   }
 
-   /**
+  /**
    * Get updateUserId
    * @return updateUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getUpdateUserId() {
     return updateUserId;
   }
 
-  public void setUpdateUserId(String updateUserId) {
+  public void setUpdateUserId(@javax.annotation.Nullable String updateUserId) {
     this.updateUserId = updateUserId;
   }
 
 
-  public Reportsv3Artifact updateUserName(String updateUserName) {
+  public Reportsv3Artifact updateUserName(@javax.annotation.Nullable String updateUserName) {
     this.updateUserName = updateUserName;
     return this;
   }
 
-   /**
+  /**
    * Get updateUserName
    * @return updateUserName
-  **/
+   */
   @javax.annotation.Nullable
   public String getUpdateUserName() {
     return updateUserName;
   }
 
-  public void setUpdateUserName(String updateUserName) {
+  public void setUpdateUserName(@javax.annotation.Nullable String updateUserName) {
     this.updateUserName = updateUserName;
   }
 
@@ -323,31 +333,22 @@ public class Reportsv3Artifact {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("artifact_id");
-    openapiFields.add("create_user_id");
-    openapiFields.add("create_user_name");
-    openapiFields.add("date_created");
-    openapiFields.add("date_updated");
-    openapiFields.add("description");
-    openapiFields.add("type");
-    openapiFields.add("update_user_id");
-    openapiFields.add("update_user_name");
+    openapiFields = new HashSet<String>(Arrays.asList("artifact_id", "create_user_id", "create_user_name", "date_created", "date_updated", "description", "type", "update_user_id", "update_user_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3Artifact
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3Artifact
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3Artifact.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3Artifact is not found in the empty JSON string", Reportsv3Artifact.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3Artifact is not found in the empty JSON string", Reportsv3Artifact.openapiRequiredFields.toString()));
         }
       }
 
@@ -355,31 +356,31 @@ public class Reportsv3Artifact {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3Artifact.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3Artifact` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3Artifact` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("artifact_id") != null && !jsonObj.get("artifact_id").isJsonNull()) && !jsonObj.get("artifact_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `artifact_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("artifact_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `artifact_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("artifact_id").toString()));
       }
       if ((jsonObj.get("create_user_id") != null && !jsonObj.get("create_user_id").isJsonNull()) && !jsonObj.get("create_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `create_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `create_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_id").toString()));
       }
       if ((jsonObj.get("create_user_name") != null && !jsonObj.get("create_user_name").isJsonNull()) && !jsonObj.get("create_user_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `create_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `create_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_name").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       // validate the optional field `type`
       if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
         Reportsv3ArtifactType.validateJsonElement(jsonObj.get("type"));
       }
       if ((jsonObj.get("update_user_id") != null && !jsonObj.get("update_user_id").isJsonNull()) && !jsonObj.get("update_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `update_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `update_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_id").toString()));
       }
       if ((jsonObj.get("update_user_name") != null && !jsonObj.get("update_user_name").isJsonNull()) && !jsonObj.get("update_user_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `update_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `update_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_name").toString()));
       }
   }
 
@@ -412,22 +413,22 @@ public class Reportsv3Artifact {
     }
   }
 
- /**
-  * Create an instance of Reportsv3Artifact given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3Artifact
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3Artifact
-  */
+  /**
+   * Create an instance of Reportsv3Artifact given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3Artifact
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3Artifact
+   */
   public static Reportsv3Artifact fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3Artifact.class);
   }
 
- /**
-  * Convert an instance of Reportsv3Artifact to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3Artifact to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

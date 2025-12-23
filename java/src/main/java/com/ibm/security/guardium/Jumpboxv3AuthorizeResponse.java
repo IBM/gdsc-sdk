@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Jumpboxv3AuthorizeResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Jumpboxv3AuthorizeResponse {
   public static final String SERIALIZED_NAME_CC_JWT = "cc_jwt";
   @SerializedName(SERIALIZED_NAME_CC_JWT)
+  @javax.annotation.Nullable
   private String ccJwt;
 
   public static final String SERIALIZED_NAME_JWT = "jwt";
   @SerializedName(SERIALIZED_NAME_JWT)
+  @javax.annotation.Nullable
   private String jwt;
 
   public Jumpboxv3AuthorizeResponse() {
   }
 
-  public Jumpboxv3AuthorizeResponse ccJwt(String ccJwt) {
+  public Jumpboxv3AuthorizeResponse ccJwt(@javax.annotation.Nullable String ccJwt) {
     this.ccJwt = ccJwt;
     return this;
   }
 
-   /**
+  /**
    * Get ccJwt
    * @return ccJwt
-  **/
+   */
   @javax.annotation.Nullable
   public String getCcJwt() {
     return ccJwt;
   }
 
-  public void setCcJwt(String ccJwt) {
+  public void setCcJwt(@javax.annotation.Nullable String ccJwt) {
     this.ccJwt = ccJwt;
   }
 
 
-  public Jumpboxv3AuthorizeResponse jwt(String jwt) {
+  public Jumpboxv3AuthorizeResponse jwt(@javax.annotation.Nullable String jwt) {
     this.jwt = jwt;
     return this;
   }
 
-   /**
+  /**
    * Get jwt
    * @return jwt
-  **/
+   */
   @javax.annotation.Nullable
   public String getJwt() {
     return jwt;
   }
 
-  public void setJwt(String jwt) {
+  public void setJwt(@javax.annotation.Nullable String jwt) {
     this.jwt = jwt;
   }
 
@@ -146,24 +149,22 @@ public class Jumpboxv3AuthorizeResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cc_jwt");
-    openapiFields.add("jwt");
+    openapiFields = new HashSet<String>(Arrays.asList("cc_jwt", "jwt"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3AuthorizeResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3AuthorizeResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Jumpboxv3AuthorizeResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Jumpboxv3AuthorizeResponse is not found in the empty JSON string", Jumpboxv3AuthorizeResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Jumpboxv3AuthorizeResponse is not found in the empty JSON string", Jumpboxv3AuthorizeResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Jumpboxv3AuthorizeResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Jumpboxv3AuthorizeResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Jumpboxv3AuthorizeResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Jumpboxv3AuthorizeResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("cc_jwt") != null && !jsonObj.get("cc_jwt").isJsonNull()) && !jsonObj.get("cc_jwt").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cc_jwt` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cc_jwt").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cc_jwt` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cc_jwt").toString()));
       }
       if ((jsonObj.get("jwt") != null && !jsonObj.get("jwt").isJsonNull()) && !jsonObj.get("jwt").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `jwt` to be a primitive type in the JSON string but got `%s`", jsonObj.get("jwt").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `jwt` to be a primitive type in the JSON string but got `%s`", jsonObj.get("jwt").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Jumpboxv3AuthorizeResponse {
     }
   }
 
- /**
-  * Create an instance of Jumpboxv3AuthorizeResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Jumpboxv3AuthorizeResponse
-  * @throws IOException if the JSON string is invalid with respect to Jumpboxv3AuthorizeResponse
-  */
+  /**
+   * Create an instance of Jumpboxv3AuthorizeResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Jumpboxv3AuthorizeResponse
+   * @throws IOException if the JSON string is invalid with respect to Jumpboxv3AuthorizeResponse
+   */
   public static Jumpboxv3AuthorizeResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Jumpboxv3AuthorizeResponse.class);
   }
 
- /**
-  * Convert an instance of Jumpboxv3AuthorizeResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Jumpboxv3AuthorizeResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

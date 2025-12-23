@@ -7,7 +7,7 @@ Message format for rule parameters.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **parameter_name** | **str** | Parameter Name. | [optional] 
-**parameter_operator** | [**Policybuilderv3ParameterOperator**](Policybuilderv3ParameterOperator.md) |  | [optional] 
+**parameter_operator** | [**Policybuilderv3ParameterOperator**](Policybuilderv3ParameterOperator.md) |  | [optional] [default to Policybuilderv3ParameterOperator.UNKNOWN_OPERATOR]
 **parameter_type** | **str** | Type of the parameter. | [optional] 
 **parameter_value** | **str** | The operator of the parameter. | [optional] 
 **parameter_value_label** | **str** | Label of the value if the original value is some id referencing to external entity. | [optional] 

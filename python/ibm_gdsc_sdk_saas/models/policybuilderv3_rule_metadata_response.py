@@ -77,16 +77,16 @@ class Policybuilderv3RuleMetadataResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in action_metadata (list)
         _items = []
         if self.action_metadata:
-            for _item in self.action_metadata:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_action_metadata in self.action_metadata:
+                if _item_action_metadata:
+                    _items.append(_item_action_metadata.to_dict())
             _dict['action_metadata'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in parameter_metadata (list)
         _items = []
         if self.parameter_metadata:
-            for _item in self.parameter_metadata:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_parameter_metadata in self.parameter_metadata:
+                if _item_parameter_metadata:
+                    _items.append(_item_parameter_metadata.to_dict())
             _dict['parameter_metadata'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

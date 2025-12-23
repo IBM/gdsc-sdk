@@ -31,7 +31,7 @@ class Ecosystemv3ColumnDefinition(BaseModel):
     column_id: Optional[StrictInt] = Field(default=None, description="The id of the column.")
     column_name: Optional[StrictStr] = Field(default=None, description="The name of the column.")
     column_size: Optional[StrictStr] = Field(default=None, description="Data size of the column.")
-    column_type: Optional[Ecosystemv3DataType] = None
+    column_type: Optional[Ecosystemv3DataType] = Ecosystemv3DataType.UNDEFINED_DATA_TYPE
     unique: Optional[StrictBool] = Field(default=None, description="If the column is unique.")
     __properties: ClassVar[List[str]] = ["allow_null", "column_id", "column_name", "column_size", "column_type", "unique"]
 
@@ -90,7 +90,7 @@ class Ecosystemv3ColumnDefinition(BaseModel):
             "column_id": obj.get("column_id"),
             "column_name": obj.get("column_name"),
             "column_size": obj.get("column_size"),
-            "column_type": obj.get("column_type"),
+            "column_type": obj.get("column_type") if obj.get("column_type") is not None else Ecosystemv3DataType.UNDEFINED_DATA_TYPE,
             "unique": obj.get("unique")
         })
         return _obj

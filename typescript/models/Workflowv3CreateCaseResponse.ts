@@ -25,6 +25,8 @@ export class Workflowv3CreateCaseResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "created",
@@ -46,4 +48,3 @@ export class Workflowv3CreateCaseResponse {
     public constructor() {
     }
 }
-

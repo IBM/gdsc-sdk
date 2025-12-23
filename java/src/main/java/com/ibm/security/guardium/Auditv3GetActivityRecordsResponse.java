@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,36 +42,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetActivityResponse returns the requested activity log records.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Auditv3GetActivityRecordsResponse {
   public static final String SERIALIZED_NAME_FILTERS = "filters";
   @SerializedName(SERIALIZED_NAME_FILTERS)
+  @javax.annotation.Nullable
   private List<Auditv3FilterField> filters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RECORDS = "records";
   @SerializedName(SERIALIZED_NAME_RECORDS)
+  @javax.annotation.Nullable
   private List<Auditv3ActivityRecord> records = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TOTAL_RECORDS = "total_records";
   @SerializedName(SERIALIZED_NAME_TOTAL_RECORDS)
+  @javax.annotation.Nullable
   private String totalRecords;
 
   public Auditv3GetActivityRecordsResponse() {
   }
 
-  public Auditv3GetActivityRecordsResponse filters(List<Auditv3FilterField> filters) {
+  public Auditv3GetActivityRecordsResponse filters(@javax.annotation.Nullable List<Auditv3FilterField> filters) {
     this.filters = filters;
     return this;
   }
@@ -83,21 +87,21 @@ public class Auditv3GetActivityRecordsResponse {
     return this;
   }
 
-   /**
+  /**
    * All of the eligible filters based on the passed in parameters.
    * @return filters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Auditv3FilterField> getFilters() {
     return filters;
   }
 
-  public void setFilters(List<Auditv3FilterField> filters) {
+  public void setFilters(@javax.annotation.Nullable List<Auditv3FilterField> filters) {
     this.filters = filters;
   }
 
 
-  public Auditv3GetActivityRecordsResponse records(List<Auditv3ActivityRecord> records) {
+  public Auditv3GetActivityRecordsResponse records(@javax.annotation.Nullable List<Auditv3ActivityRecord> records) {
     this.records = records;
     return this;
   }
@@ -110,35 +114,35 @@ public class Auditv3GetActivityRecordsResponse {
     return this;
   }
 
-   /**
+  /**
    * All of the activity log records based on the passed in parameters.
    * @return records
-  **/
+   */
   @javax.annotation.Nullable
   public List<Auditv3ActivityRecord> getRecords() {
     return records;
   }
 
-  public void setRecords(List<Auditv3ActivityRecord> records) {
+  public void setRecords(@javax.annotation.Nullable List<Auditv3ActivityRecord> records) {
     this.records = records;
   }
 
 
-  public Auditv3GetActivityRecordsResponse totalRecords(String totalRecords) {
+  public Auditv3GetActivityRecordsResponse totalRecords(@javax.annotation.Nullable String totalRecords) {
     this.totalRecords = totalRecords;
     return this;
   }
 
-   /**
+  /**
    * Total number of Activity records.
    * @return totalRecords
-  **/
+   */
   @javax.annotation.Nullable
   public String getTotalRecords() {
     return totalRecords;
   }
 
-  public void setTotalRecords(String totalRecords) {
+  public void setTotalRecords(@javax.annotation.Nullable String totalRecords) {
     this.totalRecords = totalRecords;
   }
 
@@ -191,25 +195,22 @@ public class Auditv3GetActivityRecordsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("filters");
-    openapiFields.add("records");
-    openapiFields.add("total_records");
+    openapiFields = new HashSet<String>(Arrays.asList("filters", "records", "total_records"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Auditv3GetActivityRecordsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Auditv3GetActivityRecordsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Auditv3GetActivityRecordsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Auditv3GetActivityRecordsResponse is not found in the empty JSON string", Auditv3GetActivityRecordsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Auditv3GetActivityRecordsResponse is not found in the empty JSON string", Auditv3GetActivityRecordsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -217,7 +218,7 @@ public class Auditv3GetActivityRecordsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Auditv3GetActivityRecordsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Auditv3GetActivityRecordsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Auditv3GetActivityRecordsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -226,7 +227,7 @@ public class Auditv3GetActivityRecordsResponse {
         if (jsonArrayfilters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("filters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
           }
 
           // validate the optional field `filters` (array)
@@ -240,7 +241,7 @@ public class Auditv3GetActivityRecordsResponse {
         if (jsonArrayrecords != null) {
           // ensure the json data is an array
           if (!jsonObj.get("records").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `records` to be an array in the JSON string but got `%s`", jsonObj.get("records").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `records` to be an array in the JSON string but got `%s`", jsonObj.get("records").toString()));
           }
 
           // validate the optional field `records` (array)
@@ -250,7 +251,7 @@ public class Auditv3GetActivityRecordsResponse {
         }
       }
       if ((jsonObj.get("total_records") != null && !jsonObj.get("total_records").isJsonNull()) && !jsonObj.get("total_records").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `total_records` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_records").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `total_records` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_records").toString()));
       }
   }
 
@@ -283,22 +284,22 @@ public class Auditv3GetActivityRecordsResponse {
     }
   }
 
- /**
-  * Create an instance of Auditv3GetActivityRecordsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Auditv3GetActivityRecordsResponse
-  * @throws IOException if the JSON string is invalid with respect to Auditv3GetActivityRecordsResponse
-  */
+  /**
+   * Create an instance of Auditv3GetActivityRecordsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Auditv3GetActivityRecordsResponse
+   * @throws IOException if the JSON string is invalid with respect to Auditv3GetActivityRecordsResponse
+   */
   public static Auditv3GetActivityRecordsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Auditv3GetActivityRecordsResponse.class);
   }
 
- /**
-  * Convert an instance of Auditv3GetActivityRecordsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Auditv3GetActivityRecordsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -84,16 +84,16 @@ class Complianceacceleratorv3Options(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in parent_groups (dict)
         _field_dict = {}
         if self.parent_groups:
-            for _key in self.parent_groups:
-                if self.parent_groups[_key]:
-                    _field_dict[_key] = self.parent_groups[_key].to_dict()
+            for _key_parent_groups in self.parent_groups:
+                if self.parent_groups[_key_parent_groups]:
+                    _field_dict[_key_parent_groups] = self.parent_groups[_key_parent_groups].to_dict()
             _dict['parent_groups'] = _field_dict
         # override the default output from pydantic by calling `to_dict()` of each value in rules (dict)
         _field_dict = {}
         if self.rules:
-            for _key in self.rules:
-                if self.rules[_key]:
-                    _field_dict[_key] = self.rules[_key].to_dict()
+            for _key_rules in self.rules:
+                if self.rules[_key_rules]:
+                    _field_dict[_key_rules] = self.rules[_key_rules].to_dict()
             _dict['rules'] = _field_dict
         # override the default output from pydantic by calling `to_dict()` of syslog_config
         if self.syslog_config:
@@ -125,7 +125,7 @@ class Complianceacceleratorv3Options(BaseModel):
             if obj.get("rules") is not None
             else None,
             "syslog_config": Complianceacceleratorv3SyslogConfig.from_dict(obj["syslog_config"]) if obj.get("syslog_config") is not None else None,
-            "tasks": dict((_k, _v) for _k, _v in obj.get("tasks").items())
+            "tasks": dict((_k, _v) for _k, _v in obj.get("tasks").items()) if obj.get("tasks") is not None else None
         })
         return _obj
 

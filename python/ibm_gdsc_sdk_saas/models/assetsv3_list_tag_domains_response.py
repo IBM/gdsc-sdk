@@ -72,9 +72,9 @@ class Assetsv3ListTagDomainsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in categories (list)
         _items = []
         if self.categories:
-            for _item in self.categories:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_categories in self.categories:
+                if _item_categories:
+                    _items.append(_item_categories.to_dict())
             _dict['categories'] = _items
         return _dict
 

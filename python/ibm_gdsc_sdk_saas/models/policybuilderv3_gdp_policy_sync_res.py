@@ -34,10 +34,10 @@ class Policybuilderv3GdpPolicySyncRes(BaseModel):
     gdp_synced_id: Optional[StrictStr] = Field(default=None, description="Sync id of the created or updated sync policy.")
     import_name: Optional[StrictStr] = Field(default=None, description="Name for imported GDP policy.")
     last_state_change: Optional[StrictStr] = None
-    policy_import_issue: Optional[Policybuilderv3ImportIssue] = None
-    policy_import_state: Optional[Policybuilderv3ImportState] = None
+    policy_import_issue: Optional[Policybuilderv3ImportIssue] = Policybuilderv3ImportIssue.NO_IMPORT_ISSUE
+    policy_import_state: Optional[Policybuilderv3ImportState] = Policybuilderv3ImportState.NO_IMPORT_STATUS
     policy_name: Optional[StrictStr] = Field(default=None, description="Policy Name for the created or updated sync policy.")
-    sync_status: Optional[Policybuilderv3SyncStatusType] = None
+    sync_status: Optional[Policybuilderv3SyncStatusType] = Policybuilderv3SyncStatusType.NO_SYNC_STATUS
     __properties: ClassVar[List[str]] = ["central_manager", "created_policy_id", "gdp_synced_id", "import_name", "last_state_change", "policy_import_issue", "policy_import_state", "policy_name", "sync_status"]
 
     model_config = ConfigDict(
@@ -96,10 +96,10 @@ class Policybuilderv3GdpPolicySyncRes(BaseModel):
             "gdp_synced_id": obj.get("gdp_synced_id"),
             "import_name": obj.get("import_name"),
             "last_state_change": obj.get("last_state_change"),
-            "policy_import_issue": obj.get("policy_import_issue"),
-            "policy_import_state": obj.get("policy_import_state"),
+            "policy_import_issue": obj.get("policy_import_issue") if obj.get("policy_import_issue") is not None else Policybuilderv3ImportIssue.NO_IMPORT_ISSUE,
+            "policy_import_state": obj.get("policy_import_state") if obj.get("policy_import_state") is not None else Policybuilderv3ImportState.NO_IMPORT_STATUS,
             "policy_name": obj.get("policy_name"),
-            "sync_status": obj.get("sync_status")
+            "sync_status": obj.get("sync_status") if obj.get("sync_status") is not None else Policybuilderv3SyncStatusType.NO_SYNC_STATUS
         })
         return _obj
 

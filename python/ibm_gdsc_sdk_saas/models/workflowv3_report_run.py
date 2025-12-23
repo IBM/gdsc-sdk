@@ -42,7 +42,7 @@ class Workflowv3ReportRun(BaseModel):
     scheduled_job_id: Optional[StrictStr] = Field(default=None, description="The ScheduledJob identifier.")
     scheduled_job_name: Optional[StrictStr] = Field(default=None, description="The ScheduledJob name identifier.")
     scheduled_task_id: Optional[StrictStr] = Field(default=None, description="The task within the ScheduledJob.")
-    scheduled_task_type: Optional[Schedulerv3TaskType] = None
+    scheduled_task_type: Optional[Schedulerv3TaskType] = Schedulerv3TaskType.UNDEFINED_JOBTYPE
     status: Optional[StrictInt] = Field(default=None, description="Job status.")
     __properties: ClassVar[List[str]] = ["date_end", "date_start", "detail", "query_from", "query_to", "report_filters", "report_id", "report_name", "report_result_file_name", "run_id", "scheduled_job_id", "scheduled_job_name", "scheduled_task_id", "scheduled_task_type", "status"]
 
@@ -113,7 +113,7 @@ class Workflowv3ReportRun(BaseModel):
             "scheduled_job_id": obj.get("scheduled_job_id"),
             "scheduled_job_name": obj.get("scheduled_job_name"),
             "scheduled_task_id": obj.get("scheduled_task_id"),
-            "scheduled_task_type": obj.get("scheduled_task_type"),
+            "scheduled_task_type": obj.get("scheduled_task_type") if obj.get("scheduled_task_type") is not None else Schedulerv3TaskType.UNDEFINED_JOBTYPE,
             "status": obj.get("status")
         })
         return _obj

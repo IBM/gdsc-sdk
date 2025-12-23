@@ -72,9 +72,9 @@ class Dashboardsv3GetDashboardsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in dashboards_list (list)
         _items = []
         if self.dashboards_list:
-            for _item in self.dashboards_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_dashboards_list in self.dashboards_list:
+                if _item_dashboards_list:
+                    _items.append(_item_dashboards_list.to_dict())
             _dict['dashboards_list'] = _items
         return _dict
 

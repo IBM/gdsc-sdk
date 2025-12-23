@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Riskanalyticsdataprocessorv3Question
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsdataprocessorv3Question {
   public static final String SERIALIZED_NAME_QUESTION = "question";
   @SerializedName(SERIALIZED_NAME_QUESTION)
+  @javax.annotation.Nullable
   private String question;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public static final String SERIALIZED_NAME_VALUE_TO_ANALYST = "value_to_analyst";
   @SerializedName(SERIALIZED_NAME_VALUE_TO_ANALYST)
+  @javax.annotation.Nullable
   private Integer valueToAnalyst;
 
   public Riskanalyticsdataprocessorv3Question() {
   }
 
-  public Riskanalyticsdataprocessorv3Question question(String question) {
+  public Riskanalyticsdataprocessorv3Question question(@javax.annotation.Nullable String question) {
     this.question = question;
     return this;
   }
 
-   /**
+  /**
    * Get question
    * @return question
-  **/
+   */
   @javax.annotation.Nullable
   public String getQuestion() {
     return question;
   }
 
-  public void setQuestion(String question) {
+  public void setQuestion(@javax.annotation.Nullable String question) {
     this.question = question;
   }
 
 
-  public Riskanalyticsdataprocessorv3Question type(String type) {
+  public Riskanalyticsdataprocessorv3Question type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
 
-  public Riskanalyticsdataprocessorv3Question valueToAnalyst(Integer valueToAnalyst) {
+  public Riskanalyticsdataprocessorv3Question valueToAnalyst(@javax.annotation.Nullable Integer valueToAnalyst) {
     this.valueToAnalyst = valueToAnalyst;
     return this;
   }
 
-   /**
+  /**
    * Get valueToAnalyst
    * @return valueToAnalyst
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getValueToAnalyst() {
     return valueToAnalyst;
   }
 
-  public void setValueToAnalyst(Integer valueToAnalyst) {
+  public void setValueToAnalyst(@javax.annotation.Nullable Integer valueToAnalyst) {
     this.valueToAnalyst = valueToAnalyst;
   }
 
@@ -171,25 +175,22 @@ public class Riskanalyticsdataprocessorv3Question {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("question");
-    openapiFields.add("type");
-    openapiFields.add("value_to_analyst");
+    openapiFields = new HashSet<String>(Arrays.asList("question", "type", "value_to_analyst"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsdataprocessorv3Question
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsdataprocessorv3Question
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsdataprocessorv3Question.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsdataprocessorv3Question is not found in the empty JSON string", Riskanalyticsdataprocessorv3Question.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsdataprocessorv3Question is not found in the empty JSON string", Riskanalyticsdataprocessorv3Question.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,15 +198,15 @@ public class Riskanalyticsdataprocessorv3Question {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsdataprocessorv3Question.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsdataprocessorv3Question` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsdataprocessorv3Question` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("question") != null && !jsonObj.get("question").isJsonNull()) && !jsonObj.get("question").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `question` to be a primitive type in the JSON string but got `%s`", jsonObj.get("question").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `question` to be a primitive type in the JSON string but got `%s`", jsonObj.get("question").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }
 
@@ -238,22 +239,22 @@ public class Riskanalyticsdataprocessorv3Question {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsdataprocessorv3Question given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsdataprocessorv3Question
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsdataprocessorv3Question
-  */
+  /**
+   * Create an instance of Riskanalyticsdataprocessorv3Question given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsdataprocessorv3Question
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsdataprocessorv3Question
+   */
   public static Riskanalyticsdataprocessorv3Question fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsdataprocessorv3Question.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsdataprocessorv3Question to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsdataprocessorv3Question to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

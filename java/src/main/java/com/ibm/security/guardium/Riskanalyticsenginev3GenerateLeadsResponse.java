@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,78 +43,82 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GenerateLeadsResponse is the response object for GenerateLeads API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsenginev3GenerateLeadsResponse {
   public static final String SERIALIZED_NAME_END_TIME = "end_time";
   @SerializedName(SERIALIZED_NAME_END_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime endTime;
 
   public static final String SERIALIZED_NAME_PIVOT_TYPE = "pivot_type";
   @SerializedName(SERIALIZED_NAME_PIVOT_TYPE)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3PivotType pivotType = Riskanalyticsenginev3PivotType.UNDEFINED_PIVOT_TYPE;
 
   public static final String SERIALIZED_NAME_RISKS = "risks";
   @SerializedName(SERIALIZED_NAME_RISKS)
+  @javax.annotation.Nullable
   private List<Riskanalyticsenginev3Risk> risks = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime startTime;
 
   public Riskanalyticsenginev3GenerateLeadsResponse() {
   }
 
-  public Riskanalyticsenginev3GenerateLeadsResponse endTime(OffsetDateTime endTime) {
+  public Riskanalyticsenginev3GenerateLeadsResponse endTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
     return this;
   }
 
-   /**
+  /**
    * The end time of the risks in format YYYY-MM-ddTHH:mm:ssZ.
    * @return endTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getEndTime() {
     return endTime;
   }
 
-  public void setEndTime(OffsetDateTime endTime) {
+  public void setEndTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
   }
 
 
-  public Riskanalyticsenginev3GenerateLeadsResponse pivotType(Riskanalyticsenginev3PivotType pivotType) {
+  public Riskanalyticsenginev3GenerateLeadsResponse pivotType(@javax.annotation.Nullable Riskanalyticsenginev3PivotType pivotType) {
     this.pivotType = pivotType;
     return this;
   }
 
-   /**
+  /**
    * Get pivotType
    * @return pivotType
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3PivotType getPivotType() {
     return pivotType;
   }
 
-  public void setPivotType(Riskanalyticsenginev3PivotType pivotType) {
+  public void setPivotType(@javax.annotation.Nullable Riskanalyticsenginev3PivotType pivotType) {
     this.pivotType = pivotType;
   }
 
 
-  public Riskanalyticsenginev3GenerateLeadsResponse risks(List<Riskanalyticsenginev3Risk> risks) {
+  public Riskanalyticsenginev3GenerateLeadsResponse risks(@javax.annotation.Nullable List<Riskanalyticsenginev3Risk> risks) {
     this.risks = risks;
     return this;
   }
@@ -126,35 +131,35 @@ public class Riskanalyticsenginev3GenerateLeadsResponse {
     return this;
   }
 
-   /**
+  /**
    * Returns an array with risks with pivot and leads.
    * @return risks
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsenginev3Risk> getRisks() {
     return risks;
   }
 
-  public void setRisks(List<Riskanalyticsenginev3Risk> risks) {
+  public void setRisks(@javax.annotation.Nullable List<Riskanalyticsenginev3Risk> risks) {
     this.risks = risks;
   }
 
 
-  public Riskanalyticsenginev3GenerateLeadsResponse startTime(OffsetDateTime startTime) {
+  public Riskanalyticsenginev3GenerateLeadsResponse startTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
     return this;
   }
 
-   /**
+  /**
    * The start time of the risks in format YYYY-MM-ddTHH:mm:ssZ.
    * @return startTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getStartTime() {
     return startTime;
   }
 
-  public void setStartTime(OffsetDateTime startTime) {
+  public void setStartTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
   }
 
@@ -209,26 +214,22 @@ public class Riskanalyticsenginev3GenerateLeadsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("end_time");
-    openapiFields.add("pivot_type");
-    openapiFields.add("risks");
-    openapiFields.add("start_time");
+    openapiFields = new HashSet<String>(Arrays.asList("end_time", "pivot_type", "risks", "start_time"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3GenerateLeadsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3GenerateLeadsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsenginev3GenerateLeadsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsenginev3GenerateLeadsResponse is not found in the empty JSON string", Riskanalyticsenginev3GenerateLeadsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsenginev3GenerateLeadsResponse is not found in the empty JSON string", Riskanalyticsenginev3GenerateLeadsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -236,7 +237,7 @@ public class Riskanalyticsenginev3GenerateLeadsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsenginev3GenerateLeadsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3GenerateLeadsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3GenerateLeadsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -249,7 +250,7 @@ public class Riskanalyticsenginev3GenerateLeadsResponse {
         if (jsonArrayrisks != null) {
           // ensure the json data is an array
           if (!jsonObj.get("risks").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `risks` to be an array in the JSON string but got `%s`", jsonObj.get("risks").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `risks` to be an array in the JSON string but got `%s`", jsonObj.get("risks").toString()));
           }
 
           // validate the optional field `risks` (array)
@@ -289,22 +290,22 @@ public class Riskanalyticsenginev3GenerateLeadsResponse {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsenginev3GenerateLeadsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsenginev3GenerateLeadsResponse
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3GenerateLeadsResponse
-  */
+  /**
+   * Create an instance of Riskanalyticsenginev3GenerateLeadsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsenginev3GenerateLeadsResponse
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3GenerateLeadsResponse
+   */
   public static Riskanalyticsenginev3GenerateLeadsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsenginev3GenerateLeadsResponse.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsenginev3GenerateLeadsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsenginev3GenerateLeadsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

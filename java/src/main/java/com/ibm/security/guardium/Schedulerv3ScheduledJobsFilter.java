@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,109 +42,116 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ScheduledJobsFilter includes all fields used to filter the set of desired scheduled jobs returned.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3ScheduledJobsFilter {
   public static final String SERIALIZED_NAME_ENABLED = "enabled";
   @SerializedName(SERIALIZED_NAME_ENABLED)
+  @javax.annotation.Nullable
   private String enabled;
 
   public static final String SERIALIZED_NAME_END_TIME = "end_time";
   @SerializedName(SERIALIZED_NAME_END_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime endTime;
 
   public static final String SERIALIZED_NAME_IGNORE_ACL = "ignore_acl";
   @SerializedName(SERIALIZED_NAME_IGNORE_ACL)
+  @javax.annotation.Nullable
   private Boolean ignoreAcl;
 
   public static final String SERIALIZED_NAME_NAME_FILTER = "name_filter";
   @SerializedName(SERIALIZED_NAME_NAME_FILTER)
+  @javax.annotation.Nullable
   private List<String> nameFilter = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_START_TIME = "start_time";
   @SerializedName(SERIALIZED_NAME_START_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime startTime;
 
   public static final String SERIALIZED_NAME_STATUS_FILTER = "status_filter";
   @SerializedName(SERIALIZED_NAME_STATUS_FILTER)
+  @javax.annotation.Nullable
   private List<Schedulerv3ExecutionStatus> statusFilter = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TAG_FILTER = "tag_filter";
   @SerializedName(SERIALIZED_NAME_TAG_FILTER)
+  @javax.annotation.Nullable
   private String tagFilter;
 
   public Schedulerv3ScheduledJobsFilter() {
   }
 
-  public Schedulerv3ScheduledJobsFilter enabled(String enabled) {
+  public Schedulerv3ScheduledJobsFilter enabled(@javax.annotation.Nullable String enabled) {
     this.enabled = enabled;
     return this;
   }
 
-   /**
+  /**
    * Optional: Enabled or not.
    * @return enabled
-  **/
+   */
   @javax.annotation.Nullable
   public String getEnabled() {
     return enabled;
   }
 
-  public void setEnabled(String enabled) {
+  public void setEnabled(@javax.annotation.Nullable String enabled) {
     this.enabled = enabled;
   }
 
 
-  public Schedulerv3ScheduledJobsFilter endTime(OffsetDateTime endTime) {
+  public Schedulerv3ScheduledJobsFilter endTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
     return this;
   }
 
-   /**
+  /**
    * Optional: Return records ending time.
    * @return endTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getEndTime() {
     return endTime;
   }
 
-  public void setEndTime(OffsetDateTime endTime) {
+  public void setEndTime(@javax.annotation.Nullable OffsetDateTime endTime) {
     this.endTime = endTime;
   }
 
 
-  public Schedulerv3ScheduledJobsFilter ignoreAcl(Boolean ignoreAcl) {
+  public Schedulerv3ScheduledJobsFilter ignoreAcl(@javax.annotation.Nullable Boolean ignoreAcl) {
     this.ignoreAcl = ignoreAcl;
     return this;
   }
 
-   /**
+  /**
    * Get ignoreAcl
    * @return ignoreAcl
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIgnoreAcl() {
     return ignoreAcl;
   }
 
-  public void setIgnoreAcl(Boolean ignoreAcl) {
+  public void setIgnoreAcl(@javax.annotation.Nullable Boolean ignoreAcl) {
     this.ignoreAcl = ignoreAcl;
   }
 
 
-  public Schedulerv3ScheduledJobsFilter nameFilter(List<String> nameFilter) {
+  public Schedulerv3ScheduledJobsFilter nameFilter(@javax.annotation.Nullable List<String> nameFilter) {
     this.nameFilter = nameFilter;
     return this;
   }
@@ -156,40 +164,40 @@ public class Schedulerv3ScheduledJobsFilter {
     return this;
   }
 
-   /**
+  /**
    * Optional: Filter by report name.
    * @return nameFilter
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getNameFilter() {
     return nameFilter;
   }
 
-  public void setNameFilter(List<String> nameFilter) {
+  public void setNameFilter(@javax.annotation.Nullable List<String> nameFilter) {
     this.nameFilter = nameFilter;
   }
 
 
-  public Schedulerv3ScheduledJobsFilter startTime(OffsetDateTime startTime) {
+  public Schedulerv3ScheduledJobsFilter startTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
     return this;
   }
 
-   /**
+  /**
    * Optional: Return records starting at this time (&gt;&#x3D;).
    * @return startTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getStartTime() {
     return startTime;
   }
 
-  public void setStartTime(OffsetDateTime startTime) {
+  public void setStartTime(@javax.annotation.Nullable OffsetDateTime startTime) {
     this.startTime = startTime;
   }
 
 
-  public Schedulerv3ScheduledJobsFilter statusFilter(List<Schedulerv3ExecutionStatus> statusFilter) {
+  public Schedulerv3ScheduledJobsFilter statusFilter(@javax.annotation.Nullable List<Schedulerv3ExecutionStatus> statusFilter) {
     this.statusFilter = statusFilter;
     return this;
   }
@@ -202,35 +210,35 @@ public class Schedulerv3ScheduledJobsFilter {
     return this;
   }
 
-   /**
+  /**
    * Optional: Filter by status.
    * @return statusFilter
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3ExecutionStatus> getStatusFilter() {
     return statusFilter;
   }
 
-  public void setStatusFilter(List<Schedulerv3ExecutionStatus> statusFilter) {
+  public void setStatusFilter(@javax.annotation.Nullable List<Schedulerv3ExecutionStatus> statusFilter) {
     this.statusFilter = statusFilter;
   }
 
 
-  public Schedulerv3ScheduledJobsFilter tagFilter(String tagFilter) {
+  public Schedulerv3ScheduledJobsFilter tagFilter(@javax.annotation.Nullable String tagFilter) {
     this.tagFilter = tagFilter;
     return this;
   }
 
-   /**
+  /**
    * Optional: Filter by tags.
    * @return tagFilter
-  **/
+   */
   @javax.annotation.Nullable
   public String getTagFilter() {
     return tagFilter;
   }
 
-  public void setTagFilter(String tagFilter) {
+  public void setTagFilter(@javax.annotation.Nullable String tagFilter) {
     this.tagFilter = tagFilter;
   }
 
@@ -291,29 +299,22 @@ public class Schedulerv3ScheduledJobsFilter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("enabled");
-    openapiFields.add("end_time");
-    openapiFields.add("ignore_acl");
-    openapiFields.add("name_filter");
-    openapiFields.add("start_time");
-    openapiFields.add("status_filter");
-    openapiFields.add("tag_filter");
+    openapiFields = new HashSet<String>(Arrays.asList("enabled", "end_time", "ignore_acl", "name_filter", "start_time", "status_filter", "tag_filter"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledJobsFilter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledJobsFilter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3ScheduledJobsFilter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3ScheduledJobsFilter is not found in the empty JSON string", Schedulerv3ScheduledJobsFilter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3ScheduledJobsFilter is not found in the empty JSON string", Schedulerv3ScheduledJobsFilter.openapiRequiredFields.toString()));
         }
       }
 
@@ -321,23 +322,23 @@ public class Schedulerv3ScheduledJobsFilter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3ScheduledJobsFilter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledJobsFilter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledJobsFilter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("enabled") != null && !jsonObj.get("enabled").isJsonNull()) && !jsonObj.get("enabled").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `enabled` to be a primitive type in the JSON string but got `%s`", jsonObj.get("enabled").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `enabled` to be a primitive type in the JSON string but got `%s`", jsonObj.get("enabled").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("name_filter") != null && !jsonObj.get("name_filter").isJsonNull() && !jsonObj.get("name_filter").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name_filter` to be an array in the JSON string but got `%s`", jsonObj.get("name_filter").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name_filter` to be an array in the JSON string but got `%s`", jsonObj.get("name_filter").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("status_filter") != null && !jsonObj.get("status_filter").isJsonNull() && !jsonObj.get("status_filter").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status_filter` to be an array in the JSON string but got `%s`", jsonObj.get("status_filter").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status_filter` to be an array in the JSON string but got `%s`", jsonObj.get("status_filter").toString()));
       }
       if ((jsonObj.get("tag_filter") != null && !jsonObj.get("tag_filter").isJsonNull()) && !jsonObj.get("tag_filter").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag_filter` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_filter").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_filter` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_filter").toString()));
       }
   }
 
@@ -370,22 +371,22 @@ public class Schedulerv3ScheduledJobsFilter {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3ScheduledJobsFilter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3ScheduledJobsFilter
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledJobsFilter
-  */
+  /**
+   * Create an instance of Schedulerv3ScheduledJobsFilter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3ScheduledJobsFilter
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledJobsFilter
+   */
   public static Schedulerv3ScheduledJobsFilter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3ScheduledJobsFilter.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3ScheduledJobsFilter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3ScheduledJobsFilter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

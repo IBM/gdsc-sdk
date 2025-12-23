@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -44,83 +45,93 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DataStoresSummary
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class DataStoresSummary {
   public static final String SERIALIZED_NAME_TOTAL_STORES = "totalStores";
   @SerializedName(SERIALIZED_NAME_TOTAL_STORES)
+  @javax.annotation.Nonnull
   private BigDecimal totalStores;
 
   public static final String SERIALIZED_NAME_STORE_TYPES = "storeTypes";
   @SerializedName(SERIALIZED_NAME_STORE_TYPES)
+  @javax.annotation.Nonnull
   private List<DataStoresSummaryStoreTypesInner> storeTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_LOCATIONS = "cloudLocations";
   @SerializedName(SERIALIZED_NAME_CLOUD_LOCATIONS)
+  @javax.annotation.Nonnull
   private List<DataStoresSummaryCloudLocationsInner> cloudLocations = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SERVICE_PROVIDERS = "serviceProviders";
   @SerializedName(SERIALIZED_NAME_SERVICE_PROVIDERS)
+  @javax.annotation.Nonnull
   private List<DataStoresSummaryServiceProvidersInner> serviceProviders = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TOTAL_SENSITIVITIES = "totalSensitivities";
   @SerializedName(SERIALIZED_NAME_TOTAL_SENSITIVITIES)
+  @javax.annotation.Nonnull
   private BigDecimal totalSensitivities;
 
   public static final String SERIALIZED_NAME_SENSITIVITIES = "sensitivities";
   @SerializedName(SERIALIZED_NAME_SENSITIVITIES)
+  @javax.annotation.Nonnull
   private List<SensitivitiesItemsInner> sensitivities = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TOTAL_POTENTIAL_FLOWS = "totalPotentialFlows";
   @SerializedName(SERIALIZED_NAME_TOTAL_POTENTIAL_FLOWS)
+  @javax.annotation.Nonnull
   private BigDecimal totalPotentialFlows;
 
   public static final String SERIALIZED_NAME_TOTAL_ACTUAL_FLOWS = "totalActualFlows";
   @SerializedName(SERIALIZED_NAME_TOTAL_ACTUAL_FLOWS)
+  @javax.annotation.Nonnull
   private BigDecimal totalActualFlows;
 
   public static final String SERIALIZED_NAME_TOTAL_SENSITIVE_STORES = "totalSensitiveStores";
   @SerializedName(SERIALIZED_NAME_TOTAL_SENSITIVE_STORES)
+  @javax.annotation.Nonnull
   private BigDecimal totalSensitiveStores;
 
   public static final String SERIALIZED_NAME_ACCOUNTS_IDS = "accountsIds";
   @SerializedName(SERIALIZED_NAME_ACCOUNTS_IDS)
+  @javax.annotation.Nonnull
   private List<String> accountsIds = new ArrayList<>();
 
   public DataStoresSummary() {
   }
 
-  public DataStoresSummary totalStores(BigDecimal totalStores) {
+  public DataStoresSummary totalStores(@javax.annotation.Nonnull BigDecimal totalStores) {
     this.totalStores = totalStores;
     return this;
   }
 
-   /**
+  /**
    * Get totalStores
    * @return totalStores
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getTotalStores() {
     return totalStores;
   }
 
-  public void setTotalStores(BigDecimal totalStores) {
+  public void setTotalStores(@javax.annotation.Nonnull BigDecimal totalStores) {
     this.totalStores = totalStores;
   }
 
 
-  public DataStoresSummary storeTypes(List<DataStoresSummaryStoreTypesInner> storeTypes) {
+  public DataStoresSummary storeTypes(@javax.annotation.Nonnull List<DataStoresSummaryStoreTypesInner> storeTypes) {
     this.storeTypes = storeTypes;
     return this;
   }
@@ -133,21 +144,21 @@ public class DataStoresSummary {
     return this;
   }
 
-   /**
+  /**
    * Get storeTypes
    * @return storeTypes
-  **/
+   */
   @javax.annotation.Nonnull
   public List<DataStoresSummaryStoreTypesInner> getStoreTypes() {
     return storeTypes;
   }
 
-  public void setStoreTypes(List<DataStoresSummaryStoreTypesInner> storeTypes) {
+  public void setStoreTypes(@javax.annotation.Nonnull List<DataStoresSummaryStoreTypesInner> storeTypes) {
     this.storeTypes = storeTypes;
   }
 
 
-  public DataStoresSummary cloudLocations(List<DataStoresSummaryCloudLocationsInner> cloudLocations) {
+  public DataStoresSummary cloudLocations(@javax.annotation.Nonnull List<DataStoresSummaryCloudLocationsInner> cloudLocations) {
     this.cloudLocations = cloudLocations;
     return this;
   }
@@ -160,21 +171,21 @@ public class DataStoresSummary {
     return this;
   }
 
-   /**
+  /**
    * Get cloudLocations
    * @return cloudLocations
-  **/
+   */
   @javax.annotation.Nonnull
   public List<DataStoresSummaryCloudLocationsInner> getCloudLocations() {
     return cloudLocations;
   }
 
-  public void setCloudLocations(List<DataStoresSummaryCloudLocationsInner> cloudLocations) {
+  public void setCloudLocations(@javax.annotation.Nonnull List<DataStoresSummaryCloudLocationsInner> cloudLocations) {
     this.cloudLocations = cloudLocations;
   }
 
 
-  public DataStoresSummary serviceProviders(List<DataStoresSummaryServiceProvidersInner> serviceProviders) {
+  public DataStoresSummary serviceProviders(@javax.annotation.Nonnull List<DataStoresSummaryServiceProvidersInner> serviceProviders) {
     this.serviceProviders = serviceProviders;
     return this;
   }
@@ -187,40 +198,40 @@ public class DataStoresSummary {
     return this;
   }
 
-   /**
+  /**
    * Get serviceProviders
    * @return serviceProviders
-  **/
+   */
   @javax.annotation.Nonnull
   public List<DataStoresSummaryServiceProvidersInner> getServiceProviders() {
     return serviceProviders;
   }
 
-  public void setServiceProviders(List<DataStoresSummaryServiceProvidersInner> serviceProviders) {
+  public void setServiceProviders(@javax.annotation.Nonnull List<DataStoresSummaryServiceProvidersInner> serviceProviders) {
     this.serviceProviders = serviceProviders;
   }
 
 
-  public DataStoresSummary totalSensitivities(BigDecimal totalSensitivities) {
+  public DataStoresSummary totalSensitivities(@javax.annotation.Nonnull BigDecimal totalSensitivities) {
     this.totalSensitivities = totalSensitivities;
     return this;
   }
 
-   /**
+  /**
    * Get totalSensitivities
    * @return totalSensitivities
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getTotalSensitivities() {
     return totalSensitivities;
   }
 
-  public void setTotalSensitivities(BigDecimal totalSensitivities) {
+  public void setTotalSensitivities(@javax.annotation.Nonnull BigDecimal totalSensitivities) {
     this.totalSensitivities = totalSensitivities;
   }
 
 
-  public DataStoresSummary sensitivities(List<SensitivitiesItemsInner> sensitivities) {
+  public DataStoresSummary sensitivities(@javax.annotation.Nonnull List<SensitivitiesItemsInner> sensitivities) {
     this.sensitivities = sensitivities;
     return this;
   }
@@ -233,78 +244,78 @@ public class DataStoresSummary {
     return this;
   }
 
-   /**
+  /**
    * Get sensitivities
    * @return sensitivities
-  **/
+   */
   @javax.annotation.Nonnull
   public List<SensitivitiesItemsInner> getSensitivities() {
     return sensitivities;
   }
 
-  public void setSensitivities(List<SensitivitiesItemsInner> sensitivities) {
+  public void setSensitivities(@javax.annotation.Nonnull List<SensitivitiesItemsInner> sensitivities) {
     this.sensitivities = sensitivities;
   }
 
 
-  public DataStoresSummary totalPotentialFlows(BigDecimal totalPotentialFlows) {
+  public DataStoresSummary totalPotentialFlows(@javax.annotation.Nonnull BigDecimal totalPotentialFlows) {
     this.totalPotentialFlows = totalPotentialFlows;
     return this;
   }
 
-   /**
+  /**
    * Get totalPotentialFlows
    * @return totalPotentialFlows
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getTotalPotentialFlows() {
     return totalPotentialFlows;
   }
 
-  public void setTotalPotentialFlows(BigDecimal totalPotentialFlows) {
+  public void setTotalPotentialFlows(@javax.annotation.Nonnull BigDecimal totalPotentialFlows) {
     this.totalPotentialFlows = totalPotentialFlows;
   }
 
 
-  public DataStoresSummary totalActualFlows(BigDecimal totalActualFlows) {
+  public DataStoresSummary totalActualFlows(@javax.annotation.Nonnull BigDecimal totalActualFlows) {
     this.totalActualFlows = totalActualFlows;
     return this;
   }
 
-   /**
+  /**
    * Get totalActualFlows
    * @return totalActualFlows
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getTotalActualFlows() {
     return totalActualFlows;
   }
 
-  public void setTotalActualFlows(BigDecimal totalActualFlows) {
+  public void setTotalActualFlows(@javax.annotation.Nonnull BigDecimal totalActualFlows) {
     this.totalActualFlows = totalActualFlows;
   }
 
 
-  public DataStoresSummary totalSensitiveStores(BigDecimal totalSensitiveStores) {
+  public DataStoresSummary totalSensitiveStores(@javax.annotation.Nonnull BigDecimal totalSensitiveStores) {
     this.totalSensitiveStores = totalSensitiveStores;
     return this;
   }
 
-   /**
+  /**
    * Get totalSensitiveStores
    * @return totalSensitiveStores
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getTotalSensitiveStores() {
     return totalSensitiveStores;
   }
 
-  public void setTotalSensitiveStores(BigDecimal totalSensitiveStores) {
+  public void setTotalSensitiveStores(@javax.annotation.Nonnull BigDecimal totalSensitiveStores) {
     this.totalSensitiveStores = totalSensitiveStores;
   }
 
 
-  public DataStoresSummary accountsIds(List<String> accountsIds) {
+  public DataStoresSummary accountsIds(@javax.annotation.Nonnull List<String> accountsIds) {
     this.accountsIds = accountsIds;
     return this;
   }
@@ -317,16 +328,16 @@ public class DataStoresSummary {
     return this;
   }
 
-   /**
+  /**
    * Get accountsIds
    * @return accountsIds
-  **/
+   */
   @javax.annotation.Nonnull
   public List<String> getAccountsIds() {
     return accountsIds;
   }
 
-  public void setAccountsIds(List<String> accountsIds) {
+  public void setAccountsIds(@javax.annotation.Nonnull List<String> accountsIds) {
     this.accountsIds = accountsIds;
   }
 
@@ -393,42 +404,22 @@ public class DataStoresSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("totalStores");
-    openapiFields.add("storeTypes");
-    openapiFields.add("cloudLocations");
-    openapiFields.add("serviceProviders");
-    openapiFields.add("totalSensitivities");
-    openapiFields.add("sensitivities");
-    openapiFields.add("totalPotentialFlows");
-    openapiFields.add("totalActualFlows");
-    openapiFields.add("totalSensitiveStores");
-    openapiFields.add("accountsIds");
+    openapiFields = new HashSet<String>(Arrays.asList("totalStores", "storeTypes", "cloudLocations", "serviceProviders", "totalSensitivities", "sensitivities", "totalPotentialFlows", "totalActualFlows", "totalSensitiveStores", "accountsIds"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("totalStores");
-    openapiRequiredFields.add("storeTypes");
-    openapiRequiredFields.add("cloudLocations");
-    openapiRequiredFields.add("serviceProviders");
-    openapiRequiredFields.add("totalSensitivities");
-    openapiRequiredFields.add("sensitivities");
-    openapiRequiredFields.add("totalPotentialFlows");
-    openapiRequiredFields.add("totalActualFlows");
-    openapiRequiredFields.add("totalSensitiveStores");
-    openapiRequiredFields.add("accountsIds");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("totalStores", "storeTypes", "cloudLocations", "serviceProviders", "totalSensitivities", "sensitivities", "totalPotentialFlows", "totalActualFlows", "totalSensitiveStores", "accountsIds"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to DataStoresSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to DataStoresSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!DataStoresSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in DataStoresSummary is not found in the empty JSON string", DataStoresSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in DataStoresSummary is not found in the empty JSON string", DataStoresSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -436,20 +427,20 @@ public class DataStoresSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!DataStoresSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DataStoresSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DataStoresSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : DataStoresSummary.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("storeTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storeTypes` to be an array in the JSON string but got `%s`", jsonObj.get("storeTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storeTypes` to be an array in the JSON string but got `%s`", jsonObj.get("storeTypes").toString()));
       }
 
       JsonArray jsonArraystoreTypes = jsonObj.getAsJsonArray("storeTypes");
@@ -459,7 +450,7 @@ public class DataStoresSummary {
       };
       // ensure the json data is an array
       if (!jsonObj.get("cloudLocations").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudLocations` to be an array in the JSON string but got `%s`", jsonObj.get("cloudLocations").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudLocations` to be an array in the JSON string but got `%s`", jsonObj.get("cloudLocations").toString()));
       }
 
       JsonArray jsonArraycloudLocations = jsonObj.getAsJsonArray("cloudLocations");
@@ -469,7 +460,7 @@ public class DataStoresSummary {
       };
       // ensure the json data is an array
       if (!jsonObj.get("serviceProviders").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `serviceProviders` to be an array in the JSON string but got `%s`", jsonObj.get("serviceProviders").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `serviceProviders` to be an array in the JSON string but got `%s`", jsonObj.get("serviceProviders").toString()));
       }
 
       JsonArray jsonArrayserviceProviders = jsonObj.getAsJsonArray("serviceProviders");
@@ -479,7 +470,7 @@ public class DataStoresSummary {
       };
       // ensure the json data is an array
       if (!jsonObj.get("sensitivities").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitivities` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivities").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitivities` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivities").toString()));
       }
 
       JsonArray jsonArraysensitivities = jsonObj.getAsJsonArray("sensitivities");
@@ -491,7 +482,7 @@ public class DataStoresSummary {
       if (jsonObj.get("accountsIds") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("accountsIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `accountsIds` to be an array in the JSON string but got `%s`", jsonObj.get("accountsIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `accountsIds` to be an array in the JSON string but got `%s`", jsonObj.get("accountsIds").toString()));
       }
   }
 
@@ -524,22 +515,22 @@ public class DataStoresSummary {
     }
   }
 
- /**
-  * Create an instance of DataStoresSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of DataStoresSummary
-  * @throws IOException if the JSON string is invalid with respect to DataStoresSummary
-  */
+  /**
+   * Create an instance of DataStoresSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of DataStoresSummary
+   * @throws IOException if the JSON string is invalid with respect to DataStoresSummary
+   */
   public static DataStoresSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, DataStoresSummary.class);
   }
 
- /**
-  * Convert an instance of DataStoresSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of DataStoresSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

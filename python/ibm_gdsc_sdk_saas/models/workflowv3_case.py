@@ -44,8 +44,8 @@ class Workflowv3Case(BaseModel):
     description: Optional[StrictStr] = Field(default=None, description="Multiline description of the case.")
     full_access: Optional[StrictBool] = Field(default=None, description="Access level.")
     origin: Optional[Workflowv3Origin] = None
-    priority: Optional[Workflowv3Priority] = None
-    status: Optional[Workflowv3Status] = None
+    priority: Optional[Workflowv3Priority] = Workflowv3Priority.UNDEFINED_PRIORITY
+    status: Optional[Workflowv3Status] = Workflowv3Status.UNDEFINED_STATUS
     tasks: Optional[List[Workflowv3Task]] = Field(default=None, description="Sub-tasks that the current user has access to.")
     title: Optional[StrictStr] = Field(default=None, description="Case title (subject).")
     __properties: ClassVar[List[str]] = ["alt_id", "artifacts", "assignments", "case_id", "comments", "date_created", "date_due", "date_modified", "description", "full_access", "origin", "priority", "status", "tasks", "title"]
@@ -92,16 +92,16 @@ class Workflowv3Case(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in assignments (list)
         _items = []
         if self.assignments:
-            for _item in self.assignments:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_assignments in self.assignments:
+                if _item_assignments:
+                    _items.append(_item_assignments.to_dict())
             _dict['assignments'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in comments (list)
         _items = []
         if self.comments:
-            for _item in self.comments:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_comments in self.comments:
+                if _item_comments:
+                    _items.append(_item_comments.to_dict())
             _dict['comments'] = _items
         # override the default output from pydantic by calling `to_dict()` of origin
         if self.origin:
@@ -109,9 +109,9 @@ class Workflowv3Case(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in tasks (list)
         _items = []
         if self.tasks:
-            for _item in self.tasks:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_tasks in self.tasks:
+                if _item_tasks:
+                    _items.append(_item_tasks.to_dict())
             _dict['tasks'] = _items
         return _dict
 
@@ -136,8 +136,8 @@ class Workflowv3Case(BaseModel):
             "description": obj.get("description"),
             "full_access": obj.get("full_access"),
             "origin": Workflowv3Origin.from_dict(obj["origin"]) if obj.get("origin") is not None else None,
-            "priority": obj.get("priority"),
-            "status": obj.get("status"),
+            "priority": obj.get("priority") if obj.get("priority") is not None else Workflowv3Priority.UNDEFINED_PRIORITY,
+            "status": obj.get("status") if obj.get("status") is not None else Workflowv3Status.UNDEFINED_STATUS,
             "tasks": [Workflowv3Task.from_dict(_item) for _item in obj["tasks"]] if obj.get("tasks") is not None else None,
             "title": obj.get("title")
         })

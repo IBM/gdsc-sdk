@@ -30,6 +30,8 @@ export class Complianceacceleratorv3Workspace {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "auditInfo",
@@ -63,4 +65,3 @@ export class Complianceacceleratorv3Workspace {
     public constructor() {
     }
 }
-

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Case or task read-only comment.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3Comment {
   public static final String SERIALIZED_NAME_WHAT = "what";
   @SerializedName(SERIALIZED_NAME_WHAT)
+  @javax.annotation.Nullable
   private String what;
 
   public static final String SERIALIZED_NAME_WHEN = "when";
   @SerializedName(SERIALIZED_NAME_WHEN)
+  @javax.annotation.Nullable
   private OffsetDateTime when;
 
   public static final String SERIALIZED_NAME_WHO = "who";
   @SerializedName(SERIALIZED_NAME_WHO)
+  @javax.annotation.Nullable
   private String who;
 
   public Workflowv3Comment() {
   }
 
-  public Workflowv3Comment what(String what) {
+  public Workflowv3Comment what(@javax.annotation.Nullable String what) {
     this.what = what;
     return this;
   }
 
-   /**
+  /**
    * Text of the comment.
    * @return what
-  **/
+   */
   @javax.annotation.Nullable
   public String getWhat() {
     return what;
   }
 
-  public void setWhat(String what) {
+  public void setWhat(@javax.annotation.Nullable String what) {
     this.what = what;
   }
 
 
-  public Workflowv3Comment when(OffsetDateTime when) {
+  public Workflowv3Comment when(@javax.annotation.Nullable OffsetDateTime when) {
     this.when = when;
     return this;
   }
 
-   /**
+  /**
    * Timestamp when the comment happened.
    * @return when
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getWhen() {
     return when;
   }
 
-  public void setWhen(OffsetDateTime when) {
+  public void setWhen(@javax.annotation.Nullable OffsetDateTime when) {
     this.when = when;
   }
 
 
-  public Workflowv3Comment who(String who) {
+  public Workflowv3Comment who(@javax.annotation.Nullable String who) {
     this.who = who;
     return this;
   }
 
-   /**
+  /**
    * User ID who created the comment.
    * @return who
-  **/
+   */
   @javax.annotation.Nullable
   public String getWho() {
     return who;
   }
 
-  public void setWho(String who) {
+  public void setWho(@javax.annotation.Nullable String who) {
     this.who = who;
   }
 
@@ -172,25 +176,22 @@ public class Workflowv3Comment {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("what");
-    openapiFields.add("when");
-    openapiFields.add("who");
+    openapiFields = new HashSet<String>(Arrays.asList("what", "when", "who"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3Comment
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3Comment
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3Comment.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3Comment is not found in the empty JSON string", Workflowv3Comment.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3Comment is not found in the empty JSON string", Workflowv3Comment.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,15 +199,15 @@ public class Workflowv3Comment {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3Comment.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3Comment` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3Comment` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("what") != null && !jsonObj.get("what").isJsonNull()) && !jsonObj.get("what").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `what` to be a primitive type in the JSON string but got `%s`", jsonObj.get("what").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `what` to be a primitive type in the JSON string but got `%s`", jsonObj.get("what").toString()));
       }
       if ((jsonObj.get("who") != null && !jsonObj.get("who").isJsonNull()) && !jsonObj.get("who").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `who` to be a primitive type in the JSON string but got `%s`", jsonObj.get("who").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `who` to be a primitive type in the JSON string but got `%s`", jsonObj.get("who").toString()));
       }
   }
 
@@ -239,22 +240,22 @@ public class Workflowv3Comment {
     }
   }
 
- /**
-  * Create an instance of Workflowv3Comment given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3Comment
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3Comment
-  */
+  /**
+   * Create an instance of Workflowv3Comment given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3Comment
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3Comment
+   */
   public static Workflowv3Comment fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3Comment.class);
   }
 
- /**
-  * Convert an instance of Workflowv3Comment to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3Comment to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

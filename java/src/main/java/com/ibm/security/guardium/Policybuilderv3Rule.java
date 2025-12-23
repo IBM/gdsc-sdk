@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,84 +44,99 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Message format for rule object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3Rule {
   public static final String SERIALIZED_NAME_ACTIONS = "actions";
   @SerializedName(SERIALIZED_NAME_ACTIONS)
+  @javax.annotation.Nullable
   private List<Policybuilderv3Action> actions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CONTINUE_TO_NEXT_RULE = "continue_to_next_rule";
   @SerializedName(SERIALIZED_NAME_CONTINUE_TO_NEXT_RULE)
+  @javax.annotation.Nullable
   private Boolean continueToNextRule;
 
   public static final String SERIALIZED_NAME_EMPTY_GROUPS = "empty_groups";
   @SerializedName(SERIALIZED_NAME_EMPTY_GROUPS)
+  @javax.annotation.Nullable
   private List<Integer> emptyGroups = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_INVALID_ACTIONS = "invalid_actions";
   @SerializedName(SERIALIZED_NAME_INVALID_ACTIONS)
+  @javax.annotation.Nullable
   private List<Policybuilderv3Action> invalidActions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_INVALID_PARAMETERS = "invalid_parameters";
   @SerializedName(SERIALIZED_NAME_INVALID_PARAMETERS)
+  @javax.annotation.Nullable
   private List<Policybuilderv3RuleParameter> invalidParameters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PARAMETERS = "parameters";
   @SerializedName(SERIALIZED_NAME_PARAMETERS)
+  @javax.annotation.Nullable
   private List<Policybuilderv3RuleParameter> parameters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_POLICY_ID = "policy_id";
   @SerializedName(SERIALIZED_NAME_POLICY_ID)
+  @javax.annotation.Nullable
   private String policyId;
 
   public static final String SERIALIZED_NAME_RULE_ID = "rule_id";
   @SerializedName(SERIALIZED_NAME_RULE_ID)
+  @javax.annotation.Nullable
   private String ruleId;
 
   public static final String SERIALIZED_NAME_RULE_KEY = "rule_key";
   @SerializedName(SERIALIZED_NAME_RULE_KEY)
+  @javax.annotation.Nullable
   private String ruleKey;
 
   public static final String SERIALIZED_NAME_RULE_NAME = "rule_name";
   @SerializedName(SERIALIZED_NAME_RULE_NAME)
+  @javax.annotation.Nullable
   private String ruleName;
 
   public static final String SERIALIZED_NAME_RULE_ORDER = "rule_order";
   @SerializedName(SERIALIZED_NAME_RULE_ORDER)
+  @javax.annotation.Nullable
   private Integer ruleOrder;
 
   public static final String SERIALIZED_NAME_RULE_TYPE = "rule_type";
   @SerializedName(SERIALIZED_NAME_RULE_TYPE)
+  @javax.annotation.Nullable
   private Policybuilderv3RuleType ruleType = Policybuilderv3RuleType.ACCESS;
 
   public static final String SERIALIZED_NAME_SEVERITY = "severity";
   @SerializedName(SERIALIZED_NAME_SEVERITY)
+  @javax.annotation.Nullable
   private Policybuilderv3RuleSeverity severity = Policybuilderv3RuleSeverity.INFO;
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
+  @javax.annotation.Nullable
   private List<String> tags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TEMPLATE = "template";
   @SerializedName(SERIALIZED_NAME_TEMPLATE)
+  @javax.annotation.Nullable
   private Boolean template;
 
   public Policybuilderv3Rule() {
   }
 
-  public Policybuilderv3Rule actions(List<Policybuilderv3Action> actions) {
+  public Policybuilderv3Rule actions(@javax.annotation.Nullable List<Policybuilderv3Action> actions) {
     this.actions = actions;
     return this;
   }
@@ -133,40 +149,40 @@ public class Policybuilderv3Rule {
     return this;
   }
 
-   /**
+  /**
    * Action object of the actions in the rules.
    * @return actions
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3Action> getActions() {
     return actions;
   }
 
-  public void setActions(List<Policybuilderv3Action> actions) {
+  public void setActions(@javax.annotation.Nullable List<Policybuilderv3Action> actions) {
     this.actions = actions;
   }
 
 
-  public Policybuilderv3Rule continueToNextRule(Boolean continueToNextRule) {
+  public Policybuilderv3Rule continueToNextRule(@javax.annotation.Nullable Boolean continueToNextRule) {
     this.continueToNextRule = continueToNextRule;
     return this;
   }
 
-   /**
+  /**
    * Flag indicating whether continue to next rule is on/off.
    * @return continueToNextRule
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getContinueToNextRule() {
     return continueToNextRule;
   }
 
-  public void setContinueToNextRule(Boolean continueToNextRule) {
+  public void setContinueToNextRule(@javax.annotation.Nullable Boolean continueToNextRule) {
     this.continueToNextRule = continueToNextRule;
   }
 
 
-  public Policybuilderv3Rule emptyGroups(List<Integer> emptyGroups) {
+  public Policybuilderv3Rule emptyGroups(@javax.annotation.Nullable List<Integer> emptyGroups) {
     this.emptyGroups = emptyGroups;
     return this;
   }
@@ -179,21 +195,21 @@ public class Policybuilderv3Rule {
     return this;
   }
 
-   /**
+  /**
    * Variable that contains group ids being used by the rule that contains 0 members.
    * @return emptyGroups
-  **/
+   */
   @javax.annotation.Nullable
   public List<Integer> getEmptyGroups() {
     return emptyGroups;
   }
 
-  public void setEmptyGroups(List<Integer> emptyGroups) {
+  public void setEmptyGroups(@javax.annotation.Nullable List<Integer> emptyGroups) {
     this.emptyGroups = emptyGroups;
   }
 
 
-  public Policybuilderv3Rule invalidActions(List<Policybuilderv3Action> invalidActions) {
+  public Policybuilderv3Rule invalidActions(@javax.annotation.Nullable List<Policybuilderv3Action> invalidActions) {
     this.invalidActions = invalidActions;
     return this;
   }
@@ -206,21 +222,21 @@ public class Policybuilderv3Rule {
     return this;
   }
 
-   /**
+  /**
    * Get invalidActions
    * @return invalidActions
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3Action> getInvalidActions() {
     return invalidActions;
   }
 
-  public void setInvalidActions(List<Policybuilderv3Action> invalidActions) {
+  public void setInvalidActions(@javax.annotation.Nullable List<Policybuilderv3Action> invalidActions) {
     this.invalidActions = invalidActions;
   }
 
 
-  public Policybuilderv3Rule invalidParameters(List<Policybuilderv3RuleParameter> invalidParameters) {
+  public Policybuilderv3Rule invalidParameters(@javax.annotation.Nullable List<Policybuilderv3RuleParameter> invalidParameters) {
     this.invalidParameters = invalidParameters;
     return this;
   }
@@ -233,21 +249,21 @@ public class Policybuilderv3Rule {
     return this;
   }
 
-   /**
+  /**
    * Get invalidParameters
    * @return invalidParameters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3RuleParameter> getInvalidParameters() {
     return invalidParameters;
   }
 
-  public void setInvalidParameters(List<Policybuilderv3RuleParameter> invalidParameters) {
+  public void setInvalidParameters(@javax.annotation.Nullable List<Policybuilderv3RuleParameter> invalidParameters) {
     this.invalidParameters = invalidParameters;
   }
 
 
-  public Policybuilderv3Rule parameters(List<Policybuilderv3RuleParameter> parameters) {
+  public Policybuilderv3Rule parameters(@javax.annotation.Nullable List<Policybuilderv3RuleParameter> parameters) {
     this.parameters = parameters;
     return this;
   }
@@ -260,154 +276,154 @@ public class Policybuilderv3Rule {
     return this;
   }
 
-   /**
+  /**
    * Parameter object which are used in the rule.
    * @return parameters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3RuleParameter> getParameters() {
     return parameters;
   }
 
-  public void setParameters(List<Policybuilderv3RuleParameter> parameters) {
+  public void setParameters(@javax.annotation.Nullable List<Policybuilderv3RuleParameter> parameters) {
     this.parameters = parameters;
   }
 
 
-  public Policybuilderv3Rule policyId(String policyId) {
+  public Policybuilderv3Rule policyId(@javax.annotation.Nullable String policyId) {
     this.policyId = policyId;
     return this;
   }
 
-   /**
+  /**
    * Policy Id.
    * @return policyId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyId() {
     return policyId;
   }
 
-  public void setPolicyId(String policyId) {
+  public void setPolicyId(@javax.annotation.Nullable String policyId) {
     this.policyId = policyId;
   }
 
 
-  public Policybuilderv3Rule ruleId(String ruleId) {
+  public Policybuilderv3Rule ruleId(@javax.annotation.Nullable String ruleId) {
     this.ruleId = ruleId;
     return this;
   }
 
-   /**
+  /**
    * Rule id.
    * @return ruleId
-  **/
+   */
   @javax.annotation.Nullable
   public String getRuleId() {
     return ruleId;
   }
 
-  public void setRuleId(String ruleId) {
+  public void setRuleId(@javax.annotation.Nullable String ruleId) {
     this.ruleId = ruleId;
   }
 
 
-  public Policybuilderv3Rule ruleKey(String ruleKey) {
+  public Policybuilderv3Rule ruleKey(@javax.annotation.Nullable String ruleKey) {
     this.ruleKey = ruleKey;
     return this;
   }
 
-   /**
+  /**
    * Get ruleKey
    * @return ruleKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getRuleKey() {
     return ruleKey;
   }
 
-  public void setRuleKey(String ruleKey) {
+  public void setRuleKey(@javax.annotation.Nullable String ruleKey) {
     this.ruleKey = ruleKey;
   }
 
 
-  public Policybuilderv3Rule ruleName(String ruleName) {
+  public Policybuilderv3Rule ruleName(@javax.annotation.Nullable String ruleName) {
     this.ruleName = ruleName;
     return this;
   }
 
-   /**
+  /**
    * Rule name.
    * @return ruleName
-  **/
+   */
   @javax.annotation.Nullable
   public String getRuleName() {
     return ruleName;
   }
 
-  public void setRuleName(String ruleName) {
+  public void setRuleName(@javax.annotation.Nullable String ruleName) {
     this.ruleName = ruleName;
   }
 
 
-  public Policybuilderv3Rule ruleOrder(Integer ruleOrder) {
+  public Policybuilderv3Rule ruleOrder(@javax.annotation.Nullable Integer ruleOrder) {
     this.ruleOrder = ruleOrder;
     return this;
   }
 
-   /**
+  /**
    * Integer to indicate the order of the rule in the policy.
    * @return ruleOrder
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getRuleOrder() {
     return ruleOrder;
   }
 
-  public void setRuleOrder(Integer ruleOrder) {
+  public void setRuleOrder(@javax.annotation.Nullable Integer ruleOrder) {
     this.ruleOrder = ruleOrder;
   }
 
 
-  public Policybuilderv3Rule ruleType(Policybuilderv3RuleType ruleType) {
+  public Policybuilderv3Rule ruleType(@javax.annotation.Nullable Policybuilderv3RuleType ruleType) {
     this.ruleType = ruleType;
     return this;
   }
 
-   /**
+  /**
    * Get ruleType
    * @return ruleType
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3RuleType getRuleType() {
     return ruleType;
   }
 
-  public void setRuleType(Policybuilderv3RuleType ruleType) {
+  public void setRuleType(@javax.annotation.Nullable Policybuilderv3RuleType ruleType) {
     this.ruleType = ruleType;
   }
 
 
-  public Policybuilderv3Rule severity(Policybuilderv3RuleSeverity severity) {
+  public Policybuilderv3Rule severity(@javax.annotation.Nullable Policybuilderv3RuleSeverity severity) {
     this.severity = severity;
     return this;
   }
 
-   /**
+  /**
    * Get severity
    * @return severity
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3RuleSeverity getSeverity() {
     return severity;
   }
 
-  public void setSeverity(Policybuilderv3RuleSeverity severity) {
+  public void setSeverity(@javax.annotation.Nullable Policybuilderv3RuleSeverity severity) {
     this.severity = severity;
   }
 
 
-  public Policybuilderv3Rule tags(List<String> tags) {
+  public Policybuilderv3Rule tags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
     return this;
   }
@@ -420,35 +436,35 @@ public class Policybuilderv3Rule {
     return this;
   }
 
-   /**
+  /**
    * Variable that contains tags assosicated with the rule.
    * @return tags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
 
-  public void setTags(List<String> tags) {
+  public void setTags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
   }
 
 
-  public Policybuilderv3Rule template(Boolean template) {
+  public Policybuilderv3Rule template(@javax.annotation.Nullable Boolean template) {
     this.template = template;
     return this;
   }
 
-   /**
+  /**
    * Flag to indicate if the rule is a template rule.
    * @return template
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getTemplate() {
     return template;
   }
 
-  public void setTemplate(Boolean template) {
+  public void setTemplate(@javax.annotation.Nullable Boolean template) {
     this.template = template;
   }
 
@@ -525,37 +541,22 @@ public class Policybuilderv3Rule {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("actions");
-    openapiFields.add("continue_to_next_rule");
-    openapiFields.add("empty_groups");
-    openapiFields.add("invalid_actions");
-    openapiFields.add("invalid_parameters");
-    openapiFields.add("parameters");
-    openapiFields.add("policy_id");
-    openapiFields.add("rule_id");
-    openapiFields.add("rule_key");
-    openapiFields.add("rule_name");
-    openapiFields.add("rule_order");
-    openapiFields.add("rule_type");
-    openapiFields.add("severity");
-    openapiFields.add("tags");
-    openapiFields.add("template");
+    openapiFields = new HashSet<String>(Arrays.asList("actions", "continue_to_next_rule", "empty_groups", "invalid_actions", "invalid_parameters", "parameters", "policy_id", "rule_id", "rule_key", "rule_name", "rule_order", "rule_type", "severity", "tags", "template"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3Rule
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3Rule
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3Rule.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3Rule is not found in the empty JSON string", Policybuilderv3Rule.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3Rule is not found in the empty JSON string", Policybuilderv3Rule.openapiRequiredFields.toString()));
         }
       }
 
@@ -563,7 +564,7 @@ public class Policybuilderv3Rule {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3Rule.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3Rule` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3Rule` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -572,7 +573,7 @@ public class Policybuilderv3Rule {
         if (jsonArrayactions != null) {
           // ensure the json data is an array
           if (!jsonObj.get("actions").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `actions` to be an array in the JSON string but got `%s`", jsonObj.get("actions").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `actions` to be an array in the JSON string but got `%s`", jsonObj.get("actions").toString()));
           }
 
           // validate the optional field `actions` (array)
@@ -583,14 +584,14 @@ public class Policybuilderv3Rule {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("empty_groups") != null && !jsonObj.get("empty_groups").isJsonNull() && !jsonObj.get("empty_groups").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `empty_groups` to be an array in the JSON string but got `%s`", jsonObj.get("empty_groups").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `empty_groups` to be an array in the JSON string but got `%s`", jsonObj.get("empty_groups").toString()));
       }
       if (jsonObj.get("invalid_actions") != null && !jsonObj.get("invalid_actions").isJsonNull()) {
         JsonArray jsonArrayinvalidActions = jsonObj.getAsJsonArray("invalid_actions");
         if (jsonArrayinvalidActions != null) {
           // ensure the json data is an array
           if (!jsonObj.get("invalid_actions").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `invalid_actions` to be an array in the JSON string but got `%s`", jsonObj.get("invalid_actions").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `invalid_actions` to be an array in the JSON string but got `%s`", jsonObj.get("invalid_actions").toString()));
           }
 
           // validate the optional field `invalid_actions` (array)
@@ -604,7 +605,7 @@ public class Policybuilderv3Rule {
         if (jsonArrayinvalidParameters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("invalid_parameters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `invalid_parameters` to be an array in the JSON string but got `%s`", jsonObj.get("invalid_parameters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `invalid_parameters` to be an array in the JSON string but got `%s`", jsonObj.get("invalid_parameters").toString()));
           }
 
           // validate the optional field `invalid_parameters` (array)
@@ -618,7 +619,7 @@ public class Policybuilderv3Rule {
         if (jsonArrayparameters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("parameters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `parameters` to be an array in the JSON string but got `%s`", jsonObj.get("parameters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parameters` to be an array in the JSON string but got `%s`", jsonObj.get("parameters").toString()));
           }
 
           // validate the optional field `parameters` (array)
@@ -628,16 +629,16 @@ public class Policybuilderv3Rule {
         }
       }
       if ((jsonObj.get("policy_id") != null && !jsonObj.get("policy_id").isJsonNull()) && !jsonObj.get("policy_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));
       }
       if ((jsonObj.get("rule_id") != null && !jsonObj.get("rule_id").isJsonNull()) && !jsonObj.get("rule_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_id").toString()));
       }
       if ((jsonObj.get("rule_key") != null && !jsonObj.get("rule_key").isJsonNull()) && !jsonObj.get("rule_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rule_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_key").toString()));
       }
       if ((jsonObj.get("rule_name") != null && !jsonObj.get("rule_name").isJsonNull()) && !jsonObj.get("rule_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rule_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_name").toString()));
       }
       // validate the optional field `rule_type`
       if (jsonObj.get("rule_type") != null && !jsonObj.get("rule_type").isJsonNull()) {
@@ -649,7 +650,7 @@ public class Policybuilderv3Rule {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull() && !jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
       }
   }
 
@@ -682,22 +683,22 @@ public class Policybuilderv3Rule {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3Rule given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3Rule
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3Rule
-  */
+  /**
+   * Create an instance of Policybuilderv3Rule given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3Rule
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3Rule
+   */
   public static Policybuilderv3Rule fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3Rule.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3Rule to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3Rule to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

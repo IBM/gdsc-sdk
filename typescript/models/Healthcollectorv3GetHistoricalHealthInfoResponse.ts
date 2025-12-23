@@ -26,6 +26,8 @@ export class Healthcollectorv3GetHistoricalHealthInfoResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "historicalDataNodes",
@@ -47,4 +49,3 @@ export class Healthcollectorv3GetHistoricalHealthInfoResponse {
     public constructor() {
     }
 }
-

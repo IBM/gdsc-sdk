@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmpolicymanagerv3UpdateTicketStatusResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmpolicymanagerv3UpdateTicketStatusResponse {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String message;
 
   public static final String SERIALIZED_NAME_NEW_STATUS = "newStatus";
   @SerializedName(SERIALIZED_NAME_NEW_STATUS)
+  @javax.annotation.Nullable
   private String newStatus;
 
   public static final String SERIALIZED_NAME_UPDATE_TIME = "updateTime";
   @SerializedName(SERIALIZED_NAME_UPDATE_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime updateTime;
 
   public Qspmpolicymanagerv3UpdateTicketStatusResponse() {
   }
 
-  public Qspmpolicymanagerv3UpdateTicketStatusResponse message(String message) {
+  public Qspmpolicymanagerv3UpdateTicketStatusResponse message(@javax.annotation.Nullable String message) {
     this.message = message;
     return this;
   }
 
-   /**
+  /**
    * Get message
    * @return message
-  **/
+   */
   @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setMessage(@javax.annotation.Nullable String message) {
     this.message = message;
   }
 
 
-  public Qspmpolicymanagerv3UpdateTicketStatusResponse newStatus(String newStatus) {
+  public Qspmpolicymanagerv3UpdateTicketStatusResponse newStatus(@javax.annotation.Nullable String newStatus) {
     this.newStatus = newStatus;
     return this;
   }
 
-   /**
+  /**
    * Get newStatus
    * @return newStatus
-  **/
+   */
   @javax.annotation.Nullable
   public String getNewStatus() {
     return newStatus;
   }
 
-  public void setNewStatus(String newStatus) {
+  public void setNewStatus(@javax.annotation.Nullable String newStatus) {
     this.newStatus = newStatus;
   }
 
 
-  public Qspmpolicymanagerv3UpdateTicketStatusResponse updateTime(OffsetDateTime updateTime) {
+  public Qspmpolicymanagerv3UpdateTicketStatusResponse updateTime(@javax.annotation.Nullable OffsetDateTime updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
-   /**
+  /**
    * Get updateTime
    * @return updateTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getUpdateTime() {
     return updateTime;
   }
 
-  public void setUpdateTime(OffsetDateTime updateTime) {
+  public void setUpdateTime(@javax.annotation.Nullable OffsetDateTime updateTime) {
     this.updateTime = updateTime;
   }
 
@@ -172,25 +176,22 @@ public class Qspmpolicymanagerv3UpdateTicketStatusResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("message");
-    openapiFields.add("newStatus");
-    openapiFields.add("updateTime");
+    openapiFields = new HashSet<String>(Arrays.asList("message", "newStatus", "updateTime"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3UpdateTicketStatusResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3UpdateTicketStatusResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmpolicymanagerv3UpdateTicketStatusResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmpolicymanagerv3UpdateTicketStatusResponse is not found in the empty JSON string", Qspmpolicymanagerv3UpdateTicketStatusResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmpolicymanagerv3UpdateTicketStatusResponse is not found in the empty JSON string", Qspmpolicymanagerv3UpdateTicketStatusResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,15 +199,15 @@ public class Qspmpolicymanagerv3UpdateTicketStatusResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmpolicymanagerv3UpdateTicketStatusResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3UpdateTicketStatusResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3UpdateTicketStatusResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
       if ((jsonObj.get("newStatus") != null && !jsonObj.get("newStatus").isJsonNull()) && !jsonObj.get("newStatus").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `newStatus` to be a primitive type in the JSON string but got `%s`", jsonObj.get("newStatus").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `newStatus` to be a primitive type in the JSON string but got `%s`", jsonObj.get("newStatus").toString()));
       }
   }
 
@@ -239,22 +240,22 @@ public class Qspmpolicymanagerv3UpdateTicketStatusResponse {
     }
   }
 
- /**
-  * Create an instance of Qspmpolicymanagerv3UpdateTicketStatusResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmpolicymanagerv3UpdateTicketStatusResponse
-  * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3UpdateTicketStatusResponse
-  */
+  /**
+   * Create an instance of Qspmpolicymanagerv3UpdateTicketStatusResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmpolicymanagerv3UpdateTicketStatusResponse
+   * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3UpdateTicketStatusResponse
+   */
   public static Qspmpolicymanagerv3UpdateTicketStatusResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmpolicymanagerv3UpdateTicketStatusResponse.class);
   }
 
- /**
-  * Convert an instance of Qspmpolicymanagerv3UpdateTicketStatusResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmpolicymanagerv3UpdateTicketStatusResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

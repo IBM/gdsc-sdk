@@ -27,7 +27,7 @@ class Reportsv3MetricsColumn(BaseModel):
     """
     Reportsv3MetricsColumn
     """ # noqa: E501
-    aggregation_type: Optional[Reportsv3AggregationType] = None
+    aggregation_type: Optional[Reportsv3AggregationType] = Reportsv3AggregationType.UNDEFINED_AGG_TYPE
     header_id: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["aggregation_type", "header_id"]
 
@@ -82,7 +82,7 @@ class Reportsv3MetricsColumn(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "aggregation_type": obj.get("aggregation_type"),
+            "aggregation_type": obj.get("aggregation_type") if obj.get("aggregation_type") is not None else Reportsv3AggregationType.UNDEFINED_AGG_TYPE,
             "header_id": obj.get("header_id")
         })
         return _obj

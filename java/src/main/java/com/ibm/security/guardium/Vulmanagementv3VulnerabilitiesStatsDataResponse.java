@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,272 +38,283 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * VulnerabilitiesStatsDataResponse - Calculates and returns various vulnerabilities stats data.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Vulmanagementv3VulnerabilitiesStatsDataResponse {
   public static final String SERIALIZED_NAME_SEVERITY_CRITICAL_COUNT = "severity_critical_count";
   @SerializedName(SERIALIZED_NAME_SEVERITY_CRITICAL_COUNT)
+  @javax.annotation.Nullable
   private String severityCriticalCount;
 
   public static final String SERIALIZED_NAME_SEVERITY_HIGH_COUNT = "severity_high_count";
   @SerializedName(SERIALIZED_NAME_SEVERITY_HIGH_COUNT)
+  @javax.annotation.Nullable
   private String severityHighCount;
 
   public static final String SERIALIZED_NAME_SEVERITY_LOW_COUNT = "severity_low_count";
   @SerializedName(SERIALIZED_NAME_SEVERITY_LOW_COUNT)
+  @javax.annotation.Nullable
   private String severityLowCount;
 
   public static final String SERIALIZED_NAME_SEVERITY_MEDIUM_COUNT = "severity_medium_count";
   @SerializedName(SERIALIZED_NAME_SEVERITY_MEDIUM_COUNT)
+  @javax.annotation.Nullable
   private String severityMediumCount;
 
   public static final String SERIALIZED_NAME_SEVERITY_UNKNOWN_COUNT = "severity_unknown_count";
   @SerializedName(SERIALIZED_NAME_SEVERITY_UNKNOWN_COUNT)
+  @javax.annotation.Nullable
   private String severityUnknownCount;
 
   public static final String SERIALIZED_NAME_STATUS_EXCEPTION_COUNT = "status_exception_count";
   @SerializedName(SERIALIZED_NAME_STATUS_EXCEPTION_COUNT)
+  @javax.annotation.Nullable
   private String statusExceptionCount;
 
   public static final String SERIALIZED_NAME_STATUS_FIXED_COUNT = "status_fixed_count";
   @SerializedName(SERIALIZED_NAME_STATUS_FIXED_COUNT)
+  @javax.annotation.Nullable
   private String statusFixedCount;
 
   public static final String SERIALIZED_NAME_STATUS_INPROGRESS_COUNT = "status_inprogress_count";
   @SerializedName(SERIALIZED_NAME_STATUS_INPROGRESS_COUNT)
+  @javax.annotation.Nullable
   private String statusInprogressCount;
 
   public static final String SERIALIZED_NAME_STATUS_OPEN_COUNT = "status_open_count";
   @SerializedName(SERIALIZED_NAME_STATUS_OPEN_COUNT)
+  @javax.annotation.Nullable
   private String statusOpenCount;
 
   public static final String SERIALIZED_NAME_STATUS_UNKNOWN_COUNT = "status_unknown_count";
   @SerializedName(SERIALIZED_NAME_STATUS_UNKNOWN_COUNT)
+  @javax.annotation.Nullable
   private String statusUnknownCount;
 
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "total_count";
   @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
+  @javax.annotation.Nullable
   private String totalCount;
 
   public Vulmanagementv3VulnerabilitiesStatsDataResponse() {
   }
 
-  public Vulmanagementv3VulnerabilitiesStatsDataResponse severityCriticalCount(String severityCriticalCount) {
+  public Vulmanagementv3VulnerabilitiesStatsDataResponse severityCriticalCount(@javax.annotation.Nullable String severityCriticalCount) {
     this.severityCriticalCount = severityCriticalCount;
     return this;
   }
 
-   /**
+  /**
    * Number of critical vulnerabilities.
    * @return severityCriticalCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getSeverityCriticalCount() {
     return severityCriticalCount;
   }
 
-  public void setSeverityCriticalCount(String severityCriticalCount) {
+  public void setSeverityCriticalCount(@javax.annotation.Nullable String severityCriticalCount) {
     this.severityCriticalCount = severityCriticalCount;
   }
 
 
-  public Vulmanagementv3VulnerabilitiesStatsDataResponse severityHighCount(String severityHighCount) {
+  public Vulmanagementv3VulnerabilitiesStatsDataResponse severityHighCount(@javax.annotation.Nullable String severityHighCount) {
     this.severityHighCount = severityHighCount;
     return this;
   }
 
-   /**
+  /**
    * Number of high vulnerabilities.
    * @return severityHighCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getSeverityHighCount() {
     return severityHighCount;
   }
 
-  public void setSeverityHighCount(String severityHighCount) {
+  public void setSeverityHighCount(@javax.annotation.Nullable String severityHighCount) {
     this.severityHighCount = severityHighCount;
   }
 
 
-  public Vulmanagementv3VulnerabilitiesStatsDataResponse severityLowCount(String severityLowCount) {
+  public Vulmanagementv3VulnerabilitiesStatsDataResponse severityLowCount(@javax.annotation.Nullable String severityLowCount) {
     this.severityLowCount = severityLowCount;
     return this;
   }
 
-   /**
+  /**
    * Number of low vulnerabilities.
    * @return severityLowCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getSeverityLowCount() {
     return severityLowCount;
   }
 
-  public void setSeverityLowCount(String severityLowCount) {
+  public void setSeverityLowCount(@javax.annotation.Nullable String severityLowCount) {
     this.severityLowCount = severityLowCount;
   }
 
 
-  public Vulmanagementv3VulnerabilitiesStatsDataResponse severityMediumCount(String severityMediumCount) {
+  public Vulmanagementv3VulnerabilitiesStatsDataResponse severityMediumCount(@javax.annotation.Nullable String severityMediumCount) {
     this.severityMediumCount = severityMediumCount;
     return this;
   }
 
-   /**
+  /**
    * Number of medium vulnerabilities.
    * @return severityMediumCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getSeverityMediumCount() {
     return severityMediumCount;
   }
 
-  public void setSeverityMediumCount(String severityMediumCount) {
+  public void setSeverityMediumCount(@javax.annotation.Nullable String severityMediumCount) {
     this.severityMediumCount = severityMediumCount;
   }
 
 
-  public Vulmanagementv3VulnerabilitiesStatsDataResponse severityUnknownCount(String severityUnknownCount) {
+  public Vulmanagementv3VulnerabilitiesStatsDataResponse severityUnknownCount(@javax.annotation.Nullable String severityUnknownCount) {
     this.severityUnknownCount = severityUnknownCount;
     return this;
   }
 
-   /**
+  /**
    * Number of unknown severities vulnerabilities.
    * @return severityUnknownCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getSeverityUnknownCount() {
     return severityUnknownCount;
   }
 
-  public void setSeverityUnknownCount(String severityUnknownCount) {
+  public void setSeverityUnknownCount(@javax.annotation.Nullable String severityUnknownCount) {
     this.severityUnknownCount = severityUnknownCount;
   }
 
 
-  public Vulmanagementv3VulnerabilitiesStatsDataResponse statusExceptionCount(String statusExceptionCount) {
+  public Vulmanagementv3VulnerabilitiesStatsDataResponse statusExceptionCount(@javax.annotation.Nullable String statusExceptionCount) {
     this.statusExceptionCount = statusExceptionCount;
     return this;
   }
 
-   /**
+  /**
    * Number of exception vulnerabilities.
    * @return statusExceptionCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatusExceptionCount() {
     return statusExceptionCount;
   }
 
-  public void setStatusExceptionCount(String statusExceptionCount) {
+  public void setStatusExceptionCount(@javax.annotation.Nullable String statusExceptionCount) {
     this.statusExceptionCount = statusExceptionCount;
   }
 
 
-  public Vulmanagementv3VulnerabilitiesStatsDataResponse statusFixedCount(String statusFixedCount) {
+  public Vulmanagementv3VulnerabilitiesStatsDataResponse statusFixedCount(@javax.annotation.Nullable String statusFixedCount) {
     this.statusFixedCount = statusFixedCount;
     return this;
   }
 
-   /**
+  /**
    * Number of fixed vulnerabilities.
    * @return statusFixedCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatusFixedCount() {
     return statusFixedCount;
   }
 
-  public void setStatusFixedCount(String statusFixedCount) {
+  public void setStatusFixedCount(@javax.annotation.Nullable String statusFixedCount) {
     this.statusFixedCount = statusFixedCount;
   }
 
 
-  public Vulmanagementv3VulnerabilitiesStatsDataResponse statusInprogressCount(String statusInprogressCount) {
+  public Vulmanagementv3VulnerabilitiesStatsDataResponse statusInprogressCount(@javax.annotation.Nullable String statusInprogressCount) {
     this.statusInprogressCount = statusInprogressCount;
     return this;
   }
 
-   /**
+  /**
    * Number of vulnerabilities in progress.
    * @return statusInprogressCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatusInprogressCount() {
     return statusInprogressCount;
   }
 
-  public void setStatusInprogressCount(String statusInprogressCount) {
+  public void setStatusInprogressCount(@javax.annotation.Nullable String statusInprogressCount) {
     this.statusInprogressCount = statusInprogressCount;
   }
 
 
-  public Vulmanagementv3VulnerabilitiesStatsDataResponse statusOpenCount(String statusOpenCount) {
+  public Vulmanagementv3VulnerabilitiesStatsDataResponse statusOpenCount(@javax.annotation.Nullable String statusOpenCount) {
     this.statusOpenCount = statusOpenCount;
     return this;
   }
 
-   /**
+  /**
    * Number of open vulnerabilities.
    * @return statusOpenCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatusOpenCount() {
     return statusOpenCount;
   }
 
-  public void setStatusOpenCount(String statusOpenCount) {
+  public void setStatusOpenCount(@javax.annotation.Nullable String statusOpenCount) {
     this.statusOpenCount = statusOpenCount;
   }
 
 
-  public Vulmanagementv3VulnerabilitiesStatsDataResponse statusUnknownCount(String statusUnknownCount) {
+  public Vulmanagementv3VulnerabilitiesStatsDataResponse statusUnknownCount(@javax.annotation.Nullable String statusUnknownCount) {
     this.statusUnknownCount = statusUnknownCount;
     return this;
   }
 
-   /**
+  /**
    * Number of unknown statuses vulnerabilities.
    * @return statusUnknownCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatusUnknownCount() {
     return statusUnknownCount;
   }
 
-  public void setStatusUnknownCount(String statusUnknownCount) {
+  public void setStatusUnknownCount(@javax.annotation.Nullable String statusUnknownCount) {
     this.statusUnknownCount = statusUnknownCount;
   }
 
 
-  public Vulmanagementv3VulnerabilitiesStatsDataResponse totalCount(String totalCount) {
+  public Vulmanagementv3VulnerabilitiesStatsDataResponse totalCount(@javax.annotation.Nullable String totalCount) {
     this.totalCount = totalCount;
     return this;
   }
 
-   /**
+  /**
    * Total count of vulnerabilities.
    * @return totalCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(String totalCount) {
+  public void setTotalCount(@javax.annotation.Nullable String totalCount) {
     this.totalCount = totalCount;
   }
 
@@ -371,33 +383,22 @@ public class Vulmanagementv3VulnerabilitiesStatsDataResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("severity_critical_count");
-    openapiFields.add("severity_high_count");
-    openapiFields.add("severity_low_count");
-    openapiFields.add("severity_medium_count");
-    openapiFields.add("severity_unknown_count");
-    openapiFields.add("status_exception_count");
-    openapiFields.add("status_fixed_count");
-    openapiFields.add("status_inprogress_count");
-    openapiFields.add("status_open_count");
-    openapiFields.add("status_unknown_count");
-    openapiFields.add("total_count");
+    openapiFields = new HashSet<String>(Arrays.asList("severity_critical_count", "severity_high_count", "severity_low_count", "severity_medium_count", "severity_unknown_count", "status_exception_count", "status_fixed_count", "status_inprogress_count", "status_open_count", "status_unknown_count", "total_count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Vulmanagementv3VulnerabilitiesStatsDataResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Vulmanagementv3VulnerabilitiesStatsDataResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Vulmanagementv3VulnerabilitiesStatsDataResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Vulmanagementv3VulnerabilitiesStatsDataResponse is not found in the empty JSON string", Vulmanagementv3VulnerabilitiesStatsDataResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Vulmanagementv3VulnerabilitiesStatsDataResponse is not found in the empty JSON string", Vulmanagementv3VulnerabilitiesStatsDataResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -405,42 +406,42 @@ public class Vulmanagementv3VulnerabilitiesStatsDataResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Vulmanagementv3VulnerabilitiesStatsDataResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Vulmanagementv3VulnerabilitiesStatsDataResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Vulmanagementv3VulnerabilitiesStatsDataResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("severity_critical_count") != null && !jsonObj.get("severity_critical_count").isJsonNull()) && !jsonObj.get("severity_critical_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `severity_critical_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity_critical_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `severity_critical_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity_critical_count").toString()));
       }
       if ((jsonObj.get("severity_high_count") != null && !jsonObj.get("severity_high_count").isJsonNull()) && !jsonObj.get("severity_high_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `severity_high_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity_high_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `severity_high_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity_high_count").toString()));
       }
       if ((jsonObj.get("severity_low_count") != null && !jsonObj.get("severity_low_count").isJsonNull()) && !jsonObj.get("severity_low_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `severity_low_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity_low_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `severity_low_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity_low_count").toString()));
       }
       if ((jsonObj.get("severity_medium_count") != null && !jsonObj.get("severity_medium_count").isJsonNull()) && !jsonObj.get("severity_medium_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `severity_medium_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity_medium_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `severity_medium_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity_medium_count").toString()));
       }
       if ((jsonObj.get("severity_unknown_count") != null && !jsonObj.get("severity_unknown_count").isJsonNull()) && !jsonObj.get("severity_unknown_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `severity_unknown_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity_unknown_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `severity_unknown_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity_unknown_count").toString()));
       }
       if ((jsonObj.get("status_exception_count") != null && !jsonObj.get("status_exception_count").isJsonNull()) && !jsonObj.get("status_exception_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status_exception_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_exception_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status_exception_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_exception_count").toString()));
       }
       if ((jsonObj.get("status_fixed_count") != null && !jsonObj.get("status_fixed_count").isJsonNull()) && !jsonObj.get("status_fixed_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status_fixed_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_fixed_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status_fixed_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_fixed_count").toString()));
       }
       if ((jsonObj.get("status_inprogress_count") != null && !jsonObj.get("status_inprogress_count").isJsonNull()) && !jsonObj.get("status_inprogress_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status_inprogress_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_inprogress_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status_inprogress_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_inprogress_count").toString()));
       }
       if ((jsonObj.get("status_open_count") != null && !jsonObj.get("status_open_count").isJsonNull()) && !jsonObj.get("status_open_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status_open_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_open_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status_open_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_open_count").toString()));
       }
       if ((jsonObj.get("status_unknown_count") != null && !jsonObj.get("status_unknown_count").isJsonNull()) && !jsonObj.get("status_unknown_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status_unknown_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_unknown_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status_unknown_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_unknown_count").toString()));
       }
       if ((jsonObj.get("total_count") != null && !jsonObj.get("total_count").isJsonNull()) && !jsonObj.get("total_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `total_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `total_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_count").toString()));
       }
   }
 
@@ -473,22 +474,22 @@ public class Vulmanagementv3VulnerabilitiesStatsDataResponse {
     }
   }
 
- /**
-  * Create an instance of Vulmanagementv3VulnerabilitiesStatsDataResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Vulmanagementv3VulnerabilitiesStatsDataResponse
-  * @throws IOException if the JSON string is invalid with respect to Vulmanagementv3VulnerabilitiesStatsDataResponse
-  */
+  /**
+   * Create an instance of Vulmanagementv3VulnerabilitiesStatsDataResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Vulmanagementv3VulnerabilitiesStatsDataResponse
+   * @throws IOException if the JSON string is invalid with respect to Vulmanagementv3VulnerabilitiesStatsDataResponse
+   */
   public static Vulmanagementv3VulnerabilitiesStatsDataResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Vulmanagementv3VulnerabilitiesStatsDataResponse.class);
   }
 
- /**
-  * Convert an instance of Vulmanagementv3VulnerabilitiesStatsDataResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Vulmanagementv3VulnerabilitiesStatsDataResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

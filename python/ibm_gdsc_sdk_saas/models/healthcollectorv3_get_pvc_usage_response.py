@@ -72,9 +72,9 @@ class Healthcollectorv3GetPVCUsageResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in pvc_usage (list)
         _items = []
         if self.pvc_usage:
-            for _item in self.pvc_usage:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_pvc_usage in self.pvc_usage:
+                if _item_pvc_usage:
+                    _items.append(_item_pvc_usage.to_dict())
             _dict['pvc_usage'] = _items
         return _dict
 

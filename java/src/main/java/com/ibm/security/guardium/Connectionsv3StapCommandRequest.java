@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * StapCommandRequest defines the message structure for STAP command request.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3StapCommandRequest {
   public static final String SERIALIZED_NAME_COMMAND = "command";
   @SerializedName(SERIALIZED_NAME_COMMAND)
+  @javax.annotation.Nullable
   private String command;
 
   public static final String SERIALIZED_NAME_OPERATION = "operation";
   @SerializedName(SERIALIZED_NAME_OPERATION)
-  private Connectionsv3StapOperation operation = Connectionsv3StapOperation.REINITIALIZE_BUFFER;
+  @javax.annotation.Nullable
+  private Connectionsv3StapOperation operation = Connectionsv3StapOperation.STAP_REINITIALIZE_BUFFER;
 
   public static final String SERIALIZED_NAME_STAP_ID = "stap_id";
   @SerializedName(SERIALIZED_NAME_STAP_ID)
+  @javax.annotation.Nullable
   private String stapId;
 
   public Connectionsv3StapCommandRequest() {
   }
 
-  public Connectionsv3StapCommandRequest command(String command) {
+  public Connectionsv3StapCommandRequest command(@javax.annotation.Nullable String command) {
     this.command = command;
     return this;
   }
 
-   /**
+  /**
    * Specify STAP command.
    * @return command
-  **/
+   */
   @javax.annotation.Nullable
   public String getCommand() {
     return command;
   }
 
-  public void setCommand(String command) {
+  public void setCommand(@javax.annotation.Nullable String command) {
     this.command = command;
   }
 
 
-  public Connectionsv3StapCommandRequest operation(Connectionsv3StapOperation operation) {
+  public Connectionsv3StapCommandRequest operation(@javax.annotation.Nullable Connectionsv3StapOperation operation) {
     this.operation = operation;
     return this;
   }
 
-   /**
+  /**
    * Get operation
    * @return operation
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3StapOperation getOperation() {
     return operation;
   }
 
-  public void setOperation(Connectionsv3StapOperation operation) {
+  public void setOperation(@javax.annotation.Nullable Connectionsv3StapOperation operation) {
     this.operation = operation;
   }
 
 
-  public Connectionsv3StapCommandRequest stapId(String stapId) {
+  public Connectionsv3StapCommandRequest stapId(@javax.annotation.Nullable String stapId) {
     this.stapId = stapId;
     return this;
   }
 
-   /**
+  /**
    * Provide STAP identifier.
    * @return stapId
-  **/
+   */
   @javax.annotation.Nullable
   public String getStapId() {
     return stapId;
   }
 
-  public void setStapId(String stapId) {
+  public void setStapId(@javax.annotation.Nullable String stapId) {
     this.stapId = stapId;
   }
 
@@ -172,25 +176,22 @@ public class Connectionsv3StapCommandRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("command");
-    openapiFields.add("operation");
-    openapiFields.add("stap_id");
+    openapiFields = new HashSet<String>(Arrays.asList("command", "operation", "stap_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3StapCommandRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3StapCommandRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3StapCommandRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3StapCommandRequest is not found in the empty JSON string", Connectionsv3StapCommandRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3StapCommandRequest is not found in the empty JSON string", Connectionsv3StapCommandRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,19 +199,19 @@ public class Connectionsv3StapCommandRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3StapCommandRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3StapCommandRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3StapCommandRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("command") != null && !jsonObj.get("command").isJsonNull()) && !jsonObj.get("command").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `command` to be a primitive type in the JSON string but got `%s`", jsonObj.get("command").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `command` to be a primitive type in the JSON string but got `%s`", jsonObj.get("command").toString()));
       }
       // validate the optional field `operation`
       if (jsonObj.get("operation") != null && !jsonObj.get("operation").isJsonNull()) {
         Connectionsv3StapOperation.validateJsonElement(jsonObj.get("operation"));
       }
       if ((jsonObj.get("stap_id") != null && !jsonObj.get("stap_id").isJsonNull()) && !jsonObj.get("stap_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `stap_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `stap_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap_id").toString()));
       }
   }
 
@@ -243,22 +244,22 @@ public class Connectionsv3StapCommandRequest {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3StapCommandRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3StapCommandRequest
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3StapCommandRequest
-  */
+  /**
+   * Create an instance of Connectionsv3StapCommandRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3StapCommandRequest
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3StapCommandRequest
+   */
   public static Connectionsv3StapCommandRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3StapCommandRequest.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3StapCommandRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3StapCommandRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CreateChartTemplatev2Request is the argument for CreateChartTemplatev2() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3CreateChartTemplatev2Request {
   public static final String SERIALIZED_NAME_VEGA_DEFINITION = "vega_definition";
   @SerializedName(SERIALIZED_NAME_VEGA_DEFINITION)
+  @javax.annotation.Nullable
   private String vegaDefinition;
 
   public Reportsv3CreateChartTemplatev2Request() {
   }
 
-  public Reportsv3CreateChartTemplatev2Request vegaDefinition(String vegaDefinition) {
+  public Reportsv3CreateChartTemplatev2Request vegaDefinition(@javax.annotation.Nullable String vegaDefinition) {
     this.vegaDefinition = vegaDefinition;
     return this;
   }
 
-   /**
+  /**
    * The VEGA chart template, as a stringified JSON.
    * @return vegaDefinition
-  **/
+   */
   @javax.annotation.Nullable
   public String getVegaDefinition() {
     return vegaDefinition;
   }
 
-  public void setVegaDefinition(String vegaDefinition) {
+  public void setVegaDefinition(@javax.annotation.Nullable String vegaDefinition) {
     this.vegaDefinition = vegaDefinition;
   }
 
@@ -121,23 +123,22 @@ public class Reportsv3CreateChartTemplatev2Request {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("vega_definition");
+    openapiFields = new HashSet<String>(Arrays.asList("vega_definition"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3CreateChartTemplatev2Request
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3CreateChartTemplatev2Request
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3CreateChartTemplatev2Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3CreateChartTemplatev2Request is not found in the empty JSON string", Reportsv3CreateChartTemplatev2Request.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3CreateChartTemplatev2Request is not found in the empty JSON string", Reportsv3CreateChartTemplatev2Request.openapiRequiredFields.toString()));
         }
       }
 
@@ -145,12 +146,12 @@ public class Reportsv3CreateChartTemplatev2Request {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3CreateChartTemplatev2Request.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3CreateChartTemplatev2Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3CreateChartTemplatev2Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("vega_definition") != null && !jsonObj.get("vega_definition").isJsonNull()) && !jsonObj.get("vega_definition").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vega_definition` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vega_definition").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vega_definition` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vega_definition").toString()));
       }
   }
 
@@ -183,22 +184,22 @@ public class Reportsv3CreateChartTemplatev2Request {
     }
   }
 
- /**
-  * Create an instance of Reportsv3CreateChartTemplatev2Request given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3CreateChartTemplatev2Request
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3CreateChartTemplatev2Request
-  */
+  /**
+   * Create an instance of Reportsv3CreateChartTemplatev2Request given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3CreateChartTemplatev2Request
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3CreateChartTemplatev2Request
+   */
   public static Reportsv3CreateChartTemplatev2Request fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3CreateChartTemplatev2Request.class);
   }
 
- /**
-  * Convert an instance of Reportsv3CreateChartTemplatev2Request to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3CreateChartTemplatev2Request to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -103,13 +103,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserCreateAPIKeyCall(Tenantuserv3CreateApiKeyRequest tenantuserv3CreateApiKeyRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserCreateAPIKeyCall(@javax.annotation.Nonnull Tenantuserv3CreateApiKeyRequest tenantuserv3CreateApiKeyRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -155,7 +156,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserCreateAPIKeyValidateBeforeCall(Tenantuserv3CreateApiKeyRequest tenantuserv3CreateApiKeyRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserCreateAPIKeyValidateBeforeCall(@javax.annotation.Nonnull Tenantuserv3CreateApiKeyRequest tenantuserv3CreateApiKeyRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tenantuserv3CreateApiKeyRequest' is set
         if (tenantuserv3CreateApiKeyRequest == null) {
             throw new ApiException("Missing the required parameter 'tenantuserv3CreateApiKeyRequest' when calling tenantuserCreateAPIKey(Async)");
@@ -172,13 +173,14 @@ public class TenantuserApi {
      * @return Tenantuserv3CreateApiKeyResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3CreateApiKeyResponse tenantuserCreateAPIKey(Tenantuserv3CreateApiKeyRequest tenantuserv3CreateApiKeyRequest) throws ApiException {
+    public Tenantuserv3CreateApiKeyResponse tenantuserCreateAPIKey(@javax.annotation.Nonnull Tenantuserv3CreateApiKeyRequest tenantuserv3CreateApiKeyRequest) throws ApiException {
         ApiResponse<Tenantuserv3CreateApiKeyResponse> localVarResp = tenantuserCreateAPIKeyWithHttpInfo(tenantuserv3CreateApiKeyRequest);
         return localVarResp.getData();
     }
@@ -190,13 +192,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3CreateApiKeyResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3CreateApiKeyResponse> tenantuserCreateAPIKeyWithHttpInfo(Tenantuserv3CreateApiKeyRequest tenantuserv3CreateApiKeyRequest) throws ApiException {
+    public ApiResponse<Tenantuserv3CreateApiKeyResponse> tenantuserCreateAPIKeyWithHttpInfo(@javax.annotation.Nonnull Tenantuserv3CreateApiKeyRequest tenantuserv3CreateApiKeyRequest) throws ApiException {
         okhttp3.Call localVarCall = tenantuserCreateAPIKeyValidateBeforeCall(tenantuserv3CreateApiKeyRequest, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3CreateApiKeyResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -210,13 +213,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserCreateAPIKeyAsync(Tenantuserv3CreateApiKeyRequest tenantuserv3CreateApiKeyRequest, final ApiCallback<Tenantuserv3CreateApiKeyResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserCreateAPIKeyAsync(@javax.annotation.Nonnull Tenantuserv3CreateApiKeyRequest tenantuserv3CreateApiKeyRequest, final ApiCallback<Tenantuserv3CreateApiKeyResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserCreateAPIKeyValidateBeforeCall(tenantuserv3CreateApiKeyRequest, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3CreateApiKeyResponse>(){}.getType();
@@ -230,13 +234,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserDeleteAPIKeyCall(String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserDeleteAPIKeyCall(@javax.annotation.Nonnull String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -282,7 +287,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserDeleteAPIKeyValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserDeleteAPIKeyValidateBeforeCall(@javax.annotation.Nonnull String id, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling tenantuserDeleteAPIKey(Async)");
@@ -299,13 +304,14 @@ public class TenantuserApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object tenantuserDeleteAPIKey(String id) throws ApiException {
+    public Object tenantuserDeleteAPIKey(@javax.annotation.Nonnull String id) throws ApiException {
         ApiResponse<Object> localVarResp = tenantuserDeleteAPIKeyWithHttpInfo(id);
         return localVarResp.getData();
     }
@@ -317,13 +323,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> tenantuserDeleteAPIKeyWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<Object> tenantuserDeleteAPIKeyWithHttpInfo(@javax.annotation.Nonnull String id) throws ApiException {
         okhttp3.Call localVarCall = tenantuserDeleteAPIKeyValidateBeforeCall(id, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -337,13 +344,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserDeleteAPIKeyAsync(String id, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call tenantuserDeleteAPIKeyAsync(@javax.annotation.Nonnull String id, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserDeleteAPIKeyValidateBeforeCall(id, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -357,13 +365,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserDeleteRoleCall(String roleId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserDeleteRoleCall(@javax.annotation.Nonnull String roleId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -409,7 +418,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserDeleteRoleValidateBeforeCall(String roleId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserDeleteRoleValidateBeforeCall(@javax.annotation.Nonnull String roleId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'roleId' is set
         if (roleId == null) {
             throw new ApiException("Missing the required parameter 'roleId' when calling tenantuserDeleteRole(Async)");
@@ -426,13 +435,14 @@ public class TenantuserApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object tenantuserDeleteRole(String roleId) throws ApiException {
+    public Object tenantuserDeleteRole(@javax.annotation.Nonnull String roleId) throws ApiException {
         ApiResponse<Object> localVarResp = tenantuserDeleteRoleWithHttpInfo(roleId);
         return localVarResp.getData();
     }
@@ -444,13 +454,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> tenantuserDeleteRoleWithHttpInfo(String roleId) throws ApiException {
+    public ApiResponse<Object> tenantuserDeleteRoleWithHttpInfo(@javax.annotation.Nonnull String roleId) throws ApiException {
         okhttp3.Call localVarCall = tenantuserDeleteRoleValidateBeforeCall(roleId, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -464,13 +475,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserDeleteRoleAsync(String roleId, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call tenantuserDeleteRoleAsync(@javax.annotation.Nonnull String roleId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserDeleteRoleValidateBeforeCall(roleId, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -483,7 +495,8 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -545,7 +558,8 @@ public class TenantuserApi {
      * @return Tenantuserv3GetApiKeysResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -562,7 +576,8 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3GetApiKeysResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -581,7 +596,8 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -600,7 +616,8 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -662,7 +679,8 @@ public class TenantuserApi {
      * @return Tenantuserv3GetCurrentUserResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -679,7 +697,8 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3GetCurrentUserResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -698,7 +717,8 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -719,13 +739,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetPrivilegeCall(String privilegePrivilegeId, String privilegeType, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetPrivilegeCall(@javax.annotation.Nonnull String privilegePrivilegeId, @javax.annotation.Nullable String privilegeType, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -775,7 +796,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserGetPrivilegeValidateBeforeCall(String privilegePrivilegeId, String privilegeType, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserGetPrivilegeValidateBeforeCall(@javax.annotation.Nonnull String privilegePrivilegeId, @javax.annotation.Nullable String privilegeType, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'privilegePrivilegeId' is set
         if (privilegePrivilegeId == null) {
             throw new ApiException("Missing the required parameter 'privilegePrivilegeId' when calling tenantuserGetPrivilege(Async)");
@@ -793,13 +814,14 @@ public class TenantuserApi {
      * @return Tenantuserv3GetPrivilegeResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3GetPrivilegeResponse tenantuserGetPrivilege(String privilegePrivilegeId, String privilegeType) throws ApiException {
+    public Tenantuserv3GetPrivilegeResponse tenantuserGetPrivilege(@javax.annotation.Nonnull String privilegePrivilegeId, @javax.annotation.Nullable String privilegeType) throws ApiException {
         ApiResponse<Tenantuserv3GetPrivilegeResponse> localVarResp = tenantuserGetPrivilegeWithHttpInfo(privilegePrivilegeId, privilegeType);
         return localVarResp.getData();
     }
@@ -812,13 +834,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3GetPrivilegeResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3GetPrivilegeResponse> tenantuserGetPrivilegeWithHttpInfo(String privilegePrivilegeId, String privilegeType) throws ApiException {
+    public ApiResponse<Tenantuserv3GetPrivilegeResponse> tenantuserGetPrivilegeWithHttpInfo(@javax.annotation.Nonnull String privilegePrivilegeId, @javax.annotation.Nullable String privilegeType) throws ApiException {
         okhttp3.Call localVarCall = tenantuserGetPrivilegeValidateBeforeCall(privilegePrivilegeId, privilegeType, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetPrivilegeResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -833,13 +856,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetPrivilegeAsync(String privilegePrivilegeId, String privilegeType, final ApiCallback<Tenantuserv3GetPrivilegeResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetPrivilegeAsync(@javax.annotation.Nonnull String privilegePrivilegeId, @javax.annotation.Nullable String privilegeType, final ApiCallback<Tenantuserv3GetPrivilegeResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserGetPrivilegeValidateBeforeCall(privilegePrivilegeId, privilegeType, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetPrivilegeResponse>(){}.getType();
@@ -854,13 +878,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetPrivilegesCall(List<String> roles, String type, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetPrivilegesCall(@javax.annotation.Nullable List<String> roles, @javax.annotation.Nullable String type, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -913,7 +938,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserGetPrivilegesValidateBeforeCall(List<String> roles, String type, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserGetPrivilegesValidateBeforeCall(@javax.annotation.Nullable List<String> roles, @javax.annotation.Nullable String type, final ApiCallback _callback) throws ApiException {
         return tenantuserGetPrivilegesCall(roles, type, _callback);
 
     }
@@ -926,13 +951,14 @@ public class TenantuserApi {
      * @return Tenantuserv3GetPrivilegesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3GetPrivilegesResponse tenantuserGetPrivileges(List<String> roles, String type) throws ApiException {
+    public Tenantuserv3GetPrivilegesResponse tenantuserGetPrivileges(@javax.annotation.Nullable List<String> roles, @javax.annotation.Nullable String type) throws ApiException {
         ApiResponse<Tenantuserv3GetPrivilegesResponse> localVarResp = tenantuserGetPrivilegesWithHttpInfo(roles, type);
         return localVarResp.getData();
     }
@@ -945,13 +971,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3GetPrivilegesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3GetPrivilegesResponse> tenantuserGetPrivilegesWithHttpInfo(List<String> roles, String type) throws ApiException {
+    public ApiResponse<Tenantuserv3GetPrivilegesResponse> tenantuserGetPrivilegesWithHttpInfo(@javax.annotation.Nullable List<String> roles, @javax.annotation.Nullable String type) throws ApiException {
         okhttp3.Call localVarCall = tenantuserGetPrivilegesValidateBeforeCall(roles, type, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetPrivilegesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -966,13 +993,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetPrivilegesAsync(List<String> roles, String type, final ApiCallback<Tenantuserv3GetPrivilegesResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetPrivilegesAsync(@javax.annotation.Nullable List<String> roles, @javax.annotation.Nullable String type, final ApiCallback<Tenantuserv3GetPrivilegesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserGetPrivilegesValidateBeforeCall(roles, type, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetPrivilegesResponse>(){}.getType();
@@ -986,13 +1014,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetRoleCall(String roleId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetRoleCall(@javax.annotation.Nonnull String roleId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1038,7 +1067,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserGetRoleValidateBeforeCall(String roleId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserGetRoleValidateBeforeCall(@javax.annotation.Nonnull String roleId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'roleId' is set
         if (roleId == null) {
             throw new ApiException("Missing the required parameter 'roleId' when calling tenantuserGetRole(Async)");
@@ -1055,13 +1084,14 @@ public class TenantuserApi {
      * @return Tenantuserv3Role
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3Role tenantuserGetRole(String roleId) throws ApiException {
+    public Tenantuserv3Role tenantuserGetRole(@javax.annotation.Nonnull String roleId) throws ApiException {
         ApiResponse<Tenantuserv3Role> localVarResp = tenantuserGetRoleWithHttpInfo(roleId);
         return localVarResp.getData();
     }
@@ -1073,13 +1103,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3Role&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3Role> tenantuserGetRoleWithHttpInfo(String roleId) throws ApiException {
+    public ApiResponse<Tenantuserv3Role> tenantuserGetRoleWithHttpInfo(@javax.annotation.Nonnull String roleId) throws ApiException {
         okhttp3.Call localVarCall = tenantuserGetRoleValidateBeforeCall(roleId, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3Role>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1093,13 +1124,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetRoleAsync(String roleId, final ApiCallback<Tenantuserv3Role> _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetRoleAsync(@javax.annotation.Nonnull String roleId, final ApiCallback<Tenantuserv3Role> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserGetRoleValidateBeforeCall(roleId, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3Role>(){}.getType();
@@ -1112,7 +1144,8 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1174,7 +1207,8 @@ public class TenantuserApi {
      * @return Tenantuserv3GetRolesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1191,7 +1225,8 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3GetRolesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1210,7 +1245,8 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1230,13 +1266,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetUserCall(String userId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetUserCall(@javax.annotation.Nonnull String userId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1282,7 +1319,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserGetUserValidateBeforeCall(String userId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserGetUserValidateBeforeCall(@javax.annotation.Nonnull String userId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'userId' is set
         if (userId == null) {
             throw new ApiException("Missing the required parameter 'userId' when calling tenantuserGetUser(Async)");
@@ -1299,13 +1336,14 @@ public class TenantuserApi {
      * @return Tenantuserv3GetUserResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3GetUserResponse tenantuserGetUser(String userId) throws ApiException {
+    public Tenantuserv3GetUserResponse tenantuserGetUser(@javax.annotation.Nonnull String userId) throws ApiException {
         ApiResponse<Tenantuserv3GetUserResponse> localVarResp = tenantuserGetUserWithHttpInfo(userId);
         return localVarResp.getData();
     }
@@ -1317,13 +1355,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3GetUserResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3GetUserResponse> tenantuserGetUserWithHttpInfo(String userId) throws ApiException {
+    public ApiResponse<Tenantuserv3GetUserResponse> tenantuserGetUserWithHttpInfo(@javax.annotation.Nonnull String userId) throws ApiException {
         okhttp3.Call localVarCall = tenantuserGetUserValidateBeforeCall(userId, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetUserResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1337,13 +1376,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetUserAsync(String userId, final ApiCallback<Tenantuserv3GetUserResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetUserAsync(@javax.annotation.Nonnull String userId, final ApiCallback<Tenantuserv3GetUserResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserGetUserValidateBeforeCall(userId, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetUserResponse>(){}.getType();
@@ -1357,13 +1397,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetUserNamesCall(Tenantuserv3GetUserNamesRequest tenantuserv3GetUserNamesRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetUserNamesCall(@javax.annotation.Nonnull Tenantuserv3GetUserNamesRequest tenantuserv3GetUserNamesRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1409,7 +1450,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserGetUserNamesValidateBeforeCall(Tenantuserv3GetUserNamesRequest tenantuserv3GetUserNamesRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserGetUserNamesValidateBeforeCall(@javax.annotation.Nonnull Tenantuserv3GetUserNamesRequest tenantuserv3GetUserNamesRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tenantuserv3GetUserNamesRequest' is set
         if (tenantuserv3GetUserNamesRequest == null) {
             throw new ApiException("Missing the required parameter 'tenantuserv3GetUserNamesRequest' when calling tenantuserGetUserNames(Async)");
@@ -1426,13 +1467,14 @@ public class TenantuserApi {
      * @return Tenantuserv3GetUserNamesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3GetUserNamesResponse tenantuserGetUserNames(Tenantuserv3GetUserNamesRequest tenantuserv3GetUserNamesRequest) throws ApiException {
+    public Tenantuserv3GetUserNamesResponse tenantuserGetUserNames(@javax.annotation.Nonnull Tenantuserv3GetUserNamesRequest tenantuserv3GetUserNamesRequest) throws ApiException {
         ApiResponse<Tenantuserv3GetUserNamesResponse> localVarResp = tenantuserGetUserNamesWithHttpInfo(tenantuserv3GetUserNamesRequest);
         return localVarResp.getData();
     }
@@ -1444,13 +1486,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3GetUserNamesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3GetUserNamesResponse> tenantuserGetUserNamesWithHttpInfo(Tenantuserv3GetUserNamesRequest tenantuserv3GetUserNamesRequest) throws ApiException {
+    public ApiResponse<Tenantuserv3GetUserNamesResponse> tenantuserGetUserNamesWithHttpInfo(@javax.annotation.Nonnull Tenantuserv3GetUserNamesRequest tenantuserv3GetUserNamesRequest) throws ApiException {
         okhttp3.Call localVarCall = tenantuserGetUserNamesValidateBeforeCall(tenantuserv3GetUserNamesRequest, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetUserNamesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1464,13 +1507,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetUserNamesAsync(Tenantuserv3GetUserNamesRequest tenantuserv3GetUserNamesRequest, final ApiCallback<Tenantuserv3GetUserNamesResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetUserNamesAsync(@javax.annotation.Nonnull Tenantuserv3GetUserNamesRequest tenantuserv3GetUserNamesRequest, final ApiCallback<Tenantuserv3GetUserNamesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserGetUserNamesValidateBeforeCall(tenantuserv3GetUserNamesRequest, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetUserNamesResponse>(){}.getType();
@@ -1484,13 +1528,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetUserTenantCall(String userId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetUserTenantCall(@javax.annotation.Nonnull String userId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1536,7 +1581,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserGetUserTenantValidateBeforeCall(String userId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserGetUserTenantValidateBeforeCall(@javax.annotation.Nonnull String userId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'userId' is set
         if (userId == null) {
             throw new ApiException("Missing the required parameter 'userId' when calling tenantuserGetUserTenant(Async)");
@@ -1553,13 +1598,14 @@ public class TenantuserApi {
      * @return Tenantuserv3GetUserTenantResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3GetUserTenantResponse tenantuserGetUserTenant(String userId) throws ApiException {
+    public Tenantuserv3GetUserTenantResponse tenantuserGetUserTenant(@javax.annotation.Nonnull String userId) throws ApiException {
         ApiResponse<Tenantuserv3GetUserTenantResponse> localVarResp = tenantuserGetUserTenantWithHttpInfo(userId);
         return localVarResp.getData();
     }
@@ -1571,13 +1617,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3GetUserTenantResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3GetUserTenantResponse> tenantuserGetUserTenantWithHttpInfo(String userId) throws ApiException {
+    public ApiResponse<Tenantuserv3GetUserTenantResponse> tenantuserGetUserTenantWithHttpInfo(@javax.annotation.Nonnull String userId) throws ApiException {
         okhttp3.Call localVarCall = tenantuserGetUserTenantValidateBeforeCall(userId, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetUserTenantResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1591,13 +1638,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserGetUserTenantAsync(String userId, final ApiCallback<Tenantuserv3GetUserTenantResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserGetUserTenantAsync(@javax.annotation.Nonnull String userId, final ApiCallback<Tenantuserv3GetUserTenantResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserGetUserTenantValidateBeforeCall(userId, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetUserTenantResponse>(){}.getType();
@@ -1611,13 +1659,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserPostPrivilegesBulkCall(Tenantuserv3PostPrivilegesBulkRequest tenantuserv3PostPrivilegesBulkRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserPostPrivilegesBulkCall(@javax.annotation.Nonnull Tenantuserv3PostPrivilegesBulkRequest tenantuserv3PostPrivilegesBulkRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1663,7 +1712,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserPostPrivilegesBulkValidateBeforeCall(Tenantuserv3PostPrivilegesBulkRequest tenantuserv3PostPrivilegesBulkRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserPostPrivilegesBulkValidateBeforeCall(@javax.annotation.Nonnull Tenantuserv3PostPrivilegesBulkRequest tenantuserv3PostPrivilegesBulkRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tenantuserv3PostPrivilegesBulkRequest' is set
         if (tenantuserv3PostPrivilegesBulkRequest == null) {
             throw new ApiException("Missing the required parameter 'tenantuserv3PostPrivilegesBulkRequest' when calling tenantuserPostPrivilegesBulk(Async)");
@@ -1680,13 +1729,14 @@ public class TenantuserApi {
      * @return Tenantuserv3PostPrivilegesBulkResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3PostPrivilegesBulkResponse tenantuserPostPrivilegesBulk(Tenantuserv3PostPrivilegesBulkRequest tenantuserv3PostPrivilegesBulkRequest) throws ApiException {
+    public Tenantuserv3PostPrivilegesBulkResponse tenantuserPostPrivilegesBulk(@javax.annotation.Nonnull Tenantuserv3PostPrivilegesBulkRequest tenantuserv3PostPrivilegesBulkRequest) throws ApiException {
         ApiResponse<Tenantuserv3PostPrivilegesBulkResponse> localVarResp = tenantuserPostPrivilegesBulkWithHttpInfo(tenantuserv3PostPrivilegesBulkRequest);
         return localVarResp.getData();
     }
@@ -1698,13 +1748,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3PostPrivilegesBulkResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3PostPrivilegesBulkResponse> tenantuserPostPrivilegesBulkWithHttpInfo(Tenantuserv3PostPrivilegesBulkRequest tenantuserv3PostPrivilegesBulkRequest) throws ApiException {
+    public ApiResponse<Tenantuserv3PostPrivilegesBulkResponse> tenantuserPostPrivilegesBulkWithHttpInfo(@javax.annotation.Nonnull Tenantuserv3PostPrivilegesBulkRequest tenantuserv3PostPrivilegesBulkRequest) throws ApiException {
         okhttp3.Call localVarCall = tenantuserPostPrivilegesBulkValidateBeforeCall(tenantuserv3PostPrivilegesBulkRequest, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3PostPrivilegesBulkResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1718,13 +1769,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserPostPrivilegesBulkAsync(Tenantuserv3PostPrivilegesBulkRequest tenantuserv3PostPrivilegesBulkRequest, final ApiCallback<Tenantuserv3PostPrivilegesBulkResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserPostPrivilegesBulkAsync(@javax.annotation.Nonnull Tenantuserv3PostPrivilegesBulkRequest tenantuserv3PostPrivilegesBulkRequest, final ApiCallback<Tenantuserv3PostPrivilegesBulkResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserPostPrivilegesBulkValidateBeforeCall(tenantuserv3PostPrivilegesBulkRequest, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3PostPrivilegesBulkResponse>(){}.getType();
@@ -1738,13 +1790,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserPostRoleCall(Tenantuserv3PostRoleRequest tenantuserv3PostRoleRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserPostRoleCall(@javax.annotation.Nonnull Tenantuserv3PostRoleRequest tenantuserv3PostRoleRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1790,7 +1843,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserPostRoleValidateBeforeCall(Tenantuserv3PostRoleRequest tenantuserv3PostRoleRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserPostRoleValidateBeforeCall(@javax.annotation.Nonnull Tenantuserv3PostRoleRequest tenantuserv3PostRoleRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tenantuserv3PostRoleRequest' is set
         if (tenantuserv3PostRoleRequest == null) {
             throw new ApiException("Missing the required parameter 'tenantuserv3PostRoleRequest' when calling tenantuserPostRole(Async)");
@@ -1807,13 +1860,14 @@ public class TenantuserApi {
      * @return Tenantuserv3PostRoleResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3PostRoleResponse tenantuserPostRole(Tenantuserv3PostRoleRequest tenantuserv3PostRoleRequest) throws ApiException {
+    public Tenantuserv3PostRoleResponse tenantuserPostRole(@javax.annotation.Nonnull Tenantuserv3PostRoleRequest tenantuserv3PostRoleRequest) throws ApiException {
         ApiResponse<Tenantuserv3PostRoleResponse> localVarResp = tenantuserPostRoleWithHttpInfo(tenantuserv3PostRoleRequest);
         return localVarResp.getData();
     }
@@ -1825,13 +1879,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3PostRoleResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3PostRoleResponse> tenantuserPostRoleWithHttpInfo(Tenantuserv3PostRoleRequest tenantuserv3PostRoleRequest) throws ApiException {
+    public ApiResponse<Tenantuserv3PostRoleResponse> tenantuserPostRoleWithHttpInfo(@javax.annotation.Nonnull Tenantuserv3PostRoleRequest tenantuserv3PostRoleRequest) throws ApiException {
         okhttp3.Call localVarCall = tenantuserPostRoleValidateBeforeCall(tenantuserv3PostRoleRequest, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3PostRoleResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1845,13 +1900,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserPostRoleAsync(Tenantuserv3PostRoleRequest tenantuserv3PostRoleRequest, final ApiCallback<Tenantuserv3PostRoleResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserPostRoleAsync(@javax.annotation.Nonnull Tenantuserv3PostRoleRequest tenantuserv3PostRoleRequest, final ApiCallback<Tenantuserv3PostRoleResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserPostRoleValidateBeforeCall(tenantuserv3PostRoleRequest, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3PostRoleResponse>(){}.getType();
@@ -1866,13 +1922,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserUpdatePrivilegeCall(String privilegeId, Tenantuserv3UpdatePrivilegeRequest tenantuserv3UpdatePrivilegeRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserUpdatePrivilegeCall(@javax.annotation.Nonnull String privilegeId, @javax.annotation.Nonnull Tenantuserv3UpdatePrivilegeRequest tenantuserv3UpdatePrivilegeRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1919,7 +1976,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserUpdatePrivilegeValidateBeforeCall(String privilegeId, Tenantuserv3UpdatePrivilegeRequest tenantuserv3UpdatePrivilegeRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserUpdatePrivilegeValidateBeforeCall(@javax.annotation.Nonnull String privilegeId, @javax.annotation.Nonnull Tenantuserv3UpdatePrivilegeRequest tenantuserv3UpdatePrivilegeRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'privilegeId' is set
         if (privilegeId == null) {
             throw new ApiException("Missing the required parameter 'privilegeId' when calling tenantuserUpdatePrivilege(Async)");
@@ -1942,13 +1999,14 @@ public class TenantuserApi {
      * @return Tenantuserv3UpdatePrivilegeResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3UpdatePrivilegeResponse tenantuserUpdatePrivilege(String privilegeId, Tenantuserv3UpdatePrivilegeRequest tenantuserv3UpdatePrivilegeRequest) throws ApiException {
+    public Tenantuserv3UpdatePrivilegeResponse tenantuserUpdatePrivilege(@javax.annotation.Nonnull String privilegeId, @javax.annotation.Nonnull Tenantuserv3UpdatePrivilegeRequest tenantuserv3UpdatePrivilegeRequest) throws ApiException {
         ApiResponse<Tenantuserv3UpdatePrivilegeResponse> localVarResp = tenantuserUpdatePrivilegeWithHttpInfo(privilegeId, tenantuserv3UpdatePrivilegeRequest);
         return localVarResp.getData();
     }
@@ -1961,13 +2019,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3UpdatePrivilegeResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3UpdatePrivilegeResponse> tenantuserUpdatePrivilegeWithHttpInfo(String privilegeId, Tenantuserv3UpdatePrivilegeRequest tenantuserv3UpdatePrivilegeRequest) throws ApiException {
+    public ApiResponse<Tenantuserv3UpdatePrivilegeResponse> tenantuserUpdatePrivilegeWithHttpInfo(@javax.annotation.Nonnull String privilegeId, @javax.annotation.Nonnull Tenantuserv3UpdatePrivilegeRequest tenantuserv3UpdatePrivilegeRequest) throws ApiException {
         okhttp3.Call localVarCall = tenantuserUpdatePrivilegeValidateBeforeCall(privilegeId, tenantuserv3UpdatePrivilegeRequest, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3UpdatePrivilegeResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1982,13 +2041,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserUpdatePrivilegeAsync(String privilegeId, Tenantuserv3UpdatePrivilegeRequest tenantuserv3UpdatePrivilegeRequest, final ApiCallback<Tenantuserv3UpdatePrivilegeResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserUpdatePrivilegeAsync(@javax.annotation.Nonnull String privilegeId, @javax.annotation.Nonnull Tenantuserv3UpdatePrivilegeRequest tenantuserv3UpdatePrivilegeRequest, final ApiCallback<Tenantuserv3UpdatePrivilegeResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserUpdatePrivilegeValidateBeforeCall(privilegeId, tenantuserv3UpdatePrivilegeRequest, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3UpdatePrivilegeResponse>(){}.getType();
@@ -2002,13 +2062,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserUpdatePrivilegesRoleBulkCall(Tenantuserv3UpdatePrivilegesBulkRequest tenantuserv3UpdatePrivilegesBulkRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserUpdatePrivilegesRoleBulkCall(@javax.annotation.Nonnull Tenantuserv3UpdatePrivilegesBulkRequest tenantuserv3UpdatePrivilegesBulkRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2054,7 +2115,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserUpdatePrivilegesRoleBulkValidateBeforeCall(Tenantuserv3UpdatePrivilegesBulkRequest tenantuserv3UpdatePrivilegesBulkRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserUpdatePrivilegesRoleBulkValidateBeforeCall(@javax.annotation.Nonnull Tenantuserv3UpdatePrivilegesBulkRequest tenantuserv3UpdatePrivilegesBulkRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tenantuserv3UpdatePrivilegesBulkRequest' is set
         if (tenantuserv3UpdatePrivilegesBulkRequest == null) {
             throw new ApiException("Missing the required parameter 'tenantuserv3UpdatePrivilegesBulkRequest' when calling tenantuserUpdatePrivilegesRoleBulk(Async)");
@@ -2071,13 +2132,14 @@ public class TenantuserApi {
      * @return Tenantuserv3UpdatePrivilegesBulkResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3UpdatePrivilegesBulkResponse tenantuserUpdatePrivilegesRoleBulk(Tenantuserv3UpdatePrivilegesBulkRequest tenantuserv3UpdatePrivilegesBulkRequest) throws ApiException {
+    public Tenantuserv3UpdatePrivilegesBulkResponse tenantuserUpdatePrivilegesRoleBulk(@javax.annotation.Nonnull Tenantuserv3UpdatePrivilegesBulkRequest tenantuserv3UpdatePrivilegesBulkRequest) throws ApiException {
         ApiResponse<Tenantuserv3UpdatePrivilegesBulkResponse> localVarResp = tenantuserUpdatePrivilegesRoleBulkWithHttpInfo(tenantuserv3UpdatePrivilegesBulkRequest);
         return localVarResp.getData();
     }
@@ -2089,13 +2151,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3UpdatePrivilegesBulkResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3UpdatePrivilegesBulkResponse> tenantuserUpdatePrivilegesRoleBulkWithHttpInfo(Tenantuserv3UpdatePrivilegesBulkRequest tenantuserv3UpdatePrivilegesBulkRequest) throws ApiException {
+    public ApiResponse<Tenantuserv3UpdatePrivilegesBulkResponse> tenantuserUpdatePrivilegesRoleBulkWithHttpInfo(@javax.annotation.Nonnull Tenantuserv3UpdatePrivilegesBulkRequest tenantuserv3UpdatePrivilegesBulkRequest) throws ApiException {
         okhttp3.Call localVarCall = tenantuserUpdatePrivilegesRoleBulkValidateBeforeCall(tenantuserv3UpdatePrivilegesBulkRequest, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3UpdatePrivilegesBulkResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2109,13 +2172,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserUpdatePrivilegesRoleBulkAsync(Tenantuserv3UpdatePrivilegesBulkRequest tenantuserv3UpdatePrivilegesBulkRequest, final ApiCallback<Tenantuserv3UpdatePrivilegesBulkResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserUpdatePrivilegesRoleBulkAsync(@javax.annotation.Nonnull Tenantuserv3UpdatePrivilegesBulkRequest tenantuserv3UpdatePrivilegesBulkRequest, final ApiCallback<Tenantuserv3UpdatePrivilegesBulkResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserUpdatePrivilegesRoleBulkValidateBeforeCall(tenantuserv3UpdatePrivilegesBulkRequest, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3UpdatePrivilegesBulkResponse>(){}.getType();
@@ -2130,13 +2194,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserUpdateRoleCall(String roleId, Tenantuserv3UpdateRoleRequest tenantuserv3UpdateRoleRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserUpdateRoleCall(@javax.annotation.Nonnull String roleId, @javax.annotation.Nonnull Tenantuserv3UpdateRoleRequest tenantuserv3UpdateRoleRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2183,7 +2248,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserUpdateRoleValidateBeforeCall(String roleId, Tenantuserv3UpdateRoleRequest tenantuserv3UpdateRoleRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserUpdateRoleValidateBeforeCall(@javax.annotation.Nonnull String roleId, @javax.annotation.Nonnull Tenantuserv3UpdateRoleRequest tenantuserv3UpdateRoleRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'roleId' is set
         if (roleId == null) {
             throw new ApiException("Missing the required parameter 'roleId' when calling tenantuserUpdateRole(Async)");
@@ -2206,13 +2271,14 @@ public class TenantuserApi {
      * @return Tenantuserv3UpdateRoleResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3UpdateRoleResponse tenantuserUpdateRole(String roleId, Tenantuserv3UpdateRoleRequest tenantuserv3UpdateRoleRequest) throws ApiException {
+    public Tenantuserv3UpdateRoleResponse tenantuserUpdateRole(@javax.annotation.Nonnull String roleId, @javax.annotation.Nonnull Tenantuserv3UpdateRoleRequest tenantuserv3UpdateRoleRequest) throws ApiException {
         ApiResponse<Tenantuserv3UpdateRoleResponse> localVarResp = tenantuserUpdateRoleWithHttpInfo(roleId, tenantuserv3UpdateRoleRequest);
         return localVarResp.getData();
     }
@@ -2225,13 +2291,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3UpdateRoleResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3UpdateRoleResponse> tenantuserUpdateRoleWithHttpInfo(String roleId, Tenantuserv3UpdateRoleRequest tenantuserv3UpdateRoleRequest) throws ApiException {
+    public ApiResponse<Tenantuserv3UpdateRoleResponse> tenantuserUpdateRoleWithHttpInfo(@javax.annotation.Nonnull String roleId, @javax.annotation.Nonnull Tenantuserv3UpdateRoleRequest tenantuserv3UpdateRoleRequest) throws ApiException {
         okhttp3.Call localVarCall = tenantuserUpdateRoleValidateBeforeCall(roleId, tenantuserv3UpdateRoleRequest, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3UpdateRoleResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2246,13 +2313,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserUpdateRoleAsync(String roleId, Tenantuserv3UpdateRoleRequest tenantuserv3UpdateRoleRequest, final ApiCallback<Tenantuserv3UpdateRoleResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserUpdateRoleAsync(@javax.annotation.Nonnull String roleId, @javax.annotation.Nonnull Tenantuserv3UpdateRoleRequest tenantuserv3UpdateRoleRequest, final ApiCallback<Tenantuserv3UpdateRoleResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserUpdateRoleValidateBeforeCall(roleId, tenantuserv3UpdateRoleRequest, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3UpdateRoleResponse>(){}.getType();
@@ -2266,13 +2334,14 @@ public class TenantuserApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserUpdateUserRoleBulkCall(Tenantuserv3UpdateUserRoleBulkRequest tenantuserv3UpdateUserRoleBulkRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call tenantuserUpdateUserRoleBulkCall(@javax.annotation.Nonnull Tenantuserv3UpdateUserRoleBulkRequest tenantuserv3UpdateUserRoleBulkRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2318,7 +2387,7 @@ public class TenantuserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call tenantuserUpdateUserRoleBulkValidateBeforeCall(Tenantuserv3UpdateUserRoleBulkRequest tenantuserv3UpdateUserRoleBulkRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call tenantuserUpdateUserRoleBulkValidateBeforeCall(@javax.annotation.Nonnull Tenantuserv3UpdateUserRoleBulkRequest tenantuserv3UpdateUserRoleBulkRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tenantuserv3UpdateUserRoleBulkRequest' is set
         if (tenantuserv3UpdateUserRoleBulkRequest == null) {
             throw new ApiException("Missing the required parameter 'tenantuserv3UpdateUserRoleBulkRequest' when calling tenantuserUpdateUserRoleBulk(Async)");
@@ -2335,13 +2404,14 @@ public class TenantuserApi {
      * @return Tenantuserv3UpdateUserRoleBulkResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3UpdateUserRoleBulkResponse tenantuserUpdateUserRoleBulk(Tenantuserv3UpdateUserRoleBulkRequest tenantuserv3UpdateUserRoleBulkRequest) throws ApiException {
+    public Tenantuserv3UpdateUserRoleBulkResponse tenantuserUpdateUserRoleBulk(@javax.annotation.Nonnull Tenantuserv3UpdateUserRoleBulkRequest tenantuserv3UpdateUserRoleBulkRequest) throws ApiException {
         ApiResponse<Tenantuserv3UpdateUserRoleBulkResponse> localVarResp = tenantuserUpdateUserRoleBulkWithHttpInfo(tenantuserv3UpdateUserRoleBulkRequest);
         return localVarResp.getData();
     }
@@ -2353,13 +2423,14 @@ public class TenantuserApi {
      * @return ApiResponse&lt;Tenantuserv3UpdateUserRoleBulkResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3UpdateUserRoleBulkResponse> tenantuserUpdateUserRoleBulkWithHttpInfo(Tenantuserv3UpdateUserRoleBulkRequest tenantuserv3UpdateUserRoleBulkRequest) throws ApiException {
+    public ApiResponse<Tenantuserv3UpdateUserRoleBulkResponse> tenantuserUpdateUserRoleBulkWithHttpInfo(@javax.annotation.Nonnull Tenantuserv3UpdateUserRoleBulkRequest tenantuserv3UpdateUserRoleBulkRequest) throws ApiException {
         okhttp3.Call localVarCall = tenantuserUpdateUserRoleBulkValidateBeforeCall(tenantuserv3UpdateUserRoleBulkRequest, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3UpdateUserRoleBulkResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2373,13 +2444,14 @@ public class TenantuserApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call tenantuserUpdateUserRoleBulkAsync(Tenantuserv3UpdateUserRoleBulkRequest tenantuserv3UpdateUserRoleBulkRequest, final ApiCallback<Tenantuserv3UpdateUserRoleBulkResponse> _callback) throws ApiException {
+    public okhttp3.Call tenantuserUpdateUserRoleBulkAsync(@javax.annotation.Nonnull Tenantuserv3UpdateUserRoleBulkRequest tenantuserv3UpdateUserRoleBulkRequest, final ApiCallback<Tenantuserv3UpdateUserRoleBulkResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = tenantuserUpdateUserRoleBulkValidateBeforeCall(tenantuserv3UpdateUserRoleBulkRequest, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3UpdateUserRoleBulkResponse>(){}.getType();

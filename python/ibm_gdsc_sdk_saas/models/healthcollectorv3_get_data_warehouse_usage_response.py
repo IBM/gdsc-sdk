@@ -72,9 +72,9 @@ class Healthcollectorv3GetDataWarehouseUsageResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in warehouse_usage (list)
         _items = []
         if self.warehouse_usage:
-            for _item in self.warehouse_usage:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_warehouse_usage in self.warehouse_usage:
+                if _item_warehouse_usage:
+                    _items.append(_item_warehouse_usage.to_dict())
             _dict['warehouse_usage'] = _items
         return _dict
 

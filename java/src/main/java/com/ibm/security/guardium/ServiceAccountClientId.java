@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ServiceAccountClientId
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ServiceAccountClientId {
   public static final String SERIALIZED_NAME_SERVICE_ACCOUNT_CLIENT_ID = "serviceAccountClientId";
   @SerializedName(SERIALIZED_NAME_SERVICE_ACCOUNT_CLIENT_ID)
+  @javax.annotation.Nullable
   private String serviceAccountClientId;
 
   public ServiceAccountClientId() {
   }
 
-  public ServiceAccountClientId serviceAccountClientId(String serviceAccountClientId) {
+  public ServiceAccountClientId serviceAccountClientId(@javax.annotation.Nullable String serviceAccountClientId) {
     this.serviceAccountClientId = serviceAccountClientId;
     return this;
   }
 
-   /**
+  /**
    * Get serviceAccountClientId
    * @return serviceAccountClientId
-  **/
+   */
   @javax.annotation.Nullable
   public String getServiceAccountClientId() {
     return serviceAccountClientId;
   }
 
-  public void setServiceAccountClientId(String serviceAccountClientId) {
+  public void setServiceAccountClientId(@javax.annotation.Nullable String serviceAccountClientId) {
     this.serviceAccountClientId = serviceAccountClientId;
   }
 
@@ -121,23 +123,22 @@ public class ServiceAccountClientId {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("serviceAccountClientId");
+    openapiFields = new HashSet<String>(Arrays.asList("serviceAccountClientId"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ServiceAccountClientId
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ServiceAccountClientId
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ServiceAccountClientId.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ServiceAccountClientId is not found in the empty JSON string", ServiceAccountClientId.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ServiceAccountClientId is not found in the empty JSON string", ServiceAccountClientId.openapiRequiredFields.toString()));
         }
       }
 
@@ -145,12 +146,12 @@ public class ServiceAccountClientId {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ServiceAccountClientId.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ServiceAccountClientId` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ServiceAccountClientId` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("serviceAccountClientId") != null && !jsonObj.get("serviceAccountClientId").isJsonNull()) && !jsonObj.get("serviceAccountClientId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `serviceAccountClientId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("serviceAccountClientId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `serviceAccountClientId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("serviceAccountClientId").toString()));
       }
   }
 
@@ -183,22 +184,22 @@ public class ServiceAccountClientId {
     }
   }
 
- /**
-  * Create an instance of ServiceAccountClientId given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ServiceAccountClientId
-  * @throws IOException if the JSON string is invalid with respect to ServiceAccountClientId
-  */
+  /**
+   * Create an instance of ServiceAccountClientId given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ServiceAccountClientId
+   * @throws IOException if the JSON string is invalid with respect to ServiceAccountClientId
+   */
   public static ServiceAccountClientId fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ServiceAccountClientId.class);
   }
 
- /**
-  * Convert an instance of ServiceAccountClientId to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ServiceAccountClientId to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

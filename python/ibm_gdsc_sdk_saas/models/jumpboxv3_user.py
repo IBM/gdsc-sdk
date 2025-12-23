@@ -37,7 +37,7 @@ class Jumpboxv3User(BaseModel):
     external_id: Optional[StrictStr] = Field(default=None, description="External id of the user.")
     metadata: Optional[Dict[str, StrictStr]] = Field(default=None, description="Metadata will contain all preferences.")
     roles: Optional[List[StrictStr]] = Field(default=None, description="Roles.")
-    state: Optional[Jumpboxv3UserState] = None
+    state: Optional[Jumpboxv3UserState] = Jumpboxv3UserState.ACTIVE
     uid: Optional[StrictStr] = Field(default=None, description="Email.")
     user_id: Optional[StrictStr] = Field(default=None, description="Unique id for user.")
     __properties: ClassVar[List[str]] = ["activation_date", "directory_id", "disabled", "display_name", "distinguished_name", "email", "external_id", "metadata", "roles", "state", "uid", "user_id"]
@@ -102,7 +102,7 @@ class Jumpboxv3User(BaseModel):
             "external_id": obj.get("external_id"),
             "metadata": obj.get("metadata"),
             "roles": obj.get("roles"),
-            "state": obj.get("state"),
+            "state": obj.get("state") if obj.get("state") is not None else Jumpboxv3UserState.ACTIVE,
             "uid": obj.get("uid"),
             "user_id": obj.get("user_id")
         })

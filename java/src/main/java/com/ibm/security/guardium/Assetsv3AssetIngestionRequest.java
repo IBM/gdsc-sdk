@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,76 +52,89 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3AssetIngestionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetIngestionRequest {
   public static final String SERIALIZED_NAME_ACCOUNTS = "accounts";
   @SerializedName(SERIALIZED_NAME_ACCOUNTS)
+  @javax.annotation.Nullable
   private List<Assetsv3AccountVertex> accounts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_APPLICATIONS = "applications";
   @SerializedName(SERIALIZED_NAME_APPLICATIONS)
+  @javax.annotation.Nullable
   private List<Assetsv3ApplicationVertex> applications = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DATABASES = "databases";
   @SerializedName(SERIALIZED_NAME_DATABASES)
+  @javax.annotation.Nullable
   private List<Assetsv3DatabaseVertex> databases = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DEPLOYMENTS = "deployments";
   @SerializedName(SERIALIZED_NAME_DEPLOYMENTS)
+  @javax.annotation.Nullable
   private List<Assetsv3DeploymentVertex> deployments = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ENDPOINTS = "endpoints";
   @SerializedName(SERIALIZED_NAME_ENDPOINTS)
+  @javax.annotation.Nullable
   private List<Assetsv3EndpointVertex> endpoints = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_HOSTS = "hosts";
   @SerializedName(SERIALIZED_NAME_HOSTS)
+  @javax.annotation.Nullable
   private List<Assetsv3HostVertex> hosts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_IPS = "ips";
   @SerializedName(SERIALIZED_NAME_IPS)
+  @javax.annotation.Nullable
   private List<Assetsv3IPVertex> ips = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MODELS = "models";
   @SerializedName(SERIALIZED_NAME_MODELS)
+  @javax.annotation.Nullable
   private List<Assetsv3ModelVertex> models = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ORIGIN = "origin";
   @SerializedName(SERIALIZED_NAME_ORIGIN)
+  @javax.annotation.Nullable
   private String origin;
 
   public static final String SERIALIZED_NAME_PORTS = "ports";
   @SerializedName(SERIALIZED_NAME_PORTS)
+  @javax.annotation.Nullable
   private List<Assetsv3PortVertex> ports = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RESOURCES = "resources";
   @SerializedName(SERIALIZED_NAME_RESOURCES)
+  @javax.annotation.Nullable
   private List<Assetsv3ResourcesVertex> resources = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STORAGES = "storages";
   @SerializedName(SERIALIZED_NAME_STORAGES)
+  @javax.annotation.Nullable
   private List<Assetsv3StorageVertex> storages = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SUBSCRIPTIONS = "subscriptions";
   @SerializedName(SERIALIZED_NAME_SUBSCRIPTIONS)
+  @javax.annotation.Nullable
   private List<Assetsv3SubscriptionVertex> subscriptions = new ArrayList<>();
 
   public Assetsv3AssetIngestionRequest() {
   }
 
-  public Assetsv3AssetIngestionRequest accounts(List<Assetsv3AccountVertex> accounts) {
+  public Assetsv3AssetIngestionRequest accounts(@javax.annotation.Nullable List<Assetsv3AccountVertex> accounts) {
     this.accounts = accounts;
     return this;
   }
@@ -133,21 +147,21 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get accounts
    * @return accounts
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3AccountVertex> getAccounts() {
     return accounts;
   }
 
-  public void setAccounts(List<Assetsv3AccountVertex> accounts) {
+  public void setAccounts(@javax.annotation.Nullable List<Assetsv3AccountVertex> accounts) {
     this.accounts = accounts;
   }
 
 
-  public Assetsv3AssetIngestionRequest applications(List<Assetsv3ApplicationVertex> applications) {
+  public Assetsv3AssetIngestionRequest applications(@javax.annotation.Nullable List<Assetsv3ApplicationVertex> applications) {
     this.applications = applications;
     return this;
   }
@@ -160,21 +174,21 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get applications
    * @return applications
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ApplicationVertex> getApplications() {
     return applications;
   }
 
-  public void setApplications(List<Assetsv3ApplicationVertex> applications) {
+  public void setApplications(@javax.annotation.Nullable List<Assetsv3ApplicationVertex> applications) {
     this.applications = applications;
   }
 
 
-  public Assetsv3AssetIngestionRequest databases(List<Assetsv3DatabaseVertex> databases) {
+  public Assetsv3AssetIngestionRequest databases(@javax.annotation.Nullable List<Assetsv3DatabaseVertex> databases) {
     this.databases = databases;
     return this;
   }
@@ -187,21 +201,21 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get databases
    * @return databases
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3DatabaseVertex> getDatabases() {
     return databases;
   }
 
-  public void setDatabases(List<Assetsv3DatabaseVertex> databases) {
+  public void setDatabases(@javax.annotation.Nullable List<Assetsv3DatabaseVertex> databases) {
     this.databases = databases;
   }
 
 
-  public Assetsv3AssetIngestionRequest deployments(List<Assetsv3DeploymentVertex> deployments) {
+  public Assetsv3AssetIngestionRequest deployments(@javax.annotation.Nullable List<Assetsv3DeploymentVertex> deployments) {
     this.deployments = deployments;
     return this;
   }
@@ -214,21 +228,21 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get deployments
    * @return deployments
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3DeploymentVertex> getDeployments() {
     return deployments;
   }
 
-  public void setDeployments(List<Assetsv3DeploymentVertex> deployments) {
+  public void setDeployments(@javax.annotation.Nullable List<Assetsv3DeploymentVertex> deployments) {
     this.deployments = deployments;
   }
 
 
-  public Assetsv3AssetIngestionRequest endpoints(List<Assetsv3EndpointVertex> endpoints) {
+  public Assetsv3AssetIngestionRequest endpoints(@javax.annotation.Nullable List<Assetsv3EndpointVertex> endpoints) {
     this.endpoints = endpoints;
     return this;
   }
@@ -241,21 +255,21 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get endpoints
    * @return endpoints
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3EndpointVertex> getEndpoints() {
     return endpoints;
   }
 
-  public void setEndpoints(List<Assetsv3EndpointVertex> endpoints) {
+  public void setEndpoints(@javax.annotation.Nullable List<Assetsv3EndpointVertex> endpoints) {
     this.endpoints = endpoints;
   }
 
 
-  public Assetsv3AssetIngestionRequest hosts(List<Assetsv3HostVertex> hosts) {
+  public Assetsv3AssetIngestionRequest hosts(@javax.annotation.Nullable List<Assetsv3HostVertex> hosts) {
     this.hosts = hosts;
     return this;
   }
@@ -268,21 +282,21 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get hosts
    * @return hosts
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3HostVertex> getHosts() {
     return hosts;
   }
 
-  public void setHosts(List<Assetsv3HostVertex> hosts) {
+  public void setHosts(@javax.annotation.Nullable List<Assetsv3HostVertex> hosts) {
     this.hosts = hosts;
   }
 
 
-  public Assetsv3AssetIngestionRequest ips(List<Assetsv3IPVertex> ips) {
+  public Assetsv3AssetIngestionRequest ips(@javax.annotation.Nullable List<Assetsv3IPVertex> ips) {
     this.ips = ips;
     return this;
   }
@@ -295,21 +309,21 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get ips
    * @return ips
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3IPVertex> getIps() {
     return ips;
   }
 
-  public void setIps(List<Assetsv3IPVertex> ips) {
+  public void setIps(@javax.annotation.Nullable List<Assetsv3IPVertex> ips) {
     this.ips = ips;
   }
 
 
-  public Assetsv3AssetIngestionRequest models(List<Assetsv3ModelVertex> models) {
+  public Assetsv3AssetIngestionRequest models(@javax.annotation.Nullable List<Assetsv3ModelVertex> models) {
     this.models = models;
     return this;
   }
@@ -322,40 +336,40 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get models
    * @return models
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ModelVertex> getModels() {
     return models;
   }
 
-  public void setModels(List<Assetsv3ModelVertex> models) {
+  public void setModels(@javax.annotation.Nullable List<Assetsv3ModelVertex> models) {
     this.models = models;
   }
 
 
-  public Assetsv3AssetIngestionRequest origin(String origin) {
+  public Assetsv3AssetIngestionRequest origin(@javax.annotation.Nullable String origin) {
     this.origin = origin;
     return this;
   }
 
-   /**
+  /**
    * Get origin
    * @return origin
-  **/
+   */
   @javax.annotation.Nullable
   public String getOrigin() {
     return origin;
   }
 
-  public void setOrigin(String origin) {
+  public void setOrigin(@javax.annotation.Nullable String origin) {
     this.origin = origin;
   }
 
 
-  public Assetsv3AssetIngestionRequest ports(List<Assetsv3PortVertex> ports) {
+  public Assetsv3AssetIngestionRequest ports(@javax.annotation.Nullable List<Assetsv3PortVertex> ports) {
     this.ports = ports;
     return this;
   }
@@ -368,21 +382,21 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get ports
    * @return ports
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3PortVertex> getPorts() {
     return ports;
   }
 
-  public void setPorts(List<Assetsv3PortVertex> ports) {
+  public void setPorts(@javax.annotation.Nullable List<Assetsv3PortVertex> ports) {
     this.ports = ports;
   }
 
 
-  public Assetsv3AssetIngestionRequest resources(List<Assetsv3ResourcesVertex> resources) {
+  public Assetsv3AssetIngestionRequest resources(@javax.annotation.Nullable List<Assetsv3ResourcesVertex> resources) {
     this.resources = resources;
     return this;
   }
@@ -395,21 +409,21 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get resources
    * @return resources
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ResourcesVertex> getResources() {
     return resources;
   }
 
-  public void setResources(List<Assetsv3ResourcesVertex> resources) {
+  public void setResources(@javax.annotation.Nullable List<Assetsv3ResourcesVertex> resources) {
     this.resources = resources;
   }
 
 
-  public Assetsv3AssetIngestionRequest storages(List<Assetsv3StorageVertex> storages) {
+  public Assetsv3AssetIngestionRequest storages(@javax.annotation.Nullable List<Assetsv3StorageVertex> storages) {
     this.storages = storages;
     return this;
   }
@@ -422,21 +436,21 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get storages
    * @return storages
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3StorageVertex> getStorages() {
     return storages;
   }
 
-  public void setStorages(List<Assetsv3StorageVertex> storages) {
+  public void setStorages(@javax.annotation.Nullable List<Assetsv3StorageVertex> storages) {
     this.storages = storages;
   }
 
 
-  public Assetsv3AssetIngestionRequest subscriptions(List<Assetsv3SubscriptionVertex> subscriptions) {
+  public Assetsv3AssetIngestionRequest subscriptions(@javax.annotation.Nullable List<Assetsv3SubscriptionVertex> subscriptions) {
     this.subscriptions = subscriptions;
     return this;
   }
@@ -449,16 +463,16 @@ public class Assetsv3AssetIngestionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get subscriptions
    * @return subscriptions
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3SubscriptionVertex> getSubscriptions() {
     return subscriptions;
   }
 
-  public void setSubscriptions(List<Assetsv3SubscriptionVertex> subscriptions) {
+  public void setSubscriptions(@javax.annotation.Nullable List<Assetsv3SubscriptionVertex> subscriptions) {
     this.subscriptions = subscriptions;
   }
 
@@ -531,35 +545,22 @@ public class Assetsv3AssetIngestionRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("accounts");
-    openapiFields.add("applications");
-    openapiFields.add("databases");
-    openapiFields.add("deployments");
-    openapiFields.add("endpoints");
-    openapiFields.add("hosts");
-    openapiFields.add("ips");
-    openapiFields.add("models");
-    openapiFields.add("origin");
-    openapiFields.add("ports");
-    openapiFields.add("resources");
-    openapiFields.add("storages");
-    openapiFields.add("subscriptions");
+    openapiFields = new HashSet<String>(Arrays.asList("accounts", "applications", "databases", "deployments", "endpoints", "hosts", "ips", "models", "origin", "ports", "resources", "storages", "subscriptions"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetIngestionRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetIngestionRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetIngestionRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetIngestionRequest is not found in the empty JSON string", Assetsv3AssetIngestionRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetIngestionRequest is not found in the empty JSON string", Assetsv3AssetIngestionRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -567,7 +568,7 @@ public class Assetsv3AssetIngestionRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetIngestionRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetIngestionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetIngestionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -576,7 +577,7 @@ public class Assetsv3AssetIngestionRequest {
         if (jsonArrayaccounts != null) {
           // ensure the json data is an array
           if (!jsonObj.get("accounts").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `accounts` to be an array in the JSON string but got `%s`", jsonObj.get("accounts").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `accounts` to be an array in the JSON string but got `%s`", jsonObj.get("accounts").toString()));
           }
 
           // validate the optional field `accounts` (array)
@@ -590,7 +591,7 @@ public class Assetsv3AssetIngestionRequest {
         if (jsonArrayapplications != null) {
           // ensure the json data is an array
           if (!jsonObj.get("applications").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `applications` to be an array in the JSON string but got `%s`", jsonObj.get("applications").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `applications` to be an array in the JSON string but got `%s`", jsonObj.get("applications").toString()));
           }
 
           // validate the optional field `applications` (array)
@@ -604,7 +605,7 @@ public class Assetsv3AssetIngestionRequest {
         if (jsonArraydatabases != null) {
           // ensure the json data is an array
           if (!jsonObj.get("databases").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `databases` to be an array in the JSON string but got `%s`", jsonObj.get("databases").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `databases` to be an array in the JSON string but got `%s`", jsonObj.get("databases").toString()));
           }
 
           // validate the optional field `databases` (array)
@@ -618,7 +619,7 @@ public class Assetsv3AssetIngestionRequest {
         if (jsonArraydeployments != null) {
           // ensure the json data is an array
           if (!jsonObj.get("deployments").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `deployments` to be an array in the JSON string but got `%s`", jsonObj.get("deployments").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `deployments` to be an array in the JSON string but got `%s`", jsonObj.get("deployments").toString()));
           }
 
           // validate the optional field `deployments` (array)
@@ -632,7 +633,7 @@ public class Assetsv3AssetIngestionRequest {
         if (jsonArrayendpoints != null) {
           // ensure the json data is an array
           if (!jsonObj.get("endpoints").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `endpoints` to be an array in the JSON string but got `%s`", jsonObj.get("endpoints").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `endpoints` to be an array in the JSON string but got `%s`", jsonObj.get("endpoints").toString()));
           }
 
           // validate the optional field `endpoints` (array)
@@ -646,7 +647,7 @@ public class Assetsv3AssetIngestionRequest {
         if (jsonArrayhosts != null) {
           // ensure the json data is an array
           if (!jsonObj.get("hosts").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `hosts` to be an array in the JSON string but got `%s`", jsonObj.get("hosts").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `hosts` to be an array in the JSON string but got `%s`", jsonObj.get("hosts").toString()));
           }
 
           // validate the optional field `hosts` (array)
@@ -660,7 +661,7 @@ public class Assetsv3AssetIngestionRequest {
         if (jsonArrayips != null) {
           // ensure the json data is an array
           if (!jsonObj.get("ips").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `ips` to be an array in the JSON string but got `%s`", jsonObj.get("ips").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ips` to be an array in the JSON string but got `%s`", jsonObj.get("ips").toString()));
           }
 
           // validate the optional field `ips` (array)
@@ -674,7 +675,7 @@ public class Assetsv3AssetIngestionRequest {
         if (jsonArraymodels != null) {
           // ensure the json data is an array
           if (!jsonObj.get("models").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `models` to be an array in the JSON string but got `%s`", jsonObj.get("models").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `models` to be an array in the JSON string but got `%s`", jsonObj.get("models").toString()));
           }
 
           // validate the optional field `models` (array)
@@ -684,14 +685,14 @@ public class Assetsv3AssetIngestionRequest {
         }
       }
       if ((jsonObj.get("origin") != null && !jsonObj.get("origin").isJsonNull()) && !jsonObj.get("origin").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `origin` to be a primitive type in the JSON string but got `%s`", jsonObj.get("origin").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `origin` to be a primitive type in the JSON string but got `%s`", jsonObj.get("origin").toString()));
       }
       if (jsonObj.get("ports") != null && !jsonObj.get("ports").isJsonNull()) {
         JsonArray jsonArrayports = jsonObj.getAsJsonArray("ports");
         if (jsonArrayports != null) {
           // ensure the json data is an array
           if (!jsonObj.get("ports").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `ports` to be an array in the JSON string but got `%s`", jsonObj.get("ports").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ports` to be an array in the JSON string but got `%s`", jsonObj.get("ports").toString()));
           }
 
           // validate the optional field `ports` (array)
@@ -705,7 +706,7 @@ public class Assetsv3AssetIngestionRequest {
         if (jsonArrayresources != null) {
           // ensure the json data is an array
           if (!jsonObj.get("resources").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `resources` to be an array in the JSON string but got `%s`", jsonObj.get("resources").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resources` to be an array in the JSON string but got `%s`", jsonObj.get("resources").toString()));
           }
 
           // validate the optional field `resources` (array)
@@ -719,7 +720,7 @@ public class Assetsv3AssetIngestionRequest {
         if (jsonArraystorages != null) {
           // ensure the json data is an array
           if (!jsonObj.get("storages").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `storages` to be an array in the JSON string but got `%s`", jsonObj.get("storages").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storages` to be an array in the JSON string but got `%s`", jsonObj.get("storages").toString()));
           }
 
           // validate the optional field `storages` (array)
@@ -733,7 +734,7 @@ public class Assetsv3AssetIngestionRequest {
         if (jsonArraysubscriptions != null) {
           // ensure the json data is an array
           if (!jsonObj.get("subscriptions").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `subscriptions` to be an array in the JSON string but got `%s`", jsonObj.get("subscriptions").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `subscriptions` to be an array in the JSON string but got `%s`", jsonObj.get("subscriptions").toString()));
           }
 
           // validate the optional field `subscriptions` (array)
@@ -773,22 +774,22 @@ public class Assetsv3AssetIngestionRequest {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetIngestionRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetIngestionRequest
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetIngestionRequest
-  */
+  /**
+   * Create an instance of Assetsv3AssetIngestionRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetIngestionRequest
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetIngestionRequest
+   */
   public static Assetsv3AssetIngestionRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetIngestionRequest.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetIngestionRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetIngestionRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

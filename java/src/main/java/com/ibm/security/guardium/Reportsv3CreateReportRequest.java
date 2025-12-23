@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,42 +39,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CreateReportRequest is the argument type used to create a report with the CreateReport() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3CreateReportRequest {
   public static final String SERIALIZED_NAME_REPORT_DEFINITION = "report_definition";
   @SerializedName(SERIALIZED_NAME_REPORT_DEFINITION)
+  @javax.annotation.Nullable
   private Reportsv3ReportDefinition reportDefinition;
 
   public Reportsv3CreateReportRequest() {
   }
 
-  public Reportsv3CreateReportRequest reportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public Reportsv3CreateReportRequest reportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
     return this;
   }
 
-   /**
+  /**
    * Get reportDefinition
    * @return reportDefinition
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportDefinition getReportDefinition() {
     return reportDefinition;
   }
 
-  public void setReportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public void setReportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
   }
 
@@ -122,23 +124,22 @@ public class Reportsv3CreateReportRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("report_definition");
+    openapiFields = new HashSet<String>(Arrays.asList("report_definition"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3CreateReportRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3CreateReportRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3CreateReportRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3CreateReportRequest is not found in the empty JSON string", Reportsv3CreateReportRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3CreateReportRequest is not found in the empty JSON string", Reportsv3CreateReportRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -146,7 +147,7 @@ public class Reportsv3CreateReportRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3CreateReportRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3CreateReportRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3CreateReportRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -185,22 +186,22 @@ public class Reportsv3CreateReportRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3CreateReportRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3CreateReportRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3CreateReportRequest
-  */
+  /**
+   * Create an instance of Reportsv3CreateReportRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3CreateReportRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3CreateReportRequest
+   */
   public static Reportsv3CreateReportRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3CreateReportRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3CreateReportRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3CreateReportRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

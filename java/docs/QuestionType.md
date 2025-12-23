@@ -5,7 +5,7 @@
 ## Enum
 
 
-* `USERROLE` (value: `"UserRole"`)
+* `USER_ROLE` (value: `"UserRole"`)
 
 
 

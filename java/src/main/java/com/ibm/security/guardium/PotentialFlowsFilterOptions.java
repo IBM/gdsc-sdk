@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,56 +41,64 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * PotentialFlowsFilterOptions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class PotentialFlowsFilterOptions {
   public static final String SERIALIZED_NAME_IDS = "ids";
   @SerializedName(SERIALIZED_NAME_IDS)
+  @javax.annotation.Nullable
   private List<String> ids = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TYPES = "types";
   @SerializedName(SERIALIZED_NAME_TYPES)
+  @javax.annotation.Nullable
   private List<String> types = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SOURCE_TYPES = "sourceTypes";
   @SerializedName(SERIALIZED_NAME_SOURCE_TYPES)
+  @javax.annotation.Nullable
   private List<String> sourceTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNTS = "cloudAccounts";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNTS)
+  @javax.annotation.Nullable
   private List<String> cloudAccounts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_REGIONS = "cloudRegions";
   @SerializedName(SERIALIZED_NAME_CLOUD_REGIONS)
+  @javax.annotation.Nullable
   private List<String> cloudRegions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SOURCE_IDS = "sourceIds";
   @SerializedName(SERIALIZED_NAME_SOURCE_IDS)
+  @javax.annotation.Nullable
   private List<String> sourceIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DESTINATION_IDS = "destinationIds";
   @SerializedName(SERIALIZED_NAME_DESTINATION_IDS)
+  @javax.annotation.Nullable
   private List<String> destinationIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ACCESS_TYPES = "accessTypes";
   @SerializedName(SERIALIZED_NAME_ACCESS_TYPES)
+  @javax.annotation.Nullable
   private List<AccessType> accessTypes = new ArrayList<>();
 
   public PotentialFlowsFilterOptions() {
   }
 
-  public PotentialFlowsFilterOptions ids(List<String> ids) {
+  public PotentialFlowsFilterOptions ids(@javax.annotation.Nullable List<String> ids) {
     this.ids = ids;
     return this;
   }
@@ -102,21 +111,21 @@ public class PotentialFlowsFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get ids
    * @return ids
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getIds() {
     return ids;
   }
 
-  public void setIds(List<String> ids) {
+  public void setIds(@javax.annotation.Nullable List<String> ids) {
     this.ids = ids;
   }
 
 
-  public PotentialFlowsFilterOptions types(List<String> types) {
+  public PotentialFlowsFilterOptions types(@javax.annotation.Nullable List<String> types) {
     this.types = types;
     return this;
   }
@@ -129,21 +138,21 @@ public class PotentialFlowsFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get types
    * @return types
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTypes() {
     return types;
   }
 
-  public void setTypes(List<String> types) {
+  public void setTypes(@javax.annotation.Nullable List<String> types) {
     this.types = types;
   }
 
 
-  public PotentialFlowsFilterOptions sourceTypes(List<String> sourceTypes) {
+  public PotentialFlowsFilterOptions sourceTypes(@javax.annotation.Nullable List<String> sourceTypes) {
     this.sourceTypes = sourceTypes;
     return this;
   }
@@ -156,21 +165,21 @@ public class PotentialFlowsFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get sourceTypes
    * @return sourceTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSourceTypes() {
     return sourceTypes;
   }
 
-  public void setSourceTypes(List<String> sourceTypes) {
+  public void setSourceTypes(@javax.annotation.Nullable List<String> sourceTypes) {
     this.sourceTypes = sourceTypes;
   }
 
 
-  public PotentialFlowsFilterOptions cloudAccounts(List<String> cloudAccounts) {
+  public PotentialFlowsFilterOptions cloudAccounts(@javax.annotation.Nullable List<String> cloudAccounts) {
     this.cloudAccounts = cloudAccounts;
     return this;
   }
@@ -183,21 +192,21 @@ public class PotentialFlowsFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccounts
    * @return cloudAccounts
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getCloudAccounts() {
     return cloudAccounts;
   }
 
-  public void setCloudAccounts(List<String> cloudAccounts) {
+  public void setCloudAccounts(@javax.annotation.Nullable List<String> cloudAccounts) {
     this.cloudAccounts = cloudAccounts;
   }
 
 
-  public PotentialFlowsFilterOptions cloudRegions(List<String> cloudRegions) {
+  public PotentialFlowsFilterOptions cloudRegions(@javax.annotation.Nullable List<String> cloudRegions) {
     this.cloudRegions = cloudRegions;
     return this;
   }
@@ -210,21 +219,21 @@ public class PotentialFlowsFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get cloudRegions
    * @return cloudRegions
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getCloudRegions() {
     return cloudRegions;
   }
 
-  public void setCloudRegions(List<String> cloudRegions) {
+  public void setCloudRegions(@javax.annotation.Nullable List<String> cloudRegions) {
     this.cloudRegions = cloudRegions;
   }
 
 
-  public PotentialFlowsFilterOptions sourceIds(List<String> sourceIds) {
+  public PotentialFlowsFilterOptions sourceIds(@javax.annotation.Nullable List<String> sourceIds) {
     this.sourceIds = sourceIds;
     return this;
   }
@@ -237,21 +246,21 @@ public class PotentialFlowsFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get sourceIds
    * @return sourceIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSourceIds() {
     return sourceIds;
   }
 
-  public void setSourceIds(List<String> sourceIds) {
+  public void setSourceIds(@javax.annotation.Nullable List<String> sourceIds) {
     this.sourceIds = sourceIds;
   }
 
 
-  public PotentialFlowsFilterOptions destinationIds(List<String> destinationIds) {
+  public PotentialFlowsFilterOptions destinationIds(@javax.annotation.Nullable List<String> destinationIds) {
     this.destinationIds = destinationIds;
     return this;
   }
@@ -264,21 +273,21 @@ public class PotentialFlowsFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get destinationIds
    * @return destinationIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDestinationIds() {
     return destinationIds;
   }
 
-  public void setDestinationIds(List<String> destinationIds) {
+  public void setDestinationIds(@javax.annotation.Nullable List<String> destinationIds) {
     this.destinationIds = destinationIds;
   }
 
 
-  public PotentialFlowsFilterOptions accessTypes(List<AccessType> accessTypes) {
+  public PotentialFlowsFilterOptions accessTypes(@javax.annotation.Nullable List<AccessType> accessTypes) {
     this.accessTypes = accessTypes;
     return this;
   }
@@ -291,16 +300,16 @@ public class PotentialFlowsFilterOptions {
     return this;
   }
 
-   /**
+  /**
    * Get accessTypes
    * @return accessTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<AccessType> getAccessTypes() {
     return accessTypes;
   }
 
-  public void setAccessTypes(List<AccessType> accessTypes) {
+  public void setAccessTypes(@javax.annotation.Nullable List<AccessType> accessTypes) {
     this.accessTypes = accessTypes;
   }
 
@@ -363,30 +372,22 @@ public class PotentialFlowsFilterOptions {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("ids");
-    openapiFields.add("types");
-    openapiFields.add("sourceTypes");
-    openapiFields.add("cloudAccounts");
-    openapiFields.add("cloudRegions");
-    openapiFields.add("sourceIds");
-    openapiFields.add("destinationIds");
-    openapiFields.add("accessTypes");
+    openapiFields = new HashSet<String>(Arrays.asList("ids", "types", "sourceTypes", "cloudAccounts", "cloudRegions", "sourceIds", "destinationIds", "accessTypes"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PotentialFlowsFilterOptions
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PotentialFlowsFilterOptions
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!PotentialFlowsFilterOptions.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in PotentialFlowsFilterOptions is not found in the empty JSON string", PotentialFlowsFilterOptions.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in PotentialFlowsFilterOptions is not found in the empty JSON string", PotentialFlowsFilterOptions.openapiRequiredFields.toString()));
         }
       }
 
@@ -394,41 +395,41 @@ public class PotentialFlowsFilterOptions {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!PotentialFlowsFilterOptions.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PotentialFlowsFilterOptions` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `PotentialFlowsFilterOptions` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("ids") != null && !jsonObj.get("ids").isJsonNull() && !jsonObj.get("ids").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ids` to be an array in the JSON string but got `%s`", jsonObj.get("ids").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ids` to be an array in the JSON string but got `%s`", jsonObj.get("ids").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("types") != null && !jsonObj.get("types").isJsonNull() && !jsonObj.get("types").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `types` to be an array in the JSON string but got `%s`", jsonObj.get("types").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `types` to be an array in the JSON string but got `%s`", jsonObj.get("types").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sourceTypes") != null && !jsonObj.get("sourceTypes").isJsonNull() && !jsonObj.get("sourceTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sourceTypes` to be an array in the JSON string but got `%s`", jsonObj.get("sourceTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sourceTypes` to be an array in the JSON string but got `%s`", jsonObj.get("sourceTypes").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("cloudAccounts") != null && !jsonObj.get("cloudAccounts").isJsonNull() && !jsonObj.get("cloudAccounts").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccounts` to be an array in the JSON string but got `%s`", jsonObj.get("cloudAccounts").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccounts` to be an array in the JSON string but got `%s`", jsonObj.get("cloudAccounts").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("cloudRegions") != null && !jsonObj.get("cloudRegions").isJsonNull() && !jsonObj.get("cloudRegions").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudRegions` to be an array in the JSON string but got `%s`", jsonObj.get("cloudRegions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudRegions` to be an array in the JSON string but got `%s`", jsonObj.get("cloudRegions").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sourceIds") != null && !jsonObj.get("sourceIds").isJsonNull() && !jsonObj.get("sourceIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sourceIds` to be an array in the JSON string but got `%s`", jsonObj.get("sourceIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sourceIds` to be an array in the JSON string but got `%s`", jsonObj.get("sourceIds").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("destinationIds") != null && !jsonObj.get("destinationIds").isJsonNull() && !jsonObj.get("destinationIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `destinationIds` to be an array in the JSON string but got `%s`", jsonObj.get("destinationIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `destinationIds` to be an array in the JSON string but got `%s`", jsonObj.get("destinationIds").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("accessTypes") != null && !jsonObj.get("accessTypes").isJsonNull() && !jsonObj.get("accessTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `accessTypes` to be an array in the JSON string but got `%s`", jsonObj.get("accessTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `accessTypes` to be an array in the JSON string but got `%s`", jsonObj.get("accessTypes").toString()));
       }
   }
 
@@ -461,22 +462,22 @@ public class PotentialFlowsFilterOptions {
     }
   }
 
- /**
-  * Create an instance of PotentialFlowsFilterOptions given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of PotentialFlowsFilterOptions
-  * @throws IOException if the JSON string is invalid with respect to PotentialFlowsFilterOptions
-  */
+  /**
+   * Create an instance of PotentialFlowsFilterOptions given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PotentialFlowsFilterOptions
+   * @throws IOException if the JSON string is invalid with respect to PotentialFlowsFilterOptions
+   */
   public static PotentialFlowsFilterOptions fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, PotentialFlowsFilterOptions.class);
   }
 
- /**
-  * Convert an instance of PotentialFlowsFilterOptions to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of PotentialFlowsFilterOptions to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

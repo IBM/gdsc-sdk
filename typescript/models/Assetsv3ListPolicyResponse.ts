@@ -18,6 +18,8 @@ export class Assetsv3ListPolicyResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "policyList",
@@ -33,4 +35,3 @@ export class Assetsv3ListPolicyResponse {
     public constructor() {
     }
 }
-

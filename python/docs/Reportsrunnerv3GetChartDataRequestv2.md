@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chart_id** | **str** | Optional: the ID of the chart we wish to get its data. | [optional] 
 **chart_settings** | [**Reportsv3ChartSettingsv2**](Reportsv3ChartSettingsv2.md) |  | [optional] 
-**model_type** | [**Reportsv3ModelType**](Reportsv3ModelType.md) |  | [optional] 
+**model_type** | [**Reportsv3ModelType**](Reportsv3ModelType.md) |  | [optional] [default to Reportsv3ModelType.UNDEFINED_MODEL_TYPE]
 **report_definition** | [**Reportsv3ReportDefinition**](Reportsv3ReportDefinition.md) |  | [optional] 
 **runtime_parameter_list** | [**List[Reportsv3RunTimeParameter]**](Reportsv3RunTimeParameter.md) | Runtime parameters. | [optional] 
 **time_zone** | **str** | Optional: time zone. | [optional] 

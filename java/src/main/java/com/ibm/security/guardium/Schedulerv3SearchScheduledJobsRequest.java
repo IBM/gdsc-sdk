@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * SearchScheduledJobsRequest message for Post v3/schedules/search api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3SearchScheduledJobsRequest {
   public static final String SERIALIZED_NAME_LIMIT = "Limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
+  @javax.annotation.Nullable
   private Long limit;
 
   public static final String SERIALIZED_NAME_OFFSET = "Offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
+  @javax.annotation.Nullable
   private Long offset;
 
   public static final String SERIALIZED_NAME_FILTER = "filter";
   @SerializedName(SERIALIZED_NAME_FILTER)
+  @javax.annotation.Nullable
   private Schedulerv3ScheduledJobsFilter filter;
 
   public Schedulerv3SearchScheduledJobsRequest() {
   }
 
-  public Schedulerv3SearchScheduledJobsRequest limit(Long limit) {
+  public Schedulerv3SearchScheduledJobsRequest limit(@javax.annotation.Nullable Long limit) {
     this.limit = limit;
     return this;
   }
 
-   /**
+  /**
    * Optional: the max amount of rows to return for pagination.
    * @return limit
-  **/
+   */
   @javax.annotation.Nullable
   public Long getLimit() {
     return limit;
   }
 
-  public void setLimit(Long limit) {
+  public void setLimit(@javax.annotation.Nullable Long limit) {
     this.limit = limit;
   }
 
 
-  public Schedulerv3SearchScheduledJobsRequest offset(Long offset) {
+  public Schedulerv3SearchScheduledJobsRequest offset(@javax.annotation.Nullable Long offset) {
     this.offset = offset;
     return this;
   }
 
-   /**
+  /**
    * Optional: the amount to offset the rows by for pagination.
    * @return offset
-  **/
+   */
   @javax.annotation.Nullable
   public Long getOffset() {
     return offset;
   }
 
-  public void setOffset(Long offset) {
+  public void setOffset(@javax.annotation.Nullable Long offset) {
     this.offset = offset;
   }
 
 
-  public Schedulerv3SearchScheduledJobsRequest filter(Schedulerv3ScheduledJobsFilter filter) {
+  public Schedulerv3SearchScheduledJobsRequest filter(@javax.annotation.Nullable Schedulerv3ScheduledJobsFilter filter) {
     this.filter = filter;
     return this;
   }
 
-   /**
+  /**
    * Get filter
    * @return filter
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3ScheduledJobsFilter getFilter() {
     return filter;
   }
 
-  public void setFilter(Schedulerv3ScheduledJobsFilter filter) {
+  public void setFilter(@javax.annotation.Nullable Schedulerv3ScheduledJobsFilter filter) {
     this.filter = filter;
   }
 
@@ -172,25 +176,22 @@ public class Schedulerv3SearchScheduledJobsRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("Limit");
-    openapiFields.add("Offset");
-    openapiFields.add("filter");
+    openapiFields = new HashSet<String>(Arrays.asList("Limit", "Offset", "filter"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3SearchScheduledJobsRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3SearchScheduledJobsRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3SearchScheduledJobsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3SearchScheduledJobsRequest is not found in the empty JSON string", Schedulerv3SearchScheduledJobsRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3SearchScheduledJobsRequest is not found in the empty JSON string", Schedulerv3SearchScheduledJobsRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,7 +199,7 @@ public class Schedulerv3SearchScheduledJobsRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3SearchScheduledJobsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3SearchScheduledJobsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3SearchScheduledJobsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -237,22 +238,22 @@ public class Schedulerv3SearchScheduledJobsRequest {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3SearchScheduledJobsRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3SearchScheduledJobsRequest
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3SearchScheduledJobsRequest
-  */
+  /**
+   * Create an instance of Schedulerv3SearchScheduledJobsRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3SearchScheduledJobsRequest
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3SearchScheduledJobsRequest
+   */
   public static Schedulerv3SearchScheduledJobsRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3SearchScheduledJobsRequest.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3SearchScheduledJobsRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3SearchScheduledJobsRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

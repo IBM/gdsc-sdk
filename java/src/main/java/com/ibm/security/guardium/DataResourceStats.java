@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,51 +42,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DataResourceStats
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class DataResourceStats {
   public static final String SERIALIZED_NAME_SENSITIVITIES_COUNT = "sensitivitiesCount";
   @SerializedName(SERIALIZED_NAME_SENSITIVITIES_COUNT)
+  @javax.annotation.Nullable
   private BigDecimal sensitivitiesCount;
 
   public static final String SERIALIZED_NAME_SENSITIVITIES_SUMMARY = "sensitivitiesSummary";
   @SerializedName(SERIALIZED_NAME_SENSITIVITIES_SUMMARY)
+  @javax.annotation.Nullable
   private List<SensitivitySummary> sensitivitiesSummary = new ArrayList<>();
 
   public DataResourceStats() {
   }
 
-  public DataResourceStats sensitivitiesCount(BigDecimal sensitivitiesCount) {
+  public DataResourceStats sensitivitiesCount(@javax.annotation.Nullable BigDecimal sensitivitiesCount) {
     this.sensitivitiesCount = sensitivitiesCount;
     return this;
   }
 
-   /**
+  /**
    * Get sensitivitiesCount
    * @return sensitivitiesCount
-  **/
+   */
   @javax.annotation.Nullable
   public BigDecimal getSensitivitiesCount() {
     return sensitivitiesCount;
   }
 
-  public void setSensitivitiesCount(BigDecimal sensitivitiesCount) {
+  public void setSensitivitiesCount(@javax.annotation.Nullable BigDecimal sensitivitiesCount) {
     this.sensitivitiesCount = sensitivitiesCount;
   }
 
 
-  public DataResourceStats sensitivitiesSummary(List<SensitivitySummary> sensitivitiesSummary) {
+  public DataResourceStats sensitivitiesSummary(@javax.annotation.Nullable List<SensitivitySummary> sensitivitiesSummary) {
     this.sensitivitiesSummary = sensitivitiesSummary;
     return this;
   }
@@ -98,16 +101,16 @@ public class DataResourceStats {
     return this;
   }
 
-   /**
+  /**
    * Get sensitivitiesSummary
    * @return sensitivitiesSummary
-  **/
+   */
   @javax.annotation.Nullable
   public List<SensitivitySummary> getSensitivitiesSummary() {
     return sensitivitiesSummary;
   }
 
-  public void setSensitivitiesSummary(List<SensitivitySummary> sensitivitiesSummary) {
+  public void setSensitivitiesSummary(@javax.annotation.Nullable List<SensitivitySummary> sensitivitiesSummary) {
     this.sensitivitiesSummary = sensitivitiesSummary;
   }
 
@@ -158,24 +161,22 @@ public class DataResourceStats {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("sensitivitiesCount");
-    openapiFields.add("sensitivitiesSummary");
+    openapiFields = new HashSet<String>(Arrays.asList("sensitivitiesCount", "sensitivitiesSummary"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to DataResourceStats
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to DataResourceStats
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!DataResourceStats.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in DataResourceStats is not found in the empty JSON string", DataResourceStats.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in DataResourceStats is not found in the empty JSON string", DataResourceStats.openapiRequiredFields.toString()));
         }
       }
 
@@ -183,7 +184,7 @@ public class DataResourceStats {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!DataResourceStats.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DataResourceStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DataResourceStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -192,7 +193,7 @@ public class DataResourceStats {
         if (jsonArraysensitivitiesSummary != null) {
           // ensure the json data is an array
           if (!jsonObj.get("sensitivitiesSummary").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `sensitivitiesSummary` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivitiesSummary").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitivitiesSummary` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivitiesSummary").toString()));
           }
 
           // validate the optional field `sensitivitiesSummary` (array)
@@ -232,22 +233,22 @@ public class DataResourceStats {
     }
   }
 
- /**
-  * Create an instance of DataResourceStats given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of DataResourceStats
-  * @throws IOException if the JSON string is invalid with respect to DataResourceStats
-  */
+  /**
+   * Create an instance of DataResourceStats given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of DataResourceStats
+   * @throws IOException if the JSON string is invalid with respect to DataResourceStats
+   */
   public static DataResourceStats fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, DataResourceStats.class);
   }
 
- /**
-  * Convert an instance of DataResourceStats to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of DataResourceStats to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

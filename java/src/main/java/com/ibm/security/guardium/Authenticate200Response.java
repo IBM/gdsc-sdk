@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Authenticate200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Authenticate200Response {
   public static final String SERIALIZED_NAME_ID_TOKEN = "idToken";
   @SerializedName(SERIALIZED_NAME_ID_TOKEN)
+  @javax.annotation.Nonnull
   private String idToken;
 
   public static final String SERIALIZED_NAME_REFRESH_TOKEN = "refreshToken";
   @SerializedName(SERIALIZED_NAME_REFRESH_TOKEN)
+  @javax.annotation.Nonnull
   private String refreshToken;
 
   public static final String SERIALIZED_NAME_EXPIRES_IN = "expiresIn";
   @SerializedName(SERIALIZED_NAME_EXPIRES_IN)
+  @javax.annotation.Nonnull
   private BigDecimal expiresIn;
 
   public Authenticate200Response() {
   }
 
-  public Authenticate200Response idToken(String idToken) {
+  public Authenticate200Response idToken(@javax.annotation.Nonnull String idToken) {
     this.idToken = idToken;
     return this;
   }
 
-   /**
+  /**
    * Use this token for future API calls.
    * @return idToken
-  **/
+   */
   @javax.annotation.Nonnull
   public String getIdToken() {
     return idToken;
   }
 
-  public void setIdToken(String idToken) {
+  public void setIdToken(@javax.annotation.Nonnull String idToken) {
     this.idToken = idToken;
   }
 
 
-  public Authenticate200Response refreshToken(String refreshToken) {
+  public Authenticate200Response refreshToken(@javax.annotation.Nonnull String refreshToken) {
     this.refreshToken = refreshToken;
     return this;
   }
 
-   /**
+  /**
    * Get refreshToken
    * @return refreshToken
-  **/
+   */
   @javax.annotation.Nonnull
   public String getRefreshToken() {
     return refreshToken;
   }
 
-  public void setRefreshToken(String refreshToken) {
+  public void setRefreshToken(@javax.annotation.Nonnull String refreshToken) {
     this.refreshToken = refreshToken;
   }
 
 
-  public Authenticate200Response expiresIn(BigDecimal expiresIn) {
+  public Authenticate200Response expiresIn(@javax.annotation.Nonnull BigDecimal expiresIn) {
     this.expiresIn = expiresIn;
     return this;
   }
 
-   /**
+  /**
    * Time of token expiry.
    * @return expiresIn
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getExpiresIn() {
     return expiresIn;
   }
 
-  public void setExpiresIn(BigDecimal expiresIn) {
+  public void setExpiresIn(@javax.annotation.Nonnull BigDecimal expiresIn) {
     this.expiresIn = expiresIn;
   }
 
@@ -172,28 +176,22 @@ public class Authenticate200Response {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("idToken");
-    openapiFields.add("refreshToken");
-    openapiFields.add("expiresIn");
+    openapiFields = new HashSet<String>(Arrays.asList("idToken", "refreshToken", "expiresIn"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("idToken");
-    openapiRequiredFields.add("refreshToken");
-    openapiRequiredFields.add("expiresIn");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("idToken", "refreshToken", "expiresIn"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Authenticate200Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Authenticate200Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Authenticate200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Authenticate200Response is not found in the empty JSON string", Authenticate200Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Authenticate200Response is not found in the empty JSON string", Authenticate200Response.openapiRequiredFields.toString()));
         }
       }
 
@@ -201,22 +199,22 @@ public class Authenticate200Response {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Authenticate200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Authenticate200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Authenticate200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : Authenticate200Response.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("idToken").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `idToken` to be a primitive type in the JSON string but got `%s`", jsonObj.get("idToken").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `idToken` to be a primitive type in the JSON string but got `%s`", jsonObj.get("idToken").toString()));
       }
       if (!jsonObj.get("refreshToken").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `refreshToken` to be a primitive type in the JSON string but got `%s`", jsonObj.get("refreshToken").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `refreshToken` to be a primitive type in the JSON string but got `%s`", jsonObj.get("refreshToken").toString()));
       }
   }
 
@@ -249,22 +247,22 @@ public class Authenticate200Response {
     }
   }
 
- /**
-  * Create an instance of Authenticate200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Authenticate200Response
-  * @throws IOException if the JSON string is invalid with respect to Authenticate200Response
-  */
+  /**
+   * Create an instance of Authenticate200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Authenticate200Response
+   * @throws IOException if the JSON string is invalid with respect to Authenticate200Response
+   */
   public static Authenticate200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Authenticate200Response.class);
   }
 
- /**
-  * Convert an instance of Authenticate200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Authenticate200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

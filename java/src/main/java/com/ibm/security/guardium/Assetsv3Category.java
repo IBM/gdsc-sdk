@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,124 +41,130 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Category - Main Category Data for Manage Asset Filter Panel.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3Category {
   public static final String SERIALIZED_NAME_GROUP = "group";
   @SerializedName(SERIALIZED_NAME_GROUP)
+  @javax.annotation.Nullable
   private String group;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_SHOW_TIMELINE_FILTER = "show_timeline_filter";
   @SerializedName(SERIALIZED_NAME_SHOW_TIMELINE_FILTER)
+  @javax.annotation.Nullable
   private Boolean showTimelineFilter;
 
   public static final String SERIALIZED_NAME_SUB_CATEGORY = "sub_category";
   @SerializedName(SERIALIZED_NAME_SUB_CATEGORY)
+  @javax.annotation.Nullable
   private List<Assetsv3SubCategory> subCategory = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TIMELINE_DISPLAY_NAME = "timeline_display_name";
   @SerializedName(SERIALIZED_NAME_TIMELINE_DISPLAY_NAME)
+  @javax.annotation.Nullable
   private String timelineDisplayName;
 
   public Assetsv3Category() {
   }
 
-  public Assetsv3Category group(String group) {
+  public Assetsv3Category group(@javax.annotation.Nullable String group) {
     this.group = group;
     return this;
   }
 
-   /**
+  /**
    * Get group
    * @return group
-  **/
+   */
   @javax.annotation.Nullable
   public String getGroup() {
     return group;
   }
 
-  public void setGroup(String group) {
+  public void setGroup(@javax.annotation.Nullable String group) {
     this.group = group;
   }
 
 
-  public Assetsv3Category id(String id) {
+  public Assetsv3Category id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Assetsv3Category name(String name) {
+  public Assetsv3Category name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Assetsv3Category showTimelineFilter(Boolean showTimelineFilter) {
+  public Assetsv3Category showTimelineFilter(@javax.annotation.Nullable Boolean showTimelineFilter) {
     this.showTimelineFilter = showTimelineFilter;
     return this;
   }
 
-   /**
+  /**
    * Get showTimelineFilter
    * @return showTimelineFilter
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getShowTimelineFilter() {
     return showTimelineFilter;
   }
 
-  public void setShowTimelineFilter(Boolean showTimelineFilter) {
+  public void setShowTimelineFilter(@javax.annotation.Nullable Boolean showTimelineFilter) {
     this.showTimelineFilter = showTimelineFilter;
   }
 
 
-  public Assetsv3Category subCategory(List<Assetsv3SubCategory> subCategory) {
+  public Assetsv3Category subCategory(@javax.annotation.Nullable List<Assetsv3SubCategory> subCategory) {
     this.subCategory = subCategory;
     return this;
   }
@@ -170,35 +177,35 @@ public class Assetsv3Category {
     return this;
   }
 
-   /**
+  /**
    * Get subCategory
    * @return subCategory
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3SubCategory> getSubCategory() {
     return subCategory;
   }
 
-  public void setSubCategory(List<Assetsv3SubCategory> subCategory) {
+  public void setSubCategory(@javax.annotation.Nullable List<Assetsv3SubCategory> subCategory) {
     this.subCategory = subCategory;
   }
 
 
-  public Assetsv3Category timelineDisplayName(String timelineDisplayName) {
+  public Assetsv3Category timelineDisplayName(@javax.annotation.Nullable String timelineDisplayName) {
     this.timelineDisplayName = timelineDisplayName;
     return this;
   }
 
-   /**
+  /**
    * Get timelineDisplayName
    * @return timelineDisplayName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTimelineDisplayName() {
     return timelineDisplayName;
   }
 
-  public void setTimelineDisplayName(String timelineDisplayName) {
+  public void setTimelineDisplayName(@javax.annotation.Nullable String timelineDisplayName) {
     this.timelineDisplayName = timelineDisplayName;
   }
 
@@ -257,28 +264,22 @@ public class Assetsv3Category {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("group");
-    openapiFields.add("id");
-    openapiFields.add("name");
-    openapiFields.add("show_timeline_filter");
-    openapiFields.add("sub_category");
-    openapiFields.add("timeline_display_name");
+    openapiFields = new HashSet<String>(Arrays.asList("group", "id", "name", "show_timeline_filter", "sub_category", "timeline_display_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3Category
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3Category
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3Category.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3Category is not found in the empty JSON string", Assetsv3Category.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3Category is not found in the empty JSON string", Assetsv3Category.openapiRequiredFields.toString()));
         }
       }
 
@@ -286,25 +287,25 @@ public class Assetsv3Category {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3Category.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3Category` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3Category` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("group") != null && !jsonObj.get("group").isJsonNull()) && !jsonObj.get("group").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `group` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `group` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if (jsonObj.get("sub_category") != null && !jsonObj.get("sub_category").isJsonNull()) {
         JsonArray jsonArraysubCategory = jsonObj.getAsJsonArray("sub_category");
         if (jsonArraysubCategory != null) {
           // ensure the json data is an array
           if (!jsonObj.get("sub_category").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `sub_category` to be an array in the JSON string but got `%s`", jsonObj.get("sub_category").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sub_category` to be an array in the JSON string but got `%s`", jsonObj.get("sub_category").toString()));
           }
 
           // validate the optional field `sub_category` (array)
@@ -314,7 +315,7 @@ public class Assetsv3Category {
         }
       }
       if ((jsonObj.get("timeline_display_name") != null && !jsonObj.get("timeline_display_name").isJsonNull()) && !jsonObj.get("timeline_display_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `timeline_display_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timeline_display_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `timeline_display_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timeline_display_name").toString()));
       }
   }
 
@@ -347,22 +348,22 @@ public class Assetsv3Category {
     }
   }
 
- /**
-  * Create an instance of Assetsv3Category given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3Category
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3Category
-  */
+  /**
+   * Create an instance of Assetsv3Category given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3Category
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3Category
+   */
   public static Assetsv3Category fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3Category.class);
   }
 
- /**
-  * Convert an instance of Assetsv3Category to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3Category to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

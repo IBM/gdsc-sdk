@@ -80,9 +80,9 @@ class Tenantuserv3ExternalMetadata(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in add_ons (dict)
         _field_dict = {}
         if self.add_ons:
-            for _key in self.add_ons:
-                if self.add_ons[_key]:
-                    _field_dict[_key] = self.add_ons[_key].to_dict()
+            for _key_add_ons in self.add_ons:
+                if self.add_ons[_key_add_ons]:
+                    _field_dict[_key_add_ons] = self.add_ons[_key_add_ons].to_dict()
             _dict['add_ons'] = _field_dict
         return _dict
 

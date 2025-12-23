@@ -5,9 +5,9 @@
 ## Enum
 
 
-* `AND` (value: `"OPERATOR_AND"`)
+* `OPERATOR_AND` (value: `"OPERATOR_AND"`)
 
-* `OR` (value: `"OPERATOR_OR"`)
+* `OPERATOR_OR` (value: `"OPERATOR_OR"`)
 
 
 

@@ -77,9 +77,9 @@ class Riskanalyticscontrollerv3FindingReferenceLink(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in report_filters (list)
         _items = []
         if self.report_filters:
-            for _item in self.report_filters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_filters in self.report_filters:
+                if _item_report_filters:
+                    _items.append(_item_report_filters.to_dict())
             _dict['report_filters'] = _items
         # override the default output from pydantic by calling `to_dict()` of statistics
         if self.statistics:

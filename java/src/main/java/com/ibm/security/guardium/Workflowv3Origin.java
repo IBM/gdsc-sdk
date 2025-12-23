@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,157 +39,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Workflowv3Origin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3Origin {
   public static final String SERIALIZED_NAME_DATE_NEXT = "date_next";
   @SerializedName(SERIALIZED_NAME_DATE_NEXT)
+  @javax.annotation.Nullable
   private OffsetDateTime dateNext;
 
   public static final String SERIALIZED_NAME_DATE_START = "date_start";
   @SerializedName(SERIALIZED_NAME_DATE_START)
+  @javax.annotation.Nullable
   private OffsetDateTime dateStart;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_FREQUENCY = "frequency";
   @SerializedName(SERIALIZED_NAME_FREQUENCY)
+  @javax.annotation.Nullable
   private String frequency;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_SCHEDULED_JOB_ID = "scheduled_job_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_JOB_ID)
+  @javax.annotation.Nullable
   private String scheduledJobId;
 
   public Workflowv3Origin() {
   }
 
-  public Workflowv3Origin dateNext(OffsetDateTime dateNext) {
+  public Workflowv3Origin dateNext(@javax.annotation.Nullable OffsetDateTime dateNext) {
     this.dateNext = dateNext;
     return this;
   }
 
-   /**
+  /**
    * Scheduled job next run time.
    * @return dateNext
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateNext() {
     return dateNext;
   }
 
-  public void setDateNext(OffsetDateTime dateNext) {
+  public void setDateNext(@javax.annotation.Nullable OffsetDateTime dateNext) {
     this.dateNext = dateNext;
   }
 
 
-  public Workflowv3Origin dateStart(OffsetDateTime dateStart) {
+  public Workflowv3Origin dateStart(@javax.annotation.Nullable OffsetDateTime dateStart) {
     this.dateStart = dateStart;
     return this;
   }
 
-   /**
+  /**
    * Scheduled job queue time.
    * @return dateStart
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateStart() {
     return dateStart;
   }
 
-  public void setDateStart(OffsetDateTime dateStart) {
+  public void setDateStart(@javax.annotation.Nullable OffsetDateTime dateStart) {
     this.dateStart = dateStart;
   }
 
 
-  public Workflowv3Origin description(String description) {
+  public Workflowv3Origin description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Scheduled job description.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Workflowv3Origin frequency(String frequency) {
+  public Workflowv3Origin frequency(@javax.annotation.Nullable String frequency) {
     this.frequency = frequency;
     return this;
   }
 
-   /**
+  /**
    * Scheduled job frequency.
    * @return frequency
-  **/
+   */
   @javax.annotation.Nullable
   public String getFrequency() {
     return frequency;
   }
 
-  public void setFrequency(String frequency) {
+  public void setFrequency(@javax.annotation.Nullable String frequency) {
     this.frequency = frequency;
   }
 
 
-  public Workflowv3Origin name(String name) {
+  public Workflowv3Origin name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Scheduled job name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Workflowv3Origin scheduledJobId(String scheduledJobId) {
+  public Workflowv3Origin scheduledJobId(@javax.annotation.Nullable String scheduledJobId) {
     this.scheduledJobId = scheduledJobId;
     return this;
   }
 
-   /**
+  /**
    * Scheduled job ID.
    * @return scheduledJobId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScheduledJobId() {
     return scheduledJobId;
   }
 
-  public void setScheduledJobId(String scheduledJobId) {
+  public void setScheduledJobId(@javax.annotation.Nullable String scheduledJobId) {
     this.scheduledJobId = scheduledJobId;
   }
 
@@ -247,28 +254,22 @@ public class Workflowv3Origin {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("date_next");
-    openapiFields.add("date_start");
-    openapiFields.add("description");
-    openapiFields.add("frequency");
-    openapiFields.add("name");
-    openapiFields.add("scheduled_job_id");
+    openapiFields = new HashSet<String>(Arrays.asList("date_next", "date_start", "description", "frequency", "name", "scheduled_job_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3Origin
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3Origin
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3Origin.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3Origin is not found in the empty JSON string", Workflowv3Origin.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3Origin is not found in the empty JSON string", Workflowv3Origin.openapiRequiredFields.toString()));
         }
       }
 
@@ -276,21 +277,21 @@ public class Workflowv3Origin {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3Origin.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3Origin` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3Origin` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if ((jsonObj.get("frequency") != null && !jsonObj.get("frequency").isJsonNull()) && !jsonObj.get("frequency").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `frequency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("frequency").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `frequency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("frequency").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("scheduled_job_id") != null && !jsonObj.get("scheduled_job_id").isJsonNull()) && !jsonObj.get("scheduled_job_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scheduled_job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scheduled_job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_job_id").toString()));
       }
   }
 
@@ -323,22 +324,22 @@ public class Workflowv3Origin {
     }
   }
 
- /**
-  * Create an instance of Workflowv3Origin given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3Origin
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3Origin
-  */
+  /**
+   * Create an instance of Workflowv3Origin given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3Origin
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3Origin
+   */
   public static Workflowv3Origin fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3Origin.class);
   }
 
- /**
-  * Convert an instance of Workflowv3Origin to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3Origin to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

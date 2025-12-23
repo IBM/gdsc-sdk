@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,74 +41,77 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * SetupCMResponse is the response after registering a GDP Central manager to GDSC.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3SetupCMResponse {
   public static final String SERIALIZED_NAME_RESPONSE = "response";
   @SerializedName(SERIALIZED_NAME_RESPONSE)
+  @javax.annotation.Nullable
   private String response;
 
   public static final String SERIALIZED_NAME_RESPONSE_CODE = "response_code";
   @SerializedName(SERIALIZED_NAME_RESPONSE_CODE)
+  @javax.annotation.Nullable
   private String responseCode;
 
   public static final String SERIALIZED_NAME_TASKS = "tasks";
   @SerializedName(SERIALIZED_NAME_TASKS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3TaskObject> tasks = new ArrayList<>();
 
   public Guardiumconnectorv3SetupCMResponse() {
   }
 
-  public Guardiumconnectorv3SetupCMResponse response(String response) {
+  public Guardiumconnectorv3SetupCMResponse response(@javax.annotation.Nullable String response) {
     this.response = response;
     return this;
   }
 
-   /**
+  /**
    * Response message.
    * @return response
-  **/
+   */
   @javax.annotation.Nullable
   public String getResponse() {
     return response;
   }
 
-  public void setResponse(String response) {
+  public void setResponse(@javax.annotation.Nullable String response) {
     this.response = response;
   }
 
 
-  public Guardiumconnectorv3SetupCMResponse responseCode(String responseCode) {
+  public Guardiumconnectorv3SetupCMResponse responseCode(@javax.annotation.Nullable String responseCode) {
     this.responseCode = responseCode;
     return this;
   }
 
-   /**
+  /**
    * Translatable reponse code or empty string if there is no response.
    * @return responseCode
-  **/
+   */
   @javax.annotation.Nullable
   public String getResponseCode() {
     return responseCode;
   }
 
-  public void setResponseCode(String responseCode) {
+  public void setResponseCode(@javax.annotation.Nullable String responseCode) {
     this.responseCode = responseCode;
   }
 
 
-  public Guardiumconnectorv3SetupCMResponse tasks(List<Guardiumconnectorv3TaskObject> tasks) {
+  public Guardiumconnectorv3SetupCMResponse tasks(@javax.annotation.Nullable List<Guardiumconnectorv3TaskObject> tasks) {
     this.tasks = tasks;
     return this;
   }
@@ -120,16 +124,16 @@ public class Guardiumconnectorv3SetupCMResponse {
     return this;
   }
 
-   /**
+  /**
    * List of Tasks associated with the Central Manager.
    * @return tasks
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3TaskObject> getTasks() {
     return tasks;
   }
 
-  public void setTasks(List<Guardiumconnectorv3TaskObject> tasks) {
+  public void setTasks(@javax.annotation.Nullable List<Guardiumconnectorv3TaskObject> tasks) {
     this.tasks = tasks;
   }
 
@@ -182,25 +186,22 @@ public class Guardiumconnectorv3SetupCMResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("response");
-    openapiFields.add("response_code");
-    openapiFields.add("tasks");
+    openapiFields = new HashSet<String>(Arrays.asList("response", "response_code", "tasks"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3SetupCMResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3SetupCMResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3SetupCMResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3SetupCMResponse is not found in the empty JSON string", Guardiumconnectorv3SetupCMResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3SetupCMResponse is not found in the empty JSON string", Guardiumconnectorv3SetupCMResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,22 +209,22 @@ public class Guardiumconnectorv3SetupCMResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3SetupCMResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3SetupCMResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3SetupCMResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("response") != null && !jsonObj.get("response").isJsonNull()) && !jsonObj.get("response").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `response` to be a primitive type in the JSON string but got `%s`", jsonObj.get("response").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `response` to be a primitive type in the JSON string but got `%s`", jsonObj.get("response").toString()));
       }
       if ((jsonObj.get("response_code") != null && !jsonObj.get("response_code").isJsonNull()) && !jsonObj.get("response_code").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `response_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("response_code").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `response_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("response_code").toString()));
       }
       if (jsonObj.get("tasks") != null && !jsonObj.get("tasks").isJsonNull()) {
         JsonArray jsonArraytasks = jsonObj.getAsJsonArray("tasks");
         if (jsonArraytasks != null) {
           // ensure the json data is an array
           if (!jsonObj.get("tasks").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tasks` to be an array in the JSON string but got `%s`", jsonObj.get("tasks").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tasks` to be an array in the JSON string but got `%s`", jsonObj.get("tasks").toString()));
           }
 
           // validate the optional field `tasks` (array)
@@ -263,22 +264,22 @@ public class Guardiumconnectorv3SetupCMResponse {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3SetupCMResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3SetupCMResponse
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3SetupCMResponse
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3SetupCMResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3SetupCMResponse
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3SetupCMResponse
+   */
   public static Guardiumconnectorv3SetupCMResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3SetupCMResponse.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3SetupCMResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3SetupCMResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

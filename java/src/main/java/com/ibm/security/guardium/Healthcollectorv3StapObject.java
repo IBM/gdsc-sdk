@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,152 +42,165 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * StapObject gets information about monitoring agents.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3StapObject {
   public static final String SERIALIZED_NAME_COLLECTOR_HOSTNAME = "collector_hostname";
   @SerializedName(SERIALIZED_NAME_COLLECTOR_HOSTNAME)
+  @javax.annotation.Nullable
   private String collectorHostname;
 
   public static final String SERIALIZED_NAME_CONNECTIVITY = "connectivity";
   @SerializedName(SERIALIZED_NAME_CONNECTIVITY)
+  @javax.annotation.Nullable
   private Integer connectivity;
 
   public static final String SERIALIZED_NAME_DETAILS = "details";
   @SerializedName(SERIALIZED_NAME_DETAILS)
+  @javax.annotation.Nullable
   private Healthcollectorv3StapDetailsObject details;
 
   public static final String SERIALIZED_NAME_IE_COUNT = "ie_count";
   @SerializedName(SERIALIZED_NAME_IE_COUNT)
+  @javax.annotation.Nullable
   private Integer ieCount;
 
   public static final String SERIALIZED_NAME_IE_DETAILS = "ie_details";
   @SerializedName(SERIALIZED_NAME_IE_DETAILS)
+  @javax.annotation.Nullable
   private List<Healthcollectorv3InspectionEngineDetails> ieDetails = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_KTAP = "ktap";
   @SerializedName(SERIALIZED_NAME_KTAP)
+  @javax.annotation.Nullable
   private Integer ktap;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_OS_TYPE = "os_type";
   @SerializedName(SERIALIZED_NAME_OS_TYPE)
+  @javax.annotation.Nullable
   private String osType;
 
   public static final String SERIALIZED_NAME_OVERALL_IE_STATUS = "overall_ie_status";
   @SerializedName(SERIALIZED_NAME_OVERALL_IE_STATUS)
+  @javax.annotation.Nullable
   private Integer overallIeStatus;
 
   public static final String SERIALIZED_NAME_REVISION = "revision";
   @SerializedName(SERIALIZED_NAME_REVISION)
+  @javax.annotation.Nullable
   private String revision;
 
   public static final String SERIALIZED_NAME_STAP_IP = "stap_ip";
   @SerializedName(SERIALIZED_NAME_STAP_IP)
+  @javax.annotation.Nullable
   private String stapIp;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Integer status;
 
   public static final String SERIALIZED_NAME_TRAFFIC = "traffic";
   @SerializedName(SERIALIZED_NAME_TRAFFIC)
+  @javax.annotation.Nullable
   private Integer traffic;
 
   public Healthcollectorv3StapObject() {
   }
 
-  public Healthcollectorv3StapObject collectorHostname(String collectorHostname) {
+  public Healthcollectorv3StapObject collectorHostname(@javax.annotation.Nullable String collectorHostname) {
     this.collectorHostname = collectorHostname;
     return this;
   }
 
-   /**
+  /**
    * Host name of Guardium Data Protection system.
    * @return collectorHostname
-  **/
+   */
   @javax.annotation.Nullable
   public String getCollectorHostname() {
     return collectorHostname;
   }
 
-  public void setCollectorHostname(String collectorHostname) {
+  public void setCollectorHostname(@javax.annotation.Nullable String collectorHostname) {
     this.collectorHostname = collectorHostname;
   }
 
 
-  public Healthcollectorv3StapObject connectivity(Integer connectivity) {
+  public Healthcollectorv3StapObject connectivity(@javax.annotation.Nullable Integer connectivity) {
     this.connectivity = connectivity;
     return this;
   }
 
-   /**
+  /**
    * Connectivity status.
    * @return connectivity
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getConnectivity() {
     return connectivity;
   }
 
-  public void setConnectivity(Integer connectivity) {
+  public void setConnectivity(@javax.annotation.Nullable Integer connectivity) {
     this.connectivity = connectivity;
   }
 
 
-  public Healthcollectorv3StapObject details(Healthcollectorv3StapDetailsObject details) {
+  public Healthcollectorv3StapObject details(@javax.annotation.Nullable Healthcollectorv3StapDetailsObject details) {
     this.details = details;
     return this;
   }
 
-   /**
+  /**
    * Get details
    * @return details
-  **/
+   */
   @javax.annotation.Nullable
   public Healthcollectorv3StapDetailsObject getDetails() {
     return details;
   }
 
-  public void setDetails(Healthcollectorv3StapDetailsObject details) {
+  public void setDetails(@javax.annotation.Nullable Healthcollectorv3StapDetailsObject details) {
     this.details = details;
   }
 
 
-  public Healthcollectorv3StapObject ieCount(Integer ieCount) {
+  public Healthcollectorv3StapObject ieCount(@javax.annotation.Nullable Integer ieCount) {
     this.ieCount = ieCount;
     return this;
   }
 
-   /**
+  /**
    * Count of inspection engines.
    * @return ieCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getIeCount() {
     return ieCount;
   }
 
-  public void setIeCount(Integer ieCount) {
+  public void setIeCount(@javax.annotation.Nullable Integer ieCount) {
     this.ieCount = ieCount;
   }
 
 
-  public Healthcollectorv3StapObject ieDetails(List<Healthcollectorv3InspectionEngineDetails> ieDetails) {
+  public Healthcollectorv3StapObject ieDetails(@javax.annotation.Nullable List<Healthcollectorv3InspectionEngineDetails> ieDetails) {
     this.ieDetails = ieDetails;
     return this;
   }
@@ -199,168 +213,168 @@ public class Healthcollectorv3StapObject {
     return this;
   }
 
-   /**
+  /**
    * Details about inspection engines.
    * @return ieDetails
-  **/
+   */
   @javax.annotation.Nullable
   public List<Healthcollectorv3InspectionEngineDetails> getIeDetails() {
     return ieDetails;
   }
 
-  public void setIeDetails(List<Healthcollectorv3InspectionEngineDetails> ieDetails) {
+  public void setIeDetails(@javax.annotation.Nullable List<Healthcollectorv3InspectionEngineDetails> ieDetails) {
     this.ieDetails = ieDetails;
   }
 
 
-  public Healthcollectorv3StapObject ktap(Integer ktap) {
+  public Healthcollectorv3StapObject ktap(@javax.annotation.Nullable Integer ktap) {
     this.ktap = ktap;
     return this;
   }
 
-   /**
+  /**
    * K-TAP status.
    * @return ktap
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getKtap() {
     return ktap;
   }
 
-  public void setKtap(Integer ktap) {
+  public void setKtap(@javax.annotation.Nullable Integer ktap) {
     this.ktap = ktap;
   }
 
 
-  public Healthcollectorv3StapObject name(String name) {
+  public Healthcollectorv3StapObject name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of the S-TAP.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Healthcollectorv3StapObject osType(String osType) {
+  public Healthcollectorv3StapObject osType(@javax.annotation.Nullable String osType) {
     this.osType = osType;
     return this;
   }
 
-   /**
+  /**
    * Operating system.
    * @return osType
-  **/
+   */
   @javax.annotation.Nullable
   public String getOsType() {
     return osType;
   }
 
-  public void setOsType(String osType) {
+  public void setOsType(@javax.annotation.Nullable String osType) {
     this.osType = osType;
   }
 
 
-  public Healthcollectorv3StapObject overallIeStatus(Integer overallIeStatus) {
+  public Healthcollectorv3StapObject overallIeStatus(@javax.annotation.Nullable Integer overallIeStatus) {
     this.overallIeStatus = overallIeStatus;
     return this;
   }
 
-   /**
+  /**
    * Overall status of inspection engines.
    * @return overallIeStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getOverallIeStatus() {
     return overallIeStatus;
   }
 
-  public void setOverallIeStatus(Integer overallIeStatus) {
+  public void setOverallIeStatus(@javax.annotation.Nullable Integer overallIeStatus) {
     this.overallIeStatus = overallIeStatus;
   }
 
 
-  public Healthcollectorv3StapObject revision(String revision) {
+  public Healthcollectorv3StapObject revision(@javax.annotation.Nullable String revision) {
     this.revision = revision;
     return this;
   }
 
-   /**
+  /**
    * Revision.
    * @return revision
-  **/
+   */
   @javax.annotation.Nullable
   public String getRevision() {
     return revision;
   }
 
-  public void setRevision(String revision) {
+  public void setRevision(@javax.annotation.Nullable String revision) {
     this.revision = revision;
   }
 
 
-  public Healthcollectorv3StapObject stapIp(String stapIp) {
+  public Healthcollectorv3StapObject stapIp(@javax.annotation.Nullable String stapIp) {
     this.stapIp = stapIp;
     return this;
   }
 
-   /**
+  /**
    * IP address.
    * @return stapIp
-  **/
+   */
   @javax.annotation.Nullable
   public String getStapIp() {
     return stapIp;
   }
 
-  public void setStapIp(String stapIp) {
+  public void setStapIp(@javax.annotation.Nullable String stapIp) {
     this.stapIp = stapIp;
   }
 
 
-  public Healthcollectorv3StapObject status(Integer status) {
+  public Healthcollectorv3StapObject status(@javax.annotation.Nullable Integer status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Overall status.
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStatus() {
     return status;
   }
 
-  public void setStatus(Integer status) {
+  public void setStatus(@javax.annotation.Nullable Integer status) {
     this.status = status;
   }
 
 
-  public Healthcollectorv3StapObject traffic(Integer traffic) {
+  public Healthcollectorv3StapObject traffic(@javax.annotation.Nullable Integer traffic) {
     this.traffic = traffic;
     return this;
   }
 
-   /**
+  /**
    * Traffic status.
    * @return traffic
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTraffic() {
     return traffic;
   }
 
-  public void setTraffic(Integer traffic) {
+  public void setTraffic(@javax.annotation.Nullable Integer traffic) {
     this.traffic = traffic;
   }
 
@@ -433,35 +447,22 @@ public class Healthcollectorv3StapObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("collector_hostname");
-    openapiFields.add("connectivity");
-    openapiFields.add("details");
-    openapiFields.add("ie_count");
-    openapiFields.add("ie_details");
-    openapiFields.add("ktap");
-    openapiFields.add("name");
-    openapiFields.add("os_type");
-    openapiFields.add("overall_ie_status");
-    openapiFields.add("revision");
-    openapiFields.add("stap_ip");
-    openapiFields.add("status");
-    openapiFields.add("traffic");
+    openapiFields = new HashSet<String>(Arrays.asList("collector_hostname", "connectivity", "details", "ie_count", "ie_details", "ktap", "name", "os_type", "overall_ie_status", "revision", "stap_ip", "status", "traffic"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3StapObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3StapObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3StapObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3StapObject is not found in the empty JSON string", Healthcollectorv3StapObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3StapObject is not found in the empty JSON string", Healthcollectorv3StapObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -469,12 +470,12 @@ public class Healthcollectorv3StapObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3StapObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3StapObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3StapObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("collector_hostname") != null && !jsonObj.get("collector_hostname").isJsonNull()) && !jsonObj.get("collector_hostname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `collector_hostname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("collector_hostname").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `collector_hostname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("collector_hostname").toString()));
       }
       // validate the optional field `details`
       if (jsonObj.get("details") != null && !jsonObj.get("details").isJsonNull()) {
@@ -485,7 +486,7 @@ public class Healthcollectorv3StapObject {
         if (jsonArrayieDetails != null) {
           // ensure the json data is an array
           if (!jsonObj.get("ie_details").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `ie_details` to be an array in the JSON string but got `%s`", jsonObj.get("ie_details").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ie_details` to be an array in the JSON string but got `%s`", jsonObj.get("ie_details").toString()));
           }
 
           // validate the optional field `ie_details` (array)
@@ -495,16 +496,16 @@ public class Healthcollectorv3StapObject {
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("os_type") != null && !jsonObj.get("os_type").isJsonNull()) && !jsonObj.get("os_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `os_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("os_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `os_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("os_type").toString()));
       }
       if ((jsonObj.get("revision") != null && !jsonObj.get("revision").isJsonNull()) && !jsonObj.get("revision").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `revision` to be a primitive type in the JSON string but got `%s`", jsonObj.get("revision").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `revision` to be a primitive type in the JSON string but got `%s`", jsonObj.get("revision").toString()));
       }
       if ((jsonObj.get("stap_ip") != null && !jsonObj.get("stap_ip").isJsonNull()) && !jsonObj.get("stap_ip").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `stap_ip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap_ip").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `stap_ip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stap_ip").toString()));
       }
   }
 
@@ -537,22 +538,22 @@ public class Healthcollectorv3StapObject {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3StapObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3StapObject
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3StapObject
-  */
+  /**
+   * Create an instance of Healthcollectorv3StapObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3StapObject
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3StapObject
+   */
   public static Healthcollectorv3StapObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3StapObject.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3StapObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3StapObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

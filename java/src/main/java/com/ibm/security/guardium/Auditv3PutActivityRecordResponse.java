@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * PutActivityRecordResponse indicates if the activity log record was created.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Auditv3PutActivityRecordResponse {
   public static final String SERIALIZED_NAME_RESULT = "result";
   @SerializedName(SERIALIZED_NAME_RESULT)
+  @javax.annotation.Nullable
   private String result;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private RpcStatus status;
 
   public Auditv3PutActivityRecordResponse() {
   }
 
-  public Auditv3PutActivityRecordResponse result(String result) {
+  public Auditv3PutActivityRecordResponse result(@javax.annotation.Nullable String result) {
     this.result = result;
     return this;
   }
 
-   /**
+  /**
    * Result is \&quot;\&quot; if an activity log record is created, otherwise an error is returned.
    * @return result
-  **/
+   */
   @javax.annotation.Nullable
   public String getResult() {
     return result;
   }
 
-  public void setResult(String result) {
+  public void setResult(@javax.annotation.Nullable String result) {
     this.result = result;
   }
 
 
-  public Auditv3PutActivityRecordResponse status(RpcStatus status) {
+  public Auditv3PutActivityRecordResponse status(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public RpcStatus getStatus() {
     return status;
   }
 
-  public void setStatus(RpcStatus status) {
+  public void setStatus(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
   }
 
@@ -147,24 +150,22 @@ public class Auditv3PutActivityRecordResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("result");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("result", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Auditv3PutActivityRecordResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Auditv3PutActivityRecordResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Auditv3PutActivityRecordResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Auditv3PutActivityRecordResponse is not found in the empty JSON string", Auditv3PutActivityRecordResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Auditv3PutActivityRecordResponse is not found in the empty JSON string", Auditv3PutActivityRecordResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,12 +173,12 @@ public class Auditv3PutActivityRecordResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Auditv3PutActivityRecordResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Auditv3PutActivityRecordResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Auditv3PutActivityRecordResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("result") != null && !jsonObj.get("result").isJsonNull()) && !jsonObj.get("result").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("result").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("result").toString()));
       }
       // validate the optional field `status`
       if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
@@ -214,22 +215,22 @@ public class Auditv3PutActivityRecordResponse {
     }
   }
 
- /**
-  * Create an instance of Auditv3PutActivityRecordResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Auditv3PutActivityRecordResponse
-  * @throws IOException if the JSON string is invalid with respect to Auditv3PutActivityRecordResponse
-  */
+  /**
+   * Create an instance of Auditv3PutActivityRecordResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Auditv3PutActivityRecordResponse
+   * @throws IOException if the JSON string is invalid with respect to Auditv3PutActivityRecordResponse
+   */
   public static Auditv3PutActivityRecordResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Auditv3PutActivityRecordResponse.class);
   }
 
- /**
-  * Convert an instance of Auditv3PutActivityRecordResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Auditv3PutActivityRecordResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

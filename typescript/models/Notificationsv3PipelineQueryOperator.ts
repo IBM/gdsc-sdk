@@ -13,6 +13,6 @@
 import { HttpFile } from '../http/http';
 
 export enum Notificationsv3PipelineQueryOperator {
-    And = 'OPERATOR_AND',
-    Or = 'OPERATOR_OR'
+    OperatorAnd = 'OPERATOR_AND',
+    OperatorOr = 'OPERATOR_OR'
 }

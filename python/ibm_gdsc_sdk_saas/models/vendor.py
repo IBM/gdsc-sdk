@@ -78,16 +78,16 @@ class Vendor(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in accounts (list)
         _items = []
         if self.accounts:
-            for _item in self.accounts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_accounts in self.accounts:
+                if _item_accounts:
+                    _items.append(_item_accounts.to_dict())
             _dict['accounts'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in certificates (list)
         _items = []
         if self.certificates:
-            for _item in self.certificates:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_certificates in self.certificates:
+                if _item_certificates:
+                    _items.append(_item_certificates.to_dict())
             _dict['certificates'] = _items
         return _dict
 

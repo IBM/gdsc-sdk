@@ -7,8 +7,8 @@ A request to update a specific notification with the specified fields. The ID fi
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **notification_id** | **List[str]** | Unique IDs for notifications; required for update. | [optional] 
-**severity** | [**Notificationsv3NotificationSeverity**](Notificationsv3NotificationSeverity.md) |  | [optional] 
-**state** | [**Notificationsv3NotificationState**](Notificationsv3NotificationState.md) |  | [optional] 
+**severity** | [**Notificationsv3NotificationSeverity**](Notificationsv3NotificationSeverity.md) |  | [optional] [default to Notificationsv3NotificationSeverity.UNDEFINED]
+**state** | [**Notificationsv3NotificationState**](Notificationsv3NotificationState.md) |  | [optional] [default to Notificationsv3NotificationState.UNREAD]
 **template_data** | [**List[Notificationsv3TemplateProperty]**](Notificationsv3TemplateProperty.md) | Not required for update. | [optional] 
 
 ## Example

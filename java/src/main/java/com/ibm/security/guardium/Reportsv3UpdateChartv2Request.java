@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,226 +39,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateChartv2Request is the argument type used to update a VEGA chart.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3UpdateChartv2Request {
   public static final String SERIALIZED_NAME_CHART_ID = "chart_id";
   @SerializedName(SERIALIZED_NAME_CHART_ID)
+  @javax.annotation.Nullable
   private String chartId;
 
   public static final String SERIALIZED_NAME_CHART_SETTINGS_V2 = "chart_settings_v2";
   @SerializedName(SERIALIZED_NAME_CHART_SETTINGS_V2)
+  @javax.annotation.Nullable
   private Reportsv3ChartSettingsv2 chartSettingsV2;
 
   public static final String SERIALIZED_NAME_PRIMARY_CATEGORY = "primary_category";
   @SerializedName(SERIALIZED_NAME_PRIMARY_CATEGORY)
+  @javax.annotation.Nullable
   private Integer primaryCategory;
 
   public static final String SERIALIZED_NAME_PRIMARY_MEASURE = "primary_measure";
   @SerializedName(SERIALIZED_NAME_PRIMARY_MEASURE)
+  @javax.annotation.Nullable
   private Integer primaryMeasure;
 
   public static final String SERIALIZED_NAME_SECONDARY_CATEGORY = "secondary_category";
   @SerializedName(SERIALIZED_NAME_SECONDARY_CATEGORY)
+  @javax.annotation.Nullable
   private Integer secondaryCategory;
 
   public static final String SERIALIZED_NAME_SECONDARY_MEASURE = "secondary_measure";
   @SerializedName(SERIALIZED_NAME_SECONDARY_MEASURE)
+  @javax.annotation.Nullable
   private Integer secondaryMeasure;
 
   public static final String SERIALIZED_NAME_TERTIARY_CATEGORY = "tertiary_category";
   @SerializedName(SERIALIZED_NAME_TERTIARY_CATEGORY)
+  @javax.annotation.Nullable
   private Integer tertiaryCategory;
 
   public static final String SERIALIZED_NAME_TERTIARY_MEASURE = "tertiary_measure";
   @SerializedName(SERIALIZED_NAME_TERTIARY_MEASURE)
+  @javax.annotation.Nullable
   private Integer tertiaryMeasure;
 
   public static final String SERIALIZED_NAME_VEGA_DEFINITION = "vega_definition";
   @SerializedName(SERIALIZED_NAME_VEGA_DEFINITION)
+  @javax.annotation.Nullable
   private String vegaDefinition;
 
   public Reportsv3UpdateChartv2Request() {
   }
 
-  public Reportsv3UpdateChartv2Request chartId(String chartId) {
+  public Reportsv3UpdateChartv2Request chartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
     return this;
   }
 
-   /**
+  /**
    * Unique chart ID.
    * @return chartId
-  **/
+   */
   @javax.annotation.Nullable
   public String getChartId() {
     return chartId;
   }
 
-  public void setChartId(String chartId) {
+  public void setChartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
   }
 
 
-  public Reportsv3UpdateChartv2Request chartSettingsV2(Reportsv3ChartSettingsv2 chartSettingsV2) {
+  public Reportsv3UpdateChartv2Request chartSettingsV2(@javax.annotation.Nullable Reportsv3ChartSettingsv2 chartSettingsV2) {
     this.chartSettingsV2 = chartSettingsV2;
     return this;
   }
 
-   /**
+  /**
    * Get chartSettingsV2
    * @return chartSettingsV2
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ChartSettingsv2 getChartSettingsV2() {
     return chartSettingsV2;
   }
 
-  public void setChartSettingsV2(Reportsv3ChartSettingsv2 chartSettingsV2) {
+  public void setChartSettingsV2(@javax.annotation.Nullable Reportsv3ChartSettingsv2 chartSettingsV2) {
     this.chartSettingsV2 = chartSettingsV2;
   }
 
 
-  public Reportsv3UpdateChartv2Request primaryCategory(Integer primaryCategory) {
+  public Reportsv3UpdateChartv2Request primaryCategory(@javax.annotation.Nullable Integer primaryCategory) {
     this.primaryCategory = primaryCategory;
     return this;
   }
 
-   /**
+  /**
    * Get primaryCategory
    * @return primaryCategory
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPrimaryCategory() {
     return primaryCategory;
   }
 
-  public void setPrimaryCategory(Integer primaryCategory) {
+  public void setPrimaryCategory(@javax.annotation.Nullable Integer primaryCategory) {
     this.primaryCategory = primaryCategory;
   }
 
 
-  public Reportsv3UpdateChartv2Request primaryMeasure(Integer primaryMeasure) {
+  public Reportsv3UpdateChartv2Request primaryMeasure(@javax.annotation.Nullable Integer primaryMeasure) {
     this.primaryMeasure = primaryMeasure;
     return this;
   }
 
-   /**
+  /**
    * Get primaryMeasure
    * @return primaryMeasure
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPrimaryMeasure() {
     return primaryMeasure;
   }
 
-  public void setPrimaryMeasure(Integer primaryMeasure) {
+  public void setPrimaryMeasure(@javax.annotation.Nullable Integer primaryMeasure) {
     this.primaryMeasure = primaryMeasure;
   }
 
 
-  public Reportsv3UpdateChartv2Request secondaryCategory(Integer secondaryCategory) {
+  public Reportsv3UpdateChartv2Request secondaryCategory(@javax.annotation.Nullable Integer secondaryCategory) {
     this.secondaryCategory = secondaryCategory;
     return this;
   }
 
-   /**
+  /**
    * Get secondaryCategory
    * @return secondaryCategory
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSecondaryCategory() {
     return secondaryCategory;
   }
 
-  public void setSecondaryCategory(Integer secondaryCategory) {
+  public void setSecondaryCategory(@javax.annotation.Nullable Integer secondaryCategory) {
     this.secondaryCategory = secondaryCategory;
   }
 
 
-  public Reportsv3UpdateChartv2Request secondaryMeasure(Integer secondaryMeasure) {
+  public Reportsv3UpdateChartv2Request secondaryMeasure(@javax.annotation.Nullable Integer secondaryMeasure) {
     this.secondaryMeasure = secondaryMeasure;
     return this;
   }
 
-   /**
+  /**
    * Get secondaryMeasure
    * @return secondaryMeasure
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSecondaryMeasure() {
     return secondaryMeasure;
   }
 
-  public void setSecondaryMeasure(Integer secondaryMeasure) {
+  public void setSecondaryMeasure(@javax.annotation.Nullable Integer secondaryMeasure) {
     this.secondaryMeasure = secondaryMeasure;
   }
 
 
-  public Reportsv3UpdateChartv2Request tertiaryCategory(Integer tertiaryCategory) {
+  public Reportsv3UpdateChartv2Request tertiaryCategory(@javax.annotation.Nullable Integer tertiaryCategory) {
     this.tertiaryCategory = tertiaryCategory;
     return this;
   }
 
-   /**
+  /**
    * Get tertiaryCategory
    * @return tertiaryCategory
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTertiaryCategory() {
     return tertiaryCategory;
   }
 
-  public void setTertiaryCategory(Integer tertiaryCategory) {
+  public void setTertiaryCategory(@javax.annotation.Nullable Integer tertiaryCategory) {
     this.tertiaryCategory = tertiaryCategory;
   }
 
 
-  public Reportsv3UpdateChartv2Request tertiaryMeasure(Integer tertiaryMeasure) {
+  public Reportsv3UpdateChartv2Request tertiaryMeasure(@javax.annotation.Nullable Integer tertiaryMeasure) {
     this.tertiaryMeasure = tertiaryMeasure;
     return this;
   }
 
-   /**
+  /**
    * Get tertiaryMeasure
    * @return tertiaryMeasure
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTertiaryMeasure() {
     return tertiaryMeasure;
   }
 
-  public void setTertiaryMeasure(Integer tertiaryMeasure) {
+  public void setTertiaryMeasure(@javax.annotation.Nullable Integer tertiaryMeasure) {
     this.tertiaryMeasure = tertiaryMeasure;
   }
 
 
-  public Reportsv3UpdateChartv2Request vegaDefinition(String vegaDefinition) {
+  public Reportsv3UpdateChartv2Request vegaDefinition(@javax.annotation.Nullable String vegaDefinition) {
     this.vegaDefinition = vegaDefinition;
     return this;
   }
 
-   /**
+  /**
    * The VEGA chart definition in a stringified JSON.
    * @return vegaDefinition
-  **/
+   */
   @javax.annotation.Nullable
   public String getVegaDefinition() {
     return vegaDefinition;
   }
 
-  public void setVegaDefinition(String vegaDefinition) {
+  public void setVegaDefinition(@javax.annotation.Nullable String vegaDefinition) {
     this.vegaDefinition = vegaDefinition;
   }
 
@@ -322,31 +332,22 @@ public class Reportsv3UpdateChartv2Request {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("chart_id");
-    openapiFields.add("chart_settings_v2");
-    openapiFields.add("primary_category");
-    openapiFields.add("primary_measure");
-    openapiFields.add("secondary_category");
-    openapiFields.add("secondary_measure");
-    openapiFields.add("tertiary_category");
-    openapiFields.add("tertiary_measure");
-    openapiFields.add("vega_definition");
+    openapiFields = new HashSet<String>(Arrays.asList("chart_id", "chart_settings_v2", "primary_category", "primary_measure", "secondary_category", "secondary_measure", "tertiary_category", "tertiary_measure", "vega_definition"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3UpdateChartv2Request
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3UpdateChartv2Request
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3UpdateChartv2Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3UpdateChartv2Request is not found in the empty JSON string", Reportsv3UpdateChartv2Request.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3UpdateChartv2Request is not found in the empty JSON string", Reportsv3UpdateChartv2Request.openapiRequiredFields.toString()));
         }
       }
 
@@ -354,19 +355,19 @@ public class Reportsv3UpdateChartv2Request {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3UpdateChartv2Request.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3UpdateChartv2Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3UpdateChartv2Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("chart_id") != null && !jsonObj.get("chart_id").isJsonNull()) && !jsonObj.get("chart_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
       }
       // validate the optional field `chart_settings_v2`
       if (jsonObj.get("chart_settings_v2") != null && !jsonObj.get("chart_settings_v2").isJsonNull()) {
         Reportsv3ChartSettingsv2.validateJsonElement(jsonObj.get("chart_settings_v2"));
       }
       if ((jsonObj.get("vega_definition") != null && !jsonObj.get("vega_definition").isJsonNull()) && !jsonObj.get("vega_definition").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vega_definition` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vega_definition").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vega_definition` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vega_definition").toString()));
       }
   }
 
@@ -399,22 +400,22 @@ public class Reportsv3UpdateChartv2Request {
     }
   }
 
- /**
-  * Create an instance of Reportsv3UpdateChartv2Request given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3UpdateChartv2Request
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3UpdateChartv2Request
-  */
+  /**
+   * Create an instance of Reportsv3UpdateChartv2Request given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3UpdateChartv2Request
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3UpdateChartv2Request
+   */
   public static Reportsv3UpdateChartv2Request fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3UpdateChartv2Request.class);
   }
 
- /**
-  * Convert an instance of Reportsv3UpdateChartv2Request to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3UpdateChartv2Request to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

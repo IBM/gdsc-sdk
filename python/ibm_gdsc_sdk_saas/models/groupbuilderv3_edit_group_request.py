@@ -83,9 +83,9 @@ class Groupbuilderv3EditGroupRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in updated_members (list)
         _items = []
         if self.updated_members:
-            for _item in self.updated_members:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_updated_members in self.updated_members:
+                if _item_updated_members:
+                    _items.append(_item_updated_members.to_dict())
             _dict['updated_members'] = _items
         return _dict
 

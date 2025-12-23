@@ -16,8 +16,8 @@ import { HttpFile } from '../http/http';
 * Connectivity status (connectivity); after ping to UC service on openShift + checks on its health.   - UC_OK: n/n nodes are alive.  - UC_INITIALIZING: Just created, waiting till next refresh.  - UC_FAILURE: n out of n pods/nodes are failing; status text should detail (mem? storage?).  - UC_UNKNOWN: All other errors.
 */
 export enum Universalconnectormanagerv3ConnectivityState {
-    Ok = 'UC_OK',
-    Initializing = 'UC_INITIALIZING',
-    Failure = 'UC_FAILURE',
-    Unknown = 'UC_UNKNOWN'
+    UcOk = 'UC_OK',
+    UcInitializing = 'UC_INITIALIZING',
+    UcFailure = 'UC_FAILURE',
+    UcUnknown = 'UC_UNKNOWN'
 }

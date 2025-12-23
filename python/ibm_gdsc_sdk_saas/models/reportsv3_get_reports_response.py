@@ -75,16 +75,16 @@ class Reportsv3GetReportsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in reports_list (list)
         _items = []
         if self.reports_list:
-            for _item in self.reports_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_reports_list in self.reports_list:
+                if _item_reports_list:
+                    _items.append(_item_reports_list.to_dict())
             _dict['reports_list'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in reports_tags (list)
         _items = []
         if self.reports_tags:
-            for _item in self.reports_tags:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_reports_tags in self.reports_tags:
+                if _item_reports_tags:
+                    _items.append(_item_reports_tags.to_dict())
             _dict['reports_tags'] = _items
         return _dict
 

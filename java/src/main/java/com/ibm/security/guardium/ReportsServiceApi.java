@@ -184,13 +184,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateCategoryCall(Reportsv3CreateCategoryRequest reportsv3CreateCategoryRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateCategoryCall(@javax.annotation.Nonnull Reportsv3CreateCategoryRequest reportsv3CreateCategoryRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -236,7 +237,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateCategoryValidateBeforeCall(Reportsv3CreateCategoryRequest reportsv3CreateCategoryRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateCategoryValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateCategoryRequest reportsv3CreateCategoryRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateCategoryRequest' is set
         if (reportsv3CreateCategoryRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateCategoryRequest' when calling reportsServiceCreateCategory(Async)");
@@ -253,13 +254,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateCategoryResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateCategoryResponse reportsServiceCreateCategory(Reportsv3CreateCategoryRequest reportsv3CreateCategoryRequest) throws ApiException {
+    public Reportsv3CreateCategoryResponse reportsServiceCreateCategory(@javax.annotation.Nonnull Reportsv3CreateCategoryRequest reportsv3CreateCategoryRequest) throws ApiException {
         ApiResponse<Reportsv3CreateCategoryResponse> localVarResp = reportsServiceCreateCategoryWithHttpInfo(reportsv3CreateCategoryRequest);
         return localVarResp.getData();
     }
@@ -271,13 +273,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateCategoryResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateCategoryResponse> reportsServiceCreateCategoryWithHttpInfo(Reportsv3CreateCategoryRequest reportsv3CreateCategoryRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateCategoryResponse> reportsServiceCreateCategoryWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateCategoryRequest reportsv3CreateCategoryRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateCategoryValidateBeforeCall(reportsv3CreateCategoryRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateCategoryResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -291,13 +294,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateCategoryAsync(Reportsv3CreateCategoryRequest reportsv3CreateCategoryRequest, final ApiCallback<Reportsv3CreateCategoryResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateCategoryAsync(@javax.annotation.Nonnull Reportsv3CreateCategoryRequest reportsv3CreateCategoryRequest, final ApiCallback<Reportsv3CreateCategoryResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateCategoryValidateBeforeCall(reportsv3CreateCategoryRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateCategoryResponse>(){}.getType();
@@ -311,13 +315,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateChartCall(Reportsv3CreateChartRequest reportsv3CreateChartRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateChartCall(@javax.annotation.Nonnull Reportsv3CreateChartRequest reportsv3CreateChartRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -363,7 +368,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateChartValidateBeforeCall(Reportsv3CreateChartRequest reportsv3CreateChartRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateChartValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateChartRequest reportsv3CreateChartRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateChartRequest' is set
         if (reportsv3CreateChartRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateChartRequest' when calling reportsServiceCreateChart(Async)");
@@ -380,13 +385,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateChartResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateChartResponse reportsServiceCreateChart(Reportsv3CreateChartRequest reportsv3CreateChartRequest) throws ApiException {
+    public Reportsv3CreateChartResponse reportsServiceCreateChart(@javax.annotation.Nonnull Reportsv3CreateChartRequest reportsv3CreateChartRequest) throws ApiException {
         ApiResponse<Reportsv3CreateChartResponse> localVarResp = reportsServiceCreateChartWithHttpInfo(reportsv3CreateChartRequest);
         return localVarResp.getData();
     }
@@ -398,13 +404,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateChartResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateChartResponse> reportsServiceCreateChartWithHttpInfo(Reportsv3CreateChartRequest reportsv3CreateChartRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateChartResponse> reportsServiceCreateChartWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateChartRequest reportsv3CreateChartRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateChartValidateBeforeCall(reportsv3CreateChartRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateChartResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -418,13 +425,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateChartAsync(Reportsv3CreateChartRequest reportsv3CreateChartRequest, final ApiCallback<Reportsv3CreateChartResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateChartAsync(@javax.annotation.Nonnull Reportsv3CreateChartRequest reportsv3CreateChartRequest, final ApiCallback<Reportsv3CreateChartResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateChartValidateBeforeCall(reportsv3CreateChartRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateChartResponse>(){}.getType();
@@ -438,13 +446,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateChartTemplatev2Call(Reportsv3CreateChartTemplatev2Request reportsv3CreateChartTemplatev2Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateChartTemplatev2Call(@javax.annotation.Nonnull Reportsv3CreateChartTemplatev2Request reportsv3CreateChartTemplatev2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -490,7 +499,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateChartTemplatev2ValidateBeforeCall(Reportsv3CreateChartTemplatev2Request reportsv3CreateChartTemplatev2Request, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateChartTemplatev2ValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateChartTemplatev2Request reportsv3CreateChartTemplatev2Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateChartTemplatev2Request' is set
         if (reportsv3CreateChartTemplatev2Request == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateChartTemplatev2Request' when calling reportsServiceCreateChartTemplatev2(Async)");
@@ -507,13 +516,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateChartTemplatev2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateChartTemplatev2Response reportsServiceCreateChartTemplatev2(Reportsv3CreateChartTemplatev2Request reportsv3CreateChartTemplatev2Request) throws ApiException {
+    public Reportsv3CreateChartTemplatev2Response reportsServiceCreateChartTemplatev2(@javax.annotation.Nonnull Reportsv3CreateChartTemplatev2Request reportsv3CreateChartTemplatev2Request) throws ApiException {
         ApiResponse<Reportsv3CreateChartTemplatev2Response> localVarResp = reportsServiceCreateChartTemplatev2WithHttpInfo(reportsv3CreateChartTemplatev2Request);
         return localVarResp.getData();
     }
@@ -525,13 +535,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateChartTemplatev2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateChartTemplatev2Response> reportsServiceCreateChartTemplatev2WithHttpInfo(Reportsv3CreateChartTemplatev2Request reportsv3CreateChartTemplatev2Request) throws ApiException {
+    public ApiResponse<Reportsv3CreateChartTemplatev2Response> reportsServiceCreateChartTemplatev2WithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateChartTemplatev2Request reportsv3CreateChartTemplatev2Request) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateChartTemplatev2ValidateBeforeCall(reportsv3CreateChartTemplatev2Request, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateChartTemplatev2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -545,13 +556,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateChartTemplatev2Async(Reportsv3CreateChartTemplatev2Request reportsv3CreateChartTemplatev2Request, final ApiCallback<Reportsv3CreateChartTemplatev2Response> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateChartTemplatev2Async(@javax.annotation.Nonnull Reportsv3CreateChartTemplatev2Request reportsv3CreateChartTemplatev2Request, final ApiCallback<Reportsv3CreateChartTemplatev2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateChartTemplatev2ValidateBeforeCall(reportsv3CreateChartTemplatev2Request, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateChartTemplatev2Response>(){}.getType();
@@ -565,13 +577,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateChartv2Call(Reportsv3CreateChartv2Request reportsv3CreateChartv2Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateChartv2Call(@javax.annotation.Nonnull Reportsv3CreateChartv2Request reportsv3CreateChartv2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -617,7 +630,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateChartv2ValidateBeforeCall(Reportsv3CreateChartv2Request reportsv3CreateChartv2Request, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateChartv2ValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateChartv2Request reportsv3CreateChartv2Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateChartv2Request' is set
         if (reportsv3CreateChartv2Request == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateChartv2Request' when calling reportsServiceCreateChartv2(Async)");
@@ -634,13 +647,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateChartv2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateChartv2Response reportsServiceCreateChartv2(Reportsv3CreateChartv2Request reportsv3CreateChartv2Request) throws ApiException {
+    public Reportsv3CreateChartv2Response reportsServiceCreateChartv2(@javax.annotation.Nonnull Reportsv3CreateChartv2Request reportsv3CreateChartv2Request) throws ApiException {
         ApiResponse<Reportsv3CreateChartv2Response> localVarResp = reportsServiceCreateChartv2WithHttpInfo(reportsv3CreateChartv2Request);
         return localVarResp.getData();
     }
@@ -652,13 +666,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateChartv2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateChartv2Response> reportsServiceCreateChartv2WithHttpInfo(Reportsv3CreateChartv2Request reportsv3CreateChartv2Request) throws ApiException {
+    public ApiResponse<Reportsv3CreateChartv2Response> reportsServiceCreateChartv2WithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateChartv2Request reportsv3CreateChartv2Request) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateChartv2ValidateBeforeCall(reportsv3CreateChartv2Request, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateChartv2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -672,13 +687,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateChartv2Async(Reportsv3CreateChartv2Request reportsv3CreateChartv2Request, final ApiCallback<Reportsv3CreateChartv2Response> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateChartv2Async(@javax.annotation.Nonnull Reportsv3CreateChartv2Request reportsv3CreateChartv2Request, final ApiCallback<Reportsv3CreateChartv2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateChartv2ValidateBeforeCall(reportsv3CreateChartv2Request, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateChartv2Response>(){}.getType();
@@ -692,13 +708,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateControlCall(Reportsv3CreateControlRequest reportsv3CreateControlRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateControlCall(@javax.annotation.Nonnull Reportsv3CreateControlRequest reportsv3CreateControlRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -744,7 +761,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateControlValidateBeforeCall(Reportsv3CreateControlRequest reportsv3CreateControlRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateControlValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateControlRequest reportsv3CreateControlRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateControlRequest' is set
         if (reportsv3CreateControlRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateControlRequest' when calling reportsServiceCreateControl(Async)");
@@ -761,13 +778,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateControlResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateControlResponse reportsServiceCreateControl(Reportsv3CreateControlRequest reportsv3CreateControlRequest) throws ApiException {
+    public Reportsv3CreateControlResponse reportsServiceCreateControl(@javax.annotation.Nonnull Reportsv3CreateControlRequest reportsv3CreateControlRequest) throws ApiException {
         ApiResponse<Reportsv3CreateControlResponse> localVarResp = reportsServiceCreateControlWithHttpInfo(reportsv3CreateControlRequest);
         return localVarResp.getData();
     }
@@ -779,13 +797,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateControlResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateControlResponse> reportsServiceCreateControlWithHttpInfo(Reportsv3CreateControlRequest reportsv3CreateControlRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateControlResponse> reportsServiceCreateControlWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateControlRequest reportsv3CreateControlRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateControlValidateBeforeCall(reportsv3CreateControlRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateControlResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -799,13 +818,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateControlAsync(Reportsv3CreateControlRequest reportsv3CreateControlRequest, final ApiCallback<Reportsv3CreateControlResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateControlAsync(@javax.annotation.Nonnull Reportsv3CreateControlRequest reportsv3CreateControlRequest, final ApiCallback<Reportsv3CreateControlResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateControlValidateBeforeCall(reportsv3CreateControlRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateControlResponse>(){}.getType();
@@ -819,13 +839,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateFieldsByCategoryCall(Reportsv3CreateFieldsByCategoryRequest reportsv3CreateFieldsByCategoryRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateFieldsByCategoryCall(@javax.annotation.Nonnull Reportsv3CreateFieldsByCategoryRequest reportsv3CreateFieldsByCategoryRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -871,7 +892,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateFieldsByCategoryValidateBeforeCall(Reportsv3CreateFieldsByCategoryRequest reportsv3CreateFieldsByCategoryRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateFieldsByCategoryValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateFieldsByCategoryRequest reportsv3CreateFieldsByCategoryRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateFieldsByCategoryRequest' is set
         if (reportsv3CreateFieldsByCategoryRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateFieldsByCategoryRequest' when calling reportsServiceCreateFieldsByCategory(Async)");
@@ -888,13 +909,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateFieldsByCategoryResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateFieldsByCategoryResponse reportsServiceCreateFieldsByCategory(Reportsv3CreateFieldsByCategoryRequest reportsv3CreateFieldsByCategoryRequest) throws ApiException {
+    public Reportsv3CreateFieldsByCategoryResponse reportsServiceCreateFieldsByCategory(@javax.annotation.Nonnull Reportsv3CreateFieldsByCategoryRequest reportsv3CreateFieldsByCategoryRequest) throws ApiException {
         ApiResponse<Reportsv3CreateFieldsByCategoryResponse> localVarResp = reportsServiceCreateFieldsByCategoryWithHttpInfo(reportsv3CreateFieldsByCategoryRequest);
         return localVarResp.getData();
     }
@@ -906,13 +928,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateFieldsByCategoryResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateFieldsByCategoryResponse> reportsServiceCreateFieldsByCategoryWithHttpInfo(Reportsv3CreateFieldsByCategoryRequest reportsv3CreateFieldsByCategoryRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateFieldsByCategoryResponse> reportsServiceCreateFieldsByCategoryWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateFieldsByCategoryRequest reportsv3CreateFieldsByCategoryRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateFieldsByCategoryValidateBeforeCall(reportsv3CreateFieldsByCategoryRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateFieldsByCategoryResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -926,13 +949,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateFieldsByCategoryAsync(Reportsv3CreateFieldsByCategoryRequest reportsv3CreateFieldsByCategoryRequest, final ApiCallback<Reportsv3CreateFieldsByCategoryResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateFieldsByCategoryAsync(@javax.annotation.Nonnull Reportsv3CreateFieldsByCategoryRequest reportsv3CreateFieldsByCategoryRequest, final ApiCallback<Reportsv3CreateFieldsByCategoryResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateFieldsByCategoryValidateBeforeCall(reportsv3CreateFieldsByCategoryRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateFieldsByCategoryResponse>(){}.getType();
@@ -946,13 +970,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateGradeCall(Reportsv3CreateGradeRequest reportsv3CreateGradeRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateGradeCall(@javax.annotation.Nonnull Reportsv3CreateGradeRequest reportsv3CreateGradeRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -998,7 +1023,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateGradeValidateBeforeCall(Reportsv3CreateGradeRequest reportsv3CreateGradeRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateGradeValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateGradeRequest reportsv3CreateGradeRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateGradeRequest' is set
         if (reportsv3CreateGradeRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateGradeRequest' when calling reportsServiceCreateGrade(Async)");
@@ -1015,13 +1040,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateGradeResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateGradeResponse reportsServiceCreateGrade(Reportsv3CreateGradeRequest reportsv3CreateGradeRequest) throws ApiException {
+    public Reportsv3CreateGradeResponse reportsServiceCreateGrade(@javax.annotation.Nonnull Reportsv3CreateGradeRequest reportsv3CreateGradeRequest) throws ApiException {
         ApiResponse<Reportsv3CreateGradeResponse> localVarResp = reportsServiceCreateGradeWithHttpInfo(reportsv3CreateGradeRequest);
         return localVarResp.getData();
     }
@@ -1033,13 +1059,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateGradeResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateGradeResponse> reportsServiceCreateGradeWithHttpInfo(Reportsv3CreateGradeRequest reportsv3CreateGradeRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateGradeResponse> reportsServiceCreateGradeWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateGradeRequest reportsv3CreateGradeRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateGradeValidateBeforeCall(reportsv3CreateGradeRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateGradeResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1053,13 +1080,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateGradeAsync(Reportsv3CreateGradeRequest reportsv3CreateGradeRequest, final ApiCallback<Reportsv3CreateGradeResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateGradeAsync(@javax.annotation.Nonnull Reportsv3CreateGradeRequest reportsv3CreateGradeRequest, final ApiCallback<Reportsv3CreateGradeResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateGradeValidateBeforeCall(reportsv3CreateGradeRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateGradeResponse>(){}.getType();
@@ -1073,13 +1101,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateJoinCall(Reportsv3CreateJoinRequest reportsv3CreateJoinRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateJoinCall(@javax.annotation.Nonnull Reportsv3CreateJoinRequest reportsv3CreateJoinRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1125,7 +1154,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateJoinValidateBeforeCall(Reportsv3CreateJoinRequest reportsv3CreateJoinRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateJoinValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateJoinRequest reportsv3CreateJoinRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateJoinRequest' is set
         if (reportsv3CreateJoinRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateJoinRequest' when calling reportsServiceCreateJoin(Async)");
@@ -1142,13 +1171,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateJoinResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateJoinResponse reportsServiceCreateJoin(Reportsv3CreateJoinRequest reportsv3CreateJoinRequest) throws ApiException {
+    public Reportsv3CreateJoinResponse reportsServiceCreateJoin(@javax.annotation.Nonnull Reportsv3CreateJoinRequest reportsv3CreateJoinRequest) throws ApiException {
         ApiResponse<Reportsv3CreateJoinResponse> localVarResp = reportsServiceCreateJoinWithHttpInfo(reportsv3CreateJoinRequest);
         return localVarResp.getData();
     }
@@ -1160,13 +1190,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateJoinResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateJoinResponse> reportsServiceCreateJoinWithHttpInfo(Reportsv3CreateJoinRequest reportsv3CreateJoinRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateJoinResponse> reportsServiceCreateJoinWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateJoinRequest reportsv3CreateJoinRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateJoinValidateBeforeCall(reportsv3CreateJoinRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateJoinResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1180,13 +1211,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateJoinAsync(Reportsv3CreateJoinRequest reportsv3CreateJoinRequest, final ApiCallback<Reportsv3CreateJoinResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateJoinAsync(@javax.annotation.Nonnull Reportsv3CreateJoinRequest reportsv3CreateJoinRequest, final ApiCallback<Reportsv3CreateJoinResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateJoinValidateBeforeCall(reportsv3CreateJoinRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateJoinResponse>(){}.getType();
@@ -1200,13 +1232,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateMeasureCall(Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateMeasureCall(@javax.annotation.Nonnull Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1252,7 +1285,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateMeasureValidateBeforeCall(Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateMeasureValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateMeasureRequest' is set
         if (reportsv3CreateMeasureRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateMeasureRequest' when calling reportsServiceCreateMeasure(Async)");
@@ -1269,13 +1302,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateMeasureResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateMeasureResponse reportsServiceCreateMeasure(Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest) throws ApiException {
+    public Reportsv3CreateMeasureResponse reportsServiceCreateMeasure(@javax.annotation.Nonnull Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest) throws ApiException {
         ApiResponse<Reportsv3CreateMeasureResponse> localVarResp = reportsServiceCreateMeasureWithHttpInfo(reportsv3CreateMeasureRequest);
         return localVarResp.getData();
     }
@@ -1287,13 +1321,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateMeasureResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateMeasureResponse> reportsServiceCreateMeasureWithHttpInfo(Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateMeasureResponse> reportsServiceCreateMeasureWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateMeasureValidateBeforeCall(reportsv3CreateMeasureRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateMeasureResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1307,13 +1342,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateMeasureAsync(Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest, final ApiCallback<Reportsv3CreateMeasureResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateMeasureAsync(@javax.annotation.Nonnull Reportsv3CreateMeasureRequest reportsv3CreateMeasureRequest, final ApiCallback<Reportsv3CreateMeasureResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateMeasureValidateBeforeCall(reportsv3CreateMeasureRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateMeasureResponse>(){}.getType();
@@ -1327,13 +1363,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateMetricCall(Reportsv3CreateMetricRequest reportsv3CreateMetricRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateMetricCall(@javax.annotation.Nonnull Reportsv3CreateMetricRequest reportsv3CreateMetricRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1379,7 +1416,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateMetricValidateBeforeCall(Reportsv3CreateMetricRequest reportsv3CreateMetricRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateMetricValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateMetricRequest reportsv3CreateMetricRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateMetricRequest' is set
         if (reportsv3CreateMetricRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateMetricRequest' when calling reportsServiceCreateMetric(Async)");
@@ -1396,13 +1433,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateMetricResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateMetricResponse reportsServiceCreateMetric(Reportsv3CreateMetricRequest reportsv3CreateMetricRequest) throws ApiException {
+    public Reportsv3CreateMetricResponse reportsServiceCreateMetric(@javax.annotation.Nonnull Reportsv3CreateMetricRequest reportsv3CreateMetricRequest) throws ApiException {
         ApiResponse<Reportsv3CreateMetricResponse> localVarResp = reportsServiceCreateMetricWithHttpInfo(reportsv3CreateMetricRequest);
         return localVarResp.getData();
     }
@@ -1414,13 +1452,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateMetricResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateMetricResponse> reportsServiceCreateMetricWithHttpInfo(Reportsv3CreateMetricRequest reportsv3CreateMetricRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateMetricResponse> reportsServiceCreateMetricWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateMetricRequest reportsv3CreateMetricRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateMetricValidateBeforeCall(reportsv3CreateMetricRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateMetricResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1434,13 +1473,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateMetricAsync(Reportsv3CreateMetricRequest reportsv3CreateMetricRequest, final ApiCallback<Reportsv3CreateMetricResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateMetricAsync(@javax.annotation.Nonnull Reportsv3CreateMetricRequest reportsv3CreateMetricRequest, final ApiCallback<Reportsv3CreateMetricResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateMetricValidateBeforeCall(reportsv3CreateMetricRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateMetricResponse>(){}.getType();
@@ -1454,13 +1494,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateProgramCall(Reportsv3CreateProgramRequest reportsv3CreateProgramRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateProgramCall(@javax.annotation.Nonnull Reportsv3CreateProgramRequest reportsv3CreateProgramRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1506,7 +1547,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateProgramValidateBeforeCall(Reportsv3CreateProgramRequest reportsv3CreateProgramRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateProgramValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateProgramRequest reportsv3CreateProgramRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateProgramRequest' is set
         if (reportsv3CreateProgramRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateProgramRequest' when calling reportsServiceCreateProgram(Async)");
@@ -1523,13 +1564,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateProgramResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateProgramResponse reportsServiceCreateProgram(Reportsv3CreateProgramRequest reportsv3CreateProgramRequest) throws ApiException {
+    public Reportsv3CreateProgramResponse reportsServiceCreateProgram(@javax.annotation.Nonnull Reportsv3CreateProgramRequest reportsv3CreateProgramRequest) throws ApiException {
         ApiResponse<Reportsv3CreateProgramResponse> localVarResp = reportsServiceCreateProgramWithHttpInfo(reportsv3CreateProgramRequest);
         return localVarResp.getData();
     }
@@ -1541,13 +1583,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateProgramResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateProgramResponse> reportsServiceCreateProgramWithHttpInfo(Reportsv3CreateProgramRequest reportsv3CreateProgramRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateProgramResponse> reportsServiceCreateProgramWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateProgramRequest reportsv3CreateProgramRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateProgramValidateBeforeCall(reportsv3CreateProgramRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateProgramResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1561,13 +1604,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateProgramAsync(Reportsv3CreateProgramRequest reportsv3CreateProgramRequest, final ApiCallback<Reportsv3CreateProgramResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateProgramAsync(@javax.annotation.Nonnull Reportsv3CreateProgramRequest reportsv3CreateProgramRequest, final ApiCallback<Reportsv3CreateProgramResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateProgramValidateBeforeCall(reportsv3CreateProgramRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateProgramResponse>(){}.getType();
@@ -1581,13 +1625,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateReportCall(Reportsv3CreateReportRequest reportsv3CreateReportRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateReportCall(@javax.annotation.Nonnull Reportsv3CreateReportRequest reportsv3CreateReportRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1633,7 +1678,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateReportValidateBeforeCall(Reportsv3CreateReportRequest reportsv3CreateReportRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateReportValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateReportRequest reportsv3CreateReportRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateReportRequest' is set
         if (reportsv3CreateReportRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateReportRequest' when calling reportsServiceCreateReport(Async)");
@@ -1650,13 +1695,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateReportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateReportResponse reportsServiceCreateReport(Reportsv3CreateReportRequest reportsv3CreateReportRequest) throws ApiException {
+    public Reportsv3CreateReportResponse reportsServiceCreateReport(@javax.annotation.Nonnull Reportsv3CreateReportRequest reportsv3CreateReportRequest) throws ApiException {
         ApiResponse<Reportsv3CreateReportResponse> localVarResp = reportsServiceCreateReportWithHttpInfo(reportsv3CreateReportRequest);
         return localVarResp.getData();
     }
@@ -1668,13 +1714,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateReportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateReportResponse> reportsServiceCreateReportWithHttpInfo(Reportsv3CreateReportRequest reportsv3CreateReportRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateReportResponse> reportsServiceCreateReportWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateReportRequest reportsv3CreateReportRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateReportValidateBeforeCall(reportsv3CreateReportRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateReportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1688,13 +1735,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateReportAsync(Reportsv3CreateReportRequest reportsv3CreateReportRequest, final ApiCallback<Reportsv3CreateReportResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateReportAsync(@javax.annotation.Nonnull Reportsv3CreateReportRequest reportsv3CreateReportRequest, final ApiCallback<Reportsv3CreateReportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateReportValidateBeforeCall(reportsv3CreateReportRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateReportResponse>(){}.getType();
@@ -1708,13 +1756,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateRequirementCall(Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateRequirementCall(@javax.annotation.Nonnull Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1760,7 +1809,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateRequirementValidateBeforeCall(Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateRequirementValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateRequirementRequest' is set
         if (reportsv3CreateRequirementRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateRequirementRequest' when calling reportsServiceCreateRequirement(Async)");
@@ -1777,13 +1826,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateRequirementResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateRequirementResponse reportsServiceCreateRequirement(Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest) throws ApiException {
+    public Reportsv3CreateRequirementResponse reportsServiceCreateRequirement(@javax.annotation.Nonnull Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest) throws ApiException {
         ApiResponse<Reportsv3CreateRequirementResponse> localVarResp = reportsServiceCreateRequirementWithHttpInfo(reportsv3CreateRequirementRequest);
         return localVarResp.getData();
     }
@@ -1795,13 +1845,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateRequirementResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateRequirementResponse> reportsServiceCreateRequirementWithHttpInfo(Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateRequirementResponse> reportsServiceCreateRequirementWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateRequirementValidateBeforeCall(reportsv3CreateRequirementRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateRequirementResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1815,13 +1866,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateRequirementAsync(Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest, final ApiCallback<Reportsv3CreateRequirementResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateRequirementAsync(@javax.annotation.Nonnull Reportsv3CreateRequirementRequest reportsv3CreateRequirementRequest, final ApiCallback<Reportsv3CreateRequirementResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateRequirementValidateBeforeCall(reportsv3CreateRequirementRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateRequirementResponse>(){}.getType();
@@ -1835,13 +1887,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateVariantCall(Reportsv3CreateVariantRequest reportsv3CreateVariantRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateVariantCall(@javax.annotation.Nonnull Reportsv3CreateVariantRequest reportsv3CreateVariantRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1887,7 +1940,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceCreateVariantValidateBeforeCall(Reportsv3CreateVariantRequest reportsv3CreateVariantRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceCreateVariantValidateBeforeCall(@javax.annotation.Nonnull Reportsv3CreateVariantRequest reportsv3CreateVariantRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3CreateVariantRequest' is set
         if (reportsv3CreateVariantRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3CreateVariantRequest' when calling reportsServiceCreateVariant(Async)");
@@ -1904,13 +1957,14 @@ public class ReportsServiceApi {
      * @return Reportsv3CreateVariantResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3CreateVariantResponse reportsServiceCreateVariant(Reportsv3CreateVariantRequest reportsv3CreateVariantRequest) throws ApiException {
+    public Reportsv3CreateVariantResponse reportsServiceCreateVariant(@javax.annotation.Nonnull Reportsv3CreateVariantRequest reportsv3CreateVariantRequest) throws ApiException {
         ApiResponse<Reportsv3CreateVariantResponse> localVarResp = reportsServiceCreateVariantWithHttpInfo(reportsv3CreateVariantRequest);
         return localVarResp.getData();
     }
@@ -1922,13 +1976,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3CreateVariantResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3CreateVariantResponse> reportsServiceCreateVariantWithHttpInfo(Reportsv3CreateVariantRequest reportsv3CreateVariantRequest) throws ApiException {
+    public ApiResponse<Reportsv3CreateVariantResponse> reportsServiceCreateVariantWithHttpInfo(@javax.annotation.Nonnull Reportsv3CreateVariantRequest reportsv3CreateVariantRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceCreateVariantValidateBeforeCall(reportsv3CreateVariantRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3CreateVariantResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1942,13 +1997,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceCreateVariantAsync(Reportsv3CreateVariantRequest reportsv3CreateVariantRequest, final ApiCallback<Reportsv3CreateVariantResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceCreateVariantAsync(@javax.annotation.Nonnull Reportsv3CreateVariantRequest reportsv3CreateVariantRequest, final ApiCallback<Reportsv3CreateVariantResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceCreateVariantValidateBeforeCall(reportsv3CreateVariantRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3CreateVariantResponse>(){}.getType();
@@ -1963,13 +2019,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteCategoryCall(String categoryId, String tableName, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteCategoryCall(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String tableName, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2022,7 +2079,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteCategoryValidateBeforeCall(String categoryId, String tableName, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteCategoryValidateBeforeCall(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String tableName, final ApiCallback _callback) throws ApiException {
         return reportsServiceDeleteCategoryCall(categoryId, tableName, _callback);
 
     }
@@ -2035,13 +2092,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteCategoryResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteCategoryResponse reportsServiceDeleteCategory(String categoryId, String tableName) throws ApiException {
+    public Reportsv3DeleteCategoryResponse reportsServiceDeleteCategory(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String tableName) throws ApiException {
         ApiResponse<Reportsv3DeleteCategoryResponse> localVarResp = reportsServiceDeleteCategoryWithHttpInfo(categoryId, tableName);
         return localVarResp.getData();
     }
@@ -2054,13 +2112,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteCategoryResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteCategoryResponse> reportsServiceDeleteCategoryWithHttpInfo(String categoryId, String tableName) throws ApiException {
+    public ApiResponse<Reportsv3DeleteCategoryResponse> reportsServiceDeleteCategoryWithHttpInfo(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String tableName) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteCategoryValidateBeforeCall(categoryId, tableName, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteCategoryResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2075,13 +2134,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteCategoryAsync(String categoryId, String tableName, final ApiCallback<Reportsv3DeleteCategoryResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteCategoryAsync(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String tableName, final ApiCallback<Reportsv3DeleteCategoryResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteCategoryValidateBeforeCall(categoryId, tableName, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteCategoryResponse>(){}.getType();
@@ -2095,13 +2155,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteChartCall(String chartId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteChartCall(@javax.annotation.Nonnull String chartId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2147,7 +2208,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteChartValidateBeforeCall(String chartId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteChartValidateBeforeCall(@javax.annotation.Nonnull String chartId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'chartId' is set
         if (chartId == null) {
             throw new ApiException("Missing the required parameter 'chartId' when calling reportsServiceDeleteChart(Async)");
@@ -2164,13 +2225,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteChartResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteChartResponse reportsServiceDeleteChart(String chartId) throws ApiException {
+    public Reportsv3DeleteChartResponse reportsServiceDeleteChart(@javax.annotation.Nonnull String chartId) throws ApiException {
         ApiResponse<Reportsv3DeleteChartResponse> localVarResp = reportsServiceDeleteChartWithHttpInfo(chartId);
         return localVarResp.getData();
     }
@@ -2182,13 +2244,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteChartResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteChartResponse> reportsServiceDeleteChartWithHttpInfo(String chartId) throws ApiException {
+    public ApiResponse<Reportsv3DeleteChartResponse> reportsServiceDeleteChartWithHttpInfo(@javax.annotation.Nonnull String chartId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteChartValidateBeforeCall(chartId, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteChartResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2202,13 +2265,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteChartAsync(String chartId, final ApiCallback<Reportsv3DeleteChartResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteChartAsync(@javax.annotation.Nonnull String chartId, final ApiCallback<Reportsv3DeleteChartResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteChartValidateBeforeCall(chartId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteChartResponse>(){}.getType();
@@ -2222,13 +2286,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteChartTemplatev2Call(String templateId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteChartTemplatev2Call(@javax.annotation.Nonnull String templateId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2274,7 +2339,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteChartTemplatev2ValidateBeforeCall(String templateId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteChartTemplatev2ValidateBeforeCall(@javax.annotation.Nonnull String templateId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'templateId' is set
         if (templateId == null) {
             throw new ApiException("Missing the required parameter 'templateId' when calling reportsServiceDeleteChartTemplatev2(Async)");
@@ -2291,13 +2356,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteChartTemplatev2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteChartTemplatev2Response reportsServiceDeleteChartTemplatev2(String templateId) throws ApiException {
+    public Reportsv3DeleteChartTemplatev2Response reportsServiceDeleteChartTemplatev2(@javax.annotation.Nonnull String templateId) throws ApiException {
         ApiResponse<Reportsv3DeleteChartTemplatev2Response> localVarResp = reportsServiceDeleteChartTemplatev2WithHttpInfo(templateId);
         return localVarResp.getData();
     }
@@ -2309,13 +2375,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteChartTemplatev2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteChartTemplatev2Response> reportsServiceDeleteChartTemplatev2WithHttpInfo(String templateId) throws ApiException {
+    public ApiResponse<Reportsv3DeleteChartTemplatev2Response> reportsServiceDeleteChartTemplatev2WithHttpInfo(@javax.annotation.Nonnull String templateId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteChartTemplatev2ValidateBeforeCall(templateId, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteChartTemplatev2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2329,13 +2396,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteChartTemplatev2Async(String templateId, final ApiCallback<Reportsv3DeleteChartTemplatev2Response> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteChartTemplatev2Async(@javax.annotation.Nonnull String templateId, final ApiCallback<Reportsv3DeleteChartTemplatev2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteChartTemplatev2ValidateBeforeCall(templateId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteChartTemplatev2Response>(){}.getType();
@@ -2349,13 +2417,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteChartv2Call(String chartId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteChartv2Call(@javax.annotation.Nonnull String chartId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2401,7 +2470,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteChartv2ValidateBeforeCall(String chartId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteChartv2ValidateBeforeCall(@javax.annotation.Nonnull String chartId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'chartId' is set
         if (chartId == null) {
             throw new ApiException("Missing the required parameter 'chartId' when calling reportsServiceDeleteChartv2(Async)");
@@ -2418,13 +2487,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteChartv2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteChartv2Response reportsServiceDeleteChartv2(String chartId) throws ApiException {
+    public Reportsv3DeleteChartv2Response reportsServiceDeleteChartv2(@javax.annotation.Nonnull String chartId) throws ApiException {
         ApiResponse<Reportsv3DeleteChartv2Response> localVarResp = reportsServiceDeleteChartv2WithHttpInfo(chartId);
         return localVarResp.getData();
     }
@@ -2436,13 +2506,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteChartv2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteChartv2Response> reportsServiceDeleteChartv2WithHttpInfo(String chartId) throws ApiException {
+    public ApiResponse<Reportsv3DeleteChartv2Response> reportsServiceDeleteChartv2WithHttpInfo(@javax.annotation.Nonnull String chartId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteChartv2ValidateBeforeCall(chartId, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteChartv2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2456,13 +2527,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteChartv2Async(String chartId, final ApiCallback<Reportsv3DeleteChartv2Response> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteChartv2Async(@javax.annotation.Nonnull String chartId, final ApiCallback<Reportsv3DeleteChartv2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteChartv2ValidateBeforeCall(chartId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteChartv2Response>(){}.getType();
@@ -2477,13 +2549,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteControlCall(Integer controlId, Reportsv3DeleteControlRequest reportsv3DeleteControlRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteControlCall(@javax.annotation.Nonnull Integer controlId, @javax.annotation.Nonnull Reportsv3DeleteControlRequest reportsv3DeleteControlRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2530,7 +2603,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteControlValidateBeforeCall(Integer controlId, Reportsv3DeleteControlRequest reportsv3DeleteControlRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteControlValidateBeforeCall(@javax.annotation.Nonnull Integer controlId, @javax.annotation.Nonnull Reportsv3DeleteControlRequest reportsv3DeleteControlRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'controlId' is set
         if (controlId == null) {
             throw new ApiException("Missing the required parameter 'controlId' when calling reportsServiceDeleteControl(Async)");
@@ -2553,13 +2626,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteControlResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteControlResponse reportsServiceDeleteControl(Integer controlId, Reportsv3DeleteControlRequest reportsv3DeleteControlRequest) throws ApiException {
+    public Reportsv3DeleteControlResponse reportsServiceDeleteControl(@javax.annotation.Nonnull Integer controlId, @javax.annotation.Nonnull Reportsv3DeleteControlRequest reportsv3DeleteControlRequest) throws ApiException {
         ApiResponse<Reportsv3DeleteControlResponse> localVarResp = reportsServiceDeleteControlWithHttpInfo(controlId, reportsv3DeleteControlRequest);
         return localVarResp.getData();
     }
@@ -2572,13 +2646,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteControlResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteControlResponse> reportsServiceDeleteControlWithHttpInfo(Integer controlId, Reportsv3DeleteControlRequest reportsv3DeleteControlRequest) throws ApiException {
+    public ApiResponse<Reportsv3DeleteControlResponse> reportsServiceDeleteControlWithHttpInfo(@javax.annotation.Nonnull Integer controlId, @javax.annotation.Nonnull Reportsv3DeleteControlRequest reportsv3DeleteControlRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteControlValidateBeforeCall(controlId, reportsv3DeleteControlRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteControlResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2593,13 +2668,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteControlAsync(Integer controlId, Reportsv3DeleteControlRequest reportsv3DeleteControlRequest, final ApiCallback<Reportsv3DeleteControlResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteControlAsync(@javax.annotation.Nonnull Integer controlId, @javax.annotation.Nonnull Reportsv3DeleteControlRequest reportsv3DeleteControlRequest, final ApiCallback<Reportsv3DeleteControlResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteControlValidateBeforeCall(controlId, reportsv3DeleteControlRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteControlResponse>(){}.getType();
@@ -2614,13 +2690,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteFieldsByCategoryCall(List<String> headerIds, String tableName, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteFieldsByCategoryCall(@javax.annotation.Nullable List<String> headerIds, @javax.annotation.Nullable String tableName, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2673,7 +2750,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteFieldsByCategoryValidateBeforeCall(List<String> headerIds, String tableName, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteFieldsByCategoryValidateBeforeCall(@javax.annotation.Nullable List<String> headerIds, @javax.annotation.Nullable String tableName, final ApiCallback _callback) throws ApiException {
         return reportsServiceDeleteFieldsByCategoryCall(headerIds, tableName, _callback);
 
     }
@@ -2686,13 +2763,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteFieldsByCategoryResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteFieldsByCategoryResponse reportsServiceDeleteFieldsByCategory(List<String> headerIds, String tableName) throws ApiException {
+    public Reportsv3DeleteFieldsByCategoryResponse reportsServiceDeleteFieldsByCategory(@javax.annotation.Nullable List<String> headerIds, @javax.annotation.Nullable String tableName) throws ApiException {
         ApiResponse<Reportsv3DeleteFieldsByCategoryResponse> localVarResp = reportsServiceDeleteFieldsByCategoryWithHttpInfo(headerIds, tableName);
         return localVarResp.getData();
     }
@@ -2705,13 +2783,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteFieldsByCategoryResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteFieldsByCategoryResponse> reportsServiceDeleteFieldsByCategoryWithHttpInfo(List<String> headerIds, String tableName) throws ApiException {
+    public ApiResponse<Reportsv3DeleteFieldsByCategoryResponse> reportsServiceDeleteFieldsByCategoryWithHttpInfo(@javax.annotation.Nullable List<String> headerIds, @javax.annotation.Nullable String tableName) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteFieldsByCategoryValidateBeforeCall(headerIds, tableName, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteFieldsByCategoryResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2726,13 +2805,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteFieldsByCategoryAsync(List<String> headerIds, String tableName, final ApiCallback<Reportsv3DeleteFieldsByCategoryResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteFieldsByCategoryAsync(@javax.annotation.Nullable List<String> headerIds, @javax.annotation.Nullable String tableName, final ApiCallback<Reportsv3DeleteFieldsByCategoryResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteFieldsByCategoryValidateBeforeCall(headerIds, tableName, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteFieldsByCategoryResponse>(){}.getType();
@@ -2747,13 +2827,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteGradeCall(Integer gradeId, Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteGradeCall(@javax.annotation.Nonnull Integer gradeId, @javax.annotation.Nonnull Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2800,7 +2881,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteGradeValidateBeforeCall(Integer gradeId, Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteGradeValidateBeforeCall(@javax.annotation.Nonnull Integer gradeId, @javax.annotation.Nonnull Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'gradeId' is set
         if (gradeId == null) {
             throw new ApiException("Missing the required parameter 'gradeId' when calling reportsServiceDeleteGrade(Async)");
@@ -2823,13 +2904,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteGradeResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteGradeResponse reportsServiceDeleteGrade(Integer gradeId, Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest) throws ApiException {
+    public Reportsv3DeleteGradeResponse reportsServiceDeleteGrade(@javax.annotation.Nonnull Integer gradeId, @javax.annotation.Nonnull Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest) throws ApiException {
         ApiResponse<Reportsv3DeleteGradeResponse> localVarResp = reportsServiceDeleteGradeWithHttpInfo(gradeId, reportsv3DeleteGradeRequest);
         return localVarResp.getData();
     }
@@ -2842,13 +2924,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteGradeResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteGradeResponse> reportsServiceDeleteGradeWithHttpInfo(Integer gradeId, Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest) throws ApiException {
+    public ApiResponse<Reportsv3DeleteGradeResponse> reportsServiceDeleteGradeWithHttpInfo(@javax.annotation.Nonnull Integer gradeId, @javax.annotation.Nonnull Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteGradeValidateBeforeCall(gradeId, reportsv3DeleteGradeRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteGradeResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2863,13 +2946,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteGradeAsync(Integer gradeId, Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest, final ApiCallback<Reportsv3DeleteGradeResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteGradeAsync(@javax.annotation.Nonnull Integer gradeId, @javax.annotation.Nonnull Reportsv3DeleteGradeRequest reportsv3DeleteGradeRequest, final ApiCallback<Reportsv3DeleteGradeResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteGradeValidateBeforeCall(gradeId, reportsv3DeleteGradeRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteGradeResponse>(){}.getType();
@@ -2883,13 +2967,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteJoinCall(String joinId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteJoinCall(@javax.annotation.Nonnull String joinId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2935,7 +3020,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteJoinValidateBeforeCall(String joinId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteJoinValidateBeforeCall(@javax.annotation.Nonnull String joinId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'joinId' is set
         if (joinId == null) {
             throw new ApiException("Missing the required parameter 'joinId' when calling reportsServiceDeleteJoin(Async)");
@@ -2952,13 +3037,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteJoinResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteJoinResponse reportsServiceDeleteJoin(String joinId) throws ApiException {
+    public Reportsv3DeleteJoinResponse reportsServiceDeleteJoin(@javax.annotation.Nonnull String joinId) throws ApiException {
         ApiResponse<Reportsv3DeleteJoinResponse> localVarResp = reportsServiceDeleteJoinWithHttpInfo(joinId);
         return localVarResp.getData();
     }
@@ -2970,13 +3056,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteJoinResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteJoinResponse> reportsServiceDeleteJoinWithHttpInfo(String joinId) throws ApiException {
+    public ApiResponse<Reportsv3DeleteJoinResponse> reportsServiceDeleteJoinWithHttpInfo(@javax.annotation.Nonnull String joinId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteJoinValidateBeforeCall(joinId, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteJoinResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2990,13 +3077,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteJoinAsync(String joinId, final ApiCallback<Reportsv3DeleteJoinResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteJoinAsync(@javax.annotation.Nonnull String joinId, final ApiCallback<Reportsv3DeleteJoinResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteJoinValidateBeforeCall(joinId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteJoinResponse>(){}.getType();
@@ -3011,13 +3099,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteMeasureCall(Integer measureId, Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteMeasureCall(@javax.annotation.Nonnull Integer measureId, @javax.annotation.Nonnull Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3064,7 +3153,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteMeasureValidateBeforeCall(Integer measureId, Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteMeasureValidateBeforeCall(@javax.annotation.Nonnull Integer measureId, @javax.annotation.Nonnull Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'measureId' is set
         if (measureId == null) {
             throw new ApiException("Missing the required parameter 'measureId' when calling reportsServiceDeleteMeasure(Async)");
@@ -3087,13 +3176,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteMeasureResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteMeasureResponse reportsServiceDeleteMeasure(Integer measureId, Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest) throws ApiException {
+    public Reportsv3DeleteMeasureResponse reportsServiceDeleteMeasure(@javax.annotation.Nonnull Integer measureId, @javax.annotation.Nonnull Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest) throws ApiException {
         ApiResponse<Reportsv3DeleteMeasureResponse> localVarResp = reportsServiceDeleteMeasureWithHttpInfo(measureId, reportsv3DeleteMeasureRequest);
         return localVarResp.getData();
     }
@@ -3106,13 +3196,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteMeasureResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteMeasureResponse> reportsServiceDeleteMeasureWithHttpInfo(Integer measureId, Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest) throws ApiException {
+    public ApiResponse<Reportsv3DeleteMeasureResponse> reportsServiceDeleteMeasureWithHttpInfo(@javax.annotation.Nonnull Integer measureId, @javax.annotation.Nonnull Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteMeasureValidateBeforeCall(measureId, reportsv3DeleteMeasureRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteMeasureResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3127,13 +3218,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteMeasureAsync(Integer measureId, Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest, final ApiCallback<Reportsv3DeleteMeasureResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteMeasureAsync(@javax.annotation.Nonnull Integer measureId, @javax.annotation.Nonnull Reportsv3DeleteMeasureRequest reportsv3DeleteMeasureRequest, final ApiCallback<Reportsv3DeleteMeasureResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteMeasureValidateBeforeCall(measureId, reportsv3DeleteMeasureRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteMeasureResponse>(){}.getType();
@@ -3148,13 +3240,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteMetricCall(Integer metricId, Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteMetricCall(@javax.annotation.Nonnull Integer metricId, @javax.annotation.Nonnull Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3201,7 +3294,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteMetricValidateBeforeCall(Integer metricId, Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteMetricValidateBeforeCall(@javax.annotation.Nonnull Integer metricId, @javax.annotation.Nonnull Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'metricId' is set
         if (metricId == null) {
             throw new ApiException("Missing the required parameter 'metricId' when calling reportsServiceDeleteMetric(Async)");
@@ -3224,13 +3317,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteMetricResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteMetricResponse reportsServiceDeleteMetric(Integer metricId, Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest) throws ApiException {
+    public Reportsv3DeleteMetricResponse reportsServiceDeleteMetric(@javax.annotation.Nonnull Integer metricId, @javax.annotation.Nonnull Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest) throws ApiException {
         ApiResponse<Reportsv3DeleteMetricResponse> localVarResp = reportsServiceDeleteMetricWithHttpInfo(metricId, reportsv3DeleteMetricRequest);
         return localVarResp.getData();
     }
@@ -3243,13 +3337,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteMetricResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteMetricResponse> reportsServiceDeleteMetricWithHttpInfo(Integer metricId, Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest) throws ApiException {
+    public ApiResponse<Reportsv3DeleteMetricResponse> reportsServiceDeleteMetricWithHttpInfo(@javax.annotation.Nonnull Integer metricId, @javax.annotation.Nonnull Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteMetricValidateBeforeCall(metricId, reportsv3DeleteMetricRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteMetricResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3264,13 +3359,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteMetricAsync(Integer metricId, Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest, final ApiCallback<Reportsv3DeleteMetricResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteMetricAsync(@javax.annotation.Nonnull Integer metricId, @javax.annotation.Nonnull Reportsv3DeleteMetricRequest reportsv3DeleteMetricRequest, final ApiCallback<Reportsv3DeleteMetricResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteMetricValidateBeforeCall(metricId, reportsv3DeleteMetricRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteMetricResponse>(){}.getType();
@@ -3285,13 +3381,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteProgramCall(Integer programId, Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteProgramCall(@javax.annotation.Nonnull Integer programId, @javax.annotation.Nonnull Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3338,7 +3435,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteProgramValidateBeforeCall(Integer programId, Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteProgramValidateBeforeCall(@javax.annotation.Nonnull Integer programId, @javax.annotation.Nonnull Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'programId' is set
         if (programId == null) {
             throw new ApiException("Missing the required parameter 'programId' when calling reportsServiceDeleteProgram(Async)");
@@ -3361,13 +3458,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteProgramResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteProgramResponse reportsServiceDeleteProgram(Integer programId, Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest) throws ApiException {
+    public Reportsv3DeleteProgramResponse reportsServiceDeleteProgram(@javax.annotation.Nonnull Integer programId, @javax.annotation.Nonnull Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest) throws ApiException {
         ApiResponse<Reportsv3DeleteProgramResponse> localVarResp = reportsServiceDeleteProgramWithHttpInfo(programId, reportsv3DeleteProgramRequest);
         return localVarResp.getData();
     }
@@ -3380,13 +3478,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteProgramResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteProgramResponse> reportsServiceDeleteProgramWithHttpInfo(Integer programId, Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest) throws ApiException {
+    public ApiResponse<Reportsv3DeleteProgramResponse> reportsServiceDeleteProgramWithHttpInfo(@javax.annotation.Nonnull Integer programId, @javax.annotation.Nonnull Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteProgramValidateBeforeCall(programId, reportsv3DeleteProgramRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteProgramResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3401,13 +3500,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteProgramAsync(Integer programId, Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest, final ApiCallback<Reportsv3DeleteProgramResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteProgramAsync(@javax.annotation.Nonnull Integer programId, @javax.annotation.Nonnull Reportsv3DeleteProgramRequest reportsv3DeleteProgramRequest, final ApiCallback<Reportsv3DeleteProgramResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteProgramValidateBeforeCall(programId, reportsv3DeleteProgramRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteProgramResponse>(){}.getType();
@@ -3421,13 +3521,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteReportCall(String reportId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteReportCall(@javax.annotation.Nonnull String reportId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3473,7 +3574,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteReportValidateBeforeCall(String reportId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteReportValidateBeforeCall(@javax.annotation.Nonnull String reportId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportId' is set
         if (reportId == null) {
             throw new ApiException("Missing the required parameter 'reportId' when calling reportsServiceDeleteReport(Async)");
@@ -3490,13 +3591,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteReportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteReportResponse reportsServiceDeleteReport(String reportId) throws ApiException {
+    public Reportsv3DeleteReportResponse reportsServiceDeleteReport(@javax.annotation.Nonnull String reportId) throws ApiException {
         ApiResponse<Reportsv3DeleteReportResponse> localVarResp = reportsServiceDeleteReportWithHttpInfo(reportId);
         return localVarResp.getData();
     }
@@ -3508,13 +3610,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteReportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteReportResponse> reportsServiceDeleteReportWithHttpInfo(String reportId) throws ApiException {
+    public ApiResponse<Reportsv3DeleteReportResponse> reportsServiceDeleteReportWithHttpInfo(@javax.annotation.Nonnull String reportId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteReportValidateBeforeCall(reportId, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteReportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3528,13 +3631,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteReportAsync(String reportId, final ApiCallback<Reportsv3DeleteReportResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteReportAsync(@javax.annotation.Nonnull String reportId, final ApiCallback<Reportsv3DeleteReportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteReportValidateBeforeCall(reportId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteReportResponse>(){}.getType();
@@ -3549,13 +3653,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteRequirementCall(Integer requirementId, Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteRequirementCall(@javax.annotation.Nonnull Integer requirementId, @javax.annotation.Nonnull Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3602,7 +3707,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteRequirementValidateBeforeCall(Integer requirementId, Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteRequirementValidateBeforeCall(@javax.annotation.Nonnull Integer requirementId, @javax.annotation.Nonnull Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'requirementId' is set
         if (requirementId == null) {
             throw new ApiException("Missing the required parameter 'requirementId' when calling reportsServiceDeleteRequirement(Async)");
@@ -3625,13 +3730,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteRequirementResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteRequirementResponse reportsServiceDeleteRequirement(Integer requirementId, Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest) throws ApiException {
+    public Reportsv3DeleteRequirementResponse reportsServiceDeleteRequirement(@javax.annotation.Nonnull Integer requirementId, @javax.annotation.Nonnull Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest) throws ApiException {
         ApiResponse<Reportsv3DeleteRequirementResponse> localVarResp = reportsServiceDeleteRequirementWithHttpInfo(requirementId, reportsv3DeleteRequirementRequest);
         return localVarResp.getData();
     }
@@ -3644,13 +3750,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteRequirementResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteRequirementResponse> reportsServiceDeleteRequirementWithHttpInfo(Integer requirementId, Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest) throws ApiException {
+    public ApiResponse<Reportsv3DeleteRequirementResponse> reportsServiceDeleteRequirementWithHttpInfo(@javax.annotation.Nonnull Integer requirementId, @javax.annotation.Nonnull Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteRequirementValidateBeforeCall(requirementId, reportsv3DeleteRequirementRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteRequirementResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3665,13 +3772,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteRequirementAsync(Integer requirementId, Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest, final ApiCallback<Reportsv3DeleteRequirementResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteRequirementAsync(@javax.annotation.Nonnull Integer requirementId, @javax.annotation.Nonnull Reportsv3DeleteRequirementRequest reportsv3DeleteRequirementRequest, final ApiCallback<Reportsv3DeleteRequirementResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteRequirementValidateBeforeCall(requirementId, reportsv3DeleteRequirementRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteRequirementResponse>(){}.getType();
@@ -3685,13 +3793,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteVariantCall(String variantId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteVariantCall(@javax.annotation.Nonnull String variantId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3737,7 +3846,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceDeleteVariantValidateBeforeCall(String variantId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceDeleteVariantValidateBeforeCall(@javax.annotation.Nonnull String variantId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'variantId' is set
         if (variantId == null) {
             throw new ApiException("Missing the required parameter 'variantId' when calling reportsServiceDeleteVariant(Async)");
@@ -3754,13 +3863,14 @@ public class ReportsServiceApi {
      * @return Reportsv3DeleteVariantResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3DeleteVariantResponse reportsServiceDeleteVariant(String variantId) throws ApiException {
+    public Reportsv3DeleteVariantResponse reportsServiceDeleteVariant(@javax.annotation.Nonnull String variantId) throws ApiException {
         ApiResponse<Reportsv3DeleteVariantResponse> localVarResp = reportsServiceDeleteVariantWithHttpInfo(variantId);
         return localVarResp.getData();
     }
@@ -3772,13 +3882,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3DeleteVariantResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3DeleteVariantResponse> reportsServiceDeleteVariantWithHttpInfo(String variantId) throws ApiException {
+    public ApiResponse<Reportsv3DeleteVariantResponse> reportsServiceDeleteVariantWithHttpInfo(@javax.annotation.Nonnull String variantId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceDeleteVariantValidateBeforeCall(variantId, null);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteVariantResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3792,13 +3903,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceDeleteVariantAsync(String variantId, final ApiCallback<Reportsv3DeleteVariantResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceDeleteVariantAsync(@javax.annotation.Nonnull String variantId, final ApiCallback<Reportsv3DeleteVariantResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceDeleteVariantValidateBeforeCall(variantId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3DeleteVariantResponse>(){}.getType();
@@ -3812,13 +3924,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetCategoriesCall(String reportId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetCategoriesCall(@javax.annotation.Nullable String reportId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3867,7 +3980,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetCategoriesValidateBeforeCall(String reportId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetCategoriesValidateBeforeCall(@javax.annotation.Nullable String reportId, final ApiCallback _callback) throws ApiException {
         return reportsServiceGetCategoriesCall(reportId, _callback);
 
     }
@@ -3879,13 +3992,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetCategoriesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetCategoriesResponse reportsServiceGetCategories(String reportId) throws ApiException {
+    public Reportsv3GetCategoriesResponse reportsServiceGetCategories(@javax.annotation.Nullable String reportId) throws ApiException {
         ApiResponse<Reportsv3GetCategoriesResponse> localVarResp = reportsServiceGetCategoriesWithHttpInfo(reportId);
         return localVarResp.getData();
     }
@@ -3897,13 +4011,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetCategoriesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetCategoriesResponse> reportsServiceGetCategoriesWithHttpInfo(String reportId) throws ApiException {
+    public ApiResponse<Reportsv3GetCategoriesResponse> reportsServiceGetCategoriesWithHttpInfo(@javax.annotation.Nullable String reportId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetCategoriesValidateBeforeCall(reportId, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetCategoriesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3917,13 +4032,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetCategoriesAsync(String reportId, final ApiCallback<Reportsv3GetCategoriesResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetCategoriesAsync(@javax.annotation.Nullable String reportId, final ApiCallback<Reportsv3GetCategoriesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetCategoriesValidateBeforeCall(reportId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetCategoriesResponse>(){}.getType();
@@ -3938,13 +4054,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetChartSettingsCall(String chartId, String reportId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetChartSettingsCall(@javax.annotation.Nullable String chartId, @javax.annotation.Nullable String reportId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3997,7 +4114,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetChartSettingsValidateBeforeCall(String chartId, String reportId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetChartSettingsValidateBeforeCall(@javax.annotation.Nullable String chartId, @javax.annotation.Nullable String reportId, final ApiCallback _callback) throws ApiException {
         return reportsServiceGetChartSettingsCall(chartId, reportId, _callback);
 
     }
@@ -4010,13 +4127,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetChartSettingsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetChartSettingsResponse reportsServiceGetChartSettings(String chartId, String reportId) throws ApiException {
+    public Reportsv3GetChartSettingsResponse reportsServiceGetChartSettings(@javax.annotation.Nullable String chartId, @javax.annotation.Nullable String reportId) throws ApiException {
         ApiResponse<Reportsv3GetChartSettingsResponse> localVarResp = reportsServiceGetChartSettingsWithHttpInfo(chartId, reportId);
         return localVarResp.getData();
     }
@@ -4029,13 +4147,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetChartSettingsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetChartSettingsResponse> reportsServiceGetChartSettingsWithHttpInfo(String chartId, String reportId) throws ApiException {
+    public ApiResponse<Reportsv3GetChartSettingsResponse> reportsServiceGetChartSettingsWithHttpInfo(@javax.annotation.Nullable String chartId, @javax.annotation.Nullable String reportId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetChartSettingsValidateBeforeCall(chartId, reportId, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetChartSettingsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4050,13 +4169,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetChartSettingsAsync(String chartId, String reportId, final ApiCallback<Reportsv3GetChartSettingsResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetChartSettingsAsync(@javax.annotation.Nullable String chartId, @javax.annotation.Nullable String reportId, final ApiCallback<Reportsv3GetChartSettingsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetChartSettingsValidateBeforeCall(chartId, reportId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetChartSettingsResponse>(){}.getType();
@@ -4071,13 +4191,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetChartSettingsv2Call(String chartId, String reportId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetChartSettingsv2Call(@javax.annotation.Nullable String chartId, @javax.annotation.Nullable String reportId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4130,7 +4251,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetChartSettingsv2ValidateBeforeCall(String chartId, String reportId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetChartSettingsv2ValidateBeforeCall(@javax.annotation.Nullable String chartId, @javax.annotation.Nullable String reportId, final ApiCallback _callback) throws ApiException {
         return reportsServiceGetChartSettingsv2Call(chartId, reportId, _callback);
 
     }
@@ -4143,13 +4264,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetChartSettingsv2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetChartSettingsv2Response reportsServiceGetChartSettingsv2(String chartId, String reportId) throws ApiException {
+    public Reportsv3GetChartSettingsv2Response reportsServiceGetChartSettingsv2(@javax.annotation.Nullable String chartId, @javax.annotation.Nullable String reportId) throws ApiException {
         ApiResponse<Reportsv3GetChartSettingsv2Response> localVarResp = reportsServiceGetChartSettingsv2WithHttpInfo(chartId, reportId);
         return localVarResp.getData();
     }
@@ -4162,13 +4284,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetChartSettingsv2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetChartSettingsv2Response> reportsServiceGetChartSettingsv2WithHttpInfo(String chartId, String reportId) throws ApiException {
+    public ApiResponse<Reportsv3GetChartSettingsv2Response> reportsServiceGetChartSettingsv2WithHttpInfo(@javax.annotation.Nullable String chartId, @javax.annotation.Nullable String reportId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetChartSettingsv2ValidateBeforeCall(chartId, reportId, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetChartSettingsv2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4183,13 +4306,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetChartSettingsv2Async(String chartId, String reportId, final ApiCallback<Reportsv3GetChartSettingsv2Response> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetChartSettingsv2Async(@javax.annotation.Nullable String chartId, @javax.annotation.Nullable String reportId, final ApiCallback<Reportsv3GetChartSettingsv2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetChartSettingsv2ValidateBeforeCall(chartId, reportId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetChartSettingsv2Response>(){}.getType();
@@ -4202,7 +4326,8 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4264,7 +4389,8 @@ public class ReportsServiceApi {
      * @return Reportsv3GetChartTemplatesv2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4281,7 +4407,8 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetChartTemplatesv2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4300,7 +4427,8 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4319,7 +4447,8 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4381,7 +4510,8 @@ public class ReportsServiceApi {
      * @return Reportsv3GetControlsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4398,7 +4528,8 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetControlsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4417,7 +4548,8 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4437,13 +4569,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetFieldsByCategoriesCall(List<String> categoryIds, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetFieldsByCategoriesCall(@javax.annotation.Nullable List<String> categoryIds, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4492,7 +4625,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetFieldsByCategoriesValidateBeforeCall(List<String> categoryIds, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetFieldsByCategoriesValidateBeforeCall(@javax.annotation.Nullable List<String> categoryIds, final ApiCallback _callback) throws ApiException {
         return reportsServiceGetFieldsByCategoriesCall(categoryIds, _callback);
 
     }
@@ -4504,13 +4637,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetFieldsByCategoriesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetFieldsByCategoriesResponse reportsServiceGetFieldsByCategories(List<String> categoryIds) throws ApiException {
+    public Reportsv3GetFieldsByCategoriesResponse reportsServiceGetFieldsByCategories(@javax.annotation.Nullable List<String> categoryIds) throws ApiException {
         ApiResponse<Reportsv3GetFieldsByCategoriesResponse> localVarResp = reportsServiceGetFieldsByCategoriesWithHttpInfo(categoryIds);
         return localVarResp.getData();
     }
@@ -4522,13 +4656,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetFieldsByCategoriesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetFieldsByCategoriesResponse> reportsServiceGetFieldsByCategoriesWithHttpInfo(List<String> categoryIds) throws ApiException {
+    public ApiResponse<Reportsv3GetFieldsByCategoriesResponse> reportsServiceGetFieldsByCategoriesWithHttpInfo(@javax.annotation.Nullable List<String> categoryIds) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetFieldsByCategoriesValidateBeforeCall(categoryIds, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetFieldsByCategoriesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4542,13 +4677,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetFieldsByCategoriesAsync(List<String> categoryIds, final ApiCallback<Reportsv3GetFieldsByCategoriesResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetFieldsByCategoriesAsync(@javax.annotation.Nullable List<String> categoryIds, final ApiCallback<Reportsv3GetFieldsByCategoriesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetFieldsByCategoriesValidateBeforeCall(categoryIds, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetFieldsByCategoriesResponse>(){}.getType();
@@ -4564,13 +4700,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetFieldsByCategoryCall(String categoryId, String reportId, String tableName, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetFieldsByCategoryCall(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String reportId, @javax.annotation.Nullable String tableName, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4627,7 +4764,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetFieldsByCategoryValidateBeforeCall(String categoryId, String reportId, String tableName, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetFieldsByCategoryValidateBeforeCall(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String reportId, @javax.annotation.Nullable String tableName, final ApiCallback _callback) throws ApiException {
         return reportsServiceGetFieldsByCategoryCall(categoryId, reportId, tableName, _callback);
 
     }
@@ -4641,13 +4778,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetFieldsByCategoryResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetFieldsByCategoryResponse reportsServiceGetFieldsByCategory(String categoryId, String reportId, String tableName) throws ApiException {
+    public Reportsv3GetFieldsByCategoryResponse reportsServiceGetFieldsByCategory(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String reportId, @javax.annotation.Nullable String tableName) throws ApiException {
         ApiResponse<Reportsv3GetFieldsByCategoryResponse> localVarResp = reportsServiceGetFieldsByCategoryWithHttpInfo(categoryId, reportId, tableName);
         return localVarResp.getData();
     }
@@ -4661,13 +4799,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetFieldsByCategoryResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetFieldsByCategoryResponse> reportsServiceGetFieldsByCategoryWithHttpInfo(String categoryId, String reportId, String tableName) throws ApiException {
+    public ApiResponse<Reportsv3GetFieldsByCategoryResponse> reportsServiceGetFieldsByCategoryWithHttpInfo(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String reportId, @javax.annotation.Nullable String tableName) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetFieldsByCategoryValidateBeforeCall(categoryId, reportId, tableName, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetFieldsByCategoryResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4683,13 +4822,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetFieldsByCategoryAsync(String categoryId, String reportId, String tableName, final ApiCallback<Reportsv3GetFieldsByCategoryResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetFieldsByCategoryAsync(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String reportId, @javax.annotation.Nullable String tableName, final ApiCallback<Reportsv3GetFieldsByCategoryResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetFieldsByCategoryValidateBeforeCall(categoryId, reportId, tableName, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetFieldsByCategoryResponse>(){}.getType();
@@ -4702,7 +4842,8 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4764,7 +4905,8 @@ public class ReportsServiceApi {
      * @return Reportsv3GetGradesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4781,7 +4923,8 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetGradesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4800,7 +4943,8 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -4820,13 +4964,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetJoinsCall(String categoryId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetJoinsCall(@javax.annotation.Nullable String categoryId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4875,7 +5020,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetJoinsValidateBeforeCall(String categoryId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetJoinsValidateBeforeCall(@javax.annotation.Nullable String categoryId, final ApiCallback _callback) throws ApiException {
         return reportsServiceGetJoinsCall(categoryId, _callback);
 
     }
@@ -4887,13 +5032,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetJoinsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetJoinsResponse reportsServiceGetJoins(String categoryId) throws ApiException {
+    public Reportsv3GetJoinsResponse reportsServiceGetJoins(@javax.annotation.Nullable String categoryId) throws ApiException {
         ApiResponse<Reportsv3GetJoinsResponse> localVarResp = reportsServiceGetJoinsWithHttpInfo(categoryId);
         return localVarResp.getData();
     }
@@ -4905,13 +5051,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetJoinsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetJoinsResponse> reportsServiceGetJoinsWithHttpInfo(String categoryId) throws ApiException {
+    public ApiResponse<Reportsv3GetJoinsResponse> reportsServiceGetJoinsWithHttpInfo(@javax.annotation.Nullable String categoryId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetJoinsValidateBeforeCall(categoryId, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetJoinsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4925,13 +5072,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetJoinsAsync(String categoryId, final ApiCallback<Reportsv3GetJoinsResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetJoinsAsync(@javax.annotation.Nullable String categoryId, final ApiCallback<Reportsv3GetJoinsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetJoinsValidateBeforeCall(categoryId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetJoinsResponse>(){}.getType();
@@ -4944,7 +5092,8 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5006,7 +5155,8 @@ public class ReportsServiceApi {
      * @return Reportsv3GetMeasuresResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5023,7 +5173,8 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetMeasuresResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5042,7 +5193,8 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5061,7 +5213,8 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5123,7 +5276,8 @@ public class ReportsServiceApi {
      * @return Reportsv3GetMetricsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5140,7 +5294,8 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetMetricsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5159,7 +5314,8 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5178,7 +5334,8 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5240,7 +5397,8 @@ public class ReportsServiceApi {
      * @return Reportsv3GetProgramsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5257,7 +5415,8 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetProgramsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5276,7 +5435,8 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -5296,13 +5456,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetQueryByReportDefinitionCall(Reportsv3GetQueryByReportDefinitionRequest reportsv3GetQueryByReportDefinitionRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetQueryByReportDefinitionCall(@javax.annotation.Nonnull Reportsv3GetQueryByReportDefinitionRequest reportsv3GetQueryByReportDefinitionRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -5348,7 +5509,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetQueryByReportDefinitionValidateBeforeCall(Reportsv3GetQueryByReportDefinitionRequest reportsv3GetQueryByReportDefinitionRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetQueryByReportDefinitionValidateBeforeCall(@javax.annotation.Nonnull Reportsv3GetQueryByReportDefinitionRequest reportsv3GetQueryByReportDefinitionRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3GetQueryByReportDefinitionRequest' is set
         if (reportsv3GetQueryByReportDefinitionRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3GetQueryByReportDefinitionRequest' when calling reportsServiceGetQueryByReportDefinition(Async)");
@@ -5365,13 +5526,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetReportQueryResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetReportQueryResponse reportsServiceGetQueryByReportDefinition(Reportsv3GetQueryByReportDefinitionRequest reportsv3GetQueryByReportDefinitionRequest) throws ApiException {
+    public Reportsv3GetReportQueryResponse reportsServiceGetQueryByReportDefinition(@javax.annotation.Nonnull Reportsv3GetQueryByReportDefinitionRequest reportsv3GetQueryByReportDefinitionRequest) throws ApiException {
         ApiResponse<Reportsv3GetReportQueryResponse> localVarResp = reportsServiceGetQueryByReportDefinitionWithHttpInfo(reportsv3GetQueryByReportDefinitionRequest);
         return localVarResp.getData();
     }
@@ -5383,13 +5545,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetReportQueryResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetReportQueryResponse> reportsServiceGetQueryByReportDefinitionWithHttpInfo(Reportsv3GetQueryByReportDefinitionRequest reportsv3GetQueryByReportDefinitionRequest) throws ApiException {
+    public ApiResponse<Reportsv3GetReportQueryResponse> reportsServiceGetQueryByReportDefinitionWithHttpInfo(@javax.annotation.Nonnull Reportsv3GetQueryByReportDefinitionRequest reportsv3GetQueryByReportDefinitionRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetQueryByReportDefinitionValidateBeforeCall(reportsv3GetQueryByReportDefinitionRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportQueryResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -5403,13 +5566,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetQueryByReportDefinitionAsync(Reportsv3GetQueryByReportDefinitionRequest reportsv3GetQueryByReportDefinitionRequest, final ApiCallback<Reportsv3GetReportQueryResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetQueryByReportDefinitionAsync(@javax.annotation.Nonnull Reportsv3GetQueryByReportDefinitionRequest reportsv3GetQueryByReportDefinitionRequest, final ApiCallback<Reportsv3GetReportQueryResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetQueryByReportDefinitionValidateBeforeCall(reportsv3GetQueryByReportDefinitionRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportQueryResponse>(){}.getType();
@@ -5423,13 +5587,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetQueryByReportIDCall(Reportsv3GetQueryByReportIDRequest reportsv3GetQueryByReportIDRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetQueryByReportIDCall(@javax.annotation.Nonnull Reportsv3GetQueryByReportIDRequest reportsv3GetQueryByReportIDRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -5475,7 +5640,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetQueryByReportIDValidateBeforeCall(Reportsv3GetQueryByReportIDRequest reportsv3GetQueryByReportIDRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetQueryByReportIDValidateBeforeCall(@javax.annotation.Nonnull Reportsv3GetQueryByReportIDRequest reportsv3GetQueryByReportIDRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3GetQueryByReportIDRequest' is set
         if (reportsv3GetQueryByReportIDRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3GetQueryByReportIDRequest' when calling reportsServiceGetQueryByReportID(Async)");
@@ -5492,13 +5657,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetReportQueryResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetReportQueryResponse reportsServiceGetQueryByReportID(Reportsv3GetQueryByReportIDRequest reportsv3GetQueryByReportIDRequest) throws ApiException {
+    public Reportsv3GetReportQueryResponse reportsServiceGetQueryByReportID(@javax.annotation.Nonnull Reportsv3GetQueryByReportIDRequest reportsv3GetQueryByReportIDRequest) throws ApiException {
         ApiResponse<Reportsv3GetReportQueryResponse> localVarResp = reportsServiceGetQueryByReportIDWithHttpInfo(reportsv3GetQueryByReportIDRequest);
         return localVarResp.getData();
     }
@@ -5510,13 +5676,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetReportQueryResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetReportQueryResponse> reportsServiceGetQueryByReportIDWithHttpInfo(Reportsv3GetQueryByReportIDRequest reportsv3GetQueryByReportIDRequest) throws ApiException {
+    public ApiResponse<Reportsv3GetReportQueryResponse> reportsServiceGetQueryByReportIDWithHttpInfo(@javax.annotation.Nonnull Reportsv3GetQueryByReportIDRequest reportsv3GetQueryByReportIDRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetQueryByReportIDValidateBeforeCall(reportsv3GetQueryByReportIDRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportQueryResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -5530,13 +5697,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetQueryByReportIDAsync(Reportsv3GetQueryByReportIDRequest reportsv3GetQueryByReportIDRequest, final ApiCallback<Reportsv3GetReportQueryResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetQueryByReportIDAsync(@javax.annotation.Nonnull Reportsv3GetQueryByReportIDRequest reportsv3GetQueryByReportIDRequest, final ApiCallback<Reportsv3GetReportQueryResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetQueryByReportIDValidateBeforeCall(reportsv3GetQueryByReportIDRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportQueryResponse>(){}.getType();
@@ -5550,13 +5718,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportDefinitionCall(String reportId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportDefinitionCall(@javax.annotation.Nonnull String reportId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -5602,7 +5771,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetReportDefinitionValidateBeforeCall(String reportId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetReportDefinitionValidateBeforeCall(@javax.annotation.Nonnull String reportId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportId' is set
         if (reportId == null) {
             throw new ApiException("Missing the required parameter 'reportId' when calling reportsServiceGetReportDefinition(Async)");
@@ -5619,13 +5788,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetReportDefinitionResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetReportDefinitionResponse reportsServiceGetReportDefinition(String reportId) throws ApiException {
+    public Reportsv3GetReportDefinitionResponse reportsServiceGetReportDefinition(@javax.annotation.Nonnull String reportId) throws ApiException {
         ApiResponse<Reportsv3GetReportDefinitionResponse> localVarResp = reportsServiceGetReportDefinitionWithHttpInfo(reportId);
         return localVarResp.getData();
     }
@@ -5637,13 +5807,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetReportDefinitionResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetReportDefinitionResponse> reportsServiceGetReportDefinitionWithHttpInfo(String reportId) throws ApiException {
+    public ApiResponse<Reportsv3GetReportDefinitionResponse> reportsServiceGetReportDefinitionWithHttpInfo(@javax.annotation.Nonnull String reportId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetReportDefinitionValidateBeforeCall(reportId, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportDefinitionResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -5657,13 +5828,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportDefinitionAsync(String reportId, final ApiCallback<Reportsv3GetReportDefinitionResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportDefinitionAsync(@javax.annotation.Nonnull String reportId, final ApiCallback<Reportsv3GetReportDefinitionResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetReportDefinitionValidateBeforeCall(reportId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportDefinitionResponse>(){}.getType();
@@ -5677,13 +5849,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportGroupsCall(List<String> groups, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportGroupsCall(@javax.annotation.Nullable List<String> groups, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -5732,7 +5905,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetReportGroupsValidateBeforeCall(List<String> groups, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetReportGroupsValidateBeforeCall(@javax.annotation.Nullable List<String> groups, final ApiCallback _callback) throws ApiException {
         return reportsServiceGetReportGroupsCall(groups, _callback);
 
     }
@@ -5744,13 +5917,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetReportGroupsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetReportGroupsResponse reportsServiceGetReportGroups(List<String> groups) throws ApiException {
+    public Reportsv3GetReportGroupsResponse reportsServiceGetReportGroups(@javax.annotation.Nullable List<String> groups) throws ApiException {
         ApiResponse<Reportsv3GetReportGroupsResponse> localVarResp = reportsServiceGetReportGroupsWithHttpInfo(groups);
         return localVarResp.getData();
     }
@@ -5762,13 +5936,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetReportGroupsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetReportGroupsResponse> reportsServiceGetReportGroupsWithHttpInfo(List<String> groups) throws ApiException {
+    public ApiResponse<Reportsv3GetReportGroupsResponse> reportsServiceGetReportGroupsWithHttpInfo(@javax.annotation.Nullable List<String> groups) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetReportGroupsValidateBeforeCall(groups, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportGroupsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -5782,13 +5957,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportGroupsAsync(List<String> groups, final ApiCallback<Reportsv3GetReportGroupsResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportGroupsAsync(@javax.annotation.Nullable List<String> groups, final ApiCallback<Reportsv3GetReportGroupsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetReportGroupsValidateBeforeCall(groups, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportGroupsResponse>(){}.getType();
@@ -5802,13 +5978,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportSynopsisCall(String reportId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportSynopsisCall(@javax.annotation.Nonnull String reportId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -5854,7 +6031,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetReportSynopsisValidateBeforeCall(String reportId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetReportSynopsisValidateBeforeCall(@javax.annotation.Nonnull String reportId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportId' is set
         if (reportId == null) {
             throw new ApiException("Missing the required parameter 'reportId' when calling reportsServiceGetReportSynopsis(Async)");
@@ -5871,13 +6048,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetReportSynopsisResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetReportSynopsisResponse reportsServiceGetReportSynopsis(String reportId) throws ApiException {
+    public Reportsv3GetReportSynopsisResponse reportsServiceGetReportSynopsis(@javax.annotation.Nonnull String reportId) throws ApiException {
         ApiResponse<Reportsv3GetReportSynopsisResponse> localVarResp = reportsServiceGetReportSynopsisWithHttpInfo(reportId);
         return localVarResp.getData();
     }
@@ -5889,13 +6067,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetReportSynopsisResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetReportSynopsisResponse> reportsServiceGetReportSynopsisWithHttpInfo(String reportId) throws ApiException {
+    public ApiResponse<Reportsv3GetReportSynopsisResponse> reportsServiceGetReportSynopsisWithHttpInfo(@javax.annotation.Nonnull String reportId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetReportSynopsisValidateBeforeCall(reportId, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportSynopsisResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -5909,13 +6088,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportSynopsisAsync(String reportId, final ApiCallback<Reportsv3GetReportSynopsisResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportSynopsisAsync(@javax.annotation.Nonnull String reportId, final ApiCallback<Reportsv3GetReportSynopsisResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetReportSynopsisValidateBeforeCall(reportId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportSynopsisResponse>(){}.getType();
@@ -5930,13 +6110,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportTimestampHeaderCall(String categoryId, List<String> tableNames, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportTimestampHeaderCall(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable List<String> tableNames, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -5989,7 +6170,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetReportTimestampHeaderValidateBeforeCall(String categoryId, List<String> tableNames, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetReportTimestampHeaderValidateBeforeCall(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable List<String> tableNames, final ApiCallback _callback) throws ApiException {
         return reportsServiceGetReportTimestampHeaderCall(categoryId, tableNames, _callback);
 
     }
@@ -6002,13 +6183,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetReportTimestampHeaderResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetReportTimestampHeaderResponse reportsServiceGetReportTimestampHeader(String categoryId, List<String> tableNames) throws ApiException {
+    public Reportsv3GetReportTimestampHeaderResponse reportsServiceGetReportTimestampHeader(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable List<String> tableNames) throws ApiException {
         ApiResponse<Reportsv3GetReportTimestampHeaderResponse> localVarResp = reportsServiceGetReportTimestampHeaderWithHttpInfo(categoryId, tableNames);
         return localVarResp.getData();
     }
@@ -6021,13 +6203,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetReportTimestampHeaderResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetReportTimestampHeaderResponse> reportsServiceGetReportTimestampHeaderWithHttpInfo(String categoryId, List<String> tableNames) throws ApiException {
+    public ApiResponse<Reportsv3GetReportTimestampHeaderResponse> reportsServiceGetReportTimestampHeaderWithHttpInfo(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable List<String> tableNames) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetReportTimestampHeaderValidateBeforeCall(categoryId, tableNames, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportTimestampHeaderResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -6042,13 +6225,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportTimestampHeaderAsync(String categoryId, List<String> tableNames, final ApiCallback<Reportsv3GetReportTimestampHeaderResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportTimestampHeaderAsync(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable List<String> tableNames, final ApiCallback<Reportsv3GetReportTimestampHeaderResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetReportTimestampHeaderValidateBeforeCall(categoryId, tableNames, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportTimestampHeaderResponse>(){}.getType();
@@ -6063,13 +6247,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportsCall(String categoryId, String tableName, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportsCall(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String tableName, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -6122,7 +6307,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetReportsValidateBeforeCall(String categoryId, String tableName, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetReportsValidateBeforeCall(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String tableName, final ApiCallback _callback) throws ApiException {
         return reportsServiceGetReportsCall(categoryId, tableName, _callback);
 
     }
@@ -6135,13 +6320,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetReportsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetReportsResponse reportsServiceGetReports(String categoryId, String tableName) throws ApiException {
+    public Reportsv3GetReportsResponse reportsServiceGetReports(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String tableName) throws ApiException {
         ApiResponse<Reportsv3GetReportsResponse> localVarResp = reportsServiceGetReportsWithHttpInfo(categoryId, tableName);
         return localVarResp.getData();
     }
@@ -6154,13 +6340,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetReportsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetReportsResponse> reportsServiceGetReportsWithHttpInfo(String categoryId, String tableName) throws ApiException {
+    public ApiResponse<Reportsv3GetReportsResponse> reportsServiceGetReportsWithHttpInfo(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String tableName) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetReportsValidateBeforeCall(categoryId, tableName, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -6175,13 +6362,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportsAsync(String categoryId, String tableName, final ApiCallback<Reportsv3GetReportsResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportsAsync(@javax.annotation.Nullable String categoryId, @javax.annotation.Nullable String tableName, final ApiCallback<Reportsv3GetReportsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetReportsValidateBeforeCall(categoryId, tableName, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportsResponse>(){}.getType();
@@ -6195,13 +6383,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportsForJoinCall(String joinId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportsForJoinCall(@javax.annotation.Nonnull String joinId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -6247,7 +6436,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetReportsForJoinValidateBeforeCall(String joinId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetReportsForJoinValidateBeforeCall(@javax.annotation.Nonnull String joinId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'joinId' is set
         if (joinId == null) {
             throw new ApiException("Missing the required parameter 'joinId' when calling reportsServiceGetReportsForJoin(Async)");
@@ -6264,13 +6453,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetReportsForJoinResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetReportsForJoinResponse reportsServiceGetReportsForJoin(String joinId) throws ApiException {
+    public Reportsv3GetReportsForJoinResponse reportsServiceGetReportsForJoin(@javax.annotation.Nonnull String joinId) throws ApiException {
         ApiResponse<Reportsv3GetReportsForJoinResponse> localVarResp = reportsServiceGetReportsForJoinWithHttpInfo(joinId);
         return localVarResp.getData();
     }
@@ -6282,13 +6472,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetReportsForJoinResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetReportsForJoinResponse> reportsServiceGetReportsForJoinWithHttpInfo(String joinId) throws ApiException {
+    public ApiResponse<Reportsv3GetReportsForJoinResponse> reportsServiceGetReportsForJoinWithHttpInfo(@javax.annotation.Nonnull String joinId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetReportsForJoinValidateBeforeCall(joinId, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportsForJoinResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -6302,13 +6493,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetReportsForJoinAsync(String joinId, final ApiCallback<Reportsv3GetReportsForJoinResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetReportsForJoinAsync(@javax.annotation.Nonnull String joinId, final ApiCallback<Reportsv3GetReportsForJoinResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetReportsForJoinValidateBeforeCall(joinId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetReportsForJoinResponse>(){}.getType();
@@ -6321,7 +6513,8 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6383,7 +6576,8 @@ public class ReportsServiceApi {
      * @return Reportsv3GetReportsTagsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6400,7 +6594,8 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetReportsTagsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6419,7 +6614,8 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6438,7 +6634,8 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6500,7 +6697,8 @@ public class ReportsServiceApi {
      * @return Reportsv3GetRequirementsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6517,7 +6715,8 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetRequirementsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6536,7 +6735,8 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6556,13 +6756,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetVariantCall(String variantId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetVariantCall(@javax.annotation.Nonnull String variantId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -6608,7 +6809,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceGetVariantValidateBeforeCall(String variantId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceGetVariantValidateBeforeCall(@javax.annotation.Nonnull String variantId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'variantId' is set
         if (variantId == null) {
             throw new ApiException("Missing the required parameter 'variantId' when calling reportsServiceGetVariant(Async)");
@@ -6625,13 +6826,14 @@ public class ReportsServiceApi {
      * @return Reportsv3GetVariantResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3GetVariantResponse reportsServiceGetVariant(String variantId) throws ApiException {
+    public Reportsv3GetVariantResponse reportsServiceGetVariant(@javax.annotation.Nonnull String variantId) throws ApiException {
         ApiResponse<Reportsv3GetVariantResponse> localVarResp = reportsServiceGetVariantWithHttpInfo(variantId);
         return localVarResp.getData();
     }
@@ -6643,13 +6845,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetVariantResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3GetVariantResponse> reportsServiceGetVariantWithHttpInfo(String variantId) throws ApiException {
+    public ApiResponse<Reportsv3GetVariantResponse> reportsServiceGetVariantWithHttpInfo(@javax.annotation.Nonnull String variantId) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceGetVariantValidateBeforeCall(variantId, null);
         Type localVarReturnType = new TypeToken<Reportsv3GetVariantResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -6663,13 +6866,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceGetVariantAsync(String variantId, final ApiCallback<Reportsv3GetVariantResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceGetVariantAsync(@javax.annotation.Nonnull String variantId, final ApiCallback<Reportsv3GetVariantResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceGetVariantValidateBeforeCall(variantId, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3GetVariantResponse>(){}.getType();
@@ -6682,7 +6886,8 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6744,7 +6949,8 @@ public class ReportsServiceApi {
      * @return Reportsv3GetVariantsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6761,7 +6967,8 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3GetVariantsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6780,7 +6987,8 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -6801,13 +7009,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServicePartialChartUpdateCall(String chartId, Reportsv3PartialChartUpdateRequest reportsv3PartialChartUpdateRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServicePartialChartUpdateCall(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3PartialChartUpdateRequest reportsv3PartialChartUpdateRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -6854,7 +7063,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServicePartialChartUpdateValidateBeforeCall(String chartId, Reportsv3PartialChartUpdateRequest reportsv3PartialChartUpdateRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServicePartialChartUpdateValidateBeforeCall(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3PartialChartUpdateRequest reportsv3PartialChartUpdateRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'chartId' is set
         if (chartId == null) {
             throw new ApiException("Missing the required parameter 'chartId' when calling reportsServicePartialChartUpdate(Async)");
@@ -6877,13 +7086,14 @@ public class ReportsServiceApi {
      * @return Reportsv3PartialChartUpdateResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3PartialChartUpdateResponse reportsServicePartialChartUpdate(String chartId, Reportsv3PartialChartUpdateRequest reportsv3PartialChartUpdateRequest) throws ApiException {
+    public Reportsv3PartialChartUpdateResponse reportsServicePartialChartUpdate(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3PartialChartUpdateRequest reportsv3PartialChartUpdateRequest) throws ApiException {
         ApiResponse<Reportsv3PartialChartUpdateResponse> localVarResp = reportsServicePartialChartUpdateWithHttpInfo(chartId, reportsv3PartialChartUpdateRequest);
         return localVarResp.getData();
     }
@@ -6896,13 +7106,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3PartialChartUpdateResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3PartialChartUpdateResponse> reportsServicePartialChartUpdateWithHttpInfo(String chartId, Reportsv3PartialChartUpdateRequest reportsv3PartialChartUpdateRequest) throws ApiException {
+    public ApiResponse<Reportsv3PartialChartUpdateResponse> reportsServicePartialChartUpdateWithHttpInfo(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3PartialChartUpdateRequest reportsv3PartialChartUpdateRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServicePartialChartUpdateValidateBeforeCall(chartId, reportsv3PartialChartUpdateRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3PartialChartUpdateResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -6917,13 +7128,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServicePartialChartUpdateAsync(String chartId, Reportsv3PartialChartUpdateRequest reportsv3PartialChartUpdateRequest, final ApiCallback<Reportsv3PartialChartUpdateResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServicePartialChartUpdateAsync(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3PartialChartUpdateRequest reportsv3PartialChartUpdateRequest, final ApiCallback<Reportsv3PartialChartUpdateResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServicePartialChartUpdateValidateBeforeCall(chartId, reportsv3PartialChartUpdateRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3PartialChartUpdateResponse>(){}.getType();
@@ -6938,13 +7150,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServicePartialReportUpdateCall(String reportId, Reportsv3PartialReportUpdateRequest reportsv3PartialReportUpdateRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServicePartialReportUpdateCall(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsv3PartialReportUpdateRequest reportsv3PartialReportUpdateRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -6991,7 +7204,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServicePartialReportUpdateValidateBeforeCall(String reportId, Reportsv3PartialReportUpdateRequest reportsv3PartialReportUpdateRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServicePartialReportUpdateValidateBeforeCall(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsv3PartialReportUpdateRequest reportsv3PartialReportUpdateRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportId' is set
         if (reportId == null) {
             throw new ApiException("Missing the required parameter 'reportId' when calling reportsServicePartialReportUpdate(Async)");
@@ -7014,13 +7227,14 @@ public class ReportsServiceApi {
      * @return Reportsv3PartialReportUpdateResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3PartialReportUpdateResponse reportsServicePartialReportUpdate(String reportId, Reportsv3PartialReportUpdateRequest reportsv3PartialReportUpdateRequest) throws ApiException {
+    public Reportsv3PartialReportUpdateResponse reportsServicePartialReportUpdate(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsv3PartialReportUpdateRequest reportsv3PartialReportUpdateRequest) throws ApiException {
         ApiResponse<Reportsv3PartialReportUpdateResponse> localVarResp = reportsServicePartialReportUpdateWithHttpInfo(reportId, reportsv3PartialReportUpdateRequest);
         return localVarResp.getData();
     }
@@ -7033,13 +7247,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3PartialReportUpdateResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3PartialReportUpdateResponse> reportsServicePartialReportUpdateWithHttpInfo(String reportId, Reportsv3PartialReportUpdateRequest reportsv3PartialReportUpdateRequest) throws ApiException {
+    public ApiResponse<Reportsv3PartialReportUpdateResponse> reportsServicePartialReportUpdateWithHttpInfo(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsv3PartialReportUpdateRequest reportsv3PartialReportUpdateRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServicePartialReportUpdateValidateBeforeCall(reportId, reportsv3PartialReportUpdateRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3PartialReportUpdateResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -7054,13 +7269,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServicePartialReportUpdateAsync(String reportId, Reportsv3PartialReportUpdateRequest reportsv3PartialReportUpdateRequest, final ApiCallback<Reportsv3PartialReportUpdateResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServicePartialReportUpdateAsync(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsv3PartialReportUpdateRequest reportsv3PartialReportUpdateRequest, final ApiCallback<Reportsv3PartialReportUpdateResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServicePartialReportUpdateValidateBeforeCall(reportId, reportsv3PartialReportUpdateRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3PartialReportUpdateResponse>(){}.getType();
@@ -7074,13 +7290,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceRunGradesCall(Reportsv3RunGradesRequest reportsv3RunGradesRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceRunGradesCall(@javax.annotation.Nonnull Reportsv3RunGradesRequest reportsv3RunGradesRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -7126,7 +7343,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceRunGradesValidateBeforeCall(Reportsv3RunGradesRequest reportsv3RunGradesRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceRunGradesValidateBeforeCall(@javax.annotation.Nonnull Reportsv3RunGradesRequest reportsv3RunGradesRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3RunGradesRequest' is set
         if (reportsv3RunGradesRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3RunGradesRequest' when calling reportsServiceRunGrades(Async)");
@@ -7143,13 +7360,14 @@ public class ReportsServiceApi {
      * @return Reportsv3RunGradesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3RunGradesResponse reportsServiceRunGrades(Reportsv3RunGradesRequest reportsv3RunGradesRequest) throws ApiException {
+    public Reportsv3RunGradesResponse reportsServiceRunGrades(@javax.annotation.Nonnull Reportsv3RunGradesRequest reportsv3RunGradesRequest) throws ApiException {
         ApiResponse<Reportsv3RunGradesResponse> localVarResp = reportsServiceRunGradesWithHttpInfo(reportsv3RunGradesRequest);
         return localVarResp.getData();
     }
@@ -7161,13 +7379,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3RunGradesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3RunGradesResponse> reportsServiceRunGradesWithHttpInfo(Reportsv3RunGradesRequest reportsv3RunGradesRequest) throws ApiException {
+    public ApiResponse<Reportsv3RunGradesResponse> reportsServiceRunGradesWithHttpInfo(@javax.annotation.Nonnull Reportsv3RunGradesRequest reportsv3RunGradesRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceRunGradesValidateBeforeCall(reportsv3RunGradesRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3RunGradesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -7181,13 +7400,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceRunGradesAsync(Reportsv3RunGradesRequest reportsv3RunGradesRequest, final ApiCallback<Reportsv3RunGradesResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceRunGradesAsync(@javax.annotation.Nonnull Reportsv3RunGradesRequest reportsv3RunGradesRequest, final ApiCallback<Reportsv3RunGradesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceRunGradesValidateBeforeCall(reportsv3RunGradesRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3RunGradesResponse>(){}.getType();
@@ -7201,13 +7421,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceRunVariantOperationCall(Reportsv3RunVariantOperationRequest reportsv3RunVariantOperationRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceRunVariantOperationCall(@javax.annotation.Nonnull Reportsv3RunVariantOperationRequest reportsv3RunVariantOperationRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -7253,7 +7474,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceRunVariantOperationValidateBeforeCall(Reportsv3RunVariantOperationRequest reportsv3RunVariantOperationRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceRunVariantOperationValidateBeforeCall(@javax.annotation.Nonnull Reportsv3RunVariantOperationRequest reportsv3RunVariantOperationRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3RunVariantOperationRequest' is set
         if (reportsv3RunVariantOperationRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3RunVariantOperationRequest' when calling reportsServiceRunVariantOperation(Async)");
@@ -7270,13 +7491,14 @@ public class ReportsServiceApi {
      * @return Reportsv3RunVariantOperationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3RunVariantOperationResponse reportsServiceRunVariantOperation(Reportsv3RunVariantOperationRequest reportsv3RunVariantOperationRequest) throws ApiException {
+    public Reportsv3RunVariantOperationResponse reportsServiceRunVariantOperation(@javax.annotation.Nonnull Reportsv3RunVariantOperationRequest reportsv3RunVariantOperationRequest) throws ApiException {
         ApiResponse<Reportsv3RunVariantOperationResponse> localVarResp = reportsServiceRunVariantOperationWithHttpInfo(reportsv3RunVariantOperationRequest);
         return localVarResp.getData();
     }
@@ -7288,13 +7510,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3RunVariantOperationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3RunVariantOperationResponse> reportsServiceRunVariantOperationWithHttpInfo(Reportsv3RunVariantOperationRequest reportsv3RunVariantOperationRequest) throws ApiException {
+    public ApiResponse<Reportsv3RunVariantOperationResponse> reportsServiceRunVariantOperationWithHttpInfo(@javax.annotation.Nonnull Reportsv3RunVariantOperationRequest reportsv3RunVariantOperationRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceRunVariantOperationValidateBeforeCall(reportsv3RunVariantOperationRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3RunVariantOperationResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -7308,13 +7531,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceRunVariantOperationAsync(Reportsv3RunVariantOperationRequest reportsv3RunVariantOperationRequest, final ApiCallback<Reportsv3RunVariantOperationResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceRunVariantOperationAsync(@javax.annotation.Nonnull Reportsv3RunVariantOperationRequest reportsv3RunVariantOperationRequest, final ApiCallback<Reportsv3RunVariantOperationResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceRunVariantOperationValidateBeforeCall(reportsv3RunVariantOperationRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3RunVariantOperationResponse>(){}.getType();
@@ -7328,13 +7552,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceTransposeCall(Reportsv3TransposeRequest reportsv3TransposeRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceTransposeCall(@javax.annotation.Nonnull Reportsv3TransposeRequest reportsv3TransposeRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -7380,7 +7605,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceTransposeValidateBeforeCall(Reportsv3TransposeRequest reportsv3TransposeRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceTransposeValidateBeforeCall(@javax.annotation.Nonnull Reportsv3TransposeRequest reportsv3TransposeRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportsv3TransposeRequest' is set
         if (reportsv3TransposeRequest == null) {
             throw new ApiException("Missing the required parameter 'reportsv3TransposeRequest' when calling reportsServiceTranspose(Async)");
@@ -7397,13 +7622,14 @@ public class ReportsServiceApi {
      * @return Reportsv3RunReportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3RunReportResponse reportsServiceTranspose(Reportsv3TransposeRequest reportsv3TransposeRequest) throws ApiException {
+    public Reportsv3RunReportResponse reportsServiceTranspose(@javax.annotation.Nonnull Reportsv3TransposeRequest reportsv3TransposeRequest) throws ApiException {
         ApiResponse<Reportsv3RunReportResponse> localVarResp = reportsServiceTransposeWithHttpInfo(reportsv3TransposeRequest);
         return localVarResp.getData();
     }
@@ -7415,13 +7641,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3RunReportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3RunReportResponse> reportsServiceTransposeWithHttpInfo(Reportsv3TransposeRequest reportsv3TransposeRequest) throws ApiException {
+    public ApiResponse<Reportsv3RunReportResponse> reportsServiceTransposeWithHttpInfo(@javax.annotation.Nonnull Reportsv3TransposeRequest reportsv3TransposeRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceTransposeValidateBeforeCall(reportsv3TransposeRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3RunReportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -7435,13 +7662,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceTransposeAsync(Reportsv3TransposeRequest reportsv3TransposeRequest, final ApiCallback<Reportsv3RunReportResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceTransposeAsync(@javax.annotation.Nonnull Reportsv3TransposeRequest reportsv3TransposeRequest, final ApiCallback<Reportsv3RunReportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceTransposeValidateBeforeCall(reportsv3TransposeRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3RunReportResponse>(){}.getType();
@@ -7456,13 +7684,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateChartCall(String chartId, Reportsv3UpdateChartRequest reportsv3UpdateChartRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateChartCall(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3UpdateChartRequest reportsv3UpdateChartRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -7509,7 +7738,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceUpdateChartValidateBeforeCall(String chartId, Reportsv3UpdateChartRequest reportsv3UpdateChartRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceUpdateChartValidateBeforeCall(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3UpdateChartRequest reportsv3UpdateChartRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'chartId' is set
         if (chartId == null) {
             throw new ApiException("Missing the required parameter 'chartId' when calling reportsServiceUpdateChart(Async)");
@@ -7532,13 +7761,14 @@ public class ReportsServiceApi {
      * @return Reportsv3UpdateChartResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3UpdateChartResponse reportsServiceUpdateChart(String chartId, Reportsv3UpdateChartRequest reportsv3UpdateChartRequest) throws ApiException {
+    public Reportsv3UpdateChartResponse reportsServiceUpdateChart(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3UpdateChartRequest reportsv3UpdateChartRequest) throws ApiException {
         ApiResponse<Reportsv3UpdateChartResponse> localVarResp = reportsServiceUpdateChartWithHttpInfo(chartId, reportsv3UpdateChartRequest);
         return localVarResp.getData();
     }
@@ -7551,13 +7781,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3UpdateChartResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3UpdateChartResponse> reportsServiceUpdateChartWithHttpInfo(String chartId, Reportsv3UpdateChartRequest reportsv3UpdateChartRequest) throws ApiException {
+    public ApiResponse<Reportsv3UpdateChartResponse> reportsServiceUpdateChartWithHttpInfo(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3UpdateChartRequest reportsv3UpdateChartRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceUpdateChartValidateBeforeCall(chartId, reportsv3UpdateChartRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateChartResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -7572,13 +7803,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateChartAsync(String chartId, Reportsv3UpdateChartRequest reportsv3UpdateChartRequest, final ApiCallback<Reportsv3UpdateChartResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateChartAsync(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3UpdateChartRequest reportsv3UpdateChartRequest, final ApiCallback<Reportsv3UpdateChartResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceUpdateChartValidateBeforeCall(chartId, reportsv3UpdateChartRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateChartResponse>(){}.getType();
@@ -7593,13 +7825,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateChartv2Call(String chartId, Reportsv3UpdateChartv2Request reportsv3UpdateChartv2Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateChartv2Call(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3UpdateChartv2Request reportsv3UpdateChartv2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -7646,7 +7879,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceUpdateChartv2ValidateBeforeCall(String chartId, Reportsv3UpdateChartv2Request reportsv3UpdateChartv2Request, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceUpdateChartv2ValidateBeforeCall(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3UpdateChartv2Request reportsv3UpdateChartv2Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'chartId' is set
         if (chartId == null) {
             throw new ApiException("Missing the required parameter 'chartId' when calling reportsServiceUpdateChartv2(Async)");
@@ -7669,13 +7902,14 @@ public class ReportsServiceApi {
      * @return Reportsv3UpdateChartv2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3UpdateChartv2Response reportsServiceUpdateChartv2(String chartId, Reportsv3UpdateChartv2Request reportsv3UpdateChartv2Request) throws ApiException {
+    public Reportsv3UpdateChartv2Response reportsServiceUpdateChartv2(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3UpdateChartv2Request reportsv3UpdateChartv2Request) throws ApiException {
         ApiResponse<Reportsv3UpdateChartv2Response> localVarResp = reportsServiceUpdateChartv2WithHttpInfo(chartId, reportsv3UpdateChartv2Request);
         return localVarResp.getData();
     }
@@ -7688,13 +7922,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3UpdateChartv2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3UpdateChartv2Response> reportsServiceUpdateChartv2WithHttpInfo(String chartId, Reportsv3UpdateChartv2Request reportsv3UpdateChartv2Request) throws ApiException {
+    public ApiResponse<Reportsv3UpdateChartv2Response> reportsServiceUpdateChartv2WithHttpInfo(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3UpdateChartv2Request reportsv3UpdateChartv2Request) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceUpdateChartv2ValidateBeforeCall(chartId, reportsv3UpdateChartv2Request, null);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateChartv2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -7709,13 +7944,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateChartv2Async(String chartId, Reportsv3UpdateChartv2Request reportsv3UpdateChartv2Request, final ApiCallback<Reportsv3UpdateChartv2Response> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateChartv2Async(@javax.annotation.Nonnull String chartId, @javax.annotation.Nonnull Reportsv3UpdateChartv2Request reportsv3UpdateChartv2Request, final ApiCallback<Reportsv3UpdateChartv2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceUpdateChartv2ValidateBeforeCall(chartId, reportsv3UpdateChartv2Request, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateChartv2Response>(){}.getType();
@@ -7730,13 +7966,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateControlCall(Integer controlId, Reportsv3UpdateControlRequest reportsv3UpdateControlRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateControlCall(@javax.annotation.Nonnull Integer controlId, @javax.annotation.Nonnull Reportsv3UpdateControlRequest reportsv3UpdateControlRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -7783,7 +8020,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceUpdateControlValidateBeforeCall(Integer controlId, Reportsv3UpdateControlRequest reportsv3UpdateControlRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceUpdateControlValidateBeforeCall(@javax.annotation.Nonnull Integer controlId, @javax.annotation.Nonnull Reportsv3UpdateControlRequest reportsv3UpdateControlRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'controlId' is set
         if (controlId == null) {
             throw new ApiException("Missing the required parameter 'controlId' when calling reportsServiceUpdateControl(Async)");
@@ -7806,13 +8043,14 @@ public class ReportsServiceApi {
      * @return Reportsv3UpdateControlResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3UpdateControlResponse reportsServiceUpdateControl(Integer controlId, Reportsv3UpdateControlRequest reportsv3UpdateControlRequest) throws ApiException {
+    public Reportsv3UpdateControlResponse reportsServiceUpdateControl(@javax.annotation.Nonnull Integer controlId, @javax.annotation.Nonnull Reportsv3UpdateControlRequest reportsv3UpdateControlRequest) throws ApiException {
         ApiResponse<Reportsv3UpdateControlResponse> localVarResp = reportsServiceUpdateControlWithHttpInfo(controlId, reportsv3UpdateControlRequest);
         return localVarResp.getData();
     }
@@ -7825,13 +8063,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3UpdateControlResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3UpdateControlResponse> reportsServiceUpdateControlWithHttpInfo(Integer controlId, Reportsv3UpdateControlRequest reportsv3UpdateControlRequest) throws ApiException {
+    public ApiResponse<Reportsv3UpdateControlResponse> reportsServiceUpdateControlWithHttpInfo(@javax.annotation.Nonnull Integer controlId, @javax.annotation.Nonnull Reportsv3UpdateControlRequest reportsv3UpdateControlRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceUpdateControlValidateBeforeCall(controlId, reportsv3UpdateControlRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateControlResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -7846,13 +8085,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateControlAsync(Integer controlId, Reportsv3UpdateControlRequest reportsv3UpdateControlRequest, final ApiCallback<Reportsv3UpdateControlResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateControlAsync(@javax.annotation.Nonnull Integer controlId, @javax.annotation.Nonnull Reportsv3UpdateControlRequest reportsv3UpdateControlRequest, final ApiCallback<Reportsv3UpdateControlResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceUpdateControlValidateBeforeCall(controlId, reportsv3UpdateControlRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateControlResponse>(){}.getType();
@@ -7867,13 +8107,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateGradeCall(Integer gradeId, Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateGradeCall(@javax.annotation.Nonnull Integer gradeId, @javax.annotation.Nonnull Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -7920,7 +8161,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceUpdateGradeValidateBeforeCall(Integer gradeId, Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceUpdateGradeValidateBeforeCall(@javax.annotation.Nonnull Integer gradeId, @javax.annotation.Nonnull Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'gradeId' is set
         if (gradeId == null) {
             throw new ApiException("Missing the required parameter 'gradeId' when calling reportsServiceUpdateGrade(Async)");
@@ -7943,13 +8184,14 @@ public class ReportsServiceApi {
      * @return Reportsv3UpdateGradeResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3UpdateGradeResponse reportsServiceUpdateGrade(Integer gradeId, Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest) throws ApiException {
+    public Reportsv3UpdateGradeResponse reportsServiceUpdateGrade(@javax.annotation.Nonnull Integer gradeId, @javax.annotation.Nonnull Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest) throws ApiException {
         ApiResponse<Reportsv3UpdateGradeResponse> localVarResp = reportsServiceUpdateGradeWithHttpInfo(gradeId, reportsv3UpdateGradeRequest);
         return localVarResp.getData();
     }
@@ -7962,13 +8204,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3UpdateGradeResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3UpdateGradeResponse> reportsServiceUpdateGradeWithHttpInfo(Integer gradeId, Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest) throws ApiException {
+    public ApiResponse<Reportsv3UpdateGradeResponse> reportsServiceUpdateGradeWithHttpInfo(@javax.annotation.Nonnull Integer gradeId, @javax.annotation.Nonnull Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceUpdateGradeValidateBeforeCall(gradeId, reportsv3UpdateGradeRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateGradeResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -7983,13 +8226,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateGradeAsync(Integer gradeId, Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest, final ApiCallback<Reportsv3UpdateGradeResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateGradeAsync(@javax.annotation.Nonnull Integer gradeId, @javax.annotation.Nonnull Reportsv3UpdateGradeRequest reportsv3UpdateGradeRequest, final ApiCallback<Reportsv3UpdateGradeResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceUpdateGradeValidateBeforeCall(gradeId, reportsv3UpdateGradeRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateGradeResponse>(){}.getType();
@@ -8004,13 +8248,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateJoinCall(String joinId, Reportsv3UpdateJoinRequest reportsv3UpdateJoinRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateJoinCall(@javax.annotation.Nonnull String joinId, @javax.annotation.Nonnull Reportsv3UpdateJoinRequest reportsv3UpdateJoinRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -8057,7 +8302,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceUpdateJoinValidateBeforeCall(String joinId, Reportsv3UpdateJoinRequest reportsv3UpdateJoinRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceUpdateJoinValidateBeforeCall(@javax.annotation.Nonnull String joinId, @javax.annotation.Nonnull Reportsv3UpdateJoinRequest reportsv3UpdateJoinRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'joinId' is set
         if (joinId == null) {
             throw new ApiException("Missing the required parameter 'joinId' when calling reportsServiceUpdateJoin(Async)");
@@ -8080,13 +8325,14 @@ public class ReportsServiceApi {
      * @return Reportsv3UpdateJoinResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3UpdateJoinResponse reportsServiceUpdateJoin(String joinId, Reportsv3UpdateJoinRequest reportsv3UpdateJoinRequest) throws ApiException {
+    public Reportsv3UpdateJoinResponse reportsServiceUpdateJoin(@javax.annotation.Nonnull String joinId, @javax.annotation.Nonnull Reportsv3UpdateJoinRequest reportsv3UpdateJoinRequest) throws ApiException {
         ApiResponse<Reportsv3UpdateJoinResponse> localVarResp = reportsServiceUpdateJoinWithHttpInfo(joinId, reportsv3UpdateJoinRequest);
         return localVarResp.getData();
     }
@@ -8099,13 +8345,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3UpdateJoinResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3UpdateJoinResponse> reportsServiceUpdateJoinWithHttpInfo(String joinId, Reportsv3UpdateJoinRequest reportsv3UpdateJoinRequest) throws ApiException {
+    public ApiResponse<Reportsv3UpdateJoinResponse> reportsServiceUpdateJoinWithHttpInfo(@javax.annotation.Nonnull String joinId, @javax.annotation.Nonnull Reportsv3UpdateJoinRequest reportsv3UpdateJoinRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceUpdateJoinValidateBeforeCall(joinId, reportsv3UpdateJoinRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateJoinResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -8120,13 +8367,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateJoinAsync(String joinId, Reportsv3UpdateJoinRequest reportsv3UpdateJoinRequest, final ApiCallback<Reportsv3UpdateJoinResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateJoinAsync(@javax.annotation.Nonnull String joinId, @javax.annotation.Nonnull Reportsv3UpdateJoinRequest reportsv3UpdateJoinRequest, final ApiCallback<Reportsv3UpdateJoinResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceUpdateJoinValidateBeforeCall(joinId, reportsv3UpdateJoinRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateJoinResponse>(){}.getType();
@@ -8141,13 +8389,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateMeasureCall(Integer measureId, Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateMeasureCall(@javax.annotation.Nonnull Integer measureId, @javax.annotation.Nonnull Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -8194,7 +8443,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceUpdateMeasureValidateBeforeCall(Integer measureId, Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceUpdateMeasureValidateBeforeCall(@javax.annotation.Nonnull Integer measureId, @javax.annotation.Nonnull Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'measureId' is set
         if (measureId == null) {
             throw new ApiException("Missing the required parameter 'measureId' when calling reportsServiceUpdateMeasure(Async)");
@@ -8217,13 +8466,14 @@ public class ReportsServiceApi {
      * @return Reportsv3UpdateMeasureResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3UpdateMeasureResponse reportsServiceUpdateMeasure(Integer measureId, Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest) throws ApiException {
+    public Reportsv3UpdateMeasureResponse reportsServiceUpdateMeasure(@javax.annotation.Nonnull Integer measureId, @javax.annotation.Nonnull Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest) throws ApiException {
         ApiResponse<Reportsv3UpdateMeasureResponse> localVarResp = reportsServiceUpdateMeasureWithHttpInfo(measureId, reportsv3UpdateMeasureRequest);
         return localVarResp.getData();
     }
@@ -8236,13 +8486,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3UpdateMeasureResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3UpdateMeasureResponse> reportsServiceUpdateMeasureWithHttpInfo(Integer measureId, Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest) throws ApiException {
+    public ApiResponse<Reportsv3UpdateMeasureResponse> reportsServiceUpdateMeasureWithHttpInfo(@javax.annotation.Nonnull Integer measureId, @javax.annotation.Nonnull Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceUpdateMeasureValidateBeforeCall(measureId, reportsv3UpdateMeasureRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateMeasureResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -8257,13 +8508,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateMeasureAsync(Integer measureId, Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest, final ApiCallback<Reportsv3UpdateMeasureResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateMeasureAsync(@javax.annotation.Nonnull Integer measureId, @javax.annotation.Nonnull Reportsv3UpdateMeasureRequest reportsv3UpdateMeasureRequest, final ApiCallback<Reportsv3UpdateMeasureResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceUpdateMeasureValidateBeforeCall(measureId, reportsv3UpdateMeasureRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateMeasureResponse>(){}.getType();
@@ -8278,13 +8530,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateMetricCall(Integer metricId, Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateMetricCall(@javax.annotation.Nonnull Integer metricId, @javax.annotation.Nonnull Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -8331,7 +8584,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceUpdateMetricValidateBeforeCall(Integer metricId, Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceUpdateMetricValidateBeforeCall(@javax.annotation.Nonnull Integer metricId, @javax.annotation.Nonnull Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'metricId' is set
         if (metricId == null) {
             throw new ApiException("Missing the required parameter 'metricId' when calling reportsServiceUpdateMetric(Async)");
@@ -8354,13 +8607,14 @@ public class ReportsServiceApi {
      * @return Reportsv3UpdateMetricResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3UpdateMetricResponse reportsServiceUpdateMetric(Integer metricId, Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest) throws ApiException {
+    public Reportsv3UpdateMetricResponse reportsServiceUpdateMetric(@javax.annotation.Nonnull Integer metricId, @javax.annotation.Nonnull Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest) throws ApiException {
         ApiResponse<Reportsv3UpdateMetricResponse> localVarResp = reportsServiceUpdateMetricWithHttpInfo(metricId, reportsv3UpdateMetricRequest);
         return localVarResp.getData();
     }
@@ -8373,13 +8627,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3UpdateMetricResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3UpdateMetricResponse> reportsServiceUpdateMetricWithHttpInfo(Integer metricId, Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest) throws ApiException {
+    public ApiResponse<Reportsv3UpdateMetricResponse> reportsServiceUpdateMetricWithHttpInfo(@javax.annotation.Nonnull Integer metricId, @javax.annotation.Nonnull Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceUpdateMetricValidateBeforeCall(metricId, reportsv3UpdateMetricRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateMetricResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -8394,13 +8649,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateMetricAsync(Integer metricId, Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest, final ApiCallback<Reportsv3UpdateMetricResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateMetricAsync(@javax.annotation.Nonnull Integer metricId, @javax.annotation.Nonnull Reportsv3UpdateMetricRequest reportsv3UpdateMetricRequest, final ApiCallback<Reportsv3UpdateMetricResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceUpdateMetricValidateBeforeCall(metricId, reportsv3UpdateMetricRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateMetricResponse>(){}.getType();
@@ -8415,13 +8671,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateProgramCall(Integer programId, Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateProgramCall(@javax.annotation.Nonnull Integer programId, @javax.annotation.Nonnull Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -8468,7 +8725,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceUpdateProgramValidateBeforeCall(Integer programId, Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceUpdateProgramValidateBeforeCall(@javax.annotation.Nonnull Integer programId, @javax.annotation.Nonnull Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'programId' is set
         if (programId == null) {
             throw new ApiException("Missing the required parameter 'programId' when calling reportsServiceUpdateProgram(Async)");
@@ -8491,13 +8748,14 @@ public class ReportsServiceApi {
      * @return Reportsv3UpdateProgramResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3UpdateProgramResponse reportsServiceUpdateProgram(Integer programId, Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest) throws ApiException {
+    public Reportsv3UpdateProgramResponse reportsServiceUpdateProgram(@javax.annotation.Nonnull Integer programId, @javax.annotation.Nonnull Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest) throws ApiException {
         ApiResponse<Reportsv3UpdateProgramResponse> localVarResp = reportsServiceUpdateProgramWithHttpInfo(programId, reportsv3UpdateProgramRequest);
         return localVarResp.getData();
     }
@@ -8510,13 +8768,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3UpdateProgramResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3UpdateProgramResponse> reportsServiceUpdateProgramWithHttpInfo(Integer programId, Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest) throws ApiException {
+    public ApiResponse<Reportsv3UpdateProgramResponse> reportsServiceUpdateProgramWithHttpInfo(@javax.annotation.Nonnull Integer programId, @javax.annotation.Nonnull Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceUpdateProgramValidateBeforeCall(programId, reportsv3UpdateProgramRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateProgramResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -8531,13 +8790,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateProgramAsync(Integer programId, Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest, final ApiCallback<Reportsv3UpdateProgramResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateProgramAsync(@javax.annotation.Nonnull Integer programId, @javax.annotation.Nonnull Reportsv3UpdateProgramRequest reportsv3UpdateProgramRequest, final ApiCallback<Reportsv3UpdateProgramResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceUpdateProgramValidateBeforeCall(programId, reportsv3UpdateProgramRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateProgramResponse>(){}.getType();
@@ -8552,13 +8812,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateReportCall(String reportId, Reportsv3UpdateReportRequest reportsv3UpdateReportRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateReportCall(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsv3UpdateReportRequest reportsv3UpdateReportRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -8605,7 +8866,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceUpdateReportValidateBeforeCall(String reportId, Reportsv3UpdateReportRequest reportsv3UpdateReportRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceUpdateReportValidateBeforeCall(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsv3UpdateReportRequest reportsv3UpdateReportRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportId' is set
         if (reportId == null) {
             throw new ApiException("Missing the required parameter 'reportId' when calling reportsServiceUpdateReport(Async)");
@@ -8628,13 +8889,14 @@ public class ReportsServiceApi {
      * @return Reportsv3UpdateReportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3UpdateReportResponse reportsServiceUpdateReport(String reportId, Reportsv3UpdateReportRequest reportsv3UpdateReportRequest) throws ApiException {
+    public Reportsv3UpdateReportResponse reportsServiceUpdateReport(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsv3UpdateReportRequest reportsv3UpdateReportRequest) throws ApiException {
         ApiResponse<Reportsv3UpdateReportResponse> localVarResp = reportsServiceUpdateReportWithHttpInfo(reportId, reportsv3UpdateReportRequest);
         return localVarResp.getData();
     }
@@ -8647,13 +8909,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3UpdateReportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3UpdateReportResponse> reportsServiceUpdateReportWithHttpInfo(String reportId, Reportsv3UpdateReportRequest reportsv3UpdateReportRequest) throws ApiException {
+    public ApiResponse<Reportsv3UpdateReportResponse> reportsServiceUpdateReportWithHttpInfo(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsv3UpdateReportRequest reportsv3UpdateReportRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceUpdateReportValidateBeforeCall(reportId, reportsv3UpdateReportRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateReportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -8668,13 +8931,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateReportAsync(String reportId, Reportsv3UpdateReportRequest reportsv3UpdateReportRequest, final ApiCallback<Reportsv3UpdateReportResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateReportAsync(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Reportsv3UpdateReportRequest reportsv3UpdateReportRequest, final ApiCallback<Reportsv3UpdateReportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceUpdateReportValidateBeforeCall(reportId, reportsv3UpdateReportRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateReportResponse>(){}.getType();
@@ -8689,13 +8953,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateRequirementCall(Integer requirementId, Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateRequirementCall(@javax.annotation.Nonnull Integer requirementId, @javax.annotation.Nonnull Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -8742,7 +9007,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceUpdateRequirementValidateBeforeCall(Integer requirementId, Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceUpdateRequirementValidateBeforeCall(@javax.annotation.Nonnull Integer requirementId, @javax.annotation.Nonnull Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'requirementId' is set
         if (requirementId == null) {
             throw new ApiException("Missing the required parameter 'requirementId' when calling reportsServiceUpdateRequirement(Async)");
@@ -8765,13 +9030,14 @@ public class ReportsServiceApi {
      * @return Reportsv3UpdateRequirementResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3UpdateRequirementResponse reportsServiceUpdateRequirement(Integer requirementId, Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest) throws ApiException {
+    public Reportsv3UpdateRequirementResponse reportsServiceUpdateRequirement(@javax.annotation.Nonnull Integer requirementId, @javax.annotation.Nonnull Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest) throws ApiException {
         ApiResponse<Reportsv3UpdateRequirementResponse> localVarResp = reportsServiceUpdateRequirementWithHttpInfo(requirementId, reportsv3UpdateRequirementRequest);
         return localVarResp.getData();
     }
@@ -8784,13 +9050,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3UpdateRequirementResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3UpdateRequirementResponse> reportsServiceUpdateRequirementWithHttpInfo(Integer requirementId, Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest) throws ApiException {
+    public ApiResponse<Reportsv3UpdateRequirementResponse> reportsServiceUpdateRequirementWithHttpInfo(@javax.annotation.Nonnull Integer requirementId, @javax.annotation.Nonnull Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceUpdateRequirementValidateBeforeCall(requirementId, reportsv3UpdateRequirementRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateRequirementResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -8805,13 +9072,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateRequirementAsync(Integer requirementId, Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest, final ApiCallback<Reportsv3UpdateRequirementResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateRequirementAsync(@javax.annotation.Nonnull Integer requirementId, @javax.annotation.Nonnull Reportsv3UpdateRequirementRequest reportsv3UpdateRequirementRequest, final ApiCallback<Reportsv3UpdateRequirementResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceUpdateRequirementValidateBeforeCall(requirementId, reportsv3UpdateRequirementRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateRequirementResponse>(){}.getType();
@@ -8826,13 +9094,14 @@ public class ReportsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateVariantOverrideCall(String variantId, Reportsv3UpdateVariantOverrideRequest reportsv3UpdateVariantOverrideRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateVariantOverrideCall(@javax.annotation.Nonnull String variantId, @javax.annotation.Nonnull Reportsv3UpdateVariantOverrideRequest reportsv3UpdateVariantOverrideRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -8879,7 +9148,7 @@ public class ReportsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call reportsServiceUpdateVariantOverrideValidateBeforeCall(String variantId, Reportsv3UpdateVariantOverrideRequest reportsv3UpdateVariantOverrideRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call reportsServiceUpdateVariantOverrideValidateBeforeCall(@javax.annotation.Nonnull String variantId, @javax.annotation.Nonnull Reportsv3UpdateVariantOverrideRequest reportsv3UpdateVariantOverrideRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'variantId' is set
         if (variantId == null) {
             throw new ApiException("Missing the required parameter 'variantId' when calling reportsServiceUpdateVariantOverride(Async)");
@@ -8902,13 +9171,14 @@ public class ReportsServiceApi {
      * @return Reportsv3UpdateVariantOverrideResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Reportsv3UpdateVariantOverrideResponse reportsServiceUpdateVariantOverride(String variantId, Reportsv3UpdateVariantOverrideRequest reportsv3UpdateVariantOverrideRequest) throws ApiException {
+    public Reportsv3UpdateVariantOverrideResponse reportsServiceUpdateVariantOverride(@javax.annotation.Nonnull String variantId, @javax.annotation.Nonnull Reportsv3UpdateVariantOverrideRequest reportsv3UpdateVariantOverrideRequest) throws ApiException {
         ApiResponse<Reportsv3UpdateVariantOverrideResponse> localVarResp = reportsServiceUpdateVariantOverrideWithHttpInfo(variantId, reportsv3UpdateVariantOverrideRequest);
         return localVarResp.getData();
     }
@@ -8921,13 +9191,14 @@ public class ReportsServiceApi {
      * @return ApiResponse&lt;Reportsv3UpdateVariantOverrideResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Reportsv3UpdateVariantOverrideResponse> reportsServiceUpdateVariantOverrideWithHttpInfo(String variantId, Reportsv3UpdateVariantOverrideRequest reportsv3UpdateVariantOverrideRequest) throws ApiException {
+    public ApiResponse<Reportsv3UpdateVariantOverrideResponse> reportsServiceUpdateVariantOverrideWithHttpInfo(@javax.annotation.Nonnull String variantId, @javax.annotation.Nonnull Reportsv3UpdateVariantOverrideRequest reportsv3UpdateVariantOverrideRequest) throws ApiException {
         okhttp3.Call localVarCall = reportsServiceUpdateVariantOverrideValidateBeforeCall(variantId, reportsv3UpdateVariantOverrideRequest, null);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateVariantOverrideResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -8942,13 +9213,14 @@ public class ReportsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call reportsServiceUpdateVariantOverrideAsync(String variantId, Reportsv3UpdateVariantOverrideRequest reportsv3UpdateVariantOverrideRequest, final ApiCallback<Reportsv3UpdateVariantOverrideResponse> _callback) throws ApiException {
+    public okhttp3.Call reportsServiceUpdateVariantOverrideAsync(@javax.annotation.Nonnull String variantId, @javax.annotation.Nonnull Reportsv3UpdateVariantOverrideRequest reportsv3UpdateVariantOverrideRequest, final ApiCallback<Reportsv3UpdateVariantOverrideResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = reportsServiceUpdateVariantOverrideValidateBeforeCall(variantId, reportsv3UpdateVariantOverrideRequest, _callback);
         Type localVarReturnType = new TypeToken<Reportsv3UpdateVariantOverrideResponse>(){}.getType();

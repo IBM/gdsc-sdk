@@ -77,16 +77,16 @@ class Notificationsv3GetNotificationRecordsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in filters (list)
         _items = []
         if self.filters:
-            for _item in self.filters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_filters in self.filters:
+                if _item_filters:
+                    _items.append(_item_filters.to_dict())
             _dict['filters'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in records (list)
         _items = []
         if self.records:
-            for _item in self.records:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_records in self.records:
+                if _item_records:
+                    _items.append(_item_records.to_dict())
             _dict['records'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

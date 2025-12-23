@@ -77,23 +77,23 @@ class PotentialFlowsSummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in types_count (list)
         _items = []
         if self.types_count:
-            for _item in self.types_count:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_types_count in self.types_count:
+                if _item_types_count:
+                    _items.append(_item_types_count.to_dict())
             _dict['typesCount'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in cloud_account_count (list)
         _items = []
         if self.cloud_account_count:
-            for _item in self.cloud_account_count:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cloud_account_count in self.cloud_account_count:
+                if _item_cloud_account_count:
+                    _items.append(_item_cloud_account_count.to_dict())
             _dict['cloudAccountCount'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in cloud_region_count (list)
         _items = []
         if self.cloud_region_count:
-            for _item in self.cloud_region_count:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cloud_region_count in self.cloud_region_count:
+                if _item_cloud_region_count:
+                    _items.append(_item_cloud_region_count.to_dict())
             _dict['cloudRegionCount'] = _items
         return _dict
 

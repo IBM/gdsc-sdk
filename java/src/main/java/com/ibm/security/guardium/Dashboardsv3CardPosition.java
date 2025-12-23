@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,111 +38,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CardPosition - Positioning parameters for a card on a dashboard.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Dashboardsv3CardPosition {
   public static final String SERIALIZED_NAME_HEIGHT = "height";
   @SerializedName(SERIALIZED_NAME_HEIGHT)
+  @javax.annotation.Nullable
   private Float height;
 
   public static final String SERIALIZED_NAME_WIDTH = "width";
   @SerializedName(SERIALIZED_NAME_WIDTH)
+  @javax.annotation.Nullable
   private Float width;
 
   public static final String SERIALIZED_NAME_X_POSITION = "x_position";
   @SerializedName(SERIALIZED_NAME_X_POSITION)
+  @javax.annotation.Nullable
   private Float xPosition;
 
   public static final String SERIALIZED_NAME_Y_POSITION = "y_position";
   @SerializedName(SERIALIZED_NAME_Y_POSITION)
+  @javax.annotation.Nullable
   private Float yPosition;
 
   public Dashboardsv3CardPosition() {
   }
 
-  public Dashboardsv3CardPosition height(Float height) {
+  public Dashboardsv3CardPosition height(@javax.annotation.Nullable Float height) {
     this.height = height;
     return this;
   }
 
-   /**
+  /**
    * Card Height.
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
   public Float getHeight() {
     return height;
   }
 
-  public void setHeight(Float height) {
+  public void setHeight(@javax.annotation.Nullable Float height) {
     this.height = height;
   }
 
 
-  public Dashboardsv3CardPosition width(Float width) {
+  public Dashboardsv3CardPosition width(@javax.annotation.Nullable Float width) {
     this.width = width;
     return this;
   }
 
-   /**
+  /**
    * Card Width.
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
   public Float getWidth() {
     return width;
   }
 
-  public void setWidth(Float width) {
+  public void setWidth(@javax.annotation.Nullable Float width) {
     this.width = width;
   }
 
 
-  public Dashboardsv3CardPosition xPosition(Float xPosition) {
+  public Dashboardsv3CardPosition xPosition(@javax.annotation.Nullable Float xPosition) {
     this.xPosition = xPosition;
     return this;
   }
 
-   /**
+  /**
    * Card X Position.
    * @return xPosition
-  **/
+   */
   @javax.annotation.Nullable
   public Float getxPosition() {
     return xPosition;
   }
 
-  public void setxPosition(Float xPosition) {
+  public void setxPosition(@javax.annotation.Nullable Float xPosition) {
     this.xPosition = xPosition;
   }
 
 
-  public Dashboardsv3CardPosition yPosition(Float yPosition) {
+  public Dashboardsv3CardPosition yPosition(@javax.annotation.Nullable Float yPosition) {
     this.yPosition = yPosition;
     return this;
   }
 
-   /**
+  /**
    * Card Y Position.
    * @return yPosition
-  **/
+   */
   @javax.annotation.Nullable
   public Float getyPosition() {
     return yPosition;
   }
 
-  public void setyPosition(Float yPosition) {
+  public void setyPosition(@javax.annotation.Nullable Float yPosition) {
     this.yPosition = yPosition;
   }
 
@@ -196,26 +201,22 @@ public class Dashboardsv3CardPosition {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("height");
-    openapiFields.add("width");
-    openapiFields.add("x_position");
-    openapiFields.add("y_position");
+    openapiFields = new HashSet<String>(Arrays.asList("height", "width", "x_position", "y_position"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3CardPosition
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3CardPosition
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Dashboardsv3CardPosition.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Dashboardsv3CardPosition is not found in the empty JSON string", Dashboardsv3CardPosition.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Dashboardsv3CardPosition is not found in the empty JSON string", Dashboardsv3CardPosition.openapiRequiredFields.toString()));
         }
       }
 
@@ -223,7 +224,7 @@ public class Dashboardsv3CardPosition {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Dashboardsv3CardPosition.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Dashboardsv3CardPosition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Dashboardsv3CardPosition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -258,22 +259,22 @@ public class Dashboardsv3CardPosition {
     }
   }
 
- /**
-  * Create an instance of Dashboardsv3CardPosition given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Dashboardsv3CardPosition
-  * @throws IOException if the JSON string is invalid with respect to Dashboardsv3CardPosition
-  */
+  /**
+   * Create an instance of Dashboardsv3CardPosition given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Dashboardsv3CardPosition
+   * @throws IOException if the JSON string is invalid with respect to Dashboardsv3CardPosition
+   */
   public static Dashboardsv3CardPosition fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Dashboardsv3CardPosition.class);
   }
 
- /**
-  * Convert an instance of Dashboardsv3CardPosition to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Dashboardsv3CardPosition to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

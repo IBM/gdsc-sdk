@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -44,270 +45,284 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RunReportRequest is the argument of RunReport API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3RunReportRequest {
   public static final String SERIALIZED_NAME_CALCULATE_FACETS = "calculate_facets";
   @SerializedName(SERIALIZED_NAME_CALCULATE_FACETS)
+  @javax.annotation.Nullable
   private Boolean calculateFacets;
 
   public static final String SERIALIZED_NAME_DATE_RANGE = "date_range";
   @SerializedName(SERIALIZED_NAME_DATE_RANGE)
+  @javax.annotation.Nullable
   private Reportsv3DateRange dateRange;
 
   public static final String SERIALIZED_NAME_DEFAULT_CHART_EXPANDED = "default_chart_expanded";
   @SerializedName(SERIALIZED_NAME_DEFAULT_CHART_EXPANDED)
+  @javax.annotation.Nullable
   private Boolean defaultChartExpanded;
 
   public static final String SERIALIZED_NAME_FETCH_SIZE = "fetch_size";
   @SerializedName(SERIALIZED_NAME_FETCH_SIZE)
+  @javax.annotation.Nullable
   private Integer fetchSize;
 
   public static final String SERIALIZED_NAME_JOB_TYPE = "job_type";
   @SerializedName(SERIALIZED_NAME_JOB_TYPE)
+  @javax.annotation.Nullable
   private Reportsrunnerv3JobType jobType = Reportsrunnerv3JobType.UNDEFINED_JOB_TYPE;
 
   public static final String SERIALIZED_NAME_MODEL_TYPE = "model_type";
   @SerializedName(SERIALIZED_NAME_MODEL_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3ModelType modelType = Reportsv3ModelType.UNDEFINED_MODEL_TYPE;
 
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
+  @javax.annotation.Nullable
   private Integer offset;
 
   public static final String SERIALIZED_NAME_QUERY_ID = "query_id";
   @SerializedName(SERIALIZED_NAME_QUERY_ID)
+  @javax.annotation.Nullable
   private String queryId;
 
   public static final String SERIALIZED_NAME_REPORT_DEFINITION = "report_definition";
   @SerializedName(SERIALIZED_NAME_REPORT_DEFINITION)
+  @javax.annotation.Nullable
   private Reportsv3ReportDefinition reportDefinition;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_RUNTIME_PARAMETER_LIST = "runtime_parameter_list";
   @SerializedName(SERIALIZED_NAME_RUNTIME_PARAMETER_LIST)
+  @javax.annotation.Nullable
   private List<Reportsv3RunTimeParameter> runtimeParameterList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TIME_ZONE = "time_zone";
   @SerializedName(SERIALIZED_NAME_TIME_ZONE)
+  @javax.annotation.Nullable
   private String timeZone;
 
   public static final String SERIALIZED_NAME_USE_QUICK_FACETS = "use_quick_facets";
   @SerializedName(SERIALIZED_NAME_USE_QUICK_FACETS)
+  @javax.annotation.Nullable
   private Boolean useQuickFacets;
 
   public static final String SERIALIZED_NAME_WITHOUT_LIMIT = "without_limit";
   @SerializedName(SERIALIZED_NAME_WITHOUT_LIMIT)
+  @javax.annotation.Nullable
   private Boolean withoutLimit;
 
   public Reportsrunnerv3RunReportRequest() {
   }
 
-  public Reportsrunnerv3RunReportRequest calculateFacets(Boolean calculateFacets) {
+  public Reportsrunnerv3RunReportRequest calculateFacets(@javax.annotation.Nullable Boolean calculateFacets) {
     this.calculateFacets = calculateFacets;
     return this;
   }
 
-   /**
+  /**
    * Whether or not to calculate facets.
    * @return calculateFacets
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getCalculateFacets() {
     return calculateFacets;
   }
 
-  public void setCalculateFacets(Boolean calculateFacets) {
+  public void setCalculateFacets(@javax.annotation.Nullable Boolean calculateFacets) {
     this.calculateFacets = calculateFacets;
   }
 
 
-  public Reportsrunnerv3RunReportRequest dateRange(Reportsv3DateRange dateRange) {
+  public Reportsrunnerv3RunReportRequest dateRange(@javax.annotation.Nullable Reportsv3DateRange dateRange) {
     this.dateRange = dateRange;
     return this;
   }
 
-   /**
+  /**
    * Get dateRange
    * @return dateRange
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3DateRange getDateRange() {
     return dateRange;
   }
 
-  public void setDateRange(Reportsv3DateRange dateRange) {
+  public void setDateRange(@javax.annotation.Nullable Reportsv3DateRange dateRange) {
     this.dateRange = dateRange;
   }
 
 
-  public Reportsrunnerv3RunReportRequest defaultChartExpanded(Boolean defaultChartExpanded) {
+  public Reportsrunnerv3RunReportRequest defaultChartExpanded(@javax.annotation.Nullable Boolean defaultChartExpanded) {
     this.defaultChartExpanded = defaultChartExpanded;
     return this;
   }
 
-   /**
+  /**
    * Optional: if report has chart -send  default_chart_expanded be saved in user settings collection per report and user.
    * @return defaultChartExpanded
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getDefaultChartExpanded() {
     return defaultChartExpanded;
   }
 
-  public void setDefaultChartExpanded(Boolean defaultChartExpanded) {
+  public void setDefaultChartExpanded(@javax.annotation.Nullable Boolean defaultChartExpanded) {
     this.defaultChartExpanded = defaultChartExpanded;
   }
 
 
-  public Reportsrunnerv3RunReportRequest fetchSize(Integer fetchSize) {
+  public Reportsrunnerv3RunReportRequest fetchSize(@javax.annotation.Nullable Integer fetchSize) {
     this.fetchSize = fetchSize;
     return this;
   }
 
-   /**
+  /**
    * The max amount of rows to return for pagination. Required if report query uses offset and fetch_size parameters.
    * @return fetchSize
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFetchSize() {
     return fetchSize;
   }
 
-  public void setFetchSize(Integer fetchSize) {
+  public void setFetchSize(@javax.annotation.Nullable Integer fetchSize) {
     this.fetchSize = fetchSize;
   }
 
 
-  public Reportsrunnerv3RunReportRequest jobType(Reportsrunnerv3JobType jobType) {
+  public Reportsrunnerv3RunReportRequest jobType(@javax.annotation.Nullable Reportsrunnerv3JobType jobType) {
     this.jobType = jobType;
     return this;
   }
 
-   /**
+  /**
    * Get jobType
    * @return jobType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsrunnerv3JobType getJobType() {
     return jobType;
   }
 
-  public void setJobType(Reportsrunnerv3JobType jobType) {
+  public void setJobType(@javax.annotation.Nullable Reportsrunnerv3JobType jobType) {
     this.jobType = jobType;
   }
 
 
-  public Reportsrunnerv3RunReportRequest modelType(Reportsv3ModelType modelType) {
+  public Reportsrunnerv3RunReportRequest modelType(@javax.annotation.Nullable Reportsv3ModelType modelType) {
     this.modelType = modelType;
     return this;
   }
 
-   /**
+  /**
    * Get modelType
    * @return modelType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ModelType getModelType() {
     return modelType;
   }
 
-  public void setModelType(Reportsv3ModelType modelType) {
+  public void setModelType(@javax.annotation.Nullable Reportsv3ModelType modelType) {
     this.modelType = modelType;
   }
 
 
-  public Reportsrunnerv3RunReportRequest offset(Integer offset) {
+  public Reportsrunnerv3RunReportRequest offset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
     return this;
   }
 
-   /**
+  /**
    * The amount to offset the rows by for pagination. Required if report query uses offset and fetch_size parameters.
    * @return offset
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getOffset() {
     return offset;
   }
 
-  public void setOffset(Integer offset) {
+  public void setOffset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
   }
 
 
-  public Reportsrunnerv3RunReportRequest queryId(String queryId) {
+  public Reportsrunnerv3RunReportRequest queryId(@javax.annotation.Nullable String queryId) {
     this.queryId = queryId;
     return this;
   }
 
-   /**
+  /**
    * Optional: query_id is used to uniquely identify a query. It can be later used to stop the same query.
    * @return queryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getQueryId() {
     return queryId;
   }
 
-  public void setQueryId(String queryId) {
+  public void setQueryId(@javax.annotation.Nullable String queryId) {
     this.queryId = queryId;
   }
 
 
-  public Reportsrunnerv3RunReportRequest reportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public Reportsrunnerv3RunReportRequest reportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
     return this;
   }
 
-   /**
+  /**
    * Get reportDefinition
    * @return reportDefinition
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportDefinition getReportDefinition() {
     return reportDefinition;
   }
 
-  public void setReportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public void setReportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
   }
 
 
-  public Reportsrunnerv3RunReportRequest reportId(String reportId) {
+  public Reportsrunnerv3RunReportRequest reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Optional: the ID of the Report we wish to run (e.g. 000000000000000000000905).
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Reportsrunnerv3RunReportRequest runtimeParameterList(List<Reportsv3RunTimeParameter> runtimeParameterList) {
+  public Reportsrunnerv3RunReportRequest runtimeParameterList(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParameterList) {
     this.runtimeParameterList = runtimeParameterList;
     return this;
   }
@@ -320,73 +335,73 @@ public class Reportsrunnerv3RunReportRequest {
     return this;
   }
 
-   /**
+  /**
    * List of runtime parameter if needed.
    * @return runtimeParameterList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3RunTimeParameter> getRuntimeParameterList() {
     return runtimeParameterList;
   }
 
-  public void setRuntimeParameterList(List<Reportsv3RunTimeParameter> runtimeParameterList) {
+  public void setRuntimeParameterList(@javax.annotation.Nullable List<Reportsv3RunTimeParameter> runtimeParameterList) {
     this.runtimeParameterList = runtimeParameterList;
   }
 
 
-  public Reportsrunnerv3RunReportRequest timeZone(String timeZone) {
+  public Reportsrunnerv3RunReportRequest timeZone(@javax.annotation.Nullable String timeZone) {
     this.timeZone = timeZone;
     return this;
   }
 
-   /**
+  /**
    * Optional: time zone.
    * @return timeZone
-  **/
+   */
   @javax.annotation.Nullable
   public String getTimeZone() {
     return timeZone;
   }
 
-  public void setTimeZone(String timeZone) {
+  public void setTimeZone(@javax.annotation.Nullable String timeZone) {
     this.timeZone = timeZone;
   }
 
 
-  public Reportsrunnerv3RunReportRequest useQuickFacets(Boolean useQuickFacets) {
+  public Reportsrunnerv3RunReportRequest useQuickFacets(@javax.annotation.Nullable Boolean useQuickFacets) {
     this.useQuickFacets = useQuickFacets;
     return this;
   }
 
-   /**
+  /**
    * Whether or not to calculate count.
    * @return useQuickFacets
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getUseQuickFacets() {
     return useQuickFacets;
   }
 
-  public void setUseQuickFacets(Boolean useQuickFacets) {
+  public void setUseQuickFacets(@javax.annotation.Nullable Boolean useQuickFacets) {
     this.useQuickFacets = useQuickFacets;
   }
 
 
-  public Reportsrunnerv3RunReportRequest withoutLimit(Boolean withoutLimit) {
+  public Reportsrunnerv3RunReportRequest withoutLimit(@javax.annotation.Nullable Boolean withoutLimit) {
     this.withoutLimit = withoutLimit;
     return this;
   }
 
-   /**
+  /**
    * Whether or not to limit the results.
    * @return withoutLimit
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getWithoutLimit() {
     return withoutLimit;
   }
 
-  public void setWithoutLimit(Boolean withoutLimit) {
+  public void setWithoutLimit(@javax.annotation.Nullable Boolean withoutLimit) {
     this.withoutLimit = withoutLimit;
   }
 
@@ -461,36 +476,22 @@ public class Reportsrunnerv3RunReportRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("calculate_facets");
-    openapiFields.add("date_range");
-    openapiFields.add("default_chart_expanded");
-    openapiFields.add("fetch_size");
-    openapiFields.add("job_type");
-    openapiFields.add("model_type");
-    openapiFields.add("offset");
-    openapiFields.add("query_id");
-    openapiFields.add("report_definition");
-    openapiFields.add("report_id");
-    openapiFields.add("runtime_parameter_list");
-    openapiFields.add("time_zone");
-    openapiFields.add("use_quick_facets");
-    openapiFields.add("without_limit");
+    openapiFields = new HashSet<String>(Arrays.asList("calculate_facets", "date_range", "default_chart_expanded", "fetch_size", "job_type", "model_type", "offset", "query_id", "report_definition", "report_id", "runtime_parameter_list", "time_zone", "use_quick_facets", "without_limit"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3RunReportRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3RunReportRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3RunReportRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3RunReportRequest is not found in the empty JSON string", Reportsrunnerv3RunReportRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3RunReportRequest is not found in the empty JSON string", Reportsrunnerv3RunReportRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -498,7 +499,7 @@ public class Reportsrunnerv3RunReportRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3RunReportRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3RunReportRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3RunReportRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -515,21 +516,21 @@ public class Reportsrunnerv3RunReportRequest {
         Reportsv3ModelType.validateJsonElement(jsonObj.get("model_type"));
       }
       if ((jsonObj.get("query_id") != null && !jsonObj.get("query_id").isJsonNull()) && !jsonObj.get("query_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `query_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `query_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query_id").toString()));
       }
       // validate the optional field `report_definition`
       if (jsonObj.get("report_definition") != null && !jsonObj.get("report_definition").isJsonNull()) {
         Reportsv3ReportDefinition.validateJsonElement(jsonObj.get("report_definition"));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if (jsonObj.get("runtime_parameter_list") != null && !jsonObj.get("runtime_parameter_list").isJsonNull()) {
         JsonArray jsonArrayruntimeParameterList = jsonObj.getAsJsonArray("runtime_parameter_list");
         if (jsonArrayruntimeParameterList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("runtime_parameter_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `runtime_parameter_list` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_parameter_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `runtime_parameter_list` to be an array in the JSON string but got `%s`", jsonObj.get("runtime_parameter_list").toString()));
           }
 
           // validate the optional field `runtime_parameter_list` (array)
@@ -539,7 +540,7 @@ public class Reportsrunnerv3RunReportRequest {
         }
       }
       if ((jsonObj.get("time_zone") != null && !jsonObj.get("time_zone").isJsonNull()) && !jsonObj.get("time_zone").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `time_zone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("time_zone").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `time_zone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("time_zone").toString()));
       }
   }
 
@@ -572,22 +573,22 @@ public class Reportsrunnerv3RunReportRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3RunReportRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3RunReportRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3RunReportRequest
-  */
+  /**
+   * Create an instance of Reportsrunnerv3RunReportRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3RunReportRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3RunReportRequest
+   */
   public static Reportsrunnerv3RunReportRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3RunReportRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3RunReportRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3RunReportRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

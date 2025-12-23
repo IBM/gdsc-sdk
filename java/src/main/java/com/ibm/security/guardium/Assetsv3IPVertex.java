@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,171 +42,184 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3IPVertex
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3IPVertex {
   public static final String SERIALIZED_NAME_CITY = "city";
   @SerializedName(SERIALIZED_NAME_CITY)
+  @javax.annotation.Nullable
   private String city;
 
   public static final String SERIALIZED_NAME_COUNTRY = "country";
   @SerializedName(SERIALIZED_NAME_COUNTRY)
+  @javax.annotation.Nullable
   private String country;
 
   public static final String SERIALIZED_NAME_DATA_CENTER = "data_center";
   @SerializedName(SERIALIZED_NAME_DATA_CENTER)
+  @javax.annotation.Nullable
   private String dataCenter;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_DNS = "dns";
   @SerializedName(SERIALIZED_NAME_DNS)
+  @javax.annotation.Nullable
   private String dns;
 
   public static final String SERIALIZED_NAME_EXTENDED_PROPERTIES = "extended_properties";
   @SerializedName(SERIALIZED_NAME_EXTENDED_PROPERTIES)
+  @javax.annotation.Nullable
   private List<Assetsv3CustomProperty> extendedProperties = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_IP_ADDRESS = "ip_address";
   @SerializedName(SERIALIZED_NAME_IP_ADDRESS)
+  @javax.annotation.Nullable
   private String ipAddress;
 
   public static final String SERIALIZED_NAME_IP_PORT = "ip_port";
   @SerializedName(SERIALIZED_NAME_IP_PORT)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> ipPort = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MAC_ADDRESS = "mac_address";
   @SerializedName(SERIALIZED_NAME_MAC_ADDRESS)
+  @javax.annotation.Nullable
   private String macAddress;
 
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
+  @javax.annotation.Nullable
   private String region;
 
   public static final String SERIALIZED_NAME_RESOLUTION_KEY = "resolution_key";
   @SerializedName(SERIALIZED_NAME_RESOLUTION_KEY)
+  @javax.annotation.Nullable
   private String resolutionKey;
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
+  @javax.annotation.Nullable
   private String state;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public Assetsv3IPVertex() {
   }
 
-  public Assetsv3IPVertex city(String city) {
+  public Assetsv3IPVertex city(@javax.annotation.Nullable String city) {
     this.city = city;
     return this;
   }
 
-   /**
+  /**
    * Get city
    * @return city
-  **/
+   */
   @javax.annotation.Nullable
   public String getCity() {
     return city;
   }
 
-  public void setCity(String city) {
+  public void setCity(@javax.annotation.Nullable String city) {
     this.city = city;
   }
 
 
-  public Assetsv3IPVertex country(String country) {
+  public Assetsv3IPVertex country(@javax.annotation.Nullable String country) {
     this.country = country;
     return this;
   }
 
-   /**
+  /**
    * Get country
    * @return country
-  **/
+   */
   @javax.annotation.Nullable
   public String getCountry() {
     return country;
   }
 
-  public void setCountry(String country) {
+  public void setCountry(@javax.annotation.Nullable String country) {
     this.country = country;
   }
 
 
-  public Assetsv3IPVertex dataCenter(String dataCenter) {
+  public Assetsv3IPVertex dataCenter(@javax.annotation.Nullable String dataCenter) {
     this.dataCenter = dataCenter;
     return this;
   }
 
-   /**
+  /**
    * Get dataCenter
    * @return dataCenter
-  **/
+   */
   @javax.annotation.Nullable
   public String getDataCenter() {
     return dataCenter;
   }
 
-  public void setDataCenter(String dataCenter) {
+  public void setDataCenter(@javax.annotation.Nullable String dataCenter) {
     this.dataCenter = dataCenter;
   }
 
 
-  public Assetsv3IPVertex description(String description) {
+  public Assetsv3IPVertex description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Get description
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Assetsv3IPVertex dns(String dns) {
+  public Assetsv3IPVertex dns(@javax.annotation.Nullable String dns) {
     this.dns = dns;
     return this;
   }
 
-   /**
+  /**
    * Get dns
    * @return dns
-  **/
+   */
   @javax.annotation.Nullable
   public String getDns() {
     return dns;
   }
 
-  public void setDns(String dns) {
+  public void setDns(@javax.annotation.Nullable String dns) {
     this.dns = dns;
   }
 
 
-  public Assetsv3IPVertex extendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public Assetsv3IPVertex extendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
     return this;
   }
@@ -218,40 +232,40 @@ public class Assetsv3IPVertex {
     return this;
   }
 
-   /**
+  /**
    * Get extendedProperties
    * @return extendedProperties
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3CustomProperty> getExtendedProperties() {
     return extendedProperties;
   }
 
-  public void setExtendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public void setExtendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
   }
 
 
-  public Assetsv3IPVertex ipAddress(String ipAddress) {
+  public Assetsv3IPVertex ipAddress(@javax.annotation.Nullable String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
   }
 
-   /**
+  /**
    * Get ipAddress
    * @return ipAddress
-  **/
+   */
   @javax.annotation.Nullable
   public String getIpAddress() {
     return ipAddress;
   }
 
-  public void setIpAddress(String ipAddress) {
+  public void setIpAddress(@javax.annotation.Nullable String ipAddress) {
     this.ipAddress = ipAddress;
   }
 
 
-  public Assetsv3IPVertex ipPort(List<Assetsv3ConnectionEdge> ipPort) {
+  public Assetsv3IPVertex ipPort(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> ipPort) {
     this.ipPort = ipPort;
     return this;
   }
@@ -264,111 +278,111 @@ public class Assetsv3IPVertex {
     return this;
   }
 
-   /**
+  /**
    * Get ipPort
    * @return ipPort
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getIpPort() {
     return ipPort;
   }
 
-  public void setIpPort(List<Assetsv3ConnectionEdge> ipPort) {
+  public void setIpPort(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> ipPort) {
     this.ipPort = ipPort;
   }
 
 
-  public Assetsv3IPVertex macAddress(String macAddress) {
+  public Assetsv3IPVertex macAddress(@javax.annotation.Nullable String macAddress) {
     this.macAddress = macAddress;
     return this;
   }
 
-   /**
+  /**
    * Get macAddress
    * @return macAddress
-  **/
+   */
   @javax.annotation.Nullable
   public String getMacAddress() {
     return macAddress;
   }
 
-  public void setMacAddress(String macAddress) {
+  public void setMacAddress(@javax.annotation.Nullable String macAddress) {
     this.macAddress = macAddress;
   }
 
 
-  public Assetsv3IPVertex region(String region) {
+  public Assetsv3IPVertex region(@javax.annotation.Nullable String region) {
     this.region = region;
     return this;
   }
 
-   /**
+  /**
    * Get region
    * @return region
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegion() {
     return region;
   }
 
-  public void setRegion(String region) {
+  public void setRegion(@javax.annotation.Nullable String region) {
     this.region = region;
   }
 
 
-  public Assetsv3IPVertex resolutionKey(String resolutionKey) {
+  public Assetsv3IPVertex resolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
     return this;
   }
 
-   /**
+  /**
    * Get resolutionKey
    * @return resolutionKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getResolutionKey() {
     return resolutionKey;
   }
 
-  public void setResolutionKey(String resolutionKey) {
+  public void setResolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
   }
 
 
-  public Assetsv3IPVertex state(String state) {
+  public Assetsv3IPVertex state(@javax.annotation.Nullable String state) {
     this.state = state;
     return this;
   }
 
-   /**
+  /**
    * Get state
    * @return state
-  **/
+   */
   @javax.annotation.Nullable
   public String getState() {
     return state;
   }
 
-  public void setState(String state) {
+  public void setState(@javax.annotation.Nullable String state) {
     this.state = state;
   }
 
 
-  public Assetsv3IPVertex version(String version) {
+  public Assetsv3IPVertex version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Get version
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
@@ -441,35 +455,22 @@ public class Assetsv3IPVertex {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("city");
-    openapiFields.add("country");
-    openapiFields.add("data_center");
-    openapiFields.add("description");
-    openapiFields.add("dns");
-    openapiFields.add("extended_properties");
-    openapiFields.add("ip_address");
-    openapiFields.add("ip_port");
-    openapiFields.add("mac_address");
-    openapiFields.add("region");
-    openapiFields.add("resolution_key");
-    openapiFields.add("state");
-    openapiFields.add("version");
+    openapiFields = new HashSet<String>(Arrays.asList("city", "country", "data_center", "description", "dns", "extended_properties", "ip_address", "ip_port", "mac_address", "region", "resolution_key", "state", "version"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3IPVertex
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3IPVertex
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3IPVertex.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3IPVertex is not found in the empty JSON string", Assetsv3IPVertex.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3IPVertex is not found in the empty JSON string", Assetsv3IPVertex.openapiRequiredFields.toString()));
         }
       }
 
@@ -477,31 +478,31 @@ public class Assetsv3IPVertex {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3IPVertex.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3IPVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3IPVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("city") != null && !jsonObj.get("city").isJsonNull()) && !jsonObj.get("city").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `city` to be a primitive type in the JSON string but got `%s`", jsonObj.get("city").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `city` to be a primitive type in the JSON string but got `%s`", jsonObj.get("city").toString()));
       }
       if ((jsonObj.get("country") != null && !jsonObj.get("country").isJsonNull()) && !jsonObj.get("country").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("country").toString()));
       }
       if ((jsonObj.get("data_center") != null && !jsonObj.get("data_center").isJsonNull()) && !jsonObj.get("data_center").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `data_center` to be a primitive type in the JSON string but got `%s`", jsonObj.get("data_center").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `data_center` to be a primitive type in the JSON string but got `%s`", jsonObj.get("data_center").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if ((jsonObj.get("dns") != null && !jsonObj.get("dns").isJsonNull()) && !jsonObj.get("dns").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dns` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dns").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dns` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dns").toString()));
       }
       if (jsonObj.get("extended_properties") != null && !jsonObj.get("extended_properties").isJsonNull()) {
         JsonArray jsonArrayextendedProperties = jsonObj.getAsJsonArray("extended_properties");
         if (jsonArrayextendedProperties != null) {
           // ensure the json data is an array
           if (!jsonObj.get("extended_properties").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
           }
 
           // validate the optional field `extended_properties` (array)
@@ -511,14 +512,14 @@ public class Assetsv3IPVertex {
         }
       }
       if ((jsonObj.get("ip_address") != null && !jsonObj.get("ip_address").isJsonNull()) && !jsonObj.get("ip_address").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ip_address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ip_address").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ip_address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ip_address").toString()));
       }
       if (jsonObj.get("ip_port") != null && !jsonObj.get("ip_port").isJsonNull()) {
         JsonArray jsonArrayipPort = jsonObj.getAsJsonArray("ip_port");
         if (jsonArrayipPort != null) {
           // ensure the json data is an array
           if (!jsonObj.get("ip_port").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `ip_port` to be an array in the JSON string but got `%s`", jsonObj.get("ip_port").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ip_port` to be an array in the JSON string but got `%s`", jsonObj.get("ip_port").toString()));
           }
 
           // validate the optional field `ip_port` (array)
@@ -528,19 +529,19 @@ public class Assetsv3IPVertex {
         }
       }
       if ((jsonObj.get("mac_address") != null && !jsonObj.get("mac_address").isJsonNull()) && !jsonObj.get("mac_address").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `mac_address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mac_address").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `mac_address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mac_address").toString()));
       }
       if ((jsonObj.get("region") != null && !jsonObj.get("region").isJsonNull()) && !jsonObj.get("region").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
       }
       if ((jsonObj.get("resolution_key") != null && !jsonObj.get("resolution_key").isJsonNull()) && !jsonObj.get("resolution_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
       }
       if ((jsonObj.get("state") != null && !jsonObj.get("state").isJsonNull()) && !jsonObj.get("state").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("state").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `state` to be a primitive type in the JSON string but got `%s`", jsonObj.get("state").toString()));
       }
       if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
   }
 
@@ -573,22 +574,22 @@ public class Assetsv3IPVertex {
     }
   }
 
- /**
-  * Create an instance of Assetsv3IPVertex given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3IPVertex
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3IPVertex
-  */
+  /**
+   * Create an instance of Assetsv3IPVertex given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3IPVertex
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3IPVertex
+   */
   public static Assetsv3IPVertex fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3IPVertex.class);
   }
 
- /**
-  * Convert an instance of Assetsv3IPVertex to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3IPVertex to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

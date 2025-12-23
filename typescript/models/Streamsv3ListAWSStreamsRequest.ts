@@ -43,6 +43,8 @@ export class Streamsv3ListAWSStreamsRequest {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "accessKeyId",
@@ -94,6 +96,5 @@ export class Streamsv3ListAWSStreamsRequest {
     public constructor() {
     }
 }
-
 
 

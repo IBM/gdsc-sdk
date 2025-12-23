@@ -93,13 +93,14 @@ public class EcosystemServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceCreateDatasetCall(Ecosystemv3CreateDatasetRequest ecosystemv3CreateDatasetRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceCreateDatasetCall(@javax.annotation.Nonnull Ecosystemv3CreateDatasetRequest ecosystemv3CreateDatasetRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -145,7 +146,7 @@ public class EcosystemServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ecosystemServiceCreateDatasetValidateBeforeCall(Ecosystemv3CreateDatasetRequest ecosystemv3CreateDatasetRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ecosystemServiceCreateDatasetValidateBeforeCall(@javax.annotation.Nonnull Ecosystemv3CreateDatasetRequest ecosystemv3CreateDatasetRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'ecosystemv3CreateDatasetRequest' is set
         if (ecosystemv3CreateDatasetRequest == null) {
             throw new ApiException("Missing the required parameter 'ecosystemv3CreateDatasetRequest' when calling ecosystemServiceCreateDataset(Async)");
@@ -162,13 +163,14 @@ public class EcosystemServiceApi {
      * @return Ecosystemv3CreateDatasetResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Ecosystemv3CreateDatasetResponse ecosystemServiceCreateDataset(Ecosystemv3CreateDatasetRequest ecosystemv3CreateDatasetRequest) throws ApiException {
+    public Ecosystemv3CreateDatasetResponse ecosystemServiceCreateDataset(@javax.annotation.Nonnull Ecosystemv3CreateDatasetRequest ecosystemv3CreateDatasetRequest) throws ApiException {
         ApiResponse<Ecosystemv3CreateDatasetResponse> localVarResp = ecosystemServiceCreateDatasetWithHttpInfo(ecosystemv3CreateDatasetRequest);
         return localVarResp.getData();
     }
@@ -180,13 +182,14 @@ public class EcosystemServiceApi {
      * @return ApiResponse&lt;Ecosystemv3CreateDatasetResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Ecosystemv3CreateDatasetResponse> ecosystemServiceCreateDatasetWithHttpInfo(Ecosystemv3CreateDatasetRequest ecosystemv3CreateDatasetRequest) throws ApiException {
+    public ApiResponse<Ecosystemv3CreateDatasetResponse> ecosystemServiceCreateDatasetWithHttpInfo(@javax.annotation.Nonnull Ecosystemv3CreateDatasetRequest ecosystemv3CreateDatasetRequest) throws ApiException {
         okhttp3.Call localVarCall = ecosystemServiceCreateDatasetValidateBeforeCall(ecosystemv3CreateDatasetRequest, null);
         Type localVarReturnType = new TypeToken<Ecosystemv3CreateDatasetResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -200,13 +203,14 @@ public class EcosystemServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceCreateDatasetAsync(Ecosystemv3CreateDatasetRequest ecosystemv3CreateDatasetRequest, final ApiCallback<Ecosystemv3CreateDatasetResponse> _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceCreateDatasetAsync(@javax.annotation.Nonnull Ecosystemv3CreateDatasetRequest ecosystemv3CreateDatasetRequest, final ApiCallback<Ecosystemv3CreateDatasetResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ecosystemServiceCreateDatasetValidateBeforeCall(ecosystemv3CreateDatasetRequest, _callback);
         Type localVarReturnType = new TypeToken<Ecosystemv3CreateDatasetResponse>(){}.getType();
@@ -221,13 +225,14 @@ public class EcosystemServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceDataInsertCall(String datasetName, Ecosystemv3DataInsertRequest ecosystemv3DataInsertRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceDataInsertCall(@javax.annotation.Nonnull String datasetName, @javax.annotation.Nonnull Ecosystemv3DataInsertRequest ecosystemv3DataInsertRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -274,7 +279,7 @@ public class EcosystemServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ecosystemServiceDataInsertValidateBeforeCall(String datasetName, Ecosystemv3DataInsertRequest ecosystemv3DataInsertRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ecosystemServiceDataInsertValidateBeforeCall(@javax.annotation.Nonnull String datasetName, @javax.annotation.Nonnull Ecosystemv3DataInsertRequest ecosystemv3DataInsertRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'datasetName' is set
         if (datasetName == null) {
             throw new ApiException("Missing the required parameter 'datasetName' when calling ecosystemServiceDataInsert(Async)");
@@ -297,13 +302,14 @@ public class EcosystemServiceApi {
      * @return Ecosystemv3DataInsertResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Ecosystemv3DataInsertResponse ecosystemServiceDataInsert(String datasetName, Ecosystemv3DataInsertRequest ecosystemv3DataInsertRequest) throws ApiException {
+    public Ecosystemv3DataInsertResponse ecosystemServiceDataInsert(@javax.annotation.Nonnull String datasetName, @javax.annotation.Nonnull Ecosystemv3DataInsertRequest ecosystemv3DataInsertRequest) throws ApiException {
         ApiResponse<Ecosystemv3DataInsertResponse> localVarResp = ecosystemServiceDataInsertWithHttpInfo(datasetName, ecosystemv3DataInsertRequest);
         return localVarResp.getData();
     }
@@ -316,13 +322,14 @@ public class EcosystemServiceApi {
      * @return ApiResponse&lt;Ecosystemv3DataInsertResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Ecosystemv3DataInsertResponse> ecosystemServiceDataInsertWithHttpInfo(String datasetName, Ecosystemv3DataInsertRequest ecosystemv3DataInsertRequest) throws ApiException {
+    public ApiResponse<Ecosystemv3DataInsertResponse> ecosystemServiceDataInsertWithHttpInfo(@javax.annotation.Nonnull String datasetName, @javax.annotation.Nonnull Ecosystemv3DataInsertRequest ecosystemv3DataInsertRequest) throws ApiException {
         okhttp3.Call localVarCall = ecosystemServiceDataInsertValidateBeforeCall(datasetName, ecosystemv3DataInsertRequest, null);
         Type localVarReturnType = new TypeToken<Ecosystemv3DataInsertResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -337,13 +344,14 @@ public class EcosystemServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceDataInsertAsync(String datasetName, Ecosystemv3DataInsertRequest ecosystemv3DataInsertRequest, final ApiCallback<Ecosystemv3DataInsertResponse> _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceDataInsertAsync(@javax.annotation.Nonnull String datasetName, @javax.annotation.Nonnull Ecosystemv3DataInsertRequest ecosystemv3DataInsertRequest, final ApiCallback<Ecosystemv3DataInsertResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ecosystemServiceDataInsertValidateBeforeCall(datasetName, ecosystemv3DataInsertRequest, _callback);
         Type localVarReturnType = new TypeToken<Ecosystemv3DataInsertResponse>(){}.getType();
@@ -357,13 +365,14 @@ public class EcosystemServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceDeleteDatasetsCall(List<String> datasetNames, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceDeleteDatasetsCall(@javax.annotation.Nullable List<String> datasetNames, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -412,7 +421,7 @@ public class EcosystemServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ecosystemServiceDeleteDatasetsValidateBeforeCall(List<String> datasetNames, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ecosystemServiceDeleteDatasetsValidateBeforeCall(@javax.annotation.Nullable List<String> datasetNames, final ApiCallback _callback) throws ApiException {
         return ecosystemServiceDeleteDatasetsCall(datasetNames, _callback);
 
     }
@@ -424,13 +433,14 @@ public class EcosystemServiceApi {
      * @return Ecosystemv3DeleteDatasetsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Ecosystemv3DeleteDatasetsResponse ecosystemServiceDeleteDatasets(List<String> datasetNames) throws ApiException {
+    public Ecosystemv3DeleteDatasetsResponse ecosystemServiceDeleteDatasets(@javax.annotation.Nullable List<String> datasetNames) throws ApiException {
         ApiResponse<Ecosystemv3DeleteDatasetsResponse> localVarResp = ecosystemServiceDeleteDatasetsWithHttpInfo(datasetNames);
         return localVarResp.getData();
     }
@@ -442,13 +452,14 @@ public class EcosystemServiceApi {
      * @return ApiResponse&lt;Ecosystemv3DeleteDatasetsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Ecosystemv3DeleteDatasetsResponse> ecosystemServiceDeleteDatasetsWithHttpInfo(List<String> datasetNames) throws ApiException {
+    public ApiResponse<Ecosystemv3DeleteDatasetsResponse> ecosystemServiceDeleteDatasetsWithHttpInfo(@javax.annotation.Nullable List<String> datasetNames) throws ApiException {
         okhttp3.Call localVarCall = ecosystemServiceDeleteDatasetsValidateBeforeCall(datasetNames, null);
         Type localVarReturnType = new TypeToken<Ecosystemv3DeleteDatasetsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -462,13 +473,14 @@ public class EcosystemServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceDeleteDatasetsAsync(List<String> datasetNames, final ApiCallback<Ecosystemv3DeleteDatasetsResponse> _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceDeleteDatasetsAsync(@javax.annotation.Nullable List<String> datasetNames, final ApiCallback<Ecosystemv3DeleteDatasetsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ecosystemServiceDeleteDatasetsValidateBeforeCall(datasetNames, _callback);
         Type localVarReturnType = new TypeToken<Ecosystemv3DeleteDatasetsResponse>(){}.getType();
@@ -489,13 +501,14 @@ public class EcosystemServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceGetDatasetDataCall(String datasetName, Long offset, Long limit, Boolean returnHeader, String field, String value, String sortField, String sortOrder, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceGetDatasetDataCall(@javax.annotation.Nonnull String datasetName, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean returnHeader, @javax.annotation.Nullable String field, @javax.annotation.Nullable String value, @javax.annotation.Nullable String sortField, @javax.annotation.Nullable String sortOrder, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -569,7 +582,7 @@ public class EcosystemServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ecosystemServiceGetDatasetDataValidateBeforeCall(String datasetName, Long offset, Long limit, Boolean returnHeader, String field, String value, String sortField, String sortOrder, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ecosystemServiceGetDatasetDataValidateBeforeCall(@javax.annotation.Nonnull String datasetName, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean returnHeader, @javax.annotation.Nullable String field, @javax.annotation.Nullable String value, @javax.annotation.Nullable String sortField, @javax.annotation.Nullable String sortOrder, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'datasetName' is set
         if (datasetName == null) {
             throw new ApiException("Missing the required parameter 'datasetName' when calling ecosystemServiceGetDatasetData(Async)");
@@ -593,13 +606,14 @@ public class EcosystemServiceApi {
      * @return Ecosystemv3GetDatasetDataResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Ecosystemv3GetDatasetDataResponse ecosystemServiceGetDatasetData(String datasetName, Long offset, Long limit, Boolean returnHeader, String field, String value, String sortField, String sortOrder) throws ApiException {
+    public Ecosystemv3GetDatasetDataResponse ecosystemServiceGetDatasetData(@javax.annotation.Nonnull String datasetName, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean returnHeader, @javax.annotation.Nullable String field, @javax.annotation.Nullable String value, @javax.annotation.Nullable String sortField, @javax.annotation.Nullable String sortOrder) throws ApiException {
         ApiResponse<Ecosystemv3GetDatasetDataResponse> localVarResp = ecosystemServiceGetDatasetDataWithHttpInfo(datasetName, offset, limit, returnHeader, field, value, sortField, sortOrder);
         return localVarResp.getData();
     }
@@ -618,13 +632,14 @@ public class EcosystemServiceApi {
      * @return ApiResponse&lt;Ecosystemv3GetDatasetDataResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Ecosystemv3GetDatasetDataResponse> ecosystemServiceGetDatasetDataWithHttpInfo(String datasetName, Long offset, Long limit, Boolean returnHeader, String field, String value, String sortField, String sortOrder) throws ApiException {
+    public ApiResponse<Ecosystemv3GetDatasetDataResponse> ecosystemServiceGetDatasetDataWithHttpInfo(@javax.annotation.Nonnull String datasetName, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean returnHeader, @javax.annotation.Nullable String field, @javax.annotation.Nullable String value, @javax.annotation.Nullable String sortField, @javax.annotation.Nullable String sortOrder) throws ApiException {
         okhttp3.Call localVarCall = ecosystemServiceGetDatasetDataValidateBeforeCall(datasetName, offset, limit, returnHeader, field, value, sortField, sortOrder, null);
         Type localVarReturnType = new TypeToken<Ecosystemv3GetDatasetDataResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -645,13 +660,14 @@ public class EcosystemServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceGetDatasetDataAsync(String datasetName, Long offset, Long limit, Boolean returnHeader, String field, String value, String sortField, String sortOrder, final ApiCallback<Ecosystemv3GetDatasetDataResponse> _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceGetDatasetDataAsync(@javax.annotation.Nonnull String datasetName, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean returnHeader, @javax.annotation.Nullable String field, @javax.annotation.Nullable String value, @javax.annotation.Nullable String sortField, @javax.annotation.Nullable String sortOrder, final ApiCallback<Ecosystemv3GetDatasetDataResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ecosystemServiceGetDatasetDataValidateBeforeCall(datasetName, offset, limit, returnHeader, field, value, sortField, sortOrder, _callback);
         Type localVarReturnType = new TypeToken<Ecosystemv3GetDatasetDataResponse>(){}.getType();
@@ -665,13 +681,14 @@ public class EcosystemServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceGetDatasetDetailCall(String datasetName, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceGetDatasetDetailCall(@javax.annotation.Nonnull String datasetName, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -717,7 +734,7 @@ public class EcosystemServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ecosystemServiceGetDatasetDetailValidateBeforeCall(String datasetName, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ecosystemServiceGetDatasetDetailValidateBeforeCall(@javax.annotation.Nonnull String datasetName, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'datasetName' is set
         if (datasetName == null) {
             throw new ApiException("Missing the required parameter 'datasetName' when calling ecosystemServiceGetDatasetDetail(Async)");
@@ -734,13 +751,14 @@ public class EcosystemServiceApi {
      * @return Ecosystemv3GetDatasetDetailResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Ecosystemv3GetDatasetDetailResponse ecosystemServiceGetDatasetDetail(String datasetName) throws ApiException {
+    public Ecosystemv3GetDatasetDetailResponse ecosystemServiceGetDatasetDetail(@javax.annotation.Nonnull String datasetName) throws ApiException {
         ApiResponse<Ecosystemv3GetDatasetDetailResponse> localVarResp = ecosystemServiceGetDatasetDetailWithHttpInfo(datasetName);
         return localVarResp.getData();
     }
@@ -752,13 +770,14 @@ public class EcosystemServiceApi {
      * @return ApiResponse&lt;Ecosystemv3GetDatasetDetailResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Ecosystemv3GetDatasetDetailResponse> ecosystemServiceGetDatasetDetailWithHttpInfo(String datasetName) throws ApiException {
+    public ApiResponse<Ecosystemv3GetDatasetDetailResponse> ecosystemServiceGetDatasetDetailWithHttpInfo(@javax.annotation.Nonnull String datasetName) throws ApiException {
         okhttp3.Call localVarCall = ecosystemServiceGetDatasetDetailValidateBeforeCall(datasetName, null);
         Type localVarReturnType = new TypeToken<Ecosystemv3GetDatasetDetailResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -772,13 +791,14 @@ public class EcosystemServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceGetDatasetDetailAsync(String datasetName, final ApiCallback<Ecosystemv3GetDatasetDetailResponse> _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceGetDatasetDetailAsync(@javax.annotation.Nonnull String datasetName, final ApiCallback<Ecosystemv3GetDatasetDetailResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ecosystemServiceGetDatasetDetailValidateBeforeCall(datasetName, _callback);
         Type localVarReturnType = new TypeToken<Ecosystemv3GetDatasetDetailResponse>(){}.getType();
@@ -797,13 +817,14 @@ public class EcosystemServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceGetDatasetsCall(OffsetDateTime filterStartTime, OffsetDateTime filterEndTime, List<String> filterDatasetNames, Long offset, Long limit, Boolean includeFilterCounts, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceGetDatasetsCall(@javax.annotation.Nullable OffsetDateTime filterStartTime, @javax.annotation.Nullable OffsetDateTime filterEndTime, @javax.annotation.Nullable List<String> filterDatasetNames, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean includeFilterCounts, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -872,7 +893,7 @@ public class EcosystemServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ecosystemServiceGetDatasetsValidateBeforeCall(OffsetDateTime filterStartTime, OffsetDateTime filterEndTime, List<String> filterDatasetNames, Long offset, Long limit, Boolean includeFilterCounts, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ecosystemServiceGetDatasetsValidateBeforeCall(@javax.annotation.Nullable OffsetDateTime filterStartTime, @javax.annotation.Nullable OffsetDateTime filterEndTime, @javax.annotation.Nullable List<String> filterDatasetNames, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean includeFilterCounts, final ApiCallback _callback) throws ApiException {
         return ecosystemServiceGetDatasetsCall(filterStartTime, filterEndTime, filterDatasetNames, offset, limit, includeFilterCounts, _callback);
 
     }
@@ -889,13 +910,14 @@ public class EcosystemServiceApi {
      * @return Ecosystemv3GetDatasetsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Ecosystemv3GetDatasetsResponse ecosystemServiceGetDatasets(OffsetDateTime filterStartTime, OffsetDateTime filterEndTime, List<String> filterDatasetNames, Long offset, Long limit, Boolean includeFilterCounts) throws ApiException {
+    public Ecosystemv3GetDatasetsResponse ecosystemServiceGetDatasets(@javax.annotation.Nullable OffsetDateTime filterStartTime, @javax.annotation.Nullable OffsetDateTime filterEndTime, @javax.annotation.Nullable List<String> filterDatasetNames, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean includeFilterCounts) throws ApiException {
         ApiResponse<Ecosystemv3GetDatasetsResponse> localVarResp = ecosystemServiceGetDatasetsWithHttpInfo(filterStartTime, filterEndTime, filterDatasetNames, offset, limit, includeFilterCounts);
         return localVarResp.getData();
     }
@@ -912,13 +934,14 @@ public class EcosystemServiceApi {
      * @return ApiResponse&lt;Ecosystemv3GetDatasetsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Ecosystemv3GetDatasetsResponse> ecosystemServiceGetDatasetsWithHttpInfo(OffsetDateTime filterStartTime, OffsetDateTime filterEndTime, List<String> filterDatasetNames, Long offset, Long limit, Boolean includeFilterCounts) throws ApiException {
+    public ApiResponse<Ecosystemv3GetDatasetsResponse> ecosystemServiceGetDatasetsWithHttpInfo(@javax.annotation.Nullable OffsetDateTime filterStartTime, @javax.annotation.Nullable OffsetDateTime filterEndTime, @javax.annotation.Nullable List<String> filterDatasetNames, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean includeFilterCounts) throws ApiException {
         okhttp3.Call localVarCall = ecosystemServiceGetDatasetsValidateBeforeCall(filterStartTime, filterEndTime, filterDatasetNames, offset, limit, includeFilterCounts, null);
         Type localVarReturnType = new TypeToken<Ecosystemv3GetDatasetsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -937,13 +960,14 @@ public class EcosystemServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceGetDatasetsAsync(OffsetDateTime filterStartTime, OffsetDateTime filterEndTime, List<String> filterDatasetNames, Long offset, Long limit, Boolean includeFilterCounts, final ApiCallback<Ecosystemv3GetDatasetsResponse> _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceGetDatasetsAsync(@javax.annotation.Nullable OffsetDateTime filterStartTime, @javax.annotation.Nullable OffsetDateTime filterEndTime, @javax.annotation.Nullable List<String> filterDatasetNames, @javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, @javax.annotation.Nullable Boolean includeFilterCounts, final ApiCallback<Ecosystemv3GetDatasetsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ecosystemServiceGetDatasetsValidateBeforeCall(filterStartTime, filterEndTime, filterDatasetNames, offset, limit, includeFilterCounts, _callback);
         Type localVarReturnType = new TypeToken<Ecosystemv3GetDatasetsResponse>(){}.getType();
@@ -957,13 +981,14 @@ public class EcosystemServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceGetPurgableRowsCall(Ecosystemv3GetPurgableRowsRequest ecosystemv3GetPurgableRowsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceGetPurgableRowsCall(@javax.annotation.Nonnull Ecosystemv3GetPurgableRowsRequest ecosystemv3GetPurgableRowsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1009,7 +1034,7 @@ public class EcosystemServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ecosystemServiceGetPurgableRowsValidateBeforeCall(Ecosystemv3GetPurgableRowsRequest ecosystemv3GetPurgableRowsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ecosystemServiceGetPurgableRowsValidateBeforeCall(@javax.annotation.Nonnull Ecosystemv3GetPurgableRowsRequest ecosystemv3GetPurgableRowsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'ecosystemv3GetPurgableRowsRequest' is set
         if (ecosystemv3GetPurgableRowsRequest == null) {
             throw new ApiException("Missing the required parameter 'ecosystemv3GetPurgableRowsRequest' when calling ecosystemServiceGetPurgableRows(Async)");
@@ -1026,13 +1051,14 @@ public class EcosystemServiceApi {
      * @return Ecosystemv3GetPurgableRowsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Ecosystemv3GetPurgableRowsResponse ecosystemServiceGetPurgableRows(Ecosystemv3GetPurgableRowsRequest ecosystemv3GetPurgableRowsRequest) throws ApiException {
+    public Ecosystemv3GetPurgableRowsResponse ecosystemServiceGetPurgableRows(@javax.annotation.Nonnull Ecosystemv3GetPurgableRowsRequest ecosystemv3GetPurgableRowsRequest) throws ApiException {
         ApiResponse<Ecosystemv3GetPurgableRowsResponse> localVarResp = ecosystemServiceGetPurgableRowsWithHttpInfo(ecosystemv3GetPurgableRowsRequest);
         return localVarResp.getData();
     }
@@ -1044,13 +1070,14 @@ public class EcosystemServiceApi {
      * @return ApiResponse&lt;Ecosystemv3GetPurgableRowsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Ecosystemv3GetPurgableRowsResponse> ecosystemServiceGetPurgableRowsWithHttpInfo(Ecosystemv3GetPurgableRowsRequest ecosystemv3GetPurgableRowsRequest) throws ApiException {
+    public ApiResponse<Ecosystemv3GetPurgableRowsResponse> ecosystemServiceGetPurgableRowsWithHttpInfo(@javax.annotation.Nonnull Ecosystemv3GetPurgableRowsRequest ecosystemv3GetPurgableRowsRequest) throws ApiException {
         okhttp3.Call localVarCall = ecosystemServiceGetPurgableRowsValidateBeforeCall(ecosystemv3GetPurgableRowsRequest, null);
         Type localVarReturnType = new TypeToken<Ecosystemv3GetPurgableRowsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1064,13 +1091,14 @@ public class EcosystemServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceGetPurgableRowsAsync(Ecosystemv3GetPurgableRowsRequest ecosystemv3GetPurgableRowsRequest, final ApiCallback<Ecosystemv3GetPurgableRowsResponse> _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceGetPurgableRowsAsync(@javax.annotation.Nonnull Ecosystemv3GetPurgableRowsRequest ecosystemv3GetPurgableRowsRequest, final ApiCallback<Ecosystemv3GetPurgableRowsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ecosystemServiceGetPurgableRowsValidateBeforeCall(ecosystemv3GetPurgableRowsRequest, _callback);
         Type localVarReturnType = new TypeToken<Ecosystemv3GetPurgableRowsResponse>(){}.getType();
@@ -1084,13 +1112,14 @@ public class EcosystemServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServicePurgeDataCall(List<String> datasetNames, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ecosystemServicePurgeDataCall(@javax.annotation.Nullable List<String> datasetNames, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1139,7 +1168,7 @@ public class EcosystemServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ecosystemServicePurgeDataValidateBeforeCall(List<String> datasetNames, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ecosystemServicePurgeDataValidateBeforeCall(@javax.annotation.Nullable List<String> datasetNames, final ApiCallback _callback) throws ApiException {
         return ecosystemServicePurgeDataCall(datasetNames, _callback);
 
     }
@@ -1151,13 +1180,14 @@ public class EcosystemServiceApi {
      * @return Ecosystemv3PurgeDataResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Ecosystemv3PurgeDataResponse ecosystemServicePurgeData(List<String> datasetNames) throws ApiException {
+    public Ecosystemv3PurgeDataResponse ecosystemServicePurgeData(@javax.annotation.Nullable List<String> datasetNames) throws ApiException {
         ApiResponse<Ecosystemv3PurgeDataResponse> localVarResp = ecosystemServicePurgeDataWithHttpInfo(datasetNames);
         return localVarResp.getData();
     }
@@ -1169,13 +1199,14 @@ public class EcosystemServiceApi {
      * @return ApiResponse&lt;Ecosystemv3PurgeDataResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Ecosystemv3PurgeDataResponse> ecosystemServicePurgeDataWithHttpInfo(List<String> datasetNames) throws ApiException {
+    public ApiResponse<Ecosystemv3PurgeDataResponse> ecosystemServicePurgeDataWithHttpInfo(@javax.annotation.Nullable List<String> datasetNames) throws ApiException {
         okhttp3.Call localVarCall = ecosystemServicePurgeDataValidateBeforeCall(datasetNames, null);
         Type localVarReturnType = new TypeToken<Ecosystemv3PurgeDataResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1189,13 +1220,14 @@ public class EcosystemServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServicePurgeDataAsync(List<String> datasetNames, final ApiCallback<Ecosystemv3PurgeDataResponse> _callback) throws ApiException {
+    public okhttp3.Call ecosystemServicePurgeDataAsync(@javax.annotation.Nullable List<String> datasetNames, final ApiCallback<Ecosystemv3PurgeDataResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ecosystemServicePurgeDataValidateBeforeCall(datasetNames, _callback);
         Type localVarReturnType = new TypeToken<Ecosystemv3PurgeDataResponse>(){}.getType();
@@ -1209,13 +1241,14 @@ public class EcosystemServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceTestIntegrationCall(Ecosystemv3TestIntegrationRequest ecosystemv3TestIntegrationRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceTestIntegrationCall(@javax.annotation.Nonnull Ecosystemv3TestIntegrationRequest ecosystemv3TestIntegrationRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1261,7 +1294,7 @@ public class EcosystemServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ecosystemServiceTestIntegrationValidateBeforeCall(Ecosystemv3TestIntegrationRequest ecosystemv3TestIntegrationRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ecosystemServiceTestIntegrationValidateBeforeCall(@javax.annotation.Nonnull Ecosystemv3TestIntegrationRequest ecosystemv3TestIntegrationRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'ecosystemv3TestIntegrationRequest' is set
         if (ecosystemv3TestIntegrationRequest == null) {
             throw new ApiException("Missing the required parameter 'ecosystemv3TestIntegrationRequest' when calling ecosystemServiceTestIntegration(Async)");
@@ -1278,13 +1311,14 @@ public class EcosystemServiceApi {
      * @return Ecosystemv3TestIntegrationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Ecosystemv3TestIntegrationResponse ecosystemServiceTestIntegration(Ecosystemv3TestIntegrationRequest ecosystemv3TestIntegrationRequest) throws ApiException {
+    public Ecosystemv3TestIntegrationResponse ecosystemServiceTestIntegration(@javax.annotation.Nonnull Ecosystemv3TestIntegrationRequest ecosystemv3TestIntegrationRequest) throws ApiException {
         ApiResponse<Ecosystemv3TestIntegrationResponse> localVarResp = ecosystemServiceTestIntegrationWithHttpInfo(ecosystemv3TestIntegrationRequest);
         return localVarResp.getData();
     }
@@ -1296,13 +1330,14 @@ public class EcosystemServiceApi {
      * @return ApiResponse&lt;Ecosystemv3TestIntegrationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Ecosystemv3TestIntegrationResponse> ecosystemServiceTestIntegrationWithHttpInfo(Ecosystemv3TestIntegrationRequest ecosystemv3TestIntegrationRequest) throws ApiException {
+    public ApiResponse<Ecosystemv3TestIntegrationResponse> ecosystemServiceTestIntegrationWithHttpInfo(@javax.annotation.Nonnull Ecosystemv3TestIntegrationRequest ecosystemv3TestIntegrationRequest) throws ApiException {
         okhttp3.Call localVarCall = ecosystemServiceTestIntegrationValidateBeforeCall(ecosystemv3TestIntegrationRequest, null);
         Type localVarReturnType = new TypeToken<Ecosystemv3TestIntegrationResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1316,13 +1351,14 @@ public class EcosystemServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ecosystemServiceTestIntegrationAsync(Ecosystemv3TestIntegrationRequest ecosystemv3TestIntegrationRequest, final ApiCallback<Ecosystemv3TestIntegrationResponse> _callback) throws ApiException {
+    public okhttp3.Call ecosystemServiceTestIntegrationAsync(@javax.annotation.Nonnull Ecosystemv3TestIntegrationRequest ecosystemv3TestIntegrationRequest, final ApiCallback<Ecosystemv3TestIntegrationResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ecosystemServiceTestIntegrationValidateBeforeCall(ecosystemv3TestIntegrationRequest, _callback);
         Type localVarReturnType = new TypeToken<Ecosystemv3TestIntegrationResponse>(){}.getType();

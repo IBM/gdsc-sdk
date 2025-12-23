@@ -77,9 +77,9 @@ class Policybuilderv3GetPolicyVersionsInfoResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in versions_info (list)
         _items = []
         if self.versions_info:
-            for _item in self.versions_info:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_versions_info in self.versions_info:
+                if _item_versions_info:
+                    _items.append(_item_versions_info.to_dict())
             _dict['versions_info'] = _items
         return _dict
 

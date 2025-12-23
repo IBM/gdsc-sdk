@@ -20,20 +20,19 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:.DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest = {
-  // string | Ingestion id. (optional)
+const request: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest = {
+    // Ingestion id. (optional)
   ingestionId: "ingestion_id_example",
 };
 
-apiInstance.datamartProcessorServiceGetDatamartInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.datamartProcessorServiceGetDatamartInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -74,22 +73,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:.DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest = {
-  // Date | Data starting time period in UTC. (optional)
+const request: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest = {
+    // Data starting time period in UTC. (optional)
   periodStart: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | Data ending time period in UTC. (optional)
+    // Data ending time period in UTC. (optional)
   periodEnd: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.datamartProcessorServiceGetDatamarts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.datamartProcessorServiceGetDatamarts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -131,17 +129,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.datamartProcessorServiceGetEarliestStartTime(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.datamartProcessorServiceGetEarliestStartTime(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -179,20 +175,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:.DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest = {
-  // any
+const request: DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest = {
+  
   body: {},
 };
 
-apiInstance.datamartProcessorServiceSendAllCompleteFilesToQueue(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.datamartProcessorServiceSendAllCompleteFilesToQueue(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -233,25 +228,24 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:.DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest = {
-  // string | Request id which co-relates to request.
+const request: DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest = {
+    // Request id which co-relates to request.
   requestId: "request_id_example",
-  // Datamartprocessorv3DMExtractionLogsRequest
+  
   datamartprocessorv3DMExtractionLogsRequest: {
     data: "data_example",
     requestId: "requestId_example",
   },
 };
 
-apiInstance.datamartProcessorServiceStoreExtractionLogs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.datamartProcessorServiceStoreExtractionLogs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -293,20 +287,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiUploadDatamartRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:.DatamartProcessorServiceApiUploadDatamartRequest = {
-  // HttpFile | The file to upload.
+const request: DatamartProcessorServiceApiUploadDatamartRequest = {
+    // The file to upload.
   file: { data: Buffer.from(fs.readFileSync('/path/to/file', 'utf-8')), name: '/path/to/file' },
 };
 
-apiInstance.uploadDatamart(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.uploadDatamart(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

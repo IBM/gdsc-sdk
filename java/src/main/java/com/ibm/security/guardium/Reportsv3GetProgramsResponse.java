@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3GetProgramsResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3GetProgramsResponse {
   public static final String SERIALIZED_NAME_PROGRAMS = "programs";
   @SerializedName(SERIALIZED_NAME_PROGRAMS)
+  @javax.annotation.Nullable
   private List<Reportsv3Program> programs = new ArrayList<>();
 
   public Reportsv3GetProgramsResponse() {
   }
 
-  public Reportsv3GetProgramsResponse programs(List<Reportsv3Program> programs) {
+  public Reportsv3GetProgramsResponse programs(@javax.annotation.Nullable List<Reportsv3Program> programs) {
     this.programs = programs;
     return this;
   }
@@ -74,16 +76,16 @@ public class Reportsv3GetProgramsResponse {
     return this;
   }
 
-   /**
+  /**
    * Get programs
    * @return programs
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3Program> getPrograms() {
     return programs;
   }
 
-  public void setPrograms(List<Reportsv3Program> programs) {
+  public void setPrograms(@javax.annotation.Nullable List<Reportsv3Program> programs) {
     this.programs = programs;
   }
 
@@ -132,23 +134,22 @@ public class Reportsv3GetProgramsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("programs");
+    openapiFields = new HashSet<String>(Arrays.asList("programs"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetProgramsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetProgramsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3GetProgramsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3GetProgramsResponse is not found in the empty JSON string", Reportsv3GetProgramsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3GetProgramsResponse is not found in the empty JSON string", Reportsv3GetProgramsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Reportsv3GetProgramsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3GetProgramsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3GetProgramsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3GetProgramsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Reportsv3GetProgramsResponse {
         if (jsonArrayprograms != null) {
           // ensure the json data is an array
           if (!jsonObj.get("programs").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `programs` to be an array in the JSON string but got `%s`", jsonObj.get("programs").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `programs` to be an array in the JSON string but got `%s`", jsonObj.get("programs").toString()));
           }
 
           // validate the optional field `programs` (array)
@@ -205,22 +206,22 @@ public class Reportsv3GetProgramsResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsv3GetProgramsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3GetProgramsResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3GetProgramsResponse
-  */
+  /**
+   * Create an instance of Reportsv3GetProgramsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3GetProgramsResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3GetProgramsResponse
+   */
   public static Reportsv3GetProgramsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3GetProgramsResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsv3GetProgramsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3GetProgramsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,36 +41,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3FilterSubCatagory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3FilterSubCatagory {
   public static final String SERIALIZED_NAME_SELECTED_CHILDREN_LIST = "selected_children_list";
   @SerializedName(SERIALIZED_NAME_SELECTED_CHILDREN_LIST)
+  @javax.annotation.Nullable
   private List<Assetsv3FilterSubCatagoryChild> selectedChildrenList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SUB_CATAGORY_ID = "sub_catagory_id";
   @SerializedName(SERIALIZED_NAME_SUB_CATAGORY_ID)
+  @javax.annotation.Nullable
   private String subCatagoryId;
 
   public static final String SERIALIZED_NAME_SUB_CATEGORY_VALUE = "sub_category_value";
   @SerializedName(SERIALIZED_NAME_SUB_CATEGORY_VALUE)
+  @javax.annotation.Nullable
   private String subCategoryValue;
 
   public Assetsv3FilterSubCatagory() {
   }
 
-  public Assetsv3FilterSubCatagory selectedChildrenList(List<Assetsv3FilterSubCatagoryChild> selectedChildrenList) {
+  public Assetsv3FilterSubCatagory selectedChildrenList(@javax.annotation.Nullable List<Assetsv3FilterSubCatagoryChild> selectedChildrenList) {
     this.selectedChildrenList = selectedChildrenList;
     return this;
   }
@@ -82,54 +86,54 @@ public class Assetsv3FilterSubCatagory {
     return this;
   }
 
-   /**
+  /**
    * Get selectedChildrenList
    * @return selectedChildrenList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3FilterSubCatagoryChild> getSelectedChildrenList() {
     return selectedChildrenList;
   }
 
-  public void setSelectedChildrenList(List<Assetsv3FilterSubCatagoryChild> selectedChildrenList) {
+  public void setSelectedChildrenList(@javax.annotation.Nullable List<Assetsv3FilterSubCatagoryChild> selectedChildrenList) {
     this.selectedChildrenList = selectedChildrenList;
   }
 
 
-  public Assetsv3FilterSubCatagory subCatagoryId(String subCatagoryId) {
+  public Assetsv3FilterSubCatagory subCatagoryId(@javax.annotation.Nullable String subCatagoryId) {
     this.subCatagoryId = subCatagoryId;
     return this;
   }
 
-   /**
+  /**
    * Get subCatagoryId
    * @return subCatagoryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getSubCatagoryId() {
     return subCatagoryId;
   }
 
-  public void setSubCatagoryId(String subCatagoryId) {
+  public void setSubCatagoryId(@javax.annotation.Nullable String subCatagoryId) {
     this.subCatagoryId = subCatagoryId;
   }
 
 
-  public Assetsv3FilterSubCatagory subCategoryValue(String subCategoryValue) {
+  public Assetsv3FilterSubCatagory subCategoryValue(@javax.annotation.Nullable String subCategoryValue) {
     this.subCategoryValue = subCategoryValue;
     return this;
   }
 
-   /**
+  /**
    * Get subCategoryValue
    * @return subCategoryValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getSubCategoryValue() {
     return subCategoryValue;
   }
 
-  public void setSubCategoryValue(String subCategoryValue) {
+  public void setSubCategoryValue(@javax.annotation.Nullable String subCategoryValue) {
     this.subCategoryValue = subCategoryValue;
   }
 
@@ -182,25 +186,22 @@ public class Assetsv3FilterSubCatagory {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("selected_children_list");
-    openapiFields.add("sub_catagory_id");
-    openapiFields.add("sub_category_value");
+    openapiFields = new HashSet<String>(Arrays.asList("selected_children_list", "sub_catagory_id", "sub_category_value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3FilterSubCatagory
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3FilterSubCatagory
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3FilterSubCatagory.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3FilterSubCatagory is not found in the empty JSON string", Assetsv3FilterSubCatagory.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3FilterSubCatagory is not found in the empty JSON string", Assetsv3FilterSubCatagory.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,7 +209,7 @@ public class Assetsv3FilterSubCatagory {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3FilterSubCatagory.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3FilterSubCatagory` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3FilterSubCatagory` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -217,7 +218,7 @@ public class Assetsv3FilterSubCatagory {
         if (jsonArrayselectedChildrenList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("selected_children_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `selected_children_list` to be an array in the JSON string but got `%s`", jsonObj.get("selected_children_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `selected_children_list` to be an array in the JSON string but got `%s`", jsonObj.get("selected_children_list").toString()));
           }
 
           // validate the optional field `selected_children_list` (array)
@@ -227,10 +228,10 @@ public class Assetsv3FilterSubCatagory {
         }
       }
       if ((jsonObj.get("sub_catagory_id") != null && !jsonObj.get("sub_catagory_id").isJsonNull()) && !jsonObj.get("sub_catagory_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sub_catagory_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sub_catagory_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sub_catagory_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sub_catagory_id").toString()));
       }
       if ((jsonObj.get("sub_category_value") != null && !jsonObj.get("sub_category_value").isJsonNull()) && !jsonObj.get("sub_category_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sub_category_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sub_category_value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sub_category_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sub_category_value").toString()));
       }
   }
 
@@ -263,22 +264,22 @@ public class Assetsv3FilterSubCatagory {
     }
   }
 
- /**
-  * Create an instance of Assetsv3FilterSubCatagory given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3FilterSubCatagory
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3FilterSubCatagory
-  */
+  /**
+   * Create an instance of Assetsv3FilterSubCatagory given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3FilterSubCatagory
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3FilterSubCatagory
+   */
   public static Assetsv3FilterSubCatagory fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3FilterSubCatagory.class);
   }
 
- /**
-  * Convert an instance of Assetsv3FilterSubCatagory to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3FilterSubCatagory to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

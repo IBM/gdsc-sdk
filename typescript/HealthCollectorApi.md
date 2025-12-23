@@ -23,24 +23,23 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetDataWarehouseUsageRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetDataWarehouseUsageRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetDataWarehouseUsageRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetDataWarehouseUsage(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetDataWarehouseUsage(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -83,17 +82,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.healthCollectorGetGDPHealthInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetGDPHealthInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -131,26 +128,25 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest = {
-  // 'UNKNOWN_UNIT' | 'STAP' | Type of unit for which data needs to be retrieved. (optional)
+const request: HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest = {
+    // Type of unit for which data needs to be retrieved. (optional)
   unit: "UNKNOWN_UNIT",
-  // string | Optional value if the data is for a particular cm. If it is empty the data for all cms would be retrieved. (optional)
+    // Optional value if the data is for a particular cm. If it is empty the data for all cms would be retrieved. (optional)
   cmId: "cm_id_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetHistoricalHealthInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetHistoricalHealthInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -194,24 +190,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetObjectStorageUsage(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetObjectStorageUsage(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -254,24 +249,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetPVCUsageRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetPVCUsageRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetPVCUsageRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetPVCUsage(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetPVCUsage(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -314,24 +308,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetPodRestartsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetPodRestartsRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetPodRestartsRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetPodRestarts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetPodRestarts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -374,24 +367,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetStreamsIngestionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetStreamsIngestionRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetStreamsIngestionRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetStreamsIngestion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetStreamsIngestion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -434,24 +426,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetTopGDPCollectors(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetTopGDPCollectors(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -494,16 +485,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorStoreHealthInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorStoreHealthInfoRequest = {
-  // string | ID of central manager.
+const request: HealthCollectorApiHealthCollectorStoreHealthInfoRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Healthcollectorv3StoreHealthInfoRequest
+  
   healthcollectorv3StoreHealthInfoRequest: {
     centralManagerId: "centralManagerId_example",
     data: [
@@ -622,9 +613,8 @@ let body:.HealthCollectorApiHealthCollectorStoreHealthInfoRequest = {
   },
 };
 
-apiInstance.healthCollectorStoreHealthInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorStoreHealthInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

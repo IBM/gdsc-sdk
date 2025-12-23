@@ -33,7 +33,7 @@ class Vulmanagementv3GetVulnerabilitiesRequest(BaseModel):
     offset: Optional[StrictInt] = Field(default=None, description="The amount to offset the rows by for pagination.")
     search_key: Optional[StrictStr] = Field(default=None, description="Search key for vulnerability list.")
     sort_column: Optional[StrictStr] = None
-    sort_order: Optional[Vulmanagementv3SortOrder] = None
+    sort_order: Optional[Vulmanagementv3SortOrder] = Vulmanagementv3SortOrder.ASC
     __properties: ClassVar[List[str]] = ["filter", "limit", "offset", "search_key", "sort_column", "sort_order"]
 
     model_config = ConfigDict(
@@ -78,9 +78,9 @@ class Vulmanagementv3GetVulnerabilitiesRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in filter (list)
         _items = []
         if self.filter:
-            for _item in self.filter:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_filter in self.filter:
+                if _item_filter:
+                    _items.append(_item_filter.to_dict())
             _dict['filter'] = _items
         return _dict
 
@@ -99,7 +99,7 @@ class Vulmanagementv3GetVulnerabilitiesRequest(BaseModel):
             "offset": obj.get("offset"),
             "search_key": obj.get("search_key"),
             "sort_column": obj.get("sort_column"),
-            "sort_order": obj.get("sort_order")
+            "sort_order": obj.get("sort_order") if obj.get("sort_order") is not None else Vulmanagementv3SortOrder.ASC
         })
         return _obj
 

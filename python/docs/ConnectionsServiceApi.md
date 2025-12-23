@@ -1017,7 +1017,7 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ibm_gdsc_sdk_saas.ConnectionsServiceApi(api_client)
-    type = 'UNDEFINED_TYPE' # str | The type of connector. (optional) (default to 'UNDEFINED_TYPE')
+    type = UNDEFINED_TYPE # str | The type of connector. (optional) (default to UNDEFINED_TYPE)
     connection_id = 'connection_id_example' # str | Optional: if connection id did not provide then return all connections. (optional)
 
     try:
@@ -1036,7 +1036,7 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type** | **str**| The type of connector. | [optional] [default to &#39;UNDEFINED_TYPE&#39;]
+ **type** | **str**| The type of connector. | [optional] [default to UNDEFINED_TYPE]
  **connection_id** | **str**| Optional: if connection id did not provide then return all connections. | [optional] 
 
 ### Return type

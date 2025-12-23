@@ -81,7 +81,8 @@ public class RiskAnalyticsEngineApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -143,7 +144,8 @@ public class RiskAnalyticsEngineApi {
      * @return Riskanalyticsenginev3GetLeadGeneratorConfigResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -160,7 +162,8 @@ public class RiskAnalyticsEngineApi {
      * @return ApiResponse&lt;Riskanalyticsenginev3GetLeadGeneratorConfigResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -179,7 +182,8 @@ public class RiskAnalyticsEngineApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -199,13 +203,14 @@ public class RiskAnalyticsEngineApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsEngineUpdateLeadGeneratorConfigCall(Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest riskanalyticsenginev3UpdateLeadGeneratorConfigRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsEngineUpdateLeadGeneratorConfigCall(@javax.annotation.Nonnull Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest riskanalyticsenginev3UpdateLeadGeneratorConfigRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -251,7 +256,7 @@ public class RiskAnalyticsEngineApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsEngineUpdateLeadGeneratorConfigValidateBeforeCall(Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest riskanalyticsenginev3UpdateLeadGeneratorConfigRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsEngineUpdateLeadGeneratorConfigValidateBeforeCall(@javax.annotation.Nonnull Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest riskanalyticsenginev3UpdateLeadGeneratorConfigRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'riskanalyticsenginev3UpdateLeadGeneratorConfigRequest' is set
         if (riskanalyticsenginev3UpdateLeadGeneratorConfigRequest == null) {
             throw new ApiException("Missing the required parameter 'riskanalyticsenginev3UpdateLeadGeneratorConfigRequest' when calling riskAnalyticsEngineUpdateLeadGeneratorConfig(Async)");
@@ -268,13 +273,14 @@ public class RiskAnalyticsEngineApi {
      * @return Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse riskAnalyticsEngineUpdateLeadGeneratorConfig(Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest riskanalyticsenginev3UpdateLeadGeneratorConfigRequest) throws ApiException {
+    public Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse riskAnalyticsEngineUpdateLeadGeneratorConfig(@javax.annotation.Nonnull Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest riskanalyticsenginev3UpdateLeadGeneratorConfigRequest) throws ApiException {
         ApiResponse<Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse> localVarResp = riskAnalyticsEngineUpdateLeadGeneratorConfigWithHttpInfo(riskanalyticsenginev3UpdateLeadGeneratorConfigRequest);
         return localVarResp.getData();
     }
@@ -286,13 +292,14 @@ public class RiskAnalyticsEngineApi {
      * @return ApiResponse&lt;Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse> riskAnalyticsEngineUpdateLeadGeneratorConfigWithHttpInfo(Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest riskanalyticsenginev3UpdateLeadGeneratorConfigRequest) throws ApiException {
+    public ApiResponse<Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse> riskAnalyticsEngineUpdateLeadGeneratorConfigWithHttpInfo(@javax.annotation.Nonnull Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest riskanalyticsenginev3UpdateLeadGeneratorConfigRequest) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsEngineUpdateLeadGeneratorConfigValidateBeforeCall(riskanalyticsenginev3UpdateLeadGeneratorConfigRequest, null);
         Type localVarReturnType = new TypeToken<Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -306,13 +313,14 @@ public class RiskAnalyticsEngineApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsEngineUpdateLeadGeneratorConfigAsync(Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest riskanalyticsenginev3UpdateLeadGeneratorConfigRequest, final ApiCallback<Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsEngineUpdateLeadGeneratorConfigAsync(@javax.annotation.Nonnull Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest riskanalyticsenginev3UpdateLeadGeneratorConfigRequest, final ApiCallback<Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsEngineUpdateLeadGeneratorConfigValidateBeforeCall(riskanalyticsenginev3UpdateLeadGeneratorConfigRequest, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse>(){}.getType();

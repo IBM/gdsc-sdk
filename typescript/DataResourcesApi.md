@@ -21,20 +21,19 @@ Get additional details on a specific data resource by providing its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiGetDataResourceRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiGetDataResourceRequest = {
-  // string | Data resource ID
+const request: DataResourcesApiGetDataResourceRequest = {
+    // Data resource ID
   dataResourceId: "arn:aws:s3::12345678910:polar-security-corplex.xlsx",
 };
 
-apiInstance.getDataResource(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getDataResource(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -76,16 +75,16 @@ Get a summary of all the data resource, that is, number of data resources, types
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiGetDataResourcesSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiGetDataResourcesSummaryRequest = {
-  // string | Data store id (optional)
+const request: DataResourcesApiGetDataResourcesSummaryRequest = {
+    // Data store id (optional)
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
-  // ListDataResourcesFilterParameter (optional)
+  
   filter: {
     isReviewed: true,
     resourceOwners: ["Avi"],
@@ -99,9 +98,8 @@ let body:.DataResourcesApiGetDataResourcesSummaryRequest = {
   },
 };
 
-apiInstance.getDataResourcesSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getDataResourcesSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -144,16 +142,16 @@ Get a list of data resources based on the filter applied. You can filter by data
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiListDataResourcesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiListDataResourcesRequest = {
-  // string (optional)
+const request: DataResourcesApiListDataResourcesRequest = {
+  
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
-  // ListDataResourcesFilterParameter (optional)
+  
   filter: {
     isReviewed: true,
     resourceOwners: ["Avi"],
@@ -165,20 +163,19 @@ let body:.DataResourcesApiListDataResourcesRequest = {
     ],
     resourcePartialName: "resourcePartialName_example",
   },
-  // ListDataResourcesSortParameter (optional)
+  
   sort: {
     sortBy: "creationTime",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listDataResources(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataResources(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -224,22 +221,21 @@ List and filter data resources by their names
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiListDataResourcesNamesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiListDataResourcesNamesRequest = {
-  // string | Prefix of data resource name
+const request: DataResourcesApiListDataResourcesNamesRequest = {
+    // Prefix of data resource name
   prefix: "check",
-  // string (optional)
+  
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
 };
 
-apiInstance.listDataResourcesNames(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataResourcesNames(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -282,22 +278,21 @@ Removes a resource, with all its sensitivities, from Guardium DSPM dashboard. Th
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiRemoveResourceRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiRemoveResourceRequest = {
-  // string | Data resource ID
+const request: DataResourcesApiRemoveResourceRequest = {
+    // Data resource ID
   dataResourceId: "arn:aws:s3::12345678910:polar-security-corplex.xlsx",
-  // string | Data store ID
+    // Data store ID
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
 };
 
-apiInstance.removeResource(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.removeResource(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -340,24 +335,23 @@ Set the review status of a specific data resource in a specific data store.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiUpdateResourceReviewStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiUpdateResourceReviewStatusRequest = {
-  // string | Data resource id
+const request: DataResourcesApiUpdateResourceReviewStatusRequest = {
+    // Data resource id
   dataResourceId: "dataResourceId_example",
-  // UpdateResourceReviewBody
+  
   updateResourceReviewBody: {
     isReviewed: true,
   },
 };
 
-apiInstance.updateResourceReviewStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.updateResourceReviewStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

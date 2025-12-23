@@ -6,7 +6,7 @@ CheckAWSCredentialsResponse defines response of CheckAWSCredentialsRequest call.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**Streamsv3AWSCheckStreamStatus**](Streamsv3AWSCheckStreamStatus.md) |  | [optional] 
+**status** | [**Streamsv3AWSCheckStreamStatus**](Streamsv3AWSCheckStreamStatus.md) |  | [optional] [default to Streamsv3AWSCheckStreamStatus.STREAM_OK]
 
 ## Example
 

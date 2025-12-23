@@ -16,14 +16,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataLoaderApi } from '';
+import type { QSDataLoaderApiQSDataLoaderQSfileValidatorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataLoaderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataLoaderApi(configuration);
 
-let body:.QSDataLoaderApiQSDataLoaderQSfileValidatorRequest = {
-  // Qsdataloaderv3QSfileValidatorRequest
+const request: QSDataLoaderApiQSDataLoaderQSfileValidatorRequest = {
+  
   qsdataloaderv3QSfileValidatorRequest: {
     externalParam: {
       applicationFileName: "applicationFileName_example",
@@ -42,9 +42,8 @@ let body:.QSDataLoaderApiQSDataLoaderQSfileValidatorRequest = {
   },
 };
 
-apiInstance.qSDataLoaderQSfileValidator(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataLoaderQSfileValidator(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -85,20 +84,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataLoaderApi } from '';
+import type { QSDataLoaderApiQSDataLoaderUploadSyntheticDataLoaderRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataLoaderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataLoaderApi(configuration);
 
-let body:.QSDataLoaderApiQSDataLoaderUploadSyntheticDataLoaderRequest = {
-  // any
+const request: QSDataLoaderApiQSDataLoaderUploadSyntheticDataLoaderRequest = {
+  
   body: {},
 };
 
-apiInstance.qSDataLoaderUploadSyntheticDataLoader(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataLoaderUploadSyntheticDataLoader(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

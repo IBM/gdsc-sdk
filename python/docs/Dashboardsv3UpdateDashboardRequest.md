@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **dashboard** | [**Dashboardsv3Dashboard**](Dashboardsv3Dashboard.md) |  | [optional] 
 **dashboard_id** | **str** | The id of the dashboard that was updated. | [optional] 
 **update_hint** | **str** | Optional: A hint describing the update used by the activity log. | [optional] 
-**update_type** | [**Dashboardsv3UpdateType**](Dashboardsv3UpdateType.md) |  | [optional] 
+**update_type** | [**Dashboardsv3UpdateType**](Dashboardsv3UpdateType.md) |  | [optional] [default to Dashboardsv3UpdateType.UNDEFINED_UPDATE_TYPE]
 
 ## Example
 

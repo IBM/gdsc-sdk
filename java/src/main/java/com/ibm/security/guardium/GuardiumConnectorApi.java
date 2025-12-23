@@ -131,13 +131,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorAddCMCall(Guardiumconnectorv3AddCMRequest guardiumconnectorv3AddCMRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorAddCMCall(@javax.annotation.Nonnull Guardiumconnectorv3AddCMRequest guardiumconnectorv3AddCMRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -183,7 +184,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorAddCMValidateBeforeCall(Guardiumconnectorv3AddCMRequest guardiumconnectorv3AddCMRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorAddCMValidateBeforeCall(@javax.annotation.Nonnull Guardiumconnectorv3AddCMRequest guardiumconnectorv3AddCMRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'guardiumconnectorv3AddCMRequest' is set
         if (guardiumconnectorv3AddCMRequest == null) {
             throw new ApiException("Missing the required parameter 'guardiumconnectorv3AddCMRequest' when calling guardiumConnectorAddCM(Async)");
@@ -200,13 +201,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3AddCMResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3AddCMResponse guardiumConnectorAddCM(Guardiumconnectorv3AddCMRequest guardiumconnectorv3AddCMRequest) throws ApiException {
+    public Guardiumconnectorv3AddCMResponse guardiumConnectorAddCM(@javax.annotation.Nonnull Guardiumconnectorv3AddCMRequest guardiumconnectorv3AddCMRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3AddCMResponse> localVarResp = guardiumConnectorAddCMWithHttpInfo(guardiumconnectorv3AddCMRequest);
         return localVarResp.getData();
     }
@@ -218,13 +220,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3AddCMResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3AddCMResponse> guardiumConnectorAddCMWithHttpInfo(Guardiumconnectorv3AddCMRequest guardiumconnectorv3AddCMRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3AddCMResponse> guardiumConnectorAddCMWithHttpInfo(@javax.annotation.Nonnull Guardiumconnectorv3AddCMRequest guardiumconnectorv3AddCMRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorAddCMValidateBeforeCall(guardiumconnectorv3AddCMRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3AddCMResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -238,13 +241,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorAddCMAsync(Guardiumconnectorv3AddCMRequest guardiumconnectorv3AddCMRequest, final ApiCallback<Guardiumconnectorv3AddCMResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorAddCMAsync(@javax.annotation.Nonnull Guardiumconnectorv3AddCMRequest guardiumconnectorv3AddCMRequest, final ApiCallback<Guardiumconnectorv3AddCMResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorAddCMValidateBeforeCall(guardiumconnectorv3AddCMRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3AddCMResponse>(){}.getType();
@@ -259,13 +263,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorAddDatamartsCall(String centralManagerId, Guardiumconnectorv3AddDatamartsRequest guardiumconnectorv3AddDatamartsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorAddDatamartsCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3AddDatamartsRequest guardiumconnectorv3AddDatamartsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -312,7 +317,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorAddDatamartsValidateBeforeCall(String centralManagerId, Guardiumconnectorv3AddDatamartsRequest guardiumconnectorv3AddDatamartsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorAddDatamartsValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3AddDatamartsRequest guardiumconnectorv3AddDatamartsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorAddDatamarts(Async)");
@@ -335,13 +340,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3AddDatamartsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3AddDatamartsResponse guardiumConnectorAddDatamarts(String centralManagerId, Guardiumconnectorv3AddDatamartsRequest guardiumconnectorv3AddDatamartsRequest) throws ApiException {
+    public Guardiumconnectorv3AddDatamartsResponse guardiumConnectorAddDatamarts(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3AddDatamartsRequest guardiumconnectorv3AddDatamartsRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3AddDatamartsResponse> localVarResp = guardiumConnectorAddDatamartsWithHttpInfo(centralManagerId, guardiumconnectorv3AddDatamartsRequest);
         return localVarResp.getData();
     }
@@ -354,13 +360,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3AddDatamartsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3AddDatamartsResponse> guardiumConnectorAddDatamartsWithHttpInfo(String centralManagerId, Guardiumconnectorv3AddDatamartsRequest guardiumconnectorv3AddDatamartsRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3AddDatamartsResponse> guardiumConnectorAddDatamartsWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3AddDatamartsRequest guardiumconnectorv3AddDatamartsRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorAddDatamartsValidateBeforeCall(centralManagerId, guardiumconnectorv3AddDatamartsRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3AddDatamartsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -375,13 +382,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorAddDatamartsAsync(String centralManagerId, Guardiumconnectorv3AddDatamartsRequest guardiumconnectorv3AddDatamartsRequest, final ApiCallback<Guardiumconnectorv3AddDatamartsResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorAddDatamartsAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3AddDatamartsRequest guardiumconnectorv3AddDatamartsRequest, final ApiCallback<Guardiumconnectorv3AddDatamartsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorAddDatamartsValidateBeforeCall(centralManagerId, guardiumconnectorv3AddDatamartsRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3AddDatamartsResponse>(){}.getType();
@@ -395,13 +403,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorAddDmExclusionCall(Guardiumconnectorv3AddDmExclusionRequest guardiumconnectorv3AddDmExclusionRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorAddDmExclusionCall(@javax.annotation.Nonnull Guardiumconnectorv3AddDmExclusionRequest guardiumconnectorv3AddDmExclusionRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -447,7 +456,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorAddDmExclusionValidateBeforeCall(Guardiumconnectorv3AddDmExclusionRequest guardiumconnectorv3AddDmExclusionRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorAddDmExclusionValidateBeforeCall(@javax.annotation.Nonnull Guardiumconnectorv3AddDmExclusionRequest guardiumconnectorv3AddDmExclusionRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'guardiumconnectorv3AddDmExclusionRequest' is set
         if (guardiumconnectorv3AddDmExclusionRequest == null) {
             throw new ApiException("Missing the required parameter 'guardiumconnectorv3AddDmExclusionRequest' when calling guardiumConnectorAddDmExclusion(Async)");
@@ -464,13 +473,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3AddDmExclusionResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3AddDmExclusionResponse guardiumConnectorAddDmExclusion(Guardiumconnectorv3AddDmExclusionRequest guardiumconnectorv3AddDmExclusionRequest) throws ApiException {
+    public Guardiumconnectorv3AddDmExclusionResponse guardiumConnectorAddDmExclusion(@javax.annotation.Nonnull Guardiumconnectorv3AddDmExclusionRequest guardiumconnectorv3AddDmExclusionRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3AddDmExclusionResponse> localVarResp = guardiumConnectorAddDmExclusionWithHttpInfo(guardiumconnectorv3AddDmExclusionRequest);
         return localVarResp.getData();
     }
@@ -482,13 +492,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3AddDmExclusionResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3AddDmExclusionResponse> guardiumConnectorAddDmExclusionWithHttpInfo(Guardiumconnectorv3AddDmExclusionRequest guardiumconnectorv3AddDmExclusionRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3AddDmExclusionResponse> guardiumConnectorAddDmExclusionWithHttpInfo(@javax.annotation.Nonnull Guardiumconnectorv3AddDmExclusionRequest guardiumconnectorv3AddDmExclusionRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorAddDmExclusionValidateBeforeCall(guardiumconnectorv3AddDmExclusionRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3AddDmExclusionResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -502,13 +513,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorAddDmExclusionAsync(Guardiumconnectorv3AddDmExclusionRequest guardiumconnectorv3AddDmExclusionRequest, final ApiCallback<Guardiumconnectorv3AddDmExclusionResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorAddDmExclusionAsync(@javax.annotation.Nonnull Guardiumconnectorv3AddDmExclusionRequest guardiumconnectorv3AddDmExclusionRequest, final ApiCallback<Guardiumconnectorv3AddDmExclusionResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorAddDmExclusionValidateBeforeCall(guardiumconnectorv3AddDmExclusionRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3AddDmExclusionResponse>(){}.getType();
@@ -523,13 +535,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorAddTaskCall(String centralManagerId, Guardiumconnectorv3AddTaskRequest guardiumconnectorv3AddTaskRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorAddTaskCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3AddTaskRequest guardiumconnectorv3AddTaskRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -576,7 +589,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorAddTaskValidateBeforeCall(String centralManagerId, Guardiumconnectorv3AddTaskRequest guardiumconnectorv3AddTaskRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorAddTaskValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3AddTaskRequest guardiumconnectorv3AddTaskRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorAddTask(Async)");
@@ -599,13 +612,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3AddTaskResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3AddTaskResponse guardiumConnectorAddTask(String centralManagerId, Guardiumconnectorv3AddTaskRequest guardiumconnectorv3AddTaskRequest) throws ApiException {
+    public Guardiumconnectorv3AddTaskResponse guardiumConnectorAddTask(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3AddTaskRequest guardiumconnectorv3AddTaskRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3AddTaskResponse> localVarResp = guardiumConnectorAddTaskWithHttpInfo(centralManagerId, guardiumconnectorv3AddTaskRequest);
         return localVarResp.getData();
     }
@@ -618,13 +632,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3AddTaskResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3AddTaskResponse> guardiumConnectorAddTaskWithHttpInfo(String centralManagerId, Guardiumconnectorv3AddTaskRequest guardiumconnectorv3AddTaskRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3AddTaskResponse> guardiumConnectorAddTaskWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3AddTaskRequest guardiumconnectorv3AddTaskRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorAddTaskValidateBeforeCall(centralManagerId, guardiumconnectorv3AddTaskRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3AddTaskResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -639,13 +654,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorAddTaskAsync(String centralManagerId, Guardiumconnectorv3AddTaskRequest guardiumconnectorv3AddTaskRequest, final ApiCallback<Guardiumconnectorv3AddTaskResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorAddTaskAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3AddTaskRequest guardiumconnectorv3AddTaskRequest, final ApiCallback<Guardiumconnectorv3AddTaskResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorAddTaskValidateBeforeCall(centralManagerId, guardiumconnectorv3AddTaskRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3AddTaskResponse>(){}.getType();
@@ -659,13 +675,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorBlockUserCall(Guardiumconnectorv3BlockUserRequest guardiumconnectorv3BlockUserRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorBlockUserCall(@javax.annotation.Nonnull Guardiumconnectorv3BlockUserRequest guardiumconnectorv3BlockUserRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -711,7 +728,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorBlockUserValidateBeforeCall(Guardiumconnectorv3BlockUserRequest guardiumconnectorv3BlockUserRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorBlockUserValidateBeforeCall(@javax.annotation.Nonnull Guardiumconnectorv3BlockUserRequest guardiumconnectorv3BlockUserRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'guardiumconnectorv3BlockUserRequest' is set
         if (guardiumconnectorv3BlockUserRequest == null) {
             throw new ApiException("Missing the required parameter 'guardiumconnectorv3BlockUserRequest' when calling guardiumConnectorBlockUser(Async)");
@@ -728,13 +745,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3BlockUserResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3BlockUserResponse guardiumConnectorBlockUser(Guardiumconnectorv3BlockUserRequest guardiumconnectorv3BlockUserRequest) throws ApiException {
+    public Guardiumconnectorv3BlockUserResponse guardiumConnectorBlockUser(@javax.annotation.Nonnull Guardiumconnectorv3BlockUserRequest guardiumconnectorv3BlockUserRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3BlockUserResponse> localVarResp = guardiumConnectorBlockUserWithHttpInfo(guardiumconnectorv3BlockUserRequest);
         return localVarResp.getData();
     }
@@ -746,13 +764,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3BlockUserResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3BlockUserResponse> guardiumConnectorBlockUserWithHttpInfo(Guardiumconnectorv3BlockUserRequest guardiumconnectorv3BlockUserRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3BlockUserResponse> guardiumConnectorBlockUserWithHttpInfo(@javax.annotation.Nonnull Guardiumconnectorv3BlockUserRequest guardiumconnectorv3BlockUserRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorBlockUserValidateBeforeCall(guardiumconnectorv3BlockUserRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3BlockUserResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -766,13 +785,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorBlockUserAsync(Guardiumconnectorv3BlockUserRequest guardiumconnectorv3BlockUserRequest, final ApiCallback<Guardiumconnectorv3BlockUserResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorBlockUserAsync(@javax.annotation.Nonnull Guardiumconnectorv3BlockUserRequest guardiumconnectorv3BlockUserRequest, final ApiCallback<Guardiumconnectorv3BlockUserResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorBlockUserValidateBeforeCall(guardiumconnectorv3BlockUserRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3BlockUserResponse>(){}.getType();
@@ -787,13 +807,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorConfigureAggregatorExportCall(String centralManagerId, Guardiumconnectorv3ConfigureAggregatorExportRequest guardiumconnectorv3ConfigureAggregatorExportRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorConfigureAggregatorExportCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureAggregatorExportRequest guardiumconnectorv3ConfigureAggregatorExportRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -840,7 +861,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorConfigureAggregatorExportValidateBeforeCall(String centralManagerId, Guardiumconnectorv3ConfigureAggregatorExportRequest guardiumconnectorv3ConfigureAggregatorExportRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorConfigureAggregatorExportValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureAggregatorExportRequest guardiumconnectorv3ConfigureAggregatorExportRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorConfigureAggregatorExport(Async)");
@@ -863,13 +884,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3ConfigureAggregatorExportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3ConfigureAggregatorExportResponse guardiumConnectorConfigureAggregatorExport(String centralManagerId, Guardiumconnectorv3ConfigureAggregatorExportRequest guardiumconnectorv3ConfigureAggregatorExportRequest) throws ApiException {
+    public Guardiumconnectorv3ConfigureAggregatorExportResponse guardiumConnectorConfigureAggregatorExport(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureAggregatorExportRequest guardiumconnectorv3ConfigureAggregatorExportRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3ConfigureAggregatorExportResponse> localVarResp = guardiumConnectorConfigureAggregatorExportWithHttpInfo(centralManagerId, guardiumconnectorv3ConfigureAggregatorExportRequest);
         return localVarResp.getData();
     }
@@ -882,13 +904,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3ConfigureAggregatorExportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3ConfigureAggregatorExportResponse> guardiumConnectorConfigureAggregatorExportWithHttpInfo(String centralManagerId, Guardiumconnectorv3ConfigureAggregatorExportRequest guardiumconnectorv3ConfigureAggregatorExportRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3ConfigureAggregatorExportResponse> guardiumConnectorConfigureAggregatorExportWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureAggregatorExportRequest guardiumconnectorv3ConfigureAggregatorExportRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorConfigureAggregatorExportValidateBeforeCall(centralManagerId, guardiumconnectorv3ConfigureAggregatorExportRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3ConfigureAggregatorExportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -903,13 +926,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorConfigureAggregatorExportAsync(String centralManagerId, Guardiumconnectorv3ConfigureAggregatorExportRequest guardiumconnectorv3ConfigureAggregatorExportRequest, final ApiCallback<Guardiumconnectorv3ConfigureAggregatorExportResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorConfigureAggregatorExportAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureAggregatorExportRequest guardiumconnectorv3ConfigureAggregatorExportRequest, final ApiCallback<Guardiumconnectorv3ConfigureAggregatorExportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorConfigureAggregatorExportValidateBeforeCall(centralManagerId, guardiumconnectorv3ConfigureAggregatorExportRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3ConfigureAggregatorExportResponse>(){}.getType();
@@ -924,13 +948,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorConfigureCollectorExportCall(String centralManagerId, Guardiumconnectorv3ConfigureCollectorExportRequest guardiumconnectorv3ConfigureCollectorExportRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorConfigureCollectorExportCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureCollectorExportRequest guardiumconnectorv3ConfigureCollectorExportRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -977,7 +1002,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorConfigureCollectorExportValidateBeforeCall(String centralManagerId, Guardiumconnectorv3ConfigureCollectorExportRequest guardiumconnectorv3ConfigureCollectorExportRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorConfigureCollectorExportValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureCollectorExportRequest guardiumconnectorv3ConfigureCollectorExportRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorConfigureCollectorExport(Async)");
@@ -1000,13 +1025,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3ConfigureCollectorExportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3ConfigureCollectorExportResponse guardiumConnectorConfigureCollectorExport(String centralManagerId, Guardiumconnectorv3ConfigureCollectorExportRequest guardiumconnectorv3ConfigureCollectorExportRequest) throws ApiException {
+    public Guardiumconnectorv3ConfigureCollectorExportResponse guardiumConnectorConfigureCollectorExport(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureCollectorExportRequest guardiumconnectorv3ConfigureCollectorExportRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3ConfigureCollectorExportResponse> localVarResp = guardiumConnectorConfigureCollectorExportWithHttpInfo(centralManagerId, guardiumconnectorv3ConfigureCollectorExportRequest);
         return localVarResp.getData();
     }
@@ -1019,13 +1045,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3ConfigureCollectorExportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3ConfigureCollectorExportResponse> guardiumConnectorConfigureCollectorExportWithHttpInfo(String centralManagerId, Guardiumconnectorv3ConfigureCollectorExportRequest guardiumconnectorv3ConfigureCollectorExportRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3ConfigureCollectorExportResponse> guardiumConnectorConfigureCollectorExportWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureCollectorExportRequest guardiumconnectorv3ConfigureCollectorExportRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorConfigureCollectorExportValidateBeforeCall(centralManagerId, guardiumconnectorv3ConfigureCollectorExportRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3ConfigureCollectorExportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1040,13 +1067,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorConfigureCollectorExportAsync(String centralManagerId, Guardiumconnectorv3ConfigureCollectorExportRequest guardiumconnectorv3ConfigureCollectorExportRequest, final ApiCallback<Guardiumconnectorv3ConfigureCollectorExportResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorConfigureCollectorExportAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureCollectorExportRequest guardiumconnectorv3ConfigureCollectorExportRequest, final ApiCallback<Guardiumconnectorv3ConfigureCollectorExportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorConfigureCollectorExportValidateBeforeCall(centralManagerId, guardiumconnectorv3ConfigureCollectorExportRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3ConfigureCollectorExportResponse>(){}.getType();
@@ -1061,13 +1089,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorConfigureStreamingCall(String centralManagerId, Guardiumconnectorv3ConfigureStreamingRequest guardiumconnectorv3ConfigureStreamingRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorConfigureStreamingCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureStreamingRequest guardiumconnectorv3ConfigureStreamingRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1114,7 +1143,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorConfigureStreamingValidateBeforeCall(String centralManagerId, Guardiumconnectorv3ConfigureStreamingRequest guardiumconnectorv3ConfigureStreamingRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorConfigureStreamingValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureStreamingRequest guardiumconnectorv3ConfigureStreamingRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorConfigureStreaming(Async)");
@@ -1137,13 +1166,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3ConfigureStreamingResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3ConfigureStreamingResponse guardiumConnectorConfigureStreaming(String centralManagerId, Guardiumconnectorv3ConfigureStreamingRequest guardiumconnectorv3ConfigureStreamingRequest) throws ApiException {
+    public Guardiumconnectorv3ConfigureStreamingResponse guardiumConnectorConfigureStreaming(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureStreamingRequest guardiumconnectorv3ConfigureStreamingRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3ConfigureStreamingResponse> localVarResp = guardiumConnectorConfigureStreamingWithHttpInfo(centralManagerId, guardiumconnectorv3ConfigureStreamingRequest);
         return localVarResp.getData();
     }
@@ -1156,13 +1186,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3ConfigureStreamingResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3ConfigureStreamingResponse> guardiumConnectorConfigureStreamingWithHttpInfo(String centralManagerId, Guardiumconnectorv3ConfigureStreamingRequest guardiumconnectorv3ConfigureStreamingRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3ConfigureStreamingResponse> guardiumConnectorConfigureStreamingWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureStreamingRequest guardiumconnectorv3ConfigureStreamingRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorConfigureStreamingValidateBeforeCall(centralManagerId, guardiumconnectorv3ConfigureStreamingRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3ConfigureStreamingResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1177,13 +1208,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorConfigureStreamingAsync(String centralManagerId, Guardiumconnectorv3ConfigureStreamingRequest guardiumconnectorv3ConfigureStreamingRequest, final ApiCallback<Guardiumconnectorv3ConfigureStreamingResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorConfigureStreamingAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3ConfigureStreamingRequest guardiumconnectorv3ConfigureStreamingRequest, final ApiCallback<Guardiumconnectorv3ConfigureStreamingResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorConfigureStreamingValidateBeforeCall(centralManagerId, guardiumconnectorv3ConfigureStreamingRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3ConfigureStreamingResponse>(){}.getType();
@@ -1198,13 +1230,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorDatamartVersionCheckCall(String centralManagerId, Guardiumconnectorv3DatamartVersionRequest guardiumconnectorv3DatamartVersionRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorDatamartVersionCheckCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3DatamartVersionRequest guardiumconnectorv3DatamartVersionRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1251,7 +1284,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorDatamartVersionCheckValidateBeforeCall(String centralManagerId, Guardiumconnectorv3DatamartVersionRequest guardiumconnectorv3DatamartVersionRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorDatamartVersionCheckValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3DatamartVersionRequest guardiumconnectorv3DatamartVersionRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorDatamartVersionCheck(Async)");
@@ -1274,13 +1307,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3DatamartVersionResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3DatamartVersionResponse guardiumConnectorDatamartVersionCheck(String centralManagerId, Guardiumconnectorv3DatamartVersionRequest guardiumconnectorv3DatamartVersionRequest) throws ApiException {
+    public Guardiumconnectorv3DatamartVersionResponse guardiumConnectorDatamartVersionCheck(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3DatamartVersionRequest guardiumconnectorv3DatamartVersionRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3DatamartVersionResponse> localVarResp = guardiumConnectorDatamartVersionCheckWithHttpInfo(centralManagerId, guardiumconnectorv3DatamartVersionRequest);
         return localVarResp.getData();
     }
@@ -1293,13 +1327,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3DatamartVersionResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3DatamartVersionResponse> guardiumConnectorDatamartVersionCheckWithHttpInfo(String centralManagerId, Guardiumconnectorv3DatamartVersionRequest guardiumconnectorv3DatamartVersionRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3DatamartVersionResponse> guardiumConnectorDatamartVersionCheckWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3DatamartVersionRequest guardiumconnectorv3DatamartVersionRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorDatamartVersionCheckValidateBeforeCall(centralManagerId, guardiumconnectorv3DatamartVersionRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DatamartVersionResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1314,13 +1349,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorDatamartVersionCheckAsync(String centralManagerId, Guardiumconnectorv3DatamartVersionRequest guardiumconnectorv3DatamartVersionRequest, final ApiCallback<Guardiumconnectorv3DatamartVersionResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorDatamartVersionCheckAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3DatamartVersionRequest guardiumconnectorv3DatamartVersionRequest, final ApiCallback<Guardiumconnectorv3DatamartVersionResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorDatamartVersionCheckValidateBeforeCall(centralManagerId, guardiumconnectorv3DatamartVersionRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DatamartVersionResponse>(){}.getType();
@@ -1335,13 +1371,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorDeleteCMCall(String centralManagerId, Integer force, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorDeleteCMCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable Integer force, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1391,7 +1428,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorDeleteCMValidateBeforeCall(String centralManagerId, Integer force, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorDeleteCMValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable Integer force, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorDeleteCM(Async)");
@@ -1409,13 +1446,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3DeleteCMResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3DeleteCMResponse guardiumConnectorDeleteCM(String centralManagerId, Integer force) throws ApiException {
+    public Guardiumconnectorv3DeleteCMResponse guardiumConnectorDeleteCM(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable Integer force) throws ApiException {
         ApiResponse<Guardiumconnectorv3DeleteCMResponse> localVarResp = guardiumConnectorDeleteCMWithHttpInfo(centralManagerId, force);
         return localVarResp.getData();
     }
@@ -1428,13 +1466,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3DeleteCMResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3DeleteCMResponse> guardiumConnectorDeleteCMWithHttpInfo(String centralManagerId, Integer force) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3DeleteCMResponse> guardiumConnectorDeleteCMWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable Integer force) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorDeleteCMValidateBeforeCall(centralManagerId, force, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DeleteCMResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1449,13 +1488,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorDeleteCMAsync(String centralManagerId, Integer force, final ApiCallback<Guardiumconnectorv3DeleteCMResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorDeleteCMAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable Integer force, final ApiCallback<Guardiumconnectorv3DeleteCMResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorDeleteCMValidateBeforeCall(centralManagerId, force, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DeleteCMResponse>(){}.getType();
@@ -1469,13 +1509,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorDeleteDmExclusionCall(String datamart, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorDeleteDmExclusionCall(@javax.annotation.Nullable String datamart, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1524,7 +1565,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorDeleteDmExclusionValidateBeforeCall(String datamart, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorDeleteDmExclusionValidateBeforeCall(@javax.annotation.Nullable String datamart, final ApiCallback _callback) throws ApiException {
         return guardiumConnectorDeleteDmExclusionCall(datamart, _callback);
 
     }
@@ -1536,13 +1577,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3DeleteDmExclusionResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3DeleteDmExclusionResponse guardiumConnectorDeleteDmExclusion(String datamart) throws ApiException {
+    public Guardiumconnectorv3DeleteDmExclusionResponse guardiumConnectorDeleteDmExclusion(@javax.annotation.Nullable String datamart) throws ApiException {
         ApiResponse<Guardiumconnectorv3DeleteDmExclusionResponse> localVarResp = guardiumConnectorDeleteDmExclusionWithHttpInfo(datamart);
         return localVarResp.getData();
     }
@@ -1554,13 +1596,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3DeleteDmExclusionResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3DeleteDmExclusionResponse> guardiumConnectorDeleteDmExclusionWithHttpInfo(String datamart) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3DeleteDmExclusionResponse> guardiumConnectorDeleteDmExclusionWithHttpInfo(@javax.annotation.Nullable String datamart) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorDeleteDmExclusionValidateBeforeCall(datamart, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DeleteDmExclusionResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1574,13 +1617,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorDeleteDmExclusionAsync(String datamart, final ApiCallback<Guardiumconnectorv3DeleteDmExclusionResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorDeleteDmExclusionAsync(@javax.annotation.Nullable String datamart, final ApiCallback<Guardiumconnectorv3DeleteDmExclusionResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorDeleteDmExclusionValidateBeforeCall(datamart, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DeleteDmExclusionResponse>(){}.getType();
@@ -1595,13 +1639,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorDeleteTaskCall(String centralManagerId, String taskId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorDeleteTaskCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull String taskId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1648,7 +1693,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorDeleteTaskValidateBeforeCall(String centralManagerId, String taskId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorDeleteTaskValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull String taskId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorDeleteTask(Async)");
@@ -1671,13 +1716,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3DeleteTaskResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3DeleteTaskResponse guardiumConnectorDeleteTask(String centralManagerId, String taskId) throws ApiException {
+    public Guardiumconnectorv3DeleteTaskResponse guardiumConnectorDeleteTask(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull String taskId) throws ApiException {
         ApiResponse<Guardiumconnectorv3DeleteTaskResponse> localVarResp = guardiumConnectorDeleteTaskWithHttpInfo(centralManagerId, taskId);
         return localVarResp.getData();
     }
@@ -1690,13 +1736,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3DeleteTaskResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3DeleteTaskResponse> guardiumConnectorDeleteTaskWithHttpInfo(String centralManagerId, String taskId) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3DeleteTaskResponse> guardiumConnectorDeleteTaskWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull String taskId) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorDeleteTaskValidateBeforeCall(centralManagerId, taskId, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DeleteTaskResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1711,13 +1758,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorDeleteTaskAsync(String centralManagerId, String taskId, final ApiCallback<Guardiumconnectorv3DeleteTaskResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorDeleteTaskAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull String taskId, final ApiCallback<Guardiumconnectorv3DeleteTaskResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorDeleteTaskValidateBeforeCall(centralManagerId, taskId, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DeleteTaskResponse>(){}.getType();
@@ -1731,13 +1779,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorDeleteTasksCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorDeleteTasksCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1783,7 +1832,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorDeleteTasksValidateBeforeCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorDeleteTasksValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorDeleteTasks(Async)");
@@ -1800,13 +1849,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3DeleteTasksResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3DeleteTasksResponse guardiumConnectorDeleteTasks(String centralManagerId) throws ApiException {
+    public Guardiumconnectorv3DeleteTasksResponse guardiumConnectorDeleteTasks(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         ApiResponse<Guardiumconnectorv3DeleteTasksResponse> localVarResp = guardiumConnectorDeleteTasksWithHttpInfo(centralManagerId);
         return localVarResp.getData();
     }
@@ -1818,13 +1868,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3DeleteTasksResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3DeleteTasksResponse> guardiumConnectorDeleteTasksWithHttpInfo(String centralManagerId) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3DeleteTasksResponse> guardiumConnectorDeleteTasksWithHttpInfo(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorDeleteTasksValidateBeforeCall(centralManagerId, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DeleteTasksResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1838,13 +1889,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorDeleteTasksAsync(String centralManagerId, final ApiCallback<Guardiumconnectorv3DeleteTasksResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorDeleteTasksAsync(@javax.annotation.Nonnull String centralManagerId, final ApiCallback<Guardiumconnectorv3DeleteTasksResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorDeleteTasksValidateBeforeCall(centralManagerId, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DeleteTasksResponse>(){}.getType();
@@ -1858,13 +1910,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetAggregatorsConfigCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetAggregatorsConfigCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1910,7 +1963,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorGetAggregatorsConfigValidateBeforeCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorGetAggregatorsConfigValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorGetAggregatorsConfig(Async)");
@@ -1927,13 +1980,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetAggregatorsConfigResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3GetAggregatorsConfigResponse guardiumConnectorGetAggregatorsConfig(String centralManagerId) throws ApiException {
+    public Guardiumconnectorv3GetAggregatorsConfigResponse guardiumConnectorGetAggregatorsConfig(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         ApiResponse<Guardiumconnectorv3GetAggregatorsConfigResponse> localVarResp = guardiumConnectorGetAggregatorsConfigWithHttpInfo(centralManagerId);
         return localVarResp.getData();
     }
@@ -1945,13 +1999,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetAggregatorsConfigResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3GetAggregatorsConfigResponse> guardiumConnectorGetAggregatorsConfigWithHttpInfo(String centralManagerId) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3GetAggregatorsConfigResponse> guardiumConnectorGetAggregatorsConfigWithHttpInfo(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorGetAggregatorsConfigValidateBeforeCall(centralManagerId, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetAggregatorsConfigResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1965,13 +2020,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetAggregatorsConfigAsync(String centralManagerId, final ApiCallback<Guardiumconnectorv3GetAggregatorsConfigResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetAggregatorsConfigAsync(@javax.annotation.Nonnull String centralManagerId, final ApiCallback<Guardiumconnectorv3GetAggregatorsConfigResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorGetAggregatorsConfigValidateBeforeCall(centralManagerId, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetAggregatorsConfigResponse>(){}.getType();
@@ -1985,13 +2041,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetCMsCall(Boolean runAdditionalChecks, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetCMsCall(@javax.annotation.Nullable Boolean runAdditionalChecks, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2040,7 +2097,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorGetCMsValidateBeforeCall(Boolean runAdditionalChecks, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorGetCMsValidateBeforeCall(@javax.annotation.Nullable Boolean runAdditionalChecks, final ApiCallback _callback) throws ApiException {
         return guardiumConnectorGetCMsCall(runAdditionalChecks, _callback);
 
     }
@@ -2052,13 +2109,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetCMsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3GetCMsResponse guardiumConnectorGetCMs(Boolean runAdditionalChecks) throws ApiException {
+    public Guardiumconnectorv3GetCMsResponse guardiumConnectorGetCMs(@javax.annotation.Nullable Boolean runAdditionalChecks) throws ApiException {
         ApiResponse<Guardiumconnectorv3GetCMsResponse> localVarResp = guardiumConnectorGetCMsWithHttpInfo(runAdditionalChecks);
         return localVarResp.getData();
     }
@@ -2070,13 +2128,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetCMsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3GetCMsResponse> guardiumConnectorGetCMsWithHttpInfo(Boolean runAdditionalChecks) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3GetCMsResponse> guardiumConnectorGetCMsWithHttpInfo(@javax.annotation.Nullable Boolean runAdditionalChecks) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorGetCMsValidateBeforeCall(runAdditionalChecks, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetCMsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2090,13 +2149,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetCMsAsync(Boolean runAdditionalChecks, final ApiCallback<Guardiumconnectorv3GetCMsResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetCMsAsync(@javax.annotation.Nullable Boolean runAdditionalChecks, final ApiCallback<Guardiumconnectorv3GetCMsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorGetCMsValidateBeforeCall(runAdditionalChecks, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetCMsResponse>(){}.getType();
@@ -2109,7 +2169,8 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2171,7 +2232,8 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetCMsConfigResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2188,7 +2250,8 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetCMsConfigResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2207,7 +2270,8 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2227,13 +2291,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetCollectorsConfigCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetCollectorsConfigCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2279,7 +2344,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorGetCollectorsConfigValidateBeforeCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorGetCollectorsConfigValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorGetCollectorsConfig(Async)");
@@ -2296,13 +2361,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetCollectorsConfigResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3GetCollectorsConfigResponse guardiumConnectorGetCollectorsConfig(String centralManagerId) throws ApiException {
+    public Guardiumconnectorv3GetCollectorsConfigResponse guardiumConnectorGetCollectorsConfig(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         ApiResponse<Guardiumconnectorv3GetCollectorsConfigResponse> localVarResp = guardiumConnectorGetCollectorsConfigWithHttpInfo(centralManagerId);
         return localVarResp.getData();
     }
@@ -2314,13 +2380,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetCollectorsConfigResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3GetCollectorsConfigResponse> guardiumConnectorGetCollectorsConfigWithHttpInfo(String centralManagerId) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3GetCollectorsConfigResponse> guardiumConnectorGetCollectorsConfigWithHttpInfo(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorGetCollectorsConfigValidateBeforeCall(centralManagerId, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetCollectorsConfigResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2334,13 +2401,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetCollectorsConfigAsync(String centralManagerId, final ApiCallback<Guardiumconnectorv3GetCollectorsConfigResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetCollectorsConfigAsync(@javax.annotation.Nonnull String centralManagerId, final ApiCallback<Guardiumconnectorv3GetCollectorsConfigResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorGetCollectorsConfigValidateBeforeCall(centralManagerId, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetCollectorsConfigResponse>(){}.getType();
@@ -2354,13 +2422,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetDatamartsCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetDatamartsCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2406,7 +2475,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorGetDatamartsValidateBeforeCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorGetDatamartsValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorGetDatamarts(Async)");
@@ -2423,13 +2492,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetDatamartsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3GetDatamartsResponse guardiumConnectorGetDatamarts(String centralManagerId) throws ApiException {
+    public Guardiumconnectorv3GetDatamartsResponse guardiumConnectorGetDatamarts(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         ApiResponse<Guardiumconnectorv3GetDatamartsResponse> localVarResp = guardiumConnectorGetDatamartsWithHttpInfo(centralManagerId);
         return localVarResp.getData();
     }
@@ -2441,13 +2511,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetDatamartsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3GetDatamartsResponse> guardiumConnectorGetDatamartsWithHttpInfo(String centralManagerId) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3GetDatamartsResponse> guardiumConnectorGetDatamartsWithHttpInfo(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorGetDatamartsValidateBeforeCall(centralManagerId, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetDatamartsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2461,13 +2532,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetDatamartsAsync(String centralManagerId, final ApiCallback<Guardiumconnectorv3GetDatamartsResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetDatamartsAsync(@javax.annotation.Nonnull String centralManagerId, final ApiCallback<Guardiumconnectorv3GetDatamartsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorGetDatamartsValidateBeforeCall(centralManagerId, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetDatamartsResponse>(){}.getType();
@@ -2480,7 +2552,8 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2542,7 +2615,8 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetDmExclusionResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2559,7 +2633,8 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetDmExclusionResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2578,7 +2653,8 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -2599,13 +2675,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetGdpPolicyInfoCall(String centralManagerId, String policyName, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetGdpPolicyInfoCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable String policyName, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2655,7 +2732,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorGetGdpPolicyInfoValidateBeforeCall(String centralManagerId, String policyName, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorGetGdpPolicyInfoValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable String policyName, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorGetGdpPolicyInfo(Async)");
@@ -2673,13 +2750,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetPolicyInfoResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3GetPolicyInfoResponse guardiumConnectorGetGdpPolicyInfo(String centralManagerId, String policyName) throws ApiException {
+    public Guardiumconnectorv3GetPolicyInfoResponse guardiumConnectorGetGdpPolicyInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable String policyName) throws ApiException {
         ApiResponse<Guardiumconnectorv3GetPolicyInfoResponse> localVarResp = guardiumConnectorGetGdpPolicyInfoWithHttpInfo(centralManagerId, policyName);
         return localVarResp.getData();
     }
@@ -2692,13 +2770,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetPolicyInfoResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3GetPolicyInfoResponse> guardiumConnectorGetGdpPolicyInfoWithHttpInfo(String centralManagerId, String policyName) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3GetPolicyInfoResponse> guardiumConnectorGetGdpPolicyInfoWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable String policyName) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorGetGdpPolicyInfoValidateBeforeCall(centralManagerId, policyName, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetPolicyInfoResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2713,13 +2792,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetGdpPolicyInfoAsync(String centralManagerId, String policyName, final ApiCallback<Guardiumconnectorv3GetPolicyInfoResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetGdpPolicyInfoAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable String policyName, final ApiCallback<Guardiumconnectorv3GetPolicyInfoResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorGetGdpPolicyInfoValidateBeforeCall(centralManagerId, policyName, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetPolicyInfoResponse>(){}.getType();
@@ -2733,13 +2813,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetGdpPolicySummariesCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetGdpPolicySummariesCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2785,7 +2866,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorGetGdpPolicySummariesValidateBeforeCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorGetGdpPolicySummariesValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorGetGdpPolicySummaries(Async)");
@@ -2802,13 +2883,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetPolicySummariesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3GetPolicySummariesResponse guardiumConnectorGetGdpPolicySummaries(String centralManagerId) throws ApiException {
+    public Guardiumconnectorv3GetPolicySummariesResponse guardiumConnectorGetGdpPolicySummaries(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         ApiResponse<Guardiumconnectorv3GetPolicySummariesResponse> localVarResp = guardiumConnectorGetGdpPolicySummariesWithHttpInfo(centralManagerId);
         return localVarResp.getData();
     }
@@ -2820,13 +2902,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetPolicySummariesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3GetPolicySummariesResponse> guardiumConnectorGetGdpPolicySummariesWithHttpInfo(String centralManagerId) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3GetPolicySummariesResponse> guardiumConnectorGetGdpPolicySummariesWithHttpInfo(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorGetGdpPolicySummariesValidateBeforeCall(centralManagerId, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetPolicySummariesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2840,13 +2923,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetGdpPolicySummariesAsync(String centralManagerId, final ApiCallback<Guardiumconnectorv3GetPolicySummariesResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetGdpPolicySummariesAsync(@javax.annotation.Nonnull String centralManagerId, final ApiCallback<Guardiumconnectorv3GetPolicySummariesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorGetGdpPolicySummariesValidateBeforeCall(centralManagerId, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetPolicySummariesResponse>(){}.getType();
@@ -2861,13 +2945,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetHealthInfoCall(String centralManagerId, Boolean useFallback, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetHealthInfoCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable Boolean useFallback, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2917,7 +3002,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorGetHealthInfoValidateBeforeCall(String centralManagerId, Boolean useFallback, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorGetHealthInfoValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable Boolean useFallback, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorGetHealthInfo(Async)");
@@ -2935,13 +3020,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetHealthInfoResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3GetHealthInfoResponse guardiumConnectorGetHealthInfo(String centralManagerId, Boolean useFallback) throws ApiException {
+    public Guardiumconnectorv3GetHealthInfoResponse guardiumConnectorGetHealthInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable Boolean useFallback) throws ApiException {
         ApiResponse<Guardiumconnectorv3GetHealthInfoResponse> localVarResp = guardiumConnectorGetHealthInfoWithHttpInfo(centralManagerId, useFallback);
         return localVarResp.getData();
     }
@@ -2954,13 +3040,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetHealthInfoResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3GetHealthInfoResponse> guardiumConnectorGetHealthInfoWithHttpInfo(String centralManagerId, Boolean useFallback) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3GetHealthInfoResponse> guardiumConnectorGetHealthInfoWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable Boolean useFallback) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorGetHealthInfoValidateBeforeCall(centralManagerId, useFallback, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetHealthInfoResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2975,13 +3062,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetHealthInfoAsync(String centralManagerId, Boolean useFallback, final ApiCallback<Guardiumconnectorv3GetHealthInfoResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetHealthInfoAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable Boolean useFallback, final ApiCallback<Guardiumconnectorv3GetHealthInfoResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorGetHealthInfoValidateBeforeCall(centralManagerId, useFallback, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetHealthInfoResponse>(){}.getType();
@@ -2995,13 +3083,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetLatestDMExtractionProfileCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetLatestDMExtractionProfileCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3047,7 +3136,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorGetLatestDMExtractionProfileValidateBeforeCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorGetLatestDMExtractionProfileValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorGetLatestDMExtractionProfile(Async)");
@@ -3064,13 +3153,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetLatestDMExtractionProfileResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3GetLatestDMExtractionProfileResponse guardiumConnectorGetLatestDMExtractionProfile(String centralManagerId) throws ApiException {
+    public Guardiumconnectorv3GetLatestDMExtractionProfileResponse guardiumConnectorGetLatestDMExtractionProfile(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         ApiResponse<Guardiumconnectorv3GetLatestDMExtractionProfileResponse> localVarResp = guardiumConnectorGetLatestDMExtractionProfileWithHttpInfo(centralManagerId);
         return localVarResp.getData();
     }
@@ -3082,13 +3172,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetLatestDMExtractionProfileResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3GetLatestDMExtractionProfileResponse> guardiumConnectorGetLatestDMExtractionProfileWithHttpInfo(String centralManagerId) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3GetLatestDMExtractionProfileResponse> guardiumConnectorGetLatestDMExtractionProfileWithHttpInfo(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorGetLatestDMExtractionProfileValidateBeforeCall(centralManagerId, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetLatestDMExtractionProfileResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3102,13 +3193,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetLatestDMExtractionProfileAsync(String centralManagerId, final ApiCallback<Guardiumconnectorv3GetLatestDMExtractionProfileResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetLatestDMExtractionProfileAsync(@javax.annotation.Nonnull String centralManagerId, final ApiCallback<Guardiumconnectorv3GetLatestDMExtractionProfileResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorGetLatestDMExtractionProfileValidateBeforeCall(centralManagerId, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetLatestDMExtractionProfileResponse>(){}.getType();
@@ -3122,13 +3214,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetStreamingStatusCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetStreamingStatusCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3174,7 +3267,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorGetStreamingStatusValidateBeforeCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorGetStreamingStatusValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorGetStreamingStatus(Async)");
@@ -3191,13 +3284,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetStreamingStatusResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3GetStreamingStatusResponse guardiumConnectorGetStreamingStatus(String centralManagerId) throws ApiException {
+    public Guardiumconnectorv3GetStreamingStatusResponse guardiumConnectorGetStreamingStatus(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         ApiResponse<Guardiumconnectorv3GetStreamingStatusResponse> localVarResp = guardiumConnectorGetStreamingStatusWithHttpInfo(centralManagerId);
         return localVarResp.getData();
     }
@@ -3209,13 +3303,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetStreamingStatusResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3GetStreamingStatusResponse> guardiumConnectorGetStreamingStatusWithHttpInfo(String centralManagerId) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3GetStreamingStatusResponse> guardiumConnectorGetStreamingStatusWithHttpInfo(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorGetStreamingStatusValidateBeforeCall(centralManagerId, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetStreamingStatusResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3229,13 +3324,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetStreamingStatusAsync(String centralManagerId, final ApiCallback<Guardiumconnectorv3GetStreamingStatusResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetStreamingStatusAsync(@javax.annotation.Nonnull String centralManagerId, final ApiCallback<Guardiumconnectorv3GetStreamingStatusResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorGetStreamingStatusValidateBeforeCall(centralManagerId, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetStreamingStatusResponse>(){}.getType();
@@ -3249,13 +3345,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetSyncDMsCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetSyncDMsCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3301,7 +3398,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorGetSyncDMsValidateBeforeCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorGetSyncDMsValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorGetSyncDMs(Async)");
@@ -3318,13 +3415,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetSyncDMsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3GetSyncDMsResponse guardiumConnectorGetSyncDMs(String centralManagerId) throws ApiException {
+    public Guardiumconnectorv3GetSyncDMsResponse guardiumConnectorGetSyncDMs(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         ApiResponse<Guardiumconnectorv3GetSyncDMsResponse> localVarResp = guardiumConnectorGetSyncDMsWithHttpInfo(centralManagerId);
         return localVarResp.getData();
     }
@@ -3336,13 +3434,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetSyncDMsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3GetSyncDMsResponse> guardiumConnectorGetSyncDMsWithHttpInfo(String centralManagerId) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3GetSyncDMsResponse> guardiumConnectorGetSyncDMsWithHttpInfo(@javax.annotation.Nonnull String centralManagerId) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorGetSyncDMsValidateBeforeCall(centralManagerId, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetSyncDMsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3356,13 +3455,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetSyncDMsAsync(String centralManagerId, final ApiCallback<Guardiumconnectorv3GetSyncDMsResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetSyncDMsAsync(@javax.annotation.Nonnull String centralManagerId, final ApiCallback<Guardiumconnectorv3GetSyncDMsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorGetSyncDMsValidateBeforeCall(centralManagerId, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetSyncDMsResponse>(){}.getType();
@@ -3375,7 +3475,8 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -3437,7 +3538,8 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetTaskTypesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -3454,7 +3556,8 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetTaskTypesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -3473,7 +3576,8 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -3496,13 +3600,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetTasksCall(String centralManagerId, String taskId, String taskType, String keyObject, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetTasksCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable String taskId, @javax.annotation.Nullable String taskType, @javax.annotation.Nullable String keyObject, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3560,7 +3665,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorGetTasksValidateBeforeCall(String centralManagerId, String taskId, String taskType, String keyObject, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorGetTasksValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable String taskId, @javax.annotation.Nullable String taskType, @javax.annotation.Nullable String keyObject, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorGetTasks(Async)");
@@ -3580,13 +3685,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3GetTasksResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3GetTasksResponse guardiumConnectorGetTasks(String centralManagerId, String taskId, String taskType, String keyObject) throws ApiException {
+    public Guardiumconnectorv3GetTasksResponse guardiumConnectorGetTasks(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable String taskId, @javax.annotation.Nullable String taskType, @javax.annotation.Nullable String keyObject) throws ApiException {
         ApiResponse<Guardiumconnectorv3GetTasksResponse> localVarResp = guardiumConnectorGetTasksWithHttpInfo(centralManagerId, taskId, taskType, keyObject);
         return localVarResp.getData();
     }
@@ -3601,13 +3707,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3GetTasksResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3GetTasksResponse> guardiumConnectorGetTasksWithHttpInfo(String centralManagerId, String taskId, String taskType, String keyObject) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3GetTasksResponse> guardiumConnectorGetTasksWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable String taskId, @javax.annotation.Nullable String taskType, @javax.annotation.Nullable String keyObject) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorGetTasksValidateBeforeCall(centralManagerId, taskId, taskType, keyObject, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetTasksResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3624,13 +3731,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorGetTasksAsync(String centralManagerId, String taskId, String taskType, String keyObject, final ApiCallback<Guardiumconnectorv3GetTasksResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorGetTasksAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nullable String taskId, @javax.annotation.Nullable String taskType, @javax.annotation.Nullable String keyObject, final ApiCallback<Guardiumconnectorv3GetTasksResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorGetTasksValidateBeforeCall(centralManagerId, taskId, taskType, keyObject, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3GetTasksResponse>(){}.getType();
@@ -3645,13 +3753,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorRunGDPReportCall(String centralManagerId, Guardiumconnectorv3RunGDPReportRequest guardiumconnectorv3RunGDPReportRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorRunGDPReportCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3RunGDPReportRequest guardiumconnectorv3RunGDPReportRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3698,7 +3807,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorRunGDPReportValidateBeforeCall(String centralManagerId, Guardiumconnectorv3RunGDPReportRequest guardiumconnectorv3RunGDPReportRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorRunGDPReportValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3RunGDPReportRequest guardiumconnectorv3RunGDPReportRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorRunGDPReport(Async)");
@@ -3721,13 +3830,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3RunGDPReportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3RunGDPReportResponse guardiumConnectorRunGDPReport(String centralManagerId, Guardiumconnectorv3RunGDPReportRequest guardiumconnectorv3RunGDPReportRequest) throws ApiException {
+    public Guardiumconnectorv3RunGDPReportResponse guardiumConnectorRunGDPReport(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3RunGDPReportRequest guardiumconnectorv3RunGDPReportRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3RunGDPReportResponse> localVarResp = guardiumConnectorRunGDPReportWithHttpInfo(centralManagerId, guardiumconnectorv3RunGDPReportRequest);
         return localVarResp.getData();
     }
@@ -3740,13 +3850,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3RunGDPReportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3RunGDPReportResponse> guardiumConnectorRunGDPReportWithHttpInfo(String centralManagerId, Guardiumconnectorv3RunGDPReportRequest guardiumconnectorv3RunGDPReportRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3RunGDPReportResponse> guardiumConnectorRunGDPReportWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3RunGDPReportRequest guardiumconnectorv3RunGDPReportRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorRunGDPReportValidateBeforeCall(centralManagerId, guardiumconnectorv3RunGDPReportRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3RunGDPReportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3761,13 +3872,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorRunGDPReportAsync(String centralManagerId, Guardiumconnectorv3RunGDPReportRequest guardiumconnectorv3RunGDPReportRequest, final ApiCallback<Guardiumconnectorv3RunGDPReportResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorRunGDPReportAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3RunGDPReportRequest guardiumconnectorv3RunGDPReportRequest, final ApiCallback<Guardiumconnectorv3RunGDPReportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorRunGDPReportValidateBeforeCall(centralManagerId, guardiumconnectorv3RunGDPReportRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3RunGDPReportResponse>(){}.getType();
@@ -3781,13 +3893,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorSetupCMCall(Guardiumconnectorv3SetupCMRequest guardiumconnectorv3SetupCMRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorSetupCMCall(@javax.annotation.Nonnull Guardiumconnectorv3SetupCMRequest guardiumconnectorv3SetupCMRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3833,7 +3946,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorSetupCMValidateBeforeCall(Guardiumconnectorv3SetupCMRequest guardiumconnectorv3SetupCMRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorSetupCMValidateBeforeCall(@javax.annotation.Nonnull Guardiumconnectorv3SetupCMRequest guardiumconnectorv3SetupCMRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'guardiumconnectorv3SetupCMRequest' is set
         if (guardiumconnectorv3SetupCMRequest == null) {
             throw new ApiException("Missing the required parameter 'guardiumconnectorv3SetupCMRequest' when calling guardiumConnectorSetupCM(Async)");
@@ -3850,13 +3963,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3SetupCMResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3SetupCMResponse guardiumConnectorSetupCM(Guardiumconnectorv3SetupCMRequest guardiumconnectorv3SetupCMRequest) throws ApiException {
+    public Guardiumconnectorv3SetupCMResponse guardiumConnectorSetupCM(@javax.annotation.Nonnull Guardiumconnectorv3SetupCMRequest guardiumconnectorv3SetupCMRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3SetupCMResponse> localVarResp = guardiumConnectorSetupCMWithHttpInfo(guardiumconnectorv3SetupCMRequest);
         return localVarResp.getData();
     }
@@ -3868,13 +3982,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3SetupCMResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3SetupCMResponse> guardiumConnectorSetupCMWithHttpInfo(Guardiumconnectorv3SetupCMRequest guardiumconnectorv3SetupCMRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3SetupCMResponse> guardiumConnectorSetupCMWithHttpInfo(@javax.annotation.Nonnull Guardiumconnectorv3SetupCMRequest guardiumconnectorv3SetupCMRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorSetupCMValidateBeforeCall(guardiumconnectorv3SetupCMRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3SetupCMResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3888,13 +4003,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorSetupCMAsync(Guardiumconnectorv3SetupCMRequest guardiumconnectorv3SetupCMRequest, final ApiCallback<Guardiumconnectorv3SetupCMResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorSetupCMAsync(@javax.annotation.Nonnull Guardiumconnectorv3SetupCMRequest guardiumconnectorv3SetupCMRequest, final ApiCallback<Guardiumconnectorv3SetupCMResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorSetupCMValidateBeforeCall(guardiumconnectorv3SetupCMRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3SetupCMResponse>(){}.getType();
@@ -3909,13 +4025,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorSetupDatamartsCall(String centralManagerId, Guardiumconnectorv3SetupDatamartsRequest guardiumconnectorv3SetupDatamartsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorSetupDatamartsCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3SetupDatamartsRequest guardiumconnectorv3SetupDatamartsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3962,7 +4079,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorSetupDatamartsValidateBeforeCall(String centralManagerId, Guardiumconnectorv3SetupDatamartsRequest guardiumconnectorv3SetupDatamartsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorSetupDatamartsValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3SetupDatamartsRequest guardiumconnectorv3SetupDatamartsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorSetupDatamarts(Async)");
@@ -3985,13 +4102,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3SetupDatamartsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3SetupDatamartsResponse guardiumConnectorSetupDatamarts(String centralManagerId, Guardiumconnectorv3SetupDatamartsRequest guardiumconnectorv3SetupDatamartsRequest) throws ApiException {
+    public Guardiumconnectorv3SetupDatamartsResponse guardiumConnectorSetupDatamarts(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3SetupDatamartsRequest guardiumconnectorv3SetupDatamartsRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3SetupDatamartsResponse> localVarResp = guardiumConnectorSetupDatamartsWithHttpInfo(centralManagerId, guardiumconnectorv3SetupDatamartsRequest);
         return localVarResp.getData();
     }
@@ -4004,13 +4122,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3SetupDatamartsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3SetupDatamartsResponse> guardiumConnectorSetupDatamartsWithHttpInfo(String centralManagerId, Guardiumconnectorv3SetupDatamartsRequest guardiumconnectorv3SetupDatamartsRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3SetupDatamartsResponse> guardiumConnectorSetupDatamartsWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3SetupDatamartsRequest guardiumconnectorv3SetupDatamartsRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorSetupDatamartsValidateBeforeCall(centralManagerId, guardiumconnectorv3SetupDatamartsRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3SetupDatamartsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4025,13 +4144,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorSetupDatamartsAsync(String centralManagerId, Guardiumconnectorv3SetupDatamartsRequest guardiumconnectorv3SetupDatamartsRequest, final ApiCallback<Guardiumconnectorv3SetupDatamartsResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorSetupDatamartsAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3SetupDatamartsRequest guardiumconnectorv3SetupDatamartsRequest, final ApiCallback<Guardiumconnectorv3SetupDatamartsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorSetupDatamartsValidateBeforeCall(centralManagerId, guardiumconnectorv3SetupDatamartsRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3SetupDatamartsResponse>(){}.getType();
@@ -4046,13 +4166,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorTaskErrorCall(String centralManagerId, Guardiumconnectorv3TaskErrorRequest guardiumconnectorv3TaskErrorRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorTaskErrorCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3TaskErrorRequest guardiumconnectorv3TaskErrorRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4099,7 +4220,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorTaskErrorValidateBeforeCall(String centralManagerId, Guardiumconnectorv3TaskErrorRequest guardiumconnectorv3TaskErrorRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorTaskErrorValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3TaskErrorRequest guardiumconnectorv3TaskErrorRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorTaskError(Async)");
@@ -4122,13 +4243,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3TaskErrorResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3TaskErrorResponse guardiumConnectorTaskError(String centralManagerId, Guardiumconnectorv3TaskErrorRequest guardiumconnectorv3TaskErrorRequest) throws ApiException {
+    public Guardiumconnectorv3TaskErrorResponse guardiumConnectorTaskError(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3TaskErrorRequest guardiumconnectorv3TaskErrorRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3TaskErrorResponse> localVarResp = guardiumConnectorTaskErrorWithHttpInfo(centralManagerId, guardiumconnectorv3TaskErrorRequest);
         return localVarResp.getData();
     }
@@ -4141,13 +4263,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3TaskErrorResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3TaskErrorResponse> guardiumConnectorTaskErrorWithHttpInfo(String centralManagerId, Guardiumconnectorv3TaskErrorRequest guardiumconnectorv3TaskErrorRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3TaskErrorResponse> guardiumConnectorTaskErrorWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3TaskErrorRequest guardiumconnectorv3TaskErrorRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorTaskErrorValidateBeforeCall(centralManagerId, guardiumconnectorv3TaskErrorRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3TaskErrorResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4162,13 +4285,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorTaskErrorAsync(String centralManagerId, Guardiumconnectorv3TaskErrorRequest guardiumconnectorv3TaskErrorRequest, final ApiCallback<Guardiumconnectorv3TaskErrorResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorTaskErrorAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3TaskErrorRequest guardiumconnectorv3TaskErrorRequest, final ApiCallback<Guardiumconnectorv3TaskErrorResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorTaskErrorValidateBeforeCall(centralManagerId, guardiumconnectorv3TaskErrorRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3TaskErrorResponse>(){}.getType();
@@ -4182,13 +4306,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorTestDatabaseConnectionCall(Guardiumconnectorv3DatabaseConnectionStringRequest guardiumconnectorv3DatabaseConnectionStringRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorTestDatabaseConnectionCall(@javax.annotation.Nonnull Guardiumconnectorv3DatabaseConnectionStringRequest guardiumconnectorv3DatabaseConnectionStringRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4234,7 +4359,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorTestDatabaseConnectionValidateBeforeCall(Guardiumconnectorv3DatabaseConnectionStringRequest guardiumconnectorv3DatabaseConnectionStringRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorTestDatabaseConnectionValidateBeforeCall(@javax.annotation.Nonnull Guardiumconnectorv3DatabaseConnectionStringRequest guardiumconnectorv3DatabaseConnectionStringRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'guardiumconnectorv3DatabaseConnectionStringRequest' is set
         if (guardiumconnectorv3DatabaseConnectionStringRequest == null) {
             throw new ApiException("Missing the required parameter 'guardiumconnectorv3DatabaseConnectionStringRequest' when calling guardiumConnectorTestDatabaseConnection(Async)");
@@ -4251,13 +4376,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3DatabaseResultResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3DatabaseResultResponse guardiumConnectorTestDatabaseConnection(Guardiumconnectorv3DatabaseConnectionStringRequest guardiumconnectorv3DatabaseConnectionStringRequest) throws ApiException {
+    public Guardiumconnectorv3DatabaseResultResponse guardiumConnectorTestDatabaseConnection(@javax.annotation.Nonnull Guardiumconnectorv3DatabaseConnectionStringRequest guardiumconnectorv3DatabaseConnectionStringRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3DatabaseResultResponse> localVarResp = guardiumConnectorTestDatabaseConnectionWithHttpInfo(guardiumconnectorv3DatabaseConnectionStringRequest);
         return localVarResp.getData();
     }
@@ -4269,13 +4395,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3DatabaseResultResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3DatabaseResultResponse> guardiumConnectorTestDatabaseConnectionWithHttpInfo(Guardiumconnectorv3DatabaseConnectionStringRequest guardiumconnectorv3DatabaseConnectionStringRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3DatabaseResultResponse> guardiumConnectorTestDatabaseConnectionWithHttpInfo(@javax.annotation.Nonnull Guardiumconnectorv3DatabaseConnectionStringRequest guardiumconnectorv3DatabaseConnectionStringRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorTestDatabaseConnectionValidateBeforeCall(guardiumconnectorv3DatabaseConnectionStringRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DatabaseResultResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4289,13 +4416,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorTestDatabaseConnectionAsync(Guardiumconnectorv3DatabaseConnectionStringRequest guardiumconnectorv3DatabaseConnectionStringRequest, final ApiCallback<Guardiumconnectorv3DatabaseResultResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorTestDatabaseConnectionAsync(@javax.annotation.Nonnull Guardiumconnectorv3DatabaseConnectionStringRequest guardiumconnectorv3DatabaseConnectionStringRequest, final ApiCallback<Guardiumconnectorv3DatabaseResultResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorTestDatabaseConnectionValidateBeforeCall(guardiumconnectorv3DatabaseConnectionStringRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3DatabaseResultResponse>(){}.getType();
@@ -4309,13 +4437,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorUpdateDmExclusionCall(Guardiumconnectorv3UpdateDmExclusionRequest guardiumconnectorv3UpdateDmExclusionRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorUpdateDmExclusionCall(@javax.annotation.Nonnull Guardiumconnectorv3UpdateDmExclusionRequest guardiumconnectorv3UpdateDmExclusionRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4361,7 +4490,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorUpdateDmExclusionValidateBeforeCall(Guardiumconnectorv3UpdateDmExclusionRequest guardiumconnectorv3UpdateDmExclusionRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorUpdateDmExclusionValidateBeforeCall(@javax.annotation.Nonnull Guardiumconnectorv3UpdateDmExclusionRequest guardiumconnectorv3UpdateDmExclusionRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'guardiumconnectorv3UpdateDmExclusionRequest' is set
         if (guardiumconnectorv3UpdateDmExclusionRequest == null) {
             throw new ApiException("Missing the required parameter 'guardiumconnectorv3UpdateDmExclusionRequest' when calling guardiumConnectorUpdateDmExclusion(Async)");
@@ -4378,13 +4507,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3UpdateDmExclusionResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3UpdateDmExclusionResponse guardiumConnectorUpdateDmExclusion(Guardiumconnectorv3UpdateDmExclusionRequest guardiumconnectorv3UpdateDmExclusionRequest) throws ApiException {
+    public Guardiumconnectorv3UpdateDmExclusionResponse guardiumConnectorUpdateDmExclusion(@javax.annotation.Nonnull Guardiumconnectorv3UpdateDmExclusionRequest guardiumconnectorv3UpdateDmExclusionRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3UpdateDmExclusionResponse> localVarResp = guardiumConnectorUpdateDmExclusionWithHttpInfo(guardiumconnectorv3UpdateDmExclusionRequest);
         return localVarResp.getData();
     }
@@ -4396,13 +4526,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3UpdateDmExclusionResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3UpdateDmExclusionResponse> guardiumConnectorUpdateDmExclusionWithHttpInfo(Guardiumconnectorv3UpdateDmExclusionRequest guardiumconnectorv3UpdateDmExclusionRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3UpdateDmExclusionResponse> guardiumConnectorUpdateDmExclusionWithHttpInfo(@javax.annotation.Nonnull Guardiumconnectorv3UpdateDmExclusionRequest guardiumconnectorv3UpdateDmExclusionRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorUpdateDmExclusionValidateBeforeCall(guardiumconnectorv3UpdateDmExclusionRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3UpdateDmExclusionResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4416,13 +4547,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorUpdateDmExclusionAsync(Guardiumconnectorv3UpdateDmExclusionRequest guardiumconnectorv3UpdateDmExclusionRequest, final ApiCallback<Guardiumconnectorv3UpdateDmExclusionResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorUpdateDmExclusionAsync(@javax.annotation.Nonnull Guardiumconnectorv3UpdateDmExclusionRequest guardiumconnectorv3UpdateDmExclusionRequest, final ApiCallback<Guardiumconnectorv3UpdateDmExclusionResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorUpdateDmExclusionValidateBeforeCall(guardiumconnectorv3UpdateDmExclusionRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3UpdateDmExclusionResponse>(){}.getType();
@@ -4437,13 +4569,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorUpdateStreamingCall(String centralManagerId, Guardiumconnectorv3UpdateStreamingRequest guardiumconnectorv3UpdateStreamingRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorUpdateStreamingCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3UpdateStreamingRequest guardiumconnectorv3UpdateStreamingRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4490,7 +4623,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorUpdateStreamingValidateBeforeCall(String centralManagerId, Guardiumconnectorv3UpdateStreamingRequest guardiumconnectorv3UpdateStreamingRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorUpdateStreamingValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3UpdateStreamingRequest guardiumconnectorv3UpdateStreamingRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorUpdateStreaming(Async)");
@@ -4513,13 +4646,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3UpdateStreamingResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3UpdateStreamingResponse guardiumConnectorUpdateStreaming(String centralManagerId, Guardiumconnectorv3UpdateStreamingRequest guardiumconnectorv3UpdateStreamingRequest) throws ApiException {
+    public Guardiumconnectorv3UpdateStreamingResponse guardiumConnectorUpdateStreaming(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3UpdateStreamingRequest guardiumconnectorv3UpdateStreamingRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3UpdateStreamingResponse> localVarResp = guardiumConnectorUpdateStreamingWithHttpInfo(centralManagerId, guardiumconnectorv3UpdateStreamingRequest);
         return localVarResp.getData();
     }
@@ -4532,13 +4666,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3UpdateStreamingResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3UpdateStreamingResponse> guardiumConnectorUpdateStreamingWithHttpInfo(String centralManagerId, Guardiumconnectorv3UpdateStreamingRequest guardiumconnectorv3UpdateStreamingRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3UpdateStreamingResponse> guardiumConnectorUpdateStreamingWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3UpdateStreamingRequest guardiumconnectorv3UpdateStreamingRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorUpdateStreamingValidateBeforeCall(centralManagerId, guardiumconnectorv3UpdateStreamingRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3UpdateStreamingResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4553,13 +4688,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorUpdateStreamingAsync(String centralManagerId, Guardiumconnectorv3UpdateStreamingRequest guardiumconnectorv3UpdateStreamingRequest, final ApiCallback<Guardiumconnectorv3UpdateStreamingResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorUpdateStreamingAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Guardiumconnectorv3UpdateStreamingRequest guardiumconnectorv3UpdateStreamingRequest, final ApiCallback<Guardiumconnectorv3UpdateStreamingResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorUpdateStreamingValidateBeforeCall(centralManagerId, guardiumconnectorv3UpdateStreamingRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3UpdateStreamingResponse>(){}.getType();
@@ -4575,13 +4711,14 @@ public class GuardiumConnectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorUpdateTaskCall(String centralManagerId, String taskId, Guardiumconnectorv3UpdateTaskRequest guardiumconnectorv3UpdateTaskRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorUpdateTaskCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull String taskId, @javax.annotation.Nonnull Guardiumconnectorv3UpdateTaskRequest guardiumconnectorv3UpdateTaskRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4629,7 +4766,7 @@ public class GuardiumConnectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call guardiumConnectorUpdateTaskValidateBeforeCall(String centralManagerId, String taskId, Guardiumconnectorv3UpdateTaskRequest guardiumconnectorv3UpdateTaskRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call guardiumConnectorUpdateTaskValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull String taskId, @javax.annotation.Nonnull Guardiumconnectorv3UpdateTaskRequest guardiumconnectorv3UpdateTaskRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling guardiumConnectorUpdateTask(Async)");
@@ -4658,13 +4795,14 @@ public class GuardiumConnectorApi {
      * @return Guardiumconnectorv3UpdateTaskResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Guardiumconnectorv3UpdateTaskResponse guardiumConnectorUpdateTask(String centralManagerId, String taskId, Guardiumconnectorv3UpdateTaskRequest guardiumconnectorv3UpdateTaskRequest) throws ApiException {
+    public Guardiumconnectorv3UpdateTaskResponse guardiumConnectorUpdateTask(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull String taskId, @javax.annotation.Nonnull Guardiumconnectorv3UpdateTaskRequest guardiumconnectorv3UpdateTaskRequest) throws ApiException {
         ApiResponse<Guardiumconnectorv3UpdateTaskResponse> localVarResp = guardiumConnectorUpdateTaskWithHttpInfo(centralManagerId, taskId, guardiumconnectorv3UpdateTaskRequest);
         return localVarResp.getData();
     }
@@ -4678,13 +4816,14 @@ public class GuardiumConnectorApi {
      * @return ApiResponse&lt;Guardiumconnectorv3UpdateTaskResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Guardiumconnectorv3UpdateTaskResponse> guardiumConnectorUpdateTaskWithHttpInfo(String centralManagerId, String taskId, Guardiumconnectorv3UpdateTaskRequest guardiumconnectorv3UpdateTaskRequest) throws ApiException {
+    public ApiResponse<Guardiumconnectorv3UpdateTaskResponse> guardiumConnectorUpdateTaskWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull String taskId, @javax.annotation.Nonnull Guardiumconnectorv3UpdateTaskRequest guardiumconnectorv3UpdateTaskRequest) throws ApiException {
         okhttp3.Call localVarCall = guardiumConnectorUpdateTaskValidateBeforeCall(centralManagerId, taskId, guardiumconnectorv3UpdateTaskRequest, null);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3UpdateTaskResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -4700,13 +4839,14 @@ public class GuardiumConnectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call guardiumConnectorUpdateTaskAsync(String centralManagerId, String taskId, Guardiumconnectorv3UpdateTaskRequest guardiumconnectorv3UpdateTaskRequest, final ApiCallback<Guardiumconnectorv3UpdateTaskResponse> _callback) throws ApiException {
+    public okhttp3.Call guardiumConnectorUpdateTaskAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull String taskId, @javax.annotation.Nonnull Guardiumconnectorv3UpdateTaskRequest guardiumconnectorv3UpdateTaskRequest, final ApiCallback<Guardiumconnectorv3UpdateTaskResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = guardiumConnectorUpdateTaskValidateBeforeCall(centralManagerId, taskId, guardiumconnectorv3UpdateTaskRequest, _callback);
         Type localVarReturnType = new TypeToken<Guardiumconnectorv3UpdateTaskResponse>(){}.getType();

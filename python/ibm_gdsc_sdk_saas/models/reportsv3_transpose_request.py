@@ -77,9 +77,9 @@ class Reportsv3TransposeRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in contribution_pointers (list)
         _items = []
         if self.contribution_pointers:
-            for _item in self.contribution_pointers:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_contribution_pointers in self.contribution_pointers:
+                if _item_contribution_pointers:
+                    _items.append(_item_contribution_pointers.to_dict())
             _dict['contribution_pointers'] = _items
         return _dict
 

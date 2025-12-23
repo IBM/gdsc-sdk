@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetJoinsResponse is the response for getting all custom joins.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3GetJoinsResponse {
   public static final String SERIALIZED_NAME_JOIN_DEFS = "join_defs";
   @SerializedName(SERIALIZED_NAME_JOIN_DEFS)
+  @javax.annotation.Nullable
   private List<Reportsv3JoinDefinitionWithID> joinDefs = new ArrayList<>();
 
   public Reportsv3GetJoinsResponse() {
   }
 
-  public Reportsv3GetJoinsResponse joinDefs(List<Reportsv3JoinDefinitionWithID> joinDefs) {
+  public Reportsv3GetJoinsResponse joinDefs(@javax.annotation.Nullable List<Reportsv3JoinDefinitionWithID> joinDefs) {
     this.joinDefs = joinDefs;
     return this;
   }
@@ -74,16 +76,16 @@ public class Reportsv3GetJoinsResponse {
     return this;
   }
 
-   /**
+  /**
    * List of objects including join ID and join definition.
    * @return joinDefs
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3JoinDefinitionWithID> getJoinDefs() {
     return joinDefs;
   }
 
-  public void setJoinDefs(List<Reportsv3JoinDefinitionWithID> joinDefs) {
+  public void setJoinDefs(@javax.annotation.Nullable List<Reportsv3JoinDefinitionWithID> joinDefs) {
     this.joinDefs = joinDefs;
   }
 
@@ -132,23 +134,22 @@ public class Reportsv3GetJoinsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("join_defs");
+    openapiFields = new HashSet<String>(Arrays.asList("join_defs"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetJoinsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetJoinsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3GetJoinsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3GetJoinsResponse is not found in the empty JSON string", Reportsv3GetJoinsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3GetJoinsResponse is not found in the empty JSON string", Reportsv3GetJoinsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Reportsv3GetJoinsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3GetJoinsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3GetJoinsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3GetJoinsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Reportsv3GetJoinsResponse {
         if (jsonArrayjoinDefs != null) {
           // ensure the json data is an array
           if (!jsonObj.get("join_defs").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `join_defs` to be an array in the JSON string but got `%s`", jsonObj.get("join_defs").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `join_defs` to be an array in the JSON string but got `%s`", jsonObj.get("join_defs").toString()));
           }
 
           // validate the optional field `join_defs` (array)
@@ -205,22 +206,22 @@ public class Reportsv3GetJoinsResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsv3GetJoinsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3GetJoinsResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3GetJoinsResponse
-  */
+  /**
+   * Create an instance of Reportsv3GetJoinsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3GetJoinsResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3GetJoinsResponse
+   */
   public static Reportsv3GetJoinsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3GetJoinsResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsv3GetJoinsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3GetJoinsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

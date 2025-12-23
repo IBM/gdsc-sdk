@@ -72,9 +72,9 @@ class Reportsv3GetMeasuresResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in measures_list (list)
         _items = []
         if self.measures_list:
-            for _item in self.measures_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_measures_list in self.measures_list:
+                if _item_measures_list:
+                    _items.append(_item_measures_list.to_dict())
             _dict['measures_list'] = _items
         return _dict
 

@@ -82,14 +82,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateCategoryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateCategoryRequest = {
-  // Reportsv3CreateCategoryRequest
+const request: ReportsServiceApiReportsServiceCreateCategoryRequest = {
+  
   reportsv3CreateCategoryRequest: {
     category: {
       categoryDescription: "categoryDescription_example",
@@ -109,9 +109,8 @@ let body:.ReportsServiceApiReportsServiceCreateCategoryRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateCategory(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateCategory(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -152,14 +151,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateChartRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateChartRequest = {
-  // Reportsv3CreateChartRequest
+const request: ReportsServiceApiReportsServiceCreateChartRequest = {
+  
   reportsv3CreateChartRequest: {
     chartSettings: {
       chartId: "chartId_example",
@@ -181,9 +180,8 @@ let body:.ReportsServiceApiReportsServiceCreateChartRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateChart(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateChart(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -224,22 +222,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateChartTemplatev2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateChartTemplatev2Request = {
-  // Reportsv3CreateChartTemplatev2Request
+const request: ReportsServiceApiReportsServiceCreateChartTemplatev2Request = {
+  
   reportsv3CreateChartTemplatev2Request: {
     vegaDefinition: "vegaDefinition_example",
   },
 };
 
-apiInstance.reportsServiceCreateChartTemplatev2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateChartTemplatev2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -280,14 +277,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateChartv2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateChartv2Request = {
-  // Reportsv3CreateChartv2Request
+const request: ReportsServiceApiReportsServiceCreateChartv2Request = {
+  
   reportsv3CreateChartv2Request: {
     chartSettingsV2: {
       categorySequenceNumbers: [
@@ -310,9 +307,8 @@ let body:.ReportsServiceApiReportsServiceCreateChartv2Request = {
   },
 };
 
-apiInstance.reportsServiceCreateChartv2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateChartv2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -353,14 +349,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateControlRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateControlRequest = {
-  // Reportsv3CreateControlRequest
+const request: ReportsServiceApiReportsServiceCreateControlRequest = {
+  
   reportsv3CreateControlRequest: {
     control: {
       artifacts: [
@@ -396,9 +392,8 @@ let body:.ReportsServiceApiReportsServiceCreateControlRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateControl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateControl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -439,14 +434,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest = {
-  // Reportsv3CreateFieldsByCategoryRequest
+const request: ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest = {
+  
   reportsv3CreateFieldsByCategoryRequest: {
     fields: [
       {
@@ -467,9 +462,8 @@ let body:.ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateFieldsByCategory(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateFieldsByCategory(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -510,14 +504,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateGradeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateGradeRequest = {
-  // Reportsv3CreateGradeRequest
+const request: ReportsServiceApiReportsServiceCreateGradeRequest = {
+  
   reportsv3CreateGradeRequest: {
     grade: {
       controlId: 1,
@@ -546,9 +540,8 @@ let body:.ReportsServiceApiReportsServiceCreateGradeRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateGrade(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateGrade(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -589,14 +582,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateJoinRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateJoinRequest = {
-  // Reportsv3CreateJoinRequest
+const request: ReportsServiceApiReportsServiceCreateJoinRequest = {
+  
   reportsv3CreateJoinRequest: {
     joinDefinition: {
       categoryId: "categoryId_example",
@@ -615,9 +608,8 @@ let body:.ReportsServiceApiReportsServiceCreateJoinRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateJoin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateJoin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -658,14 +650,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateMeasureRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateMeasureRequest = {
-  // Reportsv3CreateMeasureRequest
+const request: ReportsServiceApiReportsServiceCreateMeasureRequest = {
+  
   reportsv3CreateMeasureRequest: {
     measure: {
       column: {
@@ -678,9 +670,8 @@ let body:.ReportsServiceApiReportsServiceCreateMeasureRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateMeasure(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateMeasure(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -721,14 +712,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateMetricRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateMetricRequest = {
-  // Reportsv3CreateMetricRequest
+const request: ReportsServiceApiReportsServiceCreateMetricRequest = {
+  
   reportsv3CreateMetricRequest: {
     metric: {
       column: {
@@ -744,9 +735,8 @@ let body:.ReportsServiceApiReportsServiceCreateMetricRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateMetric(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateMetric(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -787,14 +777,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateProgramRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateProgramRequest = {
-  // Reportsv3CreateProgramRequest
+const request: ReportsServiceApiReportsServiceCreateProgramRequest = {
+  
   reportsv3CreateProgramRequest: {
     program: {
       createUserId: "createUserId_example",
@@ -810,9 +800,8 @@ let body:.ReportsServiceApiReportsServiceCreateProgramRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateProgram(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateProgram(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -853,14 +842,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateReportRequest = {
-  // Reportsv3CreateReportRequest
+const request: ReportsServiceApiReportsServiceCreateReportRequest = {
+  
   reportsv3CreateReportRequest: {
     reportDefinition: {
       categoryId: "categoryId_example",
@@ -998,9 +987,8 @@ let body:.ReportsServiceApiReportsServiceCreateReportRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1041,14 +1029,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateRequirementRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateRequirementRequest = {
-  // Reportsv3CreateRequirementRequest
+const request: ReportsServiceApiReportsServiceCreateRequirementRequest = {
+  
   reportsv3CreateRequirementRequest: {
     requirement: {
       controlId: 1,
@@ -1067,9 +1055,8 @@ let body:.ReportsServiceApiReportsServiceCreateRequirementRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateRequirement(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateRequirement(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1110,14 +1097,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateVariantRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateVariantRequest = {
-  // Reportsv3CreateVariantRequest
+const request: ReportsServiceApiReportsServiceCreateVariantRequest = {
+  
   reportsv3CreateVariantRequest: {
     headerId: "headerId_example",
     rules: [
@@ -1133,9 +1120,8 @@ let body:.ReportsServiceApiReportsServiceCreateVariantRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateVariant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateVariant(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1176,22 +1162,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteCategoryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteCategoryRequest = {
-  // string | category id. (optional)
+const request: ReportsServiceApiReportsServiceDeleteCategoryRequest = {
+    // category id. (optional)
   categoryId: "category_id_example",
-  // string | table name. (optional)
+    // table name. (optional)
   tableName: "table_name_example",
 };
 
-apiInstance.reportsServiceDeleteCategory(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteCategory(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1233,20 +1218,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteChartRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteChartRequest = {
-  // string | The id of the chart to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteChartRequest = {
+    // The id of the chart to be deleted.
   chartId: "chart_id_example",
 };
 
-apiInstance.reportsServiceDeleteChart(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteChart(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1287,20 +1271,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteChartTemplatev2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteChartTemplatev2Request = {
-  // string | Unique template ID.
+const request: ReportsServiceApiReportsServiceDeleteChartTemplatev2Request = {
+    // Unique template ID.
   templateId: "template_id_example",
 };
 
-apiInstance.reportsServiceDeleteChartTemplatev2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteChartTemplatev2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1341,20 +1324,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteChartv2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteChartv2Request = {
-  // string | The ID of the chart for deletion.
+const request: ReportsServiceApiReportsServiceDeleteChartv2Request = {
+    // The ID of the chart for deletion.
   chartId: "chart_id_example",
 };
 
-apiInstance.reportsServiceDeleteChartv2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteChartv2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1395,24 +1377,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteControlRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteControlRequest = {
-  // number | The ID of the control to delete
+const request: ReportsServiceApiReportsServiceDeleteControlRequest = {
+    // The ID of the control to delete
   controlId: 1,
-  // Reportsv3DeleteControlRequest
+  
   reportsv3DeleteControlRequest: {
     controlId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteControl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteControl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1454,24 +1435,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest = {
-  // Array<string> | Header ids. (optional)
+const request: ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest = {
+    // Header ids. (optional)
   headerIds: [
     "header_ids_example",
   ],
-  // string | table name. (optional)
+    // table name. (optional)
   tableName: "table_name_example",
 };
 
-apiInstance.reportsServiceDeleteFieldsByCategory(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteFieldsByCategory(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1513,24 +1493,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteGradeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteGradeRequest = {
-  // number | The id of the grade to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteGradeRequest = {
+    // The id of the grade to be deleted.
   gradeId: 1,
-  // Reportsv3DeleteGradeRequest
+  
   reportsv3DeleteGradeRequest: {
     gradeId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteGrade(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteGrade(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1572,20 +1551,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteJoinRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteJoinRequest = {
-  // string | The id of the join to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteJoinRequest = {
+    // The id of the join to be deleted.
   joinId: "join_id_example",
 };
 
-apiInstance.reportsServiceDeleteJoin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteJoin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1626,24 +1604,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteMeasureRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteMeasureRequest = {
-  // number | The id of the measure to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteMeasureRequest = {
+    // The id of the measure to be deleted.
   measureId: 1,
-  // Reportsv3DeleteMeasureRequest
+  
   reportsv3DeleteMeasureRequest: {
     measureId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteMeasure(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteMeasure(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1685,24 +1662,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteMetricRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteMetricRequest = {
-  // number | The id of the metric to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteMetricRequest = {
+    // The id of the metric to be deleted.
   metricId: 1,
-  // Reportsv3DeleteMetricRequest
+  
   reportsv3DeleteMetricRequest: {
     metricId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteMetric(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteMetric(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1744,24 +1720,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteProgramRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteProgramRequest = {
-  // number | The ID of the program to delete
+const request: ReportsServiceApiReportsServiceDeleteProgramRequest = {
+    // The ID of the program to delete
   programId: 1,
-  // Reportsv3DeleteProgramRequest
+  
   reportsv3DeleteProgramRequest: {
     programId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteProgram(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteProgram(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1803,20 +1778,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteReportRequest = {
-  // string | The id of the Report to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteReportRequest = {
+    // The id of the Report to be deleted.
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceDeleteReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1857,24 +1831,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteRequirementRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteRequirementRequest = {
-  // number | The requirement to delete\'s ID
+const request: ReportsServiceApiReportsServiceDeleteRequirementRequest = {
+    // The requirement to delete\'s ID
   requirementId: 1,
-  // Reportsv3DeleteRequirementRequest
+  
   reportsv3DeleteRequirementRequest: {
     requirementId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteRequirement(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteRequirement(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1916,20 +1889,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteVariantRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteVariantRequest = {
-  // string | The id of the variant to delete
+const request: ReportsServiceApiReportsServiceDeleteVariantRequest = {
+    // The id of the variant to delete
   variantId: "variant_id_example",
 };
 
-apiInstance.reportsServiceDeleteVariant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteVariant(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1970,20 +1942,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetCategoriesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetCategoriesRequest = {
-  // string | Report ID. (optional)
+const request: ReportsServiceApiReportsServiceGetCategoriesRequest = {
+    // Report ID. (optional)
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceGetCategories(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetCategories(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2024,22 +1995,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetChartSettingsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetChartSettingsRequest = {
-  // string | Unique Chart ID. (optional)
+const request: ReportsServiceApiReportsServiceGetChartSettingsRequest = {
+    // Unique Chart ID. (optional)
   chartId: "chart_id_example",
-  // string | Unique Report ID. (optional)
+    // Unique Report ID. (optional)
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceGetChartSettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetChartSettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2081,22 +2051,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetChartSettingsv2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetChartSettingsv2Request = {
-  // string | Unique Chart ID. (optional)
+const request: ReportsServiceApiReportsServiceGetChartSettingsv2Request = {
+    // Unique Chart ID. (optional)
   chartId: "chart_id_example",
-  // string | Unique Report ID. (optional)
+    // Unique Report ID. (optional)
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceGetChartSettingsv2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetChartSettingsv2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2138,17 +2107,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetChartTemplatesv2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetChartTemplatesv2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2186,17 +2153,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetControls(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetControls(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2234,22 +2199,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest = {
-  // Array<string> | Category IDs. (optional)
+const request: ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest = {
+    // Category IDs. (optional)
   categoryIds: [
     "category_ids_example",
   ],
 };
 
-apiInstance.reportsServiceGetFieldsByCategories(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetFieldsByCategories(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2290,24 +2254,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetFieldsByCategoryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetFieldsByCategoryRequest = {
-  // string | Category ID. (optional)
+const request: ReportsServiceApiReportsServiceGetFieldsByCategoryRequest = {
+    // Category ID. (optional)
   categoryId: "category_id_example",
-  // string | Report ID. (optional)
+    // Report ID. (optional)
   reportId: "report_id_example",
-  // string | optional table name parameter. (optional)
+    // optional table name parameter. (optional)
   tableName: "table_name_example",
 };
 
-apiInstance.reportsServiceGetFieldsByCategory(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetFieldsByCategory(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2350,17 +2313,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetGrades(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetGrades(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2398,20 +2359,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetJoinsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetJoinsRequest = {
-  // string | Category ID (Optional). (optional)
+const request: ReportsServiceApiReportsServiceGetJoinsRequest = {
+    // Category ID (Optional). (optional)
   categoryId: "category_id_example",
 };
 
-apiInstance.reportsServiceGetJoins(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetJoins(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2452,17 +2412,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetMeasures(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetMeasures(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2500,17 +2458,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetMetrics(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetMetrics(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2548,17 +2504,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetPrograms(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetPrograms(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2596,14 +2550,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest = {
-  // Reportsv3GetQueryByReportDefinitionRequest
+const request: ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest = {
+  
   reportsv3GetQueryByReportDefinitionRequest: {
     addGroupLiteral: "addGroupLiteral_example",
     addJobIdLiteral: "addJobIdLiteral_example",
@@ -2789,9 +2743,8 @@ let body:.ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest = {
   },
 };
 
-apiInstance.reportsServiceGetQueryByReportDefinition(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetQueryByReportDefinition(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2832,14 +2785,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetQueryByReportIDRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetQueryByReportIDRequest = {
-  // Reportsv3GetQueryByReportIDRequest
+const request: ReportsServiceApiReportsServiceGetQueryByReportIDRequest = {
+  
   reportsv3GetQueryByReportIDRequest: {
     addGroupLiteral: "addGroupLiteral_example",
     addJobIdLiteral: "addJobIdLiteral_example",
@@ -2893,9 +2846,8 @@ let body:.ReportsServiceApiReportsServiceGetQueryByReportIDRequest = {
   },
 };
 
-apiInstance.reportsServiceGetQueryByReportID(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetQueryByReportID(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2936,20 +2888,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportDefinitionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportDefinitionRequest = {
-  // string | Unique Report ID.
+const request: ReportsServiceApiReportsServiceGetReportDefinitionRequest = {
+    // Unique Report ID.
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceGetReportDefinition(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportDefinition(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2990,22 +2941,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportGroupsRequest = {
-  // Array<string> | List of group IDs that should be checked for usage in each report. (optional)
+const request: ReportsServiceApiReportsServiceGetReportGroupsRequest = {
+    // List of group IDs that should be checked for usage in each report. (optional)
   groups: [
     "groups_example",
   ],
 };
 
-apiInstance.reportsServiceGetReportGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3046,20 +2996,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportSynopsisRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportSynopsisRequest = {
-  // string | Unique Report ID.
+const request: ReportsServiceApiReportsServiceGetReportSynopsisRequest = {
+    // Unique Report ID.
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceGetReportSynopsis(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportSynopsis(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3100,24 +3049,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest = {
-  // string | Category ID parameter. (optional)
+const request: ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest = {
+    // Category ID parameter. (optional)
   categoryId: "category_id_example",
-  // Array<string> | List of all header tables. (optional)
+    // List of all header tables. (optional)
   tableNames: [
     "table_names_example",
   ],
 };
 
-apiInstance.reportsServiceGetReportTimestampHeader(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportTimestampHeader(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3159,22 +3107,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportsRequest = {
-  // string | Optional Category ID parameter. (optional)
+const request: ReportsServiceApiReportsServiceGetReportsRequest = {
+    // Optional Category ID parameter. (optional)
   categoryId: "category_id_example",
-  // string | Optional table name parameter. (optional)
+    // Optional table name parameter. (optional)
   tableName: "table_name_example",
 };
 
-apiInstance.reportsServiceGetReports(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReports(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3216,20 +3163,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportsForJoinRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportsForJoinRequest = {
-  // string
+const request: ReportsServiceApiReportsServiceGetReportsForJoinRequest = {
+  
   joinId: "join_id_example",
 };
 
-apiInstance.reportsServiceGetReportsForJoin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportsForJoin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3270,17 +3216,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetReportsTags(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportsTags(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3318,17 +3262,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetRequirements(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetRequirements(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3366,20 +3308,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetVariantRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetVariantRequest = {
-  // string | The variant id
+const request: ReportsServiceApiReportsServiceGetVariantRequest = {
+    // The variant id
   variantId: "variant_id_example",
 };
 
-apiInstance.reportsServiceGetVariant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetVariant(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3420,17 +3361,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetVariants(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetVariants(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3468,16 +3407,16 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServicePartialChartUpdateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServicePartialChartUpdateRequest = {
-  // string | Unique chart ID.
+const request: ReportsServiceApiReportsServicePartialChartUpdateRequest = {
+    // Unique chart ID.
   chartId: "chart_id_example",
-  // Reportsv3PartialChartUpdateRequest
+  
   reportsv3PartialChartUpdateRequest: {
     chartId: "chartId_example",
     chartTitle: "chartTitle_example",
@@ -3490,9 +3429,8 @@ let body:.ReportsServiceApiReportsServicePartialChartUpdateRequest = {
   },
 };
 
-apiInstance.reportsServicePartialChartUpdate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServicePartialChartUpdate(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3534,16 +3472,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServicePartialReportUpdateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServicePartialReportUpdateRequest = {
-  // string | Unique Report ID.
+const request: ReportsServiceApiReportsServicePartialReportUpdateRequest = {
+    // Unique Report ID.
   reportId: "report_id_example",
-  // Reportsv3PartialReportUpdateRequest
+  
   reportsv3PartialReportUpdateRequest: {
     defaultChartExpanded: true,
     isHidden: true,
@@ -3565,9 +3503,8 @@ let body:.ReportsServiceApiReportsServicePartialReportUpdateRequest = {
   },
 };
 
-apiInstance.reportsServicePartialReportUpdate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServicePartialReportUpdate(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3609,14 +3546,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceRunGradesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceRunGradesRequest = {
-  // Reportsv3RunGradesRequest
+const request: ReportsServiceApiReportsServiceRunGradesRequest = {
+  
   reportsv3RunGradesRequest: {
     fromDate: "fromDate_example",
     gradeId: 1,
@@ -3624,9 +3561,8 @@ let body:.ReportsServiceApiReportsServiceRunGradesRequest = {
   },
 };
 
-apiInstance.reportsServiceRunGrades(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceRunGrades(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3667,14 +3603,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceRunVariantOperationRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceRunVariantOperationRequest = {
-  // Reportsv3RunVariantOperationRequest
+const request: ReportsServiceApiReportsServiceRunVariantOperationRequest = {
+  
   reportsv3RunVariantOperationRequest: {
     input: "input_example",
     rules: [
@@ -3690,9 +3626,8 @@ let body:.ReportsServiceApiReportsServiceRunVariantOperationRequest = {
   },
 };
 
-apiInstance.reportsServiceRunVariantOperation(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceRunVariantOperation(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3733,14 +3668,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceTransposeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceTransposeRequest = {
-  // Reportsv3TransposeRequest
+const request: ReportsServiceApiReportsServiceTransposeRequest = {
+  
   reportsv3TransposeRequest: {
     constructIds: [
       "constructIds_example",
@@ -3759,9 +3694,8 @@ let body:.ReportsServiceApiReportsServiceTransposeRequest = {
   },
 };
 
-apiInstance.reportsServiceTranspose(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceTranspose(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3802,16 +3736,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateChartRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateChartRequest = {
-  // string | Unique chart ID.
+const request: ReportsServiceApiReportsServiceUpdateChartRequest = {
+    // Unique chart ID.
   chartId: "chart_id_example",
-  // Reportsv3UpdateChartRequest
+  
   reportsv3UpdateChartRequest: {
     chartId: "chartId_example",
     chartSettings: {
@@ -3834,9 +3768,8 @@ let body:.ReportsServiceApiReportsServiceUpdateChartRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateChart(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateChart(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3878,16 +3811,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateChartv2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateChartv2Request = {
-  // string | Unique chart ID.
+const request: ReportsServiceApiReportsServiceUpdateChartv2Request = {
+    // Unique chart ID.
   chartId: "chart_id_example",
-  // Reportsv3UpdateChartv2Request
+  
   reportsv3UpdateChartv2Request: {
     chartId: "chartId_example",
     chartSettingsV2: {
@@ -3918,9 +3851,8 @@ let body:.ReportsServiceApiReportsServiceUpdateChartv2Request = {
   },
 };
 
-apiInstance.reportsServiceUpdateChartv2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateChartv2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3962,16 +3894,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateControlRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateControlRequest = {
-  // number | The id of the control that was updated.
+const request: ReportsServiceApiReportsServiceUpdateControlRequest = {
+    // The id of the control that was updated.
   controlId: 1,
-  // Reportsv3UpdateControlRequest
+  
   reportsv3UpdateControlRequest: {
     control: {
       artifacts: [
@@ -4008,9 +3940,8 @@ let body:.ReportsServiceApiReportsServiceUpdateControlRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateControl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateControl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4052,16 +3983,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateGradeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateGradeRequest = {
-  // number | The id of the grade that was updated.
+const request: ReportsServiceApiReportsServiceUpdateGradeRequest = {
+    // The id of the grade that was updated.
   gradeId: 1,
-  // Reportsv3UpdateGradeRequest
+  
   reportsv3UpdateGradeRequest: {
     grade: {
       controlId: 1,
@@ -4091,9 +4022,8 @@ let body:.ReportsServiceApiReportsServiceUpdateGradeRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateGrade(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateGrade(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4135,16 +4065,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateJoinRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateJoinRequest = {
-  // string | Unique join ID.
+const request: ReportsServiceApiReportsServiceUpdateJoinRequest = {
+    // Unique join ID.
   joinId: "join_id_example",
-  // Reportsv3UpdateJoinRequest
+  
   reportsv3UpdateJoinRequest: {
     joinDef: {
       categoryId: "categoryId_example",
@@ -4164,9 +4094,8 @@ let body:.ReportsServiceApiReportsServiceUpdateJoinRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateJoin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateJoin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4208,16 +4137,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateMeasureRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateMeasureRequest = {
-  // number | The id of the measure that was updated.
+const request: ReportsServiceApiReportsServiceUpdateMeasureRequest = {
+    // The id of the measure that was updated.
   measureId: 1,
-  // Reportsv3UpdateMeasureRequest
+  
   reportsv3UpdateMeasureRequest: {
     measure: {
       column: {
@@ -4231,9 +4160,8 @@ let body:.ReportsServiceApiReportsServiceUpdateMeasureRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateMeasure(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateMeasure(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4275,16 +4203,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateMetricRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateMetricRequest = {
-  // number | The id of the metric that was updated.
+const request: ReportsServiceApiReportsServiceUpdateMetricRequest = {
+    // The id of the metric that was updated.
   metricId: 1,
-  // Reportsv3UpdateMetricRequest
+  
   reportsv3UpdateMetricRequest: {
     metric: {
       column: {
@@ -4301,9 +4229,8 @@ let body:.ReportsServiceApiReportsServiceUpdateMetricRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateMetric(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateMetric(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4345,16 +4272,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateProgramRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateProgramRequest = {
-  // number | The id of the programs that was updated.
+const request: ReportsServiceApiReportsServiceUpdateProgramRequest = {
+    // The id of the programs that was updated.
   programId: 1,
-  // Reportsv3UpdateProgramRequest
+  
   reportsv3UpdateProgramRequest: {
     program: {
       createUserId: "createUserId_example",
@@ -4371,9 +4298,8 @@ let body:.ReportsServiceApiReportsServiceUpdateProgramRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateProgram(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateProgram(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4415,16 +4341,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateReportRequest = {
-  // string | Unique Report ID.
+const request: ReportsServiceApiReportsServiceUpdateReportRequest = {
+    // Unique Report ID.
   reportId: "report_id_example",
-  // Reportsv3UpdateReportRequest
+  
   reportsv3UpdateReportRequest: {
     chartSettings: {
       chartId: "chartId_example",
@@ -4580,9 +4506,8 @@ let body:.ReportsServiceApiReportsServiceUpdateReportRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4624,16 +4549,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateRequirementRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateRequirementRequest = {
-  // number | The id of the requirements that was updated.
+const request: ReportsServiceApiReportsServiceUpdateRequirementRequest = {
+    // The id of the requirements that was updated.
   requirementId: 1,
-  // Reportsv3UpdateRequirementRequest
+  
   reportsv3UpdateRequirementRequest: {
     requirement: {
       controlId: 1,
@@ -4653,9 +4578,8 @@ let body:.ReportsServiceApiReportsServiceUpdateRequirementRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateRequirement(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateRequirement(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4697,16 +4621,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateVariantOverrideRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateVariantOverrideRequest = {
-  // string | The variant id
+const request: ReportsServiceApiReportsServiceUpdateVariantOverrideRequest = {
+    // The variant id
   variantId: "variant_id_example",
-  // Reportsv3UpdateVariantOverrideRequest
+  
   reportsv3UpdateVariantOverrideRequest: {
     key: "key_example",
     values: {
@@ -4716,9 +4640,8 @@ let body:.ReportsServiceApiReportsServiceUpdateVariantOverrideRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateVariantOverride(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateVariantOverride(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

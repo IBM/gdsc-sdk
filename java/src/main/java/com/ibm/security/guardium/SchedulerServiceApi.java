@@ -94,13 +94,14 @@ public class SchedulerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceCreateScheduledJobCall(Schedulerv3CreateScheduledJobRequest schedulerv3CreateScheduledJobRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceCreateScheduledJobCall(@javax.annotation.Nonnull Schedulerv3CreateScheduledJobRequest schedulerv3CreateScheduledJobRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -146,7 +147,7 @@ public class SchedulerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call schedulerServiceCreateScheduledJobValidateBeforeCall(Schedulerv3CreateScheduledJobRequest schedulerv3CreateScheduledJobRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call schedulerServiceCreateScheduledJobValidateBeforeCall(@javax.annotation.Nonnull Schedulerv3CreateScheduledJobRequest schedulerv3CreateScheduledJobRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'schedulerv3CreateScheduledJobRequest' is set
         if (schedulerv3CreateScheduledJobRequest == null) {
             throw new ApiException("Missing the required parameter 'schedulerv3CreateScheduledJobRequest' when calling schedulerServiceCreateScheduledJob(Async)");
@@ -163,13 +164,14 @@ public class SchedulerServiceApi {
      * @return Schedulerv3CreateScheduledJobResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Schedulerv3CreateScheduledJobResponse schedulerServiceCreateScheduledJob(Schedulerv3CreateScheduledJobRequest schedulerv3CreateScheduledJobRequest) throws ApiException {
+    public Schedulerv3CreateScheduledJobResponse schedulerServiceCreateScheduledJob(@javax.annotation.Nonnull Schedulerv3CreateScheduledJobRequest schedulerv3CreateScheduledJobRequest) throws ApiException {
         ApiResponse<Schedulerv3CreateScheduledJobResponse> localVarResp = schedulerServiceCreateScheduledJobWithHttpInfo(schedulerv3CreateScheduledJobRequest);
         return localVarResp.getData();
     }
@@ -181,13 +183,14 @@ public class SchedulerServiceApi {
      * @return ApiResponse&lt;Schedulerv3CreateScheduledJobResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Schedulerv3CreateScheduledJobResponse> schedulerServiceCreateScheduledJobWithHttpInfo(Schedulerv3CreateScheduledJobRequest schedulerv3CreateScheduledJobRequest) throws ApiException {
+    public ApiResponse<Schedulerv3CreateScheduledJobResponse> schedulerServiceCreateScheduledJobWithHttpInfo(@javax.annotation.Nonnull Schedulerv3CreateScheduledJobRequest schedulerv3CreateScheduledJobRequest) throws ApiException {
         okhttp3.Call localVarCall = schedulerServiceCreateScheduledJobValidateBeforeCall(schedulerv3CreateScheduledJobRequest, null);
         Type localVarReturnType = new TypeToken<Schedulerv3CreateScheduledJobResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -201,13 +204,14 @@ public class SchedulerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceCreateScheduledJobAsync(Schedulerv3CreateScheduledJobRequest schedulerv3CreateScheduledJobRequest, final ApiCallback<Schedulerv3CreateScheduledJobResponse> _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceCreateScheduledJobAsync(@javax.annotation.Nonnull Schedulerv3CreateScheduledJobRequest schedulerv3CreateScheduledJobRequest, final ApiCallback<Schedulerv3CreateScheduledJobResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = schedulerServiceCreateScheduledJobValidateBeforeCall(schedulerv3CreateScheduledJobRequest, _callback);
         Type localVarReturnType = new TypeToken<Schedulerv3CreateScheduledJobResponse>(){}.getType();
@@ -221,13 +225,14 @@ public class SchedulerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceDeleteScheduledJobCall(String scheduleId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceDeleteScheduledJobCall(@javax.annotation.Nonnull String scheduleId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -273,7 +278,7 @@ public class SchedulerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call schedulerServiceDeleteScheduledJobValidateBeforeCall(String scheduleId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call schedulerServiceDeleteScheduledJobValidateBeforeCall(@javax.annotation.Nonnull String scheduleId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'scheduleId' is set
         if (scheduleId == null) {
             throw new ApiException("Missing the required parameter 'scheduleId' when calling schedulerServiceDeleteScheduledJob(Async)");
@@ -290,13 +295,14 @@ public class SchedulerServiceApi {
      * @return Schedulerv3DeleteScheduledJobResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Schedulerv3DeleteScheduledJobResponse schedulerServiceDeleteScheduledJob(String scheduleId) throws ApiException {
+    public Schedulerv3DeleteScheduledJobResponse schedulerServiceDeleteScheduledJob(@javax.annotation.Nonnull String scheduleId) throws ApiException {
         ApiResponse<Schedulerv3DeleteScheduledJobResponse> localVarResp = schedulerServiceDeleteScheduledJobWithHttpInfo(scheduleId);
         return localVarResp.getData();
     }
@@ -308,13 +314,14 @@ public class SchedulerServiceApi {
      * @return ApiResponse&lt;Schedulerv3DeleteScheduledJobResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Schedulerv3DeleteScheduledJobResponse> schedulerServiceDeleteScheduledJobWithHttpInfo(String scheduleId) throws ApiException {
+    public ApiResponse<Schedulerv3DeleteScheduledJobResponse> schedulerServiceDeleteScheduledJobWithHttpInfo(@javax.annotation.Nonnull String scheduleId) throws ApiException {
         okhttp3.Call localVarCall = schedulerServiceDeleteScheduledJobValidateBeforeCall(scheduleId, null);
         Type localVarReturnType = new TypeToken<Schedulerv3DeleteScheduledJobResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -328,13 +335,14 @@ public class SchedulerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceDeleteScheduledJobAsync(String scheduleId, final ApiCallback<Schedulerv3DeleteScheduledJobResponse> _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceDeleteScheduledJobAsync(@javax.annotation.Nonnull String scheduleId, final ApiCallback<Schedulerv3DeleteScheduledJobResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = schedulerServiceDeleteScheduledJobValidateBeforeCall(scheduleId, _callback);
         Type localVarReturnType = new TypeToken<Schedulerv3DeleteScheduledJobResponse>(){}.getType();
@@ -348,13 +356,14 @@ public class SchedulerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceGetDependenciesCall(String configType, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceGetDependenciesCall(@javax.annotation.Nullable String configType, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -403,7 +412,7 @@ public class SchedulerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call schedulerServiceGetDependenciesValidateBeforeCall(String configType, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call schedulerServiceGetDependenciesValidateBeforeCall(@javax.annotation.Nullable String configType, final ApiCallback _callback) throws ApiException {
         return schedulerServiceGetDependenciesCall(configType, _callback);
 
     }
@@ -415,13 +424,14 @@ public class SchedulerServiceApi {
      * @return Schedulerv3GetDependenciesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Schedulerv3GetDependenciesResponse schedulerServiceGetDependencies(String configType) throws ApiException {
+    public Schedulerv3GetDependenciesResponse schedulerServiceGetDependencies(@javax.annotation.Nullable String configType) throws ApiException {
         ApiResponse<Schedulerv3GetDependenciesResponse> localVarResp = schedulerServiceGetDependenciesWithHttpInfo(configType);
         return localVarResp.getData();
     }
@@ -433,13 +443,14 @@ public class SchedulerServiceApi {
      * @return ApiResponse&lt;Schedulerv3GetDependenciesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Schedulerv3GetDependenciesResponse> schedulerServiceGetDependenciesWithHttpInfo(String configType) throws ApiException {
+    public ApiResponse<Schedulerv3GetDependenciesResponse> schedulerServiceGetDependenciesWithHttpInfo(@javax.annotation.Nullable String configType) throws ApiException {
         okhttp3.Call localVarCall = schedulerServiceGetDependenciesValidateBeforeCall(configType, null);
         Type localVarReturnType = new TypeToken<Schedulerv3GetDependenciesResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -453,13 +464,14 @@ public class SchedulerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceGetDependenciesAsync(String configType, final ApiCallback<Schedulerv3GetDependenciesResponse> _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceGetDependenciesAsync(@javax.annotation.Nullable String configType, final ApiCallback<Schedulerv3GetDependenciesResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = schedulerServiceGetDependenciesValidateBeforeCall(configType, _callback);
         Type localVarReturnType = new TypeToken<Schedulerv3GetDependenciesResponse>(){}.getType();
@@ -472,7 +484,8 @@ public class SchedulerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -534,7 +547,8 @@ public class SchedulerServiceApi {
      * @return Schedulerv3GetDistributionRulesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -551,7 +565,8 @@ public class SchedulerServiceApi {
      * @return ApiResponse&lt;Schedulerv3GetDistributionRulesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -570,7 +585,8 @@ public class SchedulerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -590,13 +606,14 @@ public class SchedulerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceGetScheduledJobDetailsCall(String scheduleId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceGetScheduledJobDetailsCall(@javax.annotation.Nonnull String scheduleId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -642,7 +659,7 @@ public class SchedulerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call schedulerServiceGetScheduledJobDetailsValidateBeforeCall(String scheduleId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call schedulerServiceGetScheduledJobDetailsValidateBeforeCall(@javax.annotation.Nonnull String scheduleId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'scheduleId' is set
         if (scheduleId == null) {
             throw new ApiException("Missing the required parameter 'scheduleId' when calling schedulerServiceGetScheduledJobDetails(Async)");
@@ -659,13 +676,14 @@ public class SchedulerServiceApi {
      * @return Schedulerv3GetScheduledJobResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Schedulerv3GetScheduledJobResponse schedulerServiceGetScheduledJobDetails(String scheduleId) throws ApiException {
+    public Schedulerv3GetScheduledJobResponse schedulerServiceGetScheduledJobDetails(@javax.annotation.Nonnull String scheduleId) throws ApiException {
         ApiResponse<Schedulerv3GetScheduledJobResponse> localVarResp = schedulerServiceGetScheduledJobDetailsWithHttpInfo(scheduleId);
         return localVarResp.getData();
     }
@@ -677,13 +695,14 @@ public class SchedulerServiceApi {
      * @return ApiResponse&lt;Schedulerv3GetScheduledJobResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Schedulerv3GetScheduledJobResponse> schedulerServiceGetScheduledJobDetailsWithHttpInfo(String scheduleId) throws ApiException {
+    public ApiResponse<Schedulerv3GetScheduledJobResponse> schedulerServiceGetScheduledJobDetailsWithHttpInfo(@javax.annotation.Nonnull String scheduleId) throws ApiException {
         okhttp3.Call localVarCall = schedulerServiceGetScheduledJobDetailsValidateBeforeCall(scheduleId, null);
         Type localVarReturnType = new TypeToken<Schedulerv3GetScheduledJobResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -697,13 +716,14 @@ public class SchedulerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceGetScheduledJobDetailsAsync(String scheduleId, final ApiCallback<Schedulerv3GetScheduledJobResponse> _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceGetScheduledJobDetailsAsync(@javax.annotation.Nonnull String scheduleId, final ApiCallback<Schedulerv3GetScheduledJobResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = schedulerServiceGetScheduledJobDetailsValidateBeforeCall(scheduleId, _callback);
         Type localVarReturnType = new TypeToken<Schedulerv3GetScheduledJobResponse>(){}.getType();
@@ -718,13 +738,14 @@ public class SchedulerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceGetScheduledJobsCall(Long offset, Long limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceGetScheduledJobsCall(@javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -777,7 +798,7 @@ public class SchedulerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call schedulerServiceGetScheduledJobsValidateBeforeCall(Long offset, Long limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call schedulerServiceGetScheduledJobsValidateBeforeCall(@javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, final ApiCallback _callback) throws ApiException {
         return schedulerServiceGetScheduledJobsCall(offset, limit, _callback);
 
     }
@@ -790,13 +811,14 @@ public class SchedulerServiceApi {
      * @return Schedulerv3ScheduledJobSummaryResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Schedulerv3ScheduledJobSummaryResponse schedulerServiceGetScheduledJobs(Long offset, Long limit) throws ApiException {
+    public Schedulerv3ScheduledJobSummaryResponse schedulerServiceGetScheduledJobs(@javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit) throws ApiException {
         ApiResponse<Schedulerv3ScheduledJobSummaryResponse> localVarResp = schedulerServiceGetScheduledJobsWithHttpInfo(offset, limit);
         return localVarResp.getData();
     }
@@ -809,13 +831,14 @@ public class SchedulerServiceApi {
      * @return ApiResponse&lt;Schedulerv3ScheduledJobSummaryResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Schedulerv3ScheduledJobSummaryResponse> schedulerServiceGetScheduledJobsWithHttpInfo(Long offset, Long limit) throws ApiException {
+    public ApiResponse<Schedulerv3ScheduledJobSummaryResponse> schedulerServiceGetScheduledJobsWithHttpInfo(@javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit) throws ApiException {
         okhttp3.Call localVarCall = schedulerServiceGetScheduledJobsValidateBeforeCall(offset, limit, null);
         Type localVarReturnType = new TypeToken<Schedulerv3ScheduledJobSummaryResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -830,13 +853,14 @@ public class SchedulerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceGetScheduledJobsAsync(Long offset, Long limit, final ApiCallback<Schedulerv3ScheduledJobSummaryResponse> _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceGetScheduledJobsAsync(@javax.annotation.Nullable Long offset, @javax.annotation.Nullable Long limit, final ApiCallback<Schedulerv3ScheduledJobSummaryResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = schedulerServiceGetScheduledJobsValidateBeforeCall(offset, limit, _callback);
         Type localVarReturnType = new TypeToken<Schedulerv3ScheduledJobSummaryResponse>(){}.getType();
@@ -851,13 +875,14 @@ public class SchedulerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceGetSchedulesByReportCall(String reportId, Schedulerv3GetSchedulesByReportRequest schedulerv3GetSchedulesByReportRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceGetSchedulesByReportCall(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Schedulerv3GetSchedulesByReportRequest schedulerv3GetSchedulesByReportRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -904,7 +929,7 @@ public class SchedulerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call schedulerServiceGetSchedulesByReportValidateBeforeCall(String reportId, Schedulerv3GetSchedulesByReportRequest schedulerv3GetSchedulesByReportRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call schedulerServiceGetSchedulesByReportValidateBeforeCall(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Schedulerv3GetSchedulesByReportRequest schedulerv3GetSchedulesByReportRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'reportId' is set
         if (reportId == null) {
             throw new ApiException("Missing the required parameter 'reportId' when calling schedulerServiceGetSchedulesByReport(Async)");
@@ -927,13 +952,14 @@ public class SchedulerServiceApi {
      * @return Schedulerv3GetSchedulesByReportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Schedulerv3GetSchedulesByReportResponse schedulerServiceGetSchedulesByReport(String reportId, Schedulerv3GetSchedulesByReportRequest schedulerv3GetSchedulesByReportRequest) throws ApiException {
+    public Schedulerv3GetSchedulesByReportResponse schedulerServiceGetSchedulesByReport(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Schedulerv3GetSchedulesByReportRequest schedulerv3GetSchedulesByReportRequest) throws ApiException {
         ApiResponse<Schedulerv3GetSchedulesByReportResponse> localVarResp = schedulerServiceGetSchedulesByReportWithHttpInfo(reportId, schedulerv3GetSchedulesByReportRequest);
         return localVarResp.getData();
     }
@@ -946,13 +972,14 @@ public class SchedulerServiceApi {
      * @return ApiResponse&lt;Schedulerv3GetSchedulesByReportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Schedulerv3GetSchedulesByReportResponse> schedulerServiceGetSchedulesByReportWithHttpInfo(String reportId, Schedulerv3GetSchedulesByReportRequest schedulerv3GetSchedulesByReportRequest) throws ApiException {
+    public ApiResponse<Schedulerv3GetSchedulesByReportResponse> schedulerServiceGetSchedulesByReportWithHttpInfo(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Schedulerv3GetSchedulesByReportRequest schedulerv3GetSchedulesByReportRequest) throws ApiException {
         okhttp3.Call localVarCall = schedulerServiceGetSchedulesByReportValidateBeforeCall(reportId, schedulerv3GetSchedulesByReportRequest, null);
         Type localVarReturnType = new TypeToken<Schedulerv3GetSchedulesByReportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -967,13 +994,14 @@ public class SchedulerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceGetSchedulesByReportAsync(String reportId, Schedulerv3GetSchedulesByReportRequest schedulerv3GetSchedulesByReportRequest, final ApiCallback<Schedulerv3GetSchedulesByReportResponse> _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceGetSchedulesByReportAsync(@javax.annotation.Nonnull String reportId, @javax.annotation.Nonnull Schedulerv3GetSchedulesByReportRequest schedulerv3GetSchedulesByReportRequest, final ApiCallback<Schedulerv3GetSchedulesByReportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = schedulerServiceGetSchedulesByReportValidateBeforeCall(reportId, schedulerv3GetSchedulesByReportRequest, _callback);
         Type localVarReturnType = new TypeToken<Schedulerv3GetSchedulesByReportResponse>(){}.getType();
@@ -986,7 +1014,8 @@ public class SchedulerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1048,7 +1077,8 @@ public class SchedulerServiceApi {
      * @return Schedulerv3GetTagsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1065,7 +1095,8 @@ public class SchedulerServiceApi {
      * @return ApiResponse&lt;Schedulerv3GetTagsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1084,7 +1115,8 @@ public class SchedulerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1104,13 +1136,14 @@ public class SchedulerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceSearchScheduledJobsCall(Schedulerv3SearchScheduledJobsRequest schedulerv3SearchScheduledJobsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceSearchScheduledJobsCall(@javax.annotation.Nonnull Schedulerv3SearchScheduledJobsRequest schedulerv3SearchScheduledJobsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1156,7 +1189,7 @@ public class SchedulerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call schedulerServiceSearchScheduledJobsValidateBeforeCall(Schedulerv3SearchScheduledJobsRequest schedulerv3SearchScheduledJobsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call schedulerServiceSearchScheduledJobsValidateBeforeCall(@javax.annotation.Nonnull Schedulerv3SearchScheduledJobsRequest schedulerv3SearchScheduledJobsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'schedulerv3SearchScheduledJobsRequest' is set
         if (schedulerv3SearchScheduledJobsRequest == null) {
             throw new ApiException("Missing the required parameter 'schedulerv3SearchScheduledJobsRequest' when calling schedulerServiceSearchScheduledJobs(Async)");
@@ -1173,13 +1206,14 @@ public class SchedulerServiceApi {
      * @return Schedulerv3ScheduledJobSummaryResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Schedulerv3ScheduledJobSummaryResponse schedulerServiceSearchScheduledJobs(Schedulerv3SearchScheduledJobsRequest schedulerv3SearchScheduledJobsRequest) throws ApiException {
+    public Schedulerv3ScheduledJobSummaryResponse schedulerServiceSearchScheduledJobs(@javax.annotation.Nonnull Schedulerv3SearchScheduledJobsRequest schedulerv3SearchScheduledJobsRequest) throws ApiException {
         ApiResponse<Schedulerv3ScheduledJobSummaryResponse> localVarResp = schedulerServiceSearchScheduledJobsWithHttpInfo(schedulerv3SearchScheduledJobsRequest);
         return localVarResp.getData();
     }
@@ -1191,13 +1225,14 @@ public class SchedulerServiceApi {
      * @return ApiResponse&lt;Schedulerv3ScheduledJobSummaryResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Schedulerv3ScheduledJobSummaryResponse> schedulerServiceSearchScheduledJobsWithHttpInfo(Schedulerv3SearchScheduledJobsRequest schedulerv3SearchScheduledJobsRequest) throws ApiException {
+    public ApiResponse<Schedulerv3ScheduledJobSummaryResponse> schedulerServiceSearchScheduledJobsWithHttpInfo(@javax.annotation.Nonnull Schedulerv3SearchScheduledJobsRequest schedulerv3SearchScheduledJobsRequest) throws ApiException {
         okhttp3.Call localVarCall = schedulerServiceSearchScheduledJobsValidateBeforeCall(schedulerv3SearchScheduledJobsRequest, null);
         Type localVarReturnType = new TypeToken<Schedulerv3ScheduledJobSummaryResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1211,13 +1246,14 @@ public class SchedulerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceSearchScheduledJobsAsync(Schedulerv3SearchScheduledJobsRequest schedulerv3SearchScheduledJobsRequest, final ApiCallback<Schedulerv3ScheduledJobSummaryResponse> _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceSearchScheduledJobsAsync(@javax.annotation.Nonnull Schedulerv3SearchScheduledJobsRequest schedulerv3SearchScheduledJobsRequest, final ApiCallback<Schedulerv3ScheduledJobSummaryResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = schedulerServiceSearchScheduledJobsValidateBeforeCall(schedulerv3SearchScheduledJobsRequest, _callback);
         Type localVarReturnType = new TypeToken<Schedulerv3ScheduledJobSummaryResponse>(){}.getType();
@@ -1231,13 +1267,14 @@ public class SchedulerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceSearchScheduledTaskRunsCall(Schedulerv3SearchScheduledTaskRunsRequest schedulerv3SearchScheduledTaskRunsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceSearchScheduledTaskRunsCall(@javax.annotation.Nonnull Schedulerv3SearchScheduledTaskRunsRequest schedulerv3SearchScheduledTaskRunsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1283,7 +1320,7 @@ public class SchedulerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call schedulerServiceSearchScheduledTaskRunsValidateBeforeCall(Schedulerv3SearchScheduledTaskRunsRequest schedulerv3SearchScheduledTaskRunsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call schedulerServiceSearchScheduledTaskRunsValidateBeforeCall(@javax.annotation.Nonnull Schedulerv3SearchScheduledTaskRunsRequest schedulerv3SearchScheduledTaskRunsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'schedulerv3SearchScheduledTaskRunsRequest' is set
         if (schedulerv3SearchScheduledTaskRunsRequest == null) {
             throw new ApiException("Missing the required parameter 'schedulerv3SearchScheduledTaskRunsRequest' when calling schedulerServiceSearchScheduledTaskRuns(Async)");
@@ -1300,13 +1337,14 @@ public class SchedulerServiceApi {
      * @return Schedulerv3SearchScheduledTaskRunsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Schedulerv3SearchScheduledTaskRunsResponse schedulerServiceSearchScheduledTaskRuns(Schedulerv3SearchScheduledTaskRunsRequest schedulerv3SearchScheduledTaskRunsRequest) throws ApiException {
+    public Schedulerv3SearchScheduledTaskRunsResponse schedulerServiceSearchScheduledTaskRuns(@javax.annotation.Nonnull Schedulerv3SearchScheduledTaskRunsRequest schedulerv3SearchScheduledTaskRunsRequest) throws ApiException {
         ApiResponse<Schedulerv3SearchScheduledTaskRunsResponse> localVarResp = schedulerServiceSearchScheduledTaskRunsWithHttpInfo(schedulerv3SearchScheduledTaskRunsRequest);
         return localVarResp.getData();
     }
@@ -1318,13 +1356,14 @@ public class SchedulerServiceApi {
      * @return ApiResponse&lt;Schedulerv3SearchScheduledTaskRunsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Schedulerv3SearchScheduledTaskRunsResponse> schedulerServiceSearchScheduledTaskRunsWithHttpInfo(Schedulerv3SearchScheduledTaskRunsRequest schedulerv3SearchScheduledTaskRunsRequest) throws ApiException {
+    public ApiResponse<Schedulerv3SearchScheduledTaskRunsResponse> schedulerServiceSearchScheduledTaskRunsWithHttpInfo(@javax.annotation.Nonnull Schedulerv3SearchScheduledTaskRunsRequest schedulerv3SearchScheduledTaskRunsRequest) throws ApiException {
         okhttp3.Call localVarCall = schedulerServiceSearchScheduledTaskRunsValidateBeforeCall(schedulerv3SearchScheduledTaskRunsRequest, null);
         Type localVarReturnType = new TypeToken<Schedulerv3SearchScheduledTaskRunsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1338,13 +1377,14 @@ public class SchedulerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceSearchScheduledTaskRunsAsync(Schedulerv3SearchScheduledTaskRunsRequest schedulerv3SearchScheduledTaskRunsRequest, final ApiCallback<Schedulerv3SearchScheduledTaskRunsResponse> _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceSearchScheduledTaskRunsAsync(@javax.annotation.Nonnull Schedulerv3SearchScheduledTaskRunsRequest schedulerv3SearchScheduledTaskRunsRequest, final ApiCallback<Schedulerv3SearchScheduledTaskRunsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = schedulerServiceSearchScheduledTaskRunsValidateBeforeCall(schedulerv3SearchScheduledTaskRunsRequest, _callback);
         Type localVarReturnType = new TypeToken<Schedulerv3SearchScheduledTaskRunsResponse>(){}.getType();
@@ -1359,13 +1399,14 @@ public class SchedulerServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceUpdateScheduledJobCall(String scheduleId, Schedulerv3UpdateScheduledJobRequest schedulerv3UpdateScheduledJobRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceUpdateScheduledJobCall(@javax.annotation.Nonnull String scheduleId, @javax.annotation.Nonnull Schedulerv3UpdateScheduledJobRequest schedulerv3UpdateScheduledJobRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1412,7 +1453,7 @@ public class SchedulerServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call schedulerServiceUpdateScheduledJobValidateBeforeCall(String scheduleId, Schedulerv3UpdateScheduledJobRequest schedulerv3UpdateScheduledJobRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call schedulerServiceUpdateScheduledJobValidateBeforeCall(@javax.annotation.Nonnull String scheduleId, @javax.annotation.Nonnull Schedulerv3UpdateScheduledJobRequest schedulerv3UpdateScheduledJobRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'scheduleId' is set
         if (scheduleId == null) {
             throw new ApiException("Missing the required parameter 'scheduleId' when calling schedulerServiceUpdateScheduledJob(Async)");
@@ -1435,13 +1476,14 @@ public class SchedulerServiceApi {
      * @return Schedulerv3UpdateScheduledJobResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Schedulerv3UpdateScheduledJobResponse schedulerServiceUpdateScheduledJob(String scheduleId, Schedulerv3UpdateScheduledJobRequest schedulerv3UpdateScheduledJobRequest) throws ApiException {
+    public Schedulerv3UpdateScheduledJobResponse schedulerServiceUpdateScheduledJob(@javax.annotation.Nonnull String scheduleId, @javax.annotation.Nonnull Schedulerv3UpdateScheduledJobRequest schedulerv3UpdateScheduledJobRequest) throws ApiException {
         ApiResponse<Schedulerv3UpdateScheduledJobResponse> localVarResp = schedulerServiceUpdateScheduledJobWithHttpInfo(scheduleId, schedulerv3UpdateScheduledJobRequest);
         return localVarResp.getData();
     }
@@ -1454,13 +1496,14 @@ public class SchedulerServiceApi {
      * @return ApiResponse&lt;Schedulerv3UpdateScheduledJobResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Schedulerv3UpdateScheduledJobResponse> schedulerServiceUpdateScheduledJobWithHttpInfo(String scheduleId, Schedulerv3UpdateScheduledJobRequest schedulerv3UpdateScheduledJobRequest) throws ApiException {
+    public ApiResponse<Schedulerv3UpdateScheduledJobResponse> schedulerServiceUpdateScheduledJobWithHttpInfo(@javax.annotation.Nonnull String scheduleId, @javax.annotation.Nonnull Schedulerv3UpdateScheduledJobRequest schedulerv3UpdateScheduledJobRequest) throws ApiException {
         okhttp3.Call localVarCall = schedulerServiceUpdateScheduledJobValidateBeforeCall(scheduleId, schedulerv3UpdateScheduledJobRequest, null);
         Type localVarReturnType = new TypeToken<Schedulerv3UpdateScheduledJobResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1475,13 +1518,14 @@ public class SchedulerServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call schedulerServiceUpdateScheduledJobAsync(String scheduleId, Schedulerv3UpdateScheduledJobRequest schedulerv3UpdateScheduledJobRequest, final ApiCallback<Schedulerv3UpdateScheduledJobResponse> _callback) throws ApiException {
+    public okhttp3.Call schedulerServiceUpdateScheduledJobAsync(@javax.annotation.Nonnull String scheduleId, @javax.annotation.Nonnull Schedulerv3UpdateScheduledJobRequest schedulerv3UpdateScheduledJobRequest, final ApiCallback<Schedulerv3UpdateScheduledJobResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = schedulerServiceUpdateScheduledJobValidateBeforeCall(scheduleId, schedulerv3UpdateScheduledJobRequest, _callback);
         Type localVarReturnType = new TypeToken<Schedulerv3UpdateScheduledJobResponse>(){}.getType();

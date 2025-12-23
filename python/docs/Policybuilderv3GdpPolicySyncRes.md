@@ -10,10 +10,10 @@ Name | Type | Description | Notes
 **gdp_synced_id** | **str** | Sync id of the created or updated sync policy. | [optional] 
 **import_name** | **str** | Name for imported GDP policy. | [optional] 
 **last_state_change** | **str** |  | [optional] 
-**policy_import_issue** | [**Policybuilderv3ImportIssue**](Policybuilderv3ImportIssue.md) |  | [optional] 
-**policy_import_state** | [**Policybuilderv3ImportState**](Policybuilderv3ImportState.md) |  | [optional] 
+**policy_import_issue** | [**Policybuilderv3ImportIssue**](Policybuilderv3ImportIssue.md) |  | [optional] [default to Policybuilderv3ImportIssue.NO_IMPORT_ISSUE]
+**policy_import_state** | [**Policybuilderv3ImportState**](Policybuilderv3ImportState.md) |  | [optional] [default to Policybuilderv3ImportState.NO_IMPORT_STATUS]
 **policy_name** | **str** | Policy Name for the created or updated sync policy. | [optional] 
-**sync_status** | [**Policybuilderv3SyncStatusType**](Policybuilderv3SyncStatusType.md) |  | [optional] 
+**sync_status** | [**Policybuilderv3SyncStatusType**](Policybuilderv3SyncStatusType.md) |  | [optional] [default to Policybuilderv3SyncStatusType.NO_SYNC_STATUS]
 
 ## Example
 

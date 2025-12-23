@@ -18,16 +18,16 @@ Name | Type | Description | Notes
 **investigation_links** | [**List[Schedulerv3ConfigurationItem]**](Schedulerv3ConfigurationItem.md) |  | [optional] 
 **justification** | **str** |  | [optional] 
 **number** | **str** |  | [optional] 
-**priority** | [**Workflowv3Priority**](Workflowv3Priority.md) |  | [optional] 
+**priority** | [**Workflowv3Priority**](Workflowv3Priority.md) |  | [optional] [default to Workflowv3Priority.UNDEFINED_PRIORITY]
 **report_result** | [**Workflowv3ReportResult**](Workflowv3ReportResult.md) |  | [optional] 
 **response_template** | [**Schedulerv3ConfigurationItem**](Schedulerv3ConfigurationItem.md) |  | [optional] 
 **review_action** | **str** |  | [optional] 
 **run** | [**Workflowv3ReportRun**](Workflowv3ReportRun.md) |  | [optional] 
-**status** | [**Workflowv3Status**](Workflowv3Status.md) |  | [optional] 
+**status** | [**Workflowv3Status**](Workflowv3Status.md) |  | [optional] [default to Workflowv3Status.UNDEFINED_STATUS]
 **tags** | **List[str]** |  | [optional] 
 **task_id** | **str** | Unique ID. | [optional] 
 **title** | **str** | Task title (subject). | [optional] 
-**workflow_type** | [**Schedulerv3WorkflowType**](Schedulerv3WorkflowType.md) |  | [optional] 
+**workflow_type** | [**Schedulerv3WorkflowType**](Schedulerv3WorkflowType.md) |  | [optional] [default to Schedulerv3WorkflowType.REVIEW_NONE]
 
 ## Example
 

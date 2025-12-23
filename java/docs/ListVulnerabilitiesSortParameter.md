@@ -17,7 +17,7 @@
 | Name | Value |
 |---- | -----|
 | CRITICALITY | &quot;criticality&quot; |
-| DETECTIONTIMESTAMP | &quot;detectionTimestamp&quot; |
+| DETECTION_TIMESTAMP | &quot;detectionTimestamp&quot; |
 
 
 

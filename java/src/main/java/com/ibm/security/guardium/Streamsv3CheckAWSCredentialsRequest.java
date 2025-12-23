@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,203 +40,211 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CheckAWSCredentialsRequest defines a request to verify AWS credentials.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Streamsv3CheckAWSCredentialsRequest {
   public static final String SERIALIZED_NAME_ACCESS_KEY_ID = "access_key_id";
   @SerializedName(SERIALIZED_NAME_ACCESS_KEY_ID)
+  @javax.annotation.Nullable
   private String accessKeyId;
 
   public static final String SERIALIZED_NAME_AUTH_TYPE = "auth_type";
   @SerializedName(SERIALIZED_NAME_AUTH_TYPE)
+  @javax.annotation.Nullable
   private Streamsv3AuthType authType = Streamsv3AuthType.SECURITY_CREDENTIALS;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
+  @javax.annotation.Nullable
   private String region;
 
   public static final String SERIALIZED_NAME_ROLE_ARN = "role_arn";
   @SerializedName(SERIALIZED_NAME_ROLE_ARN)
+  @javax.annotation.Nullable
   private String roleArn;
 
   public static final String SERIALIZED_NAME_SECRET_KEY_ID = "secret_key_id";
   @SerializedName(SERIALIZED_NAME_SECRET_KEY_ID)
+  @javax.annotation.Nullable
   private String secretKeyId;
 
   public static final String SERIALIZED_NAME_STREAM_NAME = "stream_name";
   @SerializedName(SERIALIZED_NAME_STREAM_NAME)
+  @javax.annotation.Nullable
   private String streamName;
 
   public static final String SERIALIZED_NAME_STREAM_TYPE = "stream_type";
   @SerializedName(SERIALIZED_NAME_STREAM_TYPE)
+  @javax.annotation.Nullable
   private Streamsv3StreamType streamType = Streamsv3StreamType.AWS_KINESIS;
 
   public Streamsv3CheckAWSCredentialsRequest() {
   }
 
-  public Streamsv3CheckAWSCredentialsRequest accessKeyId(String accessKeyId) {
+  public Streamsv3CheckAWSCredentialsRequest accessKeyId(@javax.annotation.Nullable String accessKeyId) {
     this.accessKeyId = accessKeyId;
     return this;
   }
 
-   /**
+  /**
    * AWS access key ID.
    * @return accessKeyId
-  **/
+   */
   @javax.annotation.Nullable
   public String getAccessKeyId() {
     return accessKeyId;
   }
 
-  public void setAccessKeyId(String accessKeyId) {
+  public void setAccessKeyId(@javax.annotation.Nullable String accessKeyId) {
     this.accessKeyId = accessKeyId;
   }
 
 
-  public Streamsv3CheckAWSCredentialsRequest authType(Streamsv3AuthType authType) {
+  public Streamsv3CheckAWSCredentialsRequest authType(@javax.annotation.Nullable Streamsv3AuthType authType) {
     this.authType = authType;
     return this;
   }
 
-   /**
+  /**
    * Get authType
    * @return authType
-  **/
+   */
   @javax.annotation.Nullable
   public Streamsv3AuthType getAuthType() {
     return authType;
   }
 
-  public void setAuthType(Streamsv3AuthType authType) {
+  public void setAuthType(@javax.annotation.Nullable Streamsv3AuthType authType) {
     this.authType = authType;
   }
 
 
-  public Streamsv3CheckAWSCredentialsRequest id(String id) {
+  public Streamsv3CheckAWSCredentialsRequest id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Indetifier.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Streamsv3CheckAWSCredentialsRequest region(String region) {
+  public Streamsv3CheckAWSCredentialsRequest region(@javax.annotation.Nullable String region) {
     this.region = region;
     return this;
   }
 
-   /**
+  /**
    * AWS region.
    * @return region
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegion() {
     return region;
   }
 
-  public void setRegion(String region) {
+  public void setRegion(@javax.annotation.Nullable String region) {
     this.region = region;
   }
 
 
-  public Streamsv3CheckAWSCredentialsRequest roleArn(String roleArn) {
+  public Streamsv3CheckAWSCredentialsRequest roleArn(@javax.annotation.Nullable String roleArn) {
     this.roleArn = roleArn;
     return this;
   }
 
-   /**
+  /**
    * IAM role ARN.
    * @return roleArn
-  **/
+   */
   @javax.annotation.Nullable
   public String getRoleArn() {
     return roleArn;
   }
 
-  public void setRoleArn(String roleArn) {
+  public void setRoleArn(@javax.annotation.Nullable String roleArn) {
     this.roleArn = roleArn;
   }
 
 
-  public Streamsv3CheckAWSCredentialsRequest secretKeyId(String secretKeyId) {
+  public Streamsv3CheckAWSCredentialsRequest secretKeyId(@javax.annotation.Nullable String secretKeyId) {
     this.secretKeyId = secretKeyId;
     return this;
   }
 
-   /**
+  /**
    * AWS secret key ID.
    * @return secretKeyId
-  **/
+   */
   @javax.annotation.Nullable
   public String getSecretKeyId() {
     return secretKeyId;
   }
 
-  public void setSecretKeyId(String secretKeyId) {
+  public void setSecretKeyId(@javax.annotation.Nullable String secretKeyId) {
     this.secretKeyId = secretKeyId;
   }
 
 
-  public Streamsv3CheckAWSCredentialsRequest streamName(String streamName) {
+  public Streamsv3CheckAWSCredentialsRequest streamName(@javax.annotation.Nullable String streamName) {
     this.streamName = streamName;
     return this;
   }
 
-   /**
+  /**
    * Name of stream.
    * @return streamName
-  **/
+   */
   @javax.annotation.Nullable
   public String getStreamName() {
     return streamName;
   }
 
-  public void setStreamName(String streamName) {
+  public void setStreamName(@javax.annotation.Nullable String streamName) {
     this.streamName = streamName;
   }
 
 
-  public Streamsv3CheckAWSCredentialsRequest streamType(Streamsv3StreamType streamType) {
+  public Streamsv3CheckAWSCredentialsRequest streamType(@javax.annotation.Nullable Streamsv3StreamType streamType) {
     this.streamType = streamType;
     return this;
   }
 
-   /**
+  /**
    * Get streamType
    * @return streamType
-  **/
+   */
   @javax.annotation.Nullable
   public Streamsv3StreamType getStreamType() {
     return streamType;
   }
 
-  public void setStreamType(Streamsv3StreamType streamType) {
+  public void setStreamType(@javax.annotation.Nullable Streamsv3StreamType streamType) {
     this.streamType = streamType;
   }
 
@@ -298,30 +307,22 @@ public class Streamsv3CheckAWSCredentialsRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("access_key_id");
-    openapiFields.add("auth_type");
-    openapiFields.add("id");
-    openapiFields.add("region");
-    openapiFields.add("role_arn");
-    openapiFields.add("secret_key_id");
-    openapiFields.add("stream_name");
-    openapiFields.add("stream_type");
+    openapiFields = new HashSet<String>(Arrays.asList("access_key_id", "auth_type", "id", "region", "role_arn", "secret_key_id", "stream_name", "stream_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Streamsv3CheckAWSCredentialsRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Streamsv3CheckAWSCredentialsRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Streamsv3CheckAWSCredentialsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Streamsv3CheckAWSCredentialsRequest is not found in the empty JSON string", Streamsv3CheckAWSCredentialsRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Streamsv3CheckAWSCredentialsRequest is not found in the empty JSON string", Streamsv3CheckAWSCredentialsRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -329,31 +330,31 @@ public class Streamsv3CheckAWSCredentialsRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Streamsv3CheckAWSCredentialsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Streamsv3CheckAWSCredentialsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Streamsv3CheckAWSCredentialsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("access_key_id") != null && !jsonObj.get("access_key_id").isJsonNull()) && !jsonObj.get("access_key_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `access_key_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("access_key_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `access_key_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("access_key_id").toString()));
       }
       // validate the optional field `auth_type`
       if (jsonObj.get("auth_type") != null && !jsonObj.get("auth_type").isJsonNull()) {
         Streamsv3AuthType.validateJsonElement(jsonObj.get("auth_type"));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("region") != null && !jsonObj.get("region").isJsonNull()) && !jsonObj.get("region").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
       }
       if ((jsonObj.get("role_arn") != null && !jsonObj.get("role_arn").isJsonNull()) && !jsonObj.get("role_arn").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `role_arn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("role_arn").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `role_arn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("role_arn").toString()));
       }
       if ((jsonObj.get("secret_key_id") != null && !jsonObj.get("secret_key_id").isJsonNull()) && !jsonObj.get("secret_key_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `secret_key_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret_key_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `secret_key_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret_key_id").toString()));
       }
       if ((jsonObj.get("stream_name") != null && !jsonObj.get("stream_name").isJsonNull()) && !jsonObj.get("stream_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `stream_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stream_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `stream_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stream_name").toString()));
       }
       // validate the optional field `stream_type`
       if (jsonObj.get("stream_type") != null && !jsonObj.get("stream_type").isJsonNull()) {
@@ -390,22 +391,22 @@ public class Streamsv3CheckAWSCredentialsRequest {
     }
   }
 
- /**
-  * Create an instance of Streamsv3CheckAWSCredentialsRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Streamsv3CheckAWSCredentialsRequest
-  * @throws IOException if the JSON string is invalid with respect to Streamsv3CheckAWSCredentialsRequest
-  */
+  /**
+   * Create an instance of Streamsv3CheckAWSCredentialsRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Streamsv3CheckAWSCredentialsRequest
+   * @throws IOException if the JSON string is invalid with respect to Streamsv3CheckAWSCredentialsRequest
+   */
   public static Streamsv3CheckAWSCredentialsRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Streamsv3CheckAWSCredentialsRequest.class);
   }
 
- /**
-  * Convert an instance of Streamsv3CheckAWSCredentialsRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Streamsv3CheckAWSCredentialsRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

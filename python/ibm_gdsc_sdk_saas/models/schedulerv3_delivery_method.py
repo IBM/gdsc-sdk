@@ -27,7 +27,7 @@ class Schedulerv3DeliveryMethod(BaseModel):
     """
     DeliveryMethod configures who receives the report and how they receive it.
     """ # noqa: E501
-    file_format: Optional[Schedulerv3FileFormat] = None
+    file_format: Optional[Schedulerv3FileFormat] = Schedulerv3FileFormat.UNDEFINED_FORMAT
     report_time_zone: Optional[StrictStr] = Field(default=None, description="Optional: Preferred time zone to have all timestamps in.")
     __properties: ClassVar[List[str]] = ["file_format", "report_time_zone"]
 
@@ -82,7 +82,7 @@ class Schedulerv3DeliveryMethod(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "file_format": obj.get("file_format"),
+            "file_format": obj.get("file_format") if obj.get("file_format") is not None else Schedulerv3FileFormat.UNDEFINED_FORMAT,
             "report_time_zone": obj.get("report_time_zone")
         })
         return _obj

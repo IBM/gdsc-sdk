@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,90 +41,97 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmpolicymanagerv3CreateTicketRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmpolicymanagerv3CreateTicketRequest {
   public static final String SERIALIZED_NAME_POLICY_DATASET_ID = "PolicyDatasetId";
   @SerializedName(SERIALIZED_NAME_POLICY_DATASET_ID)
+  @javax.annotation.Nullable
   private String policyDatasetId;
 
   public static final String SERIALIZED_NAME_POLICY_TYPE = "PolicyType";
   @SerializedName(SERIALIZED_NAME_POLICY_TYPE)
+  @javax.annotation.Nullable
   private String policyType;
 
   public static final String SERIALIZED_NAME_ADDITIONAL_DATA = "additional_data";
   @SerializedName(SERIALIZED_NAME_ADDITIONAL_DATA)
+  @javax.annotation.Nullable
   private Map<String, String> additionalData = new HashMap<>();
 
   public static final String SERIALIZED_NAME_CONTENTS = "contents";
   @SerializedName(SERIALIZED_NAME_CONTENTS)
+  @javax.annotation.Nullable
   private String contents;
 
   public static final String SERIALIZED_NAME_INTEGRATION_ID = "integration_id";
   @SerializedName(SERIALIZED_NAME_INTEGRATION_ID)
+  @javax.annotation.Nullable
   private String integrationId;
 
   public static final String SERIALIZED_NAME_SEVERITY = "severity";
   @SerializedName(SERIALIZED_NAME_SEVERITY)
+  @javax.annotation.Nullable
   private Qspmpolicymanagerv3NotificationSeverity severity = Qspmpolicymanagerv3NotificationSeverity.UNDEFINED;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
+  @javax.annotation.Nullable
   private String title;
 
   public Qspmpolicymanagerv3CreateTicketRequest() {
   }
 
-  public Qspmpolicymanagerv3CreateTicketRequest policyDatasetId(String policyDatasetId) {
+  public Qspmpolicymanagerv3CreateTicketRequest policyDatasetId(@javax.annotation.Nullable String policyDatasetId) {
     this.policyDatasetId = policyDatasetId;
     return this;
   }
 
-   /**
+  /**
    * Get policyDatasetId
    * @return policyDatasetId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyDatasetId() {
     return policyDatasetId;
   }
 
-  public void setPolicyDatasetId(String policyDatasetId) {
+  public void setPolicyDatasetId(@javax.annotation.Nullable String policyDatasetId) {
     this.policyDatasetId = policyDatasetId;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketRequest policyType(String policyType) {
+  public Qspmpolicymanagerv3CreateTicketRequest policyType(@javax.annotation.Nullable String policyType) {
     this.policyType = policyType;
     return this;
   }
 
-   /**
+  /**
    * Get policyType
    * @return policyType
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyType() {
     return policyType;
   }
 
-  public void setPolicyType(String policyType) {
+  public void setPolicyType(@javax.annotation.Nullable String policyType) {
     this.policyType = policyType;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketRequest additionalData(Map<String, String> additionalData) {
+  public Qspmpolicymanagerv3CreateTicketRequest additionalData(@javax.annotation.Nullable Map<String, String> additionalData) {
     this.additionalData = additionalData;
     return this;
   }
@@ -136,92 +144,92 @@ public class Qspmpolicymanagerv3CreateTicketRequest {
     return this;
   }
 
-   /**
+  /**
    * Get additionalData
    * @return additionalData
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getAdditionalData() {
     return additionalData;
   }
 
-  public void setAdditionalData(Map<String, String> additionalData) {
+  public void setAdditionalData(@javax.annotation.Nullable Map<String, String> additionalData) {
     this.additionalData = additionalData;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketRequest contents(String contents) {
+  public Qspmpolicymanagerv3CreateTicketRequest contents(@javax.annotation.Nullable String contents) {
     this.contents = contents;
     return this;
   }
 
-   /**
+  /**
    * Get contents
    * @return contents
-  **/
+   */
   @javax.annotation.Nullable
   public String getContents() {
     return contents;
   }
 
-  public void setContents(String contents) {
+  public void setContents(@javax.annotation.Nullable String contents) {
     this.contents = contents;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketRequest integrationId(String integrationId) {
+  public Qspmpolicymanagerv3CreateTicketRequest integrationId(@javax.annotation.Nullable String integrationId) {
     this.integrationId = integrationId;
     return this;
   }
 
-   /**
+  /**
    * Get integrationId
    * @return integrationId
-  **/
+   */
   @javax.annotation.Nullable
   public String getIntegrationId() {
     return integrationId;
   }
 
-  public void setIntegrationId(String integrationId) {
+  public void setIntegrationId(@javax.annotation.Nullable String integrationId) {
     this.integrationId = integrationId;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketRequest severity(Qspmpolicymanagerv3NotificationSeverity severity) {
+  public Qspmpolicymanagerv3CreateTicketRequest severity(@javax.annotation.Nullable Qspmpolicymanagerv3NotificationSeverity severity) {
     this.severity = severity;
     return this;
   }
 
-   /**
+  /**
    * Get severity
    * @return severity
-  **/
+   */
   @javax.annotation.Nullable
   public Qspmpolicymanagerv3NotificationSeverity getSeverity() {
     return severity;
   }
 
-  public void setSeverity(Qspmpolicymanagerv3NotificationSeverity severity) {
+  public void setSeverity(@javax.annotation.Nullable Qspmpolicymanagerv3NotificationSeverity severity) {
     this.severity = severity;
   }
 
 
-  public Qspmpolicymanagerv3CreateTicketRequest title(String title) {
+  public Qspmpolicymanagerv3CreateTicketRequest title(@javax.annotation.Nullable String title) {
     this.title = title;
     return this;
   }
 
-   /**
+  /**
    * Get title
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
   public String getTitle() {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(@javax.annotation.Nullable String title) {
     this.title = title;
   }
 
@@ -282,29 +290,22 @@ public class Qspmpolicymanagerv3CreateTicketRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("PolicyDatasetId");
-    openapiFields.add("PolicyType");
-    openapiFields.add("additional_data");
-    openapiFields.add("contents");
-    openapiFields.add("integration_id");
-    openapiFields.add("severity");
-    openapiFields.add("title");
+    openapiFields = new HashSet<String>(Arrays.asList("PolicyDatasetId", "PolicyType", "additional_data", "contents", "integration_id", "severity", "title"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3CreateTicketRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3CreateTicketRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmpolicymanagerv3CreateTicketRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmpolicymanagerv3CreateTicketRequest is not found in the empty JSON string", Qspmpolicymanagerv3CreateTicketRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmpolicymanagerv3CreateTicketRequest is not found in the empty JSON string", Qspmpolicymanagerv3CreateTicketRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -312,28 +313,28 @@ public class Qspmpolicymanagerv3CreateTicketRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmpolicymanagerv3CreateTicketRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3CreateTicketRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3CreateTicketRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("PolicyDatasetId") != null && !jsonObj.get("PolicyDatasetId").isJsonNull()) && !jsonObj.get("PolicyDatasetId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `PolicyDatasetId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("PolicyDatasetId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `PolicyDatasetId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("PolicyDatasetId").toString()));
       }
       if ((jsonObj.get("PolicyType") != null && !jsonObj.get("PolicyType").isJsonNull()) && !jsonObj.get("PolicyType").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `PolicyType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("PolicyType").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `PolicyType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("PolicyType").toString()));
       }
       if ((jsonObj.get("contents") != null && !jsonObj.get("contents").isJsonNull()) && !jsonObj.get("contents").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `contents` to be a primitive type in the JSON string but got `%s`", jsonObj.get("contents").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `contents` to be a primitive type in the JSON string but got `%s`", jsonObj.get("contents").toString()));
       }
       if ((jsonObj.get("integration_id") != null && !jsonObj.get("integration_id").isJsonNull()) && !jsonObj.get("integration_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `integration_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("integration_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `integration_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("integration_id").toString()));
       }
       // validate the optional field `severity`
       if (jsonObj.get("severity") != null && !jsonObj.get("severity").isJsonNull()) {
         Qspmpolicymanagerv3NotificationSeverity.validateJsonElement(jsonObj.get("severity"));
       }
       if ((jsonObj.get("title") != null && !jsonObj.get("title").isJsonNull()) && !jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
       }
   }
 
@@ -366,22 +367,22 @@ public class Qspmpolicymanagerv3CreateTicketRequest {
     }
   }
 
- /**
-  * Create an instance of Qspmpolicymanagerv3CreateTicketRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmpolicymanagerv3CreateTicketRequest
-  * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3CreateTicketRequest
-  */
+  /**
+   * Create an instance of Qspmpolicymanagerv3CreateTicketRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmpolicymanagerv3CreateTicketRequest
+   * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3CreateTicketRequest
+   */
   public static Qspmpolicymanagerv3CreateTicketRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmpolicymanagerv3CreateTicketRequest.class);
   }
 
- /**
-  * Convert an instance of Qspmpolicymanagerv3CreateTicketRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmpolicymanagerv3CreateTicketRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

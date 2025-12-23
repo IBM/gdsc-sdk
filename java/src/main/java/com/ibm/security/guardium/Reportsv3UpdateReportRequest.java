@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,88 +40,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateReportRequest is the argument type used to update a report using the UpdateReport() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3UpdateReportRequest {
   public static final String SERIALIZED_NAME_CHART_SETTINGS = "chart_settings";
   @SerializedName(SERIALIZED_NAME_CHART_SETTINGS)
+  @javax.annotation.Nullable
   private Reportsv3ChartSettings chartSettings;
 
   public static final String SERIALIZED_NAME_REPORT_DEFINITION = "report_definition";
   @SerializedName(SERIALIZED_NAME_REPORT_DEFINITION)
+  @javax.annotation.Nullable
   private Reportsv3ReportDefinition reportDefinition;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public Reportsv3UpdateReportRequest() {
   }
 
-  public Reportsv3UpdateReportRequest chartSettings(Reportsv3ChartSettings chartSettings) {
+  public Reportsv3UpdateReportRequest chartSettings(@javax.annotation.Nullable Reportsv3ChartSettings chartSettings) {
     this.chartSettings = chartSettings;
     return this;
   }
 
-   /**
+  /**
    * Get chartSettings
    * @return chartSettings
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ChartSettings getChartSettings() {
     return chartSettings;
   }
 
-  public void setChartSettings(Reportsv3ChartSettings chartSettings) {
+  public void setChartSettings(@javax.annotation.Nullable Reportsv3ChartSettings chartSettings) {
     this.chartSettings = chartSettings;
   }
 
 
-  public Reportsv3UpdateReportRequest reportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public Reportsv3UpdateReportRequest reportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
     return this;
   }
 
-   /**
+  /**
    * Get reportDefinition
    * @return reportDefinition
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportDefinition getReportDefinition() {
     return reportDefinition;
   }
 
-  public void setReportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public void setReportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
   }
 
 
-  public Reportsv3UpdateReportRequest reportId(String reportId) {
+  public Reportsv3UpdateReportRequest reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Unique Report ID.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
@@ -173,25 +177,22 @@ public class Reportsv3UpdateReportRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("chart_settings");
-    openapiFields.add("report_definition");
-    openapiFields.add("report_id");
+    openapiFields = new HashSet<String>(Arrays.asList("chart_settings", "report_definition", "report_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3UpdateReportRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3UpdateReportRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3UpdateReportRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3UpdateReportRequest is not found in the empty JSON string", Reportsv3UpdateReportRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3UpdateReportRequest is not found in the empty JSON string", Reportsv3UpdateReportRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -199,7 +200,7 @@ public class Reportsv3UpdateReportRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3UpdateReportRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3UpdateReportRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3UpdateReportRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -212,7 +213,7 @@ public class Reportsv3UpdateReportRequest {
         Reportsv3ReportDefinition.validateJsonElement(jsonObj.get("report_definition"));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
   }
 
@@ -245,22 +246,22 @@ public class Reportsv3UpdateReportRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3UpdateReportRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3UpdateReportRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3UpdateReportRequest
-  */
+  /**
+   * Create an instance of Reportsv3UpdateReportRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3UpdateReportRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3UpdateReportRequest
+   */
   public static Reportsv3UpdateReportRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3UpdateReportRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3UpdateReportRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3UpdateReportRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

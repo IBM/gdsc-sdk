@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,111 +39,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * EditGroupResponse returns the number of newly inserted, deleted, or updated group members.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3EditGroupResponse {
   public static final String SERIALIZED_NAME_DELETED_COUNT = "deleted_count";
   @SerializedName(SERIALIZED_NAME_DELETED_COUNT)
+  @javax.annotation.Nullable
   private Integer deletedCount;
 
   public static final String SERIALIZED_NAME_INSERTED_COUNT = "inserted_count";
   @SerializedName(SERIALIZED_NAME_INSERTED_COUNT)
+  @javax.annotation.Nullable
   private Integer insertedCount;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Groupbuilderv3StatusResponseBase status;
 
   public static final String SERIALIZED_NAME_UPDATED_COUNT = "updated_count";
   @SerializedName(SERIALIZED_NAME_UPDATED_COUNT)
+  @javax.annotation.Nullable
   private Integer updatedCount;
 
   public Groupbuilderv3EditGroupResponse() {
   }
 
-  public Groupbuilderv3EditGroupResponse deletedCount(Integer deletedCount) {
+  public Groupbuilderv3EditGroupResponse deletedCount(@javax.annotation.Nullable Integer deletedCount) {
     this.deletedCount = deletedCount;
     return this;
   }
 
-   /**
+  /**
    * Number of deleted group members.
    * @return deletedCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDeletedCount() {
     return deletedCount;
   }
 
-  public void setDeletedCount(Integer deletedCount) {
+  public void setDeletedCount(@javax.annotation.Nullable Integer deletedCount) {
     this.deletedCount = deletedCount;
   }
 
 
-  public Groupbuilderv3EditGroupResponse insertedCount(Integer insertedCount) {
+  public Groupbuilderv3EditGroupResponse insertedCount(@javax.annotation.Nullable Integer insertedCount) {
     this.insertedCount = insertedCount;
     return this;
   }
 
-   /**
+  /**
    * Number of new group members.
    * @return insertedCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getInsertedCount() {
     return insertedCount;
   }
 
-  public void setInsertedCount(Integer insertedCount) {
+  public void setInsertedCount(@javax.annotation.Nullable Integer insertedCount) {
     this.insertedCount = insertedCount;
   }
 
 
-  public Groupbuilderv3EditGroupResponse status(Groupbuilderv3StatusResponseBase status) {
+  public Groupbuilderv3EditGroupResponse status(@javax.annotation.Nullable Groupbuilderv3StatusResponseBase status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Groupbuilderv3StatusResponseBase getStatus() {
     return status;
   }
 
-  public void setStatus(Groupbuilderv3StatusResponseBase status) {
+  public void setStatus(@javax.annotation.Nullable Groupbuilderv3StatusResponseBase status) {
     this.status = status;
   }
 
 
-  public Groupbuilderv3EditGroupResponse updatedCount(Integer updatedCount) {
+  public Groupbuilderv3EditGroupResponse updatedCount(@javax.annotation.Nullable Integer updatedCount) {
     this.updatedCount = updatedCount;
     return this;
   }
 
-   /**
+  /**
    * Number of updated group members.
    * @return updatedCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getUpdatedCount() {
     return updatedCount;
   }
 
-  public void setUpdatedCount(Integer updatedCount) {
+  public void setUpdatedCount(@javax.annotation.Nullable Integer updatedCount) {
     this.updatedCount = updatedCount;
   }
 
@@ -197,26 +202,22 @@ public class Groupbuilderv3EditGroupResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("deleted_count");
-    openapiFields.add("inserted_count");
-    openapiFields.add("status");
-    openapiFields.add("updated_count");
+    openapiFields = new HashSet<String>(Arrays.asList("deleted_count", "inserted_count", "status", "updated_count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3EditGroupResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3EditGroupResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3EditGroupResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3EditGroupResponse is not found in the empty JSON string", Groupbuilderv3EditGroupResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3EditGroupResponse is not found in the empty JSON string", Groupbuilderv3EditGroupResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -224,7 +225,7 @@ public class Groupbuilderv3EditGroupResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3EditGroupResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3EditGroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3EditGroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -263,22 +264,22 @@ public class Groupbuilderv3EditGroupResponse {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3EditGroupResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3EditGroupResponse
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3EditGroupResponse
-  */
+  /**
+   * Create an instance of Groupbuilderv3EditGroupResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3EditGroupResponse
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3EditGroupResponse
+   */
   public static Groupbuilderv3EditGroupResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3EditGroupResponse.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3EditGroupResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3EditGroupResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -18,14 +18,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DashboardsServiceApi } from '';
+import type { DashboardsServiceApiDashboardsServiceCreateDashboardRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DashboardsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DashboardsServiceApi(configuration);
 
-let body:.DashboardsServiceApiDashboardsServiceCreateDashboardRequest = {
-  // Dashboardsv3Dashboard | Unique dashboard.
+const request: DashboardsServiceApiDashboardsServiceCreateDashboardRequest = {
+    // Unique dashboard.
   dashboardsv3Dashboard: {
     cards: [
       {
@@ -97,9 +97,8 @@ let body:.DashboardsServiceApiDashboardsServiceCreateDashboardRequest = {
   },
 };
 
-apiInstance.dashboardsServiceCreateDashboard(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.dashboardsServiceCreateDashboard(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -140,24 +139,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DashboardsServiceApi } from '';
+import type { DashboardsServiceApiDashboardsServiceDeleteDashboardRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DashboardsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DashboardsServiceApi(configuration);
 
-let body:.DashboardsServiceApiDashboardsServiceDeleteDashboardRequest = {
-  // string | The id of the dashboard to be deleted.
+const request: DashboardsServiceApiDashboardsServiceDeleteDashboardRequest = {
+    // The id of the dashboard to be deleted.
   dashboardId: "dashboard_id_example",
-  // Dashboardsv3DeleteDashboardRequest
+  
   dashboardsv3DeleteDashboardRequest: {
     dashboardId: "dashboardId_example",
   },
 };
 
-apiInstance.dashboardsServiceDeleteDashboard(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.dashboardsServiceDeleteDashboard(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -199,17 +197,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DashboardsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DashboardsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DashboardsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.dashboardsServiceGetDashboards(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.dashboardsServiceGetDashboards(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -247,16 +243,16 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DashboardsServiceApi } from '';
+import type { DashboardsServiceApiDashboardsServiceUpdateDashboardRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DashboardsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DashboardsServiceApi(configuration);
 
-let body:.DashboardsServiceApiDashboardsServiceUpdateDashboardRequest = {
-  // string | The id of the dashboard that was updated.
+const request: DashboardsServiceApiDashboardsServiceUpdateDashboardRequest = {
+    // The id of the dashboard that was updated.
   dashboardId: "dashboard_id_example",
-  // Dashboardsv3UpdateDashboardRequest
+  
   dashboardsv3UpdateDashboardRequest: {
     dashboard: {
       cards: [
@@ -333,9 +329,8 @@ let body:.DashboardsServiceApiDashboardsServiceUpdateDashboardRequest = {
   },
 };
 
-apiInstance.dashboardsServiceUpdateDashboard(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.dashboardsServiceUpdateDashboard(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

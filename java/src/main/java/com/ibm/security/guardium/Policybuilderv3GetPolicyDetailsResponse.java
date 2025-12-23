@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -45,193 +46,202 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Policy details response message.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3GetPolicyDetailsResponse {
   public static final String SERIALIZED_NAME_ACTIVATION_STATUS = "activation_status";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_STATUS)
+  @javax.annotation.Nullable
   private Integer activationStatus;
 
   public static final String SERIALIZED_NAME_CONTROL_FLOW = "control_flow";
   @SerializedName(SERIALIZED_NAME_CONTROL_FLOW)
+  @javax.annotation.Nullable
   private Policybuilderv3ControlFlow controlFlow = Policybuilderv3ControlFlow.STANDARD;
 
   public static final String SERIALIZED_NAME_INSTALLED_FLAG = "installed_flag";
   @SerializedName(SERIALIZED_NAME_INSTALLED_FLAG)
+  @javax.annotation.Nullable
   private Boolean installedFlag;
 
   public static final String SERIALIZED_NAME_POLICY_IMPORT_ISSUE = "policy_import_issue";
   @SerializedName(SERIALIZED_NAME_POLICY_IMPORT_ISSUE)
+  @javax.annotation.Nullable
   private Policybuilderv3ImportIssue policyImportIssue = Policybuilderv3ImportIssue.NO_IMPORT_ISSUE;
 
   public static final String SERIALIZED_NAME_POLICY_IMPORT_STATE = "policy_import_state";
   @SerializedName(SERIALIZED_NAME_POLICY_IMPORT_STATE)
+  @javax.annotation.Nullable
   private Policybuilderv3ImportState policyImportState = Policybuilderv3ImportState.NO_IMPORT_STATUS;
 
   public static final String SERIALIZED_NAME_POLICY_INFO = "policy_info";
   @SerializedName(SERIALIZED_NAME_POLICY_INFO)
+  @javax.annotation.Nullable
   private Policybuilderv3Policy policyInfo;
 
   public static final String SERIALIZED_NAME_POLICY_NAME = "policy_name";
   @SerializedName(SERIALIZED_NAME_POLICY_NAME)
+  @javax.annotation.Nullable
   private String policyName;
 
   public static final String SERIALIZED_NAME_RULES = "rules";
   @SerializedName(SERIALIZED_NAME_RULES)
+  @javax.annotation.Nullable
   private List<Policybuilderv3Rule> rules = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Policybuilderv3StatusResponseBase status;
 
   public Policybuilderv3GetPolicyDetailsResponse() {
   }
 
-  public Policybuilderv3GetPolicyDetailsResponse activationStatus(Integer activationStatus) {
+  public Policybuilderv3GetPolicyDetailsResponse activationStatus(@javax.annotation.Nullable Integer activationStatus) {
     this.activationStatus = activationStatus;
     return this;
   }
 
-   /**
+  /**
    * activation_status identifier: 1001 -&gt; install with no issues, 1002-&gt; installed with issues, 1003 -&gt; not installed.
    * @return activationStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getActivationStatus() {
     return activationStatus;
   }
 
-  public void setActivationStatus(Integer activationStatus) {
+  public void setActivationStatus(@javax.annotation.Nullable Integer activationStatus) {
     this.activationStatus = activationStatus;
   }
 
 
-  public Policybuilderv3GetPolicyDetailsResponse controlFlow(Policybuilderv3ControlFlow controlFlow) {
+  public Policybuilderv3GetPolicyDetailsResponse controlFlow(@javax.annotation.Nullable Policybuilderv3ControlFlow controlFlow) {
     this.controlFlow = controlFlow;
     return this;
   }
 
-   /**
+  /**
    * Get controlFlow
    * @return controlFlow
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3ControlFlow getControlFlow() {
     return controlFlow;
   }
 
-  public void setControlFlow(Policybuilderv3ControlFlow controlFlow) {
+  public void setControlFlow(@javax.annotation.Nullable Policybuilderv3ControlFlow controlFlow) {
     this.controlFlow = controlFlow;
   }
 
 
-  public Policybuilderv3GetPolicyDetailsResponse installedFlag(Boolean installedFlag) {
+  public Policybuilderv3GetPolicyDetailsResponse installedFlag(@javax.annotation.Nullable Boolean installedFlag) {
     this.installedFlag = installedFlag;
     return this;
   }
 
-   /**
+  /**
    * Flag to indicate whether policy is installed or not.
    * @return installedFlag
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getInstalledFlag() {
     return installedFlag;
   }
 
-  public void setInstalledFlag(Boolean installedFlag) {
+  public void setInstalledFlag(@javax.annotation.Nullable Boolean installedFlag) {
     this.installedFlag = installedFlag;
   }
 
 
-  public Policybuilderv3GetPolicyDetailsResponse policyImportIssue(Policybuilderv3ImportIssue policyImportIssue) {
+  public Policybuilderv3GetPolicyDetailsResponse policyImportIssue(@javax.annotation.Nullable Policybuilderv3ImportIssue policyImportIssue) {
     this.policyImportIssue = policyImportIssue;
     return this;
   }
 
-   /**
+  /**
    * Get policyImportIssue
    * @return policyImportIssue
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3ImportIssue getPolicyImportIssue() {
     return policyImportIssue;
   }
 
-  public void setPolicyImportIssue(Policybuilderv3ImportIssue policyImportIssue) {
+  public void setPolicyImportIssue(@javax.annotation.Nullable Policybuilderv3ImportIssue policyImportIssue) {
     this.policyImportIssue = policyImportIssue;
   }
 
 
-  public Policybuilderv3GetPolicyDetailsResponse policyImportState(Policybuilderv3ImportState policyImportState) {
+  public Policybuilderv3GetPolicyDetailsResponse policyImportState(@javax.annotation.Nullable Policybuilderv3ImportState policyImportState) {
     this.policyImportState = policyImportState;
     return this;
   }
 
-   /**
+  /**
    * Get policyImportState
    * @return policyImportState
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3ImportState getPolicyImportState() {
     return policyImportState;
   }
 
-  public void setPolicyImportState(Policybuilderv3ImportState policyImportState) {
+  public void setPolicyImportState(@javax.annotation.Nullable Policybuilderv3ImportState policyImportState) {
     this.policyImportState = policyImportState;
   }
 
 
-  public Policybuilderv3GetPolicyDetailsResponse policyInfo(Policybuilderv3Policy policyInfo) {
+  public Policybuilderv3GetPolicyDetailsResponse policyInfo(@javax.annotation.Nullable Policybuilderv3Policy policyInfo) {
     this.policyInfo = policyInfo;
     return this;
   }
 
-   /**
+  /**
    * Get policyInfo
    * @return policyInfo
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3Policy getPolicyInfo() {
     return policyInfo;
   }
 
-  public void setPolicyInfo(Policybuilderv3Policy policyInfo) {
+  public void setPolicyInfo(@javax.annotation.Nullable Policybuilderv3Policy policyInfo) {
     this.policyInfo = policyInfo;
   }
 
 
-  public Policybuilderv3GetPolicyDetailsResponse policyName(String policyName) {
+  public Policybuilderv3GetPolicyDetailsResponse policyName(@javax.annotation.Nullable String policyName) {
     this.policyName = policyName;
     return this;
   }
 
-   /**
+  /**
    * Get policyName
    * @return policyName
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyName() {
     return policyName;
   }
 
-  public void setPolicyName(String policyName) {
+  public void setPolicyName(@javax.annotation.Nullable String policyName) {
     this.policyName = policyName;
   }
 
 
-  public Policybuilderv3GetPolicyDetailsResponse rules(List<Policybuilderv3Rule> rules) {
+  public Policybuilderv3GetPolicyDetailsResponse rules(@javax.annotation.Nullable List<Policybuilderv3Rule> rules) {
     this.rules = rules;
     return this;
   }
@@ -244,35 +254,35 @@ public class Policybuilderv3GetPolicyDetailsResponse {
     return this;
   }
 
-   /**
+  /**
    * Rules contained by the policy.
    * @return rules
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3Rule> getRules() {
     return rules;
   }
 
-  public void setRules(List<Policybuilderv3Rule> rules) {
+  public void setRules(@javax.annotation.Nullable List<Policybuilderv3Rule> rules) {
     this.rules = rules;
   }
 
 
-  public Policybuilderv3GetPolicyDetailsResponse status(Policybuilderv3StatusResponseBase status) {
+  public Policybuilderv3GetPolicyDetailsResponse status(@javax.annotation.Nullable Policybuilderv3StatusResponseBase status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3StatusResponseBase getStatus() {
     return status;
   }
 
-  public void setStatus(Policybuilderv3StatusResponseBase status) {
+  public void setStatus(@javax.annotation.Nullable Policybuilderv3StatusResponseBase status) {
     this.status = status;
   }
 
@@ -337,31 +347,22 @@ public class Policybuilderv3GetPolicyDetailsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("activation_status");
-    openapiFields.add("control_flow");
-    openapiFields.add("installed_flag");
-    openapiFields.add("policy_import_issue");
-    openapiFields.add("policy_import_state");
-    openapiFields.add("policy_info");
-    openapiFields.add("policy_name");
-    openapiFields.add("rules");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("activation_status", "control_flow", "installed_flag", "policy_import_issue", "policy_import_state", "policy_info", "policy_name", "rules", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3GetPolicyDetailsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3GetPolicyDetailsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3GetPolicyDetailsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3GetPolicyDetailsResponse is not found in the empty JSON string", Policybuilderv3GetPolicyDetailsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3GetPolicyDetailsResponse is not found in the empty JSON string", Policybuilderv3GetPolicyDetailsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -369,7 +370,7 @@ public class Policybuilderv3GetPolicyDetailsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3GetPolicyDetailsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3GetPolicyDetailsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3GetPolicyDetailsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -390,14 +391,14 @@ public class Policybuilderv3GetPolicyDetailsResponse {
         Policybuilderv3Policy.validateJsonElement(jsonObj.get("policy_info"));
       }
       if ((jsonObj.get("policy_name") != null && !jsonObj.get("policy_name").isJsonNull()) && !jsonObj.get("policy_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_name").toString()));
       }
       if (jsonObj.get("rules") != null && !jsonObj.get("rules").isJsonNull()) {
         JsonArray jsonArrayrules = jsonObj.getAsJsonArray("rules");
         if (jsonArrayrules != null) {
           // ensure the json data is an array
           if (!jsonObj.get("rules").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `rules` to be an array in the JSON string but got `%s`", jsonObj.get("rules").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rules` to be an array in the JSON string but got `%s`", jsonObj.get("rules").toString()));
           }
 
           // validate the optional field `rules` (array)
@@ -441,22 +442,22 @@ public class Policybuilderv3GetPolicyDetailsResponse {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3GetPolicyDetailsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3GetPolicyDetailsResponse
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3GetPolicyDetailsResponse
-  */
+  /**
+   * Create an instance of Policybuilderv3GetPolicyDetailsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3GetPolicyDetailsResponse
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3GetPolicyDetailsResponse
+   */
   public static Policybuilderv3GetPolicyDetailsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3GetPolicyDetailsResponse.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3GetPolicyDetailsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3GetPolicyDetailsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

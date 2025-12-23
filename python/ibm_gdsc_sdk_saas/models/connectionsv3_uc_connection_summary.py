@@ -37,7 +37,7 @@ class Connectionsv3UCConnectionSummary(BaseModel):
     input_alias: Optional[StrictStr] = Field(default=None, description="Connection input plugin alias, like \"Filebeat\".")
     last_response: Optional[StrictStr] = Field(default=None, description="The heartbeat.")
     port: Optional[StrictStr] = Field(default=None, description="Port where the related Universal connector service is running/listening.")
-    status: Optional[Connectionsv3Status] = None
+    status: Optional[Connectionsv3Status] = Connectionsv3Status.UNDEFINED_STATUS
     status_text: Optional[StrictStr] = Field(default=None, description="If status is not OK, details what's wrong (non-localized).")
     uc_connection_id: Optional[StrictStr] = Field(default=None, description="UC connection id.")
     __properties: ClassVar[List[str]] = ["alias", "config_id", "datasource_type", "edge_deployment_server", "filter_alias", "host", "input_alias", "last_response", "port", "status", "status_text", "uc_connection_id"]
@@ -105,7 +105,7 @@ class Connectionsv3UCConnectionSummary(BaseModel):
             "input_alias": obj.get("input_alias"),
             "last_response": obj.get("last_response"),
             "port": obj.get("port"),
-            "status": obj.get("status"),
+            "status": obj.get("status") if obj.get("status") is not None else Connectionsv3Status.UNDEFINED_STATUS,
             "status_text": obj.get("status_text"),
             "uc_connection_id": obj.get("uc_connection_id")
         })

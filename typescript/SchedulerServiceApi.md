@@ -25,14 +25,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest = {
-  // Schedulerv3CreateScheduledJobRequest
+const request: SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest = {
+  
   schedulerv3CreateScheduledJobRequest: {
     description: "description_example",
     enabled: true,
@@ -221,9 +221,8 @@ let body:.SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest = {
   },
 };
 
-apiInstance.schedulerServiceCreateScheduledJob(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceCreateScheduledJob(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -264,20 +263,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest = {
-  // string | Unique ID, required for delete.
+const request: SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest = {
+    // Unique ID, required for delete.
   scheduleId: "schedule_id_example",
 };
 
-apiInstance.schedulerServiceDeleteScheduledJob(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceDeleteScheduledJob(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -318,20 +316,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceGetDependenciesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceGetDependenciesRequest = {
-  // string | specify the configuration entry type: Distribution.Rule, workflow_investigation_link, workflow_response_template, etc. (optional)
+const request: SchedulerServiceApiSchedulerServiceGetDependenciesRequest = {
+    // specify the configuration entry type: Distribution.Rule, workflow_investigation_link, workflow_response_template, etc. (optional)
   configType: "config_type_example",
 };
 
-apiInstance.schedulerServiceGetDependencies(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetDependencies(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -372,17 +369,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.schedulerServiceGetDistributionRules(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetDistributionRules(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -420,20 +415,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsRequest = {
-  // string | Used to return a single scheduledjob.
+const request: SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsRequest = {
+    // Used to return a single scheduledjob.
   scheduleId: "schedule_id_example",
 };
 
-apiInstance.schedulerServiceGetScheduledJobDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetScheduledJobDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -474,22 +468,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest = {
-  // number | Optional: the amount to offset the rows by for pagination. (optional)
+const request: SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest = {
+    // Optional: the amount to offset the rows by for pagination. (optional)
   offset: 1,
-  // number | Optional: the max amount of rows to return for pagination. (optional)
+    // Optional: the max amount of rows to return for pagination. (optional)
   limit: 1,
 };
 
-apiInstance.schedulerServiceGetScheduledJobs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetScheduledJobs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -531,24 +524,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceGetSchedulesByReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceGetSchedulesByReportRequest = {
-  // string | Report ID for the scheduled report.
+const request: SchedulerServiceApiSchedulerServiceGetSchedulesByReportRequest = {
+    // Report ID for the scheduled report.
   reportId: "report_id_example",
-  // Schedulerv3GetSchedulesByReportRequest
+  
   schedulerv3GetSchedulesByReportRequest: {
     reportId: "reportId_example",
   },
 };
 
-apiInstance.schedulerServiceGetSchedulesByReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetSchedulesByReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -590,17 +582,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.schedulerServiceGetTags(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetTags(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -638,14 +628,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest = {
-  // Schedulerv3SearchScheduledJobsRequest
+const request: SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest = {
+  
   schedulerv3SearchScheduledJobsRequest: {
     limit: 1,
     offset: 1,
@@ -665,9 +655,8 @@ let body:.SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest = {
   },
 };
 
-apiInstance.schedulerServiceSearchScheduledJobs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceSearchScheduledJobs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -708,14 +697,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest = {
-  // Schedulerv3SearchScheduledTaskRunsRequest
+const request: SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest = {
+  
   schedulerv3SearchScheduledTaskRunsRequest: {
     limit: 1,
     offset: 1,
@@ -726,9 +715,8 @@ let body:.SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest = {
   },
 };
 
-apiInstance.schedulerServiceSearchScheduledTaskRuns(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceSearchScheduledTaskRuns(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -769,16 +757,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest = {
-  // string | Unique ID, required for update.
+const request: SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest = {
+    // Unique ID, required for update.
   scheduleId: "schedule_id_example",
-  // Schedulerv3UpdateScheduledJobRequest
+  
   schedulerv3UpdateScheduledJobRequest: {
     query: {
       "key": "key_example",
@@ -973,9 +961,8 @@ let body:.SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest = {
   },
 };
 
-apiInstance.schedulerServiceUpdateScheduledJob(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceUpdateScheduledJob(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Response parameters for list oauth client.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class AuthserverListOauthClientResponse {
   public static final String SERIALIZED_NAME_OAUTH_CLIENTS = "oauth_clients";
   @SerializedName(SERIALIZED_NAME_OAUTH_CLIENTS)
+  @javax.annotation.Nullable
   private List<AuthserverOauthClient> oauthClients = new ArrayList<>();
 
   public AuthserverListOauthClientResponse() {
   }
 
-  public AuthserverListOauthClientResponse oauthClients(List<AuthserverOauthClient> oauthClients) {
+  public AuthserverListOauthClientResponse oauthClients(@javax.annotation.Nullable List<AuthserverOauthClient> oauthClients) {
     this.oauthClients = oauthClients;
     return this;
   }
@@ -74,16 +76,16 @@ public class AuthserverListOauthClientResponse {
     return this;
   }
 
-   /**
+  /**
    * List of base oauth client object.
    * @return oauthClients
-  **/
+   */
   @javax.annotation.Nullable
   public List<AuthserverOauthClient> getOauthClients() {
     return oauthClients;
   }
 
-  public void setOauthClients(List<AuthserverOauthClient> oauthClients) {
+  public void setOauthClients(@javax.annotation.Nullable List<AuthserverOauthClient> oauthClients) {
     this.oauthClients = oauthClients;
   }
 
@@ -132,23 +134,22 @@ public class AuthserverListOauthClientResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("oauth_clients");
+    openapiFields = new HashSet<String>(Arrays.asList("oauth_clients"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AuthserverListOauthClientResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AuthserverListOauthClientResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AuthserverListOauthClientResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AuthserverListOauthClientResponse is not found in the empty JSON string", AuthserverListOauthClientResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AuthserverListOauthClientResponse is not found in the empty JSON string", AuthserverListOauthClientResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class AuthserverListOauthClientResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AuthserverListOauthClientResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AuthserverListOauthClientResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AuthserverListOauthClientResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class AuthserverListOauthClientResponse {
         if (jsonArrayoauthClients != null) {
           // ensure the json data is an array
           if (!jsonObj.get("oauth_clients").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `oauth_clients` to be an array in the JSON string but got `%s`", jsonObj.get("oauth_clients").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `oauth_clients` to be an array in the JSON string but got `%s`", jsonObj.get("oauth_clients").toString()));
           }
 
           // validate the optional field `oauth_clients` (array)
@@ -205,22 +206,22 @@ public class AuthserverListOauthClientResponse {
     }
   }
 
- /**
-  * Create an instance of AuthserverListOauthClientResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AuthserverListOauthClientResponse
-  * @throws IOException if the JSON string is invalid with respect to AuthserverListOauthClientResponse
-  */
+  /**
+   * Create an instance of AuthserverListOauthClientResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AuthserverListOauthClientResponse
+   * @throws IOException if the JSON string is invalid with respect to AuthserverListOauthClientResponse
+   */
   public static AuthserverListOauthClientResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AuthserverListOauthClientResponse.class);
   }
 
- /**
-  * Convert an instance of AuthserverListOauthClientResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AuthserverListOauthClientResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

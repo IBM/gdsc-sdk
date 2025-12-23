@@ -76,9 +76,9 @@ class Reportsv3CategoryVersion(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in table_map (dict)
         _field_dict = {}
         if self.table_map:
-            for _key in self.table_map:
-                if self.table_map[_key]:
-                    _field_dict[_key] = self.table_map[_key].to_dict()
+            for _key_table_map in self.table_map:
+                if self.table_map[_key_table_map]:
+                    _field_dict[_key_table_map] = self.table_map[_key_table_map].to_dict()
             _dict['table_map'] = _field_dict
         return _dict
 

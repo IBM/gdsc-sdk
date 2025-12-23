@@ -86,13 +86,14 @@ public class DashboardsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dashboardsServiceCreateDashboardCall(Dashboardsv3Dashboard dashboardsv3Dashboard, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call dashboardsServiceCreateDashboardCall(@javax.annotation.Nonnull Dashboardsv3Dashboard dashboardsv3Dashboard, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -138,7 +139,7 @@ public class DashboardsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call dashboardsServiceCreateDashboardValidateBeforeCall(Dashboardsv3Dashboard dashboardsv3Dashboard, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call dashboardsServiceCreateDashboardValidateBeforeCall(@javax.annotation.Nonnull Dashboardsv3Dashboard dashboardsv3Dashboard, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'dashboardsv3Dashboard' is set
         if (dashboardsv3Dashboard == null) {
             throw new ApiException("Missing the required parameter 'dashboardsv3Dashboard' when calling dashboardsServiceCreateDashboard(Async)");
@@ -155,13 +156,14 @@ public class DashboardsServiceApi {
      * @return Dashboardsv3CreateDashboardResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Dashboardsv3CreateDashboardResponse dashboardsServiceCreateDashboard(Dashboardsv3Dashboard dashboardsv3Dashboard) throws ApiException {
+    public Dashboardsv3CreateDashboardResponse dashboardsServiceCreateDashboard(@javax.annotation.Nonnull Dashboardsv3Dashboard dashboardsv3Dashboard) throws ApiException {
         ApiResponse<Dashboardsv3CreateDashboardResponse> localVarResp = dashboardsServiceCreateDashboardWithHttpInfo(dashboardsv3Dashboard);
         return localVarResp.getData();
     }
@@ -173,13 +175,14 @@ public class DashboardsServiceApi {
      * @return ApiResponse&lt;Dashboardsv3CreateDashboardResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Dashboardsv3CreateDashboardResponse> dashboardsServiceCreateDashboardWithHttpInfo(Dashboardsv3Dashboard dashboardsv3Dashboard) throws ApiException {
+    public ApiResponse<Dashboardsv3CreateDashboardResponse> dashboardsServiceCreateDashboardWithHttpInfo(@javax.annotation.Nonnull Dashboardsv3Dashboard dashboardsv3Dashboard) throws ApiException {
         okhttp3.Call localVarCall = dashboardsServiceCreateDashboardValidateBeforeCall(dashboardsv3Dashboard, null);
         Type localVarReturnType = new TypeToken<Dashboardsv3CreateDashboardResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -193,13 +196,14 @@ public class DashboardsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dashboardsServiceCreateDashboardAsync(Dashboardsv3Dashboard dashboardsv3Dashboard, final ApiCallback<Dashboardsv3CreateDashboardResponse> _callback) throws ApiException {
+    public okhttp3.Call dashboardsServiceCreateDashboardAsync(@javax.annotation.Nonnull Dashboardsv3Dashboard dashboardsv3Dashboard, final ApiCallback<Dashboardsv3CreateDashboardResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dashboardsServiceCreateDashboardValidateBeforeCall(dashboardsv3Dashboard, _callback);
         Type localVarReturnType = new TypeToken<Dashboardsv3CreateDashboardResponse>(){}.getType();
@@ -214,13 +218,14 @@ public class DashboardsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dashboardsServiceDeleteDashboardCall(String dashboardId, Dashboardsv3DeleteDashboardRequest dashboardsv3DeleteDashboardRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call dashboardsServiceDeleteDashboardCall(@javax.annotation.Nonnull String dashboardId, @javax.annotation.Nonnull Dashboardsv3DeleteDashboardRequest dashboardsv3DeleteDashboardRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -267,7 +272,7 @@ public class DashboardsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call dashboardsServiceDeleteDashboardValidateBeforeCall(String dashboardId, Dashboardsv3DeleteDashboardRequest dashboardsv3DeleteDashboardRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call dashboardsServiceDeleteDashboardValidateBeforeCall(@javax.annotation.Nonnull String dashboardId, @javax.annotation.Nonnull Dashboardsv3DeleteDashboardRequest dashboardsv3DeleteDashboardRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'dashboardId' is set
         if (dashboardId == null) {
             throw new ApiException("Missing the required parameter 'dashboardId' when calling dashboardsServiceDeleteDashboard(Async)");
@@ -290,13 +295,14 @@ public class DashboardsServiceApi {
      * @return Dashboardsv3DeleteDashboardResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Dashboardsv3DeleteDashboardResponse dashboardsServiceDeleteDashboard(String dashboardId, Dashboardsv3DeleteDashboardRequest dashboardsv3DeleteDashboardRequest) throws ApiException {
+    public Dashboardsv3DeleteDashboardResponse dashboardsServiceDeleteDashboard(@javax.annotation.Nonnull String dashboardId, @javax.annotation.Nonnull Dashboardsv3DeleteDashboardRequest dashboardsv3DeleteDashboardRequest) throws ApiException {
         ApiResponse<Dashboardsv3DeleteDashboardResponse> localVarResp = dashboardsServiceDeleteDashboardWithHttpInfo(dashboardId, dashboardsv3DeleteDashboardRequest);
         return localVarResp.getData();
     }
@@ -309,13 +315,14 @@ public class DashboardsServiceApi {
      * @return ApiResponse&lt;Dashboardsv3DeleteDashboardResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Dashboardsv3DeleteDashboardResponse> dashboardsServiceDeleteDashboardWithHttpInfo(String dashboardId, Dashboardsv3DeleteDashboardRequest dashboardsv3DeleteDashboardRequest) throws ApiException {
+    public ApiResponse<Dashboardsv3DeleteDashboardResponse> dashboardsServiceDeleteDashboardWithHttpInfo(@javax.annotation.Nonnull String dashboardId, @javax.annotation.Nonnull Dashboardsv3DeleteDashboardRequest dashboardsv3DeleteDashboardRequest) throws ApiException {
         okhttp3.Call localVarCall = dashboardsServiceDeleteDashboardValidateBeforeCall(dashboardId, dashboardsv3DeleteDashboardRequest, null);
         Type localVarReturnType = new TypeToken<Dashboardsv3DeleteDashboardResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -330,13 +337,14 @@ public class DashboardsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dashboardsServiceDeleteDashboardAsync(String dashboardId, Dashboardsv3DeleteDashboardRequest dashboardsv3DeleteDashboardRequest, final ApiCallback<Dashboardsv3DeleteDashboardResponse> _callback) throws ApiException {
+    public okhttp3.Call dashboardsServiceDeleteDashboardAsync(@javax.annotation.Nonnull String dashboardId, @javax.annotation.Nonnull Dashboardsv3DeleteDashboardRequest dashboardsv3DeleteDashboardRequest, final ApiCallback<Dashboardsv3DeleteDashboardResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dashboardsServiceDeleteDashboardValidateBeforeCall(dashboardId, dashboardsv3DeleteDashboardRequest, _callback);
         Type localVarReturnType = new TypeToken<Dashboardsv3DeleteDashboardResponse>(){}.getType();
@@ -349,7 +357,8 @@ public class DashboardsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -411,7 +420,8 @@ public class DashboardsServiceApi {
      * @return Dashboardsv3GetDashboardsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -428,7 +438,8 @@ public class DashboardsServiceApi {
      * @return ApiResponse&lt;Dashboardsv3GetDashboardsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -447,7 +458,8 @@ public class DashboardsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -468,13 +480,14 @@ public class DashboardsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dashboardsServiceUpdateDashboardCall(String dashboardId, Dashboardsv3UpdateDashboardRequest dashboardsv3UpdateDashboardRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call dashboardsServiceUpdateDashboardCall(@javax.annotation.Nonnull String dashboardId, @javax.annotation.Nonnull Dashboardsv3UpdateDashboardRequest dashboardsv3UpdateDashboardRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -521,7 +534,7 @@ public class DashboardsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call dashboardsServiceUpdateDashboardValidateBeforeCall(String dashboardId, Dashboardsv3UpdateDashboardRequest dashboardsv3UpdateDashboardRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call dashboardsServiceUpdateDashboardValidateBeforeCall(@javax.annotation.Nonnull String dashboardId, @javax.annotation.Nonnull Dashboardsv3UpdateDashboardRequest dashboardsv3UpdateDashboardRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'dashboardId' is set
         if (dashboardId == null) {
             throw new ApiException("Missing the required parameter 'dashboardId' when calling dashboardsServiceUpdateDashboard(Async)");
@@ -544,13 +557,14 @@ public class DashboardsServiceApi {
      * @return Dashboardsv3UpdateDashboardResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Dashboardsv3UpdateDashboardResponse dashboardsServiceUpdateDashboard(String dashboardId, Dashboardsv3UpdateDashboardRequest dashboardsv3UpdateDashboardRequest) throws ApiException {
+    public Dashboardsv3UpdateDashboardResponse dashboardsServiceUpdateDashboard(@javax.annotation.Nonnull String dashboardId, @javax.annotation.Nonnull Dashboardsv3UpdateDashboardRequest dashboardsv3UpdateDashboardRequest) throws ApiException {
         ApiResponse<Dashboardsv3UpdateDashboardResponse> localVarResp = dashboardsServiceUpdateDashboardWithHttpInfo(dashboardId, dashboardsv3UpdateDashboardRequest);
         return localVarResp.getData();
     }
@@ -563,13 +577,14 @@ public class DashboardsServiceApi {
      * @return ApiResponse&lt;Dashboardsv3UpdateDashboardResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Dashboardsv3UpdateDashboardResponse> dashboardsServiceUpdateDashboardWithHttpInfo(String dashboardId, Dashboardsv3UpdateDashboardRequest dashboardsv3UpdateDashboardRequest) throws ApiException {
+    public ApiResponse<Dashboardsv3UpdateDashboardResponse> dashboardsServiceUpdateDashboardWithHttpInfo(@javax.annotation.Nonnull String dashboardId, @javax.annotation.Nonnull Dashboardsv3UpdateDashboardRequest dashboardsv3UpdateDashboardRequest) throws ApiException {
         okhttp3.Call localVarCall = dashboardsServiceUpdateDashboardValidateBeforeCall(dashboardId, dashboardsv3UpdateDashboardRequest, null);
         Type localVarReturnType = new TypeToken<Dashboardsv3UpdateDashboardResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -584,13 +599,14 @@ public class DashboardsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dashboardsServiceUpdateDashboardAsync(String dashboardId, Dashboardsv3UpdateDashboardRequest dashboardsv3UpdateDashboardRequest, final ApiCallback<Dashboardsv3UpdateDashboardResponse> _callback) throws ApiException {
+    public okhttp3.Call dashboardsServiceUpdateDashboardAsync(@javax.annotation.Nonnull String dashboardId, @javax.annotation.Nonnull Dashboardsv3UpdateDashboardRequest dashboardsv3UpdateDashboardRequest, final ApiCallback<Dashboardsv3UpdateDashboardResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = dashboardsServiceUpdateDashboardValidateBeforeCall(dashboardId, dashboardsv3UpdateDashboardRequest, _callback);
         Type localVarReturnType = new TypeToken<Dashboardsv3UpdateDashboardResponse>(){}.getType();

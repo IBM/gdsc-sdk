@@ -15,4 +15,8 @@ This SDK provides comprehensive libraries and tools to interact with IBM Guardiu
 - [Typescript](/typescript/)
 - [cUrl](/bash/)
 
-Use this SDK to automate database security tasks, retrieve audit logs, generate reports, and monitor database activity with IBM Guardium Data Security Center.
+Use this SDK to automate database security tasks, retrieve audit logs, generate reports, and monitor database activity with IBM Guardium Data Security Center.</details>
+</details>
+</details>
+</details>
+</details>

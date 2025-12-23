@@ -74,9 +74,9 @@ class Assetsv3TagsFilterData(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in tags_data (list)
         _items = []
         if self.tags_data:
-            for _item in self.tags_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_tags_data in self.tags_data:
+                if _item_tags_data:
+                    _items.append(_item_tags_data.to_dict())
             _dict['tags_data'] = _items
         return _dict
 

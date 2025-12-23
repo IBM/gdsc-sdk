@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,55 +41,58 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateStreamingRequest is the request message containing the status of the CM pushed by GDP.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3UpdateStreamingRequest {
   public static final String SERIALIZED_NAME_CENTRAL_MANAGER_ID = "central_manager_id";
   @SerializedName(SERIALIZED_NAME_CENTRAL_MANAGER_ID)
+  @javax.annotation.Nullable
   private String centralManagerId;
 
   public static final String SERIALIZED_NAME_RECORDS = "records";
   @SerializedName(SERIALIZED_NAME_RECORDS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3StatusRecord> records = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private String status;
 
   public Guardiumconnectorv3UpdateStreamingRequest() {
   }
 
-  public Guardiumconnectorv3UpdateStreamingRequest centralManagerId(String centralManagerId) {
+  public Guardiumconnectorv3UpdateStreamingRequest centralManagerId(@javax.annotation.Nullable String centralManagerId) {
     this.centralManagerId = centralManagerId;
     return this;
   }
 
-   /**
+  /**
    * ID of central manager.
    * @return centralManagerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCentralManagerId() {
     return centralManagerId;
   }
 
-  public void setCentralManagerId(String centralManagerId) {
+  public void setCentralManagerId(@javax.annotation.Nullable String centralManagerId) {
     this.centralManagerId = centralManagerId;
   }
 
 
-  public Guardiumconnectorv3UpdateStreamingRequest records(List<Guardiumconnectorv3StatusRecord> records) {
+  public Guardiumconnectorv3UpdateStreamingRequest records(@javax.annotation.Nullable List<Guardiumconnectorv3StatusRecord> records) {
     this.records = records;
     return this;
   }
@@ -101,35 +105,35 @@ public class Guardiumconnectorv3UpdateStreamingRequest {
     return this;
   }
 
-   /**
+  /**
    * Status records pushed from GDP.
    * @return records
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3StatusRecord> getRecords() {
     return records;
   }
 
-  public void setRecords(List<Guardiumconnectorv3StatusRecord> records) {
+  public void setRecords(@javax.annotation.Nullable List<Guardiumconnectorv3StatusRecord> records) {
     this.records = records;
   }
 
 
-  public Guardiumconnectorv3UpdateStreamingRequest status(String status) {
+  public Guardiumconnectorv3UpdateStreamingRequest status(@javax.annotation.Nullable String status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Status response from GDP grdapi.
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatus() {
     return status;
   }
 
-  public void setStatus(String status) {
+  public void setStatus(@javax.annotation.Nullable String status) {
     this.status = status;
   }
 
@@ -182,25 +186,22 @@ public class Guardiumconnectorv3UpdateStreamingRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("central_manager_id");
-    openapiFields.add("records");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("central_manager_id", "records", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3UpdateStreamingRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3UpdateStreamingRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3UpdateStreamingRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3UpdateStreamingRequest is not found in the empty JSON string", Guardiumconnectorv3UpdateStreamingRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3UpdateStreamingRequest is not found in the empty JSON string", Guardiumconnectorv3UpdateStreamingRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,19 +209,19 @@ public class Guardiumconnectorv3UpdateStreamingRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3UpdateStreamingRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3UpdateStreamingRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3UpdateStreamingRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("central_manager_id") != null && !jsonObj.get("central_manager_id").isJsonNull()) && !jsonObj.get("central_manager_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `central_manager_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("central_manager_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `central_manager_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("central_manager_id").toString()));
       }
       if (jsonObj.get("records") != null && !jsonObj.get("records").isJsonNull()) {
         JsonArray jsonArrayrecords = jsonObj.getAsJsonArray("records");
         if (jsonArrayrecords != null) {
           // ensure the json data is an array
           if (!jsonObj.get("records").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `records` to be an array in the JSON string but got `%s`", jsonObj.get("records").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `records` to be an array in the JSON string but got `%s`", jsonObj.get("records").toString()));
           }
 
           // validate the optional field `records` (array)
@@ -230,7 +231,7 @@ public class Guardiumconnectorv3UpdateStreamingRequest {
         }
       }
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
   }
 
@@ -263,22 +264,22 @@ public class Guardiumconnectorv3UpdateStreamingRequest {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3UpdateStreamingRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3UpdateStreamingRequest
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3UpdateStreamingRequest
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3UpdateStreamingRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3UpdateStreamingRequest
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3UpdateStreamingRequest
+   */
   public static Guardiumconnectorv3UpdateStreamingRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3UpdateStreamingRequest.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3UpdateStreamingRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3UpdateStreamingRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

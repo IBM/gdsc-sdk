@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **date_range** | [**Reportsv3DateRange**](Reportsv3DateRange.md) |  | [optional] 
 **facet_selected_header** | [**Reportsv3ReportHeader**](Reportsv3ReportHeader.md) |  | [optional] 
-**model_type** | [**Reportsv3ModelType**](Reportsv3ModelType.md) |  | [optional] 
+**model_type** | [**Reportsv3ModelType**](Reportsv3ModelType.md) |  | [optional] [default to Reportsv3ModelType.UNDEFINED_MODEL_TYPE]
 **report_definition** | [**Reportsv3ReportDefinition**](Reportsv3ReportDefinition.md) |  | [optional] 
 **runtime_parameter_list** | [**List[Reportsv3RunTimeParameter]**](Reportsv3RunTimeParameter.md) | List of runtime parameter if needed. | [optional] 
 **time_zone** | **str** | Time zone. | [optional] 

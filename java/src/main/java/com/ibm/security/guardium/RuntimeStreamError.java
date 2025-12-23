@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,44 +41,49 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RuntimeStreamError
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class RuntimeStreamError {
   public static final String SERIALIZED_NAME_DETAILS = "details";
   @SerializedName(SERIALIZED_NAME_DETAILS)
+  @javax.annotation.Nullable
   private List<ProtobufAny> details = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_GRPC_CODE = "grpc_code";
   @SerializedName(SERIALIZED_NAME_GRPC_CODE)
+  @javax.annotation.Nullable
   private Integer grpcCode;
 
   public static final String SERIALIZED_NAME_HTTP_CODE = "http_code";
   @SerializedName(SERIALIZED_NAME_HTTP_CODE)
+  @javax.annotation.Nullable
   private Integer httpCode;
 
   public static final String SERIALIZED_NAME_HTTP_STATUS = "http_status";
   @SerializedName(SERIALIZED_NAME_HTTP_STATUS)
+  @javax.annotation.Nullable
   private String httpStatus;
 
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String message;
 
   public RuntimeStreamError() {
   }
 
-  public RuntimeStreamError details(List<ProtobufAny> details) {
+  public RuntimeStreamError details(@javax.annotation.Nullable List<ProtobufAny> details) {
     this.details = details;
     return this;
   }
@@ -90,92 +96,92 @@ public class RuntimeStreamError {
     return this;
   }
 
-   /**
+  /**
    * Get details
    * @return details
-  **/
+   */
   @javax.annotation.Nullable
   public List<ProtobufAny> getDetails() {
     return details;
   }
 
-  public void setDetails(List<ProtobufAny> details) {
+  public void setDetails(@javax.annotation.Nullable List<ProtobufAny> details) {
     this.details = details;
   }
 
 
-  public RuntimeStreamError grpcCode(Integer grpcCode) {
+  public RuntimeStreamError grpcCode(@javax.annotation.Nullable Integer grpcCode) {
     this.grpcCode = grpcCode;
     return this;
   }
 
-   /**
+  /**
    * Get grpcCode
    * @return grpcCode
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGrpcCode() {
     return grpcCode;
   }
 
-  public void setGrpcCode(Integer grpcCode) {
+  public void setGrpcCode(@javax.annotation.Nullable Integer grpcCode) {
     this.grpcCode = grpcCode;
   }
 
 
-  public RuntimeStreamError httpCode(Integer httpCode) {
+  public RuntimeStreamError httpCode(@javax.annotation.Nullable Integer httpCode) {
     this.httpCode = httpCode;
     return this;
   }
 
-   /**
+  /**
    * Get httpCode
    * @return httpCode
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getHttpCode() {
     return httpCode;
   }
 
-  public void setHttpCode(Integer httpCode) {
+  public void setHttpCode(@javax.annotation.Nullable Integer httpCode) {
     this.httpCode = httpCode;
   }
 
 
-  public RuntimeStreamError httpStatus(String httpStatus) {
+  public RuntimeStreamError httpStatus(@javax.annotation.Nullable String httpStatus) {
     this.httpStatus = httpStatus;
     return this;
   }
 
-   /**
+  /**
    * Get httpStatus
    * @return httpStatus
-  **/
+   */
   @javax.annotation.Nullable
   public String getHttpStatus() {
     return httpStatus;
   }
 
-  public void setHttpStatus(String httpStatus) {
+  public void setHttpStatus(@javax.annotation.Nullable String httpStatus) {
     this.httpStatus = httpStatus;
   }
 
 
-  public RuntimeStreamError message(String message) {
+  public RuntimeStreamError message(@javax.annotation.Nullable String message) {
     this.message = message;
     return this;
   }
 
-   /**
+  /**
    * Get message
    * @return message
-  **/
+   */
   @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setMessage(@javax.annotation.Nullable String message) {
     this.message = message;
   }
 
@@ -232,27 +238,22 @@ public class RuntimeStreamError {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("details");
-    openapiFields.add("grpc_code");
-    openapiFields.add("http_code");
-    openapiFields.add("http_status");
-    openapiFields.add("message");
+    openapiFields = new HashSet<String>(Arrays.asList("details", "grpc_code", "http_code", "http_status", "message"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to RuntimeStreamError
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to RuntimeStreamError
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!RuntimeStreamError.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RuntimeStreamError is not found in the empty JSON string", RuntimeStreamError.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in RuntimeStreamError is not found in the empty JSON string", RuntimeStreamError.openapiRequiredFields.toString()));
         }
       }
 
@@ -260,7 +261,7 @@ public class RuntimeStreamError {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!RuntimeStreamError.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RuntimeStreamError` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `RuntimeStreamError` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -269,7 +270,7 @@ public class RuntimeStreamError {
         if (jsonArraydetails != null) {
           // ensure the json data is an array
           if (!jsonObj.get("details").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `details` to be an array in the JSON string but got `%s`", jsonObj.get("details").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `details` to be an array in the JSON string but got `%s`", jsonObj.get("details").toString()));
           }
 
           // validate the optional field `details` (array)
@@ -279,10 +280,10 @@ public class RuntimeStreamError {
         }
       }
       if ((jsonObj.get("http_status") != null && !jsonObj.get("http_status").isJsonNull()) && !jsonObj.get("http_status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `http_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("http_status").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `http_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("http_status").toString()));
       }
       if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
   }
 
@@ -315,22 +316,22 @@ public class RuntimeStreamError {
     }
   }
 
- /**
-  * Create an instance of RuntimeStreamError given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RuntimeStreamError
-  * @throws IOException if the JSON string is invalid with respect to RuntimeStreamError
-  */
+  /**
+   * Create an instance of RuntimeStreamError given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of RuntimeStreamError
+   * @throws IOException if the JSON string is invalid with respect to RuntimeStreamError
+   */
   public static RuntimeStreamError fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, RuntimeStreamError.class);
   }
 
- /**
-  * Convert an instance of RuntimeStreamError to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of RuntimeStreamError to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

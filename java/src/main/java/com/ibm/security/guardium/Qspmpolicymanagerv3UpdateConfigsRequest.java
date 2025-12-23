@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,51 +40,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmpolicymanagerv3UpdateConfigsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmpolicymanagerv3UpdateConfigsRequest {
   public static final String SERIALIZED_NAME_ID = "_id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_OPTIONS = "options";
   @SerializedName(SERIALIZED_NAME_OPTIONS)
+  @javax.annotation.Nullable
   private Map<String, Double> options = new HashMap<>();
 
   public Qspmpolicymanagerv3UpdateConfigsRequest() {
   }
 
-  public Qspmpolicymanagerv3UpdateConfigsRequest id(String id) {
+  public Qspmpolicymanagerv3UpdateConfigsRequest id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Qspmpolicymanagerv3UpdateConfigsRequest options(Map<String, Double> options) {
+  public Qspmpolicymanagerv3UpdateConfigsRequest options(@javax.annotation.Nullable Map<String, Double> options) {
     this.options = options;
     return this;
   }
@@ -96,16 +99,16 @@ public class Qspmpolicymanagerv3UpdateConfigsRequest {
     return this;
   }
 
-   /**
+  /**
    * Get options
    * @return options
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Double> getOptions() {
     return options;
   }
 
-  public void setOptions(Map<String, Double> options) {
+  public void setOptions(@javax.annotation.Nullable Map<String, Double> options) {
     this.options = options;
   }
 
@@ -156,24 +159,22 @@ public class Qspmpolicymanagerv3UpdateConfigsRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("_id");
-    openapiFields.add("options");
+    openapiFields = new HashSet<String>(Arrays.asList("_id", "options"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3UpdateConfigsRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3UpdateConfigsRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmpolicymanagerv3UpdateConfigsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmpolicymanagerv3UpdateConfigsRequest is not found in the empty JSON string", Qspmpolicymanagerv3UpdateConfigsRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmpolicymanagerv3UpdateConfigsRequest is not found in the empty JSON string", Qspmpolicymanagerv3UpdateConfigsRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -181,12 +182,12 @@ public class Qspmpolicymanagerv3UpdateConfigsRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmpolicymanagerv3UpdateConfigsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3UpdateConfigsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3UpdateConfigsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("_id") != null && !jsonObj.get("_id").isJsonNull()) && !jsonObj.get("_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("_id").toString()));
       }
   }
 
@@ -219,22 +220,22 @@ public class Qspmpolicymanagerv3UpdateConfigsRequest {
     }
   }
 
- /**
-  * Create an instance of Qspmpolicymanagerv3UpdateConfigsRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmpolicymanagerv3UpdateConfigsRequest
-  * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3UpdateConfigsRequest
-  */
+  /**
+   * Create an instance of Qspmpolicymanagerv3UpdateConfigsRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmpolicymanagerv3UpdateConfigsRequest
+   * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3UpdateConfigsRequest
+   */
   public static Qspmpolicymanagerv3UpdateConfigsRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmpolicymanagerv3UpdateConfigsRequest.class);
   }
 
- /**
-  * Convert an instance of Qspmpolicymanagerv3UpdateConfigsRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmpolicymanagerv3UpdateConfigsRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

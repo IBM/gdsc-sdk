@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **column_id** | **int** | The id of the column. | [optional] 
 **column_name** | **str** | The name of the column. | [optional] 
 **column_size** | **str** | Data size of the column. | [optional] 
-**column_type** | [**Ecosystemv3DataType**](Ecosystemv3DataType.md) |  | [optional] 
+**column_type** | [**Ecosystemv3DataType**](Ecosystemv3DataType.md) |  | [optional] [default to Ecosystemv3DataType.UNDEFINED_DATA_TYPE]
 **unique** | **bool** | If the column is unique. | [optional] 
 
 ## Example

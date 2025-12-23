@@ -79,16 +79,16 @@ class Reportsrunnerv3RunReportResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in data (list)
         _items = []
         if self.data:
-            for _item in self.data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_data in self.data:
+                if _item_data:
+                    _items.append(_item_data.to_dict())
             _dict['data'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in facets (list)
         _items = []
         if self.facets:
-            for _item in self.facets:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_facets in self.facets:
+                if _item_facets:
+                    _items.append(_item_facets.to_dict())
             _dict['facets'] = _items
         # override the default output from pydantic by calling `to_dict()` of report_layout
         if self.report_layout:

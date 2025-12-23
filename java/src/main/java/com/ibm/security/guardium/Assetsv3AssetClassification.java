@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,36 +41,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3AssetClassification
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetClassification {
   public static final String SERIALIZED_NAME_CLASSIFICATION = "classification";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION)
+  @javax.annotation.Nullable
   private List<Assetsv3ClassificationData> classification = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_LAST_ACTIVITY = "last_activity";
   @SerializedName(SERIALIZED_NAME_LAST_ACTIVITY)
+  @javax.annotation.Nullable
   private String lastActivity;
 
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "total_count";
   @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
+  @javax.annotation.Nullable
   private Integer totalCount;
 
   public Assetsv3AssetClassification() {
   }
 
-  public Assetsv3AssetClassification classification(List<Assetsv3ClassificationData> classification) {
+  public Assetsv3AssetClassification classification(@javax.annotation.Nullable List<Assetsv3ClassificationData> classification) {
     this.classification = classification;
     return this;
   }
@@ -82,54 +86,54 @@ public class Assetsv3AssetClassification {
     return this;
   }
 
-   /**
+  /**
    * Get classification
    * @return classification
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ClassificationData> getClassification() {
     return classification;
   }
 
-  public void setClassification(List<Assetsv3ClassificationData> classification) {
+  public void setClassification(@javax.annotation.Nullable List<Assetsv3ClassificationData> classification) {
     this.classification = classification;
   }
 
 
-  public Assetsv3AssetClassification lastActivity(String lastActivity) {
+  public Assetsv3AssetClassification lastActivity(@javax.annotation.Nullable String lastActivity) {
     this.lastActivity = lastActivity;
     return this;
   }
 
-   /**
+  /**
    * Get lastActivity
    * @return lastActivity
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastActivity() {
     return lastActivity;
   }
 
-  public void setLastActivity(String lastActivity) {
+  public void setLastActivity(@javax.annotation.Nullable String lastActivity) {
     this.lastActivity = lastActivity;
   }
 
 
-  public Assetsv3AssetClassification totalCount(Integer totalCount) {
+  public Assetsv3AssetClassification totalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
     return this;
   }
 
-   /**
+  /**
    * Get totalCount
    * @return totalCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(Integer totalCount) {
+  public void setTotalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
   }
 
@@ -182,25 +186,22 @@ public class Assetsv3AssetClassification {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("classification");
-    openapiFields.add("last_activity");
-    openapiFields.add("total_count");
+    openapiFields = new HashSet<String>(Arrays.asList("classification", "last_activity", "total_count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetClassification
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetClassification
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetClassification.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetClassification is not found in the empty JSON string", Assetsv3AssetClassification.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetClassification is not found in the empty JSON string", Assetsv3AssetClassification.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,7 +209,7 @@ public class Assetsv3AssetClassification {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetClassification.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetClassification` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetClassification` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -217,7 +218,7 @@ public class Assetsv3AssetClassification {
         if (jsonArrayclassification != null) {
           // ensure the json data is an array
           if (!jsonObj.get("classification").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `classification` to be an array in the JSON string but got `%s`", jsonObj.get("classification").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `classification` to be an array in the JSON string but got `%s`", jsonObj.get("classification").toString()));
           }
 
           // validate the optional field `classification` (array)
@@ -227,7 +228,7 @@ public class Assetsv3AssetClassification {
         }
       }
       if ((jsonObj.get("last_activity") != null && !jsonObj.get("last_activity").isJsonNull()) && !jsonObj.get("last_activity").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_activity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_activity").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_activity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_activity").toString()));
       }
   }
 
@@ -260,22 +261,22 @@ public class Assetsv3AssetClassification {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetClassification given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetClassification
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetClassification
-  */
+  /**
+   * Create an instance of Assetsv3AssetClassification given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetClassification
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetClassification
+   */
   public static Assetsv3AssetClassification fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetClassification.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetClassification to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetClassification to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

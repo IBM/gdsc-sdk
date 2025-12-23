@@ -27,7 +27,7 @@ class Workflowv3StatusCount(BaseModel):
     """
     Workflowv3StatusCount
     """ # noqa: E501
-    status: Optional[Workflowv3Status] = None
+    status: Optional[Workflowv3Status] = Workflowv3Status.UNDEFINED_STATUS
     total: Optional[StrictInt] = None
     __properties: ClassVar[List[str]] = ["status", "total"]
 
@@ -82,7 +82,7 @@ class Workflowv3StatusCount(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "status": obj.get("status"),
+            "status": obj.get("status") if obj.get("status") is not None else Workflowv3Status.UNDEFINED_STATUS,
             "total": obj.get("total")
         })
         return _obj

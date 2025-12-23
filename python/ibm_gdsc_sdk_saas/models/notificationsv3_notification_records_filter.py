@@ -33,7 +33,7 @@ class Notificationsv3NotificationRecordsFilter(BaseModel):
     origin_data: Optional[StrictStr] = Field(default=None, description="Only return record that with the specified origin_data.")
     origins: Optional[List[StrictStr]] = Field(default=None, description="Only return record that includes the specified origins.")
     start_time: Optional[datetime] = Field(default=None, description="Return records created at this time or later (>=).")
-    state: Optional[NotificationRecordsFilterStateFilter] = None
+    state: Optional[NotificationRecordsFilterStateFilter] = NotificationRecordsFilterStateFilter.INCLUDE_ALL
     __properties: ClassVar[List[str]] = ["end_time", "limit", "origin_data", "origins", "start_time", "state"]
 
     model_config = ConfigDict(
@@ -92,7 +92,7 @@ class Notificationsv3NotificationRecordsFilter(BaseModel):
             "origin_data": obj.get("origin_data"),
             "origins": obj.get("origins"),
             "start_time": obj.get("start_time"),
-            "state": obj.get("state")
+            "state": obj.get("state") if obj.get("state") is not None else NotificationRecordsFilterStateFilter.INCLUDE_ALL
         })
         return _obj
 

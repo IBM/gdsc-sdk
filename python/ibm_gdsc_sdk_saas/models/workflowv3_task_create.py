@@ -41,10 +41,10 @@ class Workflowv3TaskCreate(BaseModel):
     description: Optional[StrictStr] = Field(default=None, description="Optional: Multiline description of the task.")
     investigation_links: Optional[List[Schedulerv3ConfigurationItem]] = None
     origin: Optional[Workflowv3Origin] = None
-    priority: Optional[Workflowv3Priority] = None
+    priority: Optional[Workflowv3Priority] = Workflowv3Priority.UNDEFINED_PRIORITY
     report_result: Optional[Workflowv3ReportResult] = None
     response_template: Optional[Schedulerv3ConfigurationItem] = None
-    status: Optional[Workflowv3Status] = None
+    status: Optional[Workflowv3Status] = Workflowv3Status.UNDEFINED_STATUS
     tags: Optional[List[StrictStr]] = None
     title: Optional[StrictStr] = Field(default=None, description="Task title (subject).")
     __properties: ClassVar[List[str]] = ["alt_id", "assignments", "comment", "date_due", "depends_on", "description", "investigation_links", "origin", "priority", "report_result", "response_template", "status", "tags", "title"]
@@ -91,16 +91,16 @@ class Workflowv3TaskCreate(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in assignments (list)
         _items = []
         if self.assignments:
-            for _item in self.assignments:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_assignments in self.assignments:
+                if _item_assignments:
+                    _items.append(_item_assignments.to_dict())
             _dict['assignments'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in investigation_links (list)
         _items = []
         if self.investigation_links:
-            for _item in self.investigation_links:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_investigation_links in self.investigation_links:
+                if _item_investigation_links:
+                    _items.append(_item_investigation_links.to_dict())
             _dict['investigation_links'] = _items
         # override the default output from pydantic by calling `to_dict()` of origin
         if self.origin:
@@ -131,10 +131,10 @@ class Workflowv3TaskCreate(BaseModel):
             "description": obj.get("description"),
             "investigation_links": [Schedulerv3ConfigurationItem.from_dict(_item) for _item in obj["investigation_links"]] if obj.get("investigation_links") is not None else None,
             "origin": Workflowv3Origin.from_dict(obj["origin"]) if obj.get("origin") is not None else None,
-            "priority": obj.get("priority"),
+            "priority": obj.get("priority") if obj.get("priority") is not None else Workflowv3Priority.UNDEFINED_PRIORITY,
             "report_result": Workflowv3ReportResult.from_dict(obj["report_result"]) if obj.get("report_result") is not None else None,
             "response_template": Schedulerv3ConfigurationItem.from_dict(obj["response_template"]) if obj.get("response_template") is not None else None,
-            "status": obj.get("status"),
+            "status": obj.get("status") if obj.get("status") is not None else Workflowv3Status.UNDEFINED_STATUS,
             "tags": obj.get("tags"),
             "title": obj.get("title")
         })

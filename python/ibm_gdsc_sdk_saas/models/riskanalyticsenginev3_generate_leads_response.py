@@ -30,7 +30,7 @@ class Riskanalyticsenginev3GenerateLeadsResponse(BaseModel):
     GenerateLeadsResponse is the response object for GenerateLeads API.
     """ # noqa: E501
     end_time: Optional[datetime] = Field(default=None, description="The end time of the risks in format YYYY-MM-ddTHH:mm:ssZ.")
-    pivot_type: Optional[Riskanalyticsenginev3PivotType] = None
+    pivot_type: Optional[Riskanalyticsenginev3PivotType] = Riskanalyticsenginev3PivotType.UNDEFINED_PIVOT_TYPE
     risks: Optional[List[Riskanalyticsenginev3Risk]] = Field(default=None, description="Returns an array with risks with pivot and leads.")
     start_time: Optional[datetime] = Field(default=None, description="The start time of the risks in format YYYY-MM-ddTHH:mm:ssZ.")
     __properties: ClassVar[List[str]] = ["end_time", "pivot_type", "risks", "start_time"]
@@ -77,9 +77,9 @@ class Riskanalyticsenginev3GenerateLeadsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in risks (list)
         _items = []
         if self.risks:
-            for _item in self.risks:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_risks in self.risks:
+                if _item_risks:
+                    _items.append(_item_risks.to_dict())
             _dict['risks'] = _items
         return _dict
 
@@ -94,7 +94,7 @@ class Riskanalyticsenginev3GenerateLeadsResponse(BaseModel):
 
         _obj = cls.model_validate({
             "end_time": obj.get("end_time"),
-            "pivot_type": obj.get("pivot_type"),
+            "pivot_type": obj.get("pivot_type") if obj.get("pivot_type") is not None else Riskanalyticsenginev3PivotType.UNDEFINED_PIVOT_TYPE,
             "risks": [Riskanalyticsenginev3Risk.from_dict(_item) for _item in obj["risks"]] if obj.get("risks") is not None else None,
             "start_time": obj.get("start_time")
         })

@@ -72,9 +72,9 @@ class Connectionsv3GetDataSourcesResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in data_sources (list)
         _items = []
         if self.data_sources:
-            for _item in self.data_sources:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_data_sources in self.data_sources:
+                if _item_data_sources:
+                    _items.append(_item_data_sources.to_dict())
             _dict['data_sources'] = _items
         return _dict
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,111 +38,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3UnassignedTags
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3UnassignedTags {
   public static final String SERIALIZED_NAME_DOMAIN_ID = "domain_id";
   @SerializedName(SERIALIZED_NAME_DOMAIN_ID)
+  @javax.annotation.Nullable
   private String domainId;
 
   public static final String SERIALIZED_NAME_TAG_CATEGORY = "tag_category";
   @SerializedName(SERIALIZED_NAME_TAG_CATEGORY)
+  @javax.annotation.Nullable
   private String tagCategory;
 
   public static final String SERIALIZED_NAME_TAG_ID = "tag_id";
   @SerializedName(SERIALIZED_NAME_TAG_ID)
+  @javax.annotation.Nullable
   private String tagId;
 
   public static final String SERIALIZED_NAME_TAG_NAMES = "tag_names";
   @SerializedName(SERIALIZED_NAME_TAG_NAMES)
+  @javax.annotation.Nullable
   private String tagNames;
 
   public Assetsv3UnassignedTags() {
   }
 
-  public Assetsv3UnassignedTags domainId(String domainId) {
+  public Assetsv3UnassignedTags domainId(@javax.annotation.Nullable String domainId) {
     this.domainId = domainId;
     return this;
   }
 
-   /**
+  /**
    * Get domainId
    * @return domainId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDomainId() {
     return domainId;
   }
 
-  public void setDomainId(String domainId) {
+  public void setDomainId(@javax.annotation.Nullable String domainId) {
     this.domainId = domainId;
   }
 
 
-  public Assetsv3UnassignedTags tagCategory(String tagCategory) {
+  public Assetsv3UnassignedTags tagCategory(@javax.annotation.Nullable String tagCategory) {
     this.tagCategory = tagCategory;
     return this;
   }
 
-   /**
+  /**
    * Name of the tag.
    * @return tagCategory
-  **/
+   */
   @javax.annotation.Nullable
   public String getTagCategory() {
     return tagCategory;
   }
 
-  public void setTagCategory(String tagCategory) {
+  public void setTagCategory(@javax.annotation.Nullable String tagCategory) {
     this.tagCategory = tagCategory;
   }
 
 
-  public Assetsv3UnassignedTags tagId(String tagId) {
+  public Assetsv3UnassignedTags tagId(@javax.annotation.Nullable String tagId) {
     this.tagId = tagId;
     return this;
   }
 
-   /**
+  /**
    * Get tagId
    * @return tagId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTagId() {
     return tagId;
   }
 
-  public void setTagId(String tagId) {
+  public void setTagId(@javax.annotation.Nullable String tagId) {
     this.tagId = tagId;
   }
 
 
-  public Assetsv3UnassignedTags tagNames(String tagNames) {
+  public Assetsv3UnassignedTags tagNames(@javax.annotation.Nullable String tagNames) {
     this.tagNames = tagNames;
     return this;
   }
 
-   /**
+  /**
    * Concepts for the tag.
    * @return tagNames
-  **/
+   */
   @javax.annotation.Nullable
   public String getTagNames() {
     return tagNames;
   }
 
-  public void setTagNames(String tagNames) {
+  public void setTagNames(@javax.annotation.Nullable String tagNames) {
     this.tagNames = tagNames;
   }
 
@@ -196,26 +201,22 @@ public class Assetsv3UnassignedTags {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("domain_id");
-    openapiFields.add("tag_category");
-    openapiFields.add("tag_id");
-    openapiFields.add("tag_names");
+    openapiFields = new HashSet<String>(Arrays.asList("domain_id", "tag_category", "tag_id", "tag_names"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3UnassignedTags
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3UnassignedTags
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3UnassignedTags.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3UnassignedTags is not found in the empty JSON string", Assetsv3UnassignedTags.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3UnassignedTags is not found in the empty JSON string", Assetsv3UnassignedTags.openapiRequiredFields.toString()));
         }
       }
 
@@ -223,21 +224,21 @@ public class Assetsv3UnassignedTags {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3UnassignedTags.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3UnassignedTags` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3UnassignedTags` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("domain_id") != null && !jsonObj.get("domain_id").isJsonNull()) && !jsonObj.get("domain_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `domain_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("domain_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `domain_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("domain_id").toString()));
       }
       if ((jsonObj.get("tag_category") != null && !jsonObj.get("tag_category").isJsonNull()) && !jsonObj.get("tag_category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_category").toString()));
       }
       if ((jsonObj.get("tag_id") != null && !jsonObj.get("tag_id").isJsonNull()) && !jsonObj.get("tag_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_id").toString()));
       }
       if ((jsonObj.get("tag_names") != null && !jsonObj.get("tag_names").isJsonNull()) && !jsonObj.get("tag_names").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag_names` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_names").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_names` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_names").toString()));
       }
   }
 
@@ -270,22 +271,22 @@ public class Assetsv3UnassignedTags {
     }
   }
 
- /**
-  * Create an instance of Assetsv3UnassignedTags given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3UnassignedTags
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3UnassignedTags
-  */
+  /**
+   * Create an instance of Assetsv3UnassignedTags given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3UnassignedTags
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3UnassignedTags
+   */
   public static Assetsv3UnassignedTags fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3UnassignedTags.class);
   }
 
- /**
-  * Convert an instance of Assetsv3UnassignedTags to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3UnassignedTags to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

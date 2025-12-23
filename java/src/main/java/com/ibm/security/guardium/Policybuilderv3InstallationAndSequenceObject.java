@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,111 +38,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Object indicating Installation and UI Sequence of the policies.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3InstallationAndSequenceObject {
   public static final String SERIALIZED_NAME_EDGE_IDENTIFIER = "edge_identifier";
   @SerializedName(SERIALIZED_NAME_EDGE_IDENTIFIER)
+  @javax.annotation.Nullable
   private String edgeIdentifier;
 
   public static final String SERIALIZED_NAME_INSTALLATION_SEQUENCE = "installation_sequence";
   @SerializedName(SERIALIZED_NAME_INSTALLATION_SEQUENCE)
+  @javax.annotation.Nullable
   private Integer installationSequence;
 
   public static final String SERIALIZED_NAME_POLICY_ID = "policy_id";
   @SerializedName(SERIALIZED_NAME_POLICY_ID)
+  @javax.annotation.Nullable
   private String policyId;
 
   public static final String SERIALIZED_NAME_UI_SEQUENCE = "ui_sequence";
   @SerializedName(SERIALIZED_NAME_UI_SEQUENCE)
+  @javax.annotation.Nullable
   private Integer uiSequence;
 
   public Policybuilderv3InstallationAndSequenceObject() {
   }
 
-  public Policybuilderv3InstallationAndSequenceObject edgeIdentifier(String edgeIdentifier) {
+  public Policybuilderv3InstallationAndSequenceObject edgeIdentifier(@javax.annotation.Nullable String edgeIdentifier) {
     this.edgeIdentifier = edgeIdentifier;
     return this;
   }
 
-   /**
+  /**
    * Get edgeIdentifier
    * @return edgeIdentifier
-  **/
+   */
   @javax.annotation.Nullable
   public String getEdgeIdentifier() {
     return edgeIdentifier;
   }
 
-  public void setEdgeIdentifier(String edgeIdentifier) {
+  public void setEdgeIdentifier(@javax.annotation.Nullable String edgeIdentifier) {
     this.edgeIdentifier = edgeIdentifier;
   }
 
 
-  public Policybuilderv3InstallationAndSequenceObject installationSequence(Integer installationSequence) {
+  public Policybuilderv3InstallationAndSequenceObject installationSequence(@javax.annotation.Nullable Integer installationSequence) {
     this.installationSequence = installationSequence;
     return this;
   }
 
-   /**
+  /**
    * Sequence in which the policy is to be installed.
    * @return installationSequence
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getInstallationSequence() {
     return installationSequence;
   }
 
-  public void setInstallationSequence(Integer installationSequence) {
+  public void setInstallationSequence(@javax.annotation.Nullable Integer installationSequence) {
     this.installationSequence = installationSequence;
   }
 
 
-  public Policybuilderv3InstallationAndSequenceObject policyId(String policyId) {
+  public Policybuilderv3InstallationAndSequenceObject policyId(@javax.annotation.Nullable String policyId) {
     this.policyId = policyId;
     return this;
   }
 
-   /**
+  /**
    * Policy id to perform sequencing on.
    * @return policyId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyId() {
     return policyId;
   }
 
-  public void setPolicyId(String policyId) {
+  public void setPolicyId(@javax.annotation.Nullable String policyId) {
     this.policyId = policyId;
   }
 
 
-  public Policybuilderv3InstallationAndSequenceObject uiSequence(Integer uiSequence) {
+  public Policybuilderv3InstallationAndSequenceObject uiSequence(@javax.annotation.Nullable Integer uiSequence) {
     this.uiSequence = uiSequence;
     return this;
   }
 
-   /**
+  /**
    * Sequence of the policy in UI.
    * @return uiSequence
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getUiSequence() {
     return uiSequence;
   }
 
-  public void setUiSequence(Integer uiSequence) {
+  public void setUiSequence(@javax.annotation.Nullable Integer uiSequence) {
     this.uiSequence = uiSequence;
   }
 
@@ -196,26 +201,22 @@ public class Policybuilderv3InstallationAndSequenceObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("edge_identifier");
-    openapiFields.add("installation_sequence");
-    openapiFields.add("policy_id");
-    openapiFields.add("ui_sequence");
+    openapiFields = new HashSet<String>(Arrays.asList("edge_identifier", "installation_sequence", "policy_id", "ui_sequence"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3InstallationAndSequenceObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3InstallationAndSequenceObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3InstallationAndSequenceObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3InstallationAndSequenceObject is not found in the empty JSON string", Policybuilderv3InstallationAndSequenceObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3InstallationAndSequenceObject is not found in the empty JSON string", Policybuilderv3InstallationAndSequenceObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -223,15 +224,15 @@ public class Policybuilderv3InstallationAndSequenceObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3InstallationAndSequenceObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3InstallationAndSequenceObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3InstallationAndSequenceObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("edge_identifier") != null && !jsonObj.get("edge_identifier").isJsonNull()) && !jsonObj.get("edge_identifier").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `edge_identifier` to be a primitive type in the JSON string but got `%s`", jsonObj.get("edge_identifier").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `edge_identifier` to be a primitive type in the JSON string but got `%s`", jsonObj.get("edge_identifier").toString()));
       }
       if ((jsonObj.get("policy_id") != null && !jsonObj.get("policy_id").isJsonNull()) && !jsonObj.get("policy_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));
       }
   }
 
@@ -264,22 +265,22 @@ public class Policybuilderv3InstallationAndSequenceObject {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3InstallationAndSequenceObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3InstallationAndSequenceObject
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3InstallationAndSequenceObject
-  */
+  /**
+   * Create an instance of Policybuilderv3InstallationAndSequenceObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3InstallationAndSequenceObject
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3InstallationAndSequenceObject
+   */
   public static Policybuilderv3InstallationAndSequenceObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3InstallationAndSequenceObject.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3InstallationAndSequenceObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3InstallationAndSequenceObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

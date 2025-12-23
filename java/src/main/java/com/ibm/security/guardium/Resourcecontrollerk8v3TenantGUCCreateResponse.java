@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Resourcecontrollerk8v3TenantGUCCreateResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Resourcecontrollerk8v3TenantGUCCreateResponse {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String message;
 
   public static final String SERIALIZED_NAME_ROUTE_FQDN = "route_fqdn";
   @SerializedName(SERIALIZED_NAME_ROUTE_FQDN)
+  @javax.annotation.Nullable
   private String routeFqdn;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private RpcStatus status;
 
   public Resourcecontrollerk8v3TenantGUCCreateResponse() {
   }
 
-  public Resourcecontrollerk8v3TenantGUCCreateResponse message(String message) {
+  public Resourcecontrollerk8v3TenantGUCCreateResponse message(@javax.annotation.Nullable String message) {
     this.message = message;
     return this;
   }
 
-   /**
+  /**
    * Get message
    * @return message
-  **/
+   */
   @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setMessage(@javax.annotation.Nullable String message) {
     this.message = message;
   }
 
 
-  public Resourcecontrollerk8v3TenantGUCCreateResponse routeFqdn(String routeFqdn) {
+  public Resourcecontrollerk8v3TenantGUCCreateResponse routeFqdn(@javax.annotation.Nullable String routeFqdn) {
     this.routeFqdn = routeFqdn;
     return this;
   }
 
-   /**
+  /**
    * Get routeFqdn
    * @return routeFqdn
-  **/
+   */
   @javax.annotation.Nullable
   public String getRouteFqdn() {
     return routeFqdn;
   }
 
-  public void setRouteFqdn(String routeFqdn) {
+  public void setRouteFqdn(@javax.annotation.Nullable String routeFqdn) {
     this.routeFqdn = routeFqdn;
   }
 
 
-  public Resourcecontrollerk8v3TenantGUCCreateResponse status(RpcStatus status) {
+  public Resourcecontrollerk8v3TenantGUCCreateResponse status(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public RpcStatus getStatus() {
     return status;
   }
 
-  public void setStatus(RpcStatus status) {
+  public void setStatus(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
   }
 
@@ -172,25 +176,22 @@ public class Resourcecontrollerk8v3TenantGUCCreateResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("message");
-    openapiFields.add("route_fqdn");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("message", "route_fqdn", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Resourcecontrollerk8v3TenantGUCCreateResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Resourcecontrollerk8v3TenantGUCCreateResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Resourcecontrollerk8v3TenantGUCCreateResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Resourcecontrollerk8v3TenantGUCCreateResponse is not found in the empty JSON string", Resourcecontrollerk8v3TenantGUCCreateResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Resourcecontrollerk8v3TenantGUCCreateResponse is not found in the empty JSON string", Resourcecontrollerk8v3TenantGUCCreateResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,15 +199,15 @@ public class Resourcecontrollerk8v3TenantGUCCreateResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Resourcecontrollerk8v3TenantGUCCreateResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Resourcecontrollerk8v3TenantGUCCreateResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Resourcecontrollerk8v3TenantGUCCreateResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
       if ((jsonObj.get("route_fqdn") != null && !jsonObj.get("route_fqdn").isJsonNull()) && !jsonObj.get("route_fqdn").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `route_fqdn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("route_fqdn").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `route_fqdn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("route_fqdn").toString()));
       }
       // validate the optional field `status`
       if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
@@ -243,22 +244,22 @@ public class Resourcecontrollerk8v3TenantGUCCreateResponse {
     }
   }
 
- /**
-  * Create an instance of Resourcecontrollerk8v3TenantGUCCreateResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Resourcecontrollerk8v3TenantGUCCreateResponse
-  * @throws IOException if the JSON string is invalid with respect to Resourcecontrollerk8v3TenantGUCCreateResponse
-  */
+  /**
+   * Create an instance of Resourcecontrollerk8v3TenantGUCCreateResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Resourcecontrollerk8v3TenantGUCCreateResponse
+   * @throws IOException if the JSON string is invalid with respect to Resourcecontrollerk8v3TenantGUCCreateResponse
+   */
   public static Resourcecontrollerk8v3TenantGUCCreateResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Resourcecontrollerk8v3TenantGUCCreateResponse.class);
   }
 
- /**
-  * Convert an instance of Resourcecontrollerk8v3TenantGUCCreateResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Resourcecontrollerk8v3TenantGUCCreateResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **offset** | **int** | The amount to offset the rows by for pagination. | [optional] 
 **search_key** | **str** | Search key for vulnerability list. | [optional] 
 **sort_column** | **str** |  | [optional] 
-**sort_order** | [**Vulmanagementv3SortOrder**](Vulmanagementv3SortOrder.md) |  | [optional] 
+**sort_order** | [**Vulmanagementv3SortOrder**](Vulmanagementv3SortOrder.md) |  | [optional] [default to Vulmanagementv3SortOrder.ASC]
 
 ## Example
 

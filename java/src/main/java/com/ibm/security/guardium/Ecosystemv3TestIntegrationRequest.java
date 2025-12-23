@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,51 +40,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Test the specified integrations confiuguration.  The configuration properties vary by integration and must match the required content.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Ecosystemv3TestIntegrationRequest {
   public static final String SERIALIZED_NAME_INTEGRATION_TYPE = "integration_type";
   @SerializedName(SERIALIZED_NAME_INTEGRATION_TYPE)
+  @javax.annotation.Nullable
   private String integrationType;
 
   public static final String SERIALIZED_NAME_OPTIONS = "options";
   @SerializedName(SERIALIZED_NAME_OPTIONS)
+  @javax.annotation.Nullable
   private Map<String, String> options = new HashMap<>();
 
   public Ecosystemv3TestIntegrationRequest() {
   }
 
-  public Ecosystemv3TestIntegrationRequest integrationType(String integrationType) {
+  public Ecosystemv3TestIntegrationRequest integrationType(@javax.annotation.Nullable String integrationType) {
     this.integrationType = integrationType;
     return this;
   }
 
-   /**
+  /**
    * Get integrationType
    * @return integrationType
-  **/
+   */
   @javax.annotation.Nullable
   public String getIntegrationType() {
     return integrationType;
   }
 
-  public void setIntegrationType(String integrationType) {
+  public void setIntegrationType(@javax.annotation.Nullable String integrationType) {
     this.integrationType = integrationType;
   }
 
 
-  public Ecosystemv3TestIntegrationRequest options(Map<String, String> options) {
+  public Ecosystemv3TestIntegrationRequest options(@javax.annotation.Nullable Map<String, String> options) {
     this.options = options;
     return this;
   }
@@ -96,16 +99,16 @@ public class Ecosystemv3TestIntegrationRequest {
     return this;
   }
 
-   /**
+  /**
    * The integration properties; they must match those required by the integration.
    * @return options
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getOptions() {
     return options;
   }
 
-  public void setOptions(Map<String, String> options) {
+  public void setOptions(@javax.annotation.Nullable Map<String, String> options) {
     this.options = options;
   }
 
@@ -156,24 +159,22 @@ public class Ecosystemv3TestIntegrationRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("integration_type");
-    openapiFields.add("options");
+    openapiFields = new HashSet<String>(Arrays.asList("integration_type", "options"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3TestIntegrationRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3TestIntegrationRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Ecosystemv3TestIntegrationRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Ecosystemv3TestIntegrationRequest is not found in the empty JSON string", Ecosystemv3TestIntegrationRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Ecosystemv3TestIntegrationRequest is not found in the empty JSON string", Ecosystemv3TestIntegrationRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -181,12 +182,12 @@ public class Ecosystemv3TestIntegrationRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Ecosystemv3TestIntegrationRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Ecosystemv3TestIntegrationRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Ecosystemv3TestIntegrationRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("integration_type") != null && !jsonObj.get("integration_type").isJsonNull()) && !jsonObj.get("integration_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `integration_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("integration_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `integration_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("integration_type").toString()));
       }
   }
 
@@ -219,22 +220,22 @@ public class Ecosystemv3TestIntegrationRequest {
     }
   }
 
- /**
-  * Create an instance of Ecosystemv3TestIntegrationRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Ecosystemv3TestIntegrationRequest
-  * @throws IOException if the JSON string is invalid with respect to Ecosystemv3TestIntegrationRequest
-  */
+  /**
+   * Create an instance of Ecosystemv3TestIntegrationRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Ecosystemv3TestIntegrationRequest
+   * @throws IOException if the JSON string is invalid with respect to Ecosystemv3TestIntegrationRequest
+   */
   public static Ecosystemv3TestIntegrationRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Ecosystemv3TestIntegrationRequest.class);
   }
 
- /**
-  * Convert an instance of Ecosystemv3TestIntegrationRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Ecosystemv3TestIntegrationRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

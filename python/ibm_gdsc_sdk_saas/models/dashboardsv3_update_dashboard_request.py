@@ -31,7 +31,7 @@ class Dashboardsv3UpdateDashboardRequest(BaseModel):
     dashboard: Optional[Dashboardsv3Dashboard] = None
     dashboard_id: Optional[StrictStr] = Field(default=None, description="The id of the dashboard that was updated.")
     update_hint: Optional[StrictStr] = Field(default=None, description="Optional: A hint describing the update used by the activity log.")
-    update_type: Optional[Dashboardsv3UpdateType] = None
+    update_type: Optional[Dashboardsv3UpdateType] = Dashboardsv3UpdateType.UNDEFINED_UPDATE_TYPE
     __properties: ClassVar[List[str]] = ["dashboard", "dashboard_id", "update_hint", "update_type"]
 
     model_config = ConfigDict(
@@ -91,7 +91,7 @@ class Dashboardsv3UpdateDashboardRequest(BaseModel):
             "dashboard": Dashboardsv3Dashboard.from_dict(obj["dashboard"]) if obj.get("dashboard") is not None else None,
             "dashboard_id": obj.get("dashboard_id"),
             "update_hint": obj.get("update_hint"),
-            "update_type": obj.get("update_type")
+            "update_type": obj.get("update_type") if obj.get("update_type") is not None else Dashboardsv3UpdateType.UNDEFINED_UPDATE_TYPE
         })
         return _obj
 

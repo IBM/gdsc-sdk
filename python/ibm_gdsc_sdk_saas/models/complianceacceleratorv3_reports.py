@@ -72,9 +72,9 @@ class Complianceacceleratorv3Reports(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in reports (list)
         _items = []
         if self.reports:
-            for _item in self.reports:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_reports in self.reports:
+                if _item_reports:
+                    _items.append(_item_reports.to_dict())
             _dict['reports'] = _items
         return _dict
 

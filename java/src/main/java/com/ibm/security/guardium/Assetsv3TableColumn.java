@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,180 +38,187 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3TableColumn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3TableColumn {
   public static final String SERIALIZED_NAME_DEFAULT = "default";
   @SerializedName(SERIALIZED_NAME_DEFAULT)
+  @javax.annotation.Nullable
   private Boolean _default;
 
   public static final String SERIALIZED_NAME_DEFAULT_ORDER = "default_order";
   @SerializedName(SERIALIZED_NAME_DEFAULT_ORDER)
+  @javax.annotation.Nullable
   private Integer defaultOrder;
 
   public static final String SERIALIZED_NAME_FIXED = "fixed";
   @SerializedName(SERIALIZED_NAME_FIXED)
+  @javax.annotation.Nullable
   private Boolean fixed;
 
   public static final String SERIALIZED_NAME_HEADER = "header";
   @SerializedName(SERIALIZED_NAME_HEADER)
+  @javax.annotation.Nullable
   private String header;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_NLS_KEY = "nls_key";
   @SerializedName(SERIALIZED_NAME_NLS_KEY)
+  @javax.annotation.Nullable
   private String nlsKey;
 
   public static final String SERIALIZED_NAME_SELECT = "select";
   @SerializedName(SERIALIZED_NAME_SELECT)
+  @javax.annotation.Nullable
   private Boolean select;
 
   public Assetsv3TableColumn() {
   }
 
-  public Assetsv3TableColumn _default(Boolean _default) {
+  public Assetsv3TableColumn _default(@javax.annotation.Nullable Boolean _default) {
     this._default = _default;
     return this;
   }
 
-   /**
+  /**
    * Get _default
    * @return _default
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getDefault() {
     return _default;
   }
 
-  public void setDefault(Boolean _default) {
+  public void setDefault(@javax.annotation.Nullable Boolean _default) {
     this._default = _default;
   }
 
 
-  public Assetsv3TableColumn defaultOrder(Integer defaultOrder) {
+  public Assetsv3TableColumn defaultOrder(@javax.annotation.Nullable Integer defaultOrder) {
     this.defaultOrder = defaultOrder;
     return this;
   }
 
-   /**
+  /**
    * Get defaultOrder
    * @return defaultOrder
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDefaultOrder() {
     return defaultOrder;
   }
 
-  public void setDefaultOrder(Integer defaultOrder) {
+  public void setDefaultOrder(@javax.annotation.Nullable Integer defaultOrder) {
     this.defaultOrder = defaultOrder;
   }
 
 
-  public Assetsv3TableColumn fixed(Boolean fixed) {
+  public Assetsv3TableColumn fixed(@javax.annotation.Nullable Boolean fixed) {
     this.fixed = fixed;
     return this;
   }
 
-   /**
+  /**
    * Get fixed
    * @return fixed
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getFixed() {
     return fixed;
   }
 
-  public void setFixed(Boolean fixed) {
+  public void setFixed(@javax.annotation.Nullable Boolean fixed) {
     this.fixed = fixed;
   }
 
 
-  public Assetsv3TableColumn header(String header) {
+  public Assetsv3TableColumn header(@javax.annotation.Nullable String header) {
     this.header = header;
     return this;
   }
 
-   /**
+  /**
    * Get header
    * @return header
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeader() {
     return header;
   }
 
-  public void setHeader(String header) {
+  public void setHeader(@javax.annotation.Nullable String header) {
     this.header = header;
   }
 
 
-  public Assetsv3TableColumn id(String id) {
+  public Assetsv3TableColumn id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Assetsv3TableColumn nlsKey(String nlsKey) {
+  public Assetsv3TableColumn nlsKey(@javax.annotation.Nullable String nlsKey) {
     this.nlsKey = nlsKey;
     return this;
   }
 
-   /**
+  /**
    * Get nlsKey
    * @return nlsKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getNlsKey() {
     return nlsKey;
   }
 
-  public void setNlsKey(String nlsKey) {
+  public void setNlsKey(@javax.annotation.Nullable String nlsKey) {
     this.nlsKey = nlsKey;
   }
 
 
-  public Assetsv3TableColumn select(Boolean select) {
+  public Assetsv3TableColumn select(@javax.annotation.Nullable Boolean select) {
     this.select = select;
     return this;
   }
 
-   /**
+  /**
    * Get select
    * @return select
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getSelect() {
     return select;
   }
 
-  public void setSelect(Boolean select) {
+  public void setSelect(@javax.annotation.Nullable Boolean select) {
     this.select = select;
   }
 
@@ -271,29 +279,22 @@ public class Assetsv3TableColumn {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("default");
-    openapiFields.add("default_order");
-    openapiFields.add("fixed");
-    openapiFields.add("header");
-    openapiFields.add("id");
-    openapiFields.add("nls_key");
-    openapiFields.add("select");
+    openapiFields = new HashSet<String>(Arrays.asList("default", "default_order", "fixed", "header", "id", "nls_key", "select"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3TableColumn
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3TableColumn
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3TableColumn.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3TableColumn is not found in the empty JSON string", Assetsv3TableColumn.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3TableColumn is not found in the empty JSON string", Assetsv3TableColumn.openapiRequiredFields.toString()));
         }
       }
 
@@ -301,18 +302,18 @@ public class Assetsv3TableColumn {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3TableColumn.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3TableColumn` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3TableColumn` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("header") != null && !jsonObj.get("header").isJsonNull()) && !jsonObj.get("header").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("nls_key") != null && !jsonObj.get("nls_key").isJsonNull()) && !jsonObj.get("nls_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `nls_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nls_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nls_key").toString()));
       }
   }
 
@@ -345,22 +346,22 @@ public class Assetsv3TableColumn {
     }
   }
 
- /**
-  * Create an instance of Assetsv3TableColumn given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3TableColumn
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3TableColumn
-  */
+  /**
+   * Create an instance of Assetsv3TableColumn given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3TableColumn
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3TableColumn
+   */
   public static Assetsv3TableColumn fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3TableColumn.class);
   }
 
- /**
-  * Convert an instance of Assetsv3TableColumn to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3TableColumn to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

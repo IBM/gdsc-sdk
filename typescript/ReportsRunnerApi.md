@@ -23,14 +23,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetActiveQueriesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetActiveQueriesRequest = {
-  // Reportsrunnerv3GetActiveQueriesRequest
+const request: ReportsRunnerApiReportsRunnerGetActiveQueriesRequest = {
+  
   reportsrunnerv3GetActiveQueriesRequest: {
     elapsedTime: 1,
     type: [
@@ -39,9 +39,8 @@ let body:.ReportsRunnerApiReportsRunnerGetActiveQueriesRequest = {
   },
 };
 
-apiInstance.reportsRunnerGetActiveQueries(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetActiveQueries(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -82,16 +81,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetAuditDataCountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetAuditDataCountRequest = {
-  // string | Optional: the ID of the Report we wish to run (e.g. 000000000000000000000905).
+const request: ReportsRunnerApiReportsRunnerGetAuditDataCountRequest = {
+    // Optional: the ID of the Report we wish to run (e.g. 000000000000000000000905).
   reportId: "report_id_example",
-  // Reportsrunnerv3GetAuditDataCountRequest
+  
   reportsrunnerv3GetAuditDataCountRequest: {
     jobId: "jobId_example",
     reportFilters: {
@@ -158,9 +157,8 @@ let body:.ReportsRunnerApiReportsRunnerGetAuditDataCountRequest = {
   },
 };
 
-apiInstance.reportsRunnerGetAuditDataCount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetAuditDataCount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -202,14 +200,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetChartDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetChartDataRequest = {
-  // Reportsrunnerv3GetChartDataRequest
+const request: ReportsRunnerApiReportsRunnerGetChartDataRequest = {
+  
   reportsrunnerv3GetChartDataRequest: {
     chartId: "chartId_example",
     chartSettings: {
@@ -377,9 +375,8 @@ let body:.ReportsRunnerApiReportsRunnerGetChartDataRequest = {
   },
 };
 
-apiInstance.reportsRunnerGetChartData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetChartData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -420,14 +417,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetChartDatav2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetChartDatav2Request = {
-  // Reportsrunnerv3GetChartDataRequestv2
+const request: ReportsRunnerApiReportsRunnerGetChartDatav2Request = {
+  
   reportsrunnerv3GetChartDataRequestv2: {
     chartId: "chartId_example",
     chartSettings: {
@@ -596,9 +593,8 @@ let body:.ReportsRunnerApiReportsRunnerGetChartDatav2Request = {
   },
 };
 
-apiInstance.reportsRunnerGetChartDatav2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetChartDatav2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -639,14 +635,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest = {
-  // Reportsrunnerv3GetReportColumnFacetRequest
+const request: ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest = {
+  
   reportsrunnerv3GetReportColumnFacetRequest: {
     dateRange: {
       endDate: "endDate_example",
@@ -833,9 +829,8 @@ let body:.ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest = {
   },
 };
 
-apiInstance.reportsRunnerGetReportColumnFacet(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetReportColumnFacet(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -876,14 +871,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetReportDataCountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetReportDataCountRequest = {
-  // Reportsrunnerv3GetReportDataCountRequest
+const request: ReportsRunnerApiReportsRunnerGetReportDataCountRequest = {
+  
   reportsrunnerv3GetReportDataCountRequest: {
     dateRange: {
       endDate: "endDate_example",
@@ -1044,9 +1039,8 @@ let body:.ReportsRunnerApiReportsRunnerGetReportDataCountRequest = {
   },
 };
 
-apiInstance.reportsRunnerGetReportDataCount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetReportDataCount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1087,16 +1081,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerRunAuditReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerRunAuditReportRequest = {
-  // string | The ID of the Report we wish to run (e.g. 000000000000000000000905).
+const request: ReportsRunnerApiReportsRunnerRunAuditReportRequest = {
+    // The ID of the Report we wish to run (e.g. 000000000000000000000905).
   reportId: "report_id_example",
-  // Reportsrunnerv3RunAuditReportRequest
+  
   reportsrunnerv3RunAuditReportRequest: {
     fetchSize: 1,
     headerName: "headerName_example",
@@ -1168,9 +1162,8 @@ let body:.ReportsRunnerApiReportsRunnerRunAuditReportRequest = {
   },
 };
 
-apiInstance.reportsRunnerRunAuditReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerRunAuditReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1212,14 +1205,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerRunReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerRunReportRequest = {
-  // Reportsrunnerv3RunReportRequest
+const request: ReportsRunnerApiReportsRunnerRunReportRequest = {
+  
   reportsrunnerv3RunReportRequest: {
     calculateFacets: true,
     dateRange: {
@@ -1387,9 +1380,8 @@ let body:.ReportsRunnerApiReportsRunnerRunReportRequest = {
   },
 };
 
-apiInstance.reportsRunnerRunReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerRunReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1430,14 +1422,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerStopQueryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerStopQueryRequest = {
-  // Reportsrunnerv3StopQueryRequest
+const request: ReportsRunnerApiReportsRunnerStopQueryRequest = {
+  
   reportsrunnerv3StopQueryRequest: {
     queryIds: [
       "queryIds_example",
@@ -1445,9 +1437,8 @@ let body:.ReportsRunnerApiReportsRunnerStopQueryRequest = {
   },
 };
 
-apiInstance.reportsRunnerStopQuery(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerStopQuery(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

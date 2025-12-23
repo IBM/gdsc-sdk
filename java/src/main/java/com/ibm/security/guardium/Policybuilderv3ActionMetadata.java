@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,82 +43,87 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Action metadata object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3ActionMetadata {
   public static final String SERIALIZED_NAME_ACTION_NAME = "action_name";
   @SerializedName(SERIALIZED_NAME_ACTION_NAME)
+  @javax.annotation.Nullable
   private String actionName;
 
   public static final String SERIALIZED_NAME_LABEL = "label";
   @SerializedName(SERIALIZED_NAME_LABEL)
+  @javax.annotation.Nullable
   private String label;
 
   public static final String SERIALIZED_NAME_PARAMETERS = "parameters";
   @SerializedName(SERIALIZED_NAME_PARAMETERS)
+  @javax.annotation.Nullable
   private List<Policybuilderv3ActionParameterMetadata> parameters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RULE_TYPE = "rule_type";
   @SerializedName(SERIALIZED_NAME_RULE_TYPE)
+  @javax.annotation.Nullable
   private List<Policybuilderv3RuleType> ruleType = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Policybuilderv3ActionType type = Policybuilderv3ActionType.UNDEFINED_ACTIONTYPE;
 
   public Policybuilderv3ActionMetadata() {
   }
 
-  public Policybuilderv3ActionMetadata actionName(String actionName) {
+  public Policybuilderv3ActionMetadata actionName(@javax.annotation.Nullable String actionName) {
     this.actionName = actionName;
     return this;
   }
 
-   /**
+  /**
    * Name of the action.
    * @return actionName
-  **/
+   */
   @javax.annotation.Nullable
   public String getActionName() {
     return actionName;
   }
 
-  public void setActionName(String actionName) {
+  public void setActionName(@javax.annotation.Nullable String actionName) {
     this.actionName = actionName;
   }
 
 
-  public Policybuilderv3ActionMetadata label(String label) {
+  public Policybuilderv3ActionMetadata label(@javax.annotation.Nullable String label) {
     this.label = label;
     return this;
   }
 
-   /**
+  /**
    * Ui label for the action.
    * @return label
-  **/
+   */
   @javax.annotation.Nullable
   public String getLabel() {
     return label;
   }
 
-  public void setLabel(String label) {
+  public void setLabel(@javax.annotation.Nullable String label) {
     this.label = label;
   }
 
 
-  public Policybuilderv3ActionMetadata parameters(List<Policybuilderv3ActionParameterMetadata> parameters) {
+  public Policybuilderv3ActionMetadata parameters(@javax.annotation.Nullable List<Policybuilderv3ActionParameterMetadata> parameters) {
     this.parameters = parameters;
     return this;
   }
@@ -130,21 +136,21 @@ public class Policybuilderv3ActionMetadata {
     return this;
   }
 
-   /**
+  /**
    * Action parameters.
    * @return parameters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3ActionParameterMetadata> getParameters() {
     return parameters;
   }
 
-  public void setParameters(List<Policybuilderv3ActionParameterMetadata> parameters) {
+  public void setParameters(@javax.annotation.Nullable List<Policybuilderv3ActionParameterMetadata> parameters) {
     this.parameters = parameters;
   }
 
 
-  public Policybuilderv3ActionMetadata ruleType(List<Policybuilderv3RuleType> ruleType) {
+  public Policybuilderv3ActionMetadata ruleType(@javax.annotation.Nullable List<Policybuilderv3RuleType> ruleType) {
     this.ruleType = ruleType;
     return this;
   }
@@ -157,35 +163,35 @@ public class Policybuilderv3ActionMetadata {
     return this;
   }
 
-   /**
+  /**
    * Rule type for the action.
    * @return ruleType
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3RuleType> getRuleType() {
     return ruleType;
   }
 
-  public void setRuleType(List<Policybuilderv3RuleType> ruleType) {
+  public void setRuleType(@javax.annotation.Nullable List<Policybuilderv3RuleType> ruleType) {
     this.ruleType = ruleType;
   }
 
 
-  public Policybuilderv3ActionMetadata type(Policybuilderv3ActionType type) {
+  public Policybuilderv3ActionMetadata type(@javax.annotation.Nullable Policybuilderv3ActionType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3ActionType getType() {
     return type;
   }
 
-  public void setType(Policybuilderv3ActionType type) {
+  public void setType(@javax.annotation.Nullable Policybuilderv3ActionType type) {
     this.type = type;
   }
 
@@ -242,27 +248,22 @@ public class Policybuilderv3ActionMetadata {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("action_name");
-    openapiFields.add("label");
-    openapiFields.add("parameters");
-    openapiFields.add("rule_type");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("action_name", "label", "parameters", "rule_type", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3ActionMetadata
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3ActionMetadata
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3ActionMetadata.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3ActionMetadata is not found in the empty JSON string", Policybuilderv3ActionMetadata.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3ActionMetadata is not found in the empty JSON string", Policybuilderv3ActionMetadata.openapiRequiredFields.toString()));
         }
       }
 
@@ -270,22 +271,22 @@ public class Policybuilderv3ActionMetadata {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3ActionMetadata.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3ActionMetadata` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3ActionMetadata` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("action_name") != null && !jsonObj.get("action_name").isJsonNull()) && !jsonObj.get("action_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `action_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `action_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_name").toString()));
       }
       if ((jsonObj.get("label") != null && !jsonObj.get("label").isJsonNull()) && !jsonObj.get("label").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
       }
       if (jsonObj.get("parameters") != null && !jsonObj.get("parameters").isJsonNull()) {
         JsonArray jsonArrayparameters = jsonObj.getAsJsonArray("parameters");
         if (jsonArrayparameters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("parameters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `parameters` to be an array in the JSON string but got `%s`", jsonObj.get("parameters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parameters` to be an array in the JSON string but got `%s`", jsonObj.get("parameters").toString()));
           }
 
           // validate the optional field `parameters` (array)
@@ -296,7 +297,7 @@ public class Policybuilderv3ActionMetadata {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("rule_type") != null && !jsonObj.get("rule_type").isJsonNull() && !jsonObj.get("rule_type").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rule_type` to be an array in the JSON string but got `%s`", jsonObj.get("rule_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_type` to be an array in the JSON string but got `%s`", jsonObj.get("rule_type").toString()));
       }
       // validate the optional field `type`
       if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
@@ -333,22 +334,22 @@ public class Policybuilderv3ActionMetadata {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3ActionMetadata given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3ActionMetadata
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3ActionMetadata
-  */
+  /**
+   * Create an instance of Policybuilderv3ActionMetadata given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3ActionMetadata
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3ActionMetadata
+   */
   public static Policybuilderv3ActionMetadata fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3ActionMetadata.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3ActionMetadata to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3ActionMetadata to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

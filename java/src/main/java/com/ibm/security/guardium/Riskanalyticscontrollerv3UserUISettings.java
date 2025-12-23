@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UserUISettings an object contains settings per user to display in the UI.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3UserUISettings {
   public static final String SERIALIZED_NAME_CARD_SETTINGS = "card_settings";
   @SerializedName(SERIALIZED_NAME_CARD_SETTINGS)
+  @javax.annotation.Nullable
   private List<Riskanalyticscontrollerv3CardSettings> cardSettings = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SHOW_BANNER = "show_banner";
   @SerializedName(SERIALIZED_NAME_SHOW_BANNER)
+  @javax.annotation.Nullable
   private Boolean showBanner;
 
   public Riskanalyticscontrollerv3UserUISettings() {
   }
 
-  public Riskanalyticscontrollerv3UserUISettings cardSettings(List<Riskanalyticscontrollerv3CardSettings> cardSettings) {
+  public Riskanalyticscontrollerv3UserUISettings cardSettings(@javax.annotation.Nullable List<Riskanalyticscontrollerv3CardSettings> cardSettings) {
     this.cardSettings = cardSettings;
     return this;
   }
@@ -78,35 +81,35 @@ public class Riskanalyticscontrollerv3UserUISettings {
     return this;
   }
 
-   /**
+  /**
    * A list of card settings for each view(box) of risks.
    * @return cardSettings
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticscontrollerv3CardSettings> getCardSettings() {
     return cardSettings;
   }
 
-  public void setCardSettings(List<Riskanalyticscontrollerv3CardSettings> cardSettings) {
+  public void setCardSettings(@javax.annotation.Nullable List<Riskanalyticscontrollerv3CardSettings> cardSettings) {
     this.cardSettings = cardSettings;
   }
 
 
-  public Riskanalyticscontrollerv3UserUISettings showBanner(Boolean showBanner) {
+  public Riskanalyticscontrollerv3UserUISettings showBanner(@javax.annotation.Nullable Boolean showBanner) {
     this.showBanner = showBanner;
     return this;
   }
 
-   /**
+  /**
    * Show_banner a flag to show additional info in the top of screen or to hide it.
    * @return showBanner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getShowBanner() {
     return showBanner;
   }
 
-  public void setShowBanner(Boolean showBanner) {
+  public void setShowBanner(@javax.annotation.Nullable Boolean showBanner) {
     this.showBanner = showBanner;
   }
 
@@ -157,24 +160,22 @@ public class Riskanalyticscontrollerv3UserUISettings {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("card_settings");
-    openapiFields.add("show_banner");
+    openapiFields = new HashSet<String>(Arrays.asList("card_settings", "show_banner"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3UserUISettings
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3UserUISettings
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3UserUISettings.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3UserUISettings is not found in the empty JSON string", Riskanalyticscontrollerv3UserUISettings.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3UserUISettings is not found in the empty JSON string", Riskanalyticscontrollerv3UserUISettings.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Riskanalyticscontrollerv3UserUISettings {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3UserUISettings.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3UserUISettings` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3UserUISettings` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,7 +192,7 @@ public class Riskanalyticscontrollerv3UserUISettings {
         if (jsonArraycardSettings != null) {
           // ensure the json data is an array
           if (!jsonObj.get("card_settings").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `card_settings` to be an array in the JSON string but got `%s`", jsonObj.get("card_settings").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `card_settings` to be an array in the JSON string but got `%s`", jsonObj.get("card_settings").toString()));
           }
 
           // validate the optional field `card_settings` (array)
@@ -231,22 +232,22 @@ public class Riskanalyticscontrollerv3UserUISettings {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3UserUISettings given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3UserUISettings
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3UserUISettings
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3UserUISettings given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3UserUISettings
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3UserUISettings
+   */
   public static Riskanalyticscontrollerv3UserUISettings fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3UserUISettings.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3UserUISettings to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3UserUISettings to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

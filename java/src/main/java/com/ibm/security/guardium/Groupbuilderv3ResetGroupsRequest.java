@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,28 +40,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ResetGroupsRequest requests reset of speciefied predefined groups.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3ResetGroupsRequest {
   public static final String SERIALIZED_NAME_GROUP_IDS = "group_ids";
   @SerializedName(SERIALIZED_NAME_GROUP_IDS)
+  @javax.annotation.Nullable
   private List<Integer> groupIds = new ArrayList<>();
 
   public Groupbuilderv3ResetGroupsRequest() {
   }
 
-  public Groupbuilderv3ResetGroupsRequest groupIds(List<Integer> groupIds) {
+  public Groupbuilderv3ResetGroupsRequest groupIds(@javax.annotation.Nullable List<Integer> groupIds) {
     this.groupIds = groupIds;
     return this;
   }
@@ -73,16 +75,16 @@ public class Groupbuilderv3ResetGroupsRequest {
     return this;
   }
 
-   /**
+  /**
    * Group IDs to delete.
    * @return groupIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<Integer> getGroupIds() {
     return groupIds;
   }
 
-  public void setGroupIds(List<Integer> groupIds) {
+  public void setGroupIds(@javax.annotation.Nullable List<Integer> groupIds) {
     this.groupIds = groupIds;
   }
 
@@ -131,23 +133,22 @@ public class Groupbuilderv3ResetGroupsRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("group_ids");
+    openapiFields = new HashSet<String>(Arrays.asList("group_ids"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3ResetGroupsRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3ResetGroupsRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3ResetGroupsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3ResetGroupsRequest is not found in the empty JSON string", Groupbuilderv3ResetGroupsRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3ResetGroupsRequest is not found in the empty JSON string", Groupbuilderv3ResetGroupsRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -155,13 +156,13 @@ public class Groupbuilderv3ResetGroupsRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3ResetGroupsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3ResetGroupsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3ResetGroupsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("group_ids") != null && !jsonObj.get("group_ids").isJsonNull() && !jsonObj.get("group_ids").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `group_ids` to be an array in the JSON string but got `%s`", jsonObj.get("group_ids").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `group_ids` to be an array in the JSON string but got `%s`", jsonObj.get("group_ids").toString()));
       }
   }
 
@@ -194,22 +195,22 @@ public class Groupbuilderv3ResetGroupsRequest {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3ResetGroupsRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3ResetGroupsRequest
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3ResetGroupsRequest
-  */
+  /**
+   * Create an instance of Groupbuilderv3ResetGroupsRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3ResetGroupsRequest
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3ResetGroupsRequest
+   */
   public static Groupbuilderv3ResetGroupsRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3ResetGroupsRequest.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3ResetGroupsRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3ResetGroupsRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

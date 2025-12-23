@@ -85,9 +85,9 @@ class PotentialFlowPathListItem(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in path (list)
         _items = []
         if self.path:
-            for _item in self.path:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_path in self.path:
+                if _item_path:
+                    _items.append(_item_path.to_dict())
             _dict['path'] = _items
         return _dict
 

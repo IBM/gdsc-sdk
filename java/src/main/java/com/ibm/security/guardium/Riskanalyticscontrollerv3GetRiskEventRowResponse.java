@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,51 +41,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetRiskEventRowResponse is the response object for GetRiskEventRow API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3GetRiskEventRowResponse {
   public static final String SERIALIZED_NAME_LIMIT_REACHED = "limit_reached";
   @SerializedName(SERIALIZED_NAME_LIMIT_REACHED)
+  @javax.annotation.Nullable
   private Boolean limitReached;
 
   public static final String SERIALIZED_NAME_RISK_EVENT_ROWS = "risk_event_rows";
   @SerializedName(SERIALIZED_NAME_RISK_EVENT_ROWS)
+  @javax.annotation.Nullable
   private List<Riskanalyticscontrollerv3RiskEvent> riskEventRows = new ArrayList<>();
 
   public Riskanalyticscontrollerv3GetRiskEventRowResponse() {
   }
 
-  public Riskanalyticscontrollerv3GetRiskEventRowResponse limitReached(Boolean limitReached) {
+  public Riskanalyticscontrollerv3GetRiskEventRowResponse limitReached(@javax.annotation.Nullable Boolean limitReached) {
     this.limitReached = limitReached;
     return this;
   }
 
-   /**
+  /**
    * Indicate whether riskevent list is partial because the number of risks reached the limit.
    * @return limitReached
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getLimitReached() {
     return limitReached;
   }
 
-  public void setLimitReached(Boolean limitReached) {
+  public void setLimitReached(@javax.annotation.Nullable Boolean limitReached) {
     this.limitReached = limitReached;
   }
 
 
-  public Riskanalyticscontrollerv3GetRiskEventRowResponse riskEventRows(List<Riskanalyticscontrollerv3RiskEvent> riskEventRows) {
+  public Riskanalyticscontrollerv3GetRiskEventRowResponse riskEventRows(@javax.annotation.Nullable List<Riskanalyticscontrollerv3RiskEvent> riskEventRows) {
     this.riskEventRows = riskEventRows;
     return this;
   }
@@ -97,16 +100,16 @@ public class Riskanalyticscontrollerv3GetRiskEventRowResponse {
     return this;
   }
 
-   /**
+  /**
    * Repeated risk event rows.
    * @return riskEventRows
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticscontrollerv3RiskEvent> getRiskEventRows() {
     return riskEventRows;
   }
 
-  public void setRiskEventRows(List<Riskanalyticscontrollerv3RiskEvent> riskEventRows) {
+  public void setRiskEventRows(@javax.annotation.Nullable List<Riskanalyticscontrollerv3RiskEvent> riskEventRows) {
     this.riskEventRows = riskEventRows;
   }
 
@@ -157,24 +160,22 @@ public class Riskanalyticscontrollerv3GetRiskEventRowResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("limit_reached");
-    openapiFields.add("risk_event_rows");
+    openapiFields = new HashSet<String>(Arrays.asList("limit_reached", "risk_event_rows"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3GetRiskEventRowResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3GetRiskEventRowResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3GetRiskEventRowResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3GetRiskEventRowResponse is not found in the empty JSON string", Riskanalyticscontrollerv3GetRiskEventRowResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3GetRiskEventRowResponse is not found in the empty JSON string", Riskanalyticscontrollerv3GetRiskEventRowResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Riskanalyticscontrollerv3GetRiskEventRowResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3GetRiskEventRowResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3GetRiskEventRowResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3GetRiskEventRowResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,7 +192,7 @@ public class Riskanalyticscontrollerv3GetRiskEventRowResponse {
         if (jsonArrayriskEventRows != null) {
           // ensure the json data is an array
           if (!jsonObj.get("risk_event_rows").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `risk_event_rows` to be an array in the JSON string but got `%s`", jsonObj.get("risk_event_rows").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `risk_event_rows` to be an array in the JSON string but got `%s`", jsonObj.get("risk_event_rows").toString()));
           }
 
           // validate the optional field `risk_event_rows` (array)
@@ -231,22 +232,22 @@ public class Riskanalyticscontrollerv3GetRiskEventRowResponse {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3GetRiskEventRowResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3GetRiskEventRowResponse
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3GetRiskEventRowResponse
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3GetRiskEventRowResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3GetRiskEventRowResponse
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3GetRiskEventRowResponse
+   */
   public static Riskanalyticscontrollerv3GetRiskEventRowResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3GetRiskEventRowResponse.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3GetRiskEventRowResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3GetRiskEventRowResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

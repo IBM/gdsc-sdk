@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * SetDataStoreLabelRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class SetDataStoreLabelRequest {
   public static final String SERIALIZED_NAME_LABEL = "label";
   @SerializedName(SERIALIZED_NAME_LABEL)
+  @javax.annotation.Nonnull
   private String label;
 
   public SetDataStoreLabelRequest() {
   }
 
-  public SetDataStoreLabelRequest label(String label) {
+  public SetDataStoreLabelRequest label(@javax.annotation.Nonnull String label) {
     this.label = label;
     return this;
   }
 
-   /**
+  /**
    * Get label
    * @return label
-  **/
+   */
   @javax.annotation.Nonnull
   public String getLabel() {
     return label;
   }
 
-  public void setLabel(String label) {
+  public void setLabel(@javax.annotation.Nonnull String label) {
     this.label = label;
   }
 
@@ -121,24 +123,22 @@ public class SetDataStoreLabelRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("label");
+    openapiFields = new HashSet<String>(Arrays.asList("label"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("label");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("label"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to SetDataStoreLabelRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to SetDataStoreLabelRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!SetDataStoreLabelRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in SetDataStoreLabelRequest is not found in the empty JSON string", SetDataStoreLabelRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in SetDataStoreLabelRequest is not found in the empty JSON string", SetDataStoreLabelRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -146,19 +146,19 @@ public class SetDataStoreLabelRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!SetDataStoreLabelRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SetDataStoreLabelRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `SetDataStoreLabelRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : SetDataStoreLabelRequest.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("label").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `label` to be a primitive type in the JSON string but got `%s`", jsonObj.get("label").toString()));
       }
   }
 
@@ -191,22 +191,22 @@ public class SetDataStoreLabelRequest {
     }
   }
 
- /**
-  * Create an instance of SetDataStoreLabelRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of SetDataStoreLabelRequest
-  * @throws IOException if the JSON string is invalid with respect to SetDataStoreLabelRequest
-  */
+  /**
+   * Create an instance of SetDataStoreLabelRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of SetDataStoreLabelRequest
+   * @throws IOException if the JSON string is invalid with respect to SetDataStoreLabelRequest
+   */
   public static SetDataStoreLabelRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, SetDataStoreLabelRequest.class);
   }
 
- /**
-  * Convert an instance of SetDataStoreLabelRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of SetDataStoreLabelRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,65 +40,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetEarliestStartTimeResponse response object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Datamartprocessorv3GetEarliestStartTimeResponse {
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Datamartprocessorv3StatusResponseBase status;
 
   public static final String SERIALIZED_NAME_TIMESTAMP = "timestamp";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP)
+  @javax.annotation.Nullable
   private OffsetDateTime timestamp;
 
   public Datamartprocessorv3GetEarliestStartTimeResponse() {
   }
 
-  public Datamartprocessorv3GetEarliestStartTimeResponse status(Datamartprocessorv3StatusResponseBase status) {
+  public Datamartprocessorv3GetEarliestStartTimeResponse status(@javax.annotation.Nullable Datamartprocessorv3StatusResponseBase status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Datamartprocessorv3StatusResponseBase getStatus() {
     return status;
   }
 
-  public void setStatus(Datamartprocessorv3StatusResponseBase status) {
+  public void setStatus(@javax.annotation.Nullable Datamartprocessorv3StatusResponseBase status) {
     this.status = status;
   }
 
 
-  public Datamartprocessorv3GetEarliestStartTimeResponse timestamp(OffsetDateTime timestamp) {
+  public Datamartprocessorv3GetEarliestStartTimeResponse timestamp(@javax.annotation.Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
     return this;
   }
 
-   /**
+  /**
    * Earliest time stamp of data available.
    * @return timestamp
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(OffsetDateTime timestamp) {
+  public void setTimestamp(@javax.annotation.Nullable OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
 
@@ -148,24 +151,22 @@ public class Datamartprocessorv3GetEarliestStartTimeResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("status");
-    openapiFields.add("timestamp");
+    openapiFields = new HashSet<String>(Arrays.asList("status", "timestamp"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Datamartprocessorv3GetEarliestStartTimeResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Datamartprocessorv3GetEarliestStartTimeResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Datamartprocessorv3GetEarliestStartTimeResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Datamartprocessorv3GetEarliestStartTimeResponse is not found in the empty JSON string", Datamartprocessorv3GetEarliestStartTimeResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Datamartprocessorv3GetEarliestStartTimeResponse is not found in the empty JSON string", Datamartprocessorv3GetEarliestStartTimeResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -173,7 +174,7 @@ public class Datamartprocessorv3GetEarliestStartTimeResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Datamartprocessorv3GetEarliestStartTimeResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Datamartprocessorv3GetEarliestStartTimeResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Datamartprocessorv3GetEarliestStartTimeResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -212,22 +213,22 @@ public class Datamartprocessorv3GetEarliestStartTimeResponse {
     }
   }
 
- /**
-  * Create an instance of Datamartprocessorv3GetEarliestStartTimeResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Datamartprocessorv3GetEarliestStartTimeResponse
-  * @throws IOException if the JSON string is invalid with respect to Datamartprocessorv3GetEarliestStartTimeResponse
-  */
+  /**
+   * Create an instance of Datamartprocessorv3GetEarliestStartTimeResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Datamartprocessorv3GetEarliestStartTimeResponse
+   * @throws IOException if the JSON string is invalid with respect to Datamartprocessorv3GetEarliestStartTimeResponse
+   */
   public static Datamartprocessorv3GetEarliestStartTimeResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Datamartprocessorv3GetEarliestStartTimeResponse.class);
   }
 
- /**
-  * Convert an instance of Datamartprocessorv3GetEarliestStartTimeResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Datamartprocessorv3GetEarliestStartTimeResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

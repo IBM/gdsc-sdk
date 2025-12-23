@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * PostRoleResponse message for POST v3/role api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3PostRoleResponse {
   public static final String SERIALIZED_NAME_ROLE_ID = "role_id";
   @SerializedName(SERIALIZED_NAME_ROLE_ID)
+  @javax.annotation.Nullable
   private String roleId;
 
   public Tenantuserv3PostRoleResponse() {
   }
 
-  public Tenantuserv3PostRoleResponse roleId(String roleId) {
+  public Tenantuserv3PostRoleResponse roleId(@javax.annotation.Nullable String roleId) {
     this.roleId = roleId;
     return this;
   }
 
-   /**
+  /**
    * ID of role created.
    * @return roleId
-  **/
+   */
   @javax.annotation.Nullable
   public String getRoleId() {
     return roleId;
   }
 
-  public void setRoleId(String roleId) {
+  public void setRoleId(@javax.annotation.Nullable String roleId) {
     this.roleId = roleId;
   }
 
@@ -121,23 +123,22 @@ public class Tenantuserv3PostRoleResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("role_id");
+    openapiFields = new HashSet<String>(Arrays.asList("role_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3PostRoleResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3PostRoleResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3PostRoleResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3PostRoleResponse is not found in the empty JSON string", Tenantuserv3PostRoleResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3PostRoleResponse is not found in the empty JSON string", Tenantuserv3PostRoleResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -145,12 +146,12 @@ public class Tenantuserv3PostRoleResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3PostRoleResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3PostRoleResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3PostRoleResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("role_id") != null && !jsonObj.get("role_id").isJsonNull()) && !jsonObj.get("role_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `role_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("role_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `role_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("role_id").toString()));
       }
   }
 
@@ -183,22 +184,22 @@ public class Tenantuserv3PostRoleResponse {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3PostRoleResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3PostRoleResponse
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3PostRoleResponse
-  */
+  /**
+   * Create an instance of Tenantuserv3PostRoleResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3PostRoleResponse
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3PostRoleResponse
+   */
   public static Tenantuserv3PostRoleResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3PostRoleResponse.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3PostRoleResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3PostRoleResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

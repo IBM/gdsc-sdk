@@ -32,7 +32,7 @@ class Reportsrunnerv3GetChartDataRequestv2(BaseModel):
     """ # noqa: E501
     chart_id: Optional[StrictStr] = Field(default=None, description="Optional: the ID of the chart we wish to get its data.")
     chart_settings: Optional[Reportsv3ChartSettingsv2] = None
-    model_type: Optional[Reportsv3ModelType] = None
+    model_type: Optional[Reportsv3ModelType] = Reportsv3ModelType.UNDEFINED_MODEL_TYPE
     report_definition: Optional[Reportsv3ReportDefinition] = None
     runtime_parameter_list: Optional[List[Reportsv3RunTimeParameter]] = Field(default=None, description="Runtime parameters.")
     time_zone: Optional[StrictStr] = Field(default=None, description="Optional: time zone.")
@@ -86,9 +86,9 @@ class Reportsrunnerv3GetChartDataRequestv2(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in runtime_parameter_list (list)
         _items = []
         if self.runtime_parameter_list:
-            for _item in self.runtime_parameter_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_runtime_parameter_list in self.runtime_parameter_list:
+                if _item_runtime_parameter_list:
+                    _items.append(_item_runtime_parameter_list.to_dict())
             _dict['runtime_parameter_list'] = _items
         return _dict
 
@@ -104,7 +104,7 @@ class Reportsrunnerv3GetChartDataRequestv2(BaseModel):
         _obj = cls.model_validate({
             "chart_id": obj.get("chart_id"),
             "chart_settings": Reportsv3ChartSettingsv2.from_dict(obj["chart_settings"]) if obj.get("chart_settings") is not None else None,
-            "model_type": obj.get("model_type"),
+            "model_type": obj.get("model_type") if obj.get("model_type") is not None else Reportsv3ModelType.UNDEFINED_MODEL_TYPE,
             "report_definition": Reportsv3ReportDefinition.from_dict(obj["report_definition"]) if obj.get("report_definition") is not None else None,
             "runtime_parameter_list": [Reportsv3RunTimeParameter.from_dict(_item) for _item in obj["runtime_parameter_list"]] if obj.get("runtime_parameter_list") is not None else None,
             "time_zone": obj.get("time_zone")

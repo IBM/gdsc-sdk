@@ -28,7 +28,7 @@
 | SOC_2 | &quot;SOC 2&quot; |
 | CCPA | &quot;CCPA&quot; |
 | PCI_DSS | &quot;PCI DSS&quot; |
-| FEDRAMP | &quot;FedRAMP&quot; |
+| FED_RAMP | &quot;FedRAMP&quot; |
 
 
 

@@ -14,9 +14,11 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -29,13 +31,13 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(Universalconnectormanagerv3ConnectivityState.Adapter.class)
 public enum Universalconnectormanagerv3ConnectivityState {
   
-  OK("UC_OK"),
+  UC_OK("UC_OK"),
   
-  INITIALIZING("UC_INITIALIZING"),
+  UC_INITIALIZING("UC_INITIALIZING"),
   
-  FAILURE("UC_FAILURE"),
+  UC_FAILURE("UC_FAILURE"),
   
-  UNKNOWN("UC_UNKNOWN");
+  UC_UNKNOWN("UC_UNKNOWN");
 
   private String value;
 

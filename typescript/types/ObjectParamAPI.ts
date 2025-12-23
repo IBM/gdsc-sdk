@@ -1,5 +1,6 @@
 import { ResponseContext, RequestContext, HttpFile, HttpInfo } from '../http/http';
-import { Configuration} from '../configuration'
+import { Configuration, ConfigurationOptions } from '../configuration'
+import type { Middleware } from '../middleware';
 
 import { AccessType } from '../models/AccessType';
 import { AccessTypeCountInner } from '../models/AccessTypeCountInner';
@@ -1340,6 +1341,7 @@ export interface AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest
 export interface AssetsServiceApiAssetsServiceCancelCSVImportRequest {
     /**
      * unique id of the csv
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceCancelCSVImport
      */
@@ -1349,6 +1351,7 @@ export interface AssetsServiceApiAssetsServiceCancelCSVImportRequest {
 export interface AssetsServiceApiAssetsServiceClonePolicyRequest {
     /**
      * Policy id that needs to be cloned.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceClonePolicy
      */
@@ -1364,30 +1367,35 @@ export interface AssetsServiceApiAssetsServiceClonePolicyRequest {
 export interface AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest {
     /**
      * unique id of the csv
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceCompareCSVToExistingAssets
      */
     csvId: string
     /**
      * which rows are required, existing or new or all.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceCompareCSVToExistingAssets
      */
     rowsRequired?: string
     /**
      * page number.
+     * Defaults to: undefined
      * @type number
      * @memberof AssetsServiceApiassetsServiceCompareCSVToExistingAssets
      */
     pageNumber?: number
     /**
      * page size.
+     * Defaults to: undefined
      * @type number
      * @memberof AssetsServiceApiassetsServiceCompareCSVToExistingAssets
      */
     pageSize?: number
     /**
      * Asset CSV template type.   - DATABASE: Template for database
+     * Defaults to: &#39;DATABASE&#39;
      * @type &#39;DATABASE&#39;
      * @memberof AssetsServiceApiassetsServiceCompareCSVToExistingAssets
      */
@@ -1406,6 +1414,7 @@ export interface AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest {
 export interface AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest {
     /**
      * template id to be deleted
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceDeleteFilterTemplateForAssets
      */
@@ -1415,6 +1424,7 @@ export interface AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsReque
 export interface AssetsServiceApiAssetsServiceDeletePoliciesRequest {
     /**
      * Policy ids.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof AssetsServiceApiassetsServiceDeletePolicies
      */
@@ -1433,72 +1443,84 @@ export interface AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest {
 export interface AssetsServiceApiAssetsServiceFetchAssetDashboardRequest {
     /**
      * ID of the Dashboard Widget
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
     widgetType: string
     /**
      * start of date range for ui widget.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
     dateRangeStart?: string
     /**
      * end of date range for ui widget.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
     dateRangeEnd?: string
     /**
      * type of date range for ui widget.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
     dateRangeType?: string
     /**
      * key for ui widget.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
     dateRangeKey?: string
     /**
      * error for ui widget.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
     dateRangeError?: string
     /**
      * start_number for ui widget.
+     * Defaults to: undefined
      * @type number
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
     dateRangeStartNumber?: number
     /**
      * start of date range for ui widget.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
     dateRangeStartUnit?: string
     /**
      * start of date range for ui widget.
+     * Defaults to: undefined
      * @type number
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
     dateRangeEndNumber?: number
     /**
      * start of date range for ui widget.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
     dateRangeEndUnit?: string
     /**
      * Name of the timeline value selected from drop down.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
     timelineValueSelected?: string
     /**
      * Tag ID.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetDashboard
      */
@@ -1517,30 +1539,35 @@ export interface AssetsServiceApiAssetsServiceFetchAssetListRequest {
 export interface AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest {
     /**
      * Asset grouper Id.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetsForMergeSplit
      */
     assetId?: string
     /**
      * Page number.
+     * Defaults to: undefined
      * @type number
      * @memberof AssetsServiceApiassetsServiceFetchAssetsForMergeSplit
      */
     pageNumber?: number
     /**
      * Page size.
+     * Defaults to: undefined
      * @type number
      * @memberof AssetsServiceApiassetsServiceFetchAssetsForMergeSplit
      */
     pageSize?: number
     /**
      * Action : merge or split.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetsForMergeSplit
      */
     action?: string
     /**
      * Search from the list based on asset name, database name, ip or host.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFetchAssetsForMergeSplit
      */
@@ -1550,6 +1577,7 @@ export interface AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest {
 export interface AssetsServiceApiAssetsServiceFindAssetNameRequest {
     /**
      * Name of asset.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceFindAssetName
      */
@@ -1559,48 +1587,56 @@ export interface AssetsServiceApiAssetsServiceFindAssetNameRequest {
 export interface AssetsServiceApiAssetsServiceGetAssetOverviewRequest {
     /**
      * Asset grouper Id.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceGetAssetOverview
      */
     assetId?: string
     /**
      * Page number.
+     * Defaults to: undefined
      * @type number
      * @memberof AssetsServiceApiassetsServiceGetAssetOverview
      */
     pageNumber?: number
     /**
      * Page size.
+     * Defaults to: undefined
      * @type number
      * @memberof AssetsServiceApiassetsServiceGetAssetOverview
      */
     size?: number
     /**
      * Widget type.   - ALL: All Asset Overview Widgets.  - CLASSIFICATION: Classification Asset Overview Widgets.  - TAG: Tag Asset Overview Widgets.  - RESOURCE: Resource Asset Overview Widgets.
+     * Defaults to: &#39;ALL&#39;
      * @type &#39;ALL&#39; | &#39;CLASSIFICATION&#39; | &#39;TAG&#39; | &#39;RESOURCE&#39;
      * @memberof AssetsServiceApiassetsServiceGetAssetOverview
      */
     widget?: 'ALL' | 'CLASSIFICATION' | 'TAG' | 'RESOURCE'
     /**
      * Asset IP.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceGetAssetOverview
      */
     ip?: string
     /**
      * Asset Host.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceGetAssetOverview
      */
     host?: string
     /**
      * Database Name.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceGetAssetOverview
      */
     database?: string
     /**
      * asset entity type.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceGetAssetOverview
      */
@@ -1619,6 +1655,7 @@ export interface AssetsServiceApiAssetsServiceGetAssetTopologyRequest {
 export interface AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest {
     /**
      * template id to be deleted.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceGetFilterTemplateForAssets
      */
@@ -1631,6 +1668,7 @@ export interface AssetsServiceApiAssetsServiceGetFiltersForAssetsRequest {
 export interface AssetsServiceApiAssetsServiceImportCSVRequest {
     /**
      * unique id of the csv
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceImportCSV
      */
@@ -1649,6 +1687,7 @@ export interface AssetsServiceApiAssetsServiceListPolicyRequest {
 export interface AssetsServiceApiAssetsServiceListRuleRequest {
     /**
      * Policy ID
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceListRule
      */
@@ -1658,18 +1697,21 @@ export interface AssetsServiceApiAssetsServiceListRuleRequest {
 export interface AssetsServiceApiAssetsServiceListTagDomainsRequest {
     /**
      * Optional: dom_grouper required if we want to fetch domains based on the group.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceListTagDomains
      */
     domGrouper?: string
     /**
      * Optional: purpose required if we want to fetch domains based on the purpose.
+     * Defaults to: undefined
      * @type string
      * @memberof AssetsServiceApiassetsServiceListTagDomains
      */
     purpose?: string
     /**
      * Optional: If we need Tag  based on the Domains.
+     * Defaults to: undefined
      * @type boolean
      * @memberof AssetsServiceApiassetsServiceListTagDomains
      */
@@ -1679,6 +1721,7 @@ export interface AssetsServiceApiAssetsServiceListTagDomainsRequest {
 export interface AssetsServiceApiAssetsServiceListTagsRequest {
     /**
      * asset id - Asset ID.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof AssetsServiceApiassetsServiceListTags
      */
@@ -1768,7 +1811,7 @@ export class ObjectAssetsServiceApi {
      * AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.
      * @param param the request object
      */
-    public assetsServiceAssetIngestionWithHttpInfo(param: AssetsServiceApiAssetsServiceAssetIngestionRequest, options?: Configuration): Promise<HttpInfo<Assetsv3AssetIngestionResponse>> {
+    public assetsServiceAssetIngestionWithHttpInfo(param: AssetsServiceApiAssetsServiceAssetIngestionRequest, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3AssetIngestionResponse>> {
         return this.api.assetsServiceAssetIngestionWithHttpInfo(param.assetsv3AssetIngestionRequest,  options).toPromise();
     }
 
@@ -1776,7 +1819,7 @@ export class ObjectAssetsServiceApi {
      * AssetIngestion - Asset Ingestion Api to ingest assets from different applications including asset extensibility assets.
      * @param param the request object
      */
-    public assetsServiceAssetIngestion(param: AssetsServiceApiAssetsServiceAssetIngestionRequest, options?: Configuration): Promise<Assetsv3AssetIngestionResponse> {
+    public assetsServiceAssetIngestion(param: AssetsServiceApiAssetsServiceAssetIngestionRequest, options?: ConfigurationOptions): Promise<Assetsv3AssetIngestionResponse> {
         return this.api.assetsServiceAssetIngestion(param.assetsv3AssetIngestionRequest,  options).toPromise();
     }
 
@@ -1784,7 +1827,7 @@ export class ObjectAssetsServiceApi {
      * AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases.
      * @param param the request object
      */
-    public assetsServiceAssetIngestionManualTriggerWithHttpInfo(param: AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest, options?: Configuration): Promise<HttpInfo<Assetsv3AssetIngestionResponse>> {
+    public assetsServiceAssetIngestionManualTriggerWithHttpInfo(param: AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3AssetIngestionResponse>> {
         return this.api.assetsServiceAssetIngestionManualTriggerWithHttpInfo(param.body,  options).toPromise();
     }
 
@@ -1792,7 +1835,7 @@ export class ObjectAssetsServiceApi {
      * AssetIngestionManualTrigger - Manual trigger for Scheduled Asset Ingestion of databases.
      * @param param the request object
      */
-    public assetsServiceAssetIngestionManualTrigger(param: AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest, options?: Configuration): Promise<Assetsv3AssetIngestionResponse> {
+    public assetsServiceAssetIngestionManualTrigger(param: AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest, options?: ConfigurationOptions): Promise<Assetsv3AssetIngestionResponse> {
         return this.api.assetsServiceAssetIngestionManualTrigger(param.body,  options).toPromise();
     }
 
@@ -1800,7 +1843,7 @@ export class ObjectAssetsServiceApi {
      * CancelCSVImport - Cancel the import of CSV and update the status in import log table
      * @param param the request object
      */
-    public assetsServiceCancelCSVImportWithHttpInfo(param: AssetsServiceApiAssetsServiceCancelCSVImportRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public assetsServiceCancelCSVImportWithHttpInfo(param: AssetsServiceApiAssetsServiceCancelCSVImportRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.assetsServiceCancelCSVImportWithHttpInfo(param.csvId,  options).toPromise();
     }
 
@@ -1808,7 +1851,7 @@ export class ObjectAssetsServiceApi {
      * CancelCSVImport - Cancel the import of CSV and update the status in import log table
      * @param param the request object
      */
-    public assetsServiceCancelCSVImport(param: AssetsServiceApiAssetsServiceCancelCSVImportRequest, options?: Configuration): Promise<any> {
+    public assetsServiceCancelCSVImport(param: AssetsServiceApiAssetsServiceCancelCSVImportRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.assetsServiceCancelCSVImport(param.csvId,  options).toPromise();
     }
 
@@ -1816,7 +1859,7 @@ export class ObjectAssetsServiceApi {
      * ClonePolicy - Clone a policy.
      * @param param the request object
      */
-    public assetsServiceClonePolicyWithHttpInfo(param: AssetsServiceApiAssetsServiceClonePolicyRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public assetsServiceClonePolicyWithHttpInfo(param: AssetsServiceApiAssetsServiceClonePolicyRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.assetsServiceClonePolicyWithHttpInfo(param.policyId, param.assetsv3ClonePolicyRequest,  options).toPromise();
     }
 
@@ -1824,7 +1867,7 @@ export class ObjectAssetsServiceApi {
      * ClonePolicy - Clone a policy.
      * @param param the request object
      */
-    public assetsServiceClonePolicy(param: AssetsServiceApiAssetsServiceClonePolicyRequest, options?: Configuration): Promise<any> {
+    public assetsServiceClonePolicy(param: AssetsServiceApiAssetsServiceClonePolicyRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.assetsServiceClonePolicy(param.policyId, param.assetsv3ClonePolicyRequest,  options).toPromise();
     }
 
@@ -1832,7 +1875,7 @@ export class ObjectAssetsServiceApi {
      * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
      * @param param the request object
      */
-    public assetsServiceCompareCSVToExistingAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest, options?: Configuration): Promise<HttpInfo<Assetsv3CompareCSVResponse>> {
+    public assetsServiceCompareCSVToExistingAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3CompareCSVResponse>> {
         return this.api.assetsServiceCompareCSVToExistingAssetsWithHttpInfo(param.csvId, param.rowsRequired, param.pageNumber, param.pageSize, param.templateType,  options).toPromise();
     }
 
@@ -1840,7 +1883,7 @@ export class ObjectAssetsServiceApi {
      * CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
      * @param param the request object
      */
-    public assetsServiceCompareCSVToExistingAssets(param: AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest, options?: Configuration): Promise<Assetsv3CompareCSVResponse> {
+    public assetsServiceCompareCSVToExistingAssets(param: AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest, options?: ConfigurationOptions): Promise<Assetsv3CompareCSVResponse> {
         return this.api.assetsServiceCompareCSVToExistingAssets(param.csvId, param.rowsRequired, param.pageNumber, param.pageSize, param.templateType,  options).toPromise();
     }
 
@@ -1848,7 +1891,7 @@ export class ObjectAssetsServiceApi {
      * CreateUpdatePolicy - Create/update new Policy.
      * @param param the request object
      */
-    public assetsServiceCreateUpdatePolicyWithHttpInfo(param: AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest, options?: Configuration): Promise<HttpInfo<Assetsv3CreateUpdatePolicyResponse>> {
+    public assetsServiceCreateUpdatePolicyWithHttpInfo(param: AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3CreateUpdatePolicyResponse>> {
         return this.api.assetsServiceCreateUpdatePolicyWithHttpInfo(param.assetsv3CreateUpdatePolicyRequest,  options).toPromise();
     }
 
@@ -1856,7 +1899,7 @@ export class ObjectAssetsServiceApi {
      * CreateUpdatePolicy - Create/update new Policy.
      * @param param the request object
      */
-    public assetsServiceCreateUpdatePolicy(param: AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest, options?: Configuration): Promise<Assetsv3CreateUpdatePolicyResponse> {
+    public assetsServiceCreateUpdatePolicy(param: AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest, options?: ConfigurationOptions): Promise<Assetsv3CreateUpdatePolicyResponse> {
         return this.api.assetsServiceCreateUpdatePolicy(param.assetsv3CreateUpdatePolicyRequest,  options).toPromise();
     }
 
@@ -1864,7 +1907,7 @@ export class ObjectAssetsServiceApi {
      * DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
      * @param param the request object
      */
-    public assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.assetsServiceDeleteFilterTemplateForAssetsWithHttpInfo(param.templateId,  options).toPromise();
     }
 
@@ -1872,7 +1915,7 @@ export class ObjectAssetsServiceApi {
      * DeleteFilterTemplateForAssets - Deleting a template using TemplateID in manage assets.
      * @param param the request object
      */
-    public assetsServiceDeleteFilterTemplateForAssets(param: AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest, options?: Configuration): Promise<any> {
+    public assetsServiceDeleteFilterTemplateForAssets(param: AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.assetsServiceDeleteFilterTemplateForAssets(param.templateId,  options).toPromise();
     }
 
@@ -1880,7 +1923,7 @@ export class ObjectAssetsServiceApi {
      * DeletePolicies - Delete Policy returns response code and message.
      * @param param the request object
      */
-    public assetsServiceDeletePoliciesWithHttpInfo(param: AssetsServiceApiAssetsServiceDeletePoliciesRequest = {}, options?: Configuration): Promise<HttpInfo<any>> {
+    public assetsServiceDeletePoliciesWithHttpInfo(param: AssetsServiceApiAssetsServiceDeletePoliciesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.assetsServiceDeletePoliciesWithHttpInfo(param.policyIds,  options).toPromise();
     }
 
@@ -1888,7 +1931,7 @@ export class ObjectAssetsServiceApi {
      * DeletePolicies - Delete Policy returns response code and message.
      * @param param the request object
      */
-    public assetsServiceDeletePolicies(param: AssetsServiceApiAssetsServiceDeletePoliciesRequest = {}, options?: Configuration): Promise<any> {
+    public assetsServiceDeletePolicies(param: AssetsServiceApiAssetsServiceDeletePoliciesRequest = {}, options?: ConfigurationOptions): Promise<any> {
         return this.api.assetsServiceDeletePolicies(param.policyIds,  options).toPromise();
     }
 
@@ -1896,7 +1939,7 @@ export class ObjectAssetsServiceApi {
      * FetchAssetChangeLog - Fetch the logs for any actions performed on assets.
      * @param param the request object
      */
-    public assetsServiceFetchAssetChangeLogWithHttpInfo(param: AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest, options?: Configuration): Promise<HttpInfo<Assetsv3FetchAssetChangeLogResponse>> {
+    public assetsServiceFetchAssetChangeLogWithHttpInfo(param: AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3FetchAssetChangeLogResponse>> {
         return this.api.assetsServiceFetchAssetChangeLogWithHttpInfo(param.assetsv3FetchAssetChangeLogRequest,  options).toPromise();
     }
 
@@ -1904,7 +1947,7 @@ export class ObjectAssetsServiceApi {
      * FetchAssetChangeLog - Fetch the logs for any actions performed on assets.
      * @param param the request object
      */
-    public assetsServiceFetchAssetChangeLog(param: AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest, options?: Configuration): Promise<Assetsv3FetchAssetChangeLogResponse> {
+    public assetsServiceFetchAssetChangeLog(param: AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest, options?: ConfigurationOptions): Promise<Assetsv3FetchAssetChangeLogResponse> {
         return this.api.assetsServiceFetchAssetChangeLog(param.assetsv3FetchAssetChangeLogRequest,  options).toPromise();
     }
 
@@ -1912,7 +1955,7 @@ export class ObjectAssetsServiceApi {
      * FetchAssetDashboard - Gets Filter Templates for Dshboard Widgets.
      * @param param the request object
      */
-    public assetsServiceFetchAssetDashboardWithHttpInfo(param: AssetsServiceApiAssetsServiceFetchAssetDashboardRequest, options?: Configuration): Promise<HttpInfo<Assetsv3FetchAssetDashboardResponse>> {
+    public assetsServiceFetchAssetDashboardWithHttpInfo(param: AssetsServiceApiAssetsServiceFetchAssetDashboardRequest, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3FetchAssetDashboardResponse>> {
         return this.api.assetsServiceFetchAssetDashboardWithHttpInfo(param.widgetType, param.dateRangeStart, param.dateRangeEnd, param.dateRangeType, param.dateRangeKey, param.dateRangeError, param.dateRangeStartNumber, param.dateRangeStartUnit, param.dateRangeEndNumber, param.dateRangeEndUnit, param.timelineValueSelected, param.tagId,  options).toPromise();
     }
 
@@ -1920,7 +1963,7 @@ export class ObjectAssetsServiceApi {
      * FetchAssetDashboard - Gets Filter Templates for Dshboard Widgets.
      * @param param the request object
      */
-    public assetsServiceFetchAssetDashboard(param: AssetsServiceApiAssetsServiceFetchAssetDashboardRequest, options?: Configuration): Promise<Assetsv3FetchAssetDashboardResponse> {
+    public assetsServiceFetchAssetDashboard(param: AssetsServiceApiAssetsServiceFetchAssetDashboardRequest, options?: ConfigurationOptions): Promise<Assetsv3FetchAssetDashboardResponse> {
         return this.api.assetsServiceFetchAssetDashboard(param.widgetType, param.dateRangeStart, param.dateRangeEnd, param.dateRangeType, param.dateRangeKey, param.dateRangeError, param.dateRangeStartNumber, param.dateRangeStartUnit, param.dateRangeEndNumber, param.dateRangeEndUnit, param.timelineValueSelected, param.tagId,  options).toPromise();
     }
 
@@ -1928,7 +1971,7 @@ export class ObjectAssetsServiceApi {
      * FetchAssetList - Asset Fetch Api .
      * @param param the request object
      */
-    public assetsServiceFetchAssetListWithHttpInfo(param: AssetsServiceApiAssetsServiceFetchAssetListRequest, options?: Configuration): Promise<HttpInfo<Assetsv3FetchAssetListResponse>> {
+    public assetsServiceFetchAssetListWithHttpInfo(param: AssetsServiceApiAssetsServiceFetchAssetListRequest, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3FetchAssetListResponse>> {
         return this.api.assetsServiceFetchAssetListWithHttpInfo(param.assetsv3FetchAssetListRequest,  options).toPromise();
     }
 
@@ -1936,7 +1979,7 @@ export class ObjectAssetsServiceApi {
      * FetchAssetList - Asset Fetch Api .
      * @param param the request object
      */
-    public assetsServiceFetchAssetList(param: AssetsServiceApiAssetsServiceFetchAssetListRequest, options?: Configuration): Promise<Assetsv3FetchAssetListResponse> {
+    public assetsServiceFetchAssetList(param: AssetsServiceApiAssetsServiceFetchAssetListRequest, options?: ConfigurationOptions): Promise<Assetsv3FetchAssetListResponse> {
         return this.api.assetsServiceFetchAssetList(param.assetsv3FetchAssetListRequest,  options).toPromise();
     }
 
@@ -1944,7 +1987,7 @@ export class ObjectAssetsServiceApi {
      * FetchAssetsForMergeSplit : Fetch assets for Merge and Split.
      * @param param the request object
      */
-    public assetsServiceFetchAssetsForMergeSplitWithHttpInfo(param: AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest = {}, options?: Configuration): Promise<HttpInfo<Assetsv3FetchAssetsForMergeSplitResponse>> {
+    public assetsServiceFetchAssetsForMergeSplitWithHttpInfo(param: AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3FetchAssetsForMergeSplitResponse>> {
         return this.api.assetsServiceFetchAssetsForMergeSplitWithHttpInfo(param.assetId, param.pageNumber, param.pageSize, param.action, param.searchKey,  options).toPromise();
     }
 
@@ -1952,7 +1995,7 @@ export class ObjectAssetsServiceApi {
      * FetchAssetsForMergeSplit : Fetch assets for Merge and Split.
      * @param param the request object
      */
-    public assetsServiceFetchAssetsForMergeSplit(param: AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest = {}, options?: Configuration): Promise<Assetsv3FetchAssetsForMergeSplitResponse> {
+    public assetsServiceFetchAssetsForMergeSplit(param: AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest = {}, options?: ConfigurationOptions): Promise<Assetsv3FetchAssetsForMergeSplitResponse> {
         return this.api.assetsServiceFetchAssetsForMergeSplit(param.assetId, param.pageNumber, param.pageSize, param.action, param.searchKey,  options).toPromise();
     }
 
@@ -1960,7 +2003,7 @@ export class ObjectAssetsServiceApi {
      * FindAssetName - Checks if the given Asset Name has already been assigned to an asset.
      * @param param the request object
      */
-    public assetsServiceFindAssetNameWithHttpInfo(param: AssetsServiceApiAssetsServiceFindAssetNameRequest = {}, options?: Configuration): Promise<HttpInfo<Assetsv3FindAssetNameResponse>> {
+    public assetsServiceFindAssetNameWithHttpInfo(param: AssetsServiceApiAssetsServiceFindAssetNameRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3FindAssetNameResponse>> {
         return this.api.assetsServiceFindAssetNameWithHttpInfo(param.assetName,  options).toPromise();
     }
 
@@ -1968,7 +2011,7 @@ export class ObjectAssetsServiceApi {
      * FindAssetName - Checks if the given Asset Name has already been assigned to an asset.
      * @param param the request object
      */
-    public assetsServiceFindAssetName(param: AssetsServiceApiAssetsServiceFindAssetNameRequest = {}, options?: Configuration): Promise<Assetsv3FindAssetNameResponse> {
+    public assetsServiceFindAssetName(param: AssetsServiceApiAssetsServiceFindAssetNameRequest = {}, options?: ConfigurationOptions): Promise<Assetsv3FindAssetNameResponse> {
         return this.api.assetsServiceFindAssetName(param.assetName,  options).toPromise();
     }
 
@@ -1976,7 +2019,7 @@ export class ObjectAssetsServiceApi {
      * GetAssetOverview - Get asset overview widgets data for a particular asset.
      * @param param the request object
      */
-    public assetsServiceGetAssetOverviewWithHttpInfo(param: AssetsServiceApiAssetsServiceGetAssetOverviewRequest = {}, options?: Configuration): Promise<HttpInfo<Assetsv3AssetOverviewResponse>> {
+    public assetsServiceGetAssetOverviewWithHttpInfo(param: AssetsServiceApiAssetsServiceGetAssetOverviewRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3AssetOverviewResponse>> {
         return this.api.assetsServiceGetAssetOverviewWithHttpInfo(param.assetId, param.pageNumber, param.size, param.widget, param.ip, param.host, param.database, param.assetEntityType,  options).toPromise();
     }
 
@@ -1984,7 +2027,7 @@ export class ObjectAssetsServiceApi {
      * GetAssetOverview - Get asset overview widgets data for a particular asset.
      * @param param the request object
      */
-    public assetsServiceGetAssetOverview(param: AssetsServiceApiAssetsServiceGetAssetOverviewRequest = {}, options?: Configuration): Promise<Assetsv3AssetOverviewResponse> {
+    public assetsServiceGetAssetOverview(param: AssetsServiceApiAssetsServiceGetAssetOverviewRequest = {}, options?: ConfigurationOptions): Promise<Assetsv3AssetOverviewResponse> {
         return this.api.assetsServiceGetAssetOverview(param.assetId, param.pageNumber, param.size, param.widget, param.ip, param.host, param.database, param.assetEntityType,  options).toPromise();
     }
 
@@ -1992,7 +2035,7 @@ export class ObjectAssetsServiceApi {
      * GetAssetTopology- Get list of topology for a parent asset.
      * @param param the request object
      */
-    public assetsServiceGetAssetTopologyWithHttpInfo(param: AssetsServiceApiAssetsServiceGetAssetTopologyRequest, options?: Configuration): Promise<HttpInfo<Assetsv3GetAssetTopologyResponse>> {
+    public assetsServiceGetAssetTopologyWithHttpInfo(param: AssetsServiceApiAssetsServiceGetAssetTopologyRequest, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3GetAssetTopologyResponse>> {
         return this.api.assetsServiceGetAssetTopologyWithHttpInfo(param.assetsv3GetAssetTopologyRequest,  options).toPromise();
     }
 
@@ -2000,7 +2043,7 @@ export class ObjectAssetsServiceApi {
      * GetAssetTopology- Get list of topology for a parent asset.
      * @param param the request object
      */
-    public assetsServiceGetAssetTopology(param: AssetsServiceApiAssetsServiceGetAssetTopologyRequest, options?: Configuration): Promise<Assetsv3GetAssetTopologyResponse> {
+    public assetsServiceGetAssetTopology(param: AssetsServiceApiAssetsServiceGetAssetTopologyRequest, options?: ConfigurationOptions): Promise<Assetsv3GetAssetTopologyResponse> {
         return this.api.assetsServiceGetAssetTopology(param.assetsv3GetAssetTopologyRequest,  options).toPromise();
     }
 
@@ -2008,7 +2051,7 @@ export class ObjectAssetsServiceApi {
      * GetFilterTemplateForAssets - Get list of filters query templates for manage assets.
      * @param param the request object
      */
-    public assetsServiceGetFilterTemplateForAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest = {}, options?: Configuration): Promise<HttpInfo<Assetsv3GetFilterTemplateResponse>> {
+    public assetsServiceGetFilterTemplateForAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3GetFilterTemplateResponse>> {
         return this.api.assetsServiceGetFilterTemplateForAssetsWithHttpInfo(param.templateId,  options).toPromise();
     }
 
@@ -2016,7 +2059,7 @@ export class ObjectAssetsServiceApi {
      * GetFilterTemplateForAssets - Get list of filters query templates for manage assets.
      * @param param the request object
      */
-    public assetsServiceGetFilterTemplateForAssets(param: AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest = {}, options?: Configuration): Promise<Assetsv3GetFilterTemplateResponse> {
+    public assetsServiceGetFilterTemplateForAssets(param: AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest = {}, options?: ConfigurationOptions): Promise<Assetsv3GetFilterTemplateResponse> {
         return this.api.assetsServiceGetFilterTemplateForAssets(param.templateId,  options).toPromise();
     }
 
@@ -2024,7 +2067,7 @@ export class ObjectAssetsServiceApi {
      * GetFiltersForAssets - Get a list of filters category and sub category with all data.
      * @param param the request object
      */
-    public assetsServiceGetFiltersForAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceGetFiltersForAssetsRequest = {}, options?: Configuration): Promise<HttpInfo<Assetsv3GetFiltersDataResponse>> {
+    public assetsServiceGetFiltersForAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceGetFiltersForAssetsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3GetFiltersDataResponse>> {
         return this.api.assetsServiceGetFiltersForAssetsWithHttpInfo( options).toPromise();
     }
 
@@ -2032,7 +2075,7 @@ export class ObjectAssetsServiceApi {
      * GetFiltersForAssets - Get a list of filters category and sub category with all data.
      * @param param the request object
      */
-    public assetsServiceGetFiltersForAssets(param: AssetsServiceApiAssetsServiceGetFiltersForAssetsRequest = {}, options?: Configuration): Promise<Assetsv3GetFiltersDataResponse> {
+    public assetsServiceGetFiltersForAssets(param: AssetsServiceApiAssetsServiceGetFiltersForAssetsRequest = {}, options?: ConfigurationOptions): Promise<Assetsv3GetFiltersDataResponse> {
         return this.api.assetsServiceGetFiltersForAssets( options).toPromise();
     }
 
@@ -2040,7 +2083,7 @@ export class ObjectAssetsServiceApi {
      * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
      * @param param the request object
      */
-    public assetsServiceImportCSVWithHttpInfo(param: AssetsServiceApiAssetsServiceImportCSVRequest, options?: Configuration): Promise<HttpInfo<Assetsv3ImportCSVResponse>> {
+    public assetsServiceImportCSVWithHttpInfo(param: AssetsServiceApiAssetsServiceImportCSVRequest, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3ImportCSVResponse>> {
         return this.api.assetsServiceImportCSVWithHttpInfo(param.csvId, param.assetsv3ImportCSVRequest,  options).toPromise();
     }
 
@@ -2048,7 +2091,7 @@ export class ObjectAssetsServiceApi {
      * ImportCSV - Start the async asset import from CSV by starting the db procedure and send notification at the end.
      * @param param the request object
      */
-    public assetsServiceImportCSV(param: AssetsServiceApiAssetsServiceImportCSVRequest, options?: Configuration): Promise<Assetsv3ImportCSVResponse> {
+    public assetsServiceImportCSV(param: AssetsServiceApiAssetsServiceImportCSVRequest, options?: ConfigurationOptions): Promise<Assetsv3ImportCSVResponse> {
         return this.api.assetsServiceImportCSV(param.csvId, param.assetsv3ImportCSVRequest,  options).toPromise();
     }
 
@@ -2056,7 +2099,7 @@ export class ObjectAssetsServiceApi {
      * ListPolicy - List all policies.
      * @param param the request object
      */
-    public assetsServiceListPolicyWithHttpInfo(param: AssetsServiceApiAssetsServiceListPolicyRequest = {}, options?: Configuration): Promise<HttpInfo<Assetsv3ListPolicyResponse>> {
+    public assetsServiceListPolicyWithHttpInfo(param: AssetsServiceApiAssetsServiceListPolicyRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3ListPolicyResponse>> {
         return this.api.assetsServiceListPolicyWithHttpInfo( options).toPromise();
     }
 
@@ -2064,7 +2107,7 @@ export class ObjectAssetsServiceApi {
      * ListPolicy - List all policies.
      * @param param the request object
      */
-    public assetsServiceListPolicy(param: AssetsServiceApiAssetsServiceListPolicyRequest = {}, options?: Configuration): Promise<Assetsv3ListPolicyResponse> {
+    public assetsServiceListPolicy(param: AssetsServiceApiAssetsServiceListPolicyRequest = {}, options?: ConfigurationOptions): Promise<Assetsv3ListPolicyResponse> {
         return this.api.assetsServiceListPolicy( options).toPromise();
     }
 
@@ -2072,7 +2115,7 @@ export class ObjectAssetsServiceApi {
      * ListRule - List all rules for a policy.
      * @param param the request object
      */
-    public assetsServiceListRuleWithHttpInfo(param: AssetsServiceApiAssetsServiceListRuleRequest, options?: Configuration): Promise<HttpInfo<Assetsv3ListRuleResponse>> {
+    public assetsServiceListRuleWithHttpInfo(param: AssetsServiceApiAssetsServiceListRuleRequest, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3ListRuleResponse>> {
         return this.api.assetsServiceListRuleWithHttpInfo(param.policyId,  options).toPromise();
     }
 
@@ -2080,7 +2123,7 @@ export class ObjectAssetsServiceApi {
      * ListRule - List all rules for a policy.
      * @param param the request object
      */
-    public assetsServiceListRule(param: AssetsServiceApiAssetsServiceListRuleRequest, options?: Configuration): Promise<Assetsv3ListRuleResponse> {
+    public assetsServiceListRule(param: AssetsServiceApiAssetsServiceListRuleRequest, options?: ConfigurationOptions): Promise<Assetsv3ListRuleResponse> {
         return this.api.assetsServiceListRule(param.policyId,  options).toPromise();
     }
 
@@ -2088,7 +2131,7 @@ export class ObjectAssetsServiceApi {
      * ListTagDomains - Get Tag categories by request parameters .
      * @param param the request object
      */
-    public assetsServiceListTagDomainsWithHttpInfo(param: AssetsServiceApiAssetsServiceListTagDomainsRequest = {}, options?: Configuration): Promise<HttpInfo<Assetsv3ListTagDomainsResponse>> {
+    public assetsServiceListTagDomainsWithHttpInfo(param: AssetsServiceApiAssetsServiceListTagDomainsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3ListTagDomainsResponse>> {
         return this.api.assetsServiceListTagDomainsWithHttpInfo(param.domGrouper, param.purpose, param.needTag,  options).toPromise();
     }
 
@@ -2096,7 +2139,7 @@ export class ObjectAssetsServiceApi {
      * ListTagDomains - Get Tag categories by request parameters .
      * @param param the request object
      */
-    public assetsServiceListTagDomains(param: AssetsServiceApiAssetsServiceListTagDomainsRequest = {}, options?: Configuration): Promise<Assetsv3ListTagDomainsResponse> {
+    public assetsServiceListTagDomains(param: AssetsServiceApiAssetsServiceListTagDomainsRequest = {}, options?: ConfigurationOptions): Promise<Assetsv3ListTagDomainsResponse> {
         return this.api.assetsServiceListTagDomains(param.domGrouper, param.purpose, param.needTag,  options).toPromise();
     }
 
@@ -2104,7 +2147,7 @@ export class ObjectAssetsServiceApi {
      * ListTags - Get Tags for Manage Tags listing screen .
      * @param param the request object
      */
-    public assetsServiceListTagsWithHttpInfo(param: AssetsServiceApiAssetsServiceListTagsRequest = {}, options?: Configuration): Promise<HttpInfo<Assetsv3ListTagsResponse>> {
+    public assetsServiceListTagsWithHttpInfo(param: AssetsServiceApiAssetsServiceListTagsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3ListTagsResponse>> {
         return this.api.assetsServiceListTagsWithHttpInfo(param.assetId,  options).toPromise();
     }
 
@@ -2112,7 +2155,7 @@ export class ObjectAssetsServiceApi {
      * ListTags - Get Tags for Manage Tags listing screen .
      * @param param the request object
      */
-    public assetsServiceListTags(param: AssetsServiceApiAssetsServiceListTagsRequest = {}, options?: Configuration): Promise<Assetsv3ListTagsResponse> {
+    public assetsServiceListTags(param: AssetsServiceApiAssetsServiceListTagsRequest = {}, options?: ConfigurationOptions): Promise<Assetsv3ListTagsResponse> {
         return this.api.assetsServiceListTags(param.assetId,  options).toPromise();
     }
 
@@ -2120,7 +2163,7 @@ export class ObjectAssetsServiceApi {
      * MergeOrSplitAssets - Merge or split the selected assets.
      * @param param the request object
      */
-    public assetsServiceMergeOrSplitAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public assetsServiceMergeOrSplitAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.assetsServiceMergeOrSplitAssetsWithHttpInfo(param.assetsv3MergeOrSplitAssetsRequest,  options).toPromise();
     }
 
@@ -2128,7 +2171,7 @@ export class ObjectAssetsServiceApi {
      * MergeOrSplitAssets - Merge or split the selected assets.
      * @param param the request object
      */
-    public assetsServiceMergeOrSplitAssets(param: AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest, options?: Configuration): Promise<any> {
+    public assetsServiceMergeOrSplitAssets(param: AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.assetsServiceMergeOrSplitAssets(param.assetsv3MergeOrSplitAssetsRequest,  options).toPromise();
     }
 
@@ -2136,7 +2179,7 @@ export class ObjectAssetsServiceApi {
      * SaveAssignedTags - Save Assigned Tags to TAG_DSDEF_MAP table.
      * @param param the request object
      */
-    public assetsServiceSaveAssignedTagsWithHttpInfo(param: AssetsServiceApiAssetsServiceSaveAssignedTagsRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public assetsServiceSaveAssignedTagsWithHttpInfo(param: AssetsServiceApiAssetsServiceSaveAssignedTagsRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.assetsServiceSaveAssignedTagsWithHttpInfo(param.assetsv3SaveAssignedTagsRequest,  options).toPromise();
     }
 
@@ -2144,7 +2187,7 @@ export class ObjectAssetsServiceApi {
      * SaveAssignedTags - Save Assigned Tags to TAG_DSDEF_MAP table.
      * @param param the request object
      */
-    public assetsServiceSaveAssignedTags(param: AssetsServiceApiAssetsServiceSaveAssignedTagsRequest, options?: Configuration): Promise<any> {
+    public assetsServiceSaveAssignedTags(param: AssetsServiceApiAssetsServiceSaveAssignedTagsRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.assetsServiceSaveAssignedTags(param.assetsv3SaveAssignedTagsRequest,  options).toPromise();
     }
 
@@ -2152,7 +2195,7 @@ export class ObjectAssetsServiceApi {
      * SaveTagConceptData - creates a custom tag
      * @param param the request object
      */
-    public assetsServiceSaveTagConceptDataWithHttpInfo(param: AssetsServiceApiAssetsServiceSaveTagConceptDataRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public assetsServiceSaveTagConceptDataWithHttpInfo(param: AssetsServiceApiAssetsServiceSaveTagConceptDataRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.assetsServiceSaveTagConceptDataWithHttpInfo(param.assetsv3SaveTagConceptDataRequest,  options).toPromise();
     }
 
@@ -2160,7 +2203,7 @@ export class ObjectAssetsServiceApi {
      * SaveTagConceptData - creates a custom tag
      * @param param the request object
      */
-    public assetsServiceSaveTagConceptData(param: AssetsServiceApiAssetsServiceSaveTagConceptDataRequest, options?: Configuration): Promise<any> {
+    public assetsServiceSaveTagConceptData(param: AssetsServiceApiAssetsServiceSaveTagConceptDataRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.assetsServiceSaveTagConceptData(param.assetsv3SaveTagConceptDataRequest,  options).toPromise();
     }
 
@@ -2168,7 +2211,7 @@ export class ObjectAssetsServiceApi {
      * SaveTagDomainData - creates a custom category to be assigned to a tag
      * @param param the request object
      */
-    public assetsServiceSaveTagDomainDataWithHttpInfo(param: AssetsServiceApiAssetsServiceSaveTagDomainDataRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public assetsServiceSaveTagDomainDataWithHttpInfo(param: AssetsServiceApiAssetsServiceSaveTagDomainDataRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.assetsServiceSaveTagDomainDataWithHttpInfo(param.assetsv3SaveTagDomainDataRequest,  options).toPromise();
     }
 
@@ -2176,7 +2219,7 @@ export class ObjectAssetsServiceApi {
      * SaveTagDomainData - creates a custom category to be assigned to a tag
      * @param param the request object
      */
-    public assetsServiceSaveTagDomainData(param: AssetsServiceApiAssetsServiceSaveTagDomainDataRequest, options?: Configuration): Promise<any> {
+    public assetsServiceSaveTagDomainData(param: AssetsServiceApiAssetsServiceSaveTagDomainDataRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.assetsServiceSaveTagDomainData(param.assetsv3SaveTagDomainDataRequest,  options).toPromise();
     }
 
@@ -2184,7 +2227,7 @@ export class ObjectAssetsServiceApi {
      * SaveUpdateFilterTemplateForAssets - Save/Update a filters query to use as template in manage assets along with reordering of template list.
      * @param param the request object
      */
-    public assetsServiceSaveUpdateFilterTemplateForAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest, options?: Configuration): Promise<HttpInfo<Assetsv3SaveUpdateFilterTemplateResponse>> {
+    public assetsServiceSaveUpdateFilterTemplateForAssetsWithHttpInfo(param: AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Assetsv3SaveUpdateFilterTemplateResponse>> {
         return this.api.assetsServiceSaveUpdateFilterTemplateForAssetsWithHttpInfo(param.assetsv3SaveUpdateFilterTemplateRequest,  options).toPromise();
     }
 
@@ -2192,7 +2235,7 @@ export class ObjectAssetsServiceApi {
      * SaveUpdateFilterTemplateForAssets - Save/Update a filters query to use as template in manage assets along with reordering of template list.
      * @param param the request object
      */
-    public assetsServiceSaveUpdateFilterTemplateForAssets(param: AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest, options?: Configuration): Promise<Assetsv3SaveUpdateFilterTemplateResponse> {
+    public assetsServiceSaveUpdateFilterTemplateForAssets(param: AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest, options?: ConfigurationOptions): Promise<Assetsv3SaveUpdateFilterTemplateResponse> {
         return this.api.assetsServiceSaveUpdateFilterTemplateForAssets(param.assetsv3SaveUpdateFilterTemplateRequest,  options).toPromise();
     }
 
@@ -2200,7 +2243,7 @@ export class ObjectAssetsServiceApi {
      * SetBannerState - Set banner state for asset inventory page.
      * @param param the request object
      */
-    public assetsServiceSetBannerStateWithHttpInfo(param: AssetsServiceApiAssetsServiceSetBannerStateRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public assetsServiceSetBannerStateWithHttpInfo(param: AssetsServiceApiAssetsServiceSetBannerStateRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.assetsServiceSetBannerStateWithHttpInfo(param.assetsv3SetBannerStateRequest,  options).toPromise();
     }
 
@@ -2208,7 +2251,7 @@ export class ObjectAssetsServiceApi {
      * SetBannerState - Set banner state for asset inventory page.
      * @param param the request object
      */
-    public assetsServiceSetBannerState(param: AssetsServiceApiAssetsServiceSetBannerStateRequest, options?: Configuration): Promise<any> {
+    public assetsServiceSetBannerState(param: AssetsServiceApiAssetsServiceSetBannerStateRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.assetsServiceSetBannerState(param.assetsv3SetBannerStateRequest,  options).toPromise();
     }
 
@@ -2216,7 +2259,7 @@ export class ObjectAssetsServiceApi {
      * UpdateAssetName - Udates the name of the asset as given by the user.
      * @param param the request object
      */
-    public assetsServiceUpdateAssetNameWithHttpInfo(param: AssetsServiceApiAssetsServiceUpdateAssetNameRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public assetsServiceUpdateAssetNameWithHttpInfo(param: AssetsServiceApiAssetsServiceUpdateAssetNameRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.assetsServiceUpdateAssetNameWithHttpInfo(param.assetsv3UpdateAssetNameRequest,  options).toPromise();
     }
 
@@ -2224,7 +2267,7 @@ export class ObjectAssetsServiceApi {
      * UpdateAssetName - Udates the name of the asset as given by the user.
      * @param param the request object
      */
-    public assetsServiceUpdateAssetName(param: AssetsServiceApiAssetsServiceUpdateAssetNameRequest, options?: Configuration): Promise<any> {
+    public assetsServiceUpdateAssetName(param: AssetsServiceApiAssetsServiceUpdateAssetNameRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.assetsServiceUpdateAssetName(param.assetsv3UpdateAssetNameRequest,  options).toPromise();
     }
 
@@ -2232,7 +2275,7 @@ export class ObjectAssetsServiceApi {
      * UpdatePolicy - Update existing Policy status.
      * @param param the request object
      */
-    public assetsServiceUpdatePolicyWithHttpInfo(param: AssetsServiceApiAssetsServiceUpdatePolicyRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public assetsServiceUpdatePolicyWithHttpInfo(param: AssetsServiceApiAssetsServiceUpdatePolicyRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.assetsServiceUpdatePolicyWithHttpInfo(param.assetsv3UpdatePolicyRequest,  options).toPromise();
     }
 
@@ -2240,7 +2283,7 @@ export class ObjectAssetsServiceApi {
      * UpdatePolicy - Update existing Policy status.
      * @param param the request object
      */
-    public assetsServiceUpdatePolicy(param: AssetsServiceApiAssetsServiceUpdatePolicyRequest, options?: Configuration): Promise<any> {
+    public assetsServiceUpdatePolicy(param: AssetsServiceApiAssetsServiceUpdatePolicyRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.assetsServiceUpdatePolicy(param.assetsv3UpdatePolicyRequest,  options).toPromise();
     }
 
@@ -2252,72 +2295,84 @@ import { AuditServiceApiRequestFactory, AuditServiceApiResponseProcessor} from "
 export interface AuditServiceApiAuditServiceGetActivityRecordsRequest {
     /**
      * Return records starting at this time (&gt;&#x3D;).
+     * Defaults to: undefined
      * @type Date
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
     startTime?: Date
     /**
      * Return records ending before this time (&lt;).
+     * Defaults to: undefined
      * @type Date
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
     endTime?: Date
     /**
      * Return records with this service/collection id.
+     * Defaults to: undefined
      * @type string
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
     uid?: string
     /**
      * Return records matching this operation (CRUD or other action).
+     * Defaults to: undefined
      * @type string
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
     actionTaken?: string
     /**
      * Return records for this service/collection.
+     * Defaults to: undefined
      * @type string
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
     context?: string
     /**
      * Return records created only for this reason.
+     * Defaults to: undefined
      * @type string
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
     changesMade?: string
     /**
      * Return records originating with the specified user id.
+     * Defaults to: undefined
      * @type string
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
     performedBy?: string
     /**
      * Return records with this label.
+     * Defaults to: undefined
      * @type string
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
     contextDescription?: string
     /**
      * Return records based on the query.
+     * Defaults to: undefined
      * @type string
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
     query?: string
     /**
      * The amount to offset the rows by for pagination.
+     * Defaults to: undefined
      * @type number
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
     offset?: number
     /**
      * The max amount of rows to return for pagination.
+     * Defaults to: undefined
      * @type number
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
     limit?: number
     /**
      * Return eligable filters if this is true.
+     * Defaults to: undefined
      * @type boolean
      * @memberof AuditServiceApiauditServiceGetActivityRecords
      */
@@ -2344,7 +2399,7 @@ export class ObjectAuditServiceApi {
      * Summary: Get activity records Description: Return activity records that match the arguments passed in the request.  Multiple values can be passed to the (UID, Context, ActionTaken, PerformedBy) fields by supplying a  comma-separated list to the corresponding fields in the request.  For instance to check for  multiple Contexts set the field to \"op1, op2, op3\".
      * @param param the request object
      */
-    public auditServiceGetActivityRecordsWithHttpInfo(param: AuditServiceApiAuditServiceGetActivityRecordsRequest = {}, options?: Configuration): Promise<HttpInfo<Auditv3GetActivityRecordsResponse>> {
+    public auditServiceGetActivityRecordsWithHttpInfo(param: AuditServiceApiAuditServiceGetActivityRecordsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Auditv3GetActivityRecordsResponse>> {
         return this.api.auditServiceGetActivityRecordsWithHttpInfo(param.startTime, param.endTime, param.uid, param.actionTaken, param.context, param.changesMade, param.performedBy, param.contextDescription, param.query, param.offset, param.limit, param.filter,  options).toPromise();
     }
 
@@ -2352,7 +2407,7 @@ export class ObjectAuditServiceApi {
      * Summary: Get activity records Description: Return activity records that match the arguments passed in the request.  Multiple values can be passed to the (UID, Context, ActionTaken, PerformedBy) fields by supplying a  comma-separated list to the corresponding fields in the request.  For instance to check for  multiple Contexts set the field to \"op1, op2, op3\".
      * @param param the request object
      */
-    public auditServiceGetActivityRecords(param: AuditServiceApiAuditServiceGetActivityRecordsRequest = {}, options?: Configuration): Promise<Auditv3GetActivityRecordsResponse> {
+    public auditServiceGetActivityRecords(param: AuditServiceApiAuditServiceGetActivityRecordsRequest = {}, options?: ConfigurationOptions): Promise<Auditv3GetActivityRecordsResponse> {
         return this.api.auditServiceGetActivityRecords(param.startTime, param.endTime, param.uid, param.actionTaken, param.context, param.changesMade, param.performedBy, param.contextDescription, param.query, param.offset, param.limit, param.filter,  options).toPromise();
     }
 
@@ -2360,7 +2415,7 @@ export class ObjectAuditServiceApi {
      * Summary: Put download activity record Description: Create an activity log record with the arguments passed in the request.
      * @param param the request object
      */
-    public auditServicePutDownloadActivityRecordWithHttpInfo(param: AuditServiceApiAuditServicePutDownloadActivityRecordRequest, options?: Configuration): Promise<HttpInfo<Auditv3PutActivityRecordResponse>> {
+    public auditServicePutDownloadActivityRecordWithHttpInfo(param: AuditServiceApiAuditServicePutDownloadActivityRecordRequest, options?: ConfigurationOptions): Promise<HttpInfo<Auditv3PutActivityRecordResponse>> {
         return this.api.auditServicePutDownloadActivityRecordWithHttpInfo(param.auditv3PutActivityRecordRequest,  options).toPromise();
     }
 
@@ -2368,7 +2423,7 @@ export class ObjectAuditServiceApi {
      * Summary: Put download activity record Description: Create an activity log record with the arguments passed in the request.
      * @param param the request object
      */
-    public auditServicePutDownloadActivityRecord(param: AuditServiceApiAuditServicePutDownloadActivityRecordRequest, options?: Configuration): Promise<Auditv3PutActivityRecordResponse> {
+    public auditServicePutDownloadActivityRecord(param: AuditServiceApiAuditServicePutDownloadActivityRecordRequest, options?: ConfigurationOptions): Promise<Auditv3PutActivityRecordResponse> {
         return this.api.auditServicePutDownloadActivityRecord(param.auditv3PutActivityRecordRequest,  options).toPromise();
     }
 
@@ -2389,6 +2444,7 @@ export interface AuthServerServiceApiAuthServerServiceCreateOauthClientRequest {
 export interface AuthServerServiceApiAuthServerServiceDeleteOauthClientRequest {
     /**
      * ClientID of registered OAuth.
+     * Defaults to: undefined
      * @type string
      * @memberof AuthServerServiceApiauthServerServiceDeleteOauthClient
      */
@@ -2401,6 +2457,7 @@ export interface AuthServerServiceApiAuthServerServiceGetAccessTokenRequest {
 export interface AuthServerServiceApiAuthServerServiceGetOauthClientRequest {
     /**
      * ClientID of registered OAuth.
+     * Defaults to: undefined
      * @type string
      * @memberof AuthServerServiceApiauthServerServiceGetOauthClient
      */
@@ -2424,7 +2481,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: Create Oauth client Description: Create/register new Oauth client.
      * @param param the request object
      */
-    public authServerServiceCreateOauthClientWithHttpInfo(param: AuthServerServiceApiAuthServerServiceCreateOauthClientRequest, options?: Configuration): Promise<HttpInfo<AuthserverCreateOauthClientResponse>> {
+    public authServerServiceCreateOauthClientWithHttpInfo(param: AuthServerServiceApiAuthServerServiceCreateOauthClientRequest, options?: ConfigurationOptions): Promise<HttpInfo<AuthserverCreateOauthClientResponse>> {
         return this.api.authServerServiceCreateOauthClientWithHttpInfo(param.authserverCreateOauthClientRequest,  options).toPromise();
     }
 
@@ -2432,7 +2489,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: Create Oauth client Description: Create/register new Oauth client.
      * @param param the request object
      */
-    public authServerServiceCreateOauthClient(param: AuthServerServiceApiAuthServerServiceCreateOauthClientRequest, options?: Configuration): Promise<AuthserverCreateOauthClientResponse> {
+    public authServerServiceCreateOauthClient(param: AuthServerServiceApiAuthServerServiceCreateOauthClientRequest, options?: ConfigurationOptions): Promise<AuthserverCreateOauthClientResponse> {
         return this.api.authServerServiceCreateOauthClient(param.authserverCreateOauthClientRequest,  options).toPromise();
     }
 
@@ -2440,7 +2497,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: Delete Oauth client Description: Delete registered Oauth client by clientId.
      * @param param the request object
      */
-    public authServerServiceDeleteOauthClientWithHttpInfo(param: AuthServerServiceApiAuthServerServiceDeleteOauthClientRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public authServerServiceDeleteOauthClientWithHttpInfo(param: AuthServerServiceApiAuthServerServiceDeleteOauthClientRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.authServerServiceDeleteOauthClientWithHttpInfo(param.clientId,  options).toPromise();
     }
 
@@ -2448,7 +2505,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: Delete Oauth client Description: Delete registered Oauth client by clientId.
      * @param param the request object
      */
-    public authServerServiceDeleteOauthClient(param: AuthServerServiceApiAuthServerServiceDeleteOauthClientRequest, options?: Configuration): Promise<any> {
+    public authServerServiceDeleteOauthClient(param: AuthServerServiceApiAuthServerServiceDeleteOauthClientRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.authServerServiceDeleteOauthClient(param.clientId,  options).toPromise();
     }
 
@@ -2456,7 +2513,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: Get access token Description: Get access token from passed clientId and secret.
      * @param param the request object
      */
-    public authServerServiceGetAccessTokenWithHttpInfo(param: AuthServerServiceApiAuthServerServiceGetAccessTokenRequest = {}, options?: Configuration): Promise<HttpInfo<AuthserverGetAccessTokenResponse>> {
+    public authServerServiceGetAccessTokenWithHttpInfo(param: AuthServerServiceApiAuthServerServiceGetAccessTokenRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<AuthserverGetAccessTokenResponse>> {
         return this.api.authServerServiceGetAccessTokenWithHttpInfo( options).toPromise();
     }
 
@@ -2464,7 +2521,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: Get access token Description: Get access token from passed clientId and secret.
      * @param param the request object
      */
-    public authServerServiceGetAccessToken(param: AuthServerServiceApiAuthServerServiceGetAccessTokenRequest = {}, options?: Configuration): Promise<AuthserverGetAccessTokenResponse> {
+    public authServerServiceGetAccessToken(param: AuthServerServiceApiAuthServerServiceGetAccessTokenRequest = {}, options?: ConfigurationOptions): Promise<AuthserverGetAccessTokenResponse> {
         return this.api.authServerServiceGetAccessToken( options).toPromise();
     }
 
@@ -2472,7 +2529,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: Get Oauth client Description: Get registered Oauth client by clientId.
      * @param param the request object
      */
-    public authServerServiceGetOauthClientWithHttpInfo(param: AuthServerServiceApiAuthServerServiceGetOauthClientRequest, options?: Configuration): Promise<HttpInfo<AuthserverGetOauthClientResponse>> {
+    public authServerServiceGetOauthClientWithHttpInfo(param: AuthServerServiceApiAuthServerServiceGetOauthClientRequest, options?: ConfigurationOptions): Promise<HttpInfo<AuthserverGetOauthClientResponse>> {
         return this.api.authServerServiceGetOauthClientWithHttpInfo(param.clientId,  options).toPromise();
     }
 
@@ -2480,7 +2537,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: Get Oauth client Description: Get registered Oauth client by clientId.
      * @param param the request object
      */
-    public authServerServiceGetOauthClient(param: AuthServerServiceApiAuthServerServiceGetOauthClientRequest, options?: Configuration): Promise<AuthserverGetOauthClientResponse> {
+    public authServerServiceGetOauthClient(param: AuthServerServiceApiAuthServerServiceGetOauthClientRequest, options?: ConfigurationOptions): Promise<AuthserverGetOauthClientResponse> {
         return this.api.authServerServiceGetOauthClient(param.clientId,  options).toPromise();
     }
 
@@ -2488,7 +2545,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: Get user Description: Get user.
      * @param param the request object
      */
-    public authServerServiceGetUserWithHttpInfo(param: AuthServerServiceApiAuthServerServiceGetUserRequest = {}, options?: Configuration): Promise<HttpInfo<AuthserverGetUserResponse>> {
+    public authServerServiceGetUserWithHttpInfo(param: AuthServerServiceApiAuthServerServiceGetUserRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<AuthserverGetUserResponse>> {
         return this.api.authServerServiceGetUserWithHttpInfo( options).toPromise();
     }
 
@@ -2496,7 +2553,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: Get user Description: Get user.
      * @param param the request object
      */
-    public authServerServiceGetUser(param: AuthServerServiceApiAuthServerServiceGetUserRequest = {}, options?: Configuration): Promise<AuthserverGetUserResponse> {
+    public authServerServiceGetUser(param: AuthServerServiceApiAuthServerServiceGetUserRequest = {}, options?: ConfigurationOptions): Promise<AuthserverGetUserResponse> {
         return this.api.authServerServiceGetUser( options).toPromise();
     }
 
@@ -2504,7 +2561,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: List Oauth client Description: List all registered Oauth client.
      * @param param the request object
      */
-    public authServerServiceListOauthClientWithHttpInfo(param: AuthServerServiceApiAuthServerServiceListOauthClientRequest = {}, options?: Configuration): Promise<HttpInfo<AuthserverListOauthClientResponse>> {
+    public authServerServiceListOauthClientWithHttpInfo(param: AuthServerServiceApiAuthServerServiceListOauthClientRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<AuthserverListOauthClientResponse>> {
         return this.api.authServerServiceListOauthClientWithHttpInfo( options).toPromise();
     }
 
@@ -2512,7 +2569,7 @@ export class ObjectAuthServerServiceApi {
      * Summary: List Oauth client Description: List all registered Oauth client.
      * @param param the request object
      */
-    public authServerServiceListOauthClient(param: AuthServerServiceApiAuthServerServiceListOauthClientRequest = {}, options?: Configuration): Promise<AuthserverListOauthClientResponse> {
+    public authServerServiceListOauthClient(param: AuthServerServiceApiAuthServerServiceListOauthClientRequest = {}, options?: ConfigurationOptions): Promise<AuthserverListOauthClientResponse> {
         return this.api.authServerServiceListOauthClient( options).toPromise();
     }
 
@@ -2548,6 +2605,7 @@ export interface CloudAccountsApiGenerateAtlassianJiraAuthUrlRequest {
 export interface CloudAccountsApiGenerateAzureAuthUrlRequest {
     /**
      * Tenant Id of the new Azure account, GUID format.
+     * Defaults to: undefined
      * @type string
      * @memberof CloudAccountsApigenerateAzureAuthUrl
      */
@@ -2575,12 +2633,14 @@ export interface CloudAccountsApiGenerateSnowflakeAuthUrlRequest {
 export interface CloudAccountsApiGetAnalyzedRegionStatusRequest {
     /**
      * The cloud provider for the cloud account
+     * Defaults to: undefined
      * @type CloudServiceProvider
      * @memberof CloudAccountsApigetAnalyzedRegionStatus
      */
     cloudProvider: CloudServiceProvider
     /**
      * The region code
+     * Defaults to: undefined
      * @type string
      * @memberof CloudAccountsApigetAnalyzedRegionStatus
      */
@@ -2593,12 +2653,14 @@ export interface CloudAccountsApiGetAzureAdminConsentStatusRequest {
 export interface CloudAccountsApiGetCloudAccountInstallationStatusRequest {
     /**
      * The cloud provider of the cloud account
+     * Defaults to: undefined
      * @type CloudServiceProvider
      * @memberof CloudAccountsApigetCloudAccountInstallationStatus
      */
     cloudProvider: CloudServiceProvider
     /**
      * The cloud account identifier
+     * Defaults to: undefined
      * @type string
      * @memberof CloudAccountsApigetCloudAccountInstallationStatus
      */
@@ -2617,6 +2679,7 @@ export interface CloudAccountsApiGetDatabaseMetadataRequest {
 export interface CloudAccountsApiGetRefreshTokenExpiryRequest {
     /**
      * The ID of the provider
+     * Defaults to: undefined
      * @type string
      * @memberof CloudAccountsApigetRefreshTokenExpiry
      */
@@ -2629,12 +2692,14 @@ export interface CloudAccountsApiListLinkedAccountsRequest {
 export interface CloudAccountsApiRemoveAccountsRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof CloudAccountsApiremoveAccounts
      */
     accountIds: Array<string>
     /**
      * 
+     * Defaults to: undefined
      * @type ServiceProvider
      * @memberof CloudAccountsApiremoveAccounts
      */
@@ -2644,12 +2709,14 @@ export interface CloudAccountsApiRemoveAccountsRequest {
 export interface CloudAccountsApiRemoveAccountsInstructionsRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof CloudAccountsApiremoveAccountsInstructions
      */
     accountIds: Array<string>
     /**
      * 
+     * Defaults to: undefined
      * @type ServiceProvider
      * @memberof CloudAccountsApiremoveAccountsInstructions
      */
@@ -2719,7 +2786,7 @@ export class ObjectCloudAccountsApi {
      * Add a new region for data classification
      * @param param the request object
      */
-    public addAnalyzedRegionWithHttpInfo(param: CloudAccountsApiAddAnalyzedRegionRequest, options?: Configuration): Promise<HttpInfo<AddAnalyzedRegion200Response>> {
+    public addAnalyzedRegionWithHttpInfo(param: CloudAccountsApiAddAnalyzedRegionRequest, options?: ConfigurationOptions): Promise<HttpInfo<AddAnalyzedRegion200Response>> {
         return this.api.addAnalyzedRegionWithHttpInfo(param.addAnalyzedRegionRequest,  options).toPromise();
     }
 
@@ -2728,7 +2795,7 @@ export class ObjectCloudAccountsApi {
      * Add a new region for data classification
      * @param param the request object
      */
-    public addAnalyzedRegion(param: CloudAccountsApiAddAnalyzedRegionRequest, options?: Configuration): Promise<AddAnalyzedRegion200Response> {
+    public addAnalyzedRegion(param: CloudAccountsApiAddAnalyzedRegionRequest, options?: ConfigurationOptions): Promise<AddAnalyzedRegion200Response> {
         return this.api.addAnalyzedRegion(param.addAnalyzedRegionRequest,  options).toPromise();
     }
 
@@ -2737,7 +2804,7 @@ export class ObjectCloudAccountsApi {
      * Add cloud account connections to DSPM
      * @param param the request object
      */
-    public addCloudAccountsWithHttpInfo(param: CloudAccountsApiAddCloudAccountsRequest, options?: Configuration): Promise<HttpInfo<AddCloudAccounts200Response>> {
+    public addCloudAccountsWithHttpInfo(param: CloudAccountsApiAddCloudAccountsRequest, options?: ConfigurationOptions): Promise<HttpInfo<AddCloudAccounts200Response>> {
         return this.api.addCloudAccountsWithHttpInfo(param.addCloudAccountsRequest,  options).toPromise();
     }
 
@@ -2746,7 +2813,7 @@ export class ObjectCloudAccountsApi {
      * Add cloud account connections to DSPM
      * @param param the request object
      */
-    public addCloudAccounts(param: CloudAccountsApiAddCloudAccountsRequest, options?: Configuration): Promise<AddCloudAccounts200Response> {
+    public addCloudAccounts(param: CloudAccountsApiAddCloudAccountsRequest, options?: ConfigurationOptions): Promise<AddCloudAccounts200Response> {
         return this.api.addCloudAccounts(param.addCloudAccountsRequest,  options).toPromise();
     }
 
@@ -2755,7 +2822,7 @@ export class ObjectCloudAccountsApi {
      * Generate a Confluence authentication URL
      * @param param the request object
      */
-    public generateAtlassianConfluenceAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateAtlassianConfluenceAuthUrlRequest = {}, options?: Configuration): Promise<HttpInfo<AuthUrl>> {
+    public generateAtlassianConfluenceAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateAtlassianConfluenceAuthUrlRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<AuthUrl>> {
         return this.api.generateAtlassianConfluenceAuthUrlWithHttpInfo( options).toPromise();
     }
 
@@ -2764,7 +2831,7 @@ export class ObjectCloudAccountsApi {
      * Generate a Confluence authentication URL
      * @param param the request object
      */
-    public generateAtlassianConfluenceAuthUrl(param: CloudAccountsApiGenerateAtlassianConfluenceAuthUrlRequest = {}, options?: Configuration): Promise<AuthUrl> {
+    public generateAtlassianConfluenceAuthUrl(param: CloudAccountsApiGenerateAtlassianConfluenceAuthUrlRequest = {}, options?: ConfigurationOptions): Promise<AuthUrl> {
         return this.api.generateAtlassianConfluenceAuthUrl( options).toPromise();
     }
 
@@ -2773,7 +2840,7 @@ export class ObjectCloudAccountsApi {
      * Generate a JIRA authentication URL
      * @param param the request object
      */
-    public generateAtlassianJiraAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateAtlassianJiraAuthUrlRequest = {}, options?: Configuration): Promise<HttpInfo<AuthUrl>> {
+    public generateAtlassianJiraAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateAtlassianJiraAuthUrlRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<AuthUrl>> {
         return this.api.generateAtlassianJiraAuthUrlWithHttpInfo( options).toPromise();
     }
 
@@ -2782,7 +2849,7 @@ export class ObjectCloudAccountsApi {
      * Generate a JIRA authentication URL
      * @param param the request object
      */
-    public generateAtlassianJiraAuthUrl(param: CloudAccountsApiGenerateAtlassianJiraAuthUrlRequest = {}, options?: Configuration): Promise<AuthUrl> {
+    public generateAtlassianJiraAuthUrl(param: CloudAccountsApiGenerateAtlassianJiraAuthUrlRequest = {}, options?: ConfigurationOptions): Promise<AuthUrl> {
         return this.api.generateAtlassianJiraAuthUrl( options).toPromise();
     }
 
@@ -2791,7 +2858,7 @@ export class ObjectCloudAccountsApi {
      * Generate azure authorization url
      * @param param the request object
      */
-    public generateAzureAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateAzureAuthUrlRequest = {}, options?: Configuration): Promise<HttpInfo<AuthUrl>> {
+    public generateAzureAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateAzureAuthUrlRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<AuthUrl>> {
         return this.api.generateAzureAuthUrlWithHttpInfo(param.tenantId,  options).toPromise();
     }
 
@@ -2800,7 +2867,7 @@ export class ObjectCloudAccountsApi {
      * Generate azure authorization url
      * @param param the request object
      */
-    public generateAzureAuthUrl(param: CloudAccountsApiGenerateAzureAuthUrlRequest = {}, options?: Configuration): Promise<AuthUrl> {
+    public generateAzureAuthUrl(param: CloudAccountsApiGenerateAzureAuthUrlRequest = {}, options?: ConfigurationOptions): Promise<AuthUrl> {
         return this.api.generateAzureAuthUrl(param.tenantId,  options).toPromise();
     }
 
@@ -2809,7 +2876,7 @@ export class ObjectCloudAccountsApi {
      * Generate a Microsoft 365 consent URL
      * @param param the request object
      */
-    public generateOffice365AuthUrlWithHttpInfo(param: CloudAccountsApiGenerateOffice365AuthUrlRequest = {}, options?: Configuration): Promise<HttpInfo<AuthUrl>> {
+    public generateOffice365AuthUrlWithHttpInfo(param: CloudAccountsApiGenerateOffice365AuthUrlRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<AuthUrl>> {
         return this.api.generateOffice365AuthUrlWithHttpInfo( options).toPromise();
     }
 
@@ -2818,7 +2885,7 @@ export class ObjectCloudAccountsApi {
      * Generate a Microsoft 365 consent URL
      * @param param the request object
      */
-    public generateOffice365AuthUrl(param: CloudAccountsApiGenerateOffice365AuthUrlRequest = {}, options?: Configuration): Promise<AuthUrl> {
+    public generateOffice365AuthUrl(param: CloudAccountsApiGenerateOffice365AuthUrlRequest = {}, options?: ConfigurationOptions): Promise<AuthUrl> {
         return this.api.generateOffice365AuthUrl( options).toPromise();
     }
 
@@ -2827,7 +2894,7 @@ export class ObjectCloudAccountsApi {
      * Generate a Salesforce consent URL
      * @param param the request object
      */
-    public generateSalesforceAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateSalesforceAuthUrlRequest = {}, options?: Configuration): Promise<HttpInfo<AuthUrl>> {
+    public generateSalesforceAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateSalesforceAuthUrlRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<AuthUrl>> {
         return this.api.generateSalesforceAuthUrlWithHttpInfo( options).toPromise();
     }
 
@@ -2836,7 +2903,7 @@ export class ObjectCloudAccountsApi {
      * Generate a Salesforce consent URL
      * @param param the request object
      */
-    public generateSalesforceAuthUrl(param: CloudAccountsApiGenerateSalesforceAuthUrlRequest = {}, options?: Configuration): Promise<AuthUrl> {
+    public generateSalesforceAuthUrl(param: CloudAccountsApiGenerateSalesforceAuthUrlRequest = {}, options?: ConfigurationOptions): Promise<AuthUrl> {
         return this.api.generateSalesforceAuthUrl( options).toPromise();
     }
 
@@ -2845,7 +2912,7 @@ export class ObjectCloudAccountsApi {
      * Generate a Slack authentication URL
      * @param param the request object
      */
-    public generateSlackAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateSlackAuthUrlRequest = {}, options?: Configuration): Promise<HttpInfo<AuthUrl>> {
+    public generateSlackAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateSlackAuthUrlRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<AuthUrl>> {
         return this.api.generateSlackAuthUrlWithHttpInfo( options).toPromise();
     }
 
@@ -2854,7 +2921,7 @@ export class ObjectCloudAccountsApi {
      * Generate a Slack authentication URL
      * @param param the request object
      */
-    public generateSlackAuthUrl(param: CloudAccountsApiGenerateSlackAuthUrlRequest = {}, options?: Configuration): Promise<AuthUrl> {
+    public generateSlackAuthUrl(param: CloudAccountsApiGenerateSlackAuthUrlRequest = {}, options?: ConfigurationOptions): Promise<AuthUrl> {
         return this.api.generateSlackAuthUrl( options).toPromise();
     }
 
@@ -2863,7 +2930,7 @@ export class ObjectCloudAccountsApi {
      * Validate and Generate a Snowflake OAuth URL
      * @param param the request object
      */
-    public generateSnowflakeAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateSnowflakeAuthUrlRequest, options?: Configuration): Promise<HttpInfo<AuthUrl>> {
+    public generateSnowflakeAuthUrlWithHttpInfo(param: CloudAccountsApiGenerateSnowflakeAuthUrlRequest, options?: ConfigurationOptions): Promise<HttpInfo<AuthUrl>> {
         return this.api.generateSnowflakeAuthUrlWithHttpInfo(param.clientInfo,  options).toPromise();
     }
 
@@ -2872,7 +2939,7 @@ export class ObjectCloudAccountsApi {
      * Validate and Generate a Snowflake OAuth URL
      * @param param the request object
      */
-    public generateSnowflakeAuthUrl(param: CloudAccountsApiGenerateSnowflakeAuthUrlRequest, options?: Configuration): Promise<AuthUrl> {
+    public generateSnowflakeAuthUrl(param: CloudAccountsApiGenerateSnowflakeAuthUrlRequest, options?: ConfigurationOptions): Promise<AuthUrl> {
         return this.api.generateSnowflakeAuthUrl(param.clientInfo,  options).toPromise();
     }
 
@@ -2881,7 +2948,7 @@ export class ObjectCloudAccountsApi {
      * Get the status of analyzer installation for a region
      * @param param the request object
      */
-    public getAnalyzedRegionStatusWithHttpInfo(param: CloudAccountsApiGetAnalyzedRegionStatusRequest, options?: Configuration): Promise<HttpInfo<GetAnalyzedRegionStatus200Response>> {
+    public getAnalyzedRegionStatusWithHttpInfo(param: CloudAccountsApiGetAnalyzedRegionStatusRequest, options?: ConfigurationOptions): Promise<HttpInfo<GetAnalyzedRegionStatus200Response>> {
         return this.api.getAnalyzedRegionStatusWithHttpInfo(param.cloudProvider, param.region,  options).toPromise();
     }
 
@@ -2890,7 +2957,7 @@ export class ObjectCloudAccountsApi {
      * Get the status of analyzer installation for a region
      * @param param the request object
      */
-    public getAnalyzedRegionStatus(param: CloudAccountsApiGetAnalyzedRegionStatusRequest, options?: Configuration): Promise<GetAnalyzedRegionStatus200Response> {
+    public getAnalyzedRegionStatus(param: CloudAccountsApiGetAnalyzedRegionStatusRequest, options?: ConfigurationOptions): Promise<GetAnalyzedRegionStatus200Response> {
         return this.api.getAnalyzedRegionStatus(param.cloudProvider, param.region,  options).toPromise();
     }
 
@@ -2899,7 +2966,7 @@ export class ObjectCloudAccountsApi {
      * Get Azure admin consent status
      * @param param the request object
      */
-    public getAzureAdminConsentStatusWithHttpInfo(param: CloudAccountsApiGetAzureAdminConsentStatusRequest = {}, options?: Configuration): Promise<HttpInfo<boolean>> {
+    public getAzureAdminConsentStatusWithHttpInfo(param: CloudAccountsApiGetAzureAdminConsentStatusRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<boolean>> {
         return this.api.getAzureAdminConsentStatusWithHttpInfo( options).toPromise();
     }
 
@@ -2908,7 +2975,7 @@ export class ObjectCloudAccountsApi {
      * Get Azure admin consent status
      * @param param the request object
      */
-    public getAzureAdminConsentStatus(param: CloudAccountsApiGetAzureAdminConsentStatusRequest = {}, options?: Configuration): Promise<boolean> {
+    public getAzureAdminConsentStatus(param: CloudAccountsApiGetAzureAdminConsentStatusRequest = {}, options?: ConfigurationOptions): Promise<boolean> {
         return this.api.getAzureAdminConsentStatus( options).toPromise();
     }
 
@@ -2917,7 +2984,7 @@ export class ObjectCloudAccountsApi {
      * Get the installation status of a cloud account
      * @param param the request object
      */
-    public getCloudAccountInstallationStatusWithHttpInfo(param: CloudAccountsApiGetCloudAccountInstallationStatusRequest, options?: Configuration): Promise<HttpInfo<CloudAccountInstallationStatus>> {
+    public getCloudAccountInstallationStatusWithHttpInfo(param: CloudAccountsApiGetCloudAccountInstallationStatusRequest, options?: ConfigurationOptions): Promise<HttpInfo<CloudAccountInstallationStatus>> {
         return this.api.getCloudAccountInstallationStatusWithHttpInfo(param.cloudProvider, param.cloudAccountId,  options).toPromise();
     }
 
@@ -2926,7 +2993,7 @@ export class ObjectCloudAccountsApi {
      * Get the installation status of a cloud account
      * @param param the request object
      */
-    public getCloudAccountInstallationStatus(param: CloudAccountsApiGetCloudAccountInstallationStatusRequest, options?: Configuration): Promise<CloudAccountInstallationStatus> {
+    public getCloudAccountInstallationStatus(param: CloudAccountsApiGetCloudAccountInstallationStatusRequest, options?: ConfigurationOptions): Promise<CloudAccountInstallationStatus> {
         return this.api.getCloudAccountInstallationStatus(param.cloudProvider, param.cloudAccountId,  options).toPromise();
     }
 
@@ -2935,7 +3002,7 @@ export class ObjectCloudAccountsApi {
      * Get the metadata details of snowflake database.
      * @param param the request object
      */
-    public getDatabaseMetadataWithHttpInfo(param: CloudAccountsApiGetDatabaseMetadataRequest, options?: Configuration): Promise<HttpInfo<DBMetadataInfo>> {
+    public getDatabaseMetadataWithHttpInfo(param: CloudAccountsApiGetDatabaseMetadataRequest, options?: ConfigurationOptions): Promise<HttpInfo<DBMetadataInfo>> {
         return this.api.getDatabaseMetadataWithHttpInfo(param.dbInfo,  options).toPromise();
     }
 
@@ -2944,7 +3011,7 @@ export class ObjectCloudAccountsApi {
      * Get the metadata details of snowflake database.
      * @param param the request object
      */
-    public getDatabaseMetadata(param: CloudAccountsApiGetDatabaseMetadataRequest, options?: Configuration): Promise<DBMetadataInfo> {
+    public getDatabaseMetadata(param: CloudAccountsApiGetDatabaseMetadataRequest, options?: ConfigurationOptions): Promise<DBMetadataInfo> {
         return this.api.getDatabaseMetadata(param.dbInfo,  options).toPromise();
     }
 
@@ -2953,7 +3020,7 @@ export class ObjectCloudAccountsApi {
      * Get Snowflake Refresh Token Expiry date
      * @param param the request object
      */
-    public getRefreshTokenExpiryWithHttpInfo(param: CloudAccountsApiGetRefreshTokenExpiryRequest, options?: Configuration): Promise<HttpInfo<TokenExpiryInfo>> {
+    public getRefreshTokenExpiryWithHttpInfo(param: CloudAccountsApiGetRefreshTokenExpiryRequest, options?: ConfigurationOptions): Promise<HttpInfo<TokenExpiryInfo>> {
         return this.api.getRefreshTokenExpiryWithHttpInfo(param.providerId,  options).toPromise();
     }
 
@@ -2962,7 +3029,7 @@ export class ObjectCloudAccountsApi {
      * Get Snowflake Refresh Token Expiry date
      * @param param the request object
      */
-    public getRefreshTokenExpiry(param: CloudAccountsApiGetRefreshTokenExpiryRequest, options?: Configuration): Promise<TokenExpiryInfo> {
+    public getRefreshTokenExpiry(param: CloudAccountsApiGetRefreshTokenExpiryRequest, options?: ConfigurationOptions): Promise<TokenExpiryInfo> {
         return this.api.getRefreshTokenExpiry(param.providerId,  options).toPromise();
     }
 
@@ -2971,7 +3038,7 @@ export class ObjectCloudAccountsApi {
      * List cloud accounts connected to DSPM
      * @param param the request object
      */
-    public listLinkedAccountsWithHttpInfo(param: CloudAccountsApiListLinkedAccountsRequest = {}, options?: Configuration): Promise<HttpInfo<Array<LinkedAccounts>>> {
+    public listLinkedAccountsWithHttpInfo(param: CloudAccountsApiListLinkedAccountsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Array<LinkedAccounts>>> {
         return this.api.listLinkedAccountsWithHttpInfo( options).toPromise();
     }
 
@@ -2980,7 +3047,7 @@ export class ObjectCloudAccountsApi {
      * List cloud accounts connected to DSPM
      * @param param the request object
      */
-    public listLinkedAccounts(param: CloudAccountsApiListLinkedAccountsRequest = {}, options?: Configuration): Promise<Array<LinkedAccounts>> {
+    public listLinkedAccounts(param: CloudAccountsApiListLinkedAccountsRequest = {}, options?: ConfigurationOptions): Promise<Array<LinkedAccounts>> {
         return this.api.listLinkedAccounts( options).toPromise();
     }
 
@@ -2989,7 +3056,7 @@ export class ObjectCloudAccountsApi {
      * Post cloud account ID connections to be removed
      * @param param the request object
      */
-    public removeAccountsWithHttpInfo(param: CloudAccountsApiRemoveAccountsRequest, options?: Configuration): Promise<HttpInfo<void>> {
+    public removeAccountsWithHttpInfo(param: CloudAccountsApiRemoveAccountsRequest, options?: ConfigurationOptions): Promise<HttpInfo<void>> {
         return this.api.removeAccountsWithHttpInfo(param.accountIds, param.serviceProvider,  options).toPromise();
     }
 
@@ -2998,7 +3065,7 @@ export class ObjectCloudAccountsApi {
      * Post cloud account ID connections to be removed
      * @param param the request object
      */
-    public removeAccounts(param: CloudAccountsApiRemoveAccountsRequest, options?: Configuration): Promise<void> {
+    public removeAccounts(param: CloudAccountsApiRemoveAccountsRequest, options?: ConfigurationOptions): Promise<void> {
         return this.api.removeAccounts(param.accountIds, param.serviceProvider,  options).toPromise();
     }
 
@@ -3007,7 +3074,7 @@ export class ObjectCloudAccountsApi {
      * Post cloud account IDs and get instructions to remove the accounts
      * @param param the request object
      */
-    public removeAccountsInstructionsWithHttpInfo(param: CloudAccountsApiRemoveAccountsInstructionsRequest, options?: Configuration): Promise<HttpInfo<RemoveAccountsInstructions200Response>> {
+    public removeAccountsInstructionsWithHttpInfo(param: CloudAccountsApiRemoveAccountsInstructionsRequest, options?: ConfigurationOptions): Promise<HttpInfo<RemoveAccountsInstructions200Response>> {
         return this.api.removeAccountsInstructionsWithHttpInfo(param.accountIds, param.serviceProvider,  options).toPromise();
     }
 
@@ -3016,7 +3083,7 @@ export class ObjectCloudAccountsApi {
      * Post cloud account IDs and get instructions to remove the accounts
      * @param param the request object
      */
-    public removeAccountsInstructions(param: CloudAccountsApiRemoveAccountsInstructionsRequest, options?: Configuration): Promise<RemoveAccountsInstructions200Response> {
+    public removeAccountsInstructions(param: CloudAccountsApiRemoveAccountsInstructionsRequest, options?: ConfigurationOptions): Promise<RemoveAccountsInstructions200Response> {
         return this.api.removeAccountsInstructions(param.accountIds, param.serviceProvider,  options).toPromise();
     }
 
@@ -3025,7 +3092,7 @@ export class ObjectCloudAccountsApi {
      * Get Google Workspace authentication
      * @param param the request object
      */
-    public retrieveServiceAccountIdWithHttpInfo(param: CloudAccountsApiRetrieveServiceAccountIdRequest = {}, options?: Configuration): Promise<HttpInfo<ServiceAccountClientId>> {
+    public retrieveServiceAccountIdWithHttpInfo(param: CloudAccountsApiRetrieveServiceAccountIdRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<ServiceAccountClientId>> {
         return this.api.retrieveServiceAccountIdWithHttpInfo( options).toPromise();
     }
 
@@ -3034,7 +3101,7 @@ export class ObjectCloudAccountsApi {
      * Get Google Workspace authentication
      * @param param the request object
      */
-    public retrieveServiceAccountId(param: CloudAccountsApiRetrieveServiceAccountIdRequest = {}, options?: Configuration): Promise<ServiceAccountClientId> {
+    public retrieveServiceAccountId(param: CloudAccountsApiRetrieveServiceAccountIdRequest = {}, options?: ConfigurationOptions): Promise<ServiceAccountClientId> {
         return this.api.retrieveServiceAccountId( options).toPromise();
     }
 
@@ -3043,7 +3110,7 @@ export class ObjectCloudAccountsApi {
      * Generate Snowflake Integration Script
      * @param param the request object
      */
-    public snowflakeIntegrationScriptWithHttpInfo(param: CloudAccountsApiSnowflakeIntegrationScriptRequest = {}, options?: Configuration): Promise<HttpInfo<Script>> {
+    public snowflakeIntegrationScriptWithHttpInfo(param: CloudAccountsApiSnowflakeIntegrationScriptRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Script>> {
         return this.api.snowflakeIntegrationScriptWithHttpInfo( options).toPromise();
     }
 
@@ -3052,7 +3119,7 @@ export class ObjectCloudAccountsApi {
      * Generate Snowflake Integration Script
      * @param param the request object
      */
-    public snowflakeIntegrationScript(param: CloudAccountsApiSnowflakeIntegrationScriptRequest = {}, options?: Configuration): Promise<Script> {
+    public snowflakeIntegrationScript(param: CloudAccountsApiSnowflakeIntegrationScriptRequest = {}, options?: ConfigurationOptions): Promise<Script> {
         return this.api.snowflakeIntegrationScript( options).toPromise();
     }
 
@@ -3061,7 +3128,7 @@ export class ObjectCloudAccountsApi {
      * Submit email for service account authorization
      * @param param the request object
      */
-    public submitGoogleWorkspaceAdminEmailWithHttpInfo(param: CloudAccountsApiSubmitGoogleWorkspaceAdminEmailRequest, options?: Configuration): Promise<HttpInfo<ServiceAccountInstallationStatus>> {
+    public submitGoogleWorkspaceAdminEmailWithHttpInfo(param: CloudAccountsApiSubmitGoogleWorkspaceAdminEmailRequest, options?: ConfigurationOptions): Promise<HttpInfo<ServiceAccountInstallationStatus>> {
         return this.api.submitGoogleWorkspaceAdminEmailWithHttpInfo(param.submitAdminEmailParams,  options).toPromise();
     }
 
@@ -3070,7 +3137,7 @@ export class ObjectCloudAccountsApi {
      * Submit email for service account authorization
      * @param param the request object
      */
-    public submitGoogleWorkspaceAdminEmail(param: CloudAccountsApiSubmitGoogleWorkspaceAdminEmailRequest, options?: Configuration): Promise<ServiceAccountInstallationStatus> {
+    public submitGoogleWorkspaceAdminEmail(param: CloudAccountsApiSubmitGoogleWorkspaceAdminEmailRequest, options?: ConfigurationOptions): Promise<ServiceAccountInstallationStatus> {
         return this.api.submitGoogleWorkspaceAdminEmail(param.submitAdminEmailParams,  options).toPromise();
     }
 
@@ -3079,7 +3146,7 @@ export class ObjectCloudAccountsApi {
      * Submit Microsoft 365 customer information
      * @param param the request object
      */
-    public submitOffice365TenantInfoWithHttpInfo(param: CloudAccountsApiSubmitOffice365TenantInfoRequest, options?: Configuration): Promise<HttpInfo<Office365TenantInfo>> {
+    public submitOffice365TenantInfoWithHttpInfo(param: CloudAccountsApiSubmitOffice365TenantInfoRequest, options?: ConfigurationOptions): Promise<HttpInfo<Office365TenantInfo>> {
         return this.api.submitOffice365TenantInfoWithHttpInfo(param.tenantInfo,  options).toPromise();
     }
 
@@ -3088,7 +3155,7 @@ export class ObjectCloudAccountsApi {
      * Submit Microsoft 365 customer information
      * @param param the request object
      */
-    public submitOffice365TenantInfo(param: CloudAccountsApiSubmitOffice365TenantInfoRequest, options?: Configuration): Promise<Office365TenantInfo> {
+    public submitOffice365TenantInfo(param: CloudAccountsApiSubmitOffice365TenantInfoRequest, options?: ConfigurationOptions): Promise<Office365TenantInfo> {
         return this.api.submitOffice365TenantInfo(param.tenantInfo,  options).toPromise();
     }
 
@@ -3097,7 +3164,7 @@ export class ObjectCloudAccountsApi {
      * Submit Salesforce customer information
      * @param param the request object
      */
-    public submitSalesforceAuthCodeWithHttpInfo(param: CloudAccountsApiSubmitSalesforceAuthCodeRequest, options?: Configuration): Promise<HttpInfo<void>> {
+    public submitSalesforceAuthCodeWithHttpInfo(param: CloudAccountsApiSubmitSalesforceAuthCodeRequest, options?: ConfigurationOptions): Promise<HttpInfo<void>> {
         return this.api.submitSalesforceAuthCodeWithHttpInfo(param.authCode,  options).toPromise();
     }
 
@@ -3106,7 +3173,7 @@ export class ObjectCloudAccountsApi {
      * Submit Salesforce customer information
      * @param param the request object
      */
-    public submitSalesforceAuthCode(param: CloudAccountsApiSubmitSalesforceAuthCodeRequest, options?: Configuration): Promise<void> {
+    public submitSalesforceAuthCode(param: CloudAccountsApiSubmitSalesforceAuthCodeRequest, options?: ConfigurationOptions): Promise<void> {
         return this.api.submitSalesforceAuthCode(param.authCode,  options).toPromise();
     }
 
@@ -3115,7 +3182,7 @@ export class ObjectCloudAccountsApi {
      * Submit a Slack authentication code
      * @param param the request object
      */
-    public submitSlackAuthCodeWithHttpInfo(param: CloudAccountsApiSubmitSlackAuthCodeRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public submitSlackAuthCodeWithHttpInfo(param: CloudAccountsApiSubmitSlackAuthCodeRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.submitSlackAuthCodeWithHttpInfo(param.submitAuthCode,  options).toPromise();
     }
 
@@ -3124,7 +3191,7 @@ export class ObjectCloudAccountsApi {
      * Submit a Slack authentication code
      * @param param the request object
      */
-    public submitSlackAuthCode(param: CloudAccountsApiSubmitSlackAuthCodeRequest, options?: Configuration): Promise<any> {
+    public submitSlackAuthCode(param: CloudAccountsApiSubmitSlackAuthCodeRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.submitSlackAuthCode(param.submitAuthCode,  options).toPromise();
     }
 
@@ -3133,7 +3200,7 @@ export class ObjectCloudAccountsApi {
      * Submit Snowflake oAuth code
      * @param param the request object
      */
-    public submitSnowflakeAuthCodeWithHttpInfo(param: CloudAccountsApiSubmitSnowflakeAuthCodeRequest, options?: Configuration): Promise<HttpInfo<void>> {
+    public submitSnowflakeAuthCodeWithHttpInfo(param: CloudAccountsApiSubmitSnowflakeAuthCodeRequest, options?: ConfigurationOptions): Promise<HttpInfo<void>> {
         return this.api.submitSnowflakeAuthCodeWithHttpInfo(param.authInfo,  options).toPromise();
     }
 
@@ -3142,7 +3209,7 @@ export class ObjectCloudAccountsApi {
      * Submit Snowflake oAuth code
      * @param param the request object
      */
-    public submitSnowflakeAuthCode(param: CloudAccountsApiSubmitSnowflakeAuthCodeRequest, options?: Configuration): Promise<void> {
+    public submitSnowflakeAuthCode(param: CloudAccountsApiSubmitSnowflakeAuthCodeRequest, options?: ConfigurationOptions): Promise<void> {
         return this.api.submitSnowflakeAuthCode(param.authInfo,  options).toPromise();
     }
 
@@ -3163,12 +3230,14 @@ export interface ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceReq
 export interface ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWorkspacesRequest {
     /**
      * Id to be deleted.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof ComplianceAcceleratorApicomplianceAcceleratorDeleteComplianceWorkspaces
      */
     regulations?: Array<string>
     /**
      * if you want to delete a whole configuration.
+     * Defaults to: undefined
      * @type boolean
      * @memberof ComplianceAcceleratorApicomplianceAcceleratorDeleteComplianceWorkspaces
      */
@@ -3178,6 +3247,7 @@ export interface ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWo
 export interface ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest {
     /**
      * gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards.
+     * Defaults to: undefined
      * @type boolean
      * @memberof ComplianceAcceleratorApicomplianceAcceleratorGetComplianceInfo
      */
@@ -3213,7 +3283,7 @@ export class ObjectComplianceAcceleratorApi {
      * Summary: Create workspace Description: Create a workspace.
      * @param param the request object
      */
-    public complianceAcceleratorCreateWorkspaceWithHttpInfo(param: ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest, options?: Configuration): Promise<HttpInfo<StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse>> {
+    public complianceAcceleratorCreateWorkspaceWithHttpInfo(param: ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest, options?: ConfigurationOptions): Promise<HttpInfo<StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse>> {
         return this.api.complianceAcceleratorCreateWorkspaceWithHttpInfo(param.complianceacceleratorv3CreateWorkspaceRequest,  options).toPromise();
     }
 
@@ -3221,7 +3291,7 @@ export class ObjectComplianceAcceleratorApi {
      * Summary: Create workspace Description: Create a workspace.
      * @param param the request object
      */
-    public complianceAcceleratorCreateWorkspace(param: ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest, options?: Configuration): Promise<StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse> {
+    public complianceAcceleratorCreateWorkspace(param: ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest, options?: ConfigurationOptions): Promise<StreamResultOfComplianceacceleratorv3CreateWorkspaceResponse> {
         return this.api.complianceAcceleratorCreateWorkspace(param.complianceacceleratorv3CreateWorkspaceRequest,  options).toPromise();
     }
 
@@ -3229,7 +3299,7 @@ export class ObjectComplianceAcceleratorApi {
      * Summary: Delete compliance workspaces Description: Delete workspaces.
      * @param param the request object
      */
-    public complianceAcceleratorDeleteComplianceWorkspacesWithHttpInfo(param: ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWorkspacesRequest = {}, options?: Configuration): Promise<HttpInfo<Complianceacceleratorv3DeleteComplianceWorkspacesResponse>> {
+    public complianceAcceleratorDeleteComplianceWorkspacesWithHttpInfo(param: ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWorkspacesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Complianceacceleratorv3DeleteComplianceWorkspacesResponse>> {
         return this.api.complianceAcceleratorDeleteComplianceWorkspacesWithHttpInfo(param.regulations, param.deleteAll,  options).toPromise();
     }
 
@@ -3237,7 +3307,7 @@ export class ObjectComplianceAcceleratorApi {
      * Summary: Delete compliance workspaces Description: Delete workspaces.
      * @param param the request object
      */
-    public complianceAcceleratorDeleteComplianceWorkspaces(param: ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWorkspacesRequest = {}, options?: Configuration): Promise<Complianceacceleratorv3DeleteComplianceWorkspacesResponse> {
+    public complianceAcceleratorDeleteComplianceWorkspaces(param: ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWorkspacesRequest = {}, options?: ConfigurationOptions): Promise<Complianceacceleratorv3DeleteComplianceWorkspacesResponse> {
         return this.api.complianceAcceleratorDeleteComplianceWorkspaces(param.regulations, param.deleteAll,  options).toPromise();
     }
 
@@ -3245,7 +3315,7 @@ export class ObjectComplianceAcceleratorApi {
      * Summary: Get compliance info Description: Return stored compliance data.
      * @param param the request object
      */
-    public complianceAcceleratorGetComplianceInfoWithHttpInfo(param: ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest = {}, options?: Configuration): Promise<HttpInfo<Complianceacceleratorv3GetComplianceInfoResponse>> {
+    public complianceAcceleratorGetComplianceInfoWithHttpInfo(param: ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Complianceacceleratorv3GetComplianceInfoResponse>> {
         return this.api.complianceAcceleratorGetComplianceInfoWithHttpInfo(param.isBrief,  options).toPromise();
     }
 
@@ -3253,7 +3323,7 @@ export class ObjectComplianceAcceleratorApi {
      * Summary: Get compliance info Description: Return stored compliance data.
      * @param param the request object
      */
-    public complianceAcceleratorGetComplianceInfo(param: ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest = {}, options?: Configuration): Promise<Complianceacceleratorv3GetComplianceInfoResponse> {
+    public complianceAcceleratorGetComplianceInfo(param: ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest = {}, options?: ConfigurationOptions): Promise<Complianceacceleratorv3GetComplianceInfoResponse> {
         return this.api.complianceAcceleratorGetComplianceInfo(param.isBrief,  options).toPromise();
     }
 
@@ -3261,7 +3331,7 @@ export class ObjectComplianceAcceleratorApi {
      * HydrateWorkspace - Hydrates specified objects within a workspace
      * @param param the request object
      */
-    public complianceAcceleratorHydrateWorkspaceWithHttpInfo(param: ComplianceAcceleratorApiComplianceAcceleratorHydrateWorkspaceRequest, options?: Configuration): Promise<HttpInfo<Complianceacceleratorv3HydrateComplianceWorkspacesResponse>> {
+    public complianceAcceleratorHydrateWorkspaceWithHttpInfo(param: ComplianceAcceleratorApiComplianceAcceleratorHydrateWorkspaceRequest, options?: ConfigurationOptions): Promise<HttpInfo<Complianceacceleratorv3HydrateComplianceWorkspacesResponse>> {
         return this.api.complianceAcceleratorHydrateWorkspaceWithHttpInfo(param.complianceacceleratorv3HydrateComplianceWorkspacesRequest,  options).toPromise();
     }
 
@@ -3269,7 +3339,7 @@ export class ObjectComplianceAcceleratorApi {
      * HydrateWorkspace - Hydrates specified objects within a workspace
      * @param param the request object
      */
-    public complianceAcceleratorHydrateWorkspace(param: ComplianceAcceleratorApiComplianceAcceleratorHydrateWorkspaceRequest, options?: Configuration): Promise<Complianceacceleratorv3HydrateComplianceWorkspacesResponse> {
+    public complianceAcceleratorHydrateWorkspace(param: ComplianceAcceleratorApiComplianceAcceleratorHydrateWorkspaceRequest, options?: ConfigurationOptions): Promise<Complianceacceleratorv3HydrateComplianceWorkspacesResponse> {
         return this.api.complianceAcceleratorHydrateWorkspace(param.complianceacceleratorv3HydrateComplianceWorkspacesRequest,  options).toPromise();
     }
 
@@ -3277,7 +3347,7 @@ export class ObjectComplianceAcceleratorApi {
      * Summary: Store compliance info Description: Store compliance data.
      * @param param the request object
      */
-    public complianceAcceleratorStoreComplianceInfoWithHttpInfo(param: ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoRequest, options?: Configuration): Promise<HttpInfo<Complianceacceleratorv3StoreComplianceInfoResponse>> {
+    public complianceAcceleratorStoreComplianceInfoWithHttpInfo(param: ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoRequest, options?: ConfigurationOptions): Promise<HttpInfo<Complianceacceleratorv3StoreComplianceInfoResponse>> {
         return this.api.complianceAcceleratorStoreComplianceInfoWithHttpInfo(param.complianceacceleratorv3StoreComplianceInfoRequest,  options).toPromise();
     }
 
@@ -3285,7 +3355,7 @@ export class ObjectComplianceAcceleratorApi {
      * Summary: Store compliance info Description: Store compliance data.
      * @param param the request object
      */
-    public complianceAcceleratorStoreComplianceInfo(param: ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoRequest, options?: Configuration): Promise<Complianceacceleratorv3StoreComplianceInfoResponse> {
+    public complianceAcceleratorStoreComplianceInfo(param: ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoRequest, options?: ConfigurationOptions): Promise<Complianceacceleratorv3StoreComplianceInfoResponse> {
         return this.api.complianceAcceleratorStoreComplianceInfo(param.complianceacceleratorv3StoreComplianceInfoRequest,  options).toPromise();
     }
 
@@ -3333,6 +3403,7 @@ export interface ConnectionsServiceApiConnectionsServiceCreateSettingsRequest {
 export interface ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccountsRequest {
     /**
      * Account id.
+     * Defaults to: undefined
      * @type string
      * @memberof ConnectionsServiceApiconnectionsServiceDeleteConnectionsAccounts
      */
@@ -3342,6 +3413,7 @@ export interface ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccount
 export interface ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigsRequest {
     /**
      * Connection id.
+     * Defaults to: undefined
      * @type string
      * @memberof ConnectionsServiceApiconnectionsServiceDeleteConnectionsConfigs
      */
@@ -3351,6 +3423,7 @@ export interface ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigs
 export interface ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest {
     /**
      * The connection id
+     * Defaults to: undefined
      * @type string
      * @memberof ConnectionsServiceApiconnectionsServiceDeleteConnector
      */
@@ -3360,6 +3433,7 @@ export interface ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest {
 export interface ConnectionsServiceApiConnectionsServiceDeletePluginRequest {
     /**
      * plugin id
+     * Defaults to: undefined
      * @type string
      * @memberof ConnectionsServiceApiconnectionsServiceDeletePlugin
      */
@@ -3369,6 +3443,7 @@ export interface ConnectionsServiceApiConnectionsServiceDeletePluginRequest {
 export interface ConnectionsServiceApiConnectionsServiceGeneratePackageRequest {
     /**
      * id
+     * Defaults to: undefined
      * @type string
      * @memberof ConnectionsServiceApiconnectionsServiceGeneratePackage
      */
@@ -3387,12 +3462,14 @@ export interface ConnectionsServiceApiConnectionsServiceGetBannerStateRequest {
 export interface ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRequest {
     /**
      * Optional: account id.
+     * Defaults to: undefined
      * @type string
      * @memberof ConnectionsServiceApiconnectionsServiceGetConnectionsAccounts
      */
     accountId?: string
     /**
      * Optional: acccount access key.
+     * Defaults to: undefined
      * @type string
      * @memberof ConnectionsServiceApiconnectionsServiceGetConnectionsAccounts
      */
@@ -3402,12 +3479,14 @@ export interface ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRe
 export interface ConnectionsServiceApiConnectionsServiceGetConnectionsConfigsRequest {
     /**
      * The type of connector.
+     * Defaults to: &#39;UNDEFINED_TYPE&#39;
      * @type &#39;UNDEFINED_TYPE&#39; | &#39;AWS&#39; | &#39;AZURE&#39; | &#39;UC&#39; | &#39;STAP&#39;
      * @memberof ConnectionsServiceApiconnectionsServiceGetConnectionsConfigs
      */
     type?: 'UNDEFINED_TYPE' | 'AWS' | 'AZURE' | 'UC' | 'STAP'
     /**
      * Optional: if connection id did not provide then return all connections.
+     * Defaults to: undefined
      * @type string
      * @memberof ConnectionsServiceApiconnectionsServiceGetConnectionsConfigs
      */
@@ -3438,6 +3517,7 @@ export interface ConnectionsServiceApiConnectionsServiceGetHeadersRequest {
 export interface ConnectionsServiceApiConnectionsServiceGetPluginsRequest {
     /**
      * Optional: if no plug-in id is provided, returns list of all plug-ins.
+     * Defaults to: undefined
      * @type string
      * @memberof ConnectionsServiceApiconnectionsServiceGetPlugins
      */
@@ -3504,6 +3584,7 @@ export interface ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest 
 export interface ConnectionsServiceApiConnectionsServiceUpdatePluginRequest {
     /**
      * id
+     * Defaults to: undefined
      * @type string
      * @memberof ConnectionsServiceApiconnectionsServiceUpdatePlugin
      */
@@ -3563,7 +3644,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Create Connections accounts Description: Create Connections acccounts.
      * @param param the request object
      */
-    public connectionsServiceCreateConnectionsAccountsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3CreateConnectionsAccountsResponse>> {
+    public connectionsServiceCreateConnectionsAccountsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3CreateConnectionsAccountsResponse>> {
         return this.api.connectionsServiceCreateConnectionsAccountsWithHttpInfo(param.connectionsv3CreateConnectionsAccountsRequest,  options).toPromise();
     }
 
@@ -3571,7 +3652,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Create Connections accounts Description: Create Connections acccounts.
      * @param param the request object
      */
-    public connectionsServiceCreateConnectionsAccounts(param: ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsRequest, options?: Configuration): Promise<Connectionsv3CreateConnectionsAccountsResponse> {
+    public connectionsServiceCreateConnectionsAccounts(param: ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsRequest, options?: ConfigurationOptions): Promise<Connectionsv3CreateConnectionsAccountsResponse> {
         return this.api.connectionsServiceCreateConnectionsAccounts(param.connectionsv3CreateConnectionsAccountsRequest,  options).toPromise();
     }
 
@@ -3579,7 +3660,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Create connections configs Description: Create Connection config by connection type.
      * @param param the request object
      */
-    public connectionsServiceCreateConnectionsConfigsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3CreateConnectionsConfigsResponse>> {
+    public connectionsServiceCreateConnectionsConfigsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3CreateConnectionsConfigsResponse>> {
         return this.api.connectionsServiceCreateConnectionsConfigsWithHttpInfo(param.connectionsv3CreateConnectionsConfigsRequest,  options).toPromise();
     }
 
@@ -3587,7 +3668,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Create connections configs Description: Create Connection config by connection type.
      * @param param the request object
      */
-    public connectionsServiceCreateConnectionsConfigs(param: ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest, options?: Configuration): Promise<Connectionsv3CreateConnectionsConfigsResponse> {
+    public connectionsServiceCreateConnectionsConfigs(param: ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest, options?: ConfigurationOptions): Promise<Connectionsv3CreateConnectionsConfigsResponse> {
         return this.api.connectionsServiceCreateConnectionsConfigs(param.connectionsv3CreateConnectionsConfigsRequest,  options).toPromise();
     }
 
@@ -3595,7 +3676,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Create plugin Description: Create UC generic plugin
      * @param param the request object
      */
-    public connectionsServiceCreatePluginWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceCreatePluginRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3CreatePluginResponse>> {
+    public connectionsServiceCreatePluginWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceCreatePluginRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3CreatePluginResponse>> {
         return this.api.connectionsServiceCreatePluginWithHttpInfo(param.connectionsv3CreatePluginRequest,  options).toPromise();
     }
 
@@ -3603,7 +3684,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Create plugin Description: Create UC generic plugin
      * @param param the request object
      */
-    public connectionsServiceCreatePlugin(param: ConnectionsServiceApiConnectionsServiceCreatePluginRequest, options?: Configuration): Promise<Connectionsv3CreatePluginResponse> {
+    public connectionsServiceCreatePlugin(param: ConnectionsServiceApiConnectionsServiceCreatePluginRequest, options?: ConfigurationOptions): Promise<Connectionsv3CreatePluginResponse> {
         return this.api.connectionsServiceCreatePlugin(param.connectionsv3CreatePluginRequest,  options).toPromise();
     }
 
@@ -3611,7 +3692,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Create settings Description: Create Settings.
      * @param param the request object
      */
-    public connectionsServiceCreateSettingsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceCreateSettingsRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public connectionsServiceCreateSettingsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceCreateSettingsRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.connectionsServiceCreateSettingsWithHttpInfo(param.connectionsv3CreateSettingsRequest,  options).toPromise();
     }
 
@@ -3619,7 +3700,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Create settings Description: Create Settings.
      * @param param the request object
      */
-    public connectionsServiceCreateSettings(param: ConnectionsServiceApiConnectionsServiceCreateSettingsRequest, options?: Configuration): Promise<any> {
+    public connectionsServiceCreateSettings(param: ConnectionsServiceApiConnectionsServiceCreateSettingsRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.connectionsServiceCreateSettings(param.connectionsv3CreateSettingsRequest,  options).toPromise();
     }
 
@@ -3627,7 +3708,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Delete Connections accounts Description: Delete Connections acccounts.
      * @param param the request object
      */
-    public connectionsServiceDeleteConnectionsAccountsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccountsRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3DeleteConnectionsAccountsResponse>> {
+    public connectionsServiceDeleteConnectionsAccountsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccountsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3DeleteConnectionsAccountsResponse>> {
         return this.api.connectionsServiceDeleteConnectionsAccountsWithHttpInfo(param.accountId,  options).toPromise();
     }
 
@@ -3635,7 +3716,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Delete Connections accounts Description: Delete Connections acccounts.
      * @param param the request object
      */
-    public connectionsServiceDeleteConnectionsAccounts(param: ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccountsRequest, options?: Configuration): Promise<Connectionsv3DeleteConnectionsAccountsResponse> {
+    public connectionsServiceDeleteConnectionsAccounts(param: ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccountsRequest, options?: ConfigurationOptions): Promise<Connectionsv3DeleteConnectionsAccountsResponse> {
         return this.api.connectionsServiceDeleteConnectionsAccounts(param.accountId,  options).toPromise();
     }
 
@@ -3643,7 +3724,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Delete connections configs Description: Delete Connection config by connection id.
      * @param param the request object
      */
-    public connectionsServiceDeleteConnectionsConfigsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigsRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3DeleteConnectionsConfigsResponse>> {
+    public connectionsServiceDeleteConnectionsConfigsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3DeleteConnectionsConfigsResponse>> {
         return this.api.connectionsServiceDeleteConnectionsConfigsWithHttpInfo(param.connectionId,  options).toPromise();
     }
 
@@ -3651,7 +3732,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Delete connections configs Description: Delete Connection config by connection id.
      * @param param the request object
      */
-    public connectionsServiceDeleteConnectionsConfigs(param: ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigsRequest, options?: Configuration): Promise<Connectionsv3DeleteConnectionsConfigsResponse> {
+    public connectionsServiceDeleteConnectionsConfigs(param: ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigsRequest, options?: ConfigurationOptions): Promise<Connectionsv3DeleteConnectionsConfigsResponse> {
         return this.api.connectionsServiceDeleteConnectionsConfigs(param.connectionId,  options).toPromise();
     }
 
@@ -3659,7 +3740,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Delete connector Description: Delete a Connection.
      * @param param the request object
      */
-    public connectionsServiceDeleteConnectorWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public connectionsServiceDeleteConnectorWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.connectionsServiceDeleteConnectorWithHttpInfo(param.connectionId,  options).toPromise();
     }
 
@@ -3667,7 +3748,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Delete connector Description: Delete a Connection.
      * @param param the request object
      */
-    public connectionsServiceDeleteConnector(param: ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest, options?: Configuration): Promise<any> {
+    public connectionsServiceDeleteConnector(param: ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.connectionsServiceDeleteConnector(param.connectionId,  options).toPromise();
     }
 
@@ -3675,7 +3756,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Delete plugin. Description: Delete plugin.
      * @param param the request object
      */
-    public connectionsServiceDeletePluginWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceDeletePluginRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3DeletePluginResponse>> {
+    public connectionsServiceDeletePluginWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceDeletePluginRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3DeletePluginResponse>> {
         return this.api.connectionsServiceDeletePluginWithHttpInfo(param.id,  options).toPromise();
     }
 
@@ -3683,7 +3764,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Delete plugin. Description: Delete plugin.
      * @param param the request object
      */
-    public connectionsServiceDeletePlugin(param: ConnectionsServiceApiConnectionsServiceDeletePluginRequest, options?: Configuration): Promise<Connectionsv3DeletePluginResponse> {
+    public connectionsServiceDeletePlugin(param: ConnectionsServiceApiConnectionsServiceDeletePluginRequest, options?: ConfigurationOptions): Promise<Connectionsv3DeletePluginResponse> {
         return this.api.connectionsServiceDeletePlugin(param.id,  options).toPromise();
     }
 
@@ -3691,7 +3772,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Generate package. Description: Generate package.
      * @param param the request object
      */
-    public connectionsServiceGeneratePackageWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGeneratePackageRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3GeneratePackageResponse>> {
+    public connectionsServiceGeneratePackageWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGeneratePackageRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3GeneratePackageResponse>> {
         return this.api.connectionsServiceGeneratePackageWithHttpInfo(param.id, param.connectionsv3GeneratePackageRequest,  options).toPromise();
     }
 
@@ -3699,7 +3780,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Generate package. Description: Generate package.
      * @param param the request object
      */
-    public connectionsServiceGeneratePackage(param: ConnectionsServiceApiConnectionsServiceGeneratePackageRequest, options?: Configuration): Promise<Connectionsv3GeneratePackageResponse> {
+    public connectionsServiceGeneratePackage(param: ConnectionsServiceApiConnectionsServiceGeneratePackageRequest, options?: ConfigurationOptions): Promise<Connectionsv3GeneratePackageResponse> {
         return this.api.connectionsServiceGeneratePackage(param.id, param.connectionsv3GeneratePackageRequest,  options).toPromise();
     }
 
@@ -3707,7 +3788,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get banner state for object verb page.  Description: Get banner state for object verb page.
      * @param param the request object
      */
-    public connectionsServiceGetBannerStateWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetBannerStateRequest = {}, options?: Configuration): Promise<HttpInfo<Connectionsv3GetBannerStateResponse>> {
+    public connectionsServiceGetBannerStateWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetBannerStateRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3GetBannerStateResponse>> {
         return this.api.connectionsServiceGetBannerStateWithHttpInfo( options).toPromise();
     }
 
@@ -3715,7 +3796,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get banner state for object verb page.  Description: Get banner state for object verb page.
      * @param param the request object
      */
-    public connectionsServiceGetBannerState(param: ConnectionsServiceApiConnectionsServiceGetBannerStateRequest = {}, options?: Configuration): Promise<Connectionsv3GetBannerStateResponse> {
+    public connectionsServiceGetBannerState(param: ConnectionsServiceApiConnectionsServiceGetBannerStateRequest = {}, options?: ConfigurationOptions): Promise<Connectionsv3GetBannerStateResponse> {
         return this.api.connectionsServiceGetBannerState( options).toPromise();
     }
 
@@ -3723,7 +3804,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get Connections accounts Description: Get Connections acccounts.
      * @param param the request object
      */
-    public connectionsServiceGetConnectionsAccountsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRequest = {}, options?: Configuration): Promise<HttpInfo<Connectionsv3GetConnectionsAccountsResponse>> {
+    public connectionsServiceGetConnectionsAccountsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3GetConnectionsAccountsResponse>> {
         return this.api.connectionsServiceGetConnectionsAccountsWithHttpInfo(param.accountId, param.accessKey,  options).toPromise();
     }
 
@@ -3731,7 +3812,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get Connections accounts Description: Get Connections acccounts.
      * @param param the request object
      */
-    public connectionsServiceGetConnectionsAccounts(param: ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRequest = {}, options?: Configuration): Promise<Connectionsv3GetConnectionsAccountsResponse> {
+    public connectionsServiceGetConnectionsAccounts(param: ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRequest = {}, options?: ConfigurationOptions): Promise<Connectionsv3GetConnectionsAccountsResponse> {
         return this.api.connectionsServiceGetConnectionsAccounts(param.accountId, param.accessKey,  options).toPromise();
     }
 
@@ -3739,7 +3820,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get connections configs Description: Get Connection config by connection type.
      * @param param the request object
      */
-    public connectionsServiceGetConnectionsConfigsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetConnectionsConfigsRequest = {}, options?: Configuration): Promise<HttpInfo<Connectionsv3GetConnectionsConfigsResponse>> {
+    public connectionsServiceGetConnectionsConfigsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetConnectionsConfigsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3GetConnectionsConfigsResponse>> {
         return this.api.connectionsServiceGetConnectionsConfigsWithHttpInfo(param.type, param.connectionId,  options).toPromise();
     }
 
@@ -3747,7 +3828,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get connections configs Description: Get Connection config by connection type.
      * @param param the request object
      */
-    public connectionsServiceGetConnectionsConfigs(param: ConnectionsServiceApiConnectionsServiceGetConnectionsConfigsRequest = {}, options?: Configuration): Promise<Connectionsv3GetConnectionsConfigsResponse> {
+    public connectionsServiceGetConnectionsConfigs(param: ConnectionsServiceApiConnectionsServiceGetConnectionsConfigsRequest = {}, options?: ConfigurationOptions): Promise<Connectionsv3GetConnectionsConfigsResponse> {
         return this.api.connectionsServiceGetConnectionsConfigs(param.type, param.connectionId,  options).toPromise();
     }
 
@@ -3755,7 +3836,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get connections with filters Description: Get connections with filters.
      * @param param the request object
      */
-    public connectionsServiceGetConnectionsWithFiltersWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3GetConnectionsWithFiltersResponse>> {
+    public connectionsServiceGetConnectionsWithFiltersWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3GetConnectionsWithFiltersResponse>> {
         return this.api.connectionsServiceGetConnectionsWithFiltersWithHttpInfo(param.connectionsv3GetConnectionsWithFiltersRequest,  options).toPromise();
     }
 
@@ -3763,7 +3844,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get connections with filters Description: Get connections with filters.
      * @param param the request object
      */
-    public connectionsServiceGetConnectionsWithFilters(param: ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersRequest, options?: Configuration): Promise<Connectionsv3GetConnectionsWithFiltersResponse> {
+    public connectionsServiceGetConnectionsWithFilters(param: ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersRequest, options?: ConfigurationOptions): Promise<Connectionsv3GetConnectionsWithFiltersResponse> {
         return this.api.connectionsServiceGetConnectionsWithFilters(param.connectionsv3GetConnectionsWithFiltersRequest,  options).toPromise();
     }
 
@@ -3771,7 +3852,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get connectors summary Description: Get a summary of Connectors.
      * @param param the request object
      */
-    public connectionsServiceGetConnectorsSummaryWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetConnectorsSummaryRequest = {}, options?: Configuration): Promise<HttpInfo<Connectionsv3GetConnectorsSummaryResponse>> {
+    public connectionsServiceGetConnectorsSummaryWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetConnectorsSummaryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3GetConnectorsSummaryResponse>> {
         return this.api.connectionsServiceGetConnectorsSummaryWithHttpInfo( options).toPromise();
     }
 
@@ -3779,7 +3860,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get connectors summary Description: Get a summary of Connectors.
      * @param param the request object
      */
-    public connectionsServiceGetConnectorsSummary(param: ConnectionsServiceApiConnectionsServiceGetConnectorsSummaryRequest = {}, options?: Configuration): Promise<Connectionsv3GetConnectorsSummaryResponse> {
+    public connectionsServiceGetConnectorsSummary(param: ConnectionsServiceApiConnectionsServiceGetConnectorsSummaryRequest = {}, options?: ConfigurationOptions): Promise<Connectionsv3GetConnectorsSummaryResponse> {
         return this.api.connectionsServiceGetConnectorsSummary( options).toPromise();
     }
 
@@ -3787,7 +3868,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get data sources Description: Get a list of data sources.
      * @param param the request object
      */
-    public connectionsServiceGetDataSourcesWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetDataSourcesRequest = {}, options?: Configuration): Promise<HttpInfo<Connectionsv3GetDataSourcesResponse>> {
+    public connectionsServiceGetDataSourcesWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetDataSourcesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3GetDataSourcesResponse>> {
         return this.api.connectionsServiceGetDataSourcesWithHttpInfo( options).toPromise();
     }
 
@@ -3795,7 +3876,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get data sources Description: Get a list of data sources.
      * @param param the request object
      */
-    public connectionsServiceGetDataSources(param: ConnectionsServiceApiConnectionsServiceGetDataSourcesRequest = {}, options?: Configuration): Promise<Connectionsv3GetDataSourcesResponse> {
+    public connectionsServiceGetDataSources(param: ConnectionsServiceApiConnectionsServiceGetDataSourcesRequest = {}, options?: ConfigurationOptions): Promise<Connectionsv3GetDataSourcesResponse> {
         return this.api.connectionsServiceGetDataSources( options).toPromise();
     }
 
@@ -3803,7 +3884,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get list of guard record fields.  Description: Get list of guard record fields.
      * @param param the request object
      */
-    public connectionsServiceGetGuardRecordFieldsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetGuardRecordFieldsRequest = {}, options?: Configuration): Promise<HttpInfo<Connectionsv3GetGuardRecordFieldsResponse>> {
+    public connectionsServiceGetGuardRecordFieldsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetGuardRecordFieldsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3GetGuardRecordFieldsResponse>> {
         return this.api.connectionsServiceGetGuardRecordFieldsWithHttpInfo( options).toPromise();
     }
 
@@ -3811,7 +3892,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get list of guard record fields.  Description: Get list of guard record fields.
      * @param param the request object
      */
-    public connectionsServiceGetGuardRecordFields(param: ConnectionsServiceApiConnectionsServiceGetGuardRecordFieldsRequest = {}, options?: Configuration): Promise<Connectionsv3GetGuardRecordFieldsResponse> {
+    public connectionsServiceGetGuardRecordFields(param: ConnectionsServiceApiConnectionsServiceGetGuardRecordFieldsRequest = {}, options?: ConfigurationOptions): Promise<Connectionsv3GetGuardRecordFieldsResponse> {
         return this.api.connectionsServiceGetGuardRecordFields( options).toPromise();
     }
 
@@ -3819,7 +3900,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get headers Description: Get a list of Headers.
      * @param param the request object
      */
-    public connectionsServiceGetHeadersWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetHeadersRequest = {}, options?: Configuration): Promise<HttpInfo<Connectionsv3GetHeadersResponse>> {
+    public connectionsServiceGetHeadersWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetHeadersRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3GetHeadersResponse>> {
         return this.api.connectionsServiceGetHeadersWithHttpInfo( options).toPromise();
     }
 
@@ -3827,7 +3908,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get headers Description: Get a list of Headers.
      * @param param the request object
      */
-    public connectionsServiceGetHeaders(param: ConnectionsServiceApiConnectionsServiceGetHeadersRequest = {}, options?: Configuration): Promise<Connectionsv3GetHeadersResponse> {
+    public connectionsServiceGetHeaders(param: ConnectionsServiceApiConnectionsServiceGetHeadersRequest = {}, options?: ConfigurationOptions): Promise<Connectionsv3GetHeadersResponse> {
         return this.api.connectionsServiceGetHeaders( options).toPromise();
     }
 
@@ -3835,7 +3916,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get plugins  Description: Get custom universal connector plugins
      * @param param the request object
      */
-    public connectionsServiceGetPluginsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetPluginsRequest = {}, options?: Configuration): Promise<HttpInfo<Connectionsv3GetPluginsResponse>> {
+    public connectionsServiceGetPluginsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetPluginsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3GetPluginsResponse>> {
         return this.api.connectionsServiceGetPluginsWithHttpInfo(param.id,  options).toPromise();
     }
 
@@ -3843,7 +3924,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get plugins  Description: Get custom universal connector plugins
      * @param param the request object
      */
-    public connectionsServiceGetPlugins(param: ConnectionsServiceApiConnectionsServiceGetPluginsRequest = {}, options?: Configuration): Promise<Connectionsv3GetPluginsResponse> {
+    public connectionsServiceGetPlugins(param: ConnectionsServiceApiConnectionsServiceGetPluginsRequest = {}, options?: ConfigurationOptions): Promise<Connectionsv3GetPluginsResponse> {
         return this.api.connectionsServiceGetPlugins(param.id,  options).toPromise();
     }
 
@@ -3851,7 +3932,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get settings Description: Get a list of Settings.
      * @param param the request object
      */
-    public connectionsServiceGetSettingsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetSettingsRequest = {}, options?: Configuration): Promise<HttpInfo<Connectionsv3GetSettingsResponse>> {
+    public connectionsServiceGetSettingsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceGetSettingsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3GetSettingsResponse>> {
         return this.api.connectionsServiceGetSettingsWithHttpInfo( options).toPromise();
     }
 
@@ -3859,7 +3940,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Get settings Description: Get a list of Settings.
      * @param param the request object
      */
-    public connectionsServiceGetSettings(param: ConnectionsServiceApiConnectionsServiceGetSettingsRequest = {}, options?: Configuration): Promise<Connectionsv3GetSettingsResponse> {
+    public connectionsServiceGetSettings(param: ConnectionsServiceApiConnectionsServiceGetSettingsRequest = {}, options?: ConfigurationOptions): Promise<Connectionsv3GetSettingsResponse> {
         return this.api.connectionsServiceGetSettings( options).toPromise();
     }
 
@@ -3867,7 +3948,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Partial update connectors Description: Partial update of Connectors.
      * @param param the request object
      */
-    public connectionsServicePartialUpdateConnectorsWithHttpInfo(param: ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3PartialUpdateConnectorsResponse>> {
+    public connectionsServicePartialUpdateConnectorsWithHttpInfo(param: ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3PartialUpdateConnectorsResponse>> {
         return this.api.connectionsServicePartialUpdateConnectorsWithHttpInfo(param.connectionsv3PartialUpdateConnectorsRequest,  options).toPromise();
     }
 
@@ -3875,7 +3956,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Partial update connectors Description: Partial update of Connectors.
      * @param param the request object
      */
-    public connectionsServicePartialUpdateConnectors(param: ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest, options?: Configuration): Promise<Connectionsv3PartialUpdateConnectorsResponse> {
+    public connectionsServicePartialUpdateConnectors(param: ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest, options?: ConfigurationOptions): Promise<Connectionsv3PartialUpdateConnectorsResponse> {
         return this.api.connectionsServicePartialUpdateConnectors(param.connectionsv3PartialUpdateConnectorsRequest,  options).toPromise();
     }
 
@@ -3883,7 +3964,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Post stap command Description: Send a STAP command down to kafka for snif-assist.
      * @param param the request object
      */
-    public connectionsServicePostStapCommandWithHttpInfo(param: ConnectionsServiceApiConnectionsServicePostStapCommandRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3StatusResponseBase>> {
+    public connectionsServicePostStapCommandWithHttpInfo(param: ConnectionsServiceApiConnectionsServicePostStapCommandRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3StatusResponseBase>> {
         return this.api.connectionsServicePostStapCommandWithHttpInfo(param.connectionsv3StapCommandRequest,  options).toPromise();
     }
 
@@ -3891,7 +3972,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Post stap command Description: Send a STAP command down to kafka for snif-assist.
      * @param param the request object
      */
-    public connectionsServicePostStapCommand(param: ConnectionsServiceApiConnectionsServicePostStapCommandRequest, options?: Configuration): Promise<Connectionsv3StatusResponseBase> {
+    public connectionsServicePostStapCommand(param: ConnectionsServiceApiConnectionsServicePostStapCommandRequest, options?: ConfigurationOptions): Promise<Connectionsv3StatusResponseBase> {
         return this.api.connectionsServicePostStapCommand(param.connectionsv3StapCommandRequest,  options).toPromise();
     }
 
@@ -3899,7 +3980,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update banner state for object verb page.  Description: Update banner state for object verb page.
      * @param param the request object
      */
-    public connectionsServiceUpdateBannerStateWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdateBannerStateRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3UpdateBannerStateResponse>> {
+    public connectionsServiceUpdateBannerStateWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdateBannerStateRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3UpdateBannerStateResponse>> {
         return this.api.connectionsServiceUpdateBannerStateWithHttpInfo(param.connectionsv3UpdateBannerStateRequest,  options).toPromise();
     }
 
@@ -3907,7 +3988,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update banner state for object verb page.  Description: Update banner state for object verb page.
      * @param param the request object
      */
-    public connectionsServiceUpdateBannerState(param: ConnectionsServiceApiConnectionsServiceUpdateBannerStateRequest, options?: Configuration): Promise<Connectionsv3UpdateBannerStateResponse> {
+    public connectionsServiceUpdateBannerState(param: ConnectionsServiceApiConnectionsServiceUpdateBannerStateRequest, options?: ConfigurationOptions): Promise<Connectionsv3UpdateBannerStateResponse> {
         return this.api.connectionsServiceUpdateBannerState(param.connectionsv3UpdateBannerStateRequest,  options).toPromise();
     }
 
@@ -3915,7 +3996,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update Connections accounts Description: Update Connections acccounts.
      * @param param the request object
      */
-    public connectionsServiceUpdateConnectionsAccountsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3UpdateConnectionsAccountsResponse>> {
+    public connectionsServiceUpdateConnectionsAccountsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3UpdateConnectionsAccountsResponse>> {
         return this.api.connectionsServiceUpdateConnectionsAccountsWithHttpInfo(param.connectionsv3UpdateConnectionsAccountsRequest,  options).toPromise();
     }
 
@@ -3923,7 +4004,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update Connections accounts Description: Update Connections acccounts.
      * @param param the request object
      */
-    public connectionsServiceUpdateConnectionsAccounts(param: ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsRequest, options?: Configuration): Promise<Connectionsv3UpdateConnectionsAccountsResponse> {
+    public connectionsServiceUpdateConnectionsAccounts(param: ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsRequest, options?: ConfigurationOptions): Promise<Connectionsv3UpdateConnectionsAccountsResponse> {
         return this.api.connectionsServiceUpdateConnectionsAccounts(param.connectionsv3UpdateConnectionsAccountsRequest,  options).toPromise();
     }
 
@@ -3931,7 +4012,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update connections configs Description: Update Connection config by connection id.
      * @param param the request object
      */
-    public connectionsServiceUpdateConnectionsConfigsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3UpdateConnectionsConfigsResponse>> {
+    public connectionsServiceUpdateConnectionsConfigsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3UpdateConnectionsConfigsResponse>> {
         return this.api.connectionsServiceUpdateConnectionsConfigsWithHttpInfo(param.connectionsv3UpdateConnectionsConfigsRequest,  options).toPromise();
     }
 
@@ -3939,7 +4020,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update connections configs Description: Update Connection config by connection id.
      * @param param the request object
      */
-    public connectionsServiceUpdateConnectionsConfigs(param: ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest, options?: Configuration): Promise<Connectionsv3UpdateConnectionsConfigsResponse> {
+    public connectionsServiceUpdateConnectionsConfigs(param: ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest, options?: ConfigurationOptions): Promise<Connectionsv3UpdateConnectionsConfigsResponse> {
         return this.api.connectionsServiceUpdateConnectionsConfigs(param.connectionsv3UpdateConnectionsConfigsRequest,  options).toPromise();
     }
 
@@ -3947,7 +4028,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update connectors Description: Update a list of Connectors.
      * @param param the request object
      */
-    public connectionsServiceUpdateConnectorsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public connectionsServiceUpdateConnectorsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.connectionsServiceUpdateConnectorsWithHttpInfo(param.connectionsv3UpdateConnectorsRequest,  options).toPromise();
     }
 
@@ -3955,7 +4036,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update connectors Description: Update a list of Connectors.
      * @param param the request object
      */
-    public connectionsServiceUpdateConnectors(param: ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest, options?: Configuration): Promise<any> {
+    public connectionsServiceUpdateConnectors(param: ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.connectionsServiceUpdateConnectors(param.connectionsv3UpdateConnectorsRequest,  options).toPromise();
     }
 
@@ -3963,7 +4044,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update plugin. Description: Update plugin.
      * @param param the request object
      */
-    public connectionsServiceUpdatePluginWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdatePluginRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3UpdatePluginResponse>> {
+    public connectionsServiceUpdatePluginWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdatePluginRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3UpdatePluginResponse>> {
         return this.api.connectionsServiceUpdatePluginWithHttpInfo(param.id, param.connectionsv3UpdatePluginRequest,  options).toPromise();
     }
 
@@ -3971,7 +4052,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update plugin. Description: Update plugin.
      * @param param the request object
      */
-    public connectionsServiceUpdatePlugin(param: ConnectionsServiceApiConnectionsServiceUpdatePluginRequest, options?: Configuration): Promise<Connectionsv3UpdatePluginResponse> {
+    public connectionsServiceUpdatePlugin(param: ConnectionsServiceApiConnectionsServiceUpdatePluginRequest, options?: ConfigurationOptions): Promise<Connectionsv3UpdatePluginResponse> {
         return this.api.connectionsServiceUpdatePlugin(param.id, param.connectionsv3UpdatePluginRequest,  options).toPromise();
     }
 
@@ -3979,7 +4060,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update settings Description: Update Settings.
      * @param param the request object
      */
-    public connectionsServiceUpdateSettingsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public connectionsServiceUpdateSettingsWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.connectionsServiceUpdateSettingsWithHttpInfo(param.connectionsv3UpdateSettingsRequest,  options).toPromise();
     }
 
@@ -3987,7 +4068,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Update settings Description: Update Settings.
      * @param param the request object
      */
-    public connectionsServiceUpdateSettings(param: ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest, options?: Configuration): Promise<any> {
+    public connectionsServiceUpdateSettings(param: ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.connectionsServiceUpdateSettings(param.connectionsv3UpdateSettingsRequest,  options).toPromise();
     }
 
@@ -3995,7 +4076,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Validate an AWS connection. Description: Validate an AWS connection.
      * @param param the request object
      */
-    public connectionsServiceValidateAwsConnectionWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3ValidateConnectionResponse>> {
+    public connectionsServiceValidateAwsConnectionWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3ValidateConnectionResponse>> {
         return this.api.connectionsServiceValidateAwsConnectionWithHttpInfo(param.connectionsv3ValidateAwsConnectionRequest,  options).toPromise();
     }
 
@@ -4003,7 +4084,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Validate an AWS connection. Description: Validate an AWS connection.
      * @param param the request object
      */
-    public connectionsServiceValidateAwsConnection(param: ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest, options?: Configuration): Promise<Connectionsv3ValidateConnectionResponse> {
+    public connectionsServiceValidateAwsConnection(param: ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest, options?: ConfigurationOptions): Promise<Connectionsv3ValidateConnectionResponse> {
         return this.api.connectionsServiceValidateAwsConnection(param.connectionsv3ValidateAwsConnectionRequest,  options).toPromise();
     }
 
@@ -4011,7 +4092,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Validate an Azure connection. Description: Validate an Azure connection.
      * @param param the request object
      */
-    public connectionsServiceValidateAzureConnectionWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3ValidateConnectionResponse>> {
+    public connectionsServiceValidateAzureConnectionWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3ValidateConnectionResponse>> {
         return this.api.connectionsServiceValidateAzureConnectionWithHttpInfo(param.connectionsv3ValidateAzureConnectionRequest,  options).toPromise();
     }
 
@@ -4019,7 +4100,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Validate an Azure connection. Description: Validate an Azure connection.
      * @param param the request object
      */
-    public connectionsServiceValidateAzureConnection(param: ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest, options?: Configuration): Promise<Connectionsv3ValidateConnectionResponse> {
+    public connectionsServiceValidateAzureConnection(param: ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest, options?: ConfigurationOptions): Promise<Connectionsv3ValidateConnectionResponse> {
         return this.api.connectionsServiceValidateAzureConnection(param.connectionsv3ValidateAzureConnectionRequest,  options).toPromise();
     }
 
@@ -4027,7 +4108,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Validate a GCP connection. Description: Validate a GCP connection.
      * @param param the request object
      */
-    public connectionsServiceValidateGcpConnectionWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest, options?: Configuration): Promise<HttpInfo<Connectionsv3ValidateConnectionResponse>> {
+    public connectionsServiceValidateGcpConnectionWithHttpInfo(param: ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest, options?: ConfigurationOptions): Promise<HttpInfo<Connectionsv3ValidateConnectionResponse>> {
         return this.api.connectionsServiceValidateGcpConnectionWithHttpInfo(param.connectionsv3ValidateGcpConnectionRequest,  options).toPromise();
     }
 
@@ -4035,7 +4116,7 @@ export class ObjectConnectionsServiceApi {
      * Summary: Validate a GCP connection. Description: Validate a GCP connection.
      * @param param the request object
      */
-    public connectionsServiceValidateGcpConnection(param: ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest, options?: Configuration): Promise<Connectionsv3ValidateConnectionResponse> {
+    public connectionsServiceValidateGcpConnection(param: ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest, options?: ConfigurationOptions): Promise<Connectionsv3ValidateConnectionResponse> {
         return this.api.connectionsServiceValidateGcpConnection(param.connectionsv3ValidateGcpConnectionRequest,  options).toPromise();
     }
 
@@ -4056,6 +4137,7 @@ export interface DashboardsServiceApiDashboardsServiceCreateDashboardRequest {
 export interface DashboardsServiceApiDashboardsServiceDeleteDashboardRequest {
     /**
      * The id of the dashboard to be deleted.
+     * Defaults to: undefined
      * @type string
      * @memberof DashboardsServiceApidashboardsServiceDeleteDashboard
      */
@@ -4074,6 +4156,7 @@ export interface DashboardsServiceApiDashboardsServiceGetDashboardsRequest {
 export interface DashboardsServiceApiDashboardsServiceUpdateDashboardRequest {
     /**
      * The id of the dashboard that was updated.
+     * Defaults to: undefined
      * @type string
      * @memberof DashboardsServiceApidashboardsServiceUpdateDashboard
      */
@@ -4097,7 +4180,7 @@ export class ObjectDashboardsServiceApi {
      * Summary: Create dashboard Description: Create a unique dashboard.
      * @param param the request object
      */
-    public dashboardsServiceCreateDashboardWithHttpInfo(param: DashboardsServiceApiDashboardsServiceCreateDashboardRequest, options?: Configuration): Promise<HttpInfo<Dashboardsv3CreateDashboardResponse>> {
+    public dashboardsServiceCreateDashboardWithHttpInfo(param: DashboardsServiceApiDashboardsServiceCreateDashboardRequest, options?: ConfigurationOptions): Promise<HttpInfo<Dashboardsv3CreateDashboardResponse>> {
         return this.api.dashboardsServiceCreateDashboardWithHttpInfo(param.dashboardsv3Dashboard,  options).toPromise();
     }
 
@@ -4105,7 +4188,7 @@ export class ObjectDashboardsServiceApi {
      * Summary: Create dashboard Description: Create a unique dashboard.
      * @param param the request object
      */
-    public dashboardsServiceCreateDashboard(param: DashboardsServiceApiDashboardsServiceCreateDashboardRequest, options?: Configuration): Promise<Dashboardsv3CreateDashboardResponse> {
+    public dashboardsServiceCreateDashboard(param: DashboardsServiceApiDashboardsServiceCreateDashboardRequest, options?: ConfigurationOptions): Promise<Dashboardsv3CreateDashboardResponse> {
         return this.api.dashboardsServiceCreateDashboard(param.dashboardsv3Dashboard,  options).toPromise();
     }
 
@@ -4113,7 +4196,7 @@ export class ObjectDashboardsServiceApi {
      * Summary: Delete dashboard Description: Delete a unique dashboard.
      * @param param the request object
      */
-    public dashboardsServiceDeleteDashboardWithHttpInfo(param: DashboardsServiceApiDashboardsServiceDeleteDashboardRequest, options?: Configuration): Promise<HttpInfo<Dashboardsv3DeleteDashboardResponse>> {
+    public dashboardsServiceDeleteDashboardWithHttpInfo(param: DashboardsServiceApiDashboardsServiceDeleteDashboardRequest, options?: ConfigurationOptions): Promise<HttpInfo<Dashboardsv3DeleteDashboardResponse>> {
         return this.api.dashboardsServiceDeleteDashboardWithHttpInfo(param.dashboardId, param.dashboardsv3DeleteDashboardRequest,  options).toPromise();
     }
 
@@ -4121,7 +4204,7 @@ export class ObjectDashboardsServiceApi {
      * Summary: Delete dashboard Description: Delete a unique dashboard.
      * @param param the request object
      */
-    public dashboardsServiceDeleteDashboard(param: DashboardsServiceApiDashboardsServiceDeleteDashboardRequest, options?: Configuration): Promise<Dashboardsv3DeleteDashboardResponse> {
+    public dashboardsServiceDeleteDashboard(param: DashboardsServiceApiDashboardsServiceDeleteDashboardRequest, options?: ConfigurationOptions): Promise<Dashboardsv3DeleteDashboardResponse> {
         return this.api.dashboardsServiceDeleteDashboard(param.dashboardId, param.dashboardsv3DeleteDashboardRequest,  options).toPromise();
     }
 
@@ -4129,7 +4212,7 @@ export class ObjectDashboardsServiceApi {
      * Summary: Get dashboards Description: Get a list of dashboards with all data.
      * @param param the request object
      */
-    public dashboardsServiceGetDashboardsWithHttpInfo(param: DashboardsServiceApiDashboardsServiceGetDashboardsRequest = {}, options?: Configuration): Promise<HttpInfo<Dashboardsv3GetDashboardsResponse>> {
+    public dashboardsServiceGetDashboardsWithHttpInfo(param: DashboardsServiceApiDashboardsServiceGetDashboardsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Dashboardsv3GetDashboardsResponse>> {
         return this.api.dashboardsServiceGetDashboardsWithHttpInfo( options).toPromise();
     }
 
@@ -4137,7 +4220,7 @@ export class ObjectDashboardsServiceApi {
      * Summary: Get dashboards Description: Get a list of dashboards with all data.
      * @param param the request object
      */
-    public dashboardsServiceGetDashboards(param: DashboardsServiceApiDashboardsServiceGetDashboardsRequest = {}, options?: Configuration): Promise<Dashboardsv3GetDashboardsResponse> {
+    public dashboardsServiceGetDashboards(param: DashboardsServiceApiDashboardsServiceGetDashboardsRequest = {}, options?: ConfigurationOptions): Promise<Dashboardsv3GetDashboardsResponse> {
         return this.api.dashboardsServiceGetDashboards( options).toPromise();
     }
 
@@ -4145,7 +4228,7 @@ export class ObjectDashboardsServiceApi {
      * Summary: Update dashboard Description: Update a dashboard.
      * @param param the request object
      */
-    public dashboardsServiceUpdateDashboardWithHttpInfo(param: DashboardsServiceApiDashboardsServiceUpdateDashboardRequest, options?: Configuration): Promise<HttpInfo<Dashboardsv3UpdateDashboardResponse>> {
+    public dashboardsServiceUpdateDashboardWithHttpInfo(param: DashboardsServiceApiDashboardsServiceUpdateDashboardRequest, options?: ConfigurationOptions): Promise<HttpInfo<Dashboardsv3UpdateDashboardResponse>> {
         return this.api.dashboardsServiceUpdateDashboardWithHttpInfo(param.dashboardId, param.dashboardsv3UpdateDashboardRequest,  options).toPromise();
     }
 
@@ -4153,7 +4236,7 @@ export class ObjectDashboardsServiceApi {
      * Summary: Update dashboard Description: Update a dashboard.
      * @param param the request object
      */
-    public dashboardsServiceUpdateDashboard(param: DashboardsServiceApiDashboardsServiceUpdateDashboardRequest, options?: Configuration): Promise<Dashboardsv3UpdateDashboardResponse> {
+    public dashboardsServiceUpdateDashboard(param: DashboardsServiceApiDashboardsServiceUpdateDashboardRequest, options?: ConfigurationOptions): Promise<Dashboardsv3UpdateDashboardResponse> {
         return this.api.dashboardsServiceUpdateDashboard(param.dashboardId, param.dashboardsv3UpdateDashboardRequest,  options).toPromise();
     }
 
@@ -4165,6 +4248,7 @@ import { DataMovementsApiRequestFactory, DataMovementsApiResponseProcessor} from
 export interface DataMovementsApiGetActualFlowRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataMovementsApigetActualFlow
      */
@@ -4174,6 +4258,7 @@ export interface DataMovementsApiGetActualFlowRequest {
 export interface DataMovementsApiGetActualFlowsSummaryRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type ListActualFlowsFilterParameter
      * @memberof DataMovementsApigetActualFlowsSummary
      */
@@ -4183,6 +4268,7 @@ export interface DataMovementsApiGetActualFlowsSummaryRequest {
 export interface DataMovementsApiGetPotentialFlowRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataMovementsApigetPotentialFlow
      */
@@ -4192,6 +4278,7 @@ export interface DataMovementsApiGetPotentialFlowRequest {
 export interface DataMovementsApiGetPotentialFlowPathRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataMovementsApigetPotentialFlowPath
      */
@@ -4201,6 +4288,7 @@ export interface DataMovementsApiGetPotentialFlowPathRequest {
 export interface DataMovementsApiGetPotentialFlowsSummaryRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type PotentialFlowsFilterOptions
      * @memberof DataMovementsApigetPotentialFlowsSummary
      */
@@ -4210,24 +4298,28 @@ export interface DataMovementsApiGetPotentialFlowsSummaryRequest {
 export interface DataMovementsApiListActualFlowPathsRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type ListActualFlowPathsSortParameter
      * @memberof DataMovementsApilistActualFlowPaths
      */
     sort?: ListActualFlowPathsSortParameter
     /**
      * 
+     * Defaults to: undefined
      * @type ListActualFlowPathsFilterParameter
      * @memberof DataMovementsApilistActualFlowPaths
      */
     filter?: ListActualFlowPathsFilterParameter
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataMovementsApilistActualFlowPaths
      */
     pageSize?: number
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataMovementsApilistActualFlowPaths
      */
@@ -4237,24 +4329,28 @@ export interface DataMovementsApiListActualFlowPathsRequest {
 export interface DataMovementsApiListActualFlowsRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type ListActualFlowsSortParameter
      * @memberof DataMovementsApilistActualFlows
      */
     sort?: ListActualFlowsSortParameter
     /**
      * 
+     * Defaults to: undefined
      * @type ListActualFlowsFilterParameter
      * @memberof DataMovementsApilistActualFlows
      */
     filter?: ListActualFlowsFilterParameter
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataMovementsApilistActualFlows
      */
     pageSize?: number
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataMovementsApilistActualFlows
      */
@@ -4264,18 +4360,21 @@ export interface DataMovementsApiListActualFlowsRequest {
 export interface DataMovementsApiListPotentialFlowsRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type PotentialFlowsFilterOptions
      * @memberof DataMovementsApilistPotentialFlows
      */
     filter?: PotentialFlowsFilterOptions
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataMovementsApilistPotentialFlows
      */
     pageSize?: number
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataMovementsApilistPotentialFlows
      */
@@ -4285,18 +4384,21 @@ export interface DataMovementsApiListPotentialFlowsRequest {
 export interface DataMovementsApiListPotentialFlowsPathsRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type PotentialFlowsPathsFilterOptions
      * @memberof DataMovementsApilistPotentialFlowsPaths
      */
     filter?: PotentialFlowsPathsFilterOptions
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataMovementsApilistPotentialFlowsPaths
      */
     pageSize?: number
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataMovementsApilistPotentialFlowsPaths
      */
@@ -4315,7 +4417,7 @@ export class ObjectDataMovementsApi {
      * Get actual flow by providing its ID
      * @param param the request object
      */
-    public getActualFlowWithHttpInfo(param: DataMovementsApiGetActualFlowRequest, options?: Configuration): Promise<HttpInfo<ActualFlow>> {
+    public getActualFlowWithHttpInfo(param: DataMovementsApiGetActualFlowRequest, options?: ConfigurationOptions): Promise<HttpInfo<ActualFlow>> {
         return this.api.getActualFlowWithHttpInfo(param.id,  options).toPromise();
     }
 
@@ -4324,7 +4426,7 @@ export class ObjectDataMovementsApi {
      * Get actual flow by providing its ID
      * @param param the request object
      */
-    public getActualFlow(param: DataMovementsApiGetActualFlowRequest, options?: Configuration): Promise<ActualFlow> {
+    public getActualFlow(param: DataMovementsApiGetActualFlowRequest, options?: ConfigurationOptions): Promise<ActualFlow> {
         return this.api.getActualFlow(param.id,  options).toPromise();
     }
 
@@ -4333,7 +4435,7 @@ export class ObjectDataMovementsApi {
      * Get summary of actual flows
      * @param param the request object
      */
-    public getActualFlowsSummaryWithHttpInfo(param: DataMovementsApiGetActualFlowsSummaryRequest = {}, options?: Configuration): Promise<HttpInfo<ActualFlowsSummary>> {
+    public getActualFlowsSummaryWithHttpInfo(param: DataMovementsApiGetActualFlowsSummaryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<ActualFlowsSummary>> {
         return this.api.getActualFlowsSummaryWithHttpInfo(param.filter,  options).toPromise();
     }
 
@@ -4342,7 +4444,7 @@ export class ObjectDataMovementsApi {
      * Get summary of actual flows
      * @param param the request object
      */
-    public getActualFlowsSummary(param: DataMovementsApiGetActualFlowsSummaryRequest = {}, options?: Configuration): Promise<ActualFlowsSummary> {
+    public getActualFlowsSummary(param: DataMovementsApiGetActualFlowsSummaryRequest = {}, options?: ConfigurationOptions): Promise<ActualFlowsSummary> {
         return this.api.getActualFlowsSummary(param.filter,  options).toPromise();
     }
 
@@ -4351,7 +4453,7 @@ export class ObjectDataMovementsApi {
      * Get potential flow by providing its ID
      * @param param the request object
      */
-    public getPotentialFlowWithHttpInfo(param: DataMovementsApiGetPotentialFlowRequest, options?: Configuration): Promise<HttpInfo<PotentialFlow>> {
+    public getPotentialFlowWithHttpInfo(param: DataMovementsApiGetPotentialFlowRequest, options?: ConfigurationOptions): Promise<HttpInfo<PotentialFlow>> {
         return this.api.getPotentialFlowWithHttpInfo(param.flowId,  options).toPromise();
     }
 
@@ -4360,7 +4462,7 @@ export class ObjectDataMovementsApi {
      * Get potential flow by providing its ID
      * @param param the request object
      */
-    public getPotentialFlow(param: DataMovementsApiGetPotentialFlowRequest, options?: Configuration): Promise<PotentialFlow> {
+    public getPotentialFlow(param: DataMovementsApiGetPotentialFlowRequest, options?: ConfigurationOptions): Promise<PotentialFlow> {
         return this.api.getPotentialFlow(param.flowId,  options).toPromise();
     }
 
@@ -4369,7 +4471,7 @@ export class ObjectDataMovementsApi {
      * Get potential flow path by providing its ID
      * @param param the request object
      */
-    public getPotentialFlowPathWithHttpInfo(param: DataMovementsApiGetPotentialFlowPathRequest, options?: Configuration): Promise<HttpInfo<PotentialFlowPath>> {
+    public getPotentialFlowPathWithHttpInfo(param: DataMovementsApiGetPotentialFlowPathRequest, options?: ConfigurationOptions): Promise<HttpInfo<PotentialFlowPath>> {
         return this.api.getPotentialFlowPathWithHttpInfo(param.flowPathId,  options).toPromise();
     }
 
@@ -4378,7 +4480,7 @@ export class ObjectDataMovementsApi {
      * Get potential flow path by providing its ID
      * @param param the request object
      */
-    public getPotentialFlowPath(param: DataMovementsApiGetPotentialFlowPathRequest, options?: Configuration): Promise<PotentialFlowPath> {
+    public getPotentialFlowPath(param: DataMovementsApiGetPotentialFlowPathRequest, options?: ConfigurationOptions): Promise<PotentialFlowPath> {
         return this.api.getPotentialFlowPath(param.flowPathId,  options).toPromise();
     }
 
@@ -4387,7 +4489,7 @@ export class ObjectDataMovementsApi {
      * Get summary of potential flows according to the filter applied
      * @param param the request object
      */
-    public getPotentialFlowsSummaryWithHttpInfo(param: DataMovementsApiGetPotentialFlowsSummaryRequest = {}, options?: Configuration): Promise<HttpInfo<PotentialFlowsSummary>> {
+    public getPotentialFlowsSummaryWithHttpInfo(param: DataMovementsApiGetPotentialFlowsSummaryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<PotentialFlowsSummary>> {
         return this.api.getPotentialFlowsSummaryWithHttpInfo(param.filter,  options).toPromise();
     }
 
@@ -4396,7 +4498,7 @@ export class ObjectDataMovementsApi {
      * Get summary of potential flows according to the filter applied
      * @param param the request object
      */
-    public getPotentialFlowsSummary(param: DataMovementsApiGetPotentialFlowsSummaryRequest = {}, options?: Configuration): Promise<PotentialFlowsSummary> {
+    public getPotentialFlowsSummary(param: DataMovementsApiGetPotentialFlowsSummaryRequest = {}, options?: ConfigurationOptions): Promise<PotentialFlowsSummary> {
         return this.api.getPotentialFlowsSummary(param.filter,  options).toPromise();
     }
 
@@ -4405,7 +4507,7 @@ export class ObjectDataMovementsApi {
      * Get summary of actual flows according to the filter applied
      * @param param the request object
      */
-    public listActualFlowPathsWithHttpInfo(param: DataMovementsApiListActualFlowPathsRequest = {}, options?: Configuration): Promise<HttpInfo<ListActualFlowPaths200Response>> {
+    public listActualFlowPathsWithHttpInfo(param: DataMovementsApiListActualFlowPathsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<ListActualFlowPaths200Response>> {
         return this.api.listActualFlowPathsWithHttpInfo(param.sort, param.filter, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4414,7 +4516,7 @@ export class ObjectDataMovementsApi {
      * Get summary of actual flows according to the filter applied
      * @param param the request object
      */
-    public listActualFlowPaths(param: DataMovementsApiListActualFlowPathsRequest = {}, options?: Configuration): Promise<ListActualFlowPaths200Response> {
+    public listActualFlowPaths(param: DataMovementsApiListActualFlowPathsRequest = {}, options?: ConfigurationOptions): Promise<ListActualFlowPaths200Response> {
         return this.api.listActualFlowPaths(param.sort, param.filter, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4423,7 +4525,7 @@ export class ObjectDataMovementsApi {
      * List actual flows
      * @param param the request object
      */
-    public listActualFlowsWithHttpInfo(param: DataMovementsApiListActualFlowsRequest = {}, options?: Configuration): Promise<HttpInfo<ListActualFlows200Response>> {
+    public listActualFlowsWithHttpInfo(param: DataMovementsApiListActualFlowsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<ListActualFlows200Response>> {
         return this.api.listActualFlowsWithHttpInfo(param.sort, param.filter, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4432,7 +4534,7 @@ export class ObjectDataMovementsApi {
      * List actual flows
      * @param param the request object
      */
-    public listActualFlows(param: DataMovementsApiListActualFlowsRequest = {}, options?: Configuration): Promise<ListActualFlows200Response> {
+    public listActualFlows(param: DataMovementsApiListActualFlowsRequest = {}, options?: ConfigurationOptions): Promise<ListActualFlows200Response> {
         return this.api.listActualFlows(param.sort, param.filter, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4441,7 +4543,7 @@ export class ObjectDataMovementsApi {
      * List potential flows
      * @param param the request object
      */
-    public listPotentialFlowsWithHttpInfo(param: DataMovementsApiListPotentialFlowsRequest = {}, options?: Configuration): Promise<HttpInfo<ListPotentialFlows200Response>> {
+    public listPotentialFlowsWithHttpInfo(param: DataMovementsApiListPotentialFlowsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<ListPotentialFlows200Response>> {
         return this.api.listPotentialFlowsWithHttpInfo(param.filter, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4450,7 +4552,7 @@ export class ObjectDataMovementsApi {
      * List potential flows
      * @param param the request object
      */
-    public listPotentialFlows(param: DataMovementsApiListPotentialFlowsRequest = {}, options?: Configuration): Promise<ListPotentialFlows200Response> {
+    public listPotentialFlows(param: DataMovementsApiListPotentialFlowsRequest = {}, options?: ConfigurationOptions): Promise<ListPotentialFlows200Response> {
         return this.api.listPotentialFlows(param.filter, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4459,7 +4561,7 @@ export class ObjectDataMovementsApi {
      * List potential flow paths
      * @param param the request object
      */
-    public listPotentialFlowsPathsWithHttpInfo(param: DataMovementsApiListPotentialFlowsPathsRequest = {}, options?: Configuration): Promise<HttpInfo<ListPotentialFlowsPaths200Response>> {
+    public listPotentialFlowsPathsWithHttpInfo(param: DataMovementsApiListPotentialFlowsPathsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<ListPotentialFlowsPaths200Response>> {
         return this.api.listPotentialFlowsPathsWithHttpInfo(param.filter, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4468,7 +4570,7 @@ export class ObjectDataMovementsApi {
      * List potential flow paths
      * @param param the request object
      */
-    public listPotentialFlowsPaths(param: DataMovementsApiListPotentialFlowsPathsRequest = {}, options?: Configuration): Promise<ListPotentialFlowsPaths200Response> {
+    public listPotentialFlowsPaths(param: DataMovementsApiListPotentialFlowsPathsRequest = {}, options?: ConfigurationOptions): Promise<ListPotentialFlowsPaths200Response> {
         return this.api.listPotentialFlowsPaths(param.filter, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4480,6 +4582,7 @@ import { DataResourcesApiRequestFactory, DataResourcesApiResponseProcessor} from
 export interface DataResourcesApiGetDataResourceRequest {
     /**
      * Data resource ID
+     * Defaults to: undefined
      * @type string
      * @memberof DataResourcesApigetDataResource
      */
@@ -4489,12 +4592,14 @@ export interface DataResourcesApiGetDataResourceRequest {
 export interface DataResourcesApiGetDataResourcesSummaryRequest {
     /**
      * Data store id
+     * Defaults to: undefined
      * @type string
      * @memberof DataResourcesApigetDataResourcesSummary
      */
     dataStoreId?: string
     /**
      * 
+     * Defaults to: undefined
      * @type ListDataResourcesFilterParameter
      * @memberof DataResourcesApigetDataResourcesSummary
      */
@@ -4504,30 +4609,35 @@ export interface DataResourcesApiGetDataResourcesSummaryRequest {
 export interface DataResourcesApiListDataResourcesRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataResourcesApilistDataResources
      */
     dataStoreId?: string
     /**
      * 
+     * Defaults to: undefined
      * @type ListDataResourcesFilterParameter
      * @memberof DataResourcesApilistDataResources
      */
     filter?: ListDataResourcesFilterParameter
     /**
      * 
+     * Defaults to: undefined
      * @type ListDataResourcesSortParameter
      * @memberof DataResourcesApilistDataResources
      */
     sort?: ListDataResourcesSortParameter
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataResourcesApilistDataResources
      */
     pageSize?: number
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataResourcesApilistDataResources
      */
@@ -4537,12 +4647,14 @@ export interface DataResourcesApiListDataResourcesRequest {
 export interface DataResourcesApiListDataResourcesNamesRequest {
     /**
      * Prefix of data resource name
+     * Defaults to: undefined
      * @type string
      * @memberof DataResourcesApilistDataResourcesNames
      */
     prefix: string
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataResourcesApilistDataResourcesNames
      */
@@ -4552,12 +4664,14 @@ export interface DataResourcesApiListDataResourcesNamesRequest {
 export interface DataResourcesApiRemoveResourceRequest {
     /**
      * Data resource ID
+     * Defaults to: undefined
      * @type string
      * @memberof DataResourcesApiremoveResource
      */
     dataResourceId: string
     /**
      * Data store ID
+     * Defaults to: undefined
      * @type string
      * @memberof DataResourcesApiremoveResource
      */
@@ -4567,6 +4681,7 @@ export interface DataResourcesApiRemoveResourceRequest {
 export interface DataResourcesApiUpdateResourceReviewStatusRequest {
     /**
      * Data resource id
+     * Defaults to: undefined
      * @type string
      * @memberof DataResourcesApiupdateResourceReviewStatus
      */
@@ -4591,7 +4706,7 @@ export class ObjectDataResourcesApi {
      * Get a specific data resource by its ID
      * @param param the request object
      */
-    public getDataResourceWithHttpInfo(param: DataResourcesApiGetDataResourceRequest, options?: Configuration): Promise<HttpInfo<DataResource>> {
+    public getDataResourceWithHttpInfo(param: DataResourcesApiGetDataResourceRequest, options?: ConfigurationOptions): Promise<HttpInfo<DataResource>> {
         return this.api.getDataResourceWithHttpInfo(param.dataResourceId,  options).toPromise();
     }
 
@@ -4600,7 +4715,7 @@ export class ObjectDataResourcesApi {
      * Get a specific data resource by its ID
      * @param param the request object
      */
-    public getDataResource(param: DataResourcesApiGetDataResourceRequest, options?: Configuration): Promise<DataResource> {
+    public getDataResource(param: DataResourcesApiGetDataResourceRequest, options?: ConfigurationOptions): Promise<DataResource> {
         return this.api.getDataResource(param.dataResourceId,  options).toPromise();
     }
 
@@ -4609,7 +4724,7 @@ export class ObjectDataResourcesApi {
      * Data resources summary
      * @param param the request object
      */
-    public getDataResourcesSummaryWithHttpInfo(param: DataResourcesApiGetDataResourcesSummaryRequest = {}, options?: Configuration): Promise<HttpInfo<DataResourcesSummary>> {
+    public getDataResourcesSummaryWithHttpInfo(param: DataResourcesApiGetDataResourcesSummaryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<DataResourcesSummary>> {
         return this.api.getDataResourcesSummaryWithHttpInfo(param.dataStoreId, param.filter,  options).toPromise();
     }
 
@@ -4618,7 +4733,7 @@ export class ObjectDataResourcesApi {
      * Data resources summary
      * @param param the request object
      */
-    public getDataResourcesSummary(param: DataResourcesApiGetDataResourcesSummaryRequest = {}, options?: Configuration): Promise<DataResourcesSummary> {
+    public getDataResourcesSummary(param: DataResourcesApiGetDataResourcesSummaryRequest = {}, options?: ConfigurationOptions): Promise<DataResourcesSummary> {
         return this.api.getDataResourcesSummary(param.dataStoreId, param.filter,  options).toPromise();
     }
 
@@ -4627,7 +4742,7 @@ export class ObjectDataResourcesApi {
      * List data resources that match a given filter
      * @param param the request object
      */
-    public listDataResourcesWithHttpInfo(param: DataResourcesApiListDataResourcesRequest = {}, options?: Configuration): Promise<HttpInfo<ListDataResources200Response>> {
+    public listDataResourcesWithHttpInfo(param: DataResourcesApiListDataResourcesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<ListDataResources200Response>> {
         return this.api.listDataResourcesWithHttpInfo(param.dataStoreId, param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4636,7 +4751,7 @@ export class ObjectDataResourcesApi {
      * List data resources that match a given filter
      * @param param the request object
      */
-    public listDataResources(param: DataResourcesApiListDataResourcesRequest = {}, options?: Configuration): Promise<ListDataResources200Response> {
+    public listDataResources(param: DataResourcesApiListDataResourcesRequest = {}, options?: ConfigurationOptions): Promise<ListDataResources200Response> {
         return this.api.listDataResources(param.dataStoreId, param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4645,7 +4760,7 @@ export class ObjectDataResourcesApi {
      * List names of data resources
      * @param param the request object
      */
-    public listDataResourcesNamesWithHttpInfo(param: DataResourcesApiListDataResourcesNamesRequest, options?: Configuration): Promise<HttpInfo<Array<string>>> {
+    public listDataResourcesNamesWithHttpInfo(param: DataResourcesApiListDataResourcesNamesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Array<string>>> {
         return this.api.listDataResourcesNamesWithHttpInfo(param.prefix, param.dataStoreId,  options).toPromise();
     }
 
@@ -4654,7 +4769,7 @@ export class ObjectDataResourcesApi {
      * List names of data resources
      * @param param the request object
      */
-    public listDataResourcesNames(param: DataResourcesApiListDataResourcesNamesRequest, options?: Configuration): Promise<Array<string>> {
+    public listDataResourcesNames(param: DataResourcesApiListDataResourcesNamesRequest, options?: ConfigurationOptions): Promise<Array<string>> {
         return this.api.listDataResourcesNames(param.prefix, param.dataStoreId,  options).toPromise();
     }
 
@@ -4663,7 +4778,7 @@ export class ObjectDataResourcesApi {
      * Remove resource from DSPM
      * @param param the request object
      */
-    public removeResourceWithHttpInfo(param: DataResourcesApiRemoveResourceRequest, options?: Configuration): Promise<HttpInfo<RemoveResource200Response>> {
+    public removeResourceWithHttpInfo(param: DataResourcesApiRemoveResourceRequest, options?: ConfigurationOptions): Promise<HttpInfo<RemoveResource200Response>> {
         return this.api.removeResourceWithHttpInfo(param.dataResourceId, param.dataStoreId,  options).toPromise();
     }
 
@@ -4672,7 +4787,7 @@ export class ObjectDataResourcesApi {
      * Remove resource from DSPM
      * @param param the request object
      */
-    public removeResource(param: DataResourcesApiRemoveResourceRequest, options?: Configuration): Promise<RemoveResource200Response> {
+    public removeResource(param: DataResourcesApiRemoveResourceRequest, options?: ConfigurationOptions): Promise<RemoveResource200Response> {
         return this.api.removeResource(param.dataResourceId, param.dataStoreId,  options).toPromise();
     }
 
@@ -4681,7 +4796,7 @@ export class ObjectDataResourcesApi {
      * Set review status of a data resource
      * @param param the request object
      */
-    public updateResourceReviewStatusWithHttpInfo(param: DataResourcesApiUpdateResourceReviewStatusRequest, options?: Configuration): Promise<HttpInfo<UpdateResourceReviewStatus200Response>> {
+    public updateResourceReviewStatusWithHttpInfo(param: DataResourcesApiUpdateResourceReviewStatusRequest, options?: ConfigurationOptions): Promise<HttpInfo<UpdateResourceReviewStatus200Response>> {
         return this.api.updateResourceReviewStatusWithHttpInfo(param.dataResourceId, param.updateResourceReviewBody,  options).toPromise();
     }
 
@@ -4690,7 +4805,7 @@ export class ObjectDataResourcesApi {
      * Set review status of a data resource
      * @param param the request object
      */
-    public updateResourceReviewStatus(param: DataResourcesApiUpdateResourceReviewStatusRequest, options?: Configuration): Promise<UpdateResourceReviewStatus200Response> {
+    public updateResourceReviewStatus(param: DataResourcesApiUpdateResourceReviewStatusRequest, options?: ConfigurationOptions): Promise<UpdateResourceReviewStatus200Response> {
         return this.api.updateResourceReviewStatus(param.dataResourceId, param.updateResourceReviewBody,  options).toPromise();
     }
 
@@ -4702,6 +4817,7 @@ import { DataSensitivitiesApiRequestFactory, DataSensitivitiesApiResponseProcess
 export interface DataSensitivitiesApiGetSensitivitiesSummaryRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type ListSensitivitiesFilterParameter
      * @memberof DataSensitivitiesApigetSensitivitiesSummary
      */
@@ -4711,6 +4827,7 @@ export interface DataSensitivitiesApiGetSensitivitiesSummaryRequest {
 export interface DataSensitivitiesApiGetSensitivityRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataSensitivitiesApigetSensitivity
      */
@@ -4720,24 +4837,28 @@ export interface DataSensitivitiesApiGetSensitivityRequest {
 export interface DataSensitivitiesApiListSensitivitiesRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type ListSensitivitiesFilterParameter
      * @memberof DataSensitivitiesApilistSensitivities
      */
     filter?: ListSensitivitiesFilterParameter
     /**
      * 
+     * Defaults to: undefined
      * @type LastSeenSortSchema
      * @memberof DataSensitivitiesApilistSensitivities
      */
     sort?: LastSeenSortSchema
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataSensitivitiesApilistSensitivities
      */
     pageSize?: number
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataSensitivitiesApilistSensitivities
      */
@@ -4756,7 +4877,7 @@ export class ObjectDataSensitivitiesApi {
      * Get the summary of sensitivities
      * @param param the request object
      */
-    public getSensitivitiesSummaryWithHttpInfo(param: DataSensitivitiesApiGetSensitivitiesSummaryRequest = {}, options?: Configuration): Promise<HttpInfo<SensitivitiesSummary>> {
+    public getSensitivitiesSummaryWithHttpInfo(param: DataSensitivitiesApiGetSensitivitiesSummaryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<SensitivitiesSummary>> {
         return this.api.getSensitivitiesSummaryWithHttpInfo(param.filter,  options).toPromise();
     }
 
@@ -4765,7 +4886,7 @@ export class ObjectDataSensitivitiesApi {
      * Get the summary of sensitivities
      * @param param the request object
      */
-    public getSensitivitiesSummary(param: DataSensitivitiesApiGetSensitivitiesSummaryRequest = {}, options?: Configuration): Promise<SensitivitiesSummary> {
+    public getSensitivitiesSummary(param: DataSensitivitiesApiGetSensitivitiesSummaryRequest = {}, options?: ConfigurationOptions): Promise<SensitivitiesSummary> {
         return this.api.getSensitivitiesSummary(param.filter,  options).toPromise();
     }
 
@@ -4774,7 +4895,7 @@ export class ObjectDataSensitivitiesApi {
      * Get sensitivity details by providing its ID
      * @param param the request object
      */
-    public getSensitivityWithHttpInfo(param: DataSensitivitiesApiGetSensitivityRequest, options?: Configuration): Promise<HttpInfo<Sensitivity>> {
+    public getSensitivityWithHttpInfo(param: DataSensitivitiesApiGetSensitivityRequest, options?: ConfigurationOptions): Promise<HttpInfo<Sensitivity>> {
         return this.api.getSensitivityWithHttpInfo(param.sensitivityId,  options).toPromise();
     }
 
@@ -4783,7 +4904,7 @@ export class ObjectDataSensitivitiesApi {
      * Get sensitivity details by providing its ID
      * @param param the request object
      */
-    public getSensitivity(param: DataSensitivitiesApiGetSensitivityRequest, options?: Configuration): Promise<Sensitivity> {
+    public getSensitivity(param: DataSensitivitiesApiGetSensitivityRequest, options?: ConfigurationOptions): Promise<Sensitivity> {
         return this.api.getSensitivity(param.sensitivityId,  options).toPromise();
     }
 
@@ -4792,7 +4913,7 @@ export class ObjectDataSensitivitiesApi {
      * List sensitivities
      * @param param the request object
      */
-    public listSensitivitiesWithHttpInfo(param: DataSensitivitiesApiListSensitivitiesRequest = {}, options?: Configuration): Promise<HttpInfo<ListSensitivities200Response>> {
+    public listSensitivitiesWithHttpInfo(param: DataSensitivitiesApiListSensitivitiesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<ListSensitivities200Response>> {
         return this.api.listSensitivitiesWithHttpInfo(param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4801,7 +4922,7 @@ export class ObjectDataSensitivitiesApi {
      * List sensitivities
      * @param param the request object
      */
-    public listSensitivities(param: DataSensitivitiesApiListSensitivitiesRequest = {}, options?: Configuration): Promise<ListSensitivities200Response> {
+    public listSensitivities(param: DataSensitivitiesApiListSensitivitiesRequest = {}, options?: ConfigurationOptions): Promise<ListSensitivities200Response> {
         return this.api.listSensitivities(param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -4813,6 +4934,7 @@ import { DataStoresApiRequestFactory, DataStoresApiResponseProcessor} from "../a
 export interface DataStoresApiGetDataStoreRequest {
     /**
      * ID of the data store
+     * Defaults to: undefined
      * @type string
      * @memberof DataStoresApigetDataStore
      */
@@ -4822,6 +4944,7 @@ export interface DataStoresApiGetDataStoreRequest {
 export interface DataStoresApiGetDataStoresSummaryRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type ListDataStoresFilterParameter
      * @memberof DataStoresApigetDataStoresSummary
      */
@@ -4831,12 +4954,14 @@ export interface DataStoresApiGetDataStoresSummaryRequest {
 export interface DataStoresApiListAllDataStoresLabelsRequest {
     /**
      * Prefix of data store label
+     * Defaults to: undefined
      * @type string
      * @memberof DataStoresApilistAllDataStoresLabels
      */
     prefix?: string
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataStoresApilistAllDataStoresLabels
      */
@@ -4846,24 +4971,28 @@ export interface DataStoresApiListAllDataStoresLabelsRequest {
 export interface DataStoresApiListDataStoresRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type ListDataStoresFilterParameter
      * @memberof DataStoresApilistDataStores
      */
     filter?: ListDataStoresFilterParameter
     /**
      * 
+     * Defaults to: undefined
      * @type ListDataStoresSortParameter
      * @memberof DataStoresApilistDataStores
      */
     sort?: ListDataStoresSortParameter
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataStoresApilistDataStores
      */
     pageSize?: number
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataStoresApilistDataStores
      */
@@ -4873,12 +5002,14 @@ export interface DataStoresApiListDataStoresRequest {
 export interface DataStoresApiListDataStoresCloudTagsKeysRequest {
     /**
      * Prefix of cloud tag key
+     * Defaults to: undefined
      * @type string
      * @memberof DataStoresApilistDataStoresCloudTagsKeys
      */
     prefix: string
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataStoresApilistDataStoresCloudTagsKeys
      */
@@ -4888,18 +5019,21 @@ export interface DataStoresApiListDataStoresCloudTagsKeysRequest {
 export interface DataStoresApiListDataStoresCloudTagsValuesRequest {
     /**
      * Prefix of cloud tag value
+     * Defaults to: undefined
      * @type string
      * @memberof DataStoresApilistDataStoresCloudTagsValues
      */
     prefix: string
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataStoresApilistDataStoresCloudTagsValues
      */
     tagKey: string
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataStoresApilistDataStoresCloudTagsValues
      */
@@ -4909,6 +5043,7 @@ export interface DataStoresApiListDataStoresCloudTagsValuesRequest {
 export interface DataStoresApiListDataStoresNamesRequest {
     /**
      * Prefix of data store name
+     * Defaults to: undefined
      * @type string
      * @memberof DataStoresApilistDataStoresNames
      */
@@ -4927,6 +5062,7 @@ export interface DataStoresApiRescanDataStoreRequest {
 export interface DataStoresApiSetDataStoreLabelRequest {
     /**
      * Data store ID
+     * Defaults to: undefined
      * @type string
      * @memberof DataStoresApisetDataStoreLabel
      */
@@ -4960,7 +5096,7 @@ export class ObjectDataStoresApi {
      * Get a data store by its ID
      * @param param the request object
      */
-    public getDataStoreWithHttpInfo(param: DataStoresApiGetDataStoreRequest, options?: Configuration): Promise<HttpInfo<DataStore>> {
+    public getDataStoreWithHttpInfo(param: DataStoresApiGetDataStoreRequest, options?: ConfigurationOptions): Promise<HttpInfo<DataStore>> {
         return this.api.getDataStoreWithHttpInfo(param.dataStoreId,  options).toPromise();
     }
 
@@ -4969,7 +5105,7 @@ export class ObjectDataStoresApi {
      * Get a data store by its ID
      * @param param the request object
      */
-    public getDataStore(param: DataStoresApiGetDataStoreRequest, options?: Configuration): Promise<DataStore> {
+    public getDataStore(param: DataStoresApiGetDataStoreRequest, options?: ConfigurationOptions): Promise<DataStore> {
         return this.api.getDataStore(param.dataStoreId,  options).toPromise();
     }
 
@@ -4978,7 +5114,7 @@ export class ObjectDataStoresApi {
      * Get summary of data stores
      * @param param the request object
      */
-    public getDataStoresSummaryWithHttpInfo(param: DataStoresApiGetDataStoresSummaryRequest = {}, options?: Configuration): Promise<HttpInfo<DataStoresSummary>> {
+    public getDataStoresSummaryWithHttpInfo(param: DataStoresApiGetDataStoresSummaryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<DataStoresSummary>> {
         return this.api.getDataStoresSummaryWithHttpInfo(param.filter,  options).toPromise();
     }
 
@@ -4987,7 +5123,7 @@ export class ObjectDataStoresApi {
      * Get summary of data stores
      * @param param the request object
      */
-    public getDataStoresSummary(param: DataStoresApiGetDataStoresSummaryRequest = {}, options?: Configuration): Promise<DataStoresSummary> {
+    public getDataStoresSummary(param: DataStoresApiGetDataStoresSummaryRequest = {}, options?: ConfigurationOptions): Promise<DataStoresSummary> {
         return this.api.getDataStoresSummary(param.filter,  options).toPromise();
     }
 
@@ -4996,7 +5132,7 @@ export class ObjectDataStoresApi {
      * List labels of data stores.
      * @param param the request object
      */
-    public listAllDataStoresLabelsWithHttpInfo(param: DataStoresApiListAllDataStoresLabelsRequest = {}, options?: Configuration): Promise<HttpInfo<Array<string>>> {
+    public listAllDataStoresLabelsWithHttpInfo(param: DataStoresApiListAllDataStoresLabelsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Array<string>>> {
         return this.api.listAllDataStoresLabelsWithHttpInfo(param.prefix, param.maxResults,  options).toPromise();
     }
 
@@ -5005,7 +5141,7 @@ export class ObjectDataStoresApi {
      * List labels of data stores.
      * @param param the request object
      */
-    public listAllDataStoresLabels(param: DataStoresApiListAllDataStoresLabelsRequest = {}, options?: Configuration): Promise<Array<string>> {
+    public listAllDataStoresLabels(param: DataStoresApiListAllDataStoresLabelsRequest = {}, options?: ConfigurationOptions): Promise<Array<string>> {
         return this.api.listAllDataStoresLabels(param.prefix, param.maxResults,  options).toPromise();
     }
 
@@ -5014,7 +5150,7 @@ export class ObjectDataStoresApi {
      * List data stores
      * @param param the request object
      */
-    public listDataStoresWithHttpInfo(param: DataStoresApiListDataStoresRequest = {}, options?: Configuration): Promise<HttpInfo<ListDataStores200Response>> {
+    public listDataStoresWithHttpInfo(param: DataStoresApiListDataStoresRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<ListDataStores200Response>> {
         return this.api.listDataStoresWithHttpInfo(param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -5023,7 +5159,7 @@ export class ObjectDataStoresApi {
      * List data stores
      * @param param the request object
      */
-    public listDataStores(param: DataStoresApiListDataStoresRequest = {}, options?: Configuration): Promise<ListDataStores200Response> {
+    public listDataStores(param: DataStoresApiListDataStoresRequest = {}, options?: ConfigurationOptions): Promise<ListDataStores200Response> {
         return this.api.listDataStores(param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -5032,7 +5168,7 @@ export class ObjectDataStoresApi {
      * List the cloud tag keys of data stores that can be filtered on the basis of prefixes.
      * @param param the request object
      */
-    public listDataStoresCloudTagsKeysWithHttpInfo(param: DataStoresApiListDataStoresCloudTagsKeysRequest, options?: Configuration): Promise<HttpInfo<Array<string>>> {
+    public listDataStoresCloudTagsKeysWithHttpInfo(param: DataStoresApiListDataStoresCloudTagsKeysRequest, options?: ConfigurationOptions): Promise<HttpInfo<Array<string>>> {
         return this.api.listDataStoresCloudTagsKeysWithHttpInfo(param.prefix, param.maxResults,  options).toPromise();
     }
 
@@ -5041,7 +5177,7 @@ export class ObjectDataStoresApi {
      * List the cloud tag keys of data stores that can be filtered on the basis of prefixes.
      * @param param the request object
      */
-    public listDataStoresCloudTagsKeys(param: DataStoresApiListDataStoresCloudTagsKeysRequest, options?: Configuration): Promise<Array<string>> {
+    public listDataStoresCloudTagsKeys(param: DataStoresApiListDataStoresCloudTagsKeysRequest, options?: ConfigurationOptions): Promise<Array<string>> {
         return this.api.listDataStoresCloudTagsKeys(param.prefix, param.maxResults,  options).toPromise();
     }
 
@@ -5050,7 +5186,7 @@ export class ObjectDataStoresApi {
      * List the cloud tag values of data stores that can be filtered on the basis of prefixes and cloud tag key names.
      * @param param the request object
      */
-    public listDataStoresCloudTagsValuesWithHttpInfo(param: DataStoresApiListDataStoresCloudTagsValuesRequest, options?: Configuration): Promise<HttpInfo<Array<string>>> {
+    public listDataStoresCloudTagsValuesWithHttpInfo(param: DataStoresApiListDataStoresCloudTagsValuesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Array<string>>> {
         return this.api.listDataStoresCloudTagsValuesWithHttpInfo(param.prefix, param.tagKey, param.maxResults,  options).toPromise();
     }
 
@@ -5059,7 +5195,7 @@ export class ObjectDataStoresApi {
      * List the cloud tag values of data stores that can be filtered on the basis of prefixes and cloud tag key names.
      * @param param the request object
      */
-    public listDataStoresCloudTagsValues(param: DataStoresApiListDataStoresCloudTagsValuesRequest, options?: Configuration): Promise<Array<string>> {
+    public listDataStoresCloudTagsValues(param: DataStoresApiListDataStoresCloudTagsValuesRequest, options?: ConfigurationOptions): Promise<Array<string>> {
         return this.api.listDataStoresCloudTagsValues(param.prefix, param.tagKey, param.maxResults,  options).toPromise();
     }
 
@@ -5068,7 +5204,7 @@ export class ObjectDataStoresApi {
      * List name of filterable data stores
      * @param param the request object
      */
-    public listDataStoresNamesWithHttpInfo(param: DataStoresApiListDataStoresNamesRequest, options?: Configuration): Promise<HttpInfo<Array<string>>> {
+    public listDataStoresNamesWithHttpInfo(param: DataStoresApiListDataStoresNamesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Array<string>>> {
         return this.api.listDataStoresNamesWithHttpInfo(param.prefix,  options).toPromise();
     }
 
@@ -5077,7 +5213,7 @@ export class ObjectDataStoresApi {
      * List name of filterable data stores
      * @param param the request object
      */
-    public listDataStoresNames(param: DataStoresApiListDataStoresNamesRequest, options?: Configuration): Promise<Array<string>> {
+    public listDataStoresNames(param: DataStoresApiListDataStoresNamesRequest, options?: ConfigurationOptions): Promise<Array<string>> {
         return this.api.listDataStoresNames(param.prefix,  options).toPromise();
     }
 
@@ -5086,7 +5222,7 @@ export class ObjectDataStoresApi {
      * Post data store rescan request
      * @param param the request object
      */
-    public rescanDataStoreWithHttpInfo(param: DataStoresApiRescanDataStoreRequest, options?: Configuration): Promise<HttpInfo<void>> {
+    public rescanDataStoreWithHttpInfo(param: DataStoresApiRescanDataStoreRequest, options?: ConfigurationOptions): Promise<HttpInfo<void>> {
         return this.api.rescanDataStoreWithHttpInfo(param.rescanDataStoreRequest,  options).toPromise();
     }
 
@@ -5095,7 +5231,7 @@ export class ObjectDataStoresApi {
      * Post data store rescan request
      * @param param the request object
      */
-    public rescanDataStore(param: DataStoresApiRescanDataStoreRequest, options?: Configuration): Promise<void> {
+    public rescanDataStore(param: DataStoresApiRescanDataStoreRequest, options?: ConfigurationOptions): Promise<void> {
         return this.api.rescanDataStore(param.rescanDataStoreRequest,  options).toPromise();
     }
 
@@ -5104,7 +5240,7 @@ export class ObjectDataStoresApi {
      * Label a data store with an existing or new label
      * @param param the request object
      */
-    public setDataStoreLabelWithHttpInfo(param: DataStoresApiSetDataStoreLabelRequest, options?: Configuration): Promise<HttpInfo<void>> {
+    public setDataStoreLabelWithHttpInfo(param: DataStoresApiSetDataStoreLabelRequest, options?: ConfigurationOptions): Promise<HttpInfo<void>> {
         return this.api.setDataStoreLabelWithHttpInfo(param.dataStoreId, param.setDataStoreLabelRequest,  options).toPromise();
     }
 
@@ -5113,7 +5249,7 @@ export class ObjectDataStoresApi {
      * Label a data store with an existing or new label
      * @param param the request object
      */
-    public setDataStoreLabel(param: DataStoresApiSetDataStoreLabelRequest, options?: Configuration): Promise<void> {
+    public setDataStoreLabel(param: DataStoresApiSetDataStoreLabelRequest, options?: ConfigurationOptions): Promise<void> {
         return this.api.setDataStoreLabel(param.dataStoreId, param.setDataStoreLabelRequest,  options).toPromise();
     }
 
@@ -5122,7 +5258,7 @@ export class ObjectDataStoresApi {
      * Update the name of a Data store custodian
      * @param param the request object
      */
-    public updateDatastoreCustodianWithHttpInfo(param: DataStoresApiUpdateDatastoreCustodianRequest, options?: Configuration): Promise<HttpInfo<UpdateDatastoreCustodian200Response>> {
+    public updateDatastoreCustodianWithHttpInfo(param: DataStoresApiUpdateDatastoreCustodianRequest, options?: ConfigurationOptions): Promise<HttpInfo<UpdateDatastoreCustodian200Response>> {
         return this.api.updateDatastoreCustodianWithHttpInfo(param.updateCustodianBody,  options).toPromise();
     }
 
@@ -5131,7 +5267,7 @@ export class ObjectDataStoresApi {
      * Update the name of a Data store custodian
      * @param param the request object
      */
-    public updateDatastoreCustodian(param: DataStoresApiUpdateDatastoreCustodianRequest, options?: Configuration): Promise<UpdateDatastoreCustodian200Response> {
+    public updateDatastoreCustodian(param: DataStoresApiUpdateDatastoreCustodianRequest, options?: ConfigurationOptions): Promise<UpdateDatastoreCustodian200Response> {
         return this.api.updateDatastoreCustodian(param.updateCustodianBody,  options).toPromise();
     }
 
@@ -5143,12 +5279,14 @@ import { DataVulnerabilitiesApiRequestFactory, DataVulnerabilitiesApiResponsePro
 export interface DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApiaddVulnerabilityStatusComment
      */
     vulnerabilityId: string
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApiaddVulnerabilityStatusComment
      */
@@ -5164,6 +5302,7 @@ export interface DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest {
 export interface DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type VulnerabilitiesFilterOptions
      * @memberof DataVulnerabilitiesApigetVulnerabilitiesSummary
      */
@@ -5173,6 +5312,7 @@ export interface DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest {
 export interface DataVulnerabilitiesApiGetVulnerabilityRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApigetVulnerability
      */
@@ -5182,24 +5322,28 @@ export interface DataVulnerabilitiesApiGetVulnerabilityRequest {
 export interface DataVulnerabilitiesApiListVulnerabilitiesRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type VulnerabilitiesFilterOptions
      * @memberof DataVulnerabilitiesApilistVulnerabilities
      */
     filter?: VulnerabilitiesFilterOptions
     /**
      * 
+     * Defaults to: undefined
      * @type ListVulnerabilitiesSortParameter
      * @memberof DataVulnerabilitiesApilistVulnerabilities
      */
     sort?: ListVulnerabilitiesSortParameter
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataVulnerabilitiesApilistVulnerabilities
      */
     pageSize?: number
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApilistVulnerabilities
      */
@@ -5209,24 +5353,28 @@ export interface DataVulnerabilitiesApiListVulnerabilitiesRequest {
 export interface DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type VulnerabilitiesByDataStoreFilterOptions
      * @memberof DataVulnerabilitiesApilistVulnerabilitiesByDataStore
      */
     filter?: VulnerabilitiesByDataStoreFilterOptions
     /**
      * 
+     * Defaults to: undefined
      * @type ListVulnerabilitiesByDataStoreSortParameter
      * @memberof DataVulnerabilitiesApilistVulnerabilitiesByDataStore
      */
     sort?: ListVulnerabilitiesByDataStoreSortParameter
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof DataVulnerabilitiesApilistVulnerabilitiesByDataStore
      */
     pageSize?: number
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApilistVulnerabilitiesByDataStore
      */
@@ -5236,18 +5384,21 @@ export interface DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest {
 export interface DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApiremoveVulnerabilityStatusComment
      */
     vulnerabilityId: string
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApiremoveVulnerabilityStatusComment
      */
     statusId: string
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApiremoveVulnerabilityStatusComment
      */
@@ -5257,6 +5408,7 @@ export interface DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest {
 export interface DataVulnerabilitiesApiSetVulnerabilityStatusRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApisetVulnerabilityStatus
      */
@@ -5272,18 +5424,21 @@ export interface DataVulnerabilitiesApiSetVulnerabilityStatusRequest {
 export interface DataVulnerabilitiesApiUpdateVulnerabilityStatusCommentRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApiupdateVulnerabilityStatusComment
      */
     vulnerabilityId: string
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApiupdateVulnerabilityStatusComment
      */
     statusId: string
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof DataVulnerabilitiesApiupdateVulnerabilityStatusComment
      */
@@ -5308,7 +5463,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Add vulnerability status comment
      * @param param the request object
      */
-    public addVulnerabilityStatusCommentWithHttpInfo(param: DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest, options?: Configuration): Promise<HttpInfo<VulnerabilityStatus>> {
+    public addVulnerabilityStatusCommentWithHttpInfo(param: DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest, options?: ConfigurationOptions): Promise<HttpInfo<VulnerabilityStatus>> {
         return this.api.addVulnerabilityStatusCommentWithHttpInfo(param.vulnerabilityId, param.statusId, param.addCommentBody,  options).toPromise();
     }
 
@@ -5317,7 +5472,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Add vulnerability status comment
      * @param param the request object
      */
-    public addVulnerabilityStatusComment(param: DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest, options?: Configuration): Promise<VulnerabilityStatus> {
+    public addVulnerabilityStatusComment(param: DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest, options?: ConfigurationOptions): Promise<VulnerabilityStatus> {
         return this.api.addVulnerabilityStatusComment(param.vulnerabilityId, param.statusId, param.addCommentBody,  options).toPromise();
     }
 
@@ -5326,7 +5481,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Get vulnerabilities summary
      * @param param the request object
      */
-    public getVulnerabilitiesSummaryWithHttpInfo(param: DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest = {}, options?: Configuration): Promise<HttpInfo<VulnerabilitiesSummary>> {
+    public getVulnerabilitiesSummaryWithHttpInfo(param: DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<VulnerabilitiesSummary>> {
         return this.api.getVulnerabilitiesSummaryWithHttpInfo(param.filter,  options).toPromise();
     }
 
@@ -5335,7 +5490,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Get vulnerabilities summary
      * @param param the request object
      */
-    public getVulnerabilitiesSummary(param: DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest = {}, options?: Configuration): Promise<VulnerabilitiesSummary> {
+    public getVulnerabilitiesSummary(param: DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest = {}, options?: ConfigurationOptions): Promise<VulnerabilitiesSummary> {
         return this.api.getVulnerabilitiesSummary(param.filter,  options).toPromise();
     }
 
@@ -5344,7 +5499,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Get vulnerability details by ID
      * @param param the request object
      */
-    public getVulnerabilityWithHttpInfo(param: DataVulnerabilitiesApiGetVulnerabilityRequest, options?: Configuration): Promise<HttpInfo<Vulnerability>> {
+    public getVulnerabilityWithHttpInfo(param: DataVulnerabilitiesApiGetVulnerabilityRequest, options?: ConfigurationOptions): Promise<HttpInfo<Vulnerability>> {
         return this.api.getVulnerabilityWithHttpInfo(param.vulnerabilityId,  options).toPromise();
     }
 
@@ -5353,7 +5508,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Get vulnerability details by ID
      * @param param the request object
      */
-    public getVulnerability(param: DataVulnerabilitiesApiGetVulnerabilityRequest, options?: Configuration): Promise<Vulnerability> {
+    public getVulnerability(param: DataVulnerabilitiesApiGetVulnerabilityRequest, options?: ConfigurationOptions): Promise<Vulnerability> {
         return this.api.getVulnerability(param.vulnerabilityId,  options).toPromise();
     }
 
@@ -5362,7 +5517,7 @@ export class ObjectDataVulnerabilitiesApi {
      * List vulnerabilities based on an applied filter
      * @param param the request object
      */
-    public listVulnerabilitiesWithHttpInfo(param: DataVulnerabilitiesApiListVulnerabilitiesRequest = {}, options?: Configuration): Promise<HttpInfo<ListVulnerabilities200Response>> {
+    public listVulnerabilitiesWithHttpInfo(param: DataVulnerabilitiesApiListVulnerabilitiesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<ListVulnerabilities200Response>> {
         return this.api.listVulnerabilitiesWithHttpInfo(param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -5371,7 +5526,7 @@ export class ObjectDataVulnerabilitiesApi {
      * List vulnerabilities based on an applied filter
      * @param param the request object
      */
-    public listVulnerabilities(param: DataVulnerabilitiesApiListVulnerabilitiesRequest = {}, options?: Configuration): Promise<ListVulnerabilities200Response> {
+    public listVulnerabilities(param: DataVulnerabilitiesApiListVulnerabilitiesRequest = {}, options?: ConfigurationOptions): Promise<ListVulnerabilities200Response> {
         return this.api.listVulnerabilities(param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -5380,7 +5535,7 @@ export class ObjectDataVulnerabilitiesApi {
      * List vulnerabilities of data stores
      * @param param the request object
      */
-    public listVulnerabilitiesByDataStoreWithHttpInfo(param: DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest = {}, options?: Configuration): Promise<HttpInfo<ListVulnerabilitiesByDataStore200Response>> {
+    public listVulnerabilitiesByDataStoreWithHttpInfo(param: DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<ListVulnerabilitiesByDataStore200Response>> {
         return this.api.listVulnerabilitiesByDataStoreWithHttpInfo(param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -5389,7 +5544,7 @@ export class ObjectDataVulnerabilitiesApi {
      * List vulnerabilities of data stores
      * @param param the request object
      */
-    public listVulnerabilitiesByDataStore(param: DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest = {}, options?: Configuration): Promise<ListVulnerabilitiesByDataStore200Response> {
+    public listVulnerabilitiesByDataStore(param: DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest = {}, options?: ConfigurationOptions): Promise<ListVulnerabilitiesByDataStore200Response> {
         return this.api.listVulnerabilitiesByDataStore(param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -5398,7 +5553,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Delete vulnerability status comment
      * @param param the request object
      */
-    public removeVulnerabilityStatusCommentWithHttpInfo(param: DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest, options?: Configuration): Promise<HttpInfo<void>> {
+    public removeVulnerabilityStatusCommentWithHttpInfo(param: DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest, options?: ConfigurationOptions): Promise<HttpInfo<void>> {
         return this.api.removeVulnerabilityStatusCommentWithHttpInfo(param.vulnerabilityId, param.statusId, param.commentId,  options).toPromise();
     }
 
@@ -5407,7 +5562,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Delete vulnerability status comment
      * @param param the request object
      */
-    public removeVulnerabilityStatusComment(param: DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest, options?: Configuration): Promise<void> {
+    public removeVulnerabilityStatusComment(param: DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest, options?: ConfigurationOptions): Promise<void> {
         return this.api.removeVulnerabilityStatusComment(param.vulnerabilityId, param.statusId, param.commentId,  options).toPromise();
     }
 
@@ -5416,7 +5571,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Set status of a vulnerability
      * @param param the request object
      */
-    public setVulnerabilityStatusWithHttpInfo(param: DataVulnerabilitiesApiSetVulnerabilityStatusRequest, options?: Configuration): Promise<HttpInfo<VulnerabilityStatus>> {
+    public setVulnerabilityStatusWithHttpInfo(param: DataVulnerabilitiesApiSetVulnerabilityStatusRequest, options?: ConfigurationOptions): Promise<HttpInfo<VulnerabilityStatus>> {
         return this.api.setVulnerabilityStatusWithHttpInfo(param.vulnerabilityId, param.setVulnerabilityStatusRequest,  options).toPromise();
     }
 
@@ -5425,7 +5580,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Set status of a vulnerability
      * @param param the request object
      */
-    public setVulnerabilityStatus(param: DataVulnerabilitiesApiSetVulnerabilityStatusRequest, options?: Configuration): Promise<VulnerabilityStatus> {
+    public setVulnerabilityStatus(param: DataVulnerabilitiesApiSetVulnerabilityStatusRequest, options?: ConfigurationOptions): Promise<VulnerabilityStatus> {
         return this.api.setVulnerabilityStatus(param.vulnerabilityId, param.setVulnerabilityStatusRequest,  options).toPromise();
     }
 
@@ -5434,7 +5589,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Set vulnerability status
      * @param param the request object
      */
-    public updateVulnerabilityStatusCommentWithHttpInfo(param: DataVulnerabilitiesApiUpdateVulnerabilityStatusCommentRequest, options?: Configuration): Promise<HttpInfo<VulnerabilityStatusComment>> {
+    public updateVulnerabilityStatusCommentWithHttpInfo(param: DataVulnerabilitiesApiUpdateVulnerabilityStatusCommentRequest, options?: ConfigurationOptions): Promise<HttpInfo<VulnerabilityStatusComment>> {
         return this.api.updateVulnerabilityStatusCommentWithHttpInfo(param.vulnerabilityId, param.statusId, param.commentId, param.updateCommentBody,  options).toPromise();
     }
 
@@ -5443,7 +5598,7 @@ export class ObjectDataVulnerabilitiesApi {
      * Set vulnerability status
      * @param param the request object
      */
-    public updateVulnerabilityStatusComment(param: DataVulnerabilitiesApiUpdateVulnerabilityStatusCommentRequest, options?: Configuration): Promise<VulnerabilityStatusComment> {
+    public updateVulnerabilityStatusComment(param: DataVulnerabilitiesApiUpdateVulnerabilityStatusCommentRequest, options?: ConfigurationOptions): Promise<VulnerabilityStatusComment> {
         return this.api.updateVulnerabilityStatusComment(param.vulnerabilityId, param.statusId, param.commentId, param.updateCommentBody,  options).toPromise();
     }
 
@@ -5472,7 +5627,7 @@ export class ObjectDatabootstrapperServiceApi {
      * Summary: Load data Description: Load data for a tenant.
      * @param param the request object
      */
-    public databootstrapperServiceLoadDataWithHttpInfo(param: DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest, options?: Configuration): Promise<HttpInfo<Databootstrapperv3LoadDataResponse>> {
+    public databootstrapperServiceLoadDataWithHttpInfo(param: DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest, options?: ConfigurationOptions): Promise<HttpInfo<Databootstrapperv3LoadDataResponse>> {
         return this.api.databootstrapperServiceLoadDataWithHttpInfo(param.databootstrapperv3LoadDataRequest,  options).toPromise();
     }
 
@@ -5480,7 +5635,7 @@ export class ObjectDatabootstrapperServiceApi {
      * Summary: Load data Description: Load data for a tenant.
      * @param param the request object
      */
-    public databootstrapperServiceLoadData(param: DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest, options?: Configuration): Promise<Databootstrapperv3LoadDataResponse> {
+    public databootstrapperServiceLoadData(param: DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest, options?: ConfigurationOptions): Promise<Databootstrapperv3LoadDataResponse> {
         return this.api.databootstrapperServiceLoadData(param.databootstrapperv3LoadDataRequest,  options).toPromise();
     }
 
@@ -5492,6 +5647,7 @@ import { DatamartProcessorServiceApiRequestFactory, DatamartProcessorServiceApiR
 export interface DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest {
     /**
      * Ingestion id.
+     * Defaults to: undefined
      * @type string
      * @memberof DatamartProcessorServiceApidatamartProcessorServiceGetDatamartInfo
      */
@@ -5501,12 +5657,14 @@ export interface DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartI
 export interface DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest {
     /**
      * Data starting time period in UTC.
+     * Defaults to: undefined
      * @type Date
      * @memberof DatamartProcessorServiceApidatamartProcessorServiceGetDatamarts
      */
     periodStart?: Date
     /**
      * Data ending time period in UTC.
+     * Defaults to: undefined
      * @type Date
      * @memberof DatamartProcessorServiceApidatamartProcessorServiceGetDatamarts
      */
@@ -5528,6 +5686,7 @@ export interface DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompl
 export interface DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest {
     /**
      * Request id which co-relates to request.
+     * Defaults to: undefined
      * @type string
      * @memberof DatamartProcessorServiceApidatamartProcessorServiceStoreExtractionLogs
      */
@@ -5543,6 +5702,7 @@ export interface DatamartProcessorServiceApiDatamartProcessorServiceStoreExtract
 export interface DatamartProcessorServiceApiUploadDatamartRequest {
     /**
      * The file to upload.
+     * Defaults to: undefined
      * @type HttpFile
      * @memberof DatamartProcessorServiceApiuploadDatamart
      */
@@ -5560,7 +5720,7 @@ export class ObjectDatamartProcessorServiceApi {
      * Summary: Get datamarts Description: Return a list of files inside a datamart to the caller.
      * @param param the request object
      */
-    public datamartProcessorServiceGetDatamartInfoWithHttpInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest = {}, options?: Configuration): Promise<HttpInfo<Datamartprocessorv3GetDatamartInfoResponse>> {
+    public datamartProcessorServiceGetDatamartInfoWithHttpInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Datamartprocessorv3GetDatamartInfoResponse>> {
         return this.api.datamartProcessorServiceGetDatamartInfoWithHttpInfo(param.ingestionId,  options).toPromise();
     }
 
@@ -5568,7 +5728,7 @@ export class ObjectDatamartProcessorServiceApi {
      * Summary: Get datamarts Description: Return a list of files inside a datamart to the caller.
      * @param param the request object
      */
-    public datamartProcessorServiceGetDatamartInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest = {}, options?: Configuration): Promise<Datamartprocessorv3GetDatamartInfoResponse> {
+    public datamartProcessorServiceGetDatamartInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest = {}, options?: ConfigurationOptions): Promise<Datamartprocessorv3GetDatamartInfoResponse> {
         return this.api.datamartProcessorServiceGetDatamartInfo(param.ingestionId,  options).toPromise();
     }
 
@@ -5576,7 +5736,7 @@ export class ObjectDatamartProcessorServiceApi {
      * Summary: Get datamarts Description: Return a list of datamarts for a time interval to the caller.
      * @param param the request object
      */
-    public datamartProcessorServiceGetDatamartsWithHttpInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest = {}, options?: Configuration): Promise<HttpInfo<Datamartprocessorv3GetDatamartResponse>> {
+    public datamartProcessorServiceGetDatamartsWithHttpInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Datamartprocessorv3GetDatamartResponse>> {
         return this.api.datamartProcessorServiceGetDatamartsWithHttpInfo(param.periodStart, param.periodEnd,  options).toPromise();
     }
 
@@ -5584,7 +5744,7 @@ export class ObjectDatamartProcessorServiceApi {
      * Summary: Get datamarts Description: Return a list of datamarts for a time interval to the caller.
      * @param param the request object
      */
-    public datamartProcessorServiceGetDatamarts(param: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest = {}, options?: Configuration): Promise<Datamartprocessorv3GetDatamartResponse> {
+    public datamartProcessorServiceGetDatamarts(param: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest = {}, options?: ConfigurationOptions): Promise<Datamartprocessorv3GetDatamartResponse> {
         return this.api.datamartProcessorServiceGetDatamarts(param.periodStart, param.periodEnd,  options).toPromise();
     }
 
@@ -5592,7 +5752,7 @@ export class ObjectDatamartProcessorServiceApi {
      * Summary: Get rarliest start time Description: Return the earliest time period of data available in database.
      * @param param the request object
      */
-    public datamartProcessorServiceGetEarliestStartTimeWithHttpInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceGetEarliestStartTimeRequest = {}, options?: Configuration): Promise<HttpInfo<Datamartprocessorv3GetEarliestStartTimeResponse>> {
+    public datamartProcessorServiceGetEarliestStartTimeWithHttpInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceGetEarliestStartTimeRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Datamartprocessorv3GetEarliestStartTimeResponse>> {
         return this.api.datamartProcessorServiceGetEarliestStartTimeWithHttpInfo( options).toPromise();
     }
 
@@ -5600,21 +5760,21 @@ export class ObjectDatamartProcessorServiceApi {
      * Summary: Get rarliest start time Description: Return the earliest time period of data available in database.
      * @param param the request object
      */
-    public datamartProcessorServiceGetEarliestStartTime(param: DatamartProcessorServiceApiDatamartProcessorServiceGetEarliestStartTimeRequest = {}, options?: Configuration): Promise<Datamartprocessorv3GetEarliestStartTimeResponse> {
+    public datamartProcessorServiceGetEarliestStartTime(param: DatamartProcessorServiceApiDatamartProcessorServiceGetEarliestStartTimeRequest = {}, options?: ConfigurationOptions): Promise<Datamartprocessorv3GetEarliestStartTimeResponse> {
         return this.api.datamartProcessorServiceGetEarliestStartTime( options).toPromise();
     }
 
     /**
      * @param param the request object
      */
-    public datamartProcessorServiceSendAllCompleteFilesToQueueWithHttpInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest, options?: Configuration): Promise<HttpInfo<Datamartprocessorv3StatusResponseBase>> {
+    public datamartProcessorServiceSendAllCompleteFilesToQueueWithHttpInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest, options?: ConfigurationOptions): Promise<HttpInfo<Datamartprocessorv3StatusResponseBase>> {
         return this.api.datamartProcessorServiceSendAllCompleteFilesToQueueWithHttpInfo(param.body,  options).toPromise();
     }
 
     /**
      * @param param the request object
      */
-    public datamartProcessorServiceSendAllCompleteFilesToQueue(param: DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest, options?: Configuration): Promise<Datamartprocessorv3StatusResponseBase> {
+    public datamartProcessorServiceSendAllCompleteFilesToQueue(param: DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest, options?: ConfigurationOptions): Promise<Datamartprocessorv3StatusResponseBase> {
         return this.api.datamartProcessorServiceSendAllCompleteFilesToQueue(param.body,  options).toPromise();
     }
 
@@ -5622,7 +5782,7 @@ export class ObjectDatamartProcessorServiceApi {
      * Summary: Store extraction logs Description: Store the datamart extraction logs inside GI.
      * @param param the request object
      */
-    public datamartProcessorServiceStoreExtractionLogsWithHttpInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest, options?: Configuration): Promise<HttpInfo<Datamartprocessorv3DMExtractionLogsResponse>> {
+    public datamartProcessorServiceStoreExtractionLogsWithHttpInfo(param: DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Datamartprocessorv3DMExtractionLogsResponse>> {
         return this.api.datamartProcessorServiceStoreExtractionLogsWithHttpInfo(param.requestId, param.datamartprocessorv3DMExtractionLogsRequest,  options).toPromise();
     }
 
@@ -5630,7 +5790,7 @@ export class ObjectDatamartProcessorServiceApi {
      * Summary: Store extraction logs Description: Store the datamart extraction logs inside GI.
      * @param param the request object
      */
-    public datamartProcessorServiceStoreExtractionLogs(param: DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest, options?: Configuration): Promise<Datamartprocessorv3DMExtractionLogsResponse> {
+    public datamartProcessorServiceStoreExtractionLogs(param: DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest, options?: ConfigurationOptions): Promise<Datamartprocessorv3DMExtractionLogsResponse> {
         return this.api.datamartProcessorServiceStoreExtractionLogs(param.requestId, param.datamartprocessorv3DMExtractionLogsRequest,  options).toPromise();
     }
 
@@ -5638,7 +5798,7 @@ export class ObjectDatamartProcessorServiceApi {
      * Summary: Upload datamart Description: Upload datamart file for ingestion.
      * @param param the request object
      */
-    public uploadDatamartWithHttpInfo(param: DatamartProcessorServiceApiUploadDatamartRequest, options?: Configuration): Promise<HttpInfo<void>> {
+    public uploadDatamartWithHttpInfo(param: DatamartProcessorServiceApiUploadDatamartRequest, options?: ConfigurationOptions): Promise<HttpInfo<void>> {
         return this.api.uploadDatamartWithHttpInfo(param.file,  options).toPromise();
     }
 
@@ -5646,7 +5806,7 @@ export class ObjectDatamartProcessorServiceApi {
      * Summary: Upload datamart Description: Upload datamart file for ingestion.
      * @param param the request object
      */
-    public uploadDatamart(param: DatamartProcessorServiceApiUploadDatamartRequest, options?: Configuration): Promise<void> {
+    public uploadDatamart(param: DatamartProcessorServiceApiUploadDatamartRequest, options?: ConfigurationOptions): Promise<void> {
         return this.api.uploadDatamart(param.file,  options).toPromise();
     }
 
@@ -5667,6 +5827,7 @@ export interface EcosystemServiceApiEcosystemServiceCreateDatasetRequest {
 export interface EcosystemServiceApiEcosystemServiceDataInsertRequest {
     /**
      * Data set target name.
+     * Defaults to: undefined
      * @type string
      * @memberof EcosystemServiceApiecosystemServiceDataInsert
      */
@@ -5682,6 +5843,7 @@ export interface EcosystemServiceApiEcosystemServiceDataInsertRequest {
 export interface EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest {
     /**
      * Name of the dataset, required field.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof EcosystemServiceApiecosystemServiceDeleteDatasets
      */
@@ -5691,48 +5853,56 @@ export interface EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest {
 export interface EcosystemServiceApiEcosystemServiceGetDatasetDataRequest {
     /**
      * Name of the dataset.
+     * Defaults to: undefined
      * @type string
      * @memberof EcosystemServiceApiecosystemServiceGetDatasetData
      */
     datasetName: string
     /**
      * The amount to offset the rows by for pagination.
+     * Defaults to: undefined
      * @type number
      * @memberof EcosystemServiceApiecosystemServiceGetDatasetData
      */
     offset?: number
     /**
      * The max amount of rows to return for pagination.
+     * Defaults to: undefined
      * @type number
      * @memberof EcosystemServiceApiecosystemServiceGetDatasetData
      */
     limit?: number
     /**
      * If needs to return header information. It is for pagination. The first page needs header, the rest doesn\&#39;t need.
+     * Defaults to: undefined
      * @type boolean
      * @memberof EcosystemServiceApiecosystemServiceGetDatasetData
      */
     returnHeader?: boolean
     /**
      * Search field.
+     * Defaults to: undefined
      * @type string
      * @memberof EcosystemServiceApiecosystemServiceGetDatasetData
      */
     field?: string
     /**
      * Search value.
+     * Defaults to: undefined
      * @type string
      * @memberof EcosystemServiceApiecosystemServiceGetDatasetData
      */
     value?: string
     /**
      * Field to sort.
+     * Defaults to: undefined
      * @type string
      * @memberof EcosystemServiceApiecosystemServiceGetDatasetData
      */
     sortField?: string
     /**
      * Sort order.
+     * Defaults to: &#39;NONE&#39;
      * @type &#39;NONE&#39; | &#39;ASC&#39; | &#39;DESC&#39;
      * @memberof EcosystemServiceApiecosystemServiceGetDatasetData
      */
@@ -5742,6 +5912,7 @@ export interface EcosystemServiceApiEcosystemServiceGetDatasetDataRequest {
 export interface EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest {
     /**
      * Name of the dataset.
+     * Defaults to: undefined
      * @type string
      * @memberof EcosystemServiceApiecosystemServiceGetDatasetDetail
      */
@@ -5751,36 +5922,42 @@ export interface EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest {
 export interface EcosystemServiceApiEcosystemServiceGetDatasetsRequest {
     /**
      * Return datasets created at this time or later (&gt;&#x3D;).
+     * Defaults to: undefined
      * @type Date
      * @memberof EcosystemServiceApiecosystemServiceGetDatasets
      */
     filterStartTime?: Date
     /**
      * Return datasets created before this time (&lt;).
+     * Defaults to: undefined
      * @type Date
      * @memberof EcosystemServiceApiecosystemServiceGetDatasets
      */
     filterEndTime?: Date
     /**
      * The state filter groups commonly paired states. Only returns records that include the specified names.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof EcosystemServiceApiecosystemServiceGetDatasets
      */
     filterDatasetNames?: Array<string>
     /**
      * The amount to offset the rows by for pagination.
+     * Defaults to: undefined
      * @type number
      * @memberof EcosystemServiceApiecosystemServiceGetDatasets
      */
     offset?: number
     /**
      * The max amount of rows to return for pagination.
+     * Defaults to: undefined
      * @type number
      * @memberof EcosystemServiceApiecosystemServiceGetDatasets
      */
     limit?: number
     /**
      * Computing the filter counts is relatively expensive, only compute when needed.
+     * Defaults to: undefined
      * @type boolean
      * @memberof EcosystemServiceApiecosystemServiceGetDatasets
      */
@@ -5799,6 +5976,7 @@ export interface EcosystemServiceApiEcosystemServiceGetPurgableRowsRequest {
 export interface EcosystemServiceApiEcosystemServicePurgeDataRequest {
     /**
      * Name of the datasets, required field.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof EcosystemServiceApiecosystemServicePurgeData
      */
@@ -5825,7 +6003,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Create dataset Description: Save a definition in the database.
      * @param param the request object
      */
-    public ecosystemServiceCreateDatasetWithHttpInfo(param: EcosystemServiceApiEcosystemServiceCreateDatasetRequest, options?: Configuration): Promise<HttpInfo<Ecosystemv3CreateDatasetResponse>> {
+    public ecosystemServiceCreateDatasetWithHttpInfo(param: EcosystemServiceApiEcosystemServiceCreateDatasetRequest, options?: ConfigurationOptions): Promise<HttpInfo<Ecosystemv3CreateDatasetResponse>> {
         return this.api.ecosystemServiceCreateDatasetWithHttpInfo(param.ecosystemv3CreateDatasetRequest,  options).toPromise();
     }
 
@@ -5833,7 +6011,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Create dataset Description: Save a definition in the database.
      * @param param the request object
      */
-    public ecosystemServiceCreateDataset(param: EcosystemServiceApiEcosystemServiceCreateDatasetRequest, options?: Configuration): Promise<Ecosystemv3CreateDatasetResponse> {
+    public ecosystemServiceCreateDataset(param: EcosystemServiceApiEcosystemServiceCreateDatasetRequest, options?: ConfigurationOptions): Promise<Ecosystemv3CreateDatasetResponse> {
         return this.api.ecosystemServiceCreateDataset(param.ecosystemv3CreateDatasetRequest,  options).toPromise();
     }
 
@@ -5841,7 +6019,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Data insert Description: Process Data received from webhook API and insert.
      * @param param the request object
      */
-    public ecosystemServiceDataInsertWithHttpInfo(param: EcosystemServiceApiEcosystemServiceDataInsertRequest, options?: Configuration): Promise<HttpInfo<Ecosystemv3DataInsertResponse>> {
+    public ecosystemServiceDataInsertWithHttpInfo(param: EcosystemServiceApiEcosystemServiceDataInsertRequest, options?: ConfigurationOptions): Promise<HttpInfo<Ecosystemv3DataInsertResponse>> {
         return this.api.ecosystemServiceDataInsertWithHttpInfo(param.datasetName, param.ecosystemv3DataInsertRequest,  options).toPromise();
     }
 
@@ -5849,7 +6027,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Data insert Description: Process Data received from webhook API and insert.
      * @param param the request object
      */
-    public ecosystemServiceDataInsert(param: EcosystemServiceApiEcosystemServiceDataInsertRequest, options?: Configuration): Promise<Ecosystemv3DataInsertResponse> {
+    public ecosystemServiceDataInsert(param: EcosystemServiceApiEcosystemServiceDataInsertRequest, options?: ConfigurationOptions): Promise<Ecosystemv3DataInsertResponse> {
         return this.api.ecosystemServiceDataInsert(param.datasetName, param.ecosystemv3DataInsertRequest,  options).toPromise();
     }
 
@@ -5857,7 +6035,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Delete datasets Description: Delete an array of datasets.
      * @param param the request object
      */
-    public ecosystemServiceDeleteDatasetsWithHttpInfo(param: EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest = {}, options?: Configuration): Promise<HttpInfo<Ecosystemv3DeleteDatasetsResponse>> {
+    public ecosystemServiceDeleteDatasetsWithHttpInfo(param: EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Ecosystemv3DeleteDatasetsResponse>> {
         return this.api.ecosystemServiceDeleteDatasetsWithHttpInfo(param.datasetNames,  options).toPromise();
     }
 
@@ -5865,7 +6043,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Delete datasets Description: Delete an array of datasets.
      * @param param the request object
      */
-    public ecosystemServiceDeleteDatasets(param: EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest = {}, options?: Configuration): Promise<Ecosystemv3DeleteDatasetsResponse> {
+    public ecosystemServiceDeleteDatasets(param: EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest = {}, options?: ConfigurationOptions): Promise<Ecosystemv3DeleteDatasetsResponse> {
         return this.api.ecosystemServiceDeleteDatasets(param.datasetNames,  options).toPromise();
     }
 
@@ -5873,7 +6051,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Get dataset data Description: Return data report for a given dataset.
      * @param param the request object
      */
-    public ecosystemServiceGetDatasetDataWithHttpInfo(param: EcosystemServiceApiEcosystemServiceGetDatasetDataRequest, options?: Configuration): Promise<HttpInfo<Ecosystemv3GetDatasetDataResponse>> {
+    public ecosystemServiceGetDatasetDataWithHttpInfo(param: EcosystemServiceApiEcosystemServiceGetDatasetDataRequest, options?: ConfigurationOptions): Promise<HttpInfo<Ecosystemv3GetDatasetDataResponse>> {
         return this.api.ecosystemServiceGetDatasetDataWithHttpInfo(param.datasetName, param.offset, param.limit, param.returnHeader, param.field, param.value, param.sortField, param.sortOrder,  options).toPromise();
     }
 
@@ -5881,7 +6059,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Get dataset data Description: Return data report for a given dataset.
      * @param param the request object
      */
-    public ecosystemServiceGetDatasetData(param: EcosystemServiceApiEcosystemServiceGetDatasetDataRequest, options?: Configuration): Promise<Ecosystemv3GetDatasetDataResponse> {
+    public ecosystemServiceGetDatasetData(param: EcosystemServiceApiEcosystemServiceGetDatasetDataRequest, options?: ConfigurationOptions): Promise<Ecosystemv3GetDatasetDataResponse> {
         return this.api.ecosystemServiceGetDatasetData(param.datasetName, param.offset, param.limit, param.returnHeader, param.field, param.value, param.sortField, param.sortOrder,  options).toPromise();
     }
 
@@ -5889,7 +6067,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Get dataset detail Description: Return detail on a dataset definition.
      * @param param the request object
      */
-    public ecosystemServiceGetDatasetDetailWithHttpInfo(param: EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest, options?: Configuration): Promise<HttpInfo<Ecosystemv3GetDatasetDetailResponse>> {
+    public ecosystemServiceGetDatasetDetailWithHttpInfo(param: EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest, options?: ConfigurationOptions): Promise<HttpInfo<Ecosystemv3GetDatasetDetailResponse>> {
         return this.api.ecosystemServiceGetDatasetDetailWithHttpInfo(param.datasetName,  options).toPromise();
     }
 
@@ -5897,7 +6075,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Get dataset detail Description: Return detail on a dataset definition.
      * @param param the request object
      */
-    public ecosystemServiceGetDatasetDetail(param: EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest, options?: Configuration): Promise<Ecosystemv3GetDatasetDetailResponse> {
+    public ecosystemServiceGetDatasetDetail(param: EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest, options?: ConfigurationOptions): Promise<Ecosystemv3GetDatasetDetailResponse> {
         return this.api.ecosystemServiceGetDatasetDetail(param.datasetName,  options).toPromise();
     }
 
@@ -5905,7 +6083,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Get datasets Description: Return dataset list that matches the specified filter.
      * @param param the request object
      */
-    public ecosystemServiceGetDatasetsWithHttpInfo(param: EcosystemServiceApiEcosystemServiceGetDatasetsRequest = {}, options?: Configuration): Promise<HttpInfo<Ecosystemv3GetDatasetsResponse>> {
+    public ecosystemServiceGetDatasetsWithHttpInfo(param: EcosystemServiceApiEcosystemServiceGetDatasetsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Ecosystemv3GetDatasetsResponse>> {
         return this.api.ecosystemServiceGetDatasetsWithHttpInfo(param.filterStartTime, param.filterEndTime, param.filterDatasetNames, param.offset, param.limit, param.includeFilterCounts,  options).toPromise();
     }
 
@@ -5913,7 +6091,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Get datasets Description: Return dataset list that matches the specified filter.
      * @param param the request object
      */
-    public ecosystemServiceGetDatasets(param: EcosystemServiceApiEcosystemServiceGetDatasetsRequest = {}, options?: Configuration): Promise<Ecosystemv3GetDatasetsResponse> {
+    public ecosystemServiceGetDatasets(param: EcosystemServiceApiEcosystemServiceGetDatasetsRequest = {}, options?: ConfigurationOptions): Promise<Ecosystemv3GetDatasetsResponse> {
         return this.api.ecosystemServiceGetDatasets(param.filterStartTime, param.filterEndTime, param.filterDatasetNames, param.offset, param.limit, param.includeFilterCounts,  options).toPromise();
     }
 
@@ -5921,7 +6099,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Get purgable rows Description: Check the number of rows that can be purged.
      * @param param the request object
      */
-    public ecosystemServiceGetPurgableRowsWithHttpInfo(param: EcosystemServiceApiEcosystemServiceGetPurgableRowsRequest, options?: Configuration): Promise<HttpInfo<Ecosystemv3GetPurgableRowsResponse>> {
+    public ecosystemServiceGetPurgableRowsWithHttpInfo(param: EcosystemServiceApiEcosystemServiceGetPurgableRowsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Ecosystemv3GetPurgableRowsResponse>> {
         return this.api.ecosystemServiceGetPurgableRowsWithHttpInfo(param.ecosystemv3GetPurgableRowsRequest,  options).toPromise();
     }
 
@@ -5929,7 +6107,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Get purgable rows Description: Check the number of rows that can be purged.
      * @param param the request object
      */
-    public ecosystemServiceGetPurgableRows(param: EcosystemServiceApiEcosystemServiceGetPurgableRowsRequest, options?: Configuration): Promise<Ecosystemv3GetPurgableRowsResponse> {
+    public ecosystemServiceGetPurgableRows(param: EcosystemServiceApiEcosystemServiceGetPurgableRowsRequest, options?: ConfigurationOptions): Promise<Ecosystemv3GetPurgableRowsResponse> {
         return this.api.ecosystemServiceGetPurgableRows(param.ecosystemv3GetPurgableRowsRequest,  options).toPromise();
     }
 
@@ -5937,7 +6115,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Purge data Description: Purge data.
      * @param param the request object
      */
-    public ecosystemServicePurgeDataWithHttpInfo(param: EcosystemServiceApiEcosystemServicePurgeDataRequest = {}, options?: Configuration): Promise<HttpInfo<Ecosystemv3PurgeDataResponse>> {
+    public ecosystemServicePurgeDataWithHttpInfo(param: EcosystemServiceApiEcosystemServicePurgeDataRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Ecosystemv3PurgeDataResponse>> {
         return this.api.ecosystemServicePurgeDataWithHttpInfo(param.datasetNames,  options).toPromise();
     }
 
@@ -5945,7 +6123,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Purge data Description: Purge data.
      * @param param the request object
      */
-    public ecosystemServicePurgeData(param: EcosystemServiceApiEcosystemServicePurgeDataRequest = {}, options?: Configuration): Promise<Ecosystemv3PurgeDataResponse> {
+    public ecosystemServicePurgeData(param: EcosystemServiceApiEcosystemServicePurgeDataRequest = {}, options?: ConfigurationOptions): Promise<Ecosystemv3PurgeDataResponse> {
         return this.api.ecosystemServicePurgeData(param.datasetNames,  options).toPromise();
     }
 
@@ -5953,7 +6131,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
      * @param param the request object
      */
-    public ecosystemServiceTestIntegrationWithHttpInfo(param: EcosystemServiceApiEcosystemServiceTestIntegrationRequest, options?: Configuration): Promise<HttpInfo<Ecosystemv3TestIntegrationResponse>> {
+    public ecosystemServiceTestIntegrationWithHttpInfo(param: EcosystemServiceApiEcosystemServiceTestIntegrationRequest, options?: ConfigurationOptions): Promise<HttpInfo<Ecosystemv3TestIntegrationResponse>> {
         return this.api.ecosystemServiceTestIntegrationWithHttpInfo(param.ecosystemv3TestIntegrationRequest,  options).toPromise();
     }
 
@@ -5961,7 +6139,7 @@ export class ObjectEcosystemServiceApi {
      * Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional. Currently this API only supports API_IMPORT type integrations
      * @param param the request object
      */
-    public ecosystemServiceTestIntegration(param: EcosystemServiceApiEcosystemServiceTestIntegrationRequest, options?: Configuration): Promise<Ecosystemv3TestIntegrationResponse> {
+    public ecosystemServiceTestIntegration(param: EcosystemServiceApiEcosystemServiceTestIntegrationRequest, options?: ConfigurationOptions): Promise<Ecosystemv3TestIntegrationResponse> {
         return this.api.ecosystemServiceTestIntegration(param.ecosystemv3TestIntegrationRequest,  options).toPromise();
     }
 
@@ -5973,12 +6151,14 @@ import { FeatureFlagsServiceApiRequestFactory, FeatureFlagsServiceApiResponsePro
 export interface FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverridesRequest {
     /**
      * Flag name.
+     * Defaults to: undefined
      * @type string
      * @memberof FeatureFlagsServiceApifeatureFlagsServiceDeleteFeatureFlagOverrides
      */
     flagName?: string
     /**
      * Optional tenant id.
+     * Defaults to: undefined
      * @type string
      * @memberof FeatureFlagsServiceApifeatureFlagsServiceDeleteFeatureFlagOverrides
      */
@@ -5988,12 +6168,14 @@ export interface FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverr
 export interface FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverridesRequest {
     /**
      * Optional tenant id.
+     * Defaults to: undefined
      * @type string
      * @memberof FeatureFlagsServiceApifeatureFlagsServiceGetFeatureFlagOverrides
      */
     tenantId?: string
     /**
      * Optional flag names; if empty then return all flag.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof FeatureFlagsServiceApifeatureFlagsServiceGetFeatureFlagOverrides
      */
@@ -6003,12 +6185,14 @@ export interface FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverride
 export interface FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagsRequest {
     /**
      * Tenant id.
+     * Defaults to: undefined
      * @type string
      * @memberof FeatureFlagsServiceApifeatureFlagsServiceGetFeatureFlags
      */
     tenantId?: string
     /**
      * Optional flag names; if empty then return all flag.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof FeatureFlagsServiceApifeatureFlagsServiceGetFeatureFlags
      */
@@ -6035,7 +6219,7 @@ export class ObjectFeatureFlagsServiceApi {
      * Summary: Delete feature Flag overrides Description: Delete feature Flag overrides from database.
      * @param param the request object
      */
-    public featureFlagsServiceDeleteFeatureFlagOverridesWithHttpInfo(param: FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverridesRequest = {}, options?: Configuration): Promise<HttpInfo<Featureflagsv3DeleteFeatureFlagOverridesResponse>> {
+    public featureFlagsServiceDeleteFeatureFlagOverridesWithHttpInfo(param: FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverridesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Featureflagsv3DeleteFeatureFlagOverridesResponse>> {
         return this.api.featureFlagsServiceDeleteFeatureFlagOverridesWithHttpInfo(param.flagName, param.tenantId,  options).toPromise();
     }
 
@@ -6043,7 +6227,7 @@ export class ObjectFeatureFlagsServiceApi {
      * Summary: Delete feature Flag overrides Description: Delete feature Flag overrides from database.
      * @param param the request object
      */
-    public featureFlagsServiceDeleteFeatureFlagOverrides(param: FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverridesRequest = {}, options?: Configuration): Promise<Featureflagsv3DeleteFeatureFlagOverridesResponse> {
+    public featureFlagsServiceDeleteFeatureFlagOverrides(param: FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverridesRequest = {}, options?: ConfigurationOptions): Promise<Featureflagsv3DeleteFeatureFlagOverridesResponse> {
         return this.api.featureFlagsServiceDeleteFeatureFlagOverrides(param.flagName, param.tenantId,  options).toPromise();
     }
 
@@ -6051,7 +6235,7 @@ export class ObjectFeatureFlagsServiceApi {
      * Summary: Get feature Flag overrides Description: Get feature Flag overrides by Feature Flag Name.
      * @param param the request object
      */
-    public featureFlagsServiceGetFeatureFlagOverridesWithHttpInfo(param: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverridesRequest = {}, options?: Configuration): Promise<HttpInfo<Featureflagsv3GetFeatureFlagOverridesResponse>> {
+    public featureFlagsServiceGetFeatureFlagOverridesWithHttpInfo(param: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverridesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Featureflagsv3GetFeatureFlagOverridesResponse>> {
         return this.api.featureFlagsServiceGetFeatureFlagOverridesWithHttpInfo(param.tenantId, param.flagNames,  options).toPromise();
     }
 
@@ -6059,7 +6243,7 @@ export class ObjectFeatureFlagsServiceApi {
      * Summary: Get feature Flag overrides Description: Get feature Flag overrides by Feature Flag Name.
      * @param param the request object
      */
-    public featureFlagsServiceGetFeatureFlagOverrides(param: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverridesRequest = {}, options?: Configuration): Promise<Featureflagsv3GetFeatureFlagOverridesResponse> {
+    public featureFlagsServiceGetFeatureFlagOverrides(param: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverridesRequest = {}, options?: ConfigurationOptions): Promise<Featureflagsv3GetFeatureFlagOverridesResponse> {
         return this.api.featureFlagsServiceGetFeatureFlagOverrides(param.tenantId, param.flagNames,  options).toPromise();
     }
 
@@ -6067,7 +6251,7 @@ export class ObjectFeatureFlagsServiceApi {
      * Summary: Get feature flags Description: Get feature flags by Feature Flag Name.
      * @param param the request object
      */
-    public featureFlagsServiceGetFeatureFlagsWithHttpInfo(param: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagsRequest = {}, options?: Configuration): Promise<HttpInfo<Featureflagsv3GetFeatureFlagsResponse>> {
+    public featureFlagsServiceGetFeatureFlagsWithHttpInfo(param: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Featureflagsv3GetFeatureFlagsResponse>> {
         return this.api.featureFlagsServiceGetFeatureFlagsWithHttpInfo(param.tenantId, param.flagNames,  options).toPromise();
     }
 
@@ -6075,7 +6259,7 @@ export class ObjectFeatureFlagsServiceApi {
      * Summary: Get feature flags Description: Get feature flags by Feature Flag Name.
      * @param param the request object
      */
-    public featureFlagsServiceGetFeatureFlags(param: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagsRequest = {}, options?: Configuration): Promise<Featureflagsv3GetFeatureFlagsResponse> {
+    public featureFlagsServiceGetFeatureFlags(param: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagsRequest = {}, options?: ConfigurationOptions): Promise<Featureflagsv3GetFeatureFlagsResponse> {
         return this.api.featureFlagsServiceGetFeatureFlags(param.tenantId, param.flagNames,  options).toPromise();
     }
 
@@ -6083,7 +6267,7 @@ export class ObjectFeatureFlagsServiceApi {
      * Summary: Update feature Flag overrides Description: Update feature Flag overrides in the database.
      * @param param the request object
      */
-    public featureFlagsServiceUpdateFeatureFlagOverridesWithHttpInfo(param: FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesRequest, options?: Configuration): Promise<HttpInfo<Featureflagsv3UpdateFeatureFlagOverridesResponse>> {
+    public featureFlagsServiceUpdateFeatureFlagOverridesWithHttpInfo(param: FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Featureflagsv3UpdateFeatureFlagOverridesResponse>> {
         return this.api.featureFlagsServiceUpdateFeatureFlagOverridesWithHttpInfo(param.featureflagsv3UpdateFeatureFlagOverridesRequest,  options).toPromise();
     }
 
@@ -6091,7 +6275,7 @@ export class ObjectFeatureFlagsServiceApi {
      * Summary: Update feature Flag overrides Description: Update feature Flag overrides in the database.
      * @param param the request object
      */
-    public featureFlagsServiceUpdateFeatureFlagOverrides(param: FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesRequest, options?: Configuration): Promise<Featureflagsv3UpdateFeatureFlagOverridesResponse> {
+    public featureFlagsServiceUpdateFeatureFlagOverrides(param: FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesRequest, options?: ConfigurationOptions): Promise<Featureflagsv3UpdateFeatureFlagOverridesResponse> {
         return this.api.featureFlagsServiceUpdateFeatureFlagOverrides(param.featureflagsv3UpdateFeatureFlagOverridesRequest,  options).toPromise();
     }
 
@@ -6103,6 +6287,7 @@ import { GroupBuilderApiRequestFactory, GroupBuilderApiResponseProcessor} from "
 export interface GroupBuilderApiGroupBuilderCancelImportGroupRequest {
     /**
      * Group IDs to delete.
+     * Defaults to: undefined
      * @type Array&lt;number&gt;
      * @memberof GroupBuilderApigroupBuilderCancelImportGroup
      */
@@ -6121,6 +6306,7 @@ export interface GroupBuilderApiGroupBuilderCreateGroupRequest {
 export interface GroupBuilderApiGroupBuilderDeleteGroupRequest {
     /**
      * Group IDs to delete.
+     * Defaults to: undefined
      * @type Array&lt;number&gt;
      * @memberof GroupBuilderApigroupBuilderDeleteGroup
      */
@@ -6130,6 +6316,7 @@ export interface GroupBuilderApiGroupBuilderDeleteGroupRequest {
 export interface GroupBuilderApiGroupBuilderEditGroupRequest {
     /**
      * Group ID.
+     * Defaults to: undefined
      * @type number
      * @memberof GroupBuilderApigroupBuilderEditGroup
      */
@@ -6154,18 +6341,21 @@ export interface GroupBuilderApiGroupBuilderExportGroupRequest {
 export interface GroupBuilderApiGroupBuilderGetGroupDetailsRequest {
     /**
      * Group ID.
+     * Defaults to: undefined
      * @type number
      * @memberof GroupBuilderApigroupBuilderGetGroupDetails
      */
     groupId: number
     /**
      * Filter by group member name.
+     * Defaults to: undefined
      * @type string
      * @memberof GroupBuilderApigroupBuilderGetGroupDetails
      */
     filter?: string
     /**
      * Order by ascending (ASC) or descending (DESC).
+     * Defaults to: undefined
      * @type string
      * @memberof GroupBuilderApigroupBuilderGetGroupDetails
      */
@@ -6184,6 +6374,7 @@ export interface GroupBuilderApiGroupBuilderGetGroupMembersRequest {
 export interface GroupBuilderApiGroupBuilderGetGroupSyncMappingRequest {
     /**
      * Central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof GroupBuilderApigroupBuilderGetGroupSyncMapping
      */
@@ -6199,18 +6390,21 @@ export interface GroupBuilderApiGroupBuilderGetGroupTypesRequest {
 export interface GroupBuilderApiGroupBuilderGetGroupsRequest {
     /**
      * Return group names, ID\&#39;s, type ID\&#39;s, nested bool, and tuple count only if the flag is true.
+     * Defaults to: undefined
      * @type boolean
      * @memberof GroupBuilderApigroupBuilderGetGroups
      */
     doNotIncludeMemberCount?: boolean
     /**
      * Only return groups that user has full-access to.
+     * Defaults to: undefined
      * @type boolean
      * @memberof GroupBuilderApigroupBuilderGetGroups
      */
     onlyFullAccess?: boolean
     /**
      * Only return non-nested groups.
+     * Defaults to: undefined
      * @type boolean
      * @memberof GroupBuilderApigroupBuilderGetGroups
      */
@@ -6220,6 +6414,7 @@ export interface GroupBuilderApiGroupBuilderGetGroupsRequest {
 export interface GroupBuilderApiGroupBuilderGetImportGroupsRequest {
     /**
      * Central manager host name.
+     * Defaults to: undefined
      * @type string
      * @memberof GroupBuilderApigroupBuilderGetImportGroups
      */
@@ -6256,6 +6451,7 @@ export interface GroupBuilderApiGroupBuilderResetGroupsRequest {
 export interface GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof GroupBuilderApigroupBuilderStoreGroupMembersGdp
      */
@@ -6271,6 +6467,7 @@ export interface GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest {
 export interface GroupBuilderApiGroupBuilderStoreGroupsGdpRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof GroupBuilderApigroupBuilderStoreGroupsGdp
      */
@@ -6294,7 +6491,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Cancel import group Description: Cancel import refresh for selected groups.
      * @param param the request object
      */
-    public groupBuilderCancelImportGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderCancelImportGroupRequest = {}, options?: Configuration): Promise<HttpInfo<Groupbuilderv3CancelGroupImportResponse>> {
+    public groupBuilderCancelImportGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderCancelImportGroupRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3CancelGroupImportResponse>> {
         return this.api.groupBuilderCancelImportGroupWithHttpInfo(param.groupIds,  options).toPromise();
     }
 
@@ -6302,7 +6499,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Cancel import group Description: Cancel import refresh for selected groups.
      * @param param the request object
      */
-    public groupBuilderCancelImportGroup(param: GroupBuilderApiGroupBuilderCancelImportGroupRequest = {}, options?: Configuration): Promise<Groupbuilderv3CancelGroupImportResponse> {
+    public groupBuilderCancelImportGroup(param: GroupBuilderApiGroupBuilderCancelImportGroupRequest = {}, options?: ConfigurationOptions): Promise<Groupbuilderv3CancelGroupImportResponse> {
         return this.api.groupBuilderCancelImportGroup(param.groupIds,  options).toPromise();
     }
 
@@ -6310,7 +6507,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Create group Description: Create new groups.
      * @param param the request object
      */
-    public groupBuilderCreateGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderCreateGroupRequest, options?: Configuration): Promise<HttpInfo<Groupbuilderv3CreateGroupResponse>> {
+    public groupBuilderCreateGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderCreateGroupRequest, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3CreateGroupResponse>> {
         return this.api.groupBuilderCreateGroupWithHttpInfo(param.groupbuilderv3CreateGroupRequest,  options).toPromise();
     }
 
@@ -6318,7 +6515,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Create group Description: Create new groups.
      * @param param the request object
      */
-    public groupBuilderCreateGroup(param: GroupBuilderApiGroupBuilderCreateGroupRequest, options?: Configuration): Promise<Groupbuilderv3CreateGroupResponse> {
+    public groupBuilderCreateGroup(param: GroupBuilderApiGroupBuilderCreateGroupRequest, options?: ConfigurationOptions): Promise<Groupbuilderv3CreateGroupResponse> {
         return this.api.groupBuilderCreateGroup(param.groupbuilderv3CreateGroupRequest,  options).toPromise();
     }
 
@@ -6326,7 +6523,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Delete group Description: Delete specified groups if the group ID is not used for reports.
      * @param param the request object
      */
-    public groupBuilderDeleteGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderDeleteGroupRequest = {}, options?: Configuration): Promise<HttpInfo<Groupbuilderv3DeleteGroupResponse>> {
+    public groupBuilderDeleteGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderDeleteGroupRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3DeleteGroupResponse>> {
         return this.api.groupBuilderDeleteGroupWithHttpInfo(param.groupIds,  options).toPromise();
     }
 
@@ -6334,7 +6531,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Delete group Description: Delete specified groups if the group ID is not used for reports.
      * @param param the request object
      */
-    public groupBuilderDeleteGroup(param: GroupBuilderApiGroupBuilderDeleteGroupRequest = {}, options?: Configuration): Promise<Groupbuilderv3DeleteGroupResponse> {
+    public groupBuilderDeleteGroup(param: GroupBuilderApiGroupBuilderDeleteGroupRequest = {}, options?: ConfigurationOptions): Promise<Groupbuilderv3DeleteGroupResponse> {
         return this.api.groupBuilderDeleteGroup(param.groupIds,  options).toPromise();
     }
 
@@ -6342,7 +6539,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Edit group Description: Add or delete group members.
      * @param param the request object
      */
-    public groupBuilderEditGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderEditGroupRequest, options?: Configuration): Promise<HttpInfo<Groupbuilderv3EditGroupResponse>> {
+    public groupBuilderEditGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderEditGroupRequest, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3EditGroupResponse>> {
         return this.api.groupBuilderEditGroupWithHttpInfo(param.groupId, param.groupbuilderv3EditGroupRequest,  options).toPromise();
     }
 
@@ -6350,7 +6547,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Edit group Description: Add or delete group members.
      * @param param the request object
      */
-    public groupBuilderEditGroup(param: GroupBuilderApiGroupBuilderEditGroupRequest, options?: Configuration): Promise<Groupbuilderv3EditGroupResponse> {
+    public groupBuilderEditGroup(param: GroupBuilderApiGroupBuilderEditGroupRequest, options?: ConfigurationOptions): Promise<Groupbuilderv3EditGroupResponse> {
         return this.api.groupBuilderEditGroup(param.groupId, param.groupbuilderv3EditGroupRequest,  options).toPromise();
     }
 
@@ -6358,7 +6555,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Export group Description: Export group content to a file based on a group ID.
      * @param param the request object
      */
-    public groupBuilderExportGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderExportGroupRequest, options?: Configuration): Promise<HttpInfo<Groupbuilderv3GetExportGroupResponse>> {
+    public groupBuilderExportGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderExportGroupRequest, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3GetExportGroupResponse>> {
         return this.api.groupBuilderExportGroupWithHttpInfo(param.groupbuilderv3GetExportGroupRequest,  options).toPromise();
     }
 
@@ -6366,7 +6563,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Export group Description: Export group content to a file based on a group ID.
      * @param param the request object
      */
-    public groupBuilderExportGroup(param: GroupBuilderApiGroupBuilderExportGroupRequest, options?: Configuration): Promise<Groupbuilderv3GetExportGroupResponse> {
+    public groupBuilderExportGroup(param: GroupBuilderApiGroupBuilderExportGroupRequest, options?: ConfigurationOptions): Promise<Groupbuilderv3GetExportGroupResponse> {
         return this.api.groupBuilderExportGroup(param.groupbuilderv3GetExportGroupRequest,  options).toPromise();
     }
 
@@ -6374,7 +6571,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get group details Description: Get details of group specified by group ID.
      * @param param the request object
      */
-    public groupBuilderGetGroupDetailsWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupDetailsRequest, options?: Configuration): Promise<HttpInfo<Groupbuilderv3GetGroupDetailResponse>> {
+    public groupBuilderGetGroupDetailsWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupDetailsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3GetGroupDetailResponse>> {
         return this.api.groupBuilderGetGroupDetailsWithHttpInfo(param.groupId, param.filter, param.order,  options).toPromise();
     }
 
@@ -6382,7 +6579,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get group details Description: Get details of group specified by group ID.
      * @param param the request object
      */
-    public groupBuilderGetGroupDetails(param: GroupBuilderApiGroupBuilderGetGroupDetailsRequest, options?: Configuration): Promise<Groupbuilderv3GetGroupDetailResponse> {
+    public groupBuilderGetGroupDetails(param: GroupBuilderApiGroupBuilderGetGroupDetailsRequest, options?: ConfigurationOptions): Promise<Groupbuilderv3GetGroupDetailResponse> {
         return this.api.groupBuilderGetGroupDetails(param.groupId, param.filter, param.order,  options).toPromise();
     }
 
@@ -6390,7 +6587,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get group members Description: Get members of all the group ids provided in the request. To be consumed by policy builder ms.
      * @param param the request object
      */
-    public groupBuilderGetGroupMembersWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupMembersRequest, options?: Configuration): Promise<HttpInfo<Groupbuilderv3GetGroupMembersResponse>> {
+    public groupBuilderGetGroupMembersWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupMembersRequest, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3GetGroupMembersResponse>> {
         return this.api.groupBuilderGetGroupMembersWithHttpInfo(param.groupbuilderv3GetGroupMembersRequest,  options).toPromise();
     }
 
@@ -6398,7 +6595,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get group members Description: Get members of all the group ids provided in the request. To be consumed by policy builder ms.
      * @param param the request object
      */
-    public groupBuilderGetGroupMembers(param: GroupBuilderApiGroupBuilderGetGroupMembersRequest, options?: Configuration): Promise<Groupbuilderv3GetGroupMembersResponse> {
+    public groupBuilderGetGroupMembers(param: GroupBuilderApiGroupBuilderGetGroupMembersRequest, options?: ConfigurationOptions): Promise<Groupbuilderv3GetGroupMembersResponse> {
         return this.api.groupBuilderGetGroupMembers(param.groupbuilderv3GetGroupMembersRequest,  options).toPromise();
     }
 
@@ -6406,7 +6603,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
      * @param param the request object
      */
-    public groupBuilderGetGroupSyncMappingWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupSyncMappingRequest = {}, options?: Configuration): Promise<HttpInfo<Groupbuilderv3GetGroupSyncMappingResponse>> {
+    public groupBuilderGetGroupSyncMappingWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupSyncMappingRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3GetGroupSyncMappingResponse>> {
         return this.api.groupBuilderGetGroupSyncMappingWithHttpInfo(param.centralManagerId,  options).toPromise();
     }
 
@@ -6414,7 +6611,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get GDP to gi group mapping Description: Get GDSC to GDP group sync mapping.
      * @param param the request object
      */
-    public groupBuilderGetGroupSyncMapping(param: GroupBuilderApiGroupBuilderGetGroupSyncMappingRequest = {}, options?: Configuration): Promise<Groupbuilderv3GetGroupSyncMappingResponse> {
+    public groupBuilderGetGroupSyncMapping(param: GroupBuilderApiGroupBuilderGetGroupSyncMappingRequest = {}, options?: ConfigurationOptions): Promise<Groupbuilderv3GetGroupSyncMappingResponse> {
         return this.api.groupBuilderGetGroupSyncMapping(param.centralManagerId,  options).toPromise();
     }
 
@@ -6422,7 +6619,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
      * @param param the request object
      */
-    public groupBuilderGetGroupTypeMappingWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupTypeMappingRequest = {}, options?: Configuration): Promise<HttpInfo<Groupbuilderv3GetGroupTypeMappingResponse>> {
+    public groupBuilderGetGroupTypeMappingWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupTypeMappingRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3GetGroupTypeMappingResponse>> {
         return this.api.groupBuilderGetGroupTypeMappingWithHttpInfo( options).toPromise();
     }
 
@@ -6430,7 +6627,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get group type mapping Description: Get GDSC to GDP group types mapping.
      * @param param the request object
      */
-    public groupBuilderGetGroupTypeMapping(param: GroupBuilderApiGroupBuilderGetGroupTypeMappingRequest = {}, options?: Configuration): Promise<Groupbuilderv3GetGroupTypeMappingResponse> {
+    public groupBuilderGetGroupTypeMapping(param: GroupBuilderApiGroupBuilderGetGroupTypeMappingRequest = {}, options?: ConfigurationOptions): Promise<Groupbuilderv3GetGroupTypeMappingResponse> {
         return this.api.groupBuilderGetGroupTypeMapping( options).toPromise();
     }
 
@@ -6438,7 +6635,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get group types Description: Get a list of available group types.
      * @param param the request object
      */
-    public groupBuilderGetGroupTypesWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupTypesRequest = {}, options?: Configuration): Promise<HttpInfo<Groupbuilderv3GetGroupTypesResponse>> {
+    public groupBuilderGetGroupTypesWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupTypesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3GetGroupTypesResponse>> {
         return this.api.groupBuilderGetGroupTypesWithHttpInfo( options).toPromise();
     }
 
@@ -6446,7 +6643,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get group types Description: Get a list of available group types.
      * @param param the request object
      */
-    public groupBuilderGetGroupTypes(param: GroupBuilderApiGroupBuilderGetGroupTypesRequest = {}, options?: Configuration): Promise<Groupbuilderv3GetGroupTypesResponse> {
+    public groupBuilderGetGroupTypes(param: GroupBuilderApiGroupBuilderGetGroupTypesRequest = {}, options?: ConfigurationOptions): Promise<Groupbuilderv3GetGroupTypesResponse> {
         return this.api.groupBuilderGetGroupTypes( options).toPromise();
     }
 
@@ -6454,7 +6651,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get groups Description: Get a list of imported group members.
      * @param param the request object
      */
-    public groupBuilderGetGroupsWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupsRequest = {}, options?: Configuration): Promise<HttpInfo<Groupbuilderv3GetGroupsResponse>> {
+    public groupBuilderGetGroupsWithHttpInfo(param: GroupBuilderApiGroupBuilderGetGroupsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3GetGroupsResponse>> {
         return this.api.groupBuilderGetGroupsWithHttpInfo(param.doNotIncludeMemberCount, param.onlyFullAccess, param.nonNested,  options).toPromise();
     }
 
@@ -6462,7 +6659,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get groups Description: Get a list of imported group members.
      * @param param the request object
      */
-    public groupBuilderGetGroups(param: GroupBuilderApiGroupBuilderGetGroupsRequest = {}, options?: Configuration): Promise<Groupbuilderv3GetGroupsResponse> {
+    public groupBuilderGetGroups(param: GroupBuilderApiGroupBuilderGetGroupsRequest = {}, options?: ConfigurationOptions): Promise<Groupbuilderv3GetGroupsResponse> {
         return this.api.groupBuilderGetGroups(param.doNotIncludeMemberCount, param.onlyFullAccess, param.nonNested,  options).toPromise();
     }
 
@@ -6470,7 +6667,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get import groups Description: Get unsynchronized groups from a central manager.
      * @param param the request object
      */
-    public groupBuilderGetImportGroupsWithHttpInfo(param: GroupBuilderApiGroupBuilderGetImportGroupsRequest = {}, options?: Configuration): Promise<HttpInfo<Groupbuilderv3GetImportGroupsResponse>> {
+    public groupBuilderGetImportGroupsWithHttpInfo(param: GroupBuilderApiGroupBuilderGetImportGroupsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3GetImportGroupsResponse>> {
         return this.api.groupBuilderGetImportGroupsWithHttpInfo(param.centralManagerId,  options).toPromise();
     }
 
@@ -6478,7 +6675,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Get import groups Description: Get unsynchronized groups from a central manager.
      * @param param the request object
      */
-    public groupBuilderGetImportGroups(param: GroupBuilderApiGroupBuilderGetImportGroupsRequest = {}, options?: Configuration): Promise<Groupbuilderv3GetImportGroupsResponse> {
+    public groupBuilderGetImportGroups(param: GroupBuilderApiGroupBuilderGetImportGroupsRequest = {}, options?: ConfigurationOptions): Promise<Groupbuilderv3GetImportGroupsResponse> {
         return this.api.groupBuilderGetImportGroups(param.centralManagerId,  options).toPromise();
     }
 
@@ -6486,7 +6683,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Import group Description: Import selected groups from a central manager. (This API is called from GDP only)
      * @param param the request object
      */
-    public groupBuilderImportGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderImportGroupRequest, options?: Configuration): Promise<HttpInfo<Groupbuilderv3ImportGroupResponse>> {
+    public groupBuilderImportGroupWithHttpInfo(param: GroupBuilderApiGroupBuilderImportGroupRequest, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3ImportGroupResponse>> {
         return this.api.groupBuilderImportGroupWithHttpInfo(param.groupbuilderv3ImportGroupRequest,  options).toPromise();
     }
 
@@ -6494,7 +6691,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Import group Description: Import selected groups from a central manager. (This API is called from GDP only)
      * @param param the request object
      */
-    public groupBuilderImportGroup(param: GroupBuilderApiGroupBuilderImportGroupRequest, options?: Configuration): Promise<Groupbuilderv3ImportGroupResponse> {
+    public groupBuilderImportGroup(param: GroupBuilderApiGroupBuilderImportGroupRequest, options?: ConfigurationOptions): Promise<Groupbuilderv3ImportGroupResponse> {
         return this.api.groupBuilderImportGroup(param.groupbuilderv3ImportGroupRequest,  options).toPromise();
     }
 
@@ -6502,7 +6699,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Refresh groups Description: Refresh tenants selected imported groups.
      * @param param the request object
      */
-    public groupBuilderRefreshGroupsWithHttpInfo(param: GroupBuilderApiGroupBuilderRefreshGroupsRequest, options?: Configuration): Promise<HttpInfo<Groupbuilderv3RefreshGroupsResponse>> {
+    public groupBuilderRefreshGroupsWithHttpInfo(param: GroupBuilderApiGroupBuilderRefreshGroupsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3RefreshGroupsResponse>> {
         return this.api.groupBuilderRefreshGroupsWithHttpInfo(param.groupbuilderv3RefreshGroupsRequest,  options).toPromise();
     }
 
@@ -6510,7 +6707,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Refresh groups Description: Refresh tenants selected imported groups.
      * @param param the request object
      */
-    public groupBuilderRefreshGroups(param: GroupBuilderApiGroupBuilderRefreshGroupsRequest, options?: Configuration): Promise<Groupbuilderv3RefreshGroupsResponse> {
+    public groupBuilderRefreshGroups(param: GroupBuilderApiGroupBuilderRefreshGroupsRequest, options?: ConfigurationOptions): Promise<Groupbuilderv3RefreshGroupsResponse> {
         return this.api.groupBuilderRefreshGroups(param.groupbuilderv3RefreshGroupsRequest,  options).toPromise();
     }
 
@@ -6518,7 +6715,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Reset groups Description: Resets tenants selected predefined groups.
      * @param param the request object
      */
-    public groupBuilderResetGroupsWithHttpInfo(param: GroupBuilderApiGroupBuilderResetGroupsRequest, options?: Configuration): Promise<HttpInfo<Groupbuilderv3ResetGroupsResponse>> {
+    public groupBuilderResetGroupsWithHttpInfo(param: GroupBuilderApiGroupBuilderResetGroupsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3ResetGroupsResponse>> {
         return this.api.groupBuilderResetGroupsWithHttpInfo(param.groupbuilderv3ResetGroupsRequest,  options).toPromise();
     }
 
@@ -6526,7 +6723,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Reset groups Description: Resets tenants selected predefined groups.
      * @param param the request object
      */
-    public groupBuilderResetGroups(param: GroupBuilderApiGroupBuilderResetGroupsRequest, options?: Configuration): Promise<Groupbuilderv3ResetGroupsResponse> {
+    public groupBuilderResetGroups(param: GroupBuilderApiGroupBuilderResetGroupsRequest, options?: ConfigurationOptions): Promise<Groupbuilderv3ResetGroupsResponse> {
         return this.api.groupBuilderResetGroups(param.groupbuilderv3ResetGroupsRequest,  options).toPromise();
     }
 
@@ -6534,7 +6731,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Store group members Gdp Description: Store GDP groups. (This API is called from GDP only)
      * @param param the request object
      */
-    public groupBuilderStoreGroupMembersGdpWithHttpInfo(param: GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest, options?: Configuration): Promise<HttpInfo<Groupbuilderv3StoreGroupMembersGdpResponse>> {
+    public groupBuilderStoreGroupMembersGdpWithHttpInfo(param: GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3StoreGroupMembersGdpResponse>> {
         return this.api.groupBuilderStoreGroupMembersGdpWithHttpInfo(param.centralManagerId, param.groupbuilderv3StoreGroupMembersGdpRequest,  options).toPromise();
     }
 
@@ -6542,7 +6739,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Store group members Gdp Description: Store GDP groups. (This API is called from GDP only)
      * @param param the request object
      */
-    public groupBuilderStoreGroupMembersGdp(param: GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest, options?: Configuration): Promise<Groupbuilderv3StoreGroupMembersGdpResponse> {
+    public groupBuilderStoreGroupMembersGdp(param: GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest, options?: ConfigurationOptions): Promise<Groupbuilderv3StoreGroupMembersGdpResponse> {
         return this.api.groupBuilderStoreGroupMembersGdp(param.centralManagerId, param.groupbuilderv3StoreGroupMembersGdpRequest,  options).toPromise();
     }
 
@@ -6550,7 +6747,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Store groups Gdp Description: Store GDP groups. (This API is called from GDP only)
      * @param param the request object
      */
-    public groupBuilderStoreGroupsGdpWithHttpInfo(param: GroupBuilderApiGroupBuilderStoreGroupsGdpRequest, options?: Configuration): Promise<HttpInfo<Groupbuilderv3GetGroupsResponseGdp>> {
+    public groupBuilderStoreGroupsGdpWithHttpInfo(param: GroupBuilderApiGroupBuilderStoreGroupsGdpRequest, options?: ConfigurationOptions): Promise<HttpInfo<Groupbuilderv3GetGroupsResponseGdp>> {
         return this.api.groupBuilderStoreGroupsGdpWithHttpInfo(param.centralManagerId, param.groupbuilderv3GetGroupsRequestGdp,  options).toPromise();
     }
 
@@ -6558,7 +6755,7 @@ export class ObjectGroupBuilderApi {
      * Summary: Store groups Gdp Description: Store GDP groups. (This API is called from GDP only)
      * @param param the request object
      */
-    public groupBuilderStoreGroupsGdp(param: GroupBuilderApiGroupBuilderStoreGroupsGdpRequest, options?: Configuration): Promise<Groupbuilderv3GetGroupsResponseGdp> {
+    public groupBuilderStoreGroupsGdp(param: GroupBuilderApiGroupBuilderStoreGroupsGdpRequest, options?: ConfigurationOptions): Promise<Groupbuilderv3GetGroupsResponseGdp> {
         return this.api.groupBuilderStoreGroupsGdp(param.centralManagerId, param.groupbuilderv3GetGroupsRequestGdp,  options).toPromise();
     }
 
@@ -6579,6 +6776,7 @@ export interface GuardiumConnectorApiGuardiumConnectorAddCMRequest {
 export interface GuardiumConnectorApiGuardiumConnectorAddDatamartsRequest {
     /**
      * central manager
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorAddDatamarts
      */
@@ -6603,6 +6801,7 @@ export interface GuardiumConnectorApiGuardiumConnectorAddDmExclusionRequest {
 export interface GuardiumConnectorApiGuardiumConnectorAddTaskRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorAddTask
      */
@@ -6627,6 +6826,7 @@ export interface GuardiumConnectorApiGuardiumConnectorBlockUserRequest {
 export interface GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest {
     /**
      * Central Manager ID.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorConfigureAggregatorExport
      */
@@ -6642,6 +6842,7 @@ export interface GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportR
 export interface GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest {
     /**
      * Central Manager ID.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorConfigureCollectorExport
      */
@@ -6657,6 +6858,7 @@ export interface GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRe
 export interface GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest {
     /**
      * Central Manager ID.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorConfigureStreaming
      */
@@ -6672,6 +6874,7 @@ export interface GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest 
 export interface GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckRequest {
     /**
      * Central manager
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorDatamartVersionCheck
      */
@@ -6687,12 +6890,14 @@ export interface GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckReques
 export interface GuardiumConnectorApiGuardiumConnectorDeleteCMRequest {
     /**
      * Central Manager ID.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorDeleteCM
      */
     centralManagerId: string
     /**
      * Flag to force delete CM and associated tasks (0&#x3D;validate CM is online before deleting, 1&#x3D;force delete CM).
+     * Defaults to: undefined
      * @type number
      * @memberof GuardiumConnectorApiguardiumConnectorDeleteCM
      */
@@ -6702,6 +6907,7 @@ export interface GuardiumConnectorApiGuardiumConnectorDeleteCMRequest {
 export interface GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest {
     /**
      * Datamart name.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorDeleteDmExclusion
      */
@@ -6711,12 +6917,14 @@ export interface GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest {
 export interface GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorDeleteTask
      */
     centralManagerId: string
     /**
      * ID of task being deleted.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorDeleteTask
      */
@@ -6726,6 +6934,7 @@ export interface GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest {
 export interface GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorDeleteTasks
      */
@@ -6735,6 +6944,7 @@ export interface GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest {
 export interface GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigRequest {
     /**
      * Central Manager ID.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetAggregatorsConfig
      */
@@ -6744,6 +6954,7 @@ export interface GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigReques
 export interface GuardiumConnectorApiGuardiumConnectorGetCMsRequest {
     /**
      * Retrieve the streaming status for all Managed Units that are reporting to a particular Central Manager.
+     * Defaults to: undefined
      * @type boolean
      * @memberof GuardiumConnectorApiguardiumConnectorGetCMs
      */
@@ -6756,6 +6967,7 @@ export interface GuardiumConnectorApiGuardiumConnectorGetCMsConfigRequest {
 export interface GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest {
     /**
      * Central Manager ID.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetCollectorsConfig
      */
@@ -6765,6 +6977,7 @@ export interface GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest
 export interface GuardiumConnectorApiGuardiumConnectorGetDatamartsRequest {
     /**
      * central manager hostname
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetDatamarts
      */
@@ -6777,12 +6990,14 @@ export interface GuardiumConnectorApiGuardiumConnectorGetDmExclusionRequest {
 export interface GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest {
     /**
      * Central manager hostname
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetGdpPolicyInfo
      */
     centralManagerId: string
     /**
      * Policy name.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetGdpPolicyInfo
      */
@@ -6792,6 +7007,7 @@ export interface GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest {
 export interface GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesRequest {
     /**
      * Central manager hostname
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetGdpPolicySummaries
      */
@@ -6801,12 +7017,14 @@ export interface GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesReque
 export interface GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest {
     /**
      * Central Manager ID.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetHealthInfo
      */
     centralManagerId: string
     /**
      * Flag indicating if the older GDP api is to be called in case it doesn\&#39;t support new api.
+     * Defaults to: undefined
      * @type boolean
      * @memberof GuardiumConnectorApiguardiumConnectorGetHealthInfo
      */
@@ -6816,6 +7034,7 @@ export interface GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest {
 export interface GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfileRequest {
     /**
      * Central Manager ID.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetLatestDMExtractionProfile
      */
@@ -6825,6 +7044,7 @@ export interface GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfi
 export interface GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest {
     /**
      * Central Manager ID.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetStreamingStatus
      */
@@ -6834,6 +7054,7 @@ export interface GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest 
 export interface GuardiumConnectorApiGuardiumConnectorGetSyncDMsRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetSyncDMs
      */
@@ -6846,24 +7067,28 @@ export interface GuardiumConnectorApiGuardiumConnectorGetTaskTypesRequest {
 export interface GuardiumConnectorApiGuardiumConnectorGetTasksRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetTasks
      */
     centralManagerId: string
     /**
      * ID of task.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetTasks
      */
     taskId?: string
     /**
      * Type of task.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetTasks
      */
     taskType?: string
     /**
      * Key object.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorGetTasks
      */
@@ -6873,6 +7098,7 @@ export interface GuardiumConnectorApiGuardiumConnectorGetTasksRequest {
 export interface GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest {
     /**
      * Central Manager ID.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorRunGDPReport
      */
@@ -6897,6 +7123,7 @@ export interface GuardiumConnectorApiGuardiumConnectorSetupCMRequest {
 export interface GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest {
     /**
      * central manager
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorSetupDatamarts
      */
@@ -6912,6 +7139,7 @@ export interface GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest {
 export interface GuardiumConnectorApiGuardiumConnectorTaskErrorRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorTaskError
      */
@@ -6945,6 +7173,7 @@ export interface GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest {
 export interface GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorUpdateStreaming
      */
@@ -6960,12 +7189,14 @@ export interface GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest {
 export interface GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorUpdateTask
      */
     centralManagerId: string
     /**
      * ID of task being updated.
+     * Defaults to: undefined
      * @type string
      * @memberof GuardiumConnectorApiguardiumConnectorUpdateTask
      */
@@ -6989,7 +7220,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Add CM Description: Add a Central Manager to the tenant database.
      * @param param the request object
      */
-    public guardiumConnectorAddCMWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorAddCMRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3AddCMResponse>> {
+    public guardiumConnectorAddCMWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorAddCMRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3AddCMResponse>> {
         return this.api.guardiumConnectorAddCMWithHttpInfo(param.guardiumconnectorv3AddCMRequest,  options).toPromise();
     }
 
@@ -6997,7 +7228,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Add CM Description: Add a Central Manager to the tenant database.
      * @param param the request object
      */
-    public guardiumConnectorAddCM(param: GuardiumConnectorApiGuardiumConnectorAddCMRequest, options?: Configuration): Promise<Guardiumconnectorv3AddCMResponse> {
+    public guardiumConnectorAddCM(param: GuardiumConnectorApiGuardiumConnectorAddCMRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3AddCMResponse> {
         return this.api.guardiumConnectorAddCM(param.guardiumconnectorv3AddCMRequest,  options).toPromise();
     }
 
@@ -7005,7 +7236,7 @@ export class ObjectGuardiumConnectorApi {
      * Description: stores datamarts details from GDP. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorAddDatamartsWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorAddDatamartsRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3AddDatamartsResponse>> {
+    public guardiumConnectorAddDatamartsWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorAddDatamartsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3AddDatamartsResponse>> {
         return this.api.guardiumConnectorAddDatamartsWithHttpInfo(param.centralManagerId, param.guardiumconnectorv3AddDatamartsRequest,  options).toPromise();
     }
 
@@ -7013,7 +7244,7 @@ export class ObjectGuardiumConnectorApi {
      * Description: stores datamarts details from GDP. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorAddDatamarts(param: GuardiumConnectorApiGuardiumConnectorAddDatamartsRequest, options?: Configuration): Promise<Guardiumconnectorv3AddDatamartsResponse> {
+    public guardiumConnectorAddDatamarts(param: GuardiumConnectorApiGuardiumConnectorAddDatamartsRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3AddDatamartsResponse> {
         return this.api.guardiumConnectorAddDatamarts(param.centralManagerId, param.guardiumconnectorv3AddDatamartsRequest,  options).toPromise();
     }
 
@@ -7021,7 +7252,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Add DM exclusion Description: Add datamart to exclusion list.
      * @param param the request object
      */
-    public guardiumConnectorAddDmExclusionWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorAddDmExclusionRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3AddDmExclusionResponse>> {
+    public guardiumConnectorAddDmExclusionWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorAddDmExclusionRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3AddDmExclusionResponse>> {
         return this.api.guardiumConnectorAddDmExclusionWithHttpInfo(param.guardiumconnectorv3AddDmExclusionRequest,  options).toPromise();
     }
 
@@ -7029,7 +7260,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Add DM exclusion Description: Add datamart to exclusion list.
      * @param param the request object
      */
-    public guardiumConnectorAddDmExclusion(param: GuardiumConnectorApiGuardiumConnectorAddDmExclusionRequest, options?: Configuration): Promise<Guardiumconnectorv3AddDmExclusionResponse> {
+    public guardiumConnectorAddDmExclusion(param: GuardiumConnectorApiGuardiumConnectorAddDmExclusionRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3AddDmExclusionResponse> {
         return this.api.guardiumConnectorAddDmExclusion(param.guardiumconnectorv3AddDmExclusionRequest,  options).toPromise();
     }
 
@@ -7037,7 +7268,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorAddTaskWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorAddTaskRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3AddTaskResponse>> {
+    public guardiumConnectorAddTaskWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorAddTaskRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3AddTaskResponse>> {
         return this.api.guardiumConnectorAddTaskWithHttpInfo(param.centralManagerId, param.guardiumconnectorv3AddTaskRequest,  options).toPromise();
     }
 
@@ -7045,7 +7276,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Add task Description: Add a task to be executed on GDP. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorAddTask(param: GuardiumConnectorApiGuardiumConnectorAddTaskRequest, options?: Configuration): Promise<Guardiumconnectorv3AddTaskResponse> {
+    public guardiumConnectorAddTask(param: GuardiumConnectorApiGuardiumConnectorAddTaskRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3AddTaskResponse> {
         return this.api.guardiumConnectorAddTask(param.centralManagerId, param.guardiumconnectorv3AddTaskRequest,  options).toPromise();
     }
 
@@ -7053,7 +7284,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Block user Description: Block a database user on Guardium Data Protection or on a supported Database as a Service instance.
      * @param param the request object
      */
-    public guardiumConnectorBlockUserWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorBlockUserRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3BlockUserResponse>> {
+    public guardiumConnectorBlockUserWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorBlockUserRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3BlockUserResponse>> {
         return this.api.guardiumConnectorBlockUserWithHttpInfo(param.guardiumconnectorv3BlockUserRequest,  options).toPromise();
     }
 
@@ -7061,7 +7292,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Block user Description: Block a database user on Guardium Data Protection or on a supported Database as a Service instance.
      * @param param the request object
      */
-    public guardiumConnectorBlockUser(param: GuardiumConnectorApiGuardiumConnectorBlockUserRequest, options?: Configuration): Promise<Guardiumconnectorv3BlockUserResponse> {
+    public guardiumConnectorBlockUser(param: GuardiumConnectorApiGuardiumConnectorBlockUserRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3BlockUserResponse> {
         return this.api.guardiumConnectorBlockUser(param.guardiumconnectorv3BlockUserRequest,  options).toPromise();
     }
 
@@ -7069,7 +7300,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Configure aggregator export Description: Configure datamart export from the Aggregators to GI.
      * @param param the request object
      */
-    public guardiumConnectorConfigureAggregatorExportWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3ConfigureAggregatorExportResponse>> {
+    public guardiumConnectorConfigureAggregatorExportWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3ConfigureAggregatorExportResponse>> {
         return this.api.guardiumConnectorConfigureAggregatorExportWithHttpInfo(param.centralManagerId, param.guardiumconnectorv3ConfigureAggregatorExportRequest,  options).toPromise();
     }
 
@@ -7077,7 +7308,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Configure aggregator export Description: Configure datamart export from the Aggregators to GI.
      * @param param the request object
      */
-    public guardiumConnectorConfigureAggregatorExport(param: GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest, options?: Configuration): Promise<Guardiumconnectorv3ConfigureAggregatorExportResponse> {
+    public guardiumConnectorConfigureAggregatorExport(param: GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3ConfigureAggregatorExportResponse> {
         return this.api.guardiumConnectorConfigureAggregatorExport(param.centralManagerId, param.guardiumconnectorv3ConfigureAggregatorExportRequest,  options).toPromise();
     }
 
@@ -7085,7 +7316,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Configure collector export Description: Schedule export historical data for collectors.
      * @param param the request object
      */
-    public guardiumConnectorConfigureCollectorExportWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3ConfigureCollectorExportResponse>> {
+    public guardiumConnectorConfigureCollectorExportWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3ConfigureCollectorExportResponse>> {
         return this.api.guardiumConnectorConfigureCollectorExportWithHttpInfo(param.centralManagerId, param.guardiumconnectorv3ConfigureCollectorExportRequest,  options).toPromise();
     }
 
@@ -7093,7 +7324,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Configure collector export Description: Schedule export historical data for collectors.
      * @param param the request object
      */
-    public guardiumConnectorConfigureCollectorExport(param: GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest, options?: Configuration): Promise<Guardiumconnectorv3ConfigureCollectorExportResponse> {
+    public guardiumConnectorConfigureCollectorExport(param: GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3ConfigureCollectorExportResponse> {
         return this.api.guardiumConnectorConfigureCollectorExport(param.centralManagerId, param.guardiumconnectorv3ConfigureCollectorExportRequest,  options).toPromise();
     }
 
@@ -7101,7 +7332,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Configure streaming Description: Enable or disable streaming.
      * @param param the request object
      */
-    public guardiumConnectorConfigureStreamingWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3ConfigureStreamingResponse>> {
+    public guardiumConnectorConfigureStreamingWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3ConfigureStreamingResponse>> {
         return this.api.guardiumConnectorConfigureStreamingWithHttpInfo(param.centralManagerId, param.guardiumconnectorv3ConfigureStreamingRequest,  options).toPromise();
     }
 
@@ -7109,7 +7340,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Configure streaming Description: Enable or disable streaming.
      * @param param the request object
      */
-    public guardiumConnectorConfigureStreaming(param: GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest, options?: Configuration): Promise<Guardiumconnectorv3ConfigureStreamingResponse> {
+    public guardiumConnectorConfigureStreaming(param: GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3ConfigureStreamingResponse> {
         return this.api.guardiumConnectorConfigureStreaming(param.centralManagerId, param.guardiumconnectorv3ConfigureStreamingRequest,  options).toPromise();
     }
 
@@ -7117,7 +7348,7 @@ export class ObjectGuardiumConnectorApi {
      * Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorDatamartVersionCheckWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3DatamartVersionResponse>> {
+    public guardiumConnectorDatamartVersionCheckWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3DatamartVersionResponse>> {
         return this.api.guardiumConnectorDatamartVersionCheckWithHttpInfo(param.centralManagerId, param.guardiumconnectorv3DatamartVersionRequest,  options).toPromise();
     }
 
@@ -7125,7 +7356,7 @@ export class ObjectGuardiumConnectorApi {
      * Description: validates if central manager has v5 datamart support. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorDatamartVersionCheck(param: GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckRequest, options?: Configuration): Promise<Guardiumconnectorv3DatamartVersionResponse> {
+    public guardiumConnectorDatamartVersionCheck(param: GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3DatamartVersionResponse> {
         return this.api.guardiumConnectorDatamartVersionCheck(param.centralManagerId, param.guardiumconnectorv3DatamartVersionRequest,  options).toPromise();
     }
 
@@ -7133,7 +7364,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Delete CM Description: Delete a Central Manager by ID (Name, Hostname or IP).
      * @param param the request object
      */
-    public guardiumConnectorDeleteCMWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorDeleteCMRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3DeleteCMResponse>> {
+    public guardiumConnectorDeleteCMWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorDeleteCMRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3DeleteCMResponse>> {
         return this.api.guardiumConnectorDeleteCMWithHttpInfo(param.centralManagerId, param.force,  options).toPromise();
     }
 
@@ -7141,7 +7372,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Delete CM Description: Delete a Central Manager by ID (Name, Hostname or IP).
      * @param param the request object
      */
-    public guardiumConnectorDeleteCM(param: GuardiumConnectorApiGuardiumConnectorDeleteCMRequest, options?: Configuration): Promise<Guardiumconnectorv3DeleteCMResponse> {
+    public guardiumConnectorDeleteCM(param: GuardiumConnectorApiGuardiumConnectorDeleteCMRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3DeleteCMResponse> {
         return this.api.guardiumConnectorDeleteCM(param.centralManagerId, param.force,  options).toPromise();
     }
 
@@ -7149,7 +7380,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Delete DM exclusion Description: Delete a datamart from exclusion list.
      * @param param the request object
      */
-    public guardiumConnectorDeleteDmExclusionWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest = {}, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3DeleteDmExclusionResponse>> {
+    public guardiumConnectorDeleteDmExclusionWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3DeleteDmExclusionResponse>> {
         return this.api.guardiumConnectorDeleteDmExclusionWithHttpInfo(param.datamart,  options).toPromise();
     }
 
@@ -7157,7 +7388,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Delete DM exclusion Description: Delete a datamart from exclusion list.
      * @param param the request object
      */
-    public guardiumConnectorDeleteDmExclusion(param: GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest = {}, options?: Configuration): Promise<Guardiumconnectorv3DeleteDmExclusionResponse> {
+    public guardiumConnectorDeleteDmExclusion(param: GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest = {}, options?: ConfigurationOptions): Promise<Guardiumconnectorv3DeleteDmExclusionResponse> {
         return this.api.guardiumConnectorDeleteDmExclusion(param.datamart,  options).toPromise();
     }
 
@@ -7165,7 +7396,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorDeleteTaskWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3DeleteTaskResponse>> {
+    public guardiumConnectorDeleteTaskWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3DeleteTaskResponse>> {
         return this.api.guardiumConnectorDeleteTaskWithHttpInfo(param.centralManagerId, param.taskId,  options).toPromise();
     }
 
@@ -7173,7 +7404,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Delete task Description: Delete a task by central manager id and task id. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorDeleteTask(param: GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest, options?: Configuration): Promise<Guardiumconnectorv3DeleteTaskResponse> {
+    public guardiumConnectorDeleteTask(param: GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3DeleteTaskResponse> {
         return this.api.guardiumConnectorDeleteTask(param.centralManagerId, param.taskId,  options).toPromise();
     }
 
@@ -7181,7 +7412,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorDeleteTasksWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3DeleteTasksResponse>> {
+    public guardiumConnectorDeleteTasksWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3DeleteTasksResponse>> {
         return this.api.guardiumConnectorDeleteTasksWithHttpInfo(param.centralManagerId,  options).toPromise();
     }
 
@@ -7189,7 +7420,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Delete tasks Description: Delete a central manager\'s tasks by central manager id. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorDeleteTasks(param: GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest, options?: Configuration): Promise<Guardiumconnectorv3DeleteTasksResponse> {
+    public guardiumConnectorDeleteTasks(param: GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3DeleteTasksResponse> {
         return this.api.guardiumConnectorDeleteTasks(param.centralManagerId,  options).toPromise();
     }
 
@@ -7197,7 +7428,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get aggregators config Description: Return a list of managed units from the config collection in tenant database.
      * @param param the request object
      */
-    public guardiumConnectorGetAggregatorsConfigWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetAggregatorsConfigResponse>> {
+    public guardiumConnectorGetAggregatorsConfigWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetAggregatorsConfigResponse>> {
         return this.api.guardiumConnectorGetAggregatorsConfigWithHttpInfo(param.centralManagerId,  options).toPromise();
     }
 
@@ -7205,7 +7436,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get aggregators config Description: Return a list of managed units from the config collection in tenant database.
      * @param param the request object
      */
-    public guardiumConnectorGetAggregatorsConfig(param: GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigRequest, options?: Configuration): Promise<Guardiumconnectorv3GetAggregatorsConfigResponse> {
+    public guardiumConnectorGetAggregatorsConfig(param: GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetAggregatorsConfigResponse> {
         return this.api.guardiumConnectorGetAggregatorsConfig(param.centralManagerId,  options).toPromise();
     }
 
@@ -7213,7 +7444,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get CMs Description: Return a list of Central Managers from the tenant database with additional processing.
      * @param param the request object
      */
-    public guardiumConnectorGetCMsWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetCMsRequest = {}, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetCMsResponse>> {
+    public guardiumConnectorGetCMsWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetCMsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetCMsResponse>> {
         return this.api.guardiumConnectorGetCMsWithHttpInfo(param.runAdditionalChecks,  options).toPromise();
     }
 
@@ -7221,7 +7452,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get CMs Description: Return a list of Central Managers from the tenant database with additional processing.
      * @param param the request object
      */
-    public guardiumConnectorGetCMs(param: GuardiumConnectorApiGuardiumConnectorGetCMsRequest = {}, options?: Configuration): Promise<Guardiumconnectorv3GetCMsResponse> {
+    public guardiumConnectorGetCMs(param: GuardiumConnectorApiGuardiumConnectorGetCMsRequest = {}, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetCMsResponse> {
         return this.api.guardiumConnectorGetCMs(param.runAdditionalChecks,  options).toPromise();
     }
 
@@ -7229,7 +7460,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get CMs config Description: Return a list of Central Managers from the tenant database.
      * @param param the request object
      */
-    public guardiumConnectorGetCMsConfigWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetCMsConfigRequest = {}, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetCMsConfigResponse>> {
+    public guardiumConnectorGetCMsConfigWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetCMsConfigRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetCMsConfigResponse>> {
         return this.api.guardiumConnectorGetCMsConfigWithHttpInfo( options).toPromise();
     }
 
@@ -7237,7 +7468,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get CMs config Description: Return a list of Central Managers from the tenant database.
      * @param param the request object
      */
-    public guardiumConnectorGetCMsConfig(param: GuardiumConnectorApiGuardiumConnectorGetCMsConfigRequest = {}, options?: Configuration): Promise<Guardiumconnectorv3GetCMsConfigResponse> {
+    public guardiumConnectorGetCMsConfig(param: GuardiumConnectorApiGuardiumConnectorGetCMsConfigRequest = {}, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetCMsConfigResponse> {
         return this.api.guardiumConnectorGetCMsConfig( options).toPromise();
     }
 
@@ -7245,7 +7476,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get collectors config Description: Return the list of collectors configuration from the tenant database.
      * @param param the request object
      */
-    public guardiumConnectorGetCollectorsConfigWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetCollectorsConfigResponse>> {
+    public guardiumConnectorGetCollectorsConfigWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetCollectorsConfigResponse>> {
         return this.api.guardiumConnectorGetCollectorsConfigWithHttpInfo(param.centralManagerId,  options).toPromise();
     }
 
@@ -7253,7 +7484,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get collectors config Description: Return the list of collectors configuration from the tenant database.
      * @param param the request object
      */
-    public guardiumConnectorGetCollectorsConfig(param: GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest, options?: Configuration): Promise<Guardiumconnectorv3GetCollectorsConfigResponse> {
+    public guardiumConnectorGetCollectorsConfig(param: GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetCollectorsConfigResponse> {
         return this.api.guardiumConnectorGetCollectorsConfig(param.centralManagerId,  options).toPromise();
     }
 
@@ -7261,7 +7492,7 @@ export class ObjectGuardiumConnectorApi {
      * Description: returns full list of supported datamarts including type (historical or non-historical)
      * @param param the request object
      */
-    public guardiumConnectorGetDatamartsWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetDatamartsRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetDatamartsResponse>> {
+    public guardiumConnectorGetDatamartsWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetDatamartsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetDatamartsResponse>> {
         return this.api.guardiumConnectorGetDatamartsWithHttpInfo(param.centralManagerId,  options).toPromise();
     }
 
@@ -7269,7 +7500,7 @@ export class ObjectGuardiumConnectorApi {
      * Description: returns full list of supported datamarts including type (historical or non-historical)
      * @param param the request object
      */
-    public guardiumConnectorGetDatamarts(param: GuardiumConnectorApiGuardiumConnectorGetDatamartsRequest, options?: Configuration): Promise<Guardiumconnectorv3GetDatamartsResponse> {
+    public guardiumConnectorGetDatamarts(param: GuardiumConnectorApiGuardiumConnectorGetDatamartsRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetDatamartsResponse> {
         return this.api.guardiumConnectorGetDatamarts(param.centralManagerId,  options).toPromise();
     }
 
@@ -7277,7 +7508,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get DM exclusion Description: Return datamarts in the exclusion list.
      * @param param the request object
      */
-    public guardiumConnectorGetDmExclusionWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetDmExclusionRequest = {}, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetDmExclusionResponse>> {
+    public guardiumConnectorGetDmExclusionWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetDmExclusionRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetDmExclusionResponse>> {
         return this.api.guardiumConnectorGetDmExclusionWithHttpInfo( options).toPromise();
     }
 
@@ -7285,7 +7516,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get DM exclusion Description: Return datamarts in the exclusion list.
      * @param param the request object
      */
-    public guardiumConnectorGetDmExclusion(param: GuardiumConnectorApiGuardiumConnectorGetDmExclusionRequest = {}, options?: Configuration): Promise<Guardiumconnectorv3GetDmExclusionResponse> {
+    public guardiumConnectorGetDmExclusion(param: GuardiumConnectorApiGuardiumConnectorGetDmExclusionRequest = {}, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetDmExclusionResponse> {
         return this.api.guardiumConnectorGetDmExclusion( options).toPromise();
     }
 
@@ -7293,7 +7524,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get guardium policy definition Description: returns the policy definition on the cm
      * @param param the request object
      */
-    public guardiumConnectorGetGdpPolicyInfoWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetPolicyInfoResponse>> {
+    public guardiumConnectorGetGdpPolicyInfoWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetPolicyInfoResponse>> {
         return this.api.guardiumConnectorGetGdpPolicyInfoWithHttpInfo(param.centralManagerId, param.policyName,  options).toPromise();
     }
 
@@ -7301,7 +7532,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get guardium policy definition Description: returns the policy definition on the cm
      * @param param the request object
      */
-    public guardiumConnectorGetGdpPolicyInfo(param: GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest, options?: Configuration): Promise<Guardiumconnectorv3GetPolicyInfoResponse> {
+    public guardiumConnectorGetGdpPolicyInfo(param: GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetPolicyInfoResponse> {
         return this.api.guardiumConnectorGetGdpPolicyInfo(param.centralManagerId, param.policyName,  options).toPromise();
     }
 
@@ -7309,7 +7540,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get guardium policy summary Description: returns the summaries of all policies on that central manager
      * @param param the request object
      */
-    public guardiumConnectorGetGdpPolicySummariesWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetPolicySummariesResponse>> {
+    public guardiumConnectorGetGdpPolicySummariesWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetPolicySummariesResponse>> {
         return this.api.guardiumConnectorGetGdpPolicySummariesWithHttpInfo(param.centralManagerId,  options).toPromise();
     }
 
@@ -7317,7 +7548,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get guardium policy summary Description: returns the summaries of all policies on that central manager
      * @param param the request object
      */
-    public guardiumConnectorGetGdpPolicySummaries(param: GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesRequest, options?: Configuration): Promise<Guardiumconnectorv3GetPolicySummariesResponse> {
+    public guardiumConnectorGetGdpPolicySummaries(param: GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetPolicySummariesResponse> {
         return this.api.guardiumConnectorGetGdpPolicySummaries(param.centralManagerId,  options).toPromise();
     }
 
@@ -7325,7 +7556,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param param the request object
      */
-    public guardiumConnectorGetHealthInfoWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetHealthInfoResponse>> {
+    public guardiumConnectorGetHealthInfoWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetHealthInfoResponse>> {
         return this.api.guardiumConnectorGetHealthInfoWithHttpInfo(param.centralManagerId, param.useFallback,  options).toPromise();
     }
 
@@ -7333,7 +7564,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get health info Description: Get health information from Guardium Data Protection central mamangers. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param param the request object
      */
-    public guardiumConnectorGetHealthInfo(param: GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest, options?: Configuration): Promise<Guardiumconnectorv3GetHealthInfoResponse> {
+    public guardiumConnectorGetHealthInfo(param: GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetHealthInfoResponse> {
         return this.api.guardiumConnectorGetHealthInfo(param.centralManagerId, param.useFallback,  options).toPromise();
     }
 
@@ -7341,7 +7572,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
      * @param param the request object
      */
-    public guardiumConnectorGetLatestDMExtractionProfileWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfileRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetLatestDMExtractionProfileResponse>> {
+    public guardiumConnectorGetLatestDMExtractionProfileWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfileRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetLatestDMExtractionProfileResponse>> {
         return this.api.guardiumConnectorGetLatestDMExtractionProfileWithHttpInfo(param.centralManagerId,  options).toPromise();
     }
 
@@ -7349,7 +7580,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get latest DM extraction profile Description: Return the Datamart Extraction Profile for GDSC.
      * @param param the request object
      */
-    public guardiumConnectorGetLatestDMExtractionProfile(param: GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfileRequest, options?: Configuration): Promise<Guardiumconnectorv3GetLatestDMExtractionProfileResponse> {
+    public guardiumConnectorGetLatestDMExtractionProfile(param: GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfileRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetLatestDMExtractionProfileResponse> {
         return this.api.guardiumConnectorGetLatestDMExtractionProfile(param.centralManagerId,  options).toPromise();
     }
 
@@ -7357,7 +7588,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get streaming status Description: Return the streaming configuration.
      * @param param the request object
      */
-    public guardiumConnectorGetStreamingStatusWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetStreamingStatusResponse>> {
+    public guardiumConnectorGetStreamingStatusWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetStreamingStatusResponse>> {
         return this.api.guardiumConnectorGetStreamingStatusWithHttpInfo(param.centralManagerId,  options).toPromise();
     }
 
@@ -7365,7 +7596,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get streaming status Description: Return the streaming configuration.
      * @param param the request object
      */
-    public guardiumConnectorGetStreamingStatus(param: GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest, options?: Configuration): Promise<Guardiumconnectorv3GetStreamingStatusResponse> {
+    public guardiumConnectorGetStreamingStatus(param: GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetStreamingStatusResponse> {
         return this.api.guardiumConnectorGetStreamingStatus(param.centralManagerId,  options).toPromise();
     }
 
@@ -7373,7 +7604,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorGetSyncDMsWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetSyncDMsRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetSyncDMsResponse>> {
+    public guardiumConnectorGetSyncDMsWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetSyncDMsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetSyncDMsResponse>> {
         return this.api.guardiumConnectorGetSyncDMsWithHttpInfo(param.centralManagerId,  options).toPromise();
     }
 
@@ -7381,7 +7612,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get sync DMs Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorGetSyncDMs(param: GuardiumConnectorApiGuardiumConnectorGetSyncDMsRequest, options?: Configuration): Promise<Guardiumconnectorv3GetSyncDMsResponse> {
+    public guardiumConnectorGetSyncDMs(param: GuardiumConnectorApiGuardiumConnectorGetSyncDMsRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetSyncDMsResponse> {
         return this.api.guardiumConnectorGetSyncDMs(param.centralManagerId,  options).toPromise();
     }
 
@@ -7389,7 +7620,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get task types Description: Return the list of supported task types.
      * @param param the request object
      */
-    public guardiumConnectorGetTaskTypesWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetTaskTypesRequest = {}, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetTaskTypesResponse>> {
+    public guardiumConnectorGetTaskTypesWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetTaskTypesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetTaskTypesResponse>> {
         return this.api.guardiumConnectorGetTaskTypesWithHttpInfo( options).toPromise();
     }
 
@@ -7397,7 +7628,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get task types Description: Return the list of supported task types.
      * @param param the request object
      */
-    public guardiumConnectorGetTaskTypes(param: GuardiumConnectorApiGuardiumConnectorGetTaskTypesRequest = {}, options?: Configuration): Promise<Guardiumconnectorv3GetTaskTypesResponse> {
+    public guardiumConnectorGetTaskTypes(param: GuardiumConnectorApiGuardiumConnectorGetTaskTypesRequest = {}, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetTaskTypesResponse> {
         return this.api.guardiumConnectorGetTaskTypes( options).toPromise();
     }
 
@@ -7405,7 +7636,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorGetTasksWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetTasksRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3GetTasksResponse>> {
+    public guardiumConnectorGetTasksWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorGetTasksRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3GetTasksResponse>> {
         return this.api.guardiumConnectorGetTasksWithHttpInfo(param.centralManagerId, param.taskId, param.taskType, param.keyObject,  options).toPromise();
     }
 
@@ -7413,7 +7644,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Get tasks Description: Return the list of tasks from a central manager. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorGetTasks(param: GuardiumConnectorApiGuardiumConnectorGetTasksRequest, options?: Configuration): Promise<Guardiumconnectorv3GetTasksResponse> {
+    public guardiumConnectorGetTasks(param: GuardiumConnectorApiGuardiumConnectorGetTasksRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3GetTasksResponse> {
         return this.api.guardiumConnectorGetTasks(param.centralManagerId, param.taskId, param.taskType, param.keyObject,  options).toPromise();
     }
 
@@ -7421,7 +7652,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param param the request object
      */
-    public guardiumConnectorRunGDPReportWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3RunGDPReportResponse>> {
+    public guardiumConnectorRunGDPReportWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3RunGDPReportResponse>> {
         return this.api.guardiumConnectorRunGDPReportWithHttpInfo(param.centralManagerId, param.guardiumconnectorv3RunGDPReportRequest,  options).toPromise();
     }
 
@@ -7429,7 +7660,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Run GDP report Description: Run GDP report. (This API is for CMs registered in legacy pull mode. Supported on-premises only)
      * @param param the request object
      */
-    public guardiumConnectorRunGDPReport(param: GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest, options?: Configuration): Promise<Guardiumconnectorv3RunGDPReportResponse> {
+    public guardiumConnectorRunGDPReport(param: GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3RunGDPReportResponse> {
         return this.api.guardiumConnectorRunGDPReport(param.centralManagerId, param.guardiumconnectorv3RunGDPReportRequest,  options).toPromise();
     }
 
@@ -7437,7 +7668,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorSetupCMWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorSetupCMRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3SetupCMResponse>> {
+    public guardiumConnectorSetupCMWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorSetupCMRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3SetupCMResponse>> {
         return this.api.guardiumConnectorSetupCMWithHttpInfo(param.guardiumconnectorv3SetupCMRequest,  options).toPromise();
     }
 
@@ -7445,7 +7676,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Setup CM Description: Set up the registration between a GDP Central manager and GDSC. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorSetupCM(param: GuardiumConnectorApiGuardiumConnectorSetupCMRequest, options?: Configuration): Promise<Guardiumconnectorv3SetupCMResponse> {
+    public guardiumConnectorSetupCM(param: GuardiumConnectorApiGuardiumConnectorSetupCMRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3SetupCMResponse> {
         return this.api.guardiumConnectorSetupCM(param.guardiumconnectorv3SetupCMRequest,  options).toPromise();
     }
 
@@ -7453,7 +7684,7 @@ export class ObjectGuardiumConnectorApi {
      * Description: setup custom datamart execution mode
      * @param param the request object
      */
-    public guardiumConnectorSetupDatamartsWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3SetupDatamartsResponse>> {
+    public guardiumConnectorSetupDatamartsWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3SetupDatamartsResponse>> {
         return this.api.guardiumConnectorSetupDatamartsWithHttpInfo(param.centralManagerId, param.guardiumconnectorv3SetupDatamartsRequest,  options).toPromise();
     }
 
@@ -7461,7 +7692,7 @@ export class ObjectGuardiumConnectorApi {
      * Description: setup custom datamart execution mode
      * @param param the request object
      */
-    public guardiumConnectorSetupDatamarts(param: GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest, options?: Configuration): Promise<Guardiumconnectorv3SetupDatamartsResponse> {
+    public guardiumConnectorSetupDatamarts(param: GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3SetupDatamartsResponse> {
         return this.api.guardiumConnectorSetupDatamarts(param.centralManagerId, param.guardiumconnectorv3SetupDatamartsRequest,  options).toPromise();
     }
 
@@ -7469,7 +7700,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorTaskErrorWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorTaskErrorRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3TaskErrorResponse>> {
+    public guardiumConnectorTaskErrorWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorTaskErrorRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3TaskErrorResponse>> {
         return this.api.guardiumConnectorTaskErrorWithHttpInfo(param.centralManagerId, param.guardiumconnectorv3TaskErrorRequest,  options).toPromise();
     }
 
@@ -7477,7 +7708,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Task error Description: Log error messages from GDP task execution. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorTaskError(param: GuardiumConnectorApiGuardiumConnectorTaskErrorRequest, options?: Configuration): Promise<Guardiumconnectorv3TaskErrorResponse> {
+    public guardiumConnectorTaskError(param: GuardiumConnectorApiGuardiumConnectorTaskErrorRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3TaskErrorResponse> {
         return this.api.guardiumConnectorTaskError(param.centralManagerId, param.guardiumconnectorv3TaskErrorRequest,  options).toPromise();
     }
 
@@ -7485,7 +7716,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Test database connection Description: Return database connection results.
      * @param param the request object
      */
-    public guardiumConnectorTestDatabaseConnectionWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3DatabaseResultResponse>> {
+    public guardiumConnectorTestDatabaseConnectionWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3DatabaseResultResponse>> {
         return this.api.guardiumConnectorTestDatabaseConnectionWithHttpInfo(param.guardiumconnectorv3DatabaseConnectionStringRequest,  options).toPromise();
     }
 
@@ -7493,7 +7724,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Test database connection Description: Return database connection results.
      * @param param the request object
      */
-    public guardiumConnectorTestDatabaseConnection(param: GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest, options?: Configuration): Promise<Guardiumconnectorv3DatabaseResultResponse> {
+    public guardiumConnectorTestDatabaseConnection(param: GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3DatabaseResultResponse> {
         return this.api.guardiumConnectorTestDatabaseConnection(param.guardiumconnectorv3DatabaseConnectionStringRequest,  options).toPromise();
     }
 
@@ -7501,7 +7732,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Update DM exclusion Description: Update the atamart exclusion list.
      * @param param the request object
      */
-    public guardiumConnectorUpdateDmExclusionWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3UpdateDmExclusionResponse>> {
+    public guardiumConnectorUpdateDmExclusionWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3UpdateDmExclusionResponse>> {
         return this.api.guardiumConnectorUpdateDmExclusionWithHttpInfo(param.guardiumconnectorv3UpdateDmExclusionRequest,  options).toPromise();
     }
 
@@ -7509,7 +7740,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Update DM exclusion Description: Update the atamart exclusion list.
      * @param param the request object
      */
-    public guardiumConnectorUpdateDmExclusion(param: GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest, options?: Configuration): Promise<Guardiumconnectorv3UpdateDmExclusionResponse> {
+    public guardiumConnectorUpdateDmExclusion(param: GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3UpdateDmExclusionResponse> {
         return this.api.guardiumConnectorUpdateDmExclusion(param.guardiumconnectorv3UpdateDmExclusionRequest,  options).toPromise();
     }
 
@@ -7517,7 +7748,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorUpdateStreamingWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3UpdateStreamingResponse>> {
+    public guardiumConnectorUpdateStreamingWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3UpdateStreamingResponse>> {
         return this.api.guardiumConnectorUpdateStreamingWithHttpInfo(param.centralManagerId, param.guardiumconnectorv3UpdateStreamingRequest,  options).toPromise();
     }
 
@@ -7525,7 +7756,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Update streaming Description: Update streaming status into GI. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorUpdateStreaming(param: GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest, options?: Configuration): Promise<Guardiumconnectorv3UpdateStreamingResponse> {
+    public guardiumConnectorUpdateStreaming(param: GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3UpdateStreamingResponse> {
         return this.api.guardiumConnectorUpdateStreaming(param.centralManagerId, param.guardiumconnectorv3UpdateStreamingRequest,  options).toPromise();
     }
 
@@ -7533,7 +7764,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorUpdateTaskWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest, options?: Configuration): Promise<HttpInfo<Guardiumconnectorv3UpdateTaskResponse>> {
+    public guardiumConnectorUpdateTaskWithHttpInfo(param: GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest, options?: ConfigurationOptions): Promise<HttpInfo<Guardiumconnectorv3UpdateTaskResponse>> {
         return this.api.guardiumConnectorUpdateTaskWithHttpInfo(param.centralManagerId, param.taskId, param.guardiumconnectorv3UpdateTaskRequest,  options).toPromise();
     }
 
@@ -7541,7 +7772,7 @@ export class ObjectGuardiumConnectorApi {
      * Summary: Update task Description: Update a task that gets executed on GDP. (This API is called from GDP only)
      * @param param the request object
      */
-    public guardiumConnectorUpdateTask(param: GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest, options?: Configuration): Promise<Guardiumconnectorv3UpdateTaskResponse> {
+    public guardiumConnectorUpdateTask(param: GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest, options?: ConfigurationOptions): Promise<Guardiumconnectorv3UpdateTaskResponse> {
         return this.api.guardiumConnectorUpdateTask(param.centralManagerId, param.taskId, param.guardiumconnectorv3UpdateTaskRequest,  options).toPromise();
     }
 
@@ -7553,18 +7784,21 @@ import { HealthCollectorApiRequestFactory, HealthCollectorApiResponseProcessor} 
 export interface HealthCollectorApiHealthCollectorGetDataWarehouseUsageRequest {
     /**
      * The type of metric to retrieve
+     * Defaults to: undefined
      * @type string
      * @memberof HealthCollectorApihealthCollectorGetDataWarehouseUsage
      */
     type: string
     /**
      * The start time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetDataWarehouseUsage
      */
     startTime?: Date
     /**
      * The end time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetDataWarehouseUsage
      */
@@ -7577,24 +7811,28 @@ export interface HealthCollectorApiHealthCollectorGetGDPHealthInfoRequest {
 export interface HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest {
     /**
      * Type of unit for which data needs to be retrieved.
+     * Defaults to: &#39;UNKNOWN_UNIT&#39;
      * @type &#39;UNKNOWN_UNIT&#39; | &#39;STAP&#39;
      * @memberof HealthCollectorApihealthCollectorGetHistoricalHealthInfo
      */
     unit?: 'UNKNOWN_UNIT' | 'STAP'
     /**
      * Optional value if the data is for a particular cm. If it is empty the data for all cms would be retrieved.
+     * Defaults to: undefined
      * @type string
      * @memberof HealthCollectorApihealthCollectorGetHistoricalHealthInfo
      */
     cmId?: string
     /**
      * The start time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetHistoricalHealthInfo
      */
     startTime?: Date
     /**
      * The end time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetHistoricalHealthInfo
      */
@@ -7604,18 +7842,21 @@ export interface HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest
 export interface HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest {
     /**
      * The type of metric to retrieve
+     * Defaults to: undefined
      * @type string
      * @memberof HealthCollectorApihealthCollectorGetObjectStorageUsage
      */
     type: string
     /**
      * The start time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetObjectStorageUsage
      */
     startTime?: Date
     /**
      * The end time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetObjectStorageUsage
      */
@@ -7625,18 +7866,21 @@ export interface HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest {
 export interface HealthCollectorApiHealthCollectorGetPVCUsageRequest {
     /**
      * The type of metric to retrieve
+     * Defaults to: undefined
      * @type string
      * @memberof HealthCollectorApihealthCollectorGetPVCUsage
      */
     type: string
     /**
      * The start time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetPVCUsage
      */
     startTime?: Date
     /**
      * The end time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetPVCUsage
      */
@@ -7646,18 +7890,21 @@ export interface HealthCollectorApiHealthCollectorGetPVCUsageRequest {
 export interface HealthCollectorApiHealthCollectorGetPodRestartsRequest {
     /**
      * The type of metric to retrieve
+     * Defaults to: undefined
      * @type string
      * @memberof HealthCollectorApihealthCollectorGetPodRestarts
      */
     type: string
     /**
      * The start time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetPodRestarts
      */
     startTime?: Date
     /**
      * The end time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetPodRestarts
      */
@@ -7667,18 +7914,21 @@ export interface HealthCollectorApiHealthCollectorGetPodRestartsRequest {
 export interface HealthCollectorApiHealthCollectorGetStreamsIngestionRequest {
     /**
      * The type of metric to retrieve
+     * Defaults to: undefined
      * @type string
      * @memberof HealthCollectorApihealthCollectorGetStreamsIngestion
      */
     type: string
     /**
      * The start time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetStreamsIngestion
      */
     startTime?: Date
     /**
      * The end time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetStreamsIngestion
      */
@@ -7688,18 +7938,21 @@ export interface HealthCollectorApiHealthCollectorGetStreamsIngestionRequest {
 export interface HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest {
     /**
      * The type of metric to retrieve
+     * Defaults to: undefined
      * @type string
      * @memberof HealthCollectorApihealthCollectorGetTopGDPCollectors
      */
     type: string
     /**
      * The start time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetTopGDPCollectors
      */
     startTime?: Date
     /**
      * The end time from which the data needs to be calculated.
+     * Defaults to: undefined
      * @type Date
      * @memberof HealthCollectorApihealthCollectorGetTopGDPCollectors
      */
@@ -7709,6 +7962,7 @@ export interface HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest {
 export interface HealthCollectorApiHealthCollectorStoreHealthInfoRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof HealthCollectorApihealthCollectorStoreHealthInfo
      */
@@ -7732,7 +7986,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
      * @param param the request object
      */
-    public healthCollectorGetDataWarehouseUsageWithHttpInfo(param: HealthCollectorApiHealthCollectorGetDataWarehouseUsageRequest, options?: Configuration): Promise<HttpInfo<Healthcollectorv3GetDataWarehouseUsageResponse>> {
+    public healthCollectorGetDataWarehouseUsageWithHttpInfo(param: HealthCollectorApiHealthCollectorGetDataWarehouseUsageRequest, options?: ConfigurationOptions): Promise<HttpInfo<Healthcollectorv3GetDataWarehouseUsageResponse>> {
         return this.api.healthCollectorGetDataWarehouseUsageWithHttpInfo(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7740,7 +7994,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get data warehouse usage info Description: Get information from data warehouse related to usage
      * @param param the request object
      */
-    public healthCollectorGetDataWarehouseUsage(param: HealthCollectorApiHealthCollectorGetDataWarehouseUsageRequest, options?: Configuration): Promise<Healthcollectorv3GetDataWarehouseUsageResponse> {
+    public healthCollectorGetDataWarehouseUsage(param: HealthCollectorApiHealthCollectorGetDataWarehouseUsageRequest, options?: ConfigurationOptions): Promise<Healthcollectorv3GetDataWarehouseUsageResponse> {
         return this.api.healthCollectorGetDataWarehouseUsage(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7748,7 +8002,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get GDP health info Description: Get information from MongoDB for Guardium central managers using health-connector service.
      * @param param the request object
      */
-    public healthCollectorGetGDPHealthInfoWithHttpInfo(param: HealthCollectorApiHealthCollectorGetGDPHealthInfoRequest = {}, options?: Configuration): Promise<HttpInfo<Healthcollectorv3GetGDPHealthInfoResponse>> {
+    public healthCollectorGetGDPHealthInfoWithHttpInfo(param: HealthCollectorApiHealthCollectorGetGDPHealthInfoRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Healthcollectorv3GetGDPHealthInfoResponse>> {
         return this.api.healthCollectorGetGDPHealthInfoWithHttpInfo( options).toPromise();
     }
 
@@ -7756,7 +8010,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get GDP health info Description: Get information from MongoDB for Guardium central managers using health-connector service.
      * @param param the request object
      */
-    public healthCollectorGetGDPHealthInfo(param: HealthCollectorApiHealthCollectorGetGDPHealthInfoRequest = {}, options?: Configuration): Promise<Healthcollectorv3GetGDPHealthInfoResponse> {
+    public healthCollectorGetGDPHealthInfo(param: HealthCollectorApiHealthCollectorGetGDPHealthInfoRequest = {}, options?: ConfigurationOptions): Promise<Healthcollectorv3GetGDPHealthInfoResponse> {
         return this.api.healthCollectorGetGDPHealthInfo( options).toPromise();
     }
 
@@ -7764,7 +8018,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get historical health info Description: Retrieve historical s-tap related statistics from health-collector service.
      * @param param the request object
      */
-    public healthCollectorGetHistoricalHealthInfoWithHttpInfo(param: HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest = {}, options?: Configuration): Promise<HttpInfo<Healthcollectorv3GetHistoricalHealthInfoResponse>> {
+    public healthCollectorGetHistoricalHealthInfoWithHttpInfo(param: HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Healthcollectorv3GetHistoricalHealthInfoResponse>> {
         return this.api.healthCollectorGetHistoricalHealthInfoWithHttpInfo(param.unit, param.cmId, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7772,7 +8026,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get historical health info Description: Retrieve historical s-tap related statistics from health-collector service.
      * @param param the request object
      */
-    public healthCollectorGetHistoricalHealthInfo(param: HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest = {}, options?: Configuration): Promise<Healthcollectorv3GetHistoricalHealthInfoResponse> {
+    public healthCollectorGetHistoricalHealthInfo(param: HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest = {}, options?: ConfigurationOptions): Promise<Healthcollectorv3GetHistoricalHealthInfoResponse> {
         return this.api.healthCollectorGetHistoricalHealthInfo(param.unit, param.cmId, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7780,7 +8034,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get object storage usage info Description: Get information from object storage about tenant bucket usage
      * @param param the request object
      */
-    public healthCollectorGetObjectStorageUsageWithHttpInfo(param: HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest, options?: Configuration): Promise<HttpInfo<Healthcollectorv3GetObjectStorageUsageResponse>> {
+    public healthCollectorGetObjectStorageUsageWithHttpInfo(param: HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest, options?: ConfigurationOptions): Promise<HttpInfo<Healthcollectorv3GetObjectStorageUsageResponse>> {
         return this.api.healthCollectorGetObjectStorageUsageWithHttpInfo(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7788,7 +8042,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get object storage usage info Description: Get information from object storage about tenant bucket usage
      * @param param the request object
      */
-    public healthCollectorGetObjectStorageUsage(param: HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest, options?: Configuration): Promise<Healthcollectorv3GetObjectStorageUsageResponse> {
+    public healthCollectorGetObjectStorageUsage(param: HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest, options?: ConfigurationOptions): Promise<Healthcollectorv3GetObjectStorageUsageResponse> {
         return this.api.healthCollectorGetObjectStorageUsage(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7796,7 +8050,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get the PVC usage information Description: Get information about the PVC usage in the OCP cluster
      * @param param the request object
      */
-    public healthCollectorGetPVCUsageWithHttpInfo(param: HealthCollectorApiHealthCollectorGetPVCUsageRequest, options?: Configuration): Promise<HttpInfo<Healthcollectorv3GetPVCUsageResponse>> {
+    public healthCollectorGetPVCUsageWithHttpInfo(param: HealthCollectorApiHealthCollectorGetPVCUsageRequest, options?: ConfigurationOptions): Promise<HttpInfo<Healthcollectorv3GetPVCUsageResponse>> {
         return this.api.healthCollectorGetPVCUsageWithHttpInfo(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7804,7 +8058,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get the PVC usage information Description: Get information about the PVC usage in the OCP cluster
      * @param param the request object
      */
-    public healthCollectorGetPVCUsage(param: HealthCollectorApiHealthCollectorGetPVCUsageRequest, options?: Configuration): Promise<Healthcollectorv3GetPVCUsageResponse> {
+    public healthCollectorGetPVCUsage(param: HealthCollectorApiHealthCollectorGetPVCUsageRequest, options?: ConfigurationOptions): Promise<Healthcollectorv3GetPVCUsageResponse> {
         return this.api.healthCollectorGetPVCUsage(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7812,7 +8066,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get the pod restart information Description: Get information about the number of restarts by pod in OCP
      * @param param the request object
      */
-    public healthCollectorGetPodRestartsWithHttpInfo(param: HealthCollectorApiHealthCollectorGetPodRestartsRequest, options?: Configuration): Promise<HttpInfo<Healthcollectorv3GetPodRestartsResponse>> {
+    public healthCollectorGetPodRestartsWithHttpInfo(param: HealthCollectorApiHealthCollectorGetPodRestartsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Healthcollectorv3GetPodRestartsResponse>> {
         return this.api.healthCollectorGetPodRestartsWithHttpInfo(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7820,7 +8074,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get the pod restart information Description: Get information about the number of restarts by pod in OCP
      * @param param the request object
      */
-    public healthCollectorGetPodRestarts(param: HealthCollectorApiHealthCollectorGetPodRestartsRequest, options?: Configuration): Promise<Healthcollectorv3GetPodRestartsResponse> {
+    public healthCollectorGetPodRestarts(param: HealthCollectorApiHealthCollectorGetPodRestartsRequest, options?: ConfigurationOptions): Promise<Healthcollectorv3GetPodRestartsResponse> {
         return this.api.healthCollectorGetPodRestarts(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7828,7 +8082,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get streams ingestion volume over a given time Description: Get information about streams ingestion volume
      * @param param the request object
      */
-    public healthCollectorGetStreamsIngestionWithHttpInfo(param: HealthCollectorApiHealthCollectorGetStreamsIngestionRequest, options?: Configuration): Promise<HttpInfo<Healthcollectorv3GetStreamsIngestionResponse>> {
+    public healthCollectorGetStreamsIngestionWithHttpInfo(param: HealthCollectorApiHealthCollectorGetStreamsIngestionRequest, options?: ConfigurationOptions): Promise<HttpInfo<Healthcollectorv3GetStreamsIngestionResponse>> {
         return this.api.healthCollectorGetStreamsIngestionWithHttpInfo(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7836,7 +8090,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get streams ingestion volume over a given time Description: Get information about streams ingestion volume
      * @param param the request object
      */
-    public healthCollectorGetStreamsIngestion(param: HealthCollectorApiHealthCollectorGetStreamsIngestionRequest, options?: Configuration): Promise<Healthcollectorv3GetStreamsIngestionResponse> {
+    public healthCollectorGetStreamsIngestion(param: HealthCollectorApiHealthCollectorGetStreamsIngestionRequest, options?: ConfigurationOptions): Promise<Healthcollectorv3GetStreamsIngestionResponse> {
         return this.api.healthCollectorGetStreamsIngestion(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7844,7 +8098,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get the top GDP collectors which send data to GI Description: Get information about the top GDP collectors
      * @param param the request object
      */
-    public healthCollectorGetTopGDPCollectorsWithHttpInfo(param: HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest, options?: Configuration): Promise<HttpInfo<Healthcollectorv3GetTopGDPCollectorsResponse>> {
+    public healthCollectorGetTopGDPCollectorsWithHttpInfo(param: HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Healthcollectorv3GetTopGDPCollectorsResponse>> {
         return this.api.healthCollectorGetTopGDPCollectorsWithHttpInfo(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7852,7 +8106,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Get the top GDP collectors which send data to GI Description: Get information about the top GDP collectors
      * @param param the request object
      */
-    public healthCollectorGetTopGDPCollectors(param: HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest, options?: Configuration): Promise<Healthcollectorv3GetTopGDPCollectorsResponse> {
+    public healthCollectorGetTopGDPCollectors(param: HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest, options?: ConfigurationOptions): Promise<Healthcollectorv3GetTopGDPCollectorsResponse> {
         return this.api.healthCollectorGetTopGDPCollectors(param.type, param.startTime, param.endTime,  options).toPromise();
     }
 
@@ -7860,7 +8114,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Store health info Description: Store health info from GDP into GI. (This API is called from GDP only)
      * @param param the request object
      */
-    public healthCollectorStoreHealthInfoWithHttpInfo(param: HealthCollectorApiHealthCollectorStoreHealthInfoRequest, options?: Configuration): Promise<HttpInfo<Healthcollectorv3StoreHealthInfoResponse>> {
+    public healthCollectorStoreHealthInfoWithHttpInfo(param: HealthCollectorApiHealthCollectorStoreHealthInfoRequest, options?: ConfigurationOptions): Promise<HttpInfo<Healthcollectorv3StoreHealthInfoResponse>> {
         return this.api.healthCollectorStoreHealthInfoWithHttpInfo(param.centralManagerId, param.healthcollectorv3StoreHealthInfoRequest,  options).toPromise();
     }
 
@@ -7868,7 +8122,7 @@ export class ObjectHealthCollectorApi {
      * Summary: Store health info Description: Store health info from GDP into GI. (This API is called from GDP only)
      * @param param the request object
      */
-    public healthCollectorStoreHealthInfo(param: HealthCollectorApiHealthCollectorStoreHealthInfoRequest, options?: Configuration): Promise<Healthcollectorv3StoreHealthInfoResponse> {
+    public healthCollectorStoreHealthInfo(param: HealthCollectorApiHealthCollectorStoreHealthInfoRequest, options?: ConfigurationOptions): Promise<Healthcollectorv3StoreHealthInfoResponse> {
         return this.api.healthCollectorStoreHealthInfo(param.centralManagerId, param.healthcollectorv3StoreHealthInfoRequest,  options).toPromise();
     }
 
@@ -7889,6 +8143,7 @@ export interface JumpboxServiceApiJumpboxServiceAuthorizeRequest {
 export interface JumpboxServiceApiJumpboxServiceDeleteAccountRequest {
     /**
      * Account id.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceDeleteAccount
      */
@@ -7898,18 +8153,21 @@ export interface JumpboxServiceApiJumpboxServiceDeleteAccountRequest {
 export interface JumpboxServiceApiJumpboxServiceDeleteTenantRequest {
     /**
      * Tenant id.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceDeleteTenant
      */
     tenantId: string
     /**
      * Delete tenant permanently if true.
+     * Defaults to: undefined
      * @type boolean
      * @memberof JumpboxServiceApijumpboxServiceDeleteTenant
      */
     isPermanentDelete?: boolean
     /**
      * Async.
+     * Defaults to: undefined
      * @type boolean
      * @memberof JumpboxServiceApijumpboxServiceDeleteTenant
      */
@@ -7919,6 +8177,7 @@ export interface JumpboxServiceApiJumpboxServiceDeleteTenantRequest {
 export interface JumpboxServiceApiJumpboxServiceDeleteUserRequest {
     /**
      * The user id.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceDeleteUser
      */
@@ -7928,18 +8187,21 @@ export interface JumpboxServiceApiJumpboxServiceDeleteUserRequest {
 export interface JumpboxServiceApiJumpboxServiceGetAccountRequest {
     /**
      * Account id.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceGetAccount
      */
     accountId: string
     /**
      * Include inactive.
+     * Defaults to: undefined
      * @type boolean
      * @memberof JumpboxServiceApijumpboxServiceGetAccount
      */
     includeInactive?: boolean
     /**
      * Include tenants that are not ready(are in state of being created or deleted).
+     * Defaults to: undefined
      * @type boolean
      * @memberof JumpboxServiceApijumpboxServiceGetAccount
      */
@@ -7949,24 +8211,28 @@ export interface JumpboxServiceApiJumpboxServiceGetAccountRequest {
 export interface JumpboxServiceApiJumpboxServiceGetAccountsRequest {
     /**
      * Email.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceGetAccounts
      */
     uid?: string
     /**
      * External id.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceGetAccounts
      */
     externalId?: string
     /**
      * Include inactive.
+     * Defaults to: undefined
      * @type boolean
      * @memberof JumpboxServiceApijumpboxServiceGetAccounts
      */
     includeInactive?: boolean
     /**
      * Include tenants that are not ready(are in state of being created or deleted).
+     * Defaults to: undefined
      * @type boolean
      * @memberof JumpboxServiceApijumpboxServiceGetAccounts
      */
@@ -7976,18 +8242,21 @@ export interface JumpboxServiceApiJumpboxServiceGetAccountsRequest {
 export interface JumpboxServiceApiJumpboxServiceGetTenantRequest {
     /**
      * Tenant id.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceGetTenant
      */
     tenantId: string
     /**
      * Include inactive.
+     * Defaults to: undefined
      * @type boolean
      * @memberof JumpboxServiceApijumpboxServiceGetTenant
      */
     includeInactive?: boolean
     /**
      * Include tenants that are not ready(are in state of being created or deleted).
+     * Defaults to: undefined
      * @type boolean
      * @memberof JumpboxServiceApijumpboxServiceGetTenant
      */
@@ -7997,24 +8266,28 @@ export interface JumpboxServiceApiJumpboxServiceGetTenantRequest {
 export interface JumpboxServiceApiJumpboxServiceGetTenantsRequest {
     /**
      * Email.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceGetTenants
      */
     uid?: string
     /**
      * External id.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceGetTenants
      */
     externalId?: string
     /**
      * Include inactive.
+     * Defaults to: undefined
      * @type boolean
      * @memberof JumpboxServiceApijumpboxServiceGetTenants
      */
     includeInactive?: boolean
     /**
      * Include tenants that are not ready(are in state of being created or deleted).
+     * Defaults to: undefined
      * @type boolean
      * @memberof JumpboxServiceApijumpboxServiceGetTenants
      */
@@ -8024,6 +8297,7 @@ export interface JumpboxServiceApiJumpboxServiceGetTenantsRequest {
 export interface JumpboxServiceApiJumpboxServiceGetUsersRequest {
     /**
      * Email.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceGetUsers
      */
@@ -8060,6 +8334,7 @@ export interface JumpboxServiceApiJumpboxServicePostUsersRequest {
 export interface JumpboxServiceApiJumpboxServiceResumeAccountRequest {
     /**
      * account_id represents the user\&#39;s account ID
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceResumeAccount
      */
@@ -8078,6 +8353,7 @@ export interface JumpboxServiceApiJumpboxServiceSearchUsersRequest {
 export interface JumpboxServiceApiJumpboxServiceSuspendAccountRequest {
     /**
      * account_id represents the user\&#39;s account ID
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceSuspendAccount
      */
@@ -8096,6 +8372,7 @@ export interface JumpboxServiceApiJumpboxServiceTestUserRequest {
 export interface JumpboxServiceApiJumpboxServiceUpdateAccountRequest {
     /**
      * Account id.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceUpdateAccount
      */
@@ -8111,6 +8388,7 @@ export interface JumpboxServiceApiJumpboxServiceUpdateAccountRequest {
 export interface JumpboxServiceApiJumpboxServiceUpdateTenantRequest {
     /**
      * Tenant id.
+     * Defaults to: undefined
      * @type string
      * @memberof JumpboxServiceApijumpboxServiceUpdateTenant
      */
@@ -8143,7 +8421,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Authorize Description: Authenticate a user and return a JWT.
      * @param param the request object
      */
-    public jumpboxServiceAuthorizeWithHttpInfo(param: JumpboxServiceApiJumpboxServiceAuthorizeRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3AuthorizeResponse>> {
+    public jumpboxServiceAuthorizeWithHttpInfo(param: JumpboxServiceApiJumpboxServiceAuthorizeRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3AuthorizeResponse>> {
         return this.api.jumpboxServiceAuthorizeWithHttpInfo(param.jumpboxv3AuthorizeRequest,  options).toPromise();
     }
 
@@ -8151,7 +8429,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Authorize Description: Authenticate a user and return a JWT.
      * @param param the request object
      */
-    public jumpboxServiceAuthorize(param: JumpboxServiceApiJumpboxServiceAuthorizeRequest, options?: Configuration): Promise<Jumpboxv3AuthorizeResponse> {
+    public jumpboxServiceAuthorize(param: JumpboxServiceApiJumpboxServiceAuthorizeRequest, options?: ConfigurationOptions): Promise<Jumpboxv3AuthorizeResponse> {
         return this.api.jumpboxServiceAuthorize(param.jumpboxv3AuthorizeRequest,  options).toPromise();
     }
 
@@ -8159,7 +8437,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Delete account Description: Delete an account.
      * @param param the request object
      */
-    public jumpboxServiceDeleteAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceDeleteAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3DeleteAccountResponse>> {
+    public jumpboxServiceDeleteAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceDeleteAccountRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3DeleteAccountResponse>> {
         return this.api.jumpboxServiceDeleteAccountWithHttpInfo(param.accountId,  options).toPromise();
     }
 
@@ -8167,7 +8445,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Delete account Description: Delete an account.
      * @param param the request object
      */
-    public jumpboxServiceDeleteAccount(param: JumpboxServiceApiJumpboxServiceDeleteAccountRequest, options?: Configuration): Promise<Jumpboxv3DeleteAccountResponse> {
+    public jumpboxServiceDeleteAccount(param: JumpboxServiceApiJumpboxServiceDeleteAccountRequest, options?: ConfigurationOptions): Promise<Jumpboxv3DeleteAccountResponse> {
         return this.api.jumpboxServiceDeleteAccount(param.accountId,  options).toPromise();
     }
 
@@ -8175,7 +8453,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Delete tenant Description: Delete a tenant.
      * @param param the request object
      */
-    public jumpboxServiceDeleteTenantWithHttpInfo(param: JumpboxServiceApiJumpboxServiceDeleteTenantRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public jumpboxServiceDeleteTenantWithHttpInfo(param: JumpboxServiceApiJumpboxServiceDeleteTenantRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.jumpboxServiceDeleteTenantWithHttpInfo(param.tenantId, param.isPermanentDelete, param.async,  options).toPromise();
     }
 
@@ -8183,7 +8461,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Delete tenant Description: Delete a tenant.
      * @param param the request object
      */
-    public jumpboxServiceDeleteTenant(param: JumpboxServiceApiJumpboxServiceDeleteTenantRequest, options?: Configuration): Promise<any> {
+    public jumpboxServiceDeleteTenant(param: JumpboxServiceApiJumpboxServiceDeleteTenantRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.jumpboxServiceDeleteTenant(param.tenantId, param.isPermanentDelete, param.async,  options).toPromise();
     }
 
@@ -8191,7 +8469,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Delete user Description: Delete the user.
      * @param param the request object
      */
-    public jumpboxServiceDeleteUserWithHttpInfo(param: JumpboxServiceApiJumpboxServiceDeleteUserRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public jumpboxServiceDeleteUserWithHttpInfo(param: JumpboxServiceApiJumpboxServiceDeleteUserRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.jumpboxServiceDeleteUserWithHttpInfo(param.userId,  options).toPromise();
     }
 
@@ -8199,7 +8477,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Delete user Description: Delete the user.
      * @param param the request object
      */
-    public jumpboxServiceDeleteUser(param: JumpboxServiceApiJumpboxServiceDeleteUserRequest, options?: Configuration): Promise<any> {
+    public jumpboxServiceDeleteUser(param: JumpboxServiceApiJumpboxServiceDeleteUserRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.jumpboxServiceDeleteUser(param.userId,  options).toPromise();
     }
 
@@ -8207,7 +8485,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Get account Description: Get an account.
      * @param param the request object
      */
-    public jumpboxServiceGetAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3GetAccountResponse>> {
+    public jumpboxServiceGetAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetAccountRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3GetAccountResponse>> {
         return this.api.jumpboxServiceGetAccountWithHttpInfo(param.accountId, param.includeInactive, param.includeNotReady,  options).toPromise();
     }
 
@@ -8215,7 +8493,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Get account Description: Get an account.
      * @param param the request object
      */
-    public jumpboxServiceGetAccount(param: JumpboxServiceApiJumpboxServiceGetAccountRequest, options?: Configuration): Promise<Jumpboxv3GetAccountResponse> {
+    public jumpboxServiceGetAccount(param: JumpboxServiceApiJumpboxServiceGetAccountRequest, options?: ConfigurationOptions): Promise<Jumpboxv3GetAccountResponse> {
         return this.api.jumpboxServiceGetAccount(param.accountId, param.includeInactive, param.includeNotReady,  options).toPromise();
     }
 
@@ -8223,7 +8501,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Get accounts Description: Get all accounts based on UID.
      * @param param the request object
      */
-    public jumpboxServiceGetAccountsWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetAccountsRequest = {}, options?: Configuration): Promise<HttpInfo<Jumpboxv3GetAccountsResponse>> {
+    public jumpboxServiceGetAccountsWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetAccountsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3GetAccountsResponse>> {
         return this.api.jumpboxServiceGetAccountsWithHttpInfo(param.uid, param.externalId, param.includeInactive, param.includeNotReady,  options).toPromise();
     }
 
@@ -8231,7 +8509,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Get accounts Description: Get all accounts based on UID.
      * @param param the request object
      */
-    public jumpboxServiceGetAccounts(param: JumpboxServiceApiJumpboxServiceGetAccountsRequest = {}, options?: Configuration): Promise<Jumpboxv3GetAccountsResponse> {
+    public jumpboxServiceGetAccounts(param: JumpboxServiceApiJumpboxServiceGetAccountsRequest = {}, options?: ConfigurationOptions): Promise<Jumpboxv3GetAccountsResponse> {
         return this.api.jumpboxServiceGetAccounts(param.uid, param.externalId, param.includeInactive, param.includeNotReady,  options).toPromise();
     }
 
@@ -8239,7 +8517,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Get tenant Description: Get a tenant.
      * @param param the request object
      */
-    public jumpboxServiceGetTenantWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetTenantRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3GetTenantResponse>> {
+    public jumpboxServiceGetTenantWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetTenantRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3GetTenantResponse>> {
         return this.api.jumpboxServiceGetTenantWithHttpInfo(param.tenantId, param.includeInactive, param.includeNotReady,  options).toPromise();
     }
 
@@ -8247,7 +8525,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Get tenant Description: Get a tenant.
      * @param param the request object
      */
-    public jumpboxServiceGetTenant(param: JumpboxServiceApiJumpboxServiceGetTenantRequest, options?: Configuration): Promise<Jumpboxv3GetTenantResponse> {
+    public jumpboxServiceGetTenant(param: JumpboxServiceApiJumpboxServiceGetTenantRequest, options?: ConfigurationOptions): Promise<Jumpboxv3GetTenantResponse> {
         return this.api.jumpboxServiceGetTenant(param.tenantId, param.includeInactive, param.includeNotReady,  options).toPromise();
     }
 
@@ -8255,7 +8533,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Get tenants Description: Get all tenant base on UID.
      * @param param the request object
      */
-    public jumpboxServiceGetTenantsWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetTenantsRequest = {}, options?: Configuration): Promise<HttpInfo<Jumpboxv3GetTenantsResponse>> {
+    public jumpboxServiceGetTenantsWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetTenantsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3GetTenantsResponse>> {
         return this.api.jumpboxServiceGetTenantsWithHttpInfo(param.uid, param.externalId, param.includeInactive, param.includeNotReady,  options).toPromise();
     }
 
@@ -8263,7 +8541,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Get tenants Description: Get all tenant base on UID.
      * @param param the request object
      */
-    public jumpboxServiceGetTenants(param: JumpboxServiceApiJumpboxServiceGetTenantsRequest = {}, options?: Configuration): Promise<Jumpboxv3GetTenantsResponse> {
+    public jumpboxServiceGetTenants(param: JumpboxServiceApiJumpboxServiceGetTenantsRequest = {}, options?: ConfigurationOptions): Promise<Jumpboxv3GetTenantsResponse> {
         return this.api.jumpboxServiceGetTenants(param.uid, param.externalId, param.includeInactive, param.includeNotReady,  options).toPromise();
     }
 
@@ -8271,7 +8549,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Get users Description: Get all users base on a tenantID.
      * @param param the request object
      */
-    public jumpboxServiceGetUsersWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetUsersRequest = {}, options?: Configuration): Promise<HttpInfo<Tenantuserv3GetUsersResponse>> {
+    public jumpboxServiceGetUsersWithHttpInfo(param: JumpboxServiceApiJumpboxServiceGetUsersRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3GetUsersResponse>> {
         return this.api.jumpboxServiceGetUsersWithHttpInfo(param.uid,  options).toPromise();
     }
 
@@ -8279,7 +8557,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Get users Description: Get all users base on a tenantID.
      * @param param the request object
      */
-    public jumpboxServiceGetUsers(param: JumpboxServiceApiJumpboxServiceGetUsersRequest = {}, options?: Configuration): Promise<Tenantuserv3GetUsersResponse> {
+    public jumpboxServiceGetUsers(param: JumpboxServiceApiJumpboxServiceGetUsersRequest = {}, options?: ConfigurationOptions): Promise<Tenantuserv3GetUsersResponse> {
         return this.api.jumpboxServiceGetUsers(param.uid,  options).toPromise();
     }
 
@@ -8287,7 +8565,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Post account Description: Create an Account.
      * @param param the request object
      */
-    public jumpboxServicePostAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServicePostAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3PostAccountResponse>> {
+    public jumpboxServicePostAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServicePostAccountRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3PostAccountResponse>> {
         return this.api.jumpboxServicePostAccountWithHttpInfo(param.jumpboxv3PostAccountRequest,  options).toPromise();
     }
 
@@ -8295,7 +8573,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Post account Description: Create an Account.
      * @param param the request object
      */
-    public jumpboxServicePostAccount(param: JumpboxServiceApiJumpboxServicePostAccountRequest, options?: Configuration): Promise<Jumpboxv3PostAccountResponse> {
+    public jumpboxServicePostAccount(param: JumpboxServiceApiJumpboxServicePostAccountRequest, options?: ConfigurationOptions): Promise<Jumpboxv3PostAccountResponse> {
         return this.api.jumpboxServicePostAccount(param.jumpboxv3PostAccountRequest,  options).toPromise();
     }
 
@@ -8303,7 +8581,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Post tenants Description: Create a tenant.
      * @param param the request object
      */
-    public jumpboxServicePostTenantsWithHttpInfo(param: JumpboxServiceApiJumpboxServicePostTenantsRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3PostTenantsResponse>> {
+    public jumpboxServicePostTenantsWithHttpInfo(param: JumpboxServiceApiJumpboxServicePostTenantsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3PostTenantsResponse>> {
         return this.api.jumpboxServicePostTenantsWithHttpInfo(param.jumpboxv3PostTenantsRequest,  options).toPromise();
     }
 
@@ -8311,7 +8589,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Post tenants Description: Create a tenant.
      * @param param the request object
      */
-    public jumpboxServicePostTenants(param: JumpboxServiceApiJumpboxServicePostTenantsRequest, options?: Configuration): Promise<Jumpboxv3PostTenantsResponse> {
+    public jumpboxServicePostTenants(param: JumpboxServiceApiJumpboxServicePostTenantsRequest, options?: ConfigurationOptions): Promise<Jumpboxv3PostTenantsResponse> {
         return this.api.jumpboxServicePostTenants(param.jumpboxv3PostTenantsRequest,  options).toPromise();
     }
 
@@ -8319,7 +8597,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Post users Description: Create users.
      * @param param the request object
      */
-    public jumpboxServicePostUsersWithHttpInfo(param: JumpboxServiceApiJumpboxServicePostUsersRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3PostUsersBulkResponse>> {
+    public jumpboxServicePostUsersWithHttpInfo(param: JumpboxServiceApiJumpboxServicePostUsersRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3PostUsersBulkResponse>> {
         return this.api.jumpboxServicePostUsersWithHttpInfo(param.jumpboxv3PostUsersBulkRequest,  options).toPromise();
     }
 
@@ -8327,7 +8605,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Post users Description: Create users.
      * @param param the request object
      */
-    public jumpboxServicePostUsers(param: JumpboxServiceApiJumpboxServicePostUsersRequest, options?: Configuration): Promise<Jumpboxv3PostUsersBulkResponse> {
+    public jumpboxServicePostUsers(param: JumpboxServiceApiJumpboxServicePostUsersRequest, options?: ConfigurationOptions): Promise<Jumpboxv3PostUsersBulkResponse> {
         return this.api.jumpboxServicePostUsers(param.jumpboxv3PostUsersBulkRequest,  options).toPromise();
     }
 
@@ -8335,7 +8613,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Resume account Description: Resume an account.
      * @param param the request object
      */
-    public jumpboxServiceResumeAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceResumeAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3ResumeAccountResponse>> {
+    public jumpboxServiceResumeAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceResumeAccountRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3ResumeAccountResponse>> {
         return this.api.jumpboxServiceResumeAccountWithHttpInfo(param.accountId,  options).toPromise();
     }
 
@@ -8343,7 +8621,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Resume account Description: Resume an account.
      * @param param the request object
      */
-    public jumpboxServiceResumeAccount(param: JumpboxServiceApiJumpboxServiceResumeAccountRequest, options?: Configuration): Promise<Jumpboxv3ResumeAccountResponse> {
+    public jumpboxServiceResumeAccount(param: JumpboxServiceApiJumpboxServiceResumeAccountRequest, options?: ConfigurationOptions): Promise<Jumpboxv3ResumeAccountResponse> {
         return this.api.jumpboxServiceResumeAccount(param.accountId,  options).toPromise();
     }
 
@@ -8351,7 +8629,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Search users Description: Search for all users matching the provided string.
      * @param param the request object
      */
-    public jumpboxServiceSearchUsersWithHttpInfo(param: JumpboxServiceApiJumpboxServiceSearchUsersRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3SearchUsersResponse>> {
+    public jumpboxServiceSearchUsersWithHttpInfo(param: JumpboxServiceApiJumpboxServiceSearchUsersRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3SearchUsersResponse>> {
         return this.api.jumpboxServiceSearchUsersWithHttpInfo(param.jumpboxv3SearchUsersRequest,  options).toPromise();
     }
 
@@ -8359,7 +8637,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Search users Description: Search for all users matching the provided string.
      * @param param the request object
      */
-    public jumpboxServiceSearchUsers(param: JumpboxServiceApiJumpboxServiceSearchUsersRequest, options?: Configuration): Promise<Jumpboxv3SearchUsersResponse> {
+    public jumpboxServiceSearchUsers(param: JumpboxServiceApiJumpboxServiceSearchUsersRequest, options?: ConfigurationOptions): Promise<Jumpboxv3SearchUsersResponse> {
         return this.api.jumpboxServiceSearchUsers(param.jumpboxv3SearchUsersRequest,  options).toPromise();
     }
 
@@ -8367,7 +8645,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Suspend Account Description: Suspend an account
      * @param param the request object
      */
-    public jumpboxServiceSuspendAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceSuspendAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3SuspendAccountResponse>> {
+    public jumpboxServiceSuspendAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceSuspendAccountRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3SuspendAccountResponse>> {
         return this.api.jumpboxServiceSuspendAccountWithHttpInfo(param.accountId,  options).toPromise();
     }
 
@@ -8375,7 +8653,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Suspend Account Description: Suspend an account
      * @param param the request object
      */
-    public jumpboxServiceSuspendAccount(param: JumpboxServiceApiJumpboxServiceSuspendAccountRequest, options?: Configuration): Promise<Jumpboxv3SuspendAccountResponse> {
+    public jumpboxServiceSuspendAccount(param: JumpboxServiceApiJumpboxServiceSuspendAccountRequest, options?: ConfigurationOptions): Promise<Jumpboxv3SuspendAccountResponse> {
         return this.api.jumpboxServiceSuspendAccount(param.accountId,  options).toPromise();
     }
 
@@ -8383,7 +8661,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Test user Description: Test a user lookup to a given LDAP.
      * @param param the request object
      */
-    public jumpboxServiceTestUserWithHttpInfo(param: JumpboxServiceApiJumpboxServiceTestUserRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3TestUserResponse>> {
+    public jumpboxServiceTestUserWithHttpInfo(param: JumpboxServiceApiJumpboxServiceTestUserRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3TestUserResponse>> {
         return this.api.jumpboxServiceTestUserWithHttpInfo(param.jumpboxv3TestUserRequest,  options).toPromise();
     }
 
@@ -8391,7 +8669,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Test user Description: Test a user lookup to a given LDAP.
      * @param param the request object
      */
-    public jumpboxServiceTestUser(param: JumpboxServiceApiJumpboxServiceTestUserRequest, options?: Configuration): Promise<Jumpboxv3TestUserResponse> {
+    public jumpboxServiceTestUser(param: JumpboxServiceApiJumpboxServiceTestUserRequest, options?: ConfigurationOptions): Promise<Jumpboxv3TestUserResponse> {
         return this.api.jumpboxServiceTestUser(param.jumpboxv3TestUserRequest,  options).toPromise();
     }
 
@@ -8399,7 +8677,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Update Account Description: Updates an account.
      * @param param the request object
      */
-    public jumpboxServiceUpdateAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceUpdateAccountRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3UpdateAccountResponse>> {
+    public jumpboxServiceUpdateAccountWithHttpInfo(param: JumpboxServiceApiJumpboxServiceUpdateAccountRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3UpdateAccountResponse>> {
         return this.api.jumpboxServiceUpdateAccountWithHttpInfo(param.accountId, param.jumpboxv3UpdateAccountRequest,  options).toPromise();
     }
 
@@ -8407,7 +8685,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Update Account Description: Updates an account.
      * @param param the request object
      */
-    public jumpboxServiceUpdateAccount(param: JumpboxServiceApiJumpboxServiceUpdateAccountRequest, options?: Configuration): Promise<Jumpboxv3UpdateAccountResponse> {
+    public jumpboxServiceUpdateAccount(param: JumpboxServiceApiJumpboxServiceUpdateAccountRequest, options?: ConfigurationOptions): Promise<Jumpboxv3UpdateAccountResponse> {
         return this.api.jumpboxServiceUpdateAccount(param.accountId, param.jumpboxv3UpdateAccountRequest,  options).toPromise();
     }
 
@@ -8415,7 +8693,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Update tenant Description: Update a tenant.
      * @param param the request object
      */
-    public jumpboxServiceUpdateTenantWithHttpInfo(param: JumpboxServiceApiJumpboxServiceUpdateTenantRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3UpdateTenantResponse>> {
+    public jumpboxServiceUpdateTenantWithHttpInfo(param: JumpboxServiceApiJumpboxServiceUpdateTenantRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3UpdateTenantResponse>> {
         return this.api.jumpboxServiceUpdateTenantWithHttpInfo(param.tenantId, param.jumpboxv3UpdateTenantRequest,  options).toPromise();
     }
 
@@ -8423,7 +8701,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Update tenant Description: Update a tenant.
      * @param param the request object
      */
-    public jumpboxServiceUpdateTenant(param: JumpboxServiceApiJumpboxServiceUpdateTenantRequest, options?: Configuration): Promise<Jumpboxv3UpdateTenantResponse> {
+    public jumpboxServiceUpdateTenant(param: JumpboxServiceApiJumpboxServiceUpdateTenantRequest, options?: ConfigurationOptions): Promise<Jumpboxv3UpdateTenantResponse> {
         return this.api.jumpboxServiceUpdateTenant(param.tenantId, param.jumpboxv3UpdateTenantRequest,  options).toPromise();
     }
 
@@ -8431,7 +8709,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Update users Description: Update an array of users.
      * @param param the request object
      */
-    public jumpboxServiceUpdateUsersWithHttpInfo(param: JumpboxServiceApiJumpboxServiceUpdateUsersRequest, options?: Configuration): Promise<HttpInfo<Jumpboxv3UpdateUsersBulkResponse>> {
+    public jumpboxServiceUpdateUsersWithHttpInfo(param: JumpboxServiceApiJumpboxServiceUpdateUsersRequest, options?: ConfigurationOptions): Promise<HttpInfo<Jumpboxv3UpdateUsersBulkResponse>> {
         return this.api.jumpboxServiceUpdateUsersWithHttpInfo(param.jumpboxv3UpdateUsersBulkRequest,  options).toPromise();
     }
 
@@ -8439,7 +8717,7 @@ export class ObjectJumpboxServiceApi {
      * Summary: Update users Description: Update an array of users.
      * @param param the request object
      */
-    public jumpboxServiceUpdateUsers(param: JumpboxServiceApiJumpboxServiceUpdateUsersRequest, options?: Configuration): Promise<Jumpboxv3UpdateUsersBulkResponse> {
+    public jumpboxServiceUpdateUsers(param: JumpboxServiceApiJumpboxServiceUpdateUsersRequest, options?: ConfigurationOptions): Promise<Jumpboxv3UpdateUsersBulkResponse> {
         return this.api.jumpboxServiceUpdateUsers(param.jumpboxv3UpdateUsersBulkRequest,  options).toPromise();
     }
 
@@ -8469,6 +8747,7 @@ export interface NotificationsServiceApiNotificationsServiceGetFoldersRequest {
 export interface NotificationsServiceApiNotificationsServiceGetNotificationFilenameRequest {
     /**
      * Params are located in the requests context (tenant id, user email, notification id).
+     * Defaults to: undefined
      * @type string
      * @memberof NotificationsServiceApinotificationsServiceGetNotificationFilename
      */
@@ -8478,6 +8757,7 @@ export interface NotificationsServiceApiNotificationsServiceGetNotificationFilen
 export interface NotificationsServiceApiNotificationsServiceGetNotificationRecordRequest {
     /**
      * ID for the record to return.
+     * Defaults to: undefined
      * @type string
      * @memberof NotificationsServiceApinotificationsServiceGetNotificationRecord
      */
@@ -8487,54 +8767,63 @@ export interface NotificationsServiceApiNotificationsServiceGetNotificationRecor
 export interface NotificationsServiceApiNotificationsServiceGetNotificationRecordsRequest {
     /**
      * Return records created at this time or later (&gt;&#x3D;).
+     * Defaults to: undefined
      * @type Date
      * @memberof NotificationsServiceApinotificationsServiceGetNotificationRecords
      */
     filterStartTime?: Date
     /**
      * Return records created before this time (&lt;).
+     * Defaults to: undefined
      * @type Date
      * @memberof NotificationsServiceApinotificationsServiceGetNotificationRecords
      */
     filterEndTime?: Date
     /**
      * Only return record that include the specified state.
+     * Defaults to: &#39;INCLUDE_ALL&#39;
      * @type &#39;INCLUDE_ALL&#39; | &#39;UNREAD_ONLY&#39; | &#39;READ_ONLY&#39; | &#39;COMPLETE_ONLY&#39; | &#39;NOT_COMPLETE&#39;
      * @memberof NotificationsServiceApinotificationsServiceGetNotificationRecords
      */
     filterState?: 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE'
     /**
      * Only return record that includes the specified origins.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof NotificationsServiceApinotificationsServiceGetNotificationRecords
      */
     filterOrigins?: Array<string>
     /**
      * Only return record that with the specified origin_data.
+     * Defaults to: undefined
      * @type string
      * @memberof NotificationsServiceApinotificationsServiceGetNotificationRecords
      */
     filterOriginData?: string
     /**
      * The max amount of rows to return for this single query.
+     * Defaults to: undefined
      * @type number
      * @memberof NotificationsServiceApinotificationsServiceGetNotificationRecords
      */
     filterLimit?: number
     /**
      * The amount to offset the rows by for pagination.
+     * Defaults to: undefined
      * @type number
      * @memberof NotificationsServiceApinotificationsServiceGetNotificationRecords
      */
     offset?: number
     /**
      * The max amount of rows to return for pagination.
+     * Defaults to: undefined
      * @type number
      * @memberof NotificationsServiceApinotificationsServiceGetNotificationRecords
      */
     limit?: number
     /**
      * Computing the filter counts is relatively expensive, only compute when needed.
+     * Defaults to: undefined
      * @type boolean
      * @memberof NotificationsServiceApinotificationsServiceGetNotificationRecords
      */
@@ -8544,12 +8833,14 @@ export interface NotificationsServiceApiNotificationsServiceGetNotificationRecor
 export interface NotificationsServiceApiNotificationsServiceGetTicketStatusRequest {
     /**
      * The ID of the ticket to fetch.
+     * Defaults to: undefined
      * @type string
      * @memberof NotificationsServiceApinotificationsServiceGetTicketStatus
      */
     ticketId?: string
     /**
      * The ID of the ticketing integration.
+     * Defaults to: undefined
      * @type string
      * @memberof NotificationsServiceApinotificationsServiceGetTicketStatus
      */
@@ -8603,7 +8894,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Create ticket Description: Create ticket based on information passed in.
      * @param param the request object
      */
-    public notificationsServiceCreateTicketWithHttpInfo(param: NotificationsServiceApiNotificationsServiceCreateTicketRequest, options?: Configuration): Promise<HttpInfo<Notificationsv3CreateTicketResponse>> {
+    public notificationsServiceCreateTicketWithHttpInfo(param: NotificationsServiceApiNotificationsServiceCreateTicketRequest, options?: ConfigurationOptions): Promise<HttpInfo<Notificationsv3CreateTicketResponse>> {
         return this.api.notificationsServiceCreateTicketWithHttpInfo(param.notificationsv3CreateTicketRequest,  options).toPromise();
     }
 
@@ -8611,7 +8902,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Create ticket Description: Create ticket based on information passed in.
      * @param param the request object
      */
-    public notificationsServiceCreateTicket(param: NotificationsServiceApiNotificationsServiceCreateTicketRequest, options?: Configuration): Promise<Notificationsv3CreateTicketResponse> {
+    public notificationsServiceCreateTicket(param: NotificationsServiceApiNotificationsServiceCreateTicketRequest, options?: ConfigurationOptions): Promise<Notificationsv3CreateTicketResponse> {
         return this.api.notificationsServiceCreateTicket(param.notificationsv3CreateTicketRequest,  options).toPromise();
     }
 
@@ -8619,7 +8910,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Get folders Description: Get folder for the integration connection provided.
      * @param param the request object
      */
-    public notificationsServiceGetFoldersWithHttpInfo(param: NotificationsServiceApiNotificationsServiceGetFoldersRequest, options?: Configuration): Promise<HttpInfo<Notificationsv3GetFoldersResponse>> {
+    public notificationsServiceGetFoldersWithHttpInfo(param: NotificationsServiceApiNotificationsServiceGetFoldersRequest, options?: ConfigurationOptions): Promise<HttpInfo<Notificationsv3GetFoldersResponse>> {
         return this.api.notificationsServiceGetFoldersWithHttpInfo(param.notificationsv3GetFoldersRequest,  options).toPromise();
     }
 
@@ -8627,7 +8918,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Get folders Description: Get folder for the integration connection provided.
      * @param param the request object
      */
-    public notificationsServiceGetFolders(param: NotificationsServiceApiNotificationsServiceGetFoldersRequest, options?: Configuration): Promise<Notificationsv3GetFoldersResponse> {
+    public notificationsServiceGetFolders(param: NotificationsServiceApiNotificationsServiceGetFoldersRequest, options?: ConfigurationOptions): Promise<Notificationsv3GetFoldersResponse> {
         return this.api.notificationsServiceGetFolders(param.notificationsv3GetFoldersRequest,  options).toPromise();
     }
 
@@ -8635,7 +8926,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Get notification filename Description: Return filename associated with the notifications record referenced in the associated context record. The notification id is required but may be set in the associated authentication token or explicitly in the request.
      * @param param the request object
      */
-    public notificationsServiceGetNotificationFilenameWithHttpInfo(param: NotificationsServiceApiNotificationsServiceGetNotificationFilenameRequest = {}, options?: Configuration): Promise<HttpInfo<Notificationsv3GetNotificationFilenameResponse>> {
+    public notificationsServiceGetNotificationFilenameWithHttpInfo(param: NotificationsServiceApiNotificationsServiceGetNotificationFilenameRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Notificationsv3GetNotificationFilenameResponse>> {
         return this.api.notificationsServiceGetNotificationFilenameWithHttpInfo(param.notificationId,  options).toPromise();
     }
 
@@ -8643,7 +8934,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Get notification filename Description: Return filename associated with the notifications record referenced in the associated context record. The notification id is required but may be set in the associated authentication token or explicitly in the request.
      * @param param the request object
      */
-    public notificationsServiceGetNotificationFilename(param: NotificationsServiceApiNotificationsServiceGetNotificationFilenameRequest = {}, options?: Configuration): Promise<Notificationsv3GetNotificationFilenameResponse> {
+    public notificationsServiceGetNotificationFilename(param: NotificationsServiceApiNotificationsServiceGetNotificationFilenameRequest = {}, options?: ConfigurationOptions): Promise<Notificationsv3GetNotificationFilenameResponse> {
         return this.api.notificationsServiceGetNotificationFilename(param.notificationId,  options).toPromise();
     }
 
@@ -8651,7 +8942,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Get notification record Description: Return notifications record with the specified ID.
      * @param param the request object
      */
-    public notificationsServiceGetNotificationRecordWithHttpInfo(param: NotificationsServiceApiNotificationsServiceGetNotificationRecordRequest, options?: Configuration): Promise<HttpInfo<Notificationsv3GetNotificationRecordResponse>> {
+    public notificationsServiceGetNotificationRecordWithHttpInfo(param: NotificationsServiceApiNotificationsServiceGetNotificationRecordRequest, options?: ConfigurationOptions): Promise<HttpInfo<Notificationsv3GetNotificationRecordResponse>> {
         return this.api.notificationsServiceGetNotificationRecordWithHttpInfo(param.notificationId,  options).toPromise();
     }
 
@@ -8659,7 +8950,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Get notification record Description: Return notifications record with the specified ID.
      * @param param the request object
      */
-    public notificationsServiceGetNotificationRecord(param: NotificationsServiceApiNotificationsServiceGetNotificationRecordRequest, options?: Configuration): Promise<Notificationsv3GetNotificationRecordResponse> {
+    public notificationsServiceGetNotificationRecord(param: NotificationsServiceApiNotificationsServiceGetNotificationRecordRequest, options?: ConfigurationOptions): Promise<Notificationsv3GetNotificationRecordResponse> {
         return this.api.notificationsServiceGetNotificationRecord(param.notificationId,  options).toPromise();
     }
 
@@ -8667,7 +8958,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Get notification records Description: Return notifications records that match the specified filter.
      * @param param the request object
      */
-    public notificationsServiceGetNotificationRecordsWithHttpInfo(param: NotificationsServiceApiNotificationsServiceGetNotificationRecordsRequest = {}, options?: Configuration): Promise<HttpInfo<Notificationsv3GetNotificationRecordsResponse>> {
+    public notificationsServiceGetNotificationRecordsWithHttpInfo(param: NotificationsServiceApiNotificationsServiceGetNotificationRecordsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Notificationsv3GetNotificationRecordsResponse>> {
         return this.api.notificationsServiceGetNotificationRecordsWithHttpInfo(param.filterStartTime, param.filterEndTime, param.filterState, param.filterOrigins, param.filterOriginData, param.filterLimit, param.offset, param.limit, param.includeFilterCounts,  options).toPromise();
     }
 
@@ -8675,7 +8966,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Get notification records Description: Return notifications records that match the specified filter.
      * @param param the request object
      */
-    public notificationsServiceGetNotificationRecords(param: NotificationsServiceApiNotificationsServiceGetNotificationRecordsRequest = {}, options?: Configuration): Promise<Notificationsv3GetNotificationRecordsResponse> {
+    public notificationsServiceGetNotificationRecords(param: NotificationsServiceApiNotificationsServiceGetNotificationRecordsRequest = {}, options?: ConfigurationOptions): Promise<Notificationsv3GetNotificationRecordsResponse> {
         return this.api.notificationsServiceGetNotificationRecords(param.filterStartTime, param.filterEndTime, param.filterState, param.filterOrigins, param.filterOriginData, param.filterLimit, param.offset, param.limit, param.includeFilterCounts,  options).toPromise();
     }
 
@@ -8683,7 +8974,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Get ticket status Description: Get the status of the given ticket
      * @param param the request object
      */
-    public notificationsServiceGetTicketStatusWithHttpInfo(param: NotificationsServiceApiNotificationsServiceGetTicketStatusRequest = {}, options?: Configuration): Promise<HttpInfo<Notificationsv3GetTicketStatusResponse>> {
+    public notificationsServiceGetTicketStatusWithHttpInfo(param: NotificationsServiceApiNotificationsServiceGetTicketStatusRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Notificationsv3GetTicketStatusResponse>> {
         return this.api.notificationsServiceGetTicketStatusWithHttpInfo(param.ticketId, param.integrationId,  options).toPromise();
     }
 
@@ -8691,7 +8982,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Get ticket status Description: Get the status of the given ticket
      * @param param the request object
      */
-    public notificationsServiceGetTicketStatus(param: NotificationsServiceApiNotificationsServiceGetTicketStatusRequest = {}, options?: Configuration): Promise<Notificationsv3GetTicketStatusResponse> {
+    public notificationsServiceGetTicketStatus(param: NotificationsServiceApiNotificationsServiceGetTicketStatusRequest = {}, options?: ConfigurationOptions): Promise<Notificationsv3GetTicketStatusResponse> {
         return this.api.notificationsServiceGetTicketStatus(param.ticketId, param.integrationId,  options).toPromise();
     }
 
@@ -8699,7 +8990,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: For PostNotificationRecord notification only Description: Sends notification with recipients and returns a status
      * @param param the request object
      */
-    public notificationsServicePostNotificationRecordWithHttpInfo(param: NotificationsServiceApiNotificationsServicePostNotificationRecordRequest, options?: Configuration): Promise<HttpInfo<Notificationsv3PostNotificationRecordResponse>> {
+    public notificationsServicePostNotificationRecordWithHttpInfo(param: NotificationsServiceApiNotificationsServicePostNotificationRecordRequest, options?: ConfigurationOptions): Promise<HttpInfo<Notificationsv3PostNotificationRecordResponse>> {
         return this.api.notificationsServicePostNotificationRecordWithHttpInfo(param.notificationsv3PostNotificationRecordRequest,  options).toPromise();
     }
 
@@ -8707,7 +8998,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: For PostNotificationRecord notification only Description: Sends notification with recipients and returns a status
      * @param param the request object
      */
-    public notificationsServicePostNotificationRecord(param: NotificationsServiceApiNotificationsServicePostNotificationRecordRequest, options?: Configuration): Promise<Notificationsv3PostNotificationRecordResponse> {
+    public notificationsServicePostNotificationRecord(param: NotificationsServiceApiNotificationsServicePostNotificationRecordRequest, options?: ConfigurationOptions): Promise<Notificationsv3PostNotificationRecordResponse> {
         return this.api.notificationsServicePostNotificationRecord(param.notificationsv3PostNotificationRecordRequest,  options).toPromise();
     }
 
@@ -8715,7 +9006,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Search notification records Description: Return notification records using pipeline of filters
      * @param param the request object
      */
-    public notificationsServiceSearchNotificationRecordsWithHttpInfo(param: NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRequest, options?: Configuration): Promise<HttpInfo<Notificationsv3SearchNotificationRecordsResponse>> {
+    public notificationsServiceSearchNotificationRecordsWithHttpInfo(param: NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Notificationsv3SearchNotificationRecordsResponse>> {
         return this.api.notificationsServiceSearchNotificationRecordsWithHttpInfo(param.notificationsv3SearchNotificationRecordsRequest,  options).toPromise();
     }
 
@@ -8723,7 +9014,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Search notification records Description: Return notification records using pipeline of filters
      * @param param the request object
      */
-    public notificationsServiceSearchNotificationRecords(param: NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRequest, options?: Configuration): Promise<Notificationsv3SearchNotificationRecordsResponse> {
+    public notificationsServiceSearchNotificationRecords(param: NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRequest, options?: ConfigurationOptions): Promise<Notificationsv3SearchNotificationRecordsResponse> {
         return this.api.notificationsServiceSearchNotificationRecords(param.notificationsv3SearchNotificationRecordsRequest,  options).toPromise();
     }
 
@@ -8731,7 +9022,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional.
      * @param param the request object
      */
-    public notificationsServiceTestIntegrationWithHttpInfo(param: NotificationsServiceApiNotificationsServiceTestIntegrationRequest, options?: Configuration): Promise<HttpInfo<Notificationsv3TestIntegrationResponse>> {
+    public notificationsServiceTestIntegrationWithHttpInfo(param: NotificationsServiceApiNotificationsServiceTestIntegrationRequest, options?: ConfigurationOptions): Promise<HttpInfo<Notificationsv3TestIntegrationResponse>> {
         return this.api.notificationsServiceTestIntegrationWithHttpInfo(param.notificationsv3TestIntegrationRequest,  options).toPromise();
     }
 
@@ -8739,7 +9030,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Test integration Description: Test the integration connection with the arguments passed in the TestIntegrationRequest.  When possible a test message is sent to the integration to ensure it is functional.
      * @param param the request object
      */
-    public notificationsServiceTestIntegration(param: NotificationsServiceApiNotificationsServiceTestIntegrationRequest, options?: Configuration): Promise<Notificationsv3TestIntegrationResponse> {
+    public notificationsServiceTestIntegration(param: NotificationsServiceApiNotificationsServiceTestIntegrationRequest, options?: ConfigurationOptions): Promise<Notificationsv3TestIntegrationResponse> {
         return this.api.notificationsServiceTestIntegration(param.notificationsv3TestIntegrationRequest,  options).toPromise();
     }
 
@@ -8747,7 +9038,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Update notification record Description: Update a notification record with the specified values.  The ID field is required and must match an existing notification. All fields other than the ID are optional. Creation timestamp, user and other administrative fields can not updated.
      * @param param the request object
      */
-    public notificationsServiceUpdateNotificationRecordWithHttpInfo(param: NotificationsServiceApiNotificationsServiceUpdateNotificationRecordRequest, options?: Configuration): Promise<HttpInfo<Notificationsv3UpdateNotificationRecordResponse>> {
+    public notificationsServiceUpdateNotificationRecordWithHttpInfo(param: NotificationsServiceApiNotificationsServiceUpdateNotificationRecordRequest, options?: ConfigurationOptions): Promise<HttpInfo<Notificationsv3UpdateNotificationRecordResponse>> {
         return this.api.notificationsServiceUpdateNotificationRecordWithHttpInfo(param.notificationsv3UpdateNotificationRecordRequest,  options).toPromise();
     }
 
@@ -8755,7 +9046,7 @@ export class ObjectNotificationsServiceApi {
      * Summary: Update notification record Description: Update a notification record with the specified values.  The ID field is required and must match an existing notification. All fields other than the ID are optional. Creation timestamp, user and other administrative fields can not updated.
      * @param param the request object
      */
-    public notificationsServiceUpdateNotificationRecord(param: NotificationsServiceApiNotificationsServiceUpdateNotificationRecordRequest, options?: Configuration): Promise<Notificationsv3UpdateNotificationRecordResponse> {
+    public notificationsServiceUpdateNotificationRecord(param: NotificationsServiceApiNotificationsServiceUpdateNotificationRecordRequest, options?: ConfigurationOptions): Promise<Notificationsv3UpdateNotificationRecordResponse> {
         return this.api.notificationsServiceUpdateNotificationRecord(param.notificationsv3UpdateNotificationRecordRequest,  options).toPromise();
     }
 
@@ -8767,24 +9058,28 @@ import { OutliersEngineApiRequestFactory, OutliersEngineApiResponseProcessor} fr
 export interface OutliersEngineApiOutliersEngineGetSourceStatisticsRequest {
     /**
      * server ip.
+     * Defaults to: undefined
      * @type string
      * @memberof OutliersEngineApioutliersEngineGetSourceStatistics
      */
     sourceServerIp?: string
     /**
      * database name.
+     * Defaults to: undefined
      * @type string
      * @memberof OutliersEngineApioutliersEngineGetSourceStatistics
      */
     sourceDatabaseName?: string
     /**
      * db user name (optional).
+     * Defaults to: undefined
      * @type string
      * @memberof OutliersEngineApioutliersEngineGetSourceStatistics
      */
     sourceDbUser?: string
     /**
      * The number of attributes to return for each SourceAttributeType - optional.
+     * Defaults to: undefined
      * @type number
      * @memberof OutliersEngineApioutliersEngineGetSourceStatistics
      */
@@ -8844,7 +9139,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Get source statistics Description: Return statistics regarding the input source, including distribution of verbs, source program, working hours etc.
      * @param param the request object
      */
-    public outliersEngineGetSourceStatisticsWithHttpInfo(param: OutliersEngineApiOutliersEngineGetSourceStatisticsRequest = {}, options?: Configuration): Promise<HttpInfo<Outliersenginev3GetSourceStatisticsResponse>> {
+    public outliersEngineGetSourceStatisticsWithHttpInfo(param: OutliersEngineApiOutliersEngineGetSourceStatisticsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Outliersenginev3GetSourceStatisticsResponse>> {
         return this.api.outliersEngineGetSourceStatisticsWithHttpInfo(param.sourceServerIp, param.sourceDatabaseName, param.sourceDbUser, param.attributesLimit,  options).toPromise();
     }
 
@@ -8852,7 +9147,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Get source statistics Description: Return statistics regarding the input source, including distribution of verbs, source program, working hours etc.
      * @param param the request object
      */
-    public outliersEngineGetSourceStatistics(param: OutliersEngineApiOutliersEngineGetSourceStatisticsRequest = {}, options?: Configuration): Promise<Outliersenginev3GetSourceStatisticsResponse> {
+    public outliersEngineGetSourceStatistics(param: OutliersEngineApiOutliersEngineGetSourceStatisticsRequest = {}, options?: ConfigurationOptions): Promise<Outliersenginev3GetSourceStatisticsResponse> {
         return this.api.outliersEngineGetSourceStatistics(param.sourceServerIp, param.sourceDatabaseName, param.sourceDbUser, param.attributesLimit,  options).toPromise();
     }
 
@@ -8860,7 +9155,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Get statistics Description: Return statistics regarding number of outliers, clusters and un/completed periods.
      * @param param the request object
      */
-    public outliersEngineGetStatisticsWithHttpInfo(param: OutliersEngineApiOutliersEngineGetStatisticsRequest = {}, options?: Configuration): Promise<HttpInfo<Outliersenginev3StatisticsResponse>> {
+    public outliersEngineGetStatisticsWithHttpInfo(param: OutliersEngineApiOutliersEngineGetStatisticsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Outliersenginev3StatisticsResponse>> {
         return this.api.outliersEngineGetStatisticsWithHttpInfo( options).toPromise();
     }
 
@@ -8868,7 +9163,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Get statistics Description: Return statistics regarding number of outliers, clusters and un/completed periods.
      * @param param the request object
      */
-    public outliersEngineGetStatistics(param: OutliersEngineApiOutliersEngineGetStatisticsRequest = {}, options?: Configuration): Promise<Outliersenginev3StatisticsResponse> {
+    public outliersEngineGetStatistics(param: OutliersEngineApiOutliersEngineGetStatisticsRequest = {}, options?: ConfigurationOptions): Promise<Outliersenginev3StatisticsResponse> {
         return this.api.outliersEngineGetStatistics( options).toPromise();
     }
 
@@ -8876,7 +9171,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Get working hours periods Description: Get a list of the working hours periods.
      * @param param the request object
      */
-    public outliersEngineGetWorkingHoursPeriodsWithHttpInfo(param: OutliersEngineApiOutliersEngineGetWorkingHoursPeriodsRequest = {}, options?: Configuration): Promise<HttpInfo<Outliersenginev3GetWorkingHoursPeriodsResponse>> {
+    public outliersEngineGetWorkingHoursPeriodsWithHttpInfo(param: OutliersEngineApiOutliersEngineGetWorkingHoursPeriodsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Outliersenginev3GetWorkingHoursPeriodsResponse>> {
         return this.api.outliersEngineGetWorkingHoursPeriodsWithHttpInfo( options).toPromise();
     }
 
@@ -8884,7 +9179,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Get working hours periods Description: Get a list of the working hours periods.
      * @param param the request object
      */
-    public outliersEngineGetWorkingHoursPeriods(param: OutliersEngineApiOutliersEngineGetWorkingHoursPeriodsRequest = {}, options?: Configuration): Promise<Outliersenginev3GetWorkingHoursPeriodsResponse> {
+    public outliersEngineGetWorkingHoursPeriods(param: OutliersEngineApiOutliersEngineGetWorkingHoursPeriodsRequest = {}, options?: ConfigurationOptions): Promise<Outliersenginev3GetWorkingHoursPeriodsResponse> {
         return this.api.outliersEngineGetWorkingHoursPeriods( options).toPromise();
     }
 
@@ -8892,7 +9187,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Run simulator Description: Run outlier simulator.
      * @param param the request object
      */
-    public outliersEngineRunSimulatorWithHttpInfo(param: OutliersEngineApiOutliersEngineRunSimulatorRequest, options?: Configuration): Promise<HttpInfo<RpcStatus>> {
+    public outliersEngineRunSimulatorWithHttpInfo(param: OutliersEngineApiOutliersEngineRunSimulatorRequest, options?: ConfigurationOptions): Promise<HttpInfo<RpcStatus>> {
         return this.api.outliersEngineRunSimulatorWithHttpInfo(param.outliersenginev3RunSimulatorRequest,  options).toPromise();
     }
 
@@ -8900,7 +9195,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Run simulator Description: Run outlier simulator.
      * @param param the request object
      */
-    public outliersEngineRunSimulator(param: OutliersEngineApiOutliersEngineRunSimulatorRequest, options?: Configuration): Promise<RpcStatus> {
+    public outliersEngineRunSimulator(param: OutliersEngineApiOutliersEngineRunSimulatorRequest, options?: ConfigurationOptions): Promise<RpcStatus> {
         return this.api.outliersEngineRunSimulator(param.outliersenginev3RunSimulatorRequest,  options).toPromise();
     }
 
@@ -8908,7 +9203,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Update working hours periods Description: Update the working hours periods values.
      * @param param the request object
      */
-    public outliersEngineUpdateWorkingHoursPeriodsWithHttpInfo(param: OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest, options?: Configuration): Promise<HttpInfo<Outliersenginev3OutlierResponse>> {
+    public outliersEngineUpdateWorkingHoursPeriodsWithHttpInfo(param: OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Outliersenginev3OutlierResponse>> {
         return this.api.outliersEngineUpdateWorkingHoursPeriodsWithHttpInfo(param.outliersenginev3UpdateWorkingHoursPeriodsRequest,  options).toPromise();
     }
 
@@ -8916,7 +9211,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Update working hours periods Description: Update the working hours periods values.
      * @param param the request object
      */
-    public outliersEngineUpdateWorkingHoursPeriods(param: OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest, options?: Configuration): Promise<Outliersenginev3OutlierResponse> {
+    public outliersEngineUpdateWorkingHoursPeriods(param: OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest, options?: ConfigurationOptions): Promise<Outliersenginev3OutlierResponse> {
         return this.api.outliersEngineUpdateWorkingHoursPeriods(param.outliersenginev3UpdateWorkingHoursPeriodsRequest,  options).toPromise();
     }
 
@@ -8924,7 +9219,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Upload and analyze period Description: Run outliers detection on ready periods.
      * @param param the request object
      */
-    public outliersEngineUploadAndAnalyzePeriodWithHttpInfo(param: OutliersEngineApiOutliersEngineUploadAndAnalyzePeriodRequest, options?: Configuration): Promise<HttpInfo<RpcStatus>> {
+    public outliersEngineUploadAndAnalyzePeriodWithHttpInfo(param: OutliersEngineApiOutliersEngineUploadAndAnalyzePeriodRequest, options?: ConfigurationOptions): Promise<HttpInfo<RpcStatus>> {
         return this.api.outliersEngineUploadAndAnalyzePeriodWithHttpInfo(param.body,  options).toPromise();
     }
 
@@ -8932,7 +9227,7 @@ export class ObjectOutliersEngineApi {
      * Summary: Upload and analyze period Description: Run outliers detection on ready periods.
      * @param param the request object
      */
-    public outliersEngineUploadAndAnalyzePeriod(param: OutliersEngineApiOutliersEngineUploadAndAnalyzePeriodRequest, options?: Configuration): Promise<RpcStatus> {
+    public outliersEngineUploadAndAnalyzePeriod(param: OutliersEngineApiOutliersEngineUploadAndAnalyzePeriodRequest, options?: ConfigurationOptions): Promise<RpcStatus> {
         return this.api.outliersEngineUploadAndAnalyzePeriod(param.body,  options).toPromise();
     }
 
@@ -8940,7 +9235,7 @@ export class ObjectOutliersEngineApi {
      * Summary: User clustering Description: Run user-clustering on current sources.
      * @param param the request object
      */
-    public outliersEngineUserClusteringWithHttpInfo(param: OutliersEngineApiOutliersEngineUserClusteringRequest, options?: Configuration): Promise<HttpInfo<RpcStatus>> {
+    public outliersEngineUserClusteringWithHttpInfo(param: OutliersEngineApiOutliersEngineUserClusteringRequest, options?: ConfigurationOptions): Promise<HttpInfo<RpcStatus>> {
         return this.api.outliersEngineUserClusteringWithHttpInfo(param.body,  options).toPromise();
     }
 
@@ -8948,7 +9243,7 @@ export class ObjectOutliersEngineApi {
      * Summary: User clustering Description: Run user-clustering on current sources.
      * @param param the request object
      */
-    public outliersEngineUserClustering(param: OutliersEngineApiOutliersEngineUserClusteringRequest, options?: Configuration): Promise<RpcStatus> {
+    public outliersEngineUserClustering(param: OutliersEngineApiOutliersEngineUserClusteringRequest, options?: ConfigurationOptions): Promise<RpcStatus> {
         return this.api.outliersEngineUserClustering(param.body,  options).toPromise();
     }
 
@@ -8960,12 +9255,14 @@ import { PipelineconfigServiceApiRequestFactory, PipelineconfigServiceApiRespons
 export interface PipelineconfigServiceApiPipelineconfigServiceDeleteTenantResourcesRequest {
     /**
      * unique tenant ID
+     * Defaults to: undefined
      * @type string
      * @memberof PipelineconfigServiceApipipelineconfigServiceDeleteTenantResources
      */
     tenantId: string
     /**
      * resource specifies the specific resource to delete
+     * Defaults to: undefined
      * @type string
      * @memberof PipelineconfigServiceApipipelineconfigServiceDeleteTenantResources
      */
@@ -8983,7 +9280,7 @@ export class ObjectPipelineconfigServiceApi {
      * Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
      * @param param the request object
      */
-    public pipelineconfigServiceDeleteTenantResourcesWithHttpInfo(param: PipelineconfigServiceApiPipelineconfigServiceDeleteTenantResourcesRequest, options?: Configuration): Promise<HttpInfo<Pipelineconfigv3DeleteTenantResponse>> {
+    public pipelineconfigServiceDeleteTenantResourcesWithHttpInfo(param: PipelineconfigServiceApiPipelineconfigServiceDeleteTenantResourcesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Pipelineconfigv3DeleteTenantResponse>> {
         return this.api.pipelineconfigServiceDeleteTenantResourcesWithHttpInfo(param.tenantId, param.resource,  options).toPromise();
     }
 
@@ -8991,7 +9288,7 @@ export class ObjectPipelineconfigServiceApi {
      * Summary: Delete a tenant resource Description: Delete tenant specific resources such as data warehouse, mongo, postgres and s3.
      * @param param the request object
      */
-    public pipelineconfigServiceDeleteTenantResources(param: PipelineconfigServiceApiPipelineconfigServiceDeleteTenantResourcesRequest, options?: Configuration): Promise<Pipelineconfigv3DeleteTenantResponse> {
+    public pipelineconfigServiceDeleteTenantResources(param: PipelineconfigServiceApiPipelineconfigServiceDeleteTenantResourcesRequest, options?: ConfigurationOptions): Promise<Pipelineconfigv3DeleteTenantResponse> {
         return this.api.pipelineconfigServiceDeleteTenantResources(param.tenantId, param.resource,  options).toPromise();
     }
 
@@ -9003,6 +9300,7 @@ import { PolicyBuilderApiRequestFactory, PolicyBuilderApiResponseProcessor} from
 export interface PolicyBuilderApiPolicyBuilderClonePolicyRequest {
     /**
      * Policy id that needs to be cloned.
+     * Defaults to: undefined
      * @type string
      * @memberof PolicyBuilderApipolicyBuilderClonePolicy
      */
@@ -9027,6 +9325,7 @@ export interface PolicyBuilderApiPolicyBuilderCreatePolicyRequest {
 export interface PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest {
     /**
      * Policy sync entry id to delete from sync.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof PolicyBuilderApipolicyBuilderDeleteGdpSyncEntry
      */
@@ -9036,6 +9335,7 @@ export interface PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest {
 export interface PolicyBuilderApiPolicyBuilderDeletePoliciesRequest {
     /**
      * Policy ids.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof PolicyBuilderApipolicyBuilderDeletePolicies
      */
@@ -9051,6 +9351,7 @@ export interface PolicyBuilderApiPolicyBuilderGetPoliciesRequest {
 export interface PolicyBuilderApiPolicyBuilderGetPolicyDetailsRequest {
     /**
      * Policy id.
+     * Defaults to: undefined
      * @type string
      * @memberof PolicyBuilderApipolicyBuilderGetPolicyDetails
      */
@@ -9072,12 +9373,14 @@ export interface PolicyBuilderApiPolicyBuilderGetPolicySyncListRequest {
 export interface PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest {
     /**
      * Policy id of the requested policy
+     * Defaults to: undefined
      * @type string
      * @memberof PolicyBuilderApipolicyBuilderGetPolicyVersion
      */
     policyId: string
     /**
      * Requested version number of the policy
+     * Defaults to: undefined
      * @type number
      * @memberof PolicyBuilderApipolicyBuilderGetPolicyVersion
      */
@@ -9087,6 +9390,7 @@ export interface PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest {
 export interface PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest {
     /**
      * Policy id of the requested policy
+     * Defaults to: undefined
      * @type string
      * @memberof PolicyBuilderApipolicyBuilderGetPolicyVersionsInfo
      */
@@ -9096,12 +9400,14 @@ export interface PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest {
 export interface PolicyBuilderApiPolicyBuilderGetReceiversRequest {
     /**
      * Action id.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof PolicyBuilderApipolicyBuilderGetReceivers
      */
     actionId?: Array<string>
     /**
      * Flag that indicates if cache needs to be validated.
+     * Defaults to: undefined
      * @type boolean
      * @memberof PolicyBuilderApipolicyBuilderGetReceivers
      */
@@ -9111,6 +9417,7 @@ export interface PolicyBuilderApiPolicyBuilderGetReceiversRequest {
 export interface PolicyBuilderApiPolicyBuilderGetRuleMetadataRequest {
     /**
      * Rule type integer to indicate rule type.
+     * Defaults to: &#39;ACCESS&#39;
      * @type &#39;ACCESS&#39; | &#39;EXCEPTION&#39; | &#39;RESULT_SET&#39;
      * @memberof PolicyBuilderApipolicyBuilderGetRuleMetadata
      */
@@ -9129,6 +9436,7 @@ export interface PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest {
 export interface PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof PolicyBuilderApipolicyBuilderInsertGdpPolicyMetaData
      */
@@ -9153,12 +9461,14 @@ export interface PolicyBuilderApiPolicyBuilderInstallPoliciesRequest {
 export interface PolicyBuilderApiPolicyBuilderIntegrationCheckRequest {
     /**
      * Integration Id to check if it is being used in policies.
+     * Defaults to: undefined
      * @type string
      * @memberof PolicyBuilderApipolicyBuilderIntegrationCheck
      */
     integrationId: string
     /**
      * Template Id to check if it is being used in policies.
+     * Defaults to: undefined
      * @type string
      * @memberof PolicyBuilderApipolicyBuilderIntegrationCheck
      */
@@ -9168,6 +9478,7 @@ export interface PolicyBuilderApiPolicyBuilderIntegrationCheckRequest {
 export interface PolicyBuilderApiPolicyBuilderPoliciesGroupsRequest {
     /**
      * Group ids to check if they are being used in policies.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof PolicyBuilderApipolicyBuilderPoliciesGroups
      */
@@ -9186,6 +9497,7 @@ export interface PolicyBuilderApiPolicyBuilderRuleValidationRequest {
 export interface PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest {
     /**
      * ID of central manager.
+     * Defaults to: undefined
      * @type string
      * @memberof PolicyBuilderApipolicyBuilderStorePoliciesGdp
      */
@@ -9218,7 +9530,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Clone policy Description: Clone a policy.
      * @param param the request object
      */
-    public policyBuilderClonePolicyWithHttpInfo(param: PolicyBuilderApiPolicyBuilderClonePolicyRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3StandardCRUDResponse>> {
+    public policyBuilderClonePolicyWithHttpInfo(param: PolicyBuilderApiPolicyBuilderClonePolicyRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3StandardCRUDResponse>> {
         return this.api.policyBuilderClonePolicyWithHttpInfo(param.policyId, param.policybuilderv3ClonePolicyRequest,  options).toPromise();
     }
 
@@ -9226,7 +9538,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Clone policy Description: Clone a policy.
      * @param param the request object
      */
-    public policyBuilderClonePolicy(param: PolicyBuilderApiPolicyBuilderClonePolicyRequest, options?: Configuration): Promise<Policybuilderv3StandardCRUDResponse> {
+    public policyBuilderClonePolicy(param: PolicyBuilderApiPolicyBuilderClonePolicyRequest, options?: ConfigurationOptions): Promise<Policybuilderv3StandardCRUDResponse> {
         return this.api.policyBuilderClonePolicy(param.policyId, param.policybuilderv3ClonePolicyRequest,  options).toPromise();
     }
 
@@ -9234,7 +9546,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Create policy Description: Create Policy returns response code and message.
      * @param param the request object
      */
-    public policyBuilderCreatePolicyWithHttpInfo(param: PolicyBuilderApiPolicyBuilderCreatePolicyRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3CreateUpdatePolicyResponse>> {
+    public policyBuilderCreatePolicyWithHttpInfo(param: PolicyBuilderApiPolicyBuilderCreatePolicyRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3CreateUpdatePolicyResponse>> {
         return this.api.policyBuilderCreatePolicyWithHttpInfo(param.policybuilderv3CreateUpdatePolicyRequest,  options).toPromise();
     }
 
@@ -9242,7 +9554,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Create policy Description: Create Policy returns response code and message.
      * @param param the request object
      */
-    public policyBuilderCreatePolicy(param: PolicyBuilderApiPolicyBuilderCreatePolicyRequest, options?: Configuration): Promise<Policybuilderv3CreateUpdatePolicyResponse> {
+    public policyBuilderCreatePolicy(param: PolicyBuilderApiPolicyBuilderCreatePolicyRequest, options?: ConfigurationOptions): Promise<Policybuilderv3CreateUpdatePolicyResponse> {
         return this.api.policyBuilderCreatePolicy(param.policybuilderv3CreateUpdatePolicyRequest,  options).toPromise();
     }
 
@@ -9250,7 +9562,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Delete GDP policy sync entry Description: Deletes GDP policy from sync collection
      * @param param the request object
      */
-    public policyBuilderDeleteGdpSyncEntryWithHttpInfo(param: PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest = {}, options?: Configuration): Promise<HttpInfo<Policybuilderv3DeleteGdpPolicySyncResponse>> {
+    public policyBuilderDeleteGdpSyncEntryWithHttpInfo(param: PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3DeleteGdpPolicySyncResponse>> {
         return this.api.policyBuilderDeleteGdpSyncEntryWithHttpInfo(param.syncIds,  options).toPromise();
     }
 
@@ -9258,7 +9570,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Delete GDP policy sync entry Description: Deletes GDP policy from sync collection
      * @param param the request object
      */
-    public policyBuilderDeleteGdpSyncEntry(param: PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest = {}, options?: Configuration): Promise<Policybuilderv3DeleteGdpPolicySyncResponse> {
+    public policyBuilderDeleteGdpSyncEntry(param: PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest = {}, options?: ConfigurationOptions): Promise<Policybuilderv3DeleteGdpPolicySyncResponse> {
         return this.api.policyBuilderDeleteGdpSyncEntry(param.syncIds,  options).toPromise();
     }
 
@@ -9266,7 +9578,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Delete policies Description: Delete Policy returns response code and message.
      * @param param the request object
      */
-    public policyBuilderDeletePoliciesWithHttpInfo(param: PolicyBuilderApiPolicyBuilderDeletePoliciesRequest = {}, options?: Configuration): Promise<HttpInfo<Policybuilderv3StandardCRUDResponse>> {
+    public policyBuilderDeletePoliciesWithHttpInfo(param: PolicyBuilderApiPolicyBuilderDeletePoliciesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3StandardCRUDResponse>> {
         return this.api.policyBuilderDeletePoliciesWithHttpInfo(param.policyIds,  options).toPromise();
     }
 
@@ -9274,7 +9586,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Delete policies Description: Delete Policy returns response code and message.
      * @param param the request object
      */
-    public policyBuilderDeletePolicies(param: PolicyBuilderApiPolicyBuilderDeletePoliciesRequest = {}, options?: Configuration): Promise<Policybuilderv3StandardCRUDResponse> {
+    public policyBuilderDeletePolicies(param: PolicyBuilderApiPolicyBuilderDeletePoliciesRequest = {}, options?: ConfigurationOptions): Promise<Policybuilderv3StandardCRUDResponse> {
         return this.api.policyBuilderDeletePolicies(param.policyIds,  options).toPromise();
     }
 
@@ -9282,7 +9594,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get GDP policy summary information Description: Get GDP\'s CM\'s policy summary from mogodb
      * @param param the request object
      */
-    public policyBuilderGetGdpPolicyMetaDataWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetGdpPolicyMetaDataRequest = {}, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetGdpPolicyMetaDataResponse>> {
+    public policyBuilderGetGdpPolicyMetaDataWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetGdpPolicyMetaDataRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3GetGdpPolicyMetaDataResponse>> {
         return this.api.policyBuilderGetGdpPolicyMetaDataWithHttpInfo( options).toPromise();
     }
 
@@ -9290,7 +9602,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get GDP policy summary information Description: Get GDP\'s CM\'s policy summary from mogodb
      * @param param the request object
      */
-    public policyBuilderGetGdpPolicyMetaData(param: PolicyBuilderApiPolicyBuilderGetGdpPolicyMetaDataRequest = {}, options?: Configuration): Promise<Policybuilderv3GetGdpPolicyMetaDataResponse> {
+    public policyBuilderGetGdpPolicyMetaData(param: PolicyBuilderApiPolicyBuilderGetGdpPolicyMetaDataRequest = {}, options?: ConfigurationOptions): Promise<Policybuilderv3GetGdpPolicyMetaDataResponse> {
         return this.api.policyBuilderGetGdpPolicyMetaData( options).toPromise();
     }
 
@@ -9298,7 +9610,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get policies Description: Return a list of policies to the caller.
      * @param param the request object
      */
-    public policyBuilderGetPoliciesWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPoliciesRequest = {}, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetPoliciesResponse>> {
+    public policyBuilderGetPoliciesWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPoliciesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3GetPoliciesResponse>> {
         return this.api.policyBuilderGetPoliciesWithHttpInfo( options).toPromise();
     }
 
@@ -9306,7 +9618,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get policies Description: Return a list of policies to the caller.
      * @param param the request object
      */
-    public policyBuilderGetPolicies(param: PolicyBuilderApiPolicyBuilderGetPoliciesRequest = {}, options?: Configuration): Promise<Policybuilderv3GetPoliciesResponse> {
+    public policyBuilderGetPolicies(param: PolicyBuilderApiPolicyBuilderGetPoliciesRequest = {}, options?: ConfigurationOptions): Promise<Policybuilderv3GetPoliciesResponse> {
         return this.api.policyBuilderGetPolicies( options).toPromise();
     }
 
@@ -9314,7 +9626,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get policy details Description: Return a list of rules inside the policy.
      * @param param the request object
      */
-    public policyBuilderGetPolicyDetailsWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyDetailsRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetPolicyDetailsResponse>> {
+    public policyBuilderGetPolicyDetailsWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyDetailsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3GetPolicyDetailsResponse>> {
         return this.api.policyBuilderGetPolicyDetailsWithHttpInfo(param.policyId,  options).toPromise();
     }
 
@@ -9322,7 +9634,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get policy details Description: Return a list of rules inside the policy.
      * @param param the request object
      */
-    public policyBuilderGetPolicyDetails(param: PolicyBuilderApiPolicyBuilderGetPolicyDetailsRequest, options?: Configuration): Promise<Policybuilderv3GetPolicyDetailsResponse> {
+    public policyBuilderGetPolicyDetails(param: PolicyBuilderApiPolicyBuilderGetPolicyDetailsRequest, options?: ConfigurationOptions): Promise<Policybuilderv3GetPolicyDetailsResponse> {
         return this.api.policyBuilderGetPolicyDetails(param.policyId,  options).toPromise();
     }
 
@@ -9330,7 +9642,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: GetPolicy names from rule IDs Description: Return a map where the key is the rule ID and value is the policy name that has the rule ID.
      * @param param the request object
      */
-    public policyBuilderGetPolicyNamesFromRuleIDsWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetPolicyNamesFromRuleIDsResponse>> {
+    public policyBuilderGetPolicyNamesFromRuleIDsWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3GetPolicyNamesFromRuleIDsResponse>> {
         return this.api.policyBuilderGetPolicyNamesFromRuleIDsWithHttpInfo(param.policybuilderv3GetPolicyNamesFromRuleIDsRequest,  options).toPromise();
     }
 
@@ -9338,7 +9650,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: GetPolicy names from rule IDs Description: Return a map where the key is the rule ID and value is the policy name that has the rule ID.
      * @param param the request object
      */
-    public policyBuilderGetPolicyNamesFromRuleIDs(param: PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest, options?: Configuration): Promise<Policybuilderv3GetPolicyNamesFromRuleIDsResponse> {
+    public policyBuilderGetPolicyNamesFromRuleIDs(param: PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest, options?: ConfigurationOptions): Promise<Policybuilderv3GetPolicyNamesFromRuleIDsResponse> {
         return this.api.policyBuilderGetPolicyNamesFromRuleIDs(param.policybuilderv3GetPolicyNamesFromRuleIDsRequest,  options).toPromise();
     }
 
@@ -9346,7 +9658,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get list of synced polices Description: Returns the list and status of sync entries
      * @param param the request object
      */
-    public policyBuilderGetPolicySyncListWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicySyncListRequest = {}, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetPolicySyncListResponse>> {
+    public policyBuilderGetPolicySyncListWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicySyncListRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3GetPolicySyncListResponse>> {
         return this.api.policyBuilderGetPolicySyncListWithHttpInfo( options).toPromise();
     }
 
@@ -9354,7 +9666,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get list of synced polices Description: Returns the list and status of sync entries
      * @param param the request object
      */
-    public policyBuilderGetPolicySyncList(param: PolicyBuilderApiPolicyBuilderGetPolicySyncListRequest = {}, options?: Configuration): Promise<Policybuilderv3GetPolicySyncListResponse> {
+    public policyBuilderGetPolicySyncList(param: PolicyBuilderApiPolicyBuilderGetPolicySyncListRequest = {}, options?: ConfigurationOptions): Promise<Policybuilderv3GetPolicySyncListResponse> {
         return this.api.policyBuilderGetPolicySyncList( options).toPromise();
     }
 
@@ -9362,7 +9674,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
      * @param param the request object
      */
-    public policyBuilderGetPolicyVersionWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetPolicyVersionResponse>> {
+    public policyBuilderGetPolicyVersionWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3GetPolicyVersionResponse>> {
         return this.api.policyBuilderGetPolicyVersionWithHttpInfo(param.policyId, param.version,  options).toPromise();
     }
 
@@ -9370,7 +9682,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get a particular version of the policy Description: Returns a particular version of policy and response code and message
      * @param param the request object
      */
-    public policyBuilderGetPolicyVersion(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest, options?: Configuration): Promise<Policybuilderv3GetPolicyVersionResponse> {
+    public policyBuilderGetPolicyVersion(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest, options?: ConfigurationOptions): Promise<Policybuilderv3GetPolicyVersionResponse> {
         return this.api.policyBuilderGetPolicyVersion(param.policyId, param.version,  options).toPromise();
     }
 
@@ -9378,7 +9690,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
      * @param param the request object
      */
-    public policyBuilderGetPolicyVersionsInfoWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetPolicyVersionsInfoResponse>> {
+    public policyBuilderGetPolicyVersionsInfoWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3GetPolicyVersionsInfoResponse>> {
         return this.api.policyBuilderGetPolicyVersionsInfoWithHttpInfo(param.policyId,  options).toPromise();
     }
 
@@ -9386,7 +9698,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Gets policy versions info Description: Returns information of all versions of a policy and response code and message
      * @param param the request object
      */
-    public policyBuilderGetPolicyVersionsInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest, options?: Configuration): Promise<Policybuilderv3GetPolicyVersionsInfoResponse> {
+    public policyBuilderGetPolicyVersionsInfo(param: PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest, options?: ConfigurationOptions): Promise<Policybuilderv3GetPolicyVersionsInfoResponse> {
         return this.api.policyBuilderGetPolicyVersionsInfo(param.policyId,  options).toPromise();
     }
 
@@ -9394,7 +9706,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get receivers Description: Get all the receivers associated with actions.
      * @param param the request object
      */
-    public policyBuilderGetReceiversWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetReceiversRequest = {}, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetReceiversResponse>> {
+    public policyBuilderGetReceiversWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetReceiversRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3GetReceiversResponse>> {
         return this.api.policyBuilderGetReceiversWithHttpInfo(param.actionId, param.validateCache,  options).toPromise();
     }
 
@@ -9402,7 +9714,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get receivers Description: Get all the receivers associated with actions.
      * @param param the request object
      */
-    public policyBuilderGetReceivers(param: PolicyBuilderApiPolicyBuilderGetReceiversRequest = {}, options?: Configuration): Promise<Policybuilderv3GetReceiversResponse> {
+    public policyBuilderGetReceivers(param: PolicyBuilderApiPolicyBuilderGetReceiversRequest = {}, options?: ConfigurationOptions): Promise<Policybuilderv3GetReceiversResponse> {
         return this.api.policyBuilderGetReceivers(param.actionId, param.validateCache,  options).toPromise();
     }
 
@@ -9410,7 +9722,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get rule metadata Description: Return a list of rule parameters and actions to the caller.
      * @param param the request object
      */
-    public policyBuilderGetRuleMetadataWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetRuleMetadataRequest = {}, options?: Configuration): Promise<HttpInfo<Policybuilderv3RuleMetadataResponse>> {
+    public policyBuilderGetRuleMetadataWithHttpInfo(param: PolicyBuilderApiPolicyBuilderGetRuleMetadataRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3RuleMetadataResponse>> {
         return this.api.policyBuilderGetRuleMetadataWithHttpInfo(param.ruleType,  options).toPromise();
     }
 
@@ -9418,7 +9730,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Get rule metadata Description: Return a list of rule parameters and actions to the caller.
      * @param param the request object
      */
-    public policyBuilderGetRuleMetadata(param: PolicyBuilderApiPolicyBuilderGetRuleMetadataRequest = {}, options?: Configuration): Promise<Policybuilderv3RuleMetadataResponse> {
+    public policyBuilderGetRuleMetadata(param: PolicyBuilderApiPolicyBuilderGetRuleMetadataRequest = {}, options?: ConfigurationOptions): Promise<Policybuilderv3RuleMetadataResponse> {
         return this.api.policyBuilderGetRuleMetadata(param.ruleType,  options).toPromise();
     }
 
@@ -9426,7 +9738,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Insert GDP policy sync entry Description: Inserts GDP policy\'s name into sync collection
      * @param param the request object
      */
-    public policyBuilderInsertGdpPolicyWithHttpInfo(param: PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3InsertGdpPolicySyncResponse>> {
+    public policyBuilderInsertGdpPolicyWithHttpInfo(param: PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3InsertGdpPolicySyncResponse>> {
         return this.api.policyBuilderInsertGdpPolicyWithHttpInfo(param.policybuilderv3InsertGdpPolicySyncRequest,  options).toPromise();
     }
 
@@ -9434,7 +9746,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Insert GDP policy sync entry Description: Inserts GDP policy\'s name into sync collection
      * @param param the request object
      */
-    public policyBuilderInsertGdpPolicy(param: PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest, options?: Configuration): Promise<Policybuilderv3InsertGdpPolicySyncResponse> {
+    public policyBuilderInsertGdpPolicy(param: PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest, options?: ConfigurationOptions): Promise<Policybuilderv3InsertGdpPolicySyncResponse> {
         return this.api.policyBuilderInsertGdpPolicy(param.policybuilderv3InsertGdpPolicySyncRequest,  options).toPromise();
     }
 
@@ -9442,7 +9754,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Insert GDP policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
      * @param param the request object
      */
-    public policyBuilderInsertGdpPolicyMetaDataWithHttpInfo(param: PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3InsertGdpPolicyMetaDataResponse>> {
+    public policyBuilderInsertGdpPolicyMetaDataWithHttpInfo(param: PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3InsertGdpPolicyMetaDataResponse>> {
         return this.api.policyBuilderInsertGdpPolicyMetaDataWithHttpInfo(param.centralManagerId, param.policybuilderv3InsertGdpPolicyMetaDataRequest,  options).toPromise();
     }
 
@@ -9450,7 +9762,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Insert GDP policy summaries Description: Inserts GDP\'s CM\'s policy summary information into mogodb. (This API is called from GDP only)
      * @param param the request object
      */
-    public policyBuilderInsertGdpPolicyMetaData(param: PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest, options?: Configuration): Promise<Policybuilderv3InsertGdpPolicyMetaDataResponse> {
+    public policyBuilderInsertGdpPolicyMetaData(param: PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest, options?: ConfigurationOptions): Promise<Policybuilderv3InsertGdpPolicyMetaDataResponse> {
         return this.api.policyBuilderInsertGdpPolicyMetaData(param.centralManagerId, param.policybuilderv3InsertGdpPolicyMetaDataRequest,  options).toPromise();
     }
 
@@ -9458,7 +9770,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Install policies Description: Activate Policies request performs activations.
      * @param param the request object
      */
-    public policyBuilderInstallPoliciesWithHttpInfo(param: PolicyBuilderApiPolicyBuilderInstallPoliciesRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3StatusResponseBase>> {
+    public policyBuilderInstallPoliciesWithHttpInfo(param: PolicyBuilderApiPolicyBuilderInstallPoliciesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3StatusResponseBase>> {
         return this.api.policyBuilderInstallPoliciesWithHttpInfo(param.policybuilderv3InstallPoliciesRequest,  options).toPromise();
     }
 
@@ -9466,7 +9778,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Install policies Description: Activate Policies request performs activations.
      * @param param the request object
      */
-    public policyBuilderInstallPolicies(param: PolicyBuilderApiPolicyBuilderInstallPoliciesRequest, options?: Configuration): Promise<Policybuilderv3StatusResponseBase> {
+    public policyBuilderInstallPolicies(param: PolicyBuilderApiPolicyBuilderInstallPoliciesRequest, options?: ConfigurationOptions): Promise<Policybuilderv3StatusResponseBase> {
         return this.api.policyBuilderInstallPolicies(param.policybuilderv3InstallPoliciesRequest,  options).toPromise();
     }
 
@@ -9474,7 +9786,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Integration check Description: Check if integration id is being used in policies.
      * @param param the request object
      */
-    public policyBuilderIntegrationCheckWithHttpInfo(param: PolicyBuilderApiPolicyBuilderIntegrationCheckRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetIntegrationCheckResponse>> {
+    public policyBuilderIntegrationCheckWithHttpInfo(param: PolicyBuilderApiPolicyBuilderIntegrationCheckRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3GetIntegrationCheckResponse>> {
         return this.api.policyBuilderIntegrationCheckWithHttpInfo(param.integrationId, param.templateId,  options).toPromise();
     }
 
@@ -9482,7 +9794,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Integration check Description: Check if integration id is being used in policies.
      * @param param the request object
      */
-    public policyBuilderIntegrationCheck(param: PolicyBuilderApiPolicyBuilderIntegrationCheckRequest, options?: Configuration): Promise<Policybuilderv3GetIntegrationCheckResponse> {
+    public policyBuilderIntegrationCheck(param: PolicyBuilderApiPolicyBuilderIntegrationCheckRequest, options?: ConfigurationOptions): Promise<Policybuilderv3GetIntegrationCheckResponse> {
         return this.api.policyBuilderIntegrationCheck(param.integrationId, param.templateId,  options).toPromise();
     }
 
@@ -9490,7 +9802,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Policies groups Description: Get policy groups.
      * @param param the request object
      */
-    public policyBuilderPoliciesGroupsWithHttpInfo(param: PolicyBuilderApiPolicyBuilderPoliciesGroupsRequest = {}, options?: Configuration): Promise<HttpInfo<Policybuilderv3GetPoliciesGroupsResponse>> {
+    public policyBuilderPoliciesGroupsWithHttpInfo(param: PolicyBuilderApiPolicyBuilderPoliciesGroupsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3GetPoliciesGroupsResponse>> {
         return this.api.policyBuilderPoliciesGroupsWithHttpInfo(param.groupIds,  options).toPromise();
     }
 
@@ -9498,7 +9810,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Policies groups Description: Get policy groups.
      * @param param the request object
      */
-    public policyBuilderPoliciesGroups(param: PolicyBuilderApiPolicyBuilderPoliciesGroupsRequest = {}, options?: Configuration): Promise<Policybuilderv3GetPoliciesGroupsResponse> {
+    public policyBuilderPoliciesGroups(param: PolicyBuilderApiPolicyBuilderPoliciesGroupsRequest = {}, options?: ConfigurationOptions): Promise<Policybuilderv3GetPoliciesGroupsResponse> {
         return this.api.policyBuilderPoliciesGroups(param.groupIds,  options).toPromise();
     }
 
@@ -9506,7 +9818,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Rule validation Description: Validate a rule parameters and actions.
      * @param param the request object
      */
-    public policyBuilderRuleValidationWithHttpInfo(param: PolicyBuilderApiPolicyBuilderRuleValidationRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3StandardCRUDResponse>> {
+    public policyBuilderRuleValidationWithHttpInfo(param: PolicyBuilderApiPolicyBuilderRuleValidationRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3StandardCRUDResponse>> {
         return this.api.policyBuilderRuleValidationWithHttpInfo(param.policybuilderv3GetRuleValidationRequest,  options).toPromise();
     }
 
@@ -9514,7 +9826,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Rule validation Description: Validate a rule parameters and actions.
      * @param param the request object
      */
-    public policyBuilderRuleValidation(param: PolicyBuilderApiPolicyBuilderRuleValidationRequest, options?: Configuration): Promise<Policybuilderv3StandardCRUDResponse> {
+    public policyBuilderRuleValidation(param: PolicyBuilderApiPolicyBuilderRuleValidationRequest, options?: ConfigurationOptions): Promise<Policybuilderv3StandardCRUDResponse> {
         return this.api.policyBuilderRuleValidation(param.policybuilderv3GetRuleValidationRequest,  options).toPromise();
     }
 
@@ -9522,7 +9834,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Store policies Gdp Description: Store policies.  (This API is called from GDP only)
      * @param param the request object
      */
-    public policyBuilderStorePoliciesGdpWithHttpInfo(param: PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3StorePolicyGdpResponse>> {
+    public policyBuilderStorePoliciesGdpWithHttpInfo(param: PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3StorePolicyGdpResponse>> {
         return this.api.policyBuilderStorePoliciesGdpWithHttpInfo(param.centralManagerId, param.policybuilderv3StorePolicyGdpRequest,  options).toPromise();
     }
 
@@ -9530,7 +9842,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Store policies Gdp Description: Store policies.  (This API is called from GDP only)
      * @param param the request object
      */
-    public policyBuilderStorePoliciesGdp(param: PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest, options?: Configuration): Promise<Policybuilderv3StorePolicyGdpResponse> {
+    public policyBuilderStorePoliciesGdp(param: PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest, options?: ConfigurationOptions): Promise<Policybuilderv3StorePolicyGdpResponse> {
         return this.api.policyBuilderStorePoliciesGdp(param.centralManagerId, param.policybuilderv3StorePolicyGdpRequest,  options).toPromise();
     }
 
@@ -9538,7 +9850,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Update policy Description: Update Policy returns response code and message.
      * @param param the request object
      */
-    public policyBuilderUpdatePolicyWithHttpInfo(param: PolicyBuilderApiPolicyBuilderUpdatePolicyRequest, options?: Configuration): Promise<HttpInfo<Policybuilderv3CreateUpdatePolicyResponse>> {
+    public policyBuilderUpdatePolicyWithHttpInfo(param: PolicyBuilderApiPolicyBuilderUpdatePolicyRequest, options?: ConfigurationOptions): Promise<HttpInfo<Policybuilderv3CreateUpdatePolicyResponse>> {
         return this.api.policyBuilderUpdatePolicyWithHttpInfo(param.policybuilderv3CreateUpdatePolicyRequest,  options).toPromise();
     }
 
@@ -9546,7 +9858,7 @@ export class ObjectPolicyBuilderApi {
      * Summary: Update policy Description: Update Policy returns response code and message.
      * @param param the request object
      */
-    public policyBuilderUpdatePolicy(param: PolicyBuilderApiPolicyBuilderUpdatePolicyRequest, options?: Configuration): Promise<Policybuilderv3CreateUpdatePolicyResponse> {
+    public policyBuilderUpdatePolicy(param: PolicyBuilderApiPolicyBuilderUpdatePolicyRequest, options?: ConfigurationOptions): Promise<Policybuilderv3CreateUpdatePolicyResponse> {
         return this.api.policyBuilderUpdatePolicy(param.policybuilderv3CreateUpdatePolicyRequest,  options).toPromise();
     }
 
@@ -9584,7 +9896,7 @@ export class ObjectQSDataLoaderApi {
      * QSfileValidator - validate the files before insert happend .
      * @param param the request object
      */
-    public qSDataLoaderQSfileValidatorWithHttpInfo(param: QSDataLoaderApiQSDataLoaderQSfileValidatorRequest, options?: Configuration): Promise<HttpInfo<Qsdataloaderv3QSfileValidatorResonse>> {
+    public qSDataLoaderQSfileValidatorWithHttpInfo(param: QSDataLoaderApiQSDataLoaderQSfileValidatorRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qsdataloaderv3QSfileValidatorResonse>> {
         return this.api.qSDataLoaderQSfileValidatorWithHttpInfo(param.qsdataloaderv3QSfileValidatorRequest,  options).toPromise();
     }
 
@@ -9592,7 +9904,7 @@ export class ObjectQSDataLoaderApi {
      * QSfileValidator - validate the files before insert happend .
      * @param param the request object
      */
-    public qSDataLoaderQSfileValidator(param: QSDataLoaderApiQSDataLoaderQSfileValidatorRequest, options?: Configuration): Promise<Qsdataloaderv3QSfileValidatorResonse> {
+    public qSDataLoaderQSfileValidator(param: QSDataLoaderApiQSDataLoaderQSfileValidatorRequest, options?: ConfigurationOptions): Promise<Qsdataloaderv3QSfileValidatorResonse> {
         return this.api.qSDataLoaderQSfileValidator(param.qsdataloaderv3QSfileValidatorRequest,  options).toPromise();
     }
 
@@ -9600,7 +9912,7 @@ export class ObjectQSDataLoaderApi {
      * UploadSyntheticDataLoader - Insert data into Db after read from .sql file .
      * @param param the request object
      */
-    public qSDataLoaderUploadSyntheticDataLoaderWithHttpInfo(param: QSDataLoaderApiQSDataLoaderUploadSyntheticDataLoaderRequest, options?: Configuration): Promise<HttpInfo<Qsdataloaderv3QSyntheticDataLoaderResonse>> {
+    public qSDataLoaderUploadSyntheticDataLoaderWithHttpInfo(param: QSDataLoaderApiQSDataLoaderUploadSyntheticDataLoaderRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qsdataloaderv3QSyntheticDataLoaderResonse>> {
         return this.api.qSDataLoaderUploadSyntheticDataLoaderWithHttpInfo(param.body,  options).toPromise();
     }
 
@@ -9608,7 +9920,7 @@ export class ObjectQSDataLoaderApi {
      * UploadSyntheticDataLoader - Insert data into Db after read from .sql file .
      * @param param the request object
      */
-    public qSDataLoaderUploadSyntheticDataLoader(param: QSDataLoaderApiQSDataLoaderUploadSyntheticDataLoaderRequest, options?: Configuration): Promise<Qsdataloaderv3QSyntheticDataLoaderResonse> {
+    public qSDataLoaderUploadSyntheticDataLoader(param: QSDataLoaderApiQSDataLoaderUploadSyntheticDataLoaderRequest, options?: ConfigurationOptions): Promise<Qsdataloaderv3QSyntheticDataLoaderResonse> {
         return this.api.qSDataLoaderUploadSyntheticDataLoader(param.body,  options).toPromise();
     }
 
@@ -9635,6 +9947,7 @@ export interface QSDataManagerApiQSDataManagerRegisterScanRequest {
 export interface QSDataManagerApiQSDataManagerRetrieveScanRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof QSDataManagerApiqSDataManagerRetrieveScan
      */
@@ -9652,7 +9965,7 @@ export class ObjectQSDataManagerApi {
      * Summary: master data for all entities Description: Retrieves All Dimension and Fact tables data.
      * @param param the request object
      */
-    public qSDataManagerGetMasterDataWithHttpInfo(param: QSDataManagerApiQSDataManagerGetMasterDataRequest = {}, options?: Configuration): Promise<HttpInfo<Qspmdatamanagerv3MasterDataResponse>> {
+    public qSDataManagerGetMasterDataWithHttpInfo(param: QSDataManagerApiQSDataManagerGetMasterDataRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Qspmdatamanagerv3MasterDataResponse>> {
         return this.api.qSDataManagerGetMasterDataWithHttpInfo( options).toPromise();
     }
 
@@ -9660,7 +9973,7 @@ export class ObjectQSDataManagerApi {
      * Summary: master data for all entities Description: Retrieves All Dimension and Fact tables data.
      * @param param the request object
      */
-    public qSDataManagerGetMasterData(param: QSDataManagerApiQSDataManagerGetMasterDataRequest = {}, options?: Configuration): Promise<Qspmdatamanagerv3MasterDataResponse> {
+    public qSDataManagerGetMasterData(param: QSDataManagerApiQSDataManagerGetMasterDataRequest = {}, options?: ConfigurationOptions): Promise<Qspmdatamanagerv3MasterDataResponse> {
         return this.api.qSDataManagerGetMasterData( options).toPromise();
     }
 
@@ -9668,7 +9981,7 @@ export class ObjectQSDataManagerApi {
      * Summary: Plugins Details Description: Retrieves All plugins information.
      * @param param the request object
      */
-    public qSDataManagerGetPluginDataWithHttpInfo(param: QSDataManagerApiQSDataManagerGetPluginDataRequest = {}, options?: Configuration): Promise<HttpInfo<Qspmdatamanagerv3PluginDataResponse>> {
+    public qSDataManagerGetPluginDataWithHttpInfo(param: QSDataManagerApiQSDataManagerGetPluginDataRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Qspmdatamanagerv3PluginDataResponse>> {
         return this.api.qSDataManagerGetPluginDataWithHttpInfo( options).toPromise();
     }
 
@@ -9676,7 +9989,7 @@ export class ObjectQSDataManagerApi {
      * Summary: Plugins Details Description: Retrieves All plugins information.
      * @param param the request object
      */
-    public qSDataManagerGetPluginData(param: QSDataManagerApiQSDataManagerGetPluginDataRequest = {}, options?: Configuration): Promise<Qspmdatamanagerv3PluginDataResponse> {
+    public qSDataManagerGetPluginData(param: QSDataManagerApiQSDataManagerGetPluginDataRequest = {}, options?: ConfigurationOptions): Promise<Qspmdatamanagerv3PluginDataResponse> {
         return this.api.qSDataManagerGetPluginData( options).toPromise();
     }
 
@@ -9684,7 +9997,7 @@ export class ObjectQSDataManagerApi {
      * Summary: Insert ScanDetails Description: Register new data into scan dimension table.
      * @param param the request object
      */
-    public qSDataManagerRegisterScanWithHttpInfo(param: QSDataManagerApiQSDataManagerRegisterScanRequest, options?: Configuration): Promise<HttpInfo<Qspmdatamanagerv3ScanResponse>> {
+    public qSDataManagerRegisterScanWithHttpInfo(param: QSDataManagerApiQSDataManagerRegisterScanRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qspmdatamanagerv3ScanResponse>> {
         return this.api.qSDataManagerRegisterScanWithHttpInfo(param.qspmdatamanagerv3ScanRequest,  options).toPromise();
     }
 
@@ -9692,7 +10005,7 @@ export class ObjectQSDataManagerApi {
      * Summary: Insert ScanDetails Description: Register new data into scan dimension table.
      * @param param the request object
      */
-    public qSDataManagerRegisterScan(param: QSDataManagerApiQSDataManagerRegisterScanRequest, options?: Configuration): Promise<Qspmdatamanagerv3ScanResponse> {
+    public qSDataManagerRegisterScan(param: QSDataManagerApiQSDataManagerRegisterScanRequest, options?: ConfigurationOptions): Promise<Qspmdatamanagerv3ScanResponse> {
         return this.api.qSDataManagerRegisterScan(param.qspmdatamanagerv3ScanRequest,  options).toPromise();
     }
 
@@ -9700,7 +10013,7 @@ export class ObjectQSDataManagerApi {
      * Summary: Fetch ScanDetails Description: Fetch details from scan dimension table.
      * @param param the request object
      */
-    public qSDataManagerRetrieveScanWithHttpInfo(param: QSDataManagerApiQSDataManagerRetrieveScanRequest, options?: Configuration): Promise<HttpInfo<Qspmdatamanagerv3ScanResponse>> {
+    public qSDataManagerRetrieveScanWithHttpInfo(param: QSDataManagerApiQSDataManagerRetrieveScanRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qspmdatamanagerv3ScanResponse>> {
         return this.api.qSDataManagerRetrieveScanWithHttpInfo(param.scanId,  options).toPromise();
     }
 
@@ -9708,7 +10021,7 @@ export class ObjectQSDataManagerApi {
      * Summary: Fetch ScanDetails Description: Fetch details from scan dimension table.
      * @param param the request object
      */
-    public qSDataManagerRetrieveScan(param: QSDataManagerApiQSDataManagerRetrieveScanRequest, options?: Configuration): Promise<Qspmdatamanagerv3ScanResponse> {
+    public qSDataManagerRetrieveScan(param: QSDataManagerApiQSDataManagerRetrieveScanRequest, options?: ConfigurationOptions): Promise<Qspmdatamanagerv3ScanResponse> {
         return this.api.qSDataManagerRetrieveScan(param.scanId,  options).toPromise();
     }
 
@@ -9720,6 +10033,7 @@ import { QSPluginManagerApiRequestFactory, QSPluginManagerApiResponseProcessor} 
 export interface QSPluginManagerApiQSPluginManagerInvokeAppProvRequest {
     /**
      * Unique identifier for the plugin
+     * Defaults to: undefined
      * @type string
      * @memberof QSPluginManagerApiqSPluginManagerInvokeAppProv
      */
@@ -9735,6 +10049,7 @@ export interface QSPluginManagerApiQSPluginManagerInvokeAppProvRequest {
 export interface QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request {
     /**
      * Unique identifier for the plugin
+     * Defaults to: undefined
      * @type string
      * @memberof QSPluginManagerApiqSPluginManagerInvokeExplorerV1
      */
@@ -9750,6 +10065,7 @@ export interface QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request {
 export interface QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request {
     /**
      * Unique identifier for the plugin
+     * Defaults to: undefined
      * @type string
      * @memberof QSPluginManagerApiqSPluginManagerInvokeExplorerV2
      */
@@ -9765,6 +10081,7 @@ export interface QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request {
 export interface QSPluginManagerApiQSPluginManagerInvokePluginRequest {
     /**
      * Unique identifier for the plugin
+     * Defaults to: undefined
      * @type string
      * @memberof QSPluginManagerApiqSPluginManagerInvokePlugin
      */
@@ -9780,6 +10097,7 @@ export interface QSPluginManagerApiQSPluginManagerInvokePluginRequest {
 export interface QSPluginManagerApiQSPluginManagerInvokePolicyRequest {
     /**
      * Unique identifier for the plugin
+     * Defaults to: undefined
      * @type string
      * @memberof QSPluginManagerApiqSPluginManagerInvokePolicy
      */
@@ -9803,7 +10121,7 @@ export class ObjectQSPluginManagerApi {
      * Summary: Invoke only application provisioning data plugin Description:Parses app input file and triggers dataload
      * @param param the request object
      */
-    public qSPluginManagerInvokeAppProvWithHttpInfo(param: QSPluginManagerApiQSPluginManagerInvokeAppProvRequest, options?: Configuration): Promise<HttpInfo<Qspmpluginmanagerv3PluginRS>> {
+    public qSPluginManagerInvokeAppProvWithHttpInfo(param: QSPluginManagerApiQSPluginManagerInvokeAppProvRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qspmpluginmanagerv3PluginRS>> {
         return this.api.qSPluginManagerInvokeAppProvWithHttpInfo(param.pluginId, param.qspmpluginmanagerv3PluginRQ,  options).toPromise();
     }
 
@@ -9811,7 +10129,7 @@ export class ObjectQSPluginManagerApi {
      * Summary: Invoke only application provisioning data plugin Description:Parses app input file and triggers dataload
      * @param param the request object
      */
-    public qSPluginManagerInvokeAppProv(param: QSPluginManagerApiQSPluginManagerInvokeAppProvRequest, options?: Configuration): Promise<Qspmpluginmanagerv3PluginRS> {
+    public qSPluginManagerInvokeAppProv(param: QSPluginManagerApiQSPluginManagerInvokeAppProvRequest, options?: ConfigurationOptions): Promise<Qspmpluginmanagerv3PluginRS> {
         return this.api.qSPluginManagerInvokeAppProv(param.pluginId, param.qspmpluginmanagerv3PluginRQ,  options).toPromise();
     }
 
@@ -9819,7 +10137,7 @@ export class ObjectQSPluginManagerApi {
      * Summary: Invoke only explorer inventory data plugin Description:Parses explorer input file and triggers dataload
      * @param param the request object
      */
-    public qSPluginManagerInvokeExplorerV1WithHttpInfo(param: QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request, options?: Configuration): Promise<HttpInfo<Qspmpluginmanagerv3PluginRS>> {
+    public qSPluginManagerInvokeExplorerV1WithHttpInfo(param: QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request, options?: ConfigurationOptions): Promise<HttpInfo<Qspmpluginmanagerv3PluginRS>> {
         return this.api.qSPluginManagerInvokeExplorerV1WithHttpInfo(param.pluginId, param.qspmpluginmanagerv3PluginRQ,  options).toPromise();
     }
 
@@ -9827,7 +10145,7 @@ export class ObjectQSPluginManagerApi {
      * Summary: Invoke only explorer inventory data plugin Description:Parses explorer input file and triggers dataload
      * @param param the request object
      */
-    public qSPluginManagerInvokeExplorerV1(param: QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request, options?: Configuration): Promise<Qspmpluginmanagerv3PluginRS> {
+    public qSPluginManagerInvokeExplorerV1(param: QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request, options?: ConfigurationOptions): Promise<Qspmpluginmanagerv3PluginRS> {
         return this.api.qSPluginManagerInvokeExplorerV1(param.pluginId, param.qspmpluginmanagerv3PluginRQ,  options).toPromise();
     }
 
@@ -9835,7 +10153,7 @@ export class ObjectQSPluginManagerApi {
      * Summary: Invoke only explorer analytics data plugin Description:Parses explorer input file and triggers dataload
      * @param param the request object
      */
-    public qSPluginManagerInvokeExplorerV2WithHttpInfo(param: QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request, options?: Configuration): Promise<HttpInfo<Qspmpluginmanagerv3PluginRS>> {
+    public qSPluginManagerInvokeExplorerV2WithHttpInfo(param: QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request, options?: ConfigurationOptions): Promise<HttpInfo<Qspmpluginmanagerv3PluginRS>> {
         return this.api.qSPluginManagerInvokeExplorerV2WithHttpInfo(param.pluginId, param.qspmpluginmanagerv3PluginRQ,  options).toPromise();
     }
 
@@ -9843,7 +10161,7 @@ export class ObjectQSPluginManagerApi {
      * Summary: Invoke only explorer analytics data plugin Description:Parses explorer input file and triggers dataload
      * @param param the request object
      */
-    public qSPluginManagerInvokeExplorerV2(param: QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request, options?: Configuration): Promise<Qspmpluginmanagerv3PluginRS> {
+    public qSPluginManagerInvokeExplorerV2(param: QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request, options?: ConfigurationOptions): Promise<Qspmpluginmanagerv3PluginRS> {
         return this.api.qSPluginManagerInvokeExplorerV2(param.pluginId, param.qspmpluginmanagerv3PluginRQ,  options).toPromise();
     }
 
@@ -9851,7 +10169,7 @@ export class ObjectQSPluginManagerApi {
      * Summary: Invoke consolidated or only network data plugin Description:Parses input files and triggers dataload
      * @param param the request object
      */
-    public qSPluginManagerInvokePluginWithHttpInfo(param: QSPluginManagerApiQSPluginManagerInvokePluginRequest, options?: Configuration): Promise<HttpInfo<Qspmpluginmanagerv3PluginRS>> {
+    public qSPluginManagerInvokePluginWithHttpInfo(param: QSPluginManagerApiQSPluginManagerInvokePluginRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qspmpluginmanagerv3PluginRS>> {
         return this.api.qSPluginManagerInvokePluginWithHttpInfo(param.pluginId, param.qspmpluginmanagerv3PluginRQ,  options).toPromise();
     }
 
@@ -9859,7 +10177,7 @@ export class ObjectQSPluginManagerApi {
      * Summary: Invoke consolidated or only network data plugin Description:Parses input files and triggers dataload
      * @param param the request object
      */
-    public qSPluginManagerInvokePlugin(param: QSPluginManagerApiQSPluginManagerInvokePluginRequest, options?: Configuration): Promise<Qspmpluginmanagerv3PluginRS> {
+    public qSPluginManagerInvokePlugin(param: QSPluginManagerApiQSPluginManagerInvokePluginRequest, options?: ConfigurationOptions): Promise<Qspmpluginmanagerv3PluginRS> {
         return this.api.qSPluginManagerInvokePlugin(param.pluginId, param.qspmpluginmanagerv3PluginRQ,  options).toPromise();
     }
 
@@ -9867,7 +10185,7 @@ export class ObjectQSPluginManagerApi {
      * Summary: Invoke only policy data plugin Description:Parses policy input file and triggers dataload
      * @param param the request object
      */
-    public qSPluginManagerInvokePolicyWithHttpInfo(param: QSPluginManagerApiQSPluginManagerInvokePolicyRequest, options?: Configuration): Promise<HttpInfo<Qspmpluginmanagerv3PolicyPluginRS>> {
+    public qSPluginManagerInvokePolicyWithHttpInfo(param: QSPluginManagerApiQSPluginManagerInvokePolicyRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qspmpluginmanagerv3PolicyPluginRS>> {
         return this.api.qSPluginManagerInvokePolicyWithHttpInfo(param.pluginId, param.qspmpluginmanagerv3PolicyPluginRQ,  options).toPromise();
     }
 
@@ -9875,7 +10193,7 @@ export class ObjectQSPluginManagerApi {
      * Summary: Invoke only policy data plugin Description:Parses policy input file and triggers dataload
      * @param param the request object
      */
-    public qSPluginManagerInvokePolicy(param: QSPluginManagerApiQSPluginManagerInvokePolicyRequest, options?: Configuration): Promise<Qspmpluginmanagerv3PolicyPluginRS> {
+    public qSPluginManagerInvokePolicy(param: QSPluginManagerApiQSPluginManagerInvokePolicyRequest, options?: ConfigurationOptions): Promise<Qspmpluginmanagerv3PolicyPluginRS> {
         return this.api.qSPluginManagerInvokePolicy(param.pluginId, param.qspmpluginmanagerv3PolicyPluginRQ,  options).toPromise();
     }
 
@@ -9943,7 +10261,7 @@ export class ObjectQSPolicyManagerApi {
      * BatchStatusUpdate - trigger the batch to update the status of the Ticket .
      * @param param the request object
      */
-    public qSPolicyManagerBatchStatusUpdateWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerBatchStatusUpdateRequest, options?: Configuration): Promise<HttpInfo<Qspmpolicymanagerv3StandardEmptyResponse>> {
+    public qSPolicyManagerBatchStatusUpdateWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerBatchStatusUpdateRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qspmpolicymanagerv3StandardEmptyResponse>> {
         return this.api.qSPolicyManagerBatchStatusUpdateWithHttpInfo(param.body,  options).toPromise();
     }
 
@@ -9951,7 +10269,7 @@ export class ObjectQSPolicyManagerApi {
      * BatchStatusUpdate - trigger the batch to update the status of the Ticket .
      * @param param the request object
      */
-    public qSPolicyManagerBatchStatusUpdate(param: QSPolicyManagerApiQSPolicyManagerBatchStatusUpdateRequest, options?: Configuration): Promise<Qspmpolicymanagerv3StandardEmptyResponse> {
+    public qSPolicyManagerBatchStatusUpdate(param: QSPolicyManagerApiQSPolicyManagerBatchStatusUpdateRequest, options?: ConfigurationOptions): Promise<Qspmpolicymanagerv3StandardEmptyResponse> {
         return this.api.qSPolicyManagerBatchStatusUpdate(param.body,  options).toPromise();
     }
 
@@ -9959,7 +10277,7 @@ export class ObjectQSPolicyManagerApi {
      * ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.
      * @param param the request object
      */
-    public qSPolicyManagerConfigUpdateWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest, options?: Configuration): Promise<HttpInfo<Qspmpolicymanagerv3APIResonse>> {
+    public qSPolicyManagerConfigUpdateWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qspmpolicymanagerv3APIResonse>> {
         return this.api.qSPolicyManagerConfigUpdateWithHttpInfo(param.qspmpolicymanagerv3UpdateConfigsRequest,  options).toPromise();
     }
 
@@ -9967,7 +10285,7 @@ export class ObjectQSPolicyManagerApi {
      * ConfigUpdate - this function update Crypto Risk Factor Weight in Db2 as well as Mongodb.
      * @param param the request object
      */
-    public qSPolicyManagerConfigUpdate(param: QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest, options?: Configuration): Promise<Qspmpolicymanagerv3APIResonse> {
+    public qSPolicyManagerConfigUpdate(param: QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest, options?: ConfigurationOptions): Promise<Qspmpolicymanagerv3APIResonse> {
         return this.api.qSPolicyManagerConfigUpdate(param.qspmpolicymanagerv3UpdateConfigsRequest,  options).toPromise();
     }
 
@@ -9975,7 +10293,7 @@ export class ObjectQSPolicyManagerApi {
      * CreateTicket - Create a new Incident .
      * @param param the request object
      */
-    public qSPolicyManagerCreateTicketWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerCreateTicketRequest, options?: Configuration): Promise<HttpInfo<Qspmpolicymanagerv3CreateTicketResponse>> {
+    public qSPolicyManagerCreateTicketWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerCreateTicketRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qspmpolicymanagerv3CreateTicketResponse>> {
         return this.api.qSPolicyManagerCreateTicketWithHttpInfo(param.qspmpolicymanagerv3CreateTicketRequest,  options).toPromise();
     }
 
@@ -9983,7 +10301,7 @@ export class ObjectQSPolicyManagerApi {
      * CreateTicket - Create a new Incident .
      * @param param the request object
      */
-    public qSPolicyManagerCreateTicket(param: QSPolicyManagerApiQSPolicyManagerCreateTicketRequest, options?: Configuration): Promise<Qspmpolicymanagerv3CreateTicketResponse> {
+    public qSPolicyManagerCreateTicket(param: QSPolicyManagerApiQSPolicyManagerCreateTicketRequest, options?: ConfigurationOptions): Promise<Qspmpolicymanagerv3CreateTicketResponse> {
         return this.api.qSPolicyManagerCreateTicket(param.qspmpolicymanagerv3CreateTicketRequest,  options).toPromise();
     }
 
@@ -9991,7 +10309,7 @@ export class ObjectQSPolicyManagerApi {
      * FetchFilesfromBuckets - fetch the file(s) from bucket of the object storage
      * @param param the request object
      */
-    public qSPolicyManagerFetchFilesfromBucketsWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerFetchFilesfromBucketsRequest = {}, options?: Configuration): Promise<HttpInfo<Qspmpolicymanagerv3FetchObjectStoreFileResponse>> {
+    public qSPolicyManagerFetchFilesfromBucketsWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerFetchFilesfromBucketsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Qspmpolicymanagerv3FetchObjectStoreFileResponse>> {
         return this.api.qSPolicyManagerFetchFilesfromBucketsWithHttpInfo( options).toPromise();
     }
 
@@ -9999,7 +10317,7 @@ export class ObjectQSPolicyManagerApi {
      * FetchFilesfromBuckets - fetch the file(s) from bucket of the object storage
      * @param param the request object
      */
-    public qSPolicyManagerFetchFilesfromBuckets(param: QSPolicyManagerApiQSPolicyManagerFetchFilesfromBucketsRequest = {}, options?: Configuration): Promise<Qspmpolicymanagerv3FetchObjectStoreFileResponse> {
+    public qSPolicyManagerFetchFilesfromBuckets(param: QSPolicyManagerApiQSPolicyManagerFetchFilesfromBucketsRequest = {}, options?: ConfigurationOptions): Promise<Qspmpolicymanagerv3FetchObjectStoreFileResponse> {
         return this.api.qSPolicyManagerFetchFilesfromBuckets( options).toPromise();
     }
 
@@ -10007,7 +10325,7 @@ export class ObjectQSPolicyManagerApi {
      * ProcessPolicyDimentionRecords - fetch the records from Policy Dimention and update Policy Fact table
      * @param param the request object
      */
-    public qSPolicyManagerProcessPolicyDimentionRecordsWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest, options?: Configuration): Promise<HttpInfo<Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse>> {
+    public qSPolicyManagerProcessPolicyDimentionRecordsWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse>> {
         return this.api.qSPolicyManagerProcessPolicyDimentionRecordsWithHttpInfo(param.qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest,  options).toPromise();
     }
 
@@ -10015,7 +10333,7 @@ export class ObjectQSPolicyManagerApi {
      * ProcessPolicyDimentionRecords - fetch the records from Policy Dimention and update Policy Fact table
      * @param param the request object
      */
-    public qSPolicyManagerProcessPolicyDimentionRecords(param: QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest, options?: Configuration): Promise<Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse> {
+    public qSPolicyManagerProcessPolicyDimentionRecords(param: QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest, options?: ConfigurationOptions): Promise<Qspmpolicymanagerv3ProcessPolicyDimentionRecordsResonse> {
         return this.api.qSPolicyManagerProcessPolicyDimentionRecords(param.qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest,  options).toPromise();
     }
 
@@ -10023,7 +10341,7 @@ export class ObjectQSPolicyManagerApi {
      * UpdateTicketStatus - Update the ticket status based on the IntegrationId and TicketId .
      * @param param the request object
      */
-    public qSPolicyManagerUpdateTicketStatusWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerUpdateTicketStatusRequest, options?: Configuration): Promise<HttpInfo<Qspmpolicymanagerv3UpdateTicketStatusResponse>> {
+    public qSPolicyManagerUpdateTicketStatusWithHttpInfo(param: QSPolicyManagerApiQSPolicyManagerUpdateTicketStatusRequest, options?: ConfigurationOptions): Promise<HttpInfo<Qspmpolicymanagerv3UpdateTicketStatusResponse>> {
         return this.api.qSPolicyManagerUpdateTicketStatusWithHttpInfo(param.qspmpolicymanagerv3UpdateTicketStatusRequest,  options).toPromise();
     }
 
@@ -10031,7 +10349,7 @@ export class ObjectQSPolicyManagerApi {
      * UpdateTicketStatus - Update the ticket status based on the IntegrationId and TicketId .
      * @param param the request object
      */
-    public qSPolicyManagerUpdateTicketStatus(param: QSPolicyManagerApiQSPolicyManagerUpdateTicketStatusRequest, options?: Configuration): Promise<Qspmpolicymanagerv3UpdateTicketStatusResponse> {
+    public qSPolicyManagerUpdateTicketStatus(param: QSPolicyManagerApiQSPolicyManagerUpdateTicketStatusRequest, options?: ConfigurationOptions): Promise<Qspmpolicymanagerv3UpdateTicketStatusResponse> {
         return this.api.qSPolicyManagerUpdateTicketStatus(param.qspmpolicymanagerv3UpdateTicketStatusRequest,  options).toPromise();
     }
 
@@ -10052,6 +10370,7 @@ export interface ReportsRunnerApiReportsRunnerGetActiveQueriesRequest {
 export interface ReportsRunnerApiReportsRunnerGetAuditDataCountRequest {
     /**
      * Optional: the ID of the Report we wish to run (e.g. 000000000000000000000905).
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsRunnerApireportsRunnerGetAuditDataCount
      */
@@ -10103,6 +10422,7 @@ export interface ReportsRunnerApiReportsRunnerGetReportDataCountRequest {
 export interface ReportsRunnerApiReportsRunnerRunAuditReportRequest {
     /**
      * The ID of the Report we wish to run (e.g. 000000000000000000000905).
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsRunnerApireportsRunnerRunAuditReport
      */
@@ -10144,7 +10464,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Get running queries Description: Get queries that are running more than certain time
      * @param param the request object
      */
-    public reportsRunnerGetActiveQueriesWithHttpInfo(param: ReportsRunnerApiReportsRunnerGetActiveQueriesRequest, options?: Configuration): Promise<HttpInfo<Reportsrunnerv3GetActiveQueriesResponse>> {
+    public reportsRunnerGetActiveQueriesWithHttpInfo(param: ReportsRunnerApiReportsRunnerGetActiveQueriesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsrunnerv3GetActiveQueriesResponse>> {
         return this.api.reportsRunnerGetActiveQueriesWithHttpInfo(param.reportsrunnerv3GetActiveQueriesRequest,  options).toPromise();
     }
 
@@ -10152,7 +10472,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Get running queries Description: Get queries that are running more than certain time
      * @param param the request object
      */
-    public reportsRunnerGetActiveQueries(param: ReportsRunnerApiReportsRunnerGetActiveQueriesRequest, options?: Configuration): Promise<Reportsrunnerv3GetActiveQueriesResponse> {
+    public reportsRunnerGetActiveQueries(param: ReportsRunnerApiReportsRunnerGetActiveQueriesRequest, options?: ConfigurationOptions): Promise<Reportsrunnerv3GetActiveQueriesResponse> {
         return this.api.reportsRunnerGetActiveQueries(param.reportsrunnerv3GetActiveQueriesRequest,  options).toPromise();
     }
 
@@ -10160,7 +10480,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Get audit data count Description: Get audit data.
      * @param param the request object
      */
-    public reportsRunnerGetAuditDataCountWithHttpInfo(param: ReportsRunnerApiReportsRunnerGetAuditDataCountRequest, options?: Configuration): Promise<HttpInfo<Reportsrunnerv3GetReportDataCountResponse>> {
+    public reportsRunnerGetAuditDataCountWithHttpInfo(param: ReportsRunnerApiReportsRunnerGetAuditDataCountRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsrunnerv3GetReportDataCountResponse>> {
         return this.api.reportsRunnerGetAuditDataCountWithHttpInfo(param.reportId, param.reportsrunnerv3GetAuditDataCountRequest,  options).toPromise();
     }
 
@@ -10168,7 +10488,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Get audit data count Description: Get audit data.
      * @param param the request object
      */
-    public reportsRunnerGetAuditDataCount(param: ReportsRunnerApiReportsRunnerGetAuditDataCountRequest, options?: Configuration): Promise<Reportsrunnerv3GetReportDataCountResponse> {
+    public reportsRunnerGetAuditDataCount(param: ReportsRunnerApiReportsRunnerGetAuditDataCountRequest, options?: ConfigurationOptions): Promise<Reportsrunnerv3GetReportDataCountResponse> {
         return this.api.reportsRunnerGetAuditDataCount(param.reportId, param.reportsrunnerv3GetAuditDataCountRequest,  options).toPromise();
     }
 
@@ -10176,7 +10496,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Get chart data Description: Get Chart data by chart ID or by specifying report definition and chart settings.
      * @param param the request object
      */
-    public reportsRunnerGetChartDataWithHttpInfo(param: ReportsRunnerApiReportsRunnerGetChartDataRequest, options?: Configuration): Promise<HttpInfo<Reportsrunnerv3GetChartDataResponse>> {
+    public reportsRunnerGetChartDataWithHttpInfo(param: ReportsRunnerApiReportsRunnerGetChartDataRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsrunnerv3GetChartDataResponse>> {
         return this.api.reportsRunnerGetChartDataWithHttpInfo(param.reportsrunnerv3GetChartDataRequest,  options).toPromise();
     }
 
@@ -10184,21 +10504,21 @@ export class ObjectReportsRunnerApi {
      * Summary: Get chart data Description: Get Chart data by chart ID or by specifying report definition and chart settings.
      * @param param the request object
      */
-    public reportsRunnerGetChartData(param: ReportsRunnerApiReportsRunnerGetChartDataRequest, options?: Configuration): Promise<Reportsrunnerv3GetChartDataResponse> {
+    public reportsRunnerGetChartData(param: ReportsRunnerApiReportsRunnerGetChartDataRequest, options?: ConfigurationOptions): Promise<Reportsrunnerv3GetChartDataResponse> {
         return this.api.reportsRunnerGetChartData(param.reportsrunnerv3GetChartDataRequest,  options).toPromise();
     }
 
     /**
      * @param param the request object
      */
-    public reportsRunnerGetChartDatav2WithHttpInfo(param: ReportsRunnerApiReportsRunnerGetChartDatav2Request, options?: Configuration): Promise<HttpInfo<Reportsrunnerv3GetChartDataResponsev2>> {
+    public reportsRunnerGetChartDatav2WithHttpInfo(param: ReportsRunnerApiReportsRunnerGetChartDatav2Request, options?: ConfigurationOptions): Promise<HttpInfo<Reportsrunnerv3GetChartDataResponsev2>> {
         return this.api.reportsRunnerGetChartDatav2WithHttpInfo(param.reportsrunnerv3GetChartDataRequestv2,  options).toPromise();
     }
 
     /**
      * @param param the request object
      */
-    public reportsRunnerGetChartDatav2(param: ReportsRunnerApiReportsRunnerGetChartDatav2Request, options?: Configuration): Promise<Reportsrunnerv3GetChartDataResponsev2> {
+    public reportsRunnerGetChartDatav2(param: ReportsRunnerApiReportsRunnerGetChartDatav2Request, options?: ConfigurationOptions): Promise<Reportsrunnerv3GetChartDataResponsev2> {
         return this.api.reportsRunnerGetChartDatav2(param.reportsrunnerv3GetChartDataRequestv2,  options).toPromise();
     }
 
@@ -10206,7 +10526,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Get report column facet Description: Get counts that is group by values for the selected column.
      * @param param the request object
      */
-    public reportsRunnerGetReportColumnFacetWithHttpInfo(param: ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest, options?: Configuration): Promise<HttpInfo<Reportsrunnerv3GetReportColumnFacetResponse>> {
+    public reportsRunnerGetReportColumnFacetWithHttpInfo(param: ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsrunnerv3GetReportColumnFacetResponse>> {
         return this.api.reportsRunnerGetReportColumnFacetWithHttpInfo(param.reportsrunnerv3GetReportColumnFacetRequest,  options).toPromise();
     }
 
@@ -10214,7 +10534,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Get report column facet Description: Get counts that is group by values for the selected column.
      * @param param the request object
      */
-    public reportsRunnerGetReportColumnFacet(param: ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest, options?: Configuration): Promise<Reportsrunnerv3GetReportColumnFacetResponse> {
+    public reportsRunnerGetReportColumnFacet(param: ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest, options?: ConfigurationOptions): Promise<Reportsrunnerv3GetReportColumnFacetResponse> {
         return this.api.reportsRunnerGetReportColumnFacet(param.reportsrunnerv3GetReportColumnFacetRequest,  options).toPromise();
     }
 
@@ -10222,7 +10542,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Get report data count Description: Get report data.
      * @param param the request object
      */
-    public reportsRunnerGetReportDataCountWithHttpInfo(param: ReportsRunnerApiReportsRunnerGetReportDataCountRequest, options?: Configuration): Promise<HttpInfo<Reportsrunnerv3GetReportDataCountResponse>> {
+    public reportsRunnerGetReportDataCountWithHttpInfo(param: ReportsRunnerApiReportsRunnerGetReportDataCountRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsrunnerv3GetReportDataCountResponse>> {
         return this.api.reportsRunnerGetReportDataCountWithHttpInfo(param.reportsrunnerv3GetReportDataCountRequest,  options).toPromise();
     }
 
@@ -10230,7 +10550,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Get report data count Description: Get report data.
      * @param param the request object
      */
-    public reportsRunnerGetReportDataCount(param: ReportsRunnerApiReportsRunnerGetReportDataCountRequest, options?: Configuration): Promise<Reportsrunnerv3GetReportDataCountResponse> {
+    public reportsRunnerGetReportDataCount(param: ReportsRunnerApiReportsRunnerGetReportDataCountRequest, options?: ConfigurationOptions): Promise<Reportsrunnerv3GetReportDataCountResponse> {
         return this.api.reportsRunnerGetReportDataCount(param.reportsrunnerv3GetReportDataCountRequest,  options).toPromise();
     }
 
@@ -10238,7 +10558,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Run audit report Description: Run task report by SQL based ob report ID and filter definition.
      * @param param the request object
      */
-    public reportsRunnerRunAuditReportWithHttpInfo(param: ReportsRunnerApiReportsRunnerRunAuditReportRequest, options?: Configuration): Promise<HttpInfo<StreamResultOfReportsrunnerv3RunReportResponse>> {
+    public reportsRunnerRunAuditReportWithHttpInfo(param: ReportsRunnerApiReportsRunnerRunAuditReportRequest, options?: ConfigurationOptions): Promise<HttpInfo<StreamResultOfReportsrunnerv3RunReportResponse>> {
         return this.api.reportsRunnerRunAuditReportWithHttpInfo(param.reportId, param.reportsrunnerv3RunAuditReportRequest,  options).toPromise();
     }
 
@@ -10246,7 +10566,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Run audit report Description: Run task report by SQL based ob report ID and filter definition.
      * @param param the request object
      */
-    public reportsRunnerRunAuditReport(param: ReportsRunnerApiReportsRunnerRunAuditReportRequest, options?: Configuration): Promise<StreamResultOfReportsrunnerv3RunReportResponse> {
+    public reportsRunnerRunAuditReport(param: ReportsRunnerApiReportsRunnerRunAuditReportRequest, options?: ConfigurationOptions): Promise<StreamResultOfReportsrunnerv3RunReportResponse> {
         return this.api.reportsRunnerRunAuditReport(param.reportId, param.reportsrunnerv3RunAuditReportRequest,  options).toPromise();
     }
 
@@ -10254,7 +10574,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Run report Description: Run report by report ID or by specifying report definition.
      * @param param the request object
      */
-    public reportsRunnerRunReportWithHttpInfo(param: ReportsRunnerApiReportsRunnerRunReportRequest, options?: Configuration): Promise<HttpInfo<StreamResultOfReportsrunnerv3RunReportResponse>> {
+    public reportsRunnerRunReportWithHttpInfo(param: ReportsRunnerApiReportsRunnerRunReportRequest, options?: ConfigurationOptions): Promise<HttpInfo<StreamResultOfReportsrunnerv3RunReportResponse>> {
         return this.api.reportsRunnerRunReportWithHttpInfo(param.reportsrunnerv3RunReportRequest,  options).toPromise();
     }
 
@@ -10262,7 +10582,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Run report Description: Run report by report ID or by specifying report definition.
      * @param param the request object
      */
-    public reportsRunnerRunReport(param: ReportsRunnerApiReportsRunnerRunReportRequest, options?: Configuration): Promise<StreamResultOfReportsrunnerv3RunReportResponse> {
+    public reportsRunnerRunReport(param: ReportsRunnerApiReportsRunnerRunReportRequest, options?: ConfigurationOptions): Promise<StreamResultOfReportsrunnerv3RunReportResponse> {
         return this.api.reportsRunnerRunReport(param.reportsrunnerv3RunReportRequest,  options).toPromise();
     }
 
@@ -10270,7 +10590,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Stop query Description: Stop a query based on the id
      * @param param the request object
      */
-    public reportsRunnerStopQueryWithHttpInfo(param: ReportsRunnerApiReportsRunnerStopQueryRequest, options?: Configuration): Promise<HttpInfo<Reportsrunnerv3StopQueryResponse>> {
+    public reportsRunnerStopQueryWithHttpInfo(param: ReportsRunnerApiReportsRunnerStopQueryRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsrunnerv3StopQueryResponse>> {
         return this.api.reportsRunnerStopQueryWithHttpInfo(param.reportsrunnerv3StopQueryRequest,  options).toPromise();
     }
 
@@ -10278,7 +10598,7 @@ export class ObjectReportsRunnerApi {
      * Summary: Stop query Description: Stop a query based on the id
      * @param param the request object
      */
-    public reportsRunnerStopQuery(param: ReportsRunnerApiReportsRunnerStopQueryRequest, options?: Configuration): Promise<Reportsrunnerv3StopQueryResponse> {
+    public reportsRunnerStopQuery(param: ReportsRunnerApiReportsRunnerStopQueryRequest, options?: ConfigurationOptions): Promise<Reportsrunnerv3StopQueryResponse> {
         return this.api.reportsRunnerStopQuery(param.reportsrunnerv3StopQueryRequest,  options).toPromise();
     }
 
@@ -10416,12 +10736,14 @@ export interface ReportsServiceApiReportsServiceCreateVariantRequest {
 export interface ReportsServiceApiReportsServiceDeleteCategoryRequest {
     /**
      * category id.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceDeleteCategory
      */
     categoryId?: string
     /**
      * table name.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceDeleteCategory
      */
@@ -10431,6 +10753,7 @@ export interface ReportsServiceApiReportsServiceDeleteCategoryRequest {
 export interface ReportsServiceApiReportsServiceDeleteChartRequest {
     /**
      * The id of the chart to be deleted.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceDeleteChart
      */
@@ -10440,6 +10763,7 @@ export interface ReportsServiceApiReportsServiceDeleteChartRequest {
 export interface ReportsServiceApiReportsServiceDeleteChartTemplatev2Request {
     /**
      * Unique template ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceDeleteChartTemplatev2
      */
@@ -10449,6 +10773,7 @@ export interface ReportsServiceApiReportsServiceDeleteChartTemplatev2Request {
 export interface ReportsServiceApiReportsServiceDeleteChartv2Request {
     /**
      * The ID of the chart for deletion.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceDeleteChartv2
      */
@@ -10458,6 +10783,7 @@ export interface ReportsServiceApiReportsServiceDeleteChartv2Request {
 export interface ReportsServiceApiReportsServiceDeleteControlRequest {
     /**
      * The ID of the control to delete
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceDeleteControl
      */
@@ -10473,12 +10799,14 @@ export interface ReportsServiceApiReportsServiceDeleteControlRequest {
 export interface ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest {
     /**
      * Header ids.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof ReportsServiceApireportsServiceDeleteFieldsByCategory
      */
     headerIds?: Array<string>
     /**
      * table name.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceDeleteFieldsByCategory
      */
@@ -10488,6 +10816,7 @@ export interface ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest {
 export interface ReportsServiceApiReportsServiceDeleteGradeRequest {
     /**
      * The id of the grade to be deleted.
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceDeleteGrade
      */
@@ -10503,6 +10832,7 @@ export interface ReportsServiceApiReportsServiceDeleteGradeRequest {
 export interface ReportsServiceApiReportsServiceDeleteJoinRequest {
     /**
      * The id of the join to be deleted.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceDeleteJoin
      */
@@ -10512,6 +10842,7 @@ export interface ReportsServiceApiReportsServiceDeleteJoinRequest {
 export interface ReportsServiceApiReportsServiceDeleteMeasureRequest {
     /**
      * The id of the measure to be deleted.
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceDeleteMeasure
      */
@@ -10527,6 +10858,7 @@ export interface ReportsServiceApiReportsServiceDeleteMeasureRequest {
 export interface ReportsServiceApiReportsServiceDeleteMetricRequest {
     /**
      * The id of the metric to be deleted.
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceDeleteMetric
      */
@@ -10542,6 +10874,7 @@ export interface ReportsServiceApiReportsServiceDeleteMetricRequest {
 export interface ReportsServiceApiReportsServiceDeleteProgramRequest {
     /**
      * The ID of the program to delete
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceDeleteProgram
      */
@@ -10557,6 +10890,7 @@ export interface ReportsServiceApiReportsServiceDeleteProgramRequest {
 export interface ReportsServiceApiReportsServiceDeleteReportRequest {
     /**
      * The id of the Report to be deleted.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceDeleteReport
      */
@@ -10566,6 +10900,7 @@ export interface ReportsServiceApiReportsServiceDeleteReportRequest {
 export interface ReportsServiceApiReportsServiceDeleteRequirementRequest {
     /**
      * The requirement to delete\&#39;s ID
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceDeleteRequirement
      */
@@ -10581,6 +10916,7 @@ export interface ReportsServiceApiReportsServiceDeleteRequirementRequest {
 export interface ReportsServiceApiReportsServiceDeleteVariantRequest {
     /**
      * The id of the variant to delete
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceDeleteVariant
      */
@@ -10590,6 +10926,7 @@ export interface ReportsServiceApiReportsServiceDeleteVariantRequest {
 export interface ReportsServiceApiReportsServiceGetCategoriesRequest {
     /**
      * Report ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetCategories
      */
@@ -10599,12 +10936,14 @@ export interface ReportsServiceApiReportsServiceGetCategoriesRequest {
 export interface ReportsServiceApiReportsServiceGetChartSettingsRequest {
     /**
      * Unique Chart ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetChartSettings
      */
     chartId?: string
     /**
      * Unique Report ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetChartSettings
      */
@@ -10614,12 +10953,14 @@ export interface ReportsServiceApiReportsServiceGetChartSettingsRequest {
 export interface ReportsServiceApiReportsServiceGetChartSettingsv2Request {
     /**
      * Unique Chart ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetChartSettingsv2
      */
     chartId?: string
     /**
      * Unique Report ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetChartSettingsv2
      */
@@ -10635,6 +10976,7 @@ export interface ReportsServiceApiReportsServiceGetControlsRequest {
 export interface ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest {
     /**
      * Category IDs.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof ReportsServiceApireportsServiceGetFieldsByCategories
      */
@@ -10644,18 +10986,21 @@ export interface ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest {
 export interface ReportsServiceApiReportsServiceGetFieldsByCategoryRequest {
     /**
      * Category ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetFieldsByCategory
      */
     categoryId?: string
     /**
      * Report ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetFieldsByCategory
      */
     reportId?: string
     /**
      * optional table name parameter.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetFieldsByCategory
      */
@@ -10668,6 +11013,7 @@ export interface ReportsServiceApiReportsServiceGetGradesRequest {
 export interface ReportsServiceApiReportsServiceGetJoinsRequest {
     /**
      * Category ID (Optional).
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetJoins
      */
@@ -10704,6 +11050,7 @@ export interface ReportsServiceApiReportsServiceGetQueryByReportIDRequest {
 export interface ReportsServiceApiReportsServiceGetReportDefinitionRequest {
     /**
      * Unique Report ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetReportDefinition
      */
@@ -10713,6 +11060,7 @@ export interface ReportsServiceApiReportsServiceGetReportDefinitionRequest {
 export interface ReportsServiceApiReportsServiceGetReportGroupsRequest {
     /**
      * List of group IDs that should be checked for usage in each report.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof ReportsServiceApireportsServiceGetReportGroups
      */
@@ -10722,6 +11070,7 @@ export interface ReportsServiceApiReportsServiceGetReportGroupsRequest {
 export interface ReportsServiceApiReportsServiceGetReportSynopsisRequest {
     /**
      * Unique Report ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetReportSynopsis
      */
@@ -10731,12 +11080,14 @@ export interface ReportsServiceApiReportsServiceGetReportSynopsisRequest {
 export interface ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest {
     /**
      * Category ID parameter.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetReportTimestampHeader
      */
     categoryId?: string
     /**
      * List of all header tables.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof ReportsServiceApireportsServiceGetReportTimestampHeader
      */
@@ -10746,12 +11097,14 @@ export interface ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest 
 export interface ReportsServiceApiReportsServiceGetReportsRequest {
     /**
      * Optional Category ID parameter.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetReports
      */
     categoryId?: string
     /**
      * Optional table name parameter.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetReports
      */
@@ -10761,6 +11114,7 @@ export interface ReportsServiceApiReportsServiceGetReportsRequest {
 export interface ReportsServiceApiReportsServiceGetReportsForJoinRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetReportsForJoin
      */
@@ -10776,6 +11130,7 @@ export interface ReportsServiceApiReportsServiceGetRequirementsRequest {
 export interface ReportsServiceApiReportsServiceGetVariantRequest {
     /**
      * The variant id
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceGetVariant
      */
@@ -10788,6 +11143,7 @@ export interface ReportsServiceApiReportsServiceGetVariantsRequest {
 export interface ReportsServiceApiReportsServicePartialChartUpdateRequest {
     /**
      * Unique chart ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServicePartialChartUpdate
      */
@@ -10803,6 +11159,7 @@ export interface ReportsServiceApiReportsServicePartialChartUpdateRequest {
 export interface ReportsServiceApiReportsServicePartialReportUpdateRequest {
     /**
      * Unique Report ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServicePartialReportUpdate
      */
@@ -10845,6 +11202,7 @@ export interface ReportsServiceApiReportsServiceTransposeRequest {
 export interface ReportsServiceApiReportsServiceUpdateChartRequest {
     /**
      * Unique chart ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceUpdateChart
      */
@@ -10860,6 +11218,7 @@ export interface ReportsServiceApiReportsServiceUpdateChartRequest {
 export interface ReportsServiceApiReportsServiceUpdateChartv2Request {
     /**
      * Unique chart ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceUpdateChartv2
      */
@@ -10875,6 +11234,7 @@ export interface ReportsServiceApiReportsServiceUpdateChartv2Request {
 export interface ReportsServiceApiReportsServiceUpdateControlRequest {
     /**
      * The id of the control that was updated.
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceUpdateControl
      */
@@ -10890,6 +11250,7 @@ export interface ReportsServiceApiReportsServiceUpdateControlRequest {
 export interface ReportsServiceApiReportsServiceUpdateGradeRequest {
     /**
      * The id of the grade that was updated.
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceUpdateGrade
      */
@@ -10905,6 +11266,7 @@ export interface ReportsServiceApiReportsServiceUpdateGradeRequest {
 export interface ReportsServiceApiReportsServiceUpdateJoinRequest {
     /**
      * Unique join ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceUpdateJoin
      */
@@ -10920,6 +11282,7 @@ export interface ReportsServiceApiReportsServiceUpdateJoinRequest {
 export interface ReportsServiceApiReportsServiceUpdateMeasureRequest {
     /**
      * The id of the measure that was updated.
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceUpdateMeasure
      */
@@ -10935,6 +11298,7 @@ export interface ReportsServiceApiReportsServiceUpdateMeasureRequest {
 export interface ReportsServiceApiReportsServiceUpdateMetricRequest {
     /**
      * The id of the metric that was updated.
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceUpdateMetric
      */
@@ -10950,6 +11314,7 @@ export interface ReportsServiceApiReportsServiceUpdateMetricRequest {
 export interface ReportsServiceApiReportsServiceUpdateProgramRequest {
     /**
      * The id of the programs that was updated.
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceUpdateProgram
      */
@@ -10965,6 +11330,7 @@ export interface ReportsServiceApiReportsServiceUpdateProgramRequest {
 export interface ReportsServiceApiReportsServiceUpdateReportRequest {
     /**
      * Unique Report ID.
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceUpdateReport
      */
@@ -10980,6 +11346,7 @@ export interface ReportsServiceApiReportsServiceUpdateReportRequest {
 export interface ReportsServiceApiReportsServiceUpdateRequirementRequest {
     /**
      * The id of the requirements that was updated.
+     * Defaults to: undefined
      * @type number
      * @memberof ReportsServiceApireportsServiceUpdateRequirement
      */
@@ -10995,6 +11362,7 @@ export interface ReportsServiceApiReportsServiceUpdateRequirementRequest {
 export interface ReportsServiceApiReportsServiceUpdateVariantOverrideRequest {
     /**
      * The variant id
+     * Defaults to: undefined
      * @type string
      * @memberof ReportsServiceApireportsServiceUpdateVariantOverride
      */
@@ -11018,7 +11386,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create a category Description: Create a report category
      * @param param the request object
      */
-    public reportsServiceCreateCategoryWithHttpInfo(param: ReportsServiceApiReportsServiceCreateCategoryRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateCategoryResponse>> {
+    public reportsServiceCreateCategoryWithHttpInfo(param: ReportsServiceApiReportsServiceCreateCategoryRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateCategoryResponse>> {
         return this.api.reportsServiceCreateCategoryWithHttpInfo(param.reportsv3CreateCategoryRequest,  options).toPromise();
     }
 
@@ -11026,7 +11394,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create a category Description: Create a report category
      * @param param the request object
      */
-    public reportsServiceCreateCategory(param: ReportsServiceApiReportsServiceCreateCategoryRequest, options?: Configuration): Promise<Reportsv3CreateCategoryResponse> {
+    public reportsServiceCreateCategory(param: ReportsServiceApiReportsServiceCreateCategoryRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateCategoryResponse> {
         return this.api.reportsServiceCreateCategory(param.reportsv3CreateCategoryRequest,  options).toPromise();
     }
 
@@ -11034,7 +11402,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create chart Description: Create custom chart based on provided properties.
      * @param param the request object
      */
-    public reportsServiceCreateChartWithHttpInfo(param: ReportsServiceApiReportsServiceCreateChartRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateChartResponse>> {
+    public reportsServiceCreateChartWithHttpInfo(param: ReportsServiceApiReportsServiceCreateChartRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateChartResponse>> {
         return this.api.reportsServiceCreateChartWithHttpInfo(param.reportsv3CreateChartRequest,  options).toPromise();
     }
 
@@ -11042,7 +11410,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create chart Description: Create custom chart based on provided properties.
      * @param param the request object
      */
-    public reportsServiceCreateChart(param: ReportsServiceApiReportsServiceCreateChartRequest, options?: Configuration): Promise<Reportsv3CreateChartResponse> {
+    public reportsServiceCreateChart(param: ReportsServiceApiReportsServiceCreateChartRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateChartResponse> {
         return this.api.reportsServiceCreateChart(param.reportsv3CreateChartRequest,  options).toPromise();
     }
 
@@ -11050,7 +11418,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create chart template v2 Description: Create custom VEGA chart template.
      * @param param the request object
      */
-    public reportsServiceCreateChartTemplatev2WithHttpInfo(param: ReportsServiceApiReportsServiceCreateChartTemplatev2Request, options?: Configuration): Promise<HttpInfo<Reportsv3CreateChartTemplatev2Response>> {
+    public reportsServiceCreateChartTemplatev2WithHttpInfo(param: ReportsServiceApiReportsServiceCreateChartTemplatev2Request, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateChartTemplatev2Response>> {
         return this.api.reportsServiceCreateChartTemplatev2WithHttpInfo(param.reportsv3CreateChartTemplatev2Request,  options).toPromise();
     }
 
@@ -11058,7 +11426,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create chart template v2 Description: Create custom VEGA chart template.
      * @param param the request object
      */
-    public reportsServiceCreateChartTemplatev2(param: ReportsServiceApiReportsServiceCreateChartTemplatev2Request, options?: Configuration): Promise<Reportsv3CreateChartTemplatev2Response> {
+    public reportsServiceCreateChartTemplatev2(param: ReportsServiceApiReportsServiceCreateChartTemplatev2Request, options?: ConfigurationOptions): Promise<Reportsv3CreateChartTemplatev2Response> {
         return this.api.reportsServiceCreateChartTemplatev2(param.reportsv3CreateChartTemplatev2Request,  options).toPromise();
     }
 
@@ -11066,7 +11434,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create chart v2 Description: Create custom VEGA chart based on provided properties.
      * @param param the request object
      */
-    public reportsServiceCreateChartv2WithHttpInfo(param: ReportsServiceApiReportsServiceCreateChartv2Request, options?: Configuration): Promise<HttpInfo<Reportsv3CreateChartv2Response>> {
+    public reportsServiceCreateChartv2WithHttpInfo(param: ReportsServiceApiReportsServiceCreateChartv2Request, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateChartv2Response>> {
         return this.api.reportsServiceCreateChartv2WithHttpInfo(param.reportsv3CreateChartv2Request,  options).toPromise();
     }
 
@@ -11074,7 +11442,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create chart v2 Description: Create custom VEGA chart based on provided properties.
      * @param param the request object
      */
-    public reportsServiceCreateChartv2(param: ReportsServiceApiReportsServiceCreateChartv2Request, options?: Configuration): Promise<Reportsv3CreateChartv2Response> {
+    public reportsServiceCreateChartv2(param: ReportsServiceApiReportsServiceCreateChartv2Request, options?: ConfigurationOptions): Promise<Reportsv3CreateChartv2Response> {
         return this.api.reportsServiceCreateChartv2(param.reportsv3CreateChartv2Request,  options).toPromise();
     }
 
@@ -11082,7 +11450,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create Control. Description: Create a unique Control.
      * @param param the request object
      */
-    public reportsServiceCreateControlWithHttpInfo(param: ReportsServiceApiReportsServiceCreateControlRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateControlResponse>> {
+    public reportsServiceCreateControlWithHttpInfo(param: ReportsServiceApiReportsServiceCreateControlRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateControlResponse>> {
         return this.api.reportsServiceCreateControlWithHttpInfo(param.reportsv3CreateControlRequest,  options).toPromise();
     }
 
@@ -11090,7 +11458,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create Control. Description: Create a unique Control.
      * @param param the request object
      */
-    public reportsServiceCreateControl(param: ReportsServiceApiReportsServiceCreateControlRequest, options?: Configuration): Promise<Reportsv3CreateControlResponse> {
+    public reportsServiceCreateControl(param: ReportsServiceApiReportsServiceCreateControlRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateControlResponse> {
         return this.api.reportsServiceCreateControl(param.reportsv3CreateControlRequest,  options).toPromise();
     }
 
@@ -11098,7 +11466,7 @@ export class ObjectReportsServiceApi {
      * Summary - Create fields by category Description: Cteate category fields based on provided properties.
      * @param param the request object
      */
-    public reportsServiceCreateFieldsByCategoryWithHttpInfo(param: ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateFieldsByCategoryResponse>> {
+    public reportsServiceCreateFieldsByCategoryWithHttpInfo(param: ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateFieldsByCategoryResponse>> {
         return this.api.reportsServiceCreateFieldsByCategoryWithHttpInfo(param.reportsv3CreateFieldsByCategoryRequest,  options).toPromise();
     }
 
@@ -11106,7 +11474,7 @@ export class ObjectReportsServiceApi {
      * Summary - Create fields by category Description: Cteate category fields based on provided properties.
      * @param param the request object
      */
-    public reportsServiceCreateFieldsByCategory(param: ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest, options?: Configuration): Promise<Reportsv3CreateFieldsByCategoryResponse> {
+    public reportsServiceCreateFieldsByCategory(param: ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateFieldsByCategoryResponse> {
         return this.api.reportsServiceCreateFieldsByCategory(param.reportsv3CreateFieldsByCategoryRequest,  options).toPromise();
     }
 
@@ -11114,7 +11482,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create Grade. Description: Create a unique Grade.
      * @param param the request object
      */
-    public reportsServiceCreateGradeWithHttpInfo(param: ReportsServiceApiReportsServiceCreateGradeRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateGradeResponse>> {
+    public reportsServiceCreateGradeWithHttpInfo(param: ReportsServiceApiReportsServiceCreateGradeRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateGradeResponse>> {
         return this.api.reportsServiceCreateGradeWithHttpInfo(param.reportsv3CreateGradeRequest,  options).toPromise();
     }
 
@@ -11122,7 +11490,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create Grade. Description: Create a unique Grade.
      * @param param the request object
      */
-    public reportsServiceCreateGrade(param: ReportsServiceApiReportsServiceCreateGradeRequest, options?: Configuration): Promise<Reportsv3CreateGradeResponse> {
+    public reportsServiceCreateGrade(param: ReportsServiceApiReportsServiceCreateGradeRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateGradeResponse> {
         return this.api.reportsServiceCreateGrade(param.reportsv3CreateGradeRequest,  options).toPromise();
     }
 
@@ -11130,7 +11498,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create a join Description: Create a custom report join
      * @param param the request object
      */
-    public reportsServiceCreateJoinWithHttpInfo(param: ReportsServiceApiReportsServiceCreateJoinRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateJoinResponse>> {
+    public reportsServiceCreateJoinWithHttpInfo(param: ReportsServiceApiReportsServiceCreateJoinRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateJoinResponse>> {
         return this.api.reportsServiceCreateJoinWithHttpInfo(param.reportsv3CreateJoinRequest,  options).toPromise();
     }
 
@@ -11138,7 +11506,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create a join Description: Create a custom report join
      * @param param the request object
      */
-    public reportsServiceCreateJoin(param: ReportsServiceApiReportsServiceCreateJoinRequest, options?: Configuration): Promise<Reportsv3CreateJoinResponse> {
+    public reportsServiceCreateJoin(param: ReportsServiceApiReportsServiceCreateJoinRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateJoinResponse> {
         return this.api.reportsServiceCreateJoin(param.reportsv3CreateJoinRequest,  options).toPromise();
     }
 
@@ -11146,7 +11514,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create measure. Description: Create a unique measure.
      * @param param the request object
      */
-    public reportsServiceCreateMeasureWithHttpInfo(param: ReportsServiceApiReportsServiceCreateMeasureRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateMeasureResponse>> {
+    public reportsServiceCreateMeasureWithHttpInfo(param: ReportsServiceApiReportsServiceCreateMeasureRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateMeasureResponse>> {
         return this.api.reportsServiceCreateMeasureWithHttpInfo(param.reportsv3CreateMeasureRequest,  options).toPromise();
     }
 
@@ -11154,7 +11522,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create measure. Description: Create a unique measure.
      * @param param the request object
      */
-    public reportsServiceCreateMeasure(param: ReportsServiceApiReportsServiceCreateMeasureRequest, options?: Configuration): Promise<Reportsv3CreateMeasureResponse> {
+    public reportsServiceCreateMeasure(param: ReportsServiceApiReportsServiceCreateMeasureRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateMeasureResponse> {
         return this.api.reportsServiceCreateMeasure(param.reportsv3CreateMeasureRequest,  options).toPromise();
     }
 
@@ -11162,7 +11530,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create metric. Description: Create a unique metric.
      * @param param the request object
      */
-    public reportsServiceCreateMetricWithHttpInfo(param: ReportsServiceApiReportsServiceCreateMetricRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateMetricResponse>> {
+    public reportsServiceCreateMetricWithHttpInfo(param: ReportsServiceApiReportsServiceCreateMetricRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateMetricResponse>> {
         return this.api.reportsServiceCreateMetricWithHttpInfo(param.reportsv3CreateMetricRequest,  options).toPromise();
     }
 
@@ -11170,7 +11538,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create metric. Description: Create a unique metric.
      * @param param the request object
      */
-    public reportsServiceCreateMetric(param: ReportsServiceApiReportsServiceCreateMetricRequest, options?: Configuration): Promise<Reportsv3CreateMetricResponse> {
+    public reportsServiceCreateMetric(param: ReportsServiceApiReportsServiceCreateMetricRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateMetricResponse> {
         return this.api.reportsServiceCreateMetric(param.reportsv3CreateMetricRequest,  options).toPromise();
     }
 
@@ -11178,7 +11546,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create Program. Description: Create a unique Program.
      * @param param the request object
      */
-    public reportsServiceCreateProgramWithHttpInfo(param: ReportsServiceApiReportsServiceCreateProgramRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateProgramResponse>> {
+    public reportsServiceCreateProgramWithHttpInfo(param: ReportsServiceApiReportsServiceCreateProgramRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateProgramResponse>> {
         return this.api.reportsServiceCreateProgramWithHttpInfo(param.reportsv3CreateProgramRequest,  options).toPromise();
     }
 
@@ -11186,7 +11554,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create Program. Description: Create a unique Program.
      * @param param the request object
      */
-    public reportsServiceCreateProgram(param: ReportsServiceApiReportsServiceCreateProgramRequest, options?: Configuration): Promise<Reportsv3CreateProgramResponse> {
+    public reportsServiceCreateProgram(param: ReportsServiceApiReportsServiceCreateProgramRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateProgramResponse> {
         return this.api.reportsServiceCreateProgram(param.reportsv3CreateProgramRequest,  options).toPromise();
     }
 
@@ -11194,7 +11562,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create report Description: Create custom report based on provided properties.
      * @param param the request object
      */
-    public reportsServiceCreateReportWithHttpInfo(param: ReportsServiceApiReportsServiceCreateReportRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateReportResponse>> {
+    public reportsServiceCreateReportWithHttpInfo(param: ReportsServiceApiReportsServiceCreateReportRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateReportResponse>> {
         return this.api.reportsServiceCreateReportWithHttpInfo(param.reportsv3CreateReportRequest,  options).toPromise();
     }
 
@@ -11202,7 +11570,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create report Description: Create custom report based on provided properties.
      * @param param the request object
      */
-    public reportsServiceCreateReport(param: ReportsServiceApiReportsServiceCreateReportRequest, options?: Configuration): Promise<Reportsv3CreateReportResponse> {
+    public reportsServiceCreateReport(param: ReportsServiceApiReportsServiceCreateReportRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateReportResponse> {
         return this.api.reportsServiceCreateReport(param.reportsv3CreateReportRequest,  options).toPromise();
     }
 
@@ -11210,7 +11578,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create Requirement. Description: Create a unique Requirement.
      * @param param the request object
      */
-    public reportsServiceCreateRequirementWithHttpInfo(param: ReportsServiceApiReportsServiceCreateRequirementRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateRequirementResponse>> {
+    public reportsServiceCreateRequirementWithHttpInfo(param: ReportsServiceApiReportsServiceCreateRequirementRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateRequirementResponse>> {
         return this.api.reportsServiceCreateRequirementWithHttpInfo(param.reportsv3CreateRequirementRequest,  options).toPromise();
     }
 
@@ -11218,7 +11586,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create Requirement. Description: Create a unique Requirement.
      * @param param the request object
      */
-    public reportsServiceCreateRequirement(param: ReportsServiceApiReportsServiceCreateRequirementRequest, options?: Configuration): Promise<Reportsv3CreateRequirementResponse> {
+    public reportsServiceCreateRequirement(param: ReportsServiceApiReportsServiceCreateRequirementRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateRequirementResponse> {
         return this.api.reportsServiceCreateRequirement(param.reportsv3CreateRequirementRequest,  options).toPromise();
     }
 
@@ -11226,7 +11594,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create a variant Description: Create a variant for reports
      * @param param the request object
      */
-    public reportsServiceCreateVariantWithHttpInfo(param: ReportsServiceApiReportsServiceCreateVariantRequest, options?: Configuration): Promise<HttpInfo<Reportsv3CreateVariantResponse>> {
+    public reportsServiceCreateVariantWithHttpInfo(param: ReportsServiceApiReportsServiceCreateVariantRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3CreateVariantResponse>> {
         return this.api.reportsServiceCreateVariantWithHttpInfo(param.reportsv3CreateVariantRequest,  options).toPromise();
     }
 
@@ -11234,7 +11602,7 @@ export class ObjectReportsServiceApi {
      * Summary: Create a variant Description: Create a variant for reports
      * @param param the request object
      */
-    public reportsServiceCreateVariant(param: ReportsServiceApiReportsServiceCreateVariantRequest, options?: Configuration): Promise<Reportsv3CreateVariantResponse> {
+    public reportsServiceCreateVariant(param: ReportsServiceApiReportsServiceCreateVariantRequest, options?: ConfigurationOptions): Promise<Reportsv3CreateVariantResponse> {
         return this.api.reportsServiceCreateVariant(param.reportsv3CreateVariantRequest,  options).toPromise();
     }
 
@@ -11242,7 +11610,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete a category Description: Delete a report category
      * @param param the request object
      */
-    public reportsServiceDeleteCategoryWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteCategoryRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteCategoryResponse>> {
+    public reportsServiceDeleteCategoryWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteCategoryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteCategoryResponse>> {
         return this.api.reportsServiceDeleteCategoryWithHttpInfo(param.categoryId, param.tableName,  options).toPromise();
     }
 
@@ -11250,7 +11618,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete a category Description: Delete a report category
      * @param param the request object
      */
-    public reportsServiceDeleteCategory(param: ReportsServiceApiReportsServiceDeleteCategoryRequest = {}, options?: Configuration): Promise<Reportsv3DeleteCategoryResponse> {
+    public reportsServiceDeleteCategory(param: ReportsServiceApiReportsServiceDeleteCategoryRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3DeleteCategoryResponse> {
         return this.api.reportsServiceDeleteCategory(param.categoryId, param.tableName,  options).toPromise();
     }
 
@@ -11258,7 +11626,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete chart Description: Delete a custom chart.
      * @param param the request object
      */
-    public reportsServiceDeleteChartWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteChartRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteChartResponse>> {
+    public reportsServiceDeleteChartWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteChartRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteChartResponse>> {
         return this.api.reportsServiceDeleteChartWithHttpInfo(param.chartId,  options).toPromise();
     }
 
@@ -11266,7 +11634,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete chart Description: Delete a custom chart.
      * @param param the request object
      */
-    public reportsServiceDeleteChart(param: ReportsServiceApiReportsServiceDeleteChartRequest, options?: Configuration): Promise<Reportsv3DeleteChartResponse> {
+    public reportsServiceDeleteChart(param: ReportsServiceApiReportsServiceDeleteChartRequest, options?: ConfigurationOptions): Promise<Reportsv3DeleteChartResponse> {
         return this.api.reportsServiceDeleteChart(param.chartId,  options).toPromise();
     }
 
@@ -11274,7 +11642,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete chart template v2 Description: Delete a custom VEGA chart template.
      * @param param the request object
      */
-    public reportsServiceDeleteChartTemplatev2WithHttpInfo(param: ReportsServiceApiReportsServiceDeleteChartTemplatev2Request, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteChartTemplatev2Response>> {
+    public reportsServiceDeleteChartTemplatev2WithHttpInfo(param: ReportsServiceApiReportsServiceDeleteChartTemplatev2Request, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteChartTemplatev2Response>> {
         return this.api.reportsServiceDeleteChartTemplatev2WithHttpInfo(param.templateId,  options).toPromise();
     }
 
@@ -11282,7 +11650,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete chart template v2 Description: Delete a custom VEGA chart template.
      * @param param the request object
      */
-    public reportsServiceDeleteChartTemplatev2(param: ReportsServiceApiReportsServiceDeleteChartTemplatev2Request, options?: Configuration): Promise<Reportsv3DeleteChartTemplatev2Response> {
+    public reportsServiceDeleteChartTemplatev2(param: ReportsServiceApiReportsServiceDeleteChartTemplatev2Request, options?: ConfigurationOptions): Promise<Reportsv3DeleteChartTemplatev2Response> {
         return this.api.reportsServiceDeleteChartTemplatev2(param.templateId,  options).toPromise();
     }
 
@@ -11290,7 +11658,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete chart v2 Description: Delete a custom VEGA chart.
      * @param param the request object
      */
-    public reportsServiceDeleteChartv2WithHttpInfo(param: ReportsServiceApiReportsServiceDeleteChartv2Request, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteChartv2Response>> {
+    public reportsServiceDeleteChartv2WithHttpInfo(param: ReportsServiceApiReportsServiceDeleteChartv2Request, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteChartv2Response>> {
         return this.api.reportsServiceDeleteChartv2WithHttpInfo(param.chartId,  options).toPromise();
     }
 
@@ -11298,7 +11666,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete chart v2 Description: Delete a custom VEGA chart.
      * @param param the request object
      */
-    public reportsServiceDeleteChartv2(param: ReportsServiceApiReportsServiceDeleteChartv2Request, options?: Configuration): Promise<Reportsv3DeleteChartv2Response> {
+    public reportsServiceDeleteChartv2(param: ReportsServiceApiReportsServiceDeleteChartv2Request, options?: ConfigurationOptions): Promise<Reportsv3DeleteChartv2Response> {
         return this.api.reportsServiceDeleteChartv2(param.chartId,  options).toPromise();
     }
 
@@ -11306,7 +11674,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete Control Description: Delete a Control.
      * @param param the request object
      */
-    public reportsServiceDeleteControlWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteControlRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteControlResponse>> {
+    public reportsServiceDeleteControlWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteControlRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteControlResponse>> {
         return this.api.reportsServiceDeleteControlWithHttpInfo(param.controlId, param.reportsv3DeleteControlRequest,  options).toPromise();
     }
 
@@ -11314,7 +11682,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete Control Description: Delete a Control.
      * @param param the request object
      */
-    public reportsServiceDeleteControl(param: ReportsServiceApiReportsServiceDeleteControlRequest, options?: Configuration): Promise<Reportsv3DeleteControlResponse> {
+    public reportsServiceDeleteControl(param: ReportsServiceApiReportsServiceDeleteControlRequest, options?: ConfigurationOptions): Promise<Reportsv3DeleteControlResponse> {
         return this.api.reportsServiceDeleteControl(param.controlId, param.reportsv3DeleteControlRequest,  options).toPromise();
     }
 
@@ -11322,7 +11690,7 @@ export class ObjectReportsServiceApi {
      * Summary - Delete fields by category Description: Delete category fields based on provided properties.
      * @param param the request object
      */
-    public reportsServiceDeleteFieldsByCategoryWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteFieldsByCategoryResponse>> {
+    public reportsServiceDeleteFieldsByCategoryWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteFieldsByCategoryResponse>> {
         return this.api.reportsServiceDeleteFieldsByCategoryWithHttpInfo(param.headerIds, param.tableName,  options).toPromise();
     }
 
@@ -11330,7 +11698,7 @@ export class ObjectReportsServiceApi {
      * Summary - Delete fields by category Description: Delete category fields based on provided properties.
      * @param param the request object
      */
-    public reportsServiceDeleteFieldsByCategory(param: ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest = {}, options?: Configuration): Promise<Reportsv3DeleteFieldsByCategoryResponse> {
+    public reportsServiceDeleteFieldsByCategory(param: ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3DeleteFieldsByCategoryResponse> {
         return this.api.reportsServiceDeleteFieldsByCategory(param.headerIds, param.tableName,  options).toPromise();
     }
 
@@ -11338,7 +11706,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete Grade Description: Delete a Grade.
      * @param param the request object
      */
-    public reportsServiceDeleteGradeWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteGradeRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteGradeResponse>> {
+    public reportsServiceDeleteGradeWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteGradeRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteGradeResponse>> {
         return this.api.reportsServiceDeleteGradeWithHttpInfo(param.gradeId, param.reportsv3DeleteGradeRequest,  options).toPromise();
     }
 
@@ -11346,7 +11714,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete Grade Description: Delete a Grade.
      * @param param the request object
      */
-    public reportsServiceDeleteGrade(param: ReportsServiceApiReportsServiceDeleteGradeRequest, options?: Configuration): Promise<Reportsv3DeleteGradeResponse> {
+    public reportsServiceDeleteGrade(param: ReportsServiceApiReportsServiceDeleteGradeRequest, options?: ConfigurationOptions): Promise<Reportsv3DeleteGradeResponse> {
         return this.api.reportsServiceDeleteGrade(param.gradeId, param.reportsv3DeleteGradeRequest,  options).toPromise();
     }
 
@@ -11354,7 +11722,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete a join Description: Delete a custom join
      * @param param the request object
      */
-    public reportsServiceDeleteJoinWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteJoinRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteJoinResponse>> {
+    public reportsServiceDeleteJoinWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteJoinRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteJoinResponse>> {
         return this.api.reportsServiceDeleteJoinWithHttpInfo(param.joinId,  options).toPromise();
     }
 
@@ -11362,7 +11730,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete a join Description: Delete a custom join
      * @param param the request object
      */
-    public reportsServiceDeleteJoin(param: ReportsServiceApiReportsServiceDeleteJoinRequest, options?: Configuration): Promise<Reportsv3DeleteJoinResponse> {
+    public reportsServiceDeleteJoin(param: ReportsServiceApiReportsServiceDeleteJoinRequest, options?: ConfigurationOptions): Promise<Reportsv3DeleteJoinResponse> {
         return this.api.reportsServiceDeleteJoin(param.joinId,  options).toPromise();
     }
 
@@ -11370,7 +11738,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete measure Description: Delete a measure.
      * @param param the request object
      */
-    public reportsServiceDeleteMeasureWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteMeasureRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteMeasureResponse>> {
+    public reportsServiceDeleteMeasureWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteMeasureRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteMeasureResponse>> {
         return this.api.reportsServiceDeleteMeasureWithHttpInfo(param.measureId, param.reportsv3DeleteMeasureRequest,  options).toPromise();
     }
 
@@ -11378,7 +11746,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete measure Description: Delete a measure.
      * @param param the request object
      */
-    public reportsServiceDeleteMeasure(param: ReportsServiceApiReportsServiceDeleteMeasureRequest, options?: Configuration): Promise<Reportsv3DeleteMeasureResponse> {
+    public reportsServiceDeleteMeasure(param: ReportsServiceApiReportsServiceDeleteMeasureRequest, options?: ConfigurationOptions): Promise<Reportsv3DeleteMeasureResponse> {
         return this.api.reportsServiceDeleteMeasure(param.measureId, param.reportsv3DeleteMeasureRequest,  options).toPromise();
     }
 
@@ -11386,7 +11754,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete metric Description: Delete a metric.
      * @param param the request object
      */
-    public reportsServiceDeleteMetricWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteMetricRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteMetricResponse>> {
+    public reportsServiceDeleteMetricWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteMetricRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteMetricResponse>> {
         return this.api.reportsServiceDeleteMetricWithHttpInfo(param.metricId, param.reportsv3DeleteMetricRequest,  options).toPromise();
     }
 
@@ -11394,7 +11762,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete metric Description: Delete a metric.
      * @param param the request object
      */
-    public reportsServiceDeleteMetric(param: ReportsServiceApiReportsServiceDeleteMetricRequest, options?: Configuration): Promise<Reportsv3DeleteMetricResponse> {
+    public reportsServiceDeleteMetric(param: ReportsServiceApiReportsServiceDeleteMetricRequest, options?: ConfigurationOptions): Promise<Reportsv3DeleteMetricResponse> {
         return this.api.reportsServiceDeleteMetric(param.metricId, param.reportsv3DeleteMetricRequest,  options).toPromise();
     }
 
@@ -11402,7 +11770,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete Program Description: Delete a Program.
      * @param param the request object
      */
-    public reportsServiceDeleteProgramWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteProgramRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteProgramResponse>> {
+    public reportsServiceDeleteProgramWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteProgramRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteProgramResponse>> {
         return this.api.reportsServiceDeleteProgramWithHttpInfo(param.programId, param.reportsv3DeleteProgramRequest,  options).toPromise();
     }
 
@@ -11410,7 +11778,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete Program Description: Delete a Program.
      * @param param the request object
      */
-    public reportsServiceDeleteProgram(param: ReportsServiceApiReportsServiceDeleteProgramRequest, options?: Configuration): Promise<Reportsv3DeleteProgramResponse> {
+    public reportsServiceDeleteProgram(param: ReportsServiceApiReportsServiceDeleteProgramRequest, options?: ConfigurationOptions): Promise<Reportsv3DeleteProgramResponse> {
         return this.api.reportsServiceDeleteProgram(param.programId, param.reportsv3DeleteProgramRequest,  options).toPromise();
     }
 
@@ -11418,7 +11786,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete report Description: Delete a custom report.
      * @param param the request object
      */
-    public reportsServiceDeleteReportWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteReportRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteReportResponse>> {
+    public reportsServiceDeleteReportWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteReportRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteReportResponse>> {
         return this.api.reportsServiceDeleteReportWithHttpInfo(param.reportId,  options).toPromise();
     }
 
@@ -11426,7 +11794,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete report Description: Delete a custom report.
      * @param param the request object
      */
-    public reportsServiceDeleteReport(param: ReportsServiceApiReportsServiceDeleteReportRequest, options?: Configuration): Promise<Reportsv3DeleteReportResponse> {
+    public reportsServiceDeleteReport(param: ReportsServiceApiReportsServiceDeleteReportRequest, options?: ConfigurationOptions): Promise<Reportsv3DeleteReportResponse> {
         return this.api.reportsServiceDeleteReport(param.reportId,  options).toPromise();
     }
 
@@ -11434,7 +11802,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete Requirement Description: Delete a Requirement.
      * @param param the request object
      */
-    public reportsServiceDeleteRequirementWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteRequirementRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteRequirementResponse>> {
+    public reportsServiceDeleteRequirementWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteRequirementRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteRequirementResponse>> {
         return this.api.reportsServiceDeleteRequirementWithHttpInfo(param.requirementId, param.reportsv3DeleteRequirementRequest,  options).toPromise();
     }
 
@@ -11442,7 +11810,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete Requirement Description: Delete a Requirement.
      * @param param the request object
      */
-    public reportsServiceDeleteRequirement(param: ReportsServiceApiReportsServiceDeleteRequirementRequest, options?: Configuration): Promise<Reportsv3DeleteRequirementResponse> {
+    public reportsServiceDeleteRequirement(param: ReportsServiceApiReportsServiceDeleteRequirementRequest, options?: ConfigurationOptions): Promise<Reportsv3DeleteRequirementResponse> {
         return this.api.reportsServiceDeleteRequirement(param.requirementId, param.reportsv3DeleteRequirementRequest,  options).toPromise();
     }
 
@@ -11450,7 +11818,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete a variant Description: Delete a variant
      * @param param the request object
      */
-    public reportsServiceDeleteVariantWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteVariantRequest, options?: Configuration): Promise<HttpInfo<Reportsv3DeleteVariantResponse>> {
+    public reportsServiceDeleteVariantWithHttpInfo(param: ReportsServiceApiReportsServiceDeleteVariantRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3DeleteVariantResponse>> {
         return this.api.reportsServiceDeleteVariantWithHttpInfo(param.variantId,  options).toPromise();
     }
 
@@ -11458,7 +11826,7 @@ export class ObjectReportsServiceApi {
      * Summary: Delete a variant Description: Delete a variant
      * @param param the request object
      */
-    public reportsServiceDeleteVariant(param: ReportsServiceApiReportsServiceDeleteVariantRequest, options?: Configuration): Promise<Reportsv3DeleteVariantResponse> {
+    public reportsServiceDeleteVariant(param: ReportsServiceApiReportsServiceDeleteVariantRequest, options?: ConfigurationOptions): Promise<Reportsv3DeleteVariantResponse> {
         return this.api.reportsServiceDeleteVariant(param.variantId,  options).toPromise();
     }
 
@@ -11466,7 +11834,7 @@ export class ObjectReportsServiceApi {
      * Summary:  Get all available report categories. Description: Get all category related fields or all possible fields.
      * @param param the request object
      */
-    public reportsServiceGetCategoriesWithHttpInfo(param: ReportsServiceApiReportsServiceGetCategoriesRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetCategoriesResponse>> {
+    public reportsServiceGetCategoriesWithHttpInfo(param: ReportsServiceApiReportsServiceGetCategoriesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetCategoriesResponse>> {
         return this.api.reportsServiceGetCategoriesWithHttpInfo(param.reportId,  options).toPromise();
     }
 
@@ -11474,7 +11842,7 @@ export class ObjectReportsServiceApi {
      * Summary:  Get all available report categories. Description: Get all category related fields or all possible fields.
      * @param param the request object
      */
-    public reportsServiceGetCategories(param: ReportsServiceApiReportsServiceGetCategoriesRequest = {}, options?: Configuration): Promise<Reportsv3GetCategoriesResponse> {
+    public reportsServiceGetCategories(param: ReportsServiceApiReportsServiceGetCategoriesRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetCategoriesResponse> {
         return this.api.reportsServiceGetCategories(param.reportId,  options).toPromise();
     }
 
@@ -11482,7 +11850,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get chart settings Description: Get a custom chart based on provided report id.
      * @param param the request object
      */
-    public reportsServiceGetChartSettingsWithHttpInfo(param: ReportsServiceApiReportsServiceGetChartSettingsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetChartSettingsResponse>> {
+    public reportsServiceGetChartSettingsWithHttpInfo(param: ReportsServiceApiReportsServiceGetChartSettingsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetChartSettingsResponse>> {
         return this.api.reportsServiceGetChartSettingsWithHttpInfo(param.chartId, param.reportId,  options).toPromise();
     }
 
@@ -11490,7 +11858,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get chart settings Description: Get a custom chart based on provided report id.
      * @param param the request object
      */
-    public reportsServiceGetChartSettings(param: ReportsServiceApiReportsServiceGetChartSettingsRequest = {}, options?: Configuration): Promise<Reportsv3GetChartSettingsResponse> {
+    public reportsServiceGetChartSettings(param: ReportsServiceApiReportsServiceGetChartSettingsRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetChartSettingsResponse> {
         return this.api.reportsServiceGetChartSettings(param.chartId, param.reportId,  options).toPromise();
     }
 
@@ -11498,7 +11866,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get chart settings v2 Description: Get a custom VEGA chart based on provided report id.
      * @param param the request object
      */
-    public reportsServiceGetChartSettingsv2WithHttpInfo(param: ReportsServiceApiReportsServiceGetChartSettingsv2Request = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetChartSettingsv2Response>> {
+    public reportsServiceGetChartSettingsv2WithHttpInfo(param: ReportsServiceApiReportsServiceGetChartSettingsv2Request = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetChartSettingsv2Response>> {
         return this.api.reportsServiceGetChartSettingsv2WithHttpInfo(param.chartId, param.reportId,  options).toPromise();
     }
 
@@ -11506,7 +11874,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get chart settings v2 Description: Get a custom VEGA chart based on provided report id.
      * @param param the request object
      */
-    public reportsServiceGetChartSettingsv2(param: ReportsServiceApiReportsServiceGetChartSettingsv2Request = {}, options?: Configuration): Promise<Reportsv3GetChartSettingsv2Response> {
+    public reportsServiceGetChartSettingsv2(param: ReportsServiceApiReportsServiceGetChartSettingsv2Request = {}, options?: ConfigurationOptions): Promise<Reportsv3GetChartSettingsv2Response> {
         return this.api.reportsServiceGetChartSettingsv2(param.chartId, param.reportId,  options).toPromise();
     }
 
@@ -11514,7 +11882,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get chart template v2 Description: Get all custom VEGA chart templates.
      * @param param the request object
      */
-    public reportsServiceGetChartTemplatesv2WithHttpInfo(param: ReportsServiceApiReportsServiceGetChartTemplatesv2Request = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetChartTemplatesv2Response>> {
+    public reportsServiceGetChartTemplatesv2WithHttpInfo(param: ReportsServiceApiReportsServiceGetChartTemplatesv2Request = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetChartTemplatesv2Response>> {
         return this.api.reportsServiceGetChartTemplatesv2WithHttpInfo( options).toPromise();
     }
 
@@ -11522,7 +11890,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get chart template v2 Description: Get all custom VEGA chart templates.
      * @param param the request object
      */
-    public reportsServiceGetChartTemplatesv2(param: ReportsServiceApiReportsServiceGetChartTemplatesv2Request = {}, options?: Configuration): Promise<Reportsv3GetChartTemplatesv2Response> {
+    public reportsServiceGetChartTemplatesv2(param: ReportsServiceApiReportsServiceGetChartTemplatesv2Request = {}, options?: ConfigurationOptions): Promise<Reportsv3GetChartTemplatesv2Response> {
         return this.api.reportsServiceGetChartTemplatesv2( options).toPromise();
     }
 
@@ -11530,7 +11898,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get controls Description: Get a list of controls with all data.
      * @param param the request object
      */
-    public reportsServiceGetControlsWithHttpInfo(param: ReportsServiceApiReportsServiceGetControlsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetControlsResponse>> {
+    public reportsServiceGetControlsWithHttpInfo(param: ReportsServiceApiReportsServiceGetControlsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetControlsResponse>> {
         return this.api.reportsServiceGetControlsWithHttpInfo( options).toPromise();
     }
 
@@ -11538,7 +11906,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get controls Description: Get a list of controls with all data.
      * @param param the request object
      */
-    public reportsServiceGetControls(param: ReportsServiceApiReportsServiceGetControlsRequest = {}, options?: Configuration): Promise<Reportsv3GetControlsResponse> {
+    public reportsServiceGetControls(param: ReportsServiceApiReportsServiceGetControlsRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetControlsResponse> {
         return this.api.reportsServiceGetControls( options).toPromise();
     }
 
@@ -11546,7 +11914,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get fields by categories Description: Get all category related fields or all possible fields based on a list of categories.
      * @param param the request object
      */
-    public reportsServiceGetFieldsByCategoriesWithHttpInfo(param: ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetFieldsByCategoriesResponse>> {
+    public reportsServiceGetFieldsByCategoriesWithHttpInfo(param: ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetFieldsByCategoriesResponse>> {
         return this.api.reportsServiceGetFieldsByCategoriesWithHttpInfo(param.categoryIds,  options).toPromise();
     }
 
@@ -11554,7 +11922,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get fields by categories Description: Get all category related fields or all possible fields based on a list of categories.
      * @param param the request object
      */
-    public reportsServiceGetFieldsByCategories(param: ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest = {}, options?: Configuration): Promise<Reportsv3GetFieldsByCategoriesResponse> {
+    public reportsServiceGetFieldsByCategories(param: ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetFieldsByCategoriesResponse> {
         return this.api.reportsServiceGetFieldsByCategories(param.categoryIds,  options).toPromise();
     }
 
@@ -11562,7 +11930,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get fields by category Description: Get all category related fields or all possible fields.
      * @param param the request object
      */
-    public reportsServiceGetFieldsByCategoryWithHttpInfo(param: ReportsServiceApiReportsServiceGetFieldsByCategoryRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetFieldsByCategoryResponse>> {
+    public reportsServiceGetFieldsByCategoryWithHttpInfo(param: ReportsServiceApiReportsServiceGetFieldsByCategoryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetFieldsByCategoryResponse>> {
         return this.api.reportsServiceGetFieldsByCategoryWithHttpInfo(param.categoryId, param.reportId, param.tableName,  options).toPromise();
     }
 
@@ -11570,7 +11938,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get fields by category Description: Get all category related fields or all possible fields.
      * @param param the request object
      */
-    public reportsServiceGetFieldsByCategory(param: ReportsServiceApiReportsServiceGetFieldsByCategoryRequest = {}, options?: Configuration): Promise<Reportsv3GetFieldsByCategoryResponse> {
+    public reportsServiceGetFieldsByCategory(param: ReportsServiceApiReportsServiceGetFieldsByCategoryRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetFieldsByCategoryResponse> {
         return this.api.reportsServiceGetFieldsByCategory(param.categoryId, param.reportId, param.tableName,  options).toPromise();
     }
 
@@ -11578,7 +11946,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get grades Description: Get a list of grades with all data.
      * @param param the request object
      */
-    public reportsServiceGetGradesWithHttpInfo(param: ReportsServiceApiReportsServiceGetGradesRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetGradesResponse>> {
+    public reportsServiceGetGradesWithHttpInfo(param: ReportsServiceApiReportsServiceGetGradesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetGradesResponse>> {
         return this.api.reportsServiceGetGradesWithHttpInfo( options).toPromise();
     }
 
@@ -11586,7 +11954,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get grades Description: Get a list of grades with all data.
      * @param param the request object
      */
-    public reportsServiceGetGrades(param: ReportsServiceApiReportsServiceGetGradesRequest = {}, options?: Configuration): Promise<Reportsv3GetGradesResponse> {
+    public reportsServiceGetGrades(param: ReportsServiceApiReportsServiceGetGradesRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetGradesResponse> {
         return this.api.reportsServiceGetGrades( options).toPromise();
     }
 
@@ -11594,7 +11962,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get all joins Description: Get all custom joins.
      * @param param the request object
      */
-    public reportsServiceGetJoinsWithHttpInfo(param: ReportsServiceApiReportsServiceGetJoinsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetJoinsResponse>> {
+    public reportsServiceGetJoinsWithHttpInfo(param: ReportsServiceApiReportsServiceGetJoinsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetJoinsResponse>> {
         return this.api.reportsServiceGetJoinsWithHttpInfo(param.categoryId,  options).toPromise();
     }
 
@@ -11602,7 +11970,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get all joins Description: Get all custom joins.
      * @param param the request object
      */
-    public reportsServiceGetJoins(param: ReportsServiceApiReportsServiceGetJoinsRequest = {}, options?: Configuration): Promise<Reportsv3GetJoinsResponse> {
+    public reportsServiceGetJoins(param: ReportsServiceApiReportsServiceGetJoinsRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetJoinsResponse> {
         return this.api.reportsServiceGetJoins(param.categoryId,  options).toPromise();
     }
 
@@ -11610,7 +11978,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get measures Description: Get a list of measures with all data.
      * @param param the request object
      */
-    public reportsServiceGetMeasuresWithHttpInfo(param: ReportsServiceApiReportsServiceGetMeasuresRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetMeasuresResponse>> {
+    public reportsServiceGetMeasuresWithHttpInfo(param: ReportsServiceApiReportsServiceGetMeasuresRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetMeasuresResponse>> {
         return this.api.reportsServiceGetMeasuresWithHttpInfo( options).toPromise();
     }
 
@@ -11618,7 +11986,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get measures Description: Get a list of measures with all data.
      * @param param the request object
      */
-    public reportsServiceGetMeasures(param: ReportsServiceApiReportsServiceGetMeasuresRequest = {}, options?: Configuration): Promise<Reportsv3GetMeasuresResponse> {
+    public reportsServiceGetMeasures(param: ReportsServiceApiReportsServiceGetMeasuresRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetMeasuresResponse> {
         return this.api.reportsServiceGetMeasures( options).toPromise();
     }
 
@@ -11626,7 +11994,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get metrics Description: Get a list of metrics with all data.
      * @param param the request object
      */
-    public reportsServiceGetMetricsWithHttpInfo(param: ReportsServiceApiReportsServiceGetMetricsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetMetricsResponse>> {
+    public reportsServiceGetMetricsWithHttpInfo(param: ReportsServiceApiReportsServiceGetMetricsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetMetricsResponse>> {
         return this.api.reportsServiceGetMetricsWithHttpInfo( options).toPromise();
     }
 
@@ -11634,7 +12002,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get metrics Description: Get a list of metrics with all data.
      * @param param the request object
      */
-    public reportsServiceGetMetrics(param: ReportsServiceApiReportsServiceGetMetricsRequest = {}, options?: Configuration): Promise<Reportsv3GetMetricsResponse> {
+    public reportsServiceGetMetrics(param: ReportsServiceApiReportsServiceGetMetricsRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetMetricsResponse> {
         return this.api.reportsServiceGetMetrics( options).toPromise();
     }
 
@@ -11642,7 +12010,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get controls Description: Get a list of controls with all data.
      * @param param the request object
      */
-    public reportsServiceGetProgramsWithHttpInfo(param: ReportsServiceApiReportsServiceGetProgramsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetProgramsResponse>> {
+    public reportsServiceGetProgramsWithHttpInfo(param: ReportsServiceApiReportsServiceGetProgramsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetProgramsResponse>> {
         return this.api.reportsServiceGetProgramsWithHttpInfo( options).toPromise();
     }
 
@@ -11650,7 +12018,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get controls Description: Get a list of controls with all data.
      * @param param the request object
      */
-    public reportsServiceGetPrograms(param: ReportsServiceApiReportsServiceGetProgramsRequest = {}, options?: Configuration): Promise<Reportsv3GetProgramsResponse> {
+    public reportsServiceGetPrograms(param: ReportsServiceApiReportsServiceGetProgramsRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetProgramsResponse> {
         return this.api.reportsServiceGetPrograms( options).toPromise();
     }
 
@@ -11658,7 +12026,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get query by report definition Description: Get query by report definition.
      * @param param the request object
      */
-    public reportsServiceGetQueryByReportDefinitionWithHttpInfo(param: ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest, options?: Configuration): Promise<HttpInfo<Reportsv3GetReportQueryResponse>> {
+    public reportsServiceGetQueryByReportDefinitionWithHttpInfo(param: ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetReportQueryResponse>> {
         return this.api.reportsServiceGetQueryByReportDefinitionWithHttpInfo(param.reportsv3GetQueryByReportDefinitionRequest,  options).toPromise();
     }
 
@@ -11666,7 +12034,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get query by report definition Description: Get query by report definition.
      * @param param the request object
      */
-    public reportsServiceGetQueryByReportDefinition(param: ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest, options?: Configuration): Promise<Reportsv3GetReportQueryResponse> {
+    public reportsServiceGetQueryByReportDefinition(param: ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest, options?: ConfigurationOptions): Promise<Reportsv3GetReportQueryResponse> {
         return this.api.reportsServiceGetQueryByReportDefinition(param.reportsv3GetQueryByReportDefinitionRequest,  options).toPromise();
     }
 
@@ -11674,7 +12042,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get query by report ID Description: Get query by report ID.
      * @param param the request object
      */
-    public reportsServiceGetQueryByReportIDWithHttpInfo(param: ReportsServiceApiReportsServiceGetQueryByReportIDRequest, options?: Configuration): Promise<HttpInfo<Reportsv3GetReportQueryResponse>> {
+    public reportsServiceGetQueryByReportIDWithHttpInfo(param: ReportsServiceApiReportsServiceGetQueryByReportIDRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetReportQueryResponse>> {
         return this.api.reportsServiceGetQueryByReportIDWithHttpInfo(param.reportsv3GetQueryByReportIDRequest,  options).toPromise();
     }
 
@@ -11682,7 +12050,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get query by report ID Description: Get query by report ID.
      * @param param the request object
      */
-    public reportsServiceGetQueryByReportID(param: ReportsServiceApiReportsServiceGetQueryByReportIDRequest, options?: Configuration): Promise<Reportsv3GetReportQueryResponse> {
+    public reportsServiceGetQueryByReportID(param: ReportsServiceApiReportsServiceGetQueryByReportIDRequest, options?: ConfigurationOptions): Promise<Reportsv3GetReportQueryResponse> {
         return this.api.reportsServiceGetQueryByReportID(param.reportsv3GetQueryByReportIDRequest,  options).toPromise();
     }
 
@@ -11690,7 +12058,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get report definition Description: Get report definition.
      * @param param the request object
      */
-    public reportsServiceGetReportDefinitionWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportDefinitionRequest, options?: Configuration): Promise<HttpInfo<Reportsv3GetReportDefinitionResponse>> {
+    public reportsServiceGetReportDefinitionWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportDefinitionRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetReportDefinitionResponse>> {
         return this.api.reportsServiceGetReportDefinitionWithHttpInfo(param.reportId,  options).toPromise();
     }
 
@@ -11698,7 +12066,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get report definition Description: Get report definition.
      * @param param the request object
      */
-    public reportsServiceGetReportDefinition(param: ReportsServiceApiReportsServiceGetReportDefinitionRequest, options?: Configuration): Promise<Reportsv3GetReportDefinitionResponse> {
+    public reportsServiceGetReportDefinition(param: ReportsServiceApiReportsServiceGetReportDefinitionRequest, options?: ConfigurationOptions): Promise<Reportsv3GetReportDefinitionResponse> {
         return this.api.reportsServiceGetReportDefinition(param.reportId,  options).toPromise();
     }
 
@@ -11706,7 +12074,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get report groups Description: Get reports used by the provided groups.
      * @param param the request object
      */
-    public reportsServiceGetReportGroupsWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportGroupsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetReportGroupsResponse>> {
+    public reportsServiceGetReportGroupsWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportGroupsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetReportGroupsResponse>> {
         return this.api.reportsServiceGetReportGroupsWithHttpInfo(param.groups,  options).toPromise();
     }
 
@@ -11714,7 +12082,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get report groups Description: Get reports used by the provided groups.
      * @param param the request object
      */
-    public reportsServiceGetReportGroups(param: ReportsServiceApiReportsServiceGetReportGroupsRequest = {}, options?: Configuration): Promise<Reportsv3GetReportGroupsResponse> {
+    public reportsServiceGetReportGroups(param: ReportsServiceApiReportsServiceGetReportGroupsRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetReportGroupsResponse> {
         return this.api.reportsServiceGetReportGroups(param.groups,  options).toPromise();
     }
 
@@ -11722,7 +12090,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get report synopsis Description: Return BriefReport.
      * @param param the request object
      */
-    public reportsServiceGetReportSynopsisWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportSynopsisRequest, options?: Configuration): Promise<HttpInfo<Reportsv3GetReportSynopsisResponse>> {
+    public reportsServiceGetReportSynopsisWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportSynopsisRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetReportSynopsisResponse>> {
         return this.api.reportsServiceGetReportSynopsisWithHttpInfo(param.reportId,  options).toPromise();
     }
 
@@ -11730,7 +12098,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get report synopsis Description: Return BriefReport.
      * @param param the request object
      */
-    public reportsServiceGetReportSynopsis(param: ReportsServiceApiReportsServiceGetReportSynopsisRequest, options?: Configuration): Promise<Reportsv3GetReportSynopsisResponse> {
+    public reportsServiceGetReportSynopsis(param: ReportsServiceApiReportsServiceGetReportSynopsisRequest, options?: ConfigurationOptions): Promise<Reportsv3GetReportSynopsisResponse> {
         return this.api.reportsServiceGetReportSynopsis(param.reportId,  options).toPromise();
     }
 
@@ -11738,7 +12106,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get report timestamp header Description: Get where to take a report timestamp given an entity.
      * @param param the request object
      */
-    public reportsServiceGetReportTimestampHeaderWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetReportTimestampHeaderResponse>> {
+    public reportsServiceGetReportTimestampHeaderWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetReportTimestampHeaderResponse>> {
         return this.api.reportsServiceGetReportTimestampHeaderWithHttpInfo(param.categoryId, param.tableNames,  options).toPromise();
     }
 
@@ -11746,7 +12114,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get report timestamp header Description: Get where to take a report timestamp given an entity.
      * @param param the request object
      */
-    public reportsServiceGetReportTimestampHeader(param: ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest = {}, options?: Configuration): Promise<Reportsv3GetReportTimestampHeaderResponse> {
+    public reportsServiceGetReportTimestampHeader(param: ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetReportTimestampHeaderResponse> {
         return this.api.reportsServiceGetReportTimestampHeader(param.categoryId, param.tableNames,  options).toPromise();
     }
 
@@ -11754,7 +12122,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get reports Description: Get reports list.
      * @param param the request object
      */
-    public reportsServiceGetReportsWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetReportsResponse>> {
+    public reportsServiceGetReportsWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetReportsResponse>> {
         return this.api.reportsServiceGetReportsWithHttpInfo(param.categoryId, param.tableName,  options).toPromise();
     }
 
@@ -11762,7 +12130,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get reports Description: Get reports list.
      * @param param the request object
      */
-    public reportsServiceGetReports(param: ReportsServiceApiReportsServiceGetReportsRequest = {}, options?: Configuration): Promise<Reportsv3GetReportsResponse> {
+    public reportsServiceGetReports(param: ReportsServiceApiReportsServiceGetReportsRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetReportsResponse> {
         return this.api.reportsServiceGetReports(param.categoryId, param.tableName,  options).toPromise();
     }
 
@@ -11770,7 +12138,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get the reports that use a join Description: Get the reports that use a join and the headers that are imported by the reports using the join
      * @param param the request object
      */
-    public reportsServiceGetReportsForJoinWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportsForJoinRequest, options?: Configuration): Promise<HttpInfo<Reportsv3GetReportsForJoinResponse>> {
+    public reportsServiceGetReportsForJoinWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportsForJoinRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetReportsForJoinResponse>> {
         return this.api.reportsServiceGetReportsForJoinWithHttpInfo(param.joinId,  options).toPromise();
     }
 
@@ -11778,7 +12146,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get the reports that use a join Description: Get the reports that use a join and the headers that are imported by the reports using the join
      * @param param the request object
      */
-    public reportsServiceGetReportsForJoin(param: ReportsServiceApiReportsServiceGetReportsForJoinRequest, options?: Configuration): Promise<Reportsv3GetReportsForJoinResponse> {
+    public reportsServiceGetReportsForJoin(param: ReportsServiceApiReportsServiceGetReportsForJoinRequest, options?: ConfigurationOptions): Promise<Reportsv3GetReportsForJoinResponse> {
         return this.api.reportsServiceGetReportsForJoin(param.joinId,  options).toPromise();
     }
 
@@ -11786,7 +12154,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get reports tags Description: Get all report distinct tags.
      * @param param the request object
      */
-    public reportsServiceGetReportsTagsWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportsTagsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetReportsTagsResponse>> {
+    public reportsServiceGetReportsTagsWithHttpInfo(param: ReportsServiceApiReportsServiceGetReportsTagsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetReportsTagsResponse>> {
         return this.api.reportsServiceGetReportsTagsWithHttpInfo( options).toPromise();
     }
 
@@ -11794,7 +12162,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get reports tags Description: Get all report distinct tags.
      * @param param the request object
      */
-    public reportsServiceGetReportsTags(param: ReportsServiceApiReportsServiceGetReportsTagsRequest = {}, options?: Configuration): Promise<Reportsv3GetReportsTagsResponse> {
+    public reportsServiceGetReportsTags(param: ReportsServiceApiReportsServiceGetReportsTagsRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetReportsTagsResponse> {
         return this.api.reportsServiceGetReportsTags( options).toPromise();
     }
 
@@ -11802,7 +12170,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get requirements Description: Get a list of requirements with all data.
      * @param param the request object
      */
-    public reportsServiceGetRequirementsWithHttpInfo(param: ReportsServiceApiReportsServiceGetRequirementsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetRequirementsResponse>> {
+    public reportsServiceGetRequirementsWithHttpInfo(param: ReportsServiceApiReportsServiceGetRequirementsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetRequirementsResponse>> {
         return this.api.reportsServiceGetRequirementsWithHttpInfo( options).toPromise();
     }
 
@@ -11810,7 +12178,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get requirements Description: Get a list of requirements with all data.
      * @param param the request object
      */
-    public reportsServiceGetRequirements(param: ReportsServiceApiReportsServiceGetRequirementsRequest = {}, options?: Configuration): Promise<Reportsv3GetRequirementsResponse> {
+    public reportsServiceGetRequirements(param: ReportsServiceApiReportsServiceGetRequirementsRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetRequirementsResponse> {
         return this.api.reportsServiceGetRequirements( options).toPromise();
     }
 
@@ -11818,7 +12186,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get a variant Description: Get a given variant
      * @param param the request object
      */
-    public reportsServiceGetVariantWithHttpInfo(param: ReportsServiceApiReportsServiceGetVariantRequest, options?: Configuration): Promise<HttpInfo<Reportsv3GetVariantResponse>> {
+    public reportsServiceGetVariantWithHttpInfo(param: ReportsServiceApiReportsServiceGetVariantRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetVariantResponse>> {
         return this.api.reportsServiceGetVariantWithHttpInfo(param.variantId,  options).toPromise();
     }
 
@@ -11826,7 +12194,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get a variant Description: Get a given variant
      * @param param the request object
      */
-    public reportsServiceGetVariant(param: ReportsServiceApiReportsServiceGetVariantRequest, options?: Configuration): Promise<Reportsv3GetVariantResponse> {
+    public reportsServiceGetVariant(param: ReportsServiceApiReportsServiceGetVariantRequest, options?: ConfigurationOptions): Promise<Reportsv3GetVariantResponse> {
         return this.api.reportsServiceGetVariant(param.variantId,  options).toPromise();
     }
 
@@ -11834,7 +12202,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get all variants Description: Get all variants in reports
      * @param param the request object
      */
-    public reportsServiceGetVariantsWithHttpInfo(param: ReportsServiceApiReportsServiceGetVariantsRequest = {}, options?: Configuration): Promise<HttpInfo<Reportsv3GetVariantsResponse>> {
+    public reportsServiceGetVariantsWithHttpInfo(param: ReportsServiceApiReportsServiceGetVariantsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3GetVariantsResponse>> {
         return this.api.reportsServiceGetVariantsWithHttpInfo( options).toPromise();
     }
 
@@ -11842,7 +12210,7 @@ export class ObjectReportsServiceApi {
      * Summary: Get all variants Description: Get all variants in reports
      * @param param the request object
      */
-    public reportsServiceGetVariants(param: ReportsServiceApiReportsServiceGetVariantsRequest = {}, options?: Configuration): Promise<Reportsv3GetVariantsResponse> {
+    public reportsServiceGetVariants(param: ReportsServiceApiReportsServiceGetVariantsRequest = {}, options?: ConfigurationOptions): Promise<Reportsv3GetVariantsResponse> {
         return this.api.reportsServiceGetVariants( options).toPromise();
     }
 
@@ -11850,7 +12218,7 @@ export class ObjectReportsServiceApi {
      * Summary: Partial chart update Description: Update a custom chart with partial information.
      * @param param the request object
      */
-    public reportsServicePartialChartUpdateWithHttpInfo(param: ReportsServiceApiReportsServicePartialChartUpdateRequest, options?: Configuration): Promise<HttpInfo<Reportsv3PartialChartUpdateResponse>> {
+    public reportsServicePartialChartUpdateWithHttpInfo(param: ReportsServiceApiReportsServicePartialChartUpdateRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3PartialChartUpdateResponse>> {
         return this.api.reportsServicePartialChartUpdateWithHttpInfo(param.chartId, param.reportsv3PartialChartUpdateRequest,  options).toPromise();
     }
 
@@ -11858,7 +12226,7 @@ export class ObjectReportsServiceApi {
      * Summary: Partial chart update Description: Update a custom chart with partial information.
      * @param param the request object
      */
-    public reportsServicePartialChartUpdate(param: ReportsServiceApiReportsServicePartialChartUpdateRequest, options?: Configuration): Promise<Reportsv3PartialChartUpdateResponse> {
+    public reportsServicePartialChartUpdate(param: ReportsServiceApiReportsServicePartialChartUpdateRequest, options?: ConfigurationOptions): Promise<Reportsv3PartialChartUpdateResponse> {
         return this.api.reportsServicePartialChartUpdate(param.chartId, param.reportsv3PartialChartUpdateRequest,  options).toPromise();
     }
 
@@ -11866,7 +12234,7 @@ export class ObjectReportsServiceApi {
      * Summary: Partial report update Description: Update a custom report with partial information.
      * @param param the request object
      */
-    public reportsServicePartialReportUpdateWithHttpInfo(param: ReportsServiceApiReportsServicePartialReportUpdateRequest, options?: Configuration): Promise<HttpInfo<Reportsv3PartialReportUpdateResponse>> {
+    public reportsServicePartialReportUpdateWithHttpInfo(param: ReportsServiceApiReportsServicePartialReportUpdateRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3PartialReportUpdateResponse>> {
         return this.api.reportsServicePartialReportUpdateWithHttpInfo(param.reportId, param.reportsv3PartialReportUpdateRequest,  options).toPromise();
     }
 
@@ -11874,7 +12242,7 @@ export class ObjectReportsServiceApi {
      * Summary: Partial report update Description: Update a custom report with partial information.
      * @param param the request object
      */
-    public reportsServicePartialReportUpdate(param: ReportsServiceApiReportsServicePartialReportUpdateRequest, options?: Configuration): Promise<Reportsv3PartialReportUpdateResponse> {
+    public reportsServicePartialReportUpdate(param: ReportsServiceApiReportsServicePartialReportUpdateRequest, options?: ConfigurationOptions): Promise<Reportsv3PartialReportUpdateResponse> {
         return this.api.reportsServicePartialReportUpdate(param.reportId, param.reportsv3PartialReportUpdateRequest,  options).toPromise();
     }
 
@@ -11882,7 +12250,7 @@ export class ObjectReportsServiceApi {
      * Summary: Refresh metrics via grades. Description: Refresh metrics via grades.
      * @param param the request object
      */
-    public reportsServiceRunGradesWithHttpInfo(param: ReportsServiceApiReportsServiceRunGradesRequest, options?: Configuration): Promise<HttpInfo<Reportsv3RunGradesResponse>> {
+    public reportsServiceRunGradesWithHttpInfo(param: ReportsServiceApiReportsServiceRunGradesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3RunGradesResponse>> {
         return this.api.reportsServiceRunGradesWithHttpInfo(param.reportsv3RunGradesRequest,  options).toPromise();
     }
 
@@ -11890,7 +12258,7 @@ export class ObjectReportsServiceApi {
      * Summary: Refresh metrics via grades. Description: Refresh metrics via grades.
      * @param param the request object
      */
-    public reportsServiceRunGrades(param: ReportsServiceApiReportsServiceRunGradesRequest, options?: Configuration): Promise<Reportsv3RunGradesResponse> {
+    public reportsServiceRunGrades(param: ReportsServiceApiReportsServiceRunGradesRequest, options?: ConfigurationOptions): Promise<Reportsv3RunGradesResponse> {
         return this.api.reportsServiceRunGrades(param.reportsv3RunGradesRequest,  options).toPromise();
     }
 
@@ -11898,7 +12266,7 @@ export class ObjectReportsServiceApi {
      * Summary: Run a variant Description: Run the operations in a variant
      * @param param the request object
      */
-    public reportsServiceRunVariantOperationWithHttpInfo(param: ReportsServiceApiReportsServiceRunVariantOperationRequest, options?: Configuration): Promise<HttpInfo<Reportsv3RunVariantOperationResponse>> {
+    public reportsServiceRunVariantOperationWithHttpInfo(param: ReportsServiceApiReportsServiceRunVariantOperationRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3RunVariantOperationResponse>> {
         return this.api.reportsServiceRunVariantOperationWithHttpInfo(param.reportsv3RunVariantOperationRequest,  options).toPromise();
     }
 
@@ -11906,7 +12274,7 @@ export class ObjectReportsServiceApi {
      * Summary: Run a variant Description: Run the operations in a variant
      * @param param the request object
      */
-    public reportsServiceRunVariantOperation(param: ReportsServiceApiReportsServiceRunVariantOperationRequest, options?: Configuration): Promise<Reportsv3RunVariantOperationResponse> {
+    public reportsServiceRunVariantOperation(param: ReportsServiceApiReportsServiceRunVariantOperationRequest, options?: ConfigurationOptions): Promise<Reportsv3RunVariantOperationResponse> {
         return this.api.reportsServiceRunVariantOperation(param.reportsv3RunVariantOperationRequest,  options).toPromise();
     }
 
@@ -11914,7 +12282,7 @@ export class ObjectReportsServiceApi {
      * Summary: Transpose Description: Return the corresponding full sql data.
      * @param param the request object
      */
-    public reportsServiceTransposeWithHttpInfo(param: ReportsServiceApiReportsServiceTransposeRequest, options?: Configuration): Promise<HttpInfo<Reportsv3RunReportResponse>> {
+    public reportsServiceTransposeWithHttpInfo(param: ReportsServiceApiReportsServiceTransposeRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3RunReportResponse>> {
         return this.api.reportsServiceTransposeWithHttpInfo(param.reportsv3TransposeRequest,  options).toPromise();
     }
 
@@ -11922,7 +12290,7 @@ export class ObjectReportsServiceApi {
      * Summary: Transpose Description: Return the corresponding full sql data.
      * @param param the request object
      */
-    public reportsServiceTranspose(param: ReportsServiceApiReportsServiceTransposeRequest, options?: Configuration): Promise<Reportsv3RunReportResponse> {
+    public reportsServiceTranspose(param: ReportsServiceApiReportsServiceTransposeRequest, options?: ConfigurationOptions): Promise<Reportsv3RunReportResponse> {
         return this.api.reportsServiceTranspose(param.reportsv3TransposeRequest,  options).toPromise();
     }
 
@@ -11930,7 +12298,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update chart Description: Update a custom chart.
      * @param param the request object
      */
-    public reportsServiceUpdateChartWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateChartRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateChartResponse>> {
+    public reportsServiceUpdateChartWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateChartRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3UpdateChartResponse>> {
         return this.api.reportsServiceUpdateChartWithHttpInfo(param.chartId, param.reportsv3UpdateChartRequest,  options).toPromise();
     }
 
@@ -11938,7 +12306,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update chart Description: Update a custom chart.
      * @param param the request object
      */
-    public reportsServiceUpdateChart(param: ReportsServiceApiReportsServiceUpdateChartRequest, options?: Configuration): Promise<Reportsv3UpdateChartResponse> {
+    public reportsServiceUpdateChart(param: ReportsServiceApiReportsServiceUpdateChartRequest, options?: ConfigurationOptions): Promise<Reportsv3UpdateChartResponse> {
         return this.api.reportsServiceUpdateChart(param.chartId, param.reportsv3UpdateChartRequest,  options).toPromise();
     }
 
@@ -11946,7 +12314,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update chart v2 Description: Update a custom VEGA chart.
      * @param param the request object
      */
-    public reportsServiceUpdateChartv2WithHttpInfo(param: ReportsServiceApiReportsServiceUpdateChartv2Request, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateChartv2Response>> {
+    public reportsServiceUpdateChartv2WithHttpInfo(param: ReportsServiceApiReportsServiceUpdateChartv2Request, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3UpdateChartv2Response>> {
         return this.api.reportsServiceUpdateChartv2WithHttpInfo(param.chartId, param.reportsv3UpdateChartv2Request,  options).toPromise();
     }
 
@@ -11954,7 +12322,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update chart v2 Description: Update a custom VEGA chart.
      * @param param the request object
      */
-    public reportsServiceUpdateChartv2(param: ReportsServiceApiReportsServiceUpdateChartv2Request, options?: Configuration): Promise<Reportsv3UpdateChartv2Response> {
+    public reportsServiceUpdateChartv2(param: ReportsServiceApiReportsServiceUpdateChartv2Request, options?: ConfigurationOptions): Promise<Reportsv3UpdateChartv2Response> {
         return this.api.reportsServiceUpdateChartv2(param.chartId, param.reportsv3UpdateChartv2Request,  options).toPromise();
     }
 
@@ -11962,7 +12330,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update Control. Description: Update a Control.
      * @param param the request object
      */
-    public reportsServiceUpdateControlWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateControlRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateControlResponse>> {
+    public reportsServiceUpdateControlWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateControlRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3UpdateControlResponse>> {
         return this.api.reportsServiceUpdateControlWithHttpInfo(param.controlId, param.reportsv3UpdateControlRequest,  options).toPromise();
     }
 
@@ -11970,7 +12338,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update Control. Description: Update a Control.
      * @param param the request object
      */
-    public reportsServiceUpdateControl(param: ReportsServiceApiReportsServiceUpdateControlRequest, options?: Configuration): Promise<Reportsv3UpdateControlResponse> {
+    public reportsServiceUpdateControl(param: ReportsServiceApiReportsServiceUpdateControlRequest, options?: ConfigurationOptions): Promise<Reportsv3UpdateControlResponse> {
         return this.api.reportsServiceUpdateControl(param.controlId, param.reportsv3UpdateControlRequest,  options).toPromise();
     }
 
@@ -11978,7 +12346,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update Grade. Description: Update a Grade.
      * @param param the request object
      */
-    public reportsServiceUpdateGradeWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateGradeRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateGradeResponse>> {
+    public reportsServiceUpdateGradeWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateGradeRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3UpdateGradeResponse>> {
         return this.api.reportsServiceUpdateGradeWithHttpInfo(param.gradeId, param.reportsv3UpdateGradeRequest,  options).toPromise();
     }
 
@@ -11986,7 +12354,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update Grade. Description: Update a Grade.
      * @param param the request object
      */
-    public reportsServiceUpdateGrade(param: ReportsServiceApiReportsServiceUpdateGradeRequest, options?: Configuration): Promise<Reportsv3UpdateGradeResponse> {
+    public reportsServiceUpdateGrade(param: ReportsServiceApiReportsServiceUpdateGradeRequest, options?: ConfigurationOptions): Promise<Reportsv3UpdateGradeResponse> {
         return this.api.reportsServiceUpdateGrade(param.gradeId, param.reportsv3UpdateGradeRequest,  options).toPromise();
     }
 
@@ -11994,7 +12362,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update a join Description: Update a custom join
      * @param param the request object
      */
-    public reportsServiceUpdateJoinWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateJoinRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateJoinResponse>> {
+    public reportsServiceUpdateJoinWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateJoinRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3UpdateJoinResponse>> {
         return this.api.reportsServiceUpdateJoinWithHttpInfo(param.joinId, param.reportsv3UpdateJoinRequest,  options).toPromise();
     }
 
@@ -12002,7 +12370,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update a join Description: Update a custom join
      * @param param the request object
      */
-    public reportsServiceUpdateJoin(param: ReportsServiceApiReportsServiceUpdateJoinRequest, options?: Configuration): Promise<Reportsv3UpdateJoinResponse> {
+    public reportsServiceUpdateJoin(param: ReportsServiceApiReportsServiceUpdateJoinRequest, options?: ConfigurationOptions): Promise<Reportsv3UpdateJoinResponse> {
         return this.api.reportsServiceUpdateJoin(param.joinId, param.reportsv3UpdateJoinRequest,  options).toPromise();
     }
 
@@ -12010,7 +12378,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update measure. Description: Update a measure.
      * @param param the request object
      */
-    public reportsServiceUpdateMeasureWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateMeasureRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateMeasureResponse>> {
+    public reportsServiceUpdateMeasureWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateMeasureRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3UpdateMeasureResponse>> {
         return this.api.reportsServiceUpdateMeasureWithHttpInfo(param.measureId, param.reportsv3UpdateMeasureRequest,  options).toPromise();
     }
 
@@ -12018,7 +12386,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update measure. Description: Update a measure.
      * @param param the request object
      */
-    public reportsServiceUpdateMeasure(param: ReportsServiceApiReportsServiceUpdateMeasureRequest, options?: Configuration): Promise<Reportsv3UpdateMeasureResponse> {
+    public reportsServiceUpdateMeasure(param: ReportsServiceApiReportsServiceUpdateMeasureRequest, options?: ConfigurationOptions): Promise<Reportsv3UpdateMeasureResponse> {
         return this.api.reportsServiceUpdateMeasure(param.measureId, param.reportsv3UpdateMeasureRequest,  options).toPromise();
     }
 
@@ -12026,7 +12394,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update metric. Description: Update a metric.
      * @param param the request object
      */
-    public reportsServiceUpdateMetricWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateMetricRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateMetricResponse>> {
+    public reportsServiceUpdateMetricWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateMetricRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3UpdateMetricResponse>> {
         return this.api.reportsServiceUpdateMetricWithHttpInfo(param.metricId, param.reportsv3UpdateMetricRequest,  options).toPromise();
     }
 
@@ -12034,7 +12402,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update metric. Description: Update a metric.
      * @param param the request object
      */
-    public reportsServiceUpdateMetric(param: ReportsServiceApiReportsServiceUpdateMetricRequest, options?: Configuration): Promise<Reportsv3UpdateMetricResponse> {
+    public reportsServiceUpdateMetric(param: ReportsServiceApiReportsServiceUpdateMetricRequest, options?: ConfigurationOptions): Promise<Reportsv3UpdateMetricResponse> {
         return this.api.reportsServiceUpdateMetric(param.metricId, param.reportsv3UpdateMetricRequest,  options).toPromise();
     }
 
@@ -12042,7 +12410,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update Program. Description: Update a Program.
      * @param param the request object
      */
-    public reportsServiceUpdateProgramWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateProgramRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateProgramResponse>> {
+    public reportsServiceUpdateProgramWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateProgramRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3UpdateProgramResponse>> {
         return this.api.reportsServiceUpdateProgramWithHttpInfo(param.programId, param.reportsv3UpdateProgramRequest,  options).toPromise();
     }
 
@@ -12050,7 +12418,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update Program. Description: Update a Program.
      * @param param the request object
      */
-    public reportsServiceUpdateProgram(param: ReportsServiceApiReportsServiceUpdateProgramRequest, options?: Configuration): Promise<Reportsv3UpdateProgramResponse> {
+    public reportsServiceUpdateProgram(param: ReportsServiceApiReportsServiceUpdateProgramRequest, options?: ConfigurationOptions): Promise<Reportsv3UpdateProgramResponse> {
         return this.api.reportsServiceUpdateProgram(param.programId, param.reportsv3UpdateProgramRequest,  options).toPromise();
     }
 
@@ -12058,7 +12426,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update report Description: Update a custom report.
      * @param param the request object
      */
-    public reportsServiceUpdateReportWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateReportRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateReportResponse>> {
+    public reportsServiceUpdateReportWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateReportRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3UpdateReportResponse>> {
         return this.api.reportsServiceUpdateReportWithHttpInfo(param.reportId, param.reportsv3UpdateReportRequest,  options).toPromise();
     }
 
@@ -12066,7 +12434,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update report Description: Update a custom report.
      * @param param the request object
      */
-    public reportsServiceUpdateReport(param: ReportsServiceApiReportsServiceUpdateReportRequest, options?: Configuration): Promise<Reportsv3UpdateReportResponse> {
+    public reportsServiceUpdateReport(param: ReportsServiceApiReportsServiceUpdateReportRequest, options?: ConfigurationOptions): Promise<Reportsv3UpdateReportResponse> {
         return this.api.reportsServiceUpdateReport(param.reportId, param.reportsv3UpdateReportRequest,  options).toPromise();
     }
 
@@ -12074,7 +12442,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update Requirement. Description: Update a Requirement.
      * @param param the request object
      */
-    public reportsServiceUpdateRequirementWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateRequirementRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateRequirementResponse>> {
+    public reportsServiceUpdateRequirementWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateRequirementRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3UpdateRequirementResponse>> {
         return this.api.reportsServiceUpdateRequirementWithHttpInfo(param.requirementId, param.reportsv3UpdateRequirementRequest,  options).toPromise();
     }
 
@@ -12082,7 +12450,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update Requirement. Description: Update a Requirement.
      * @param param the request object
      */
-    public reportsServiceUpdateRequirement(param: ReportsServiceApiReportsServiceUpdateRequirementRequest, options?: Configuration): Promise<Reportsv3UpdateRequirementResponse> {
+    public reportsServiceUpdateRequirement(param: ReportsServiceApiReportsServiceUpdateRequirementRequest, options?: ConfigurationOptions): Promise<Reportsv3UpdateRequirementResponse> {
         return this.api.reportsServiceUpdateRequirement(param.requirementId, param.reportsv3UpdateRequirementRequest,  options).toPromise();
     }
 
@@ -12090,7 +12458,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update a variant Description: Update a variant with a custom override
      * @param param the request object
      */
-    public reportsServiceUpdateVariantOverrideWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateVariantOverrideRequest, options?: Configuration): Promise<HttpInfo<Reportsv3UpdateVariantOverrideResponse>> {
+    public reportsServiceUpdateVariantOverrideWithHttpInfo(param: ReportsServiceApiReportsServiceUpdateVariantOverrideRequest, options?: ConfigurationOptions): Promise<HttpInfo<Reportsv3UpdateVariantOverrideResponse>> {
         return this.api.reportsServiceUpdateVariantOverrideWithHttpInfo(param.variantId, param.reportsv3UpdateVariantOverrideRequest,  options).toPromise();
     }
 
@@ -12098,7 +12466,7 @@ export class ObjectReportsServiceApi {
      * Summary: Update a variant Description: Update a variant with a custom override
      * @param param the request object
      */
-    public reportsServiceUpdateVariantOverride(param: ReportsServiceApiReportsServiceUpdateVariantOverrideRequest, options?: Configuration): Promise<Reportsv3UpdateVariantOverrideResponse> {
+    public reportsServiceUpdateVariantOverride(param: ReportsServiceApiReportsServiceUpdateVariantOverrideRequest, options?: ConfigurationOptions): Promise<Reportsv3UpdateVariantOverrideResponse> {
         return this.api.reportsServiceUpdateVariantOverride(param.variantId, param.reportsv3UpdateVariantOverrideRequest,  options).toPromise();
     }
 
@@ -12131,6 +12499,7 @@ export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetAllClassifi
 export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventClassificationsListRequest {
     /**
      * Risk id
+     * Defaults to: undefined
      * @type number
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventClassificationsList
      */
@@ -12140,18 +12509,21 @@ export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventCl
 export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDataForSummarizationRequest {
     /**
      * Risk ID
+     * Defaults to: undefined
      * @type number
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventDataForSummarization
      */
     riskId: number
     /**
      * Indicates whether to include indicators in the response or not.
+     * Defaults to: undefined
      * @type boolean
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventDataForSummarization
      */
     includeIndicators?: boolean
     /**
      * Max number of hours to get for the risk.
+     * Defaults to: undefined
      * @type number
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventDataForSummarization
      */
@@ -12161,6 +12533,7 @@ export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDa
 export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDetailsRequest {
     /**
      * Risk id.
+     * Defaults to: undefined
      * @type number
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventDetails
      */
@@ -12173,60 +12546,70 @@ export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventPr
 export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRowRequest {
     /**
      * Status to retrieve only the status events, blank to retrieve all.
+     * Defaults to: &#39;UNDEFINED_STATUS&#39;
      * @type &#39;UNDEFINED_STATUS&#39; | &#39;OPENED&#39; | &#39;CLOSED&#39; | &#39;DELEGATED&#39; | &#39;FOLLOWUP&#39;
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventRow
      */
     status?: 'UNDEFINED_STATUS' | 'OPENED' | 'CLOSED' | 'DELEGATED' | 'FOLLOWUP'
     /**
      * The API retrieves risk events that were open in a time range. date_from defines the start of this time range. format YYYY-MM-DDTHH:mm:ssZ.
+     * Defaults to: undefined
      * @type Date
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventRow
      */
     dateFrom?: Date
     /**
      * The API retrieves risk events that were open in a time range. date_to defines the end of this time range. format YYYY-MM-DDTHH:mm:ssZ.
+     * Defaults to: undefined
      * @type Date
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventRow
      */
     dateTo?: Date
     /**
      * Pivot type - enum.
+     * Defaults to: &#39;UNDEFINED_PIVOT_TYPE&#39;
      * @type &#39;UNDEFINED_PIVOT_TYPE&#39; | &#39;DATABASE&#39; | &#39;DB_USER&#39; | &#39;OS_USER&#39; | &#39;GLOBAL&#39;
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventRow
      */
     pivotType?: 'UNDEFINED_PIVOT_TYPE' | 'DATABASE' | 'DB_USER' | 'OS_USER' | 'GLOBAL'
     /**
      * Pivot id -  all pivot fields separated by semicolon.
+     * Defaults to: undefined
      * @type string
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventRow
      */
     pivotId?: string
     /**
      * Optional db_user - if pivot is db user.
+     * Defaults to: undefined
      * @type string
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventRow
      */
     pivotDbUser?: string
     /**
      * Optional database - if pivot is db user / database.
+     * Defaults to: undefined
      * @type string
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventRow
      */
     pivotDatabase?: string
     /**
      * Optional server_ip - if pivot is db user / database.
+     * Defaults to: undefined
      * @type string
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventRow
      */
     pivotServerIp?: string
     /**
      * Optional os_user - if pivot is os user.
+     * Defaults to: undefined
      * @type string
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventRow
      */
     pivotOsUser?: string
     /**
      * Optional database_source_field (values database name/service name depends on the server type) - if pivot is db user / database.
+     * Defaults to: &#39;UNDEFINED&#39;
      * @type &#39;UNDEFINED&#39; | &#39;DATABASE_NAME&#39; | &#39;SERVICE_NAME&#39;
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventRow
      */
@@ -12236,6 +12619,7 @@ export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRo
 export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsRequest {
     /**
      * Risk ID
+     * Defaults to: undefined
      * @type number
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails
      */
@@ -12248,12 +12632,14 @@ export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskFeedbac
 export interface RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskObservationDetailsRequest {
     /**
      * Lead feature id.
+     * Defaults to: undefined
      * @type number
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskObservationDetails
      */
     leadFeatureId?: number
     /**
      * Observation type.
+     * Defaults to: &#39;UNDEFINED_OBSERVATION_TYPE&#39;
      * @type &#39;UNDEFINED_OBSERVATION_TYPE&#39; | &#39;ACTIVITY&#39; | &#39;EXCEPTION&#39; | &#39;VIOLATION&#39; | &#39;OUTLIER&#39; | &#39;ANOMALY&#39;
      * @memberof RiskAnalyticsControllerApiriskAnalyticsControllerGetRiskObservationDetails
      */
@@ -12310,7 +12696,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Enable disable risk rvent feedback Description: Enable or disable the collect feedback process.
      * @param param the request object
      */
-    public riskAnalyticsControllerEnableDisableRiskEventFeedbackWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventFeedbackRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse>> {
+    public riskAnalyticsControllerEnableDisableRiskEventFeedbackWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventFeedbackRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse>> {
         return this.api.riskAnalyticsControllerEnableDisableRiskEventFeedbackWithHttpInfo(param.riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest,  options).toPromise();
     }
 
@@ -12318,7 +12704,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Enable disable risk rvent feedback Description: Enable or disable the collect feedback process.
      * @param param the request object
      */
-    public riskAnalyticsControllerEnableDisableRiskEventFeedback(param: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventFeedbackRequest, options?: Configuration): Promise<Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse> {
+    public riskAnalyticsControllerEnableDisableRiskEventFeedback(param: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventFeedbackRequest, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse> {
         return this.api.riskAnalyticsControllerEnableDisableRiskEventFeedback(param.riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest,  options).toPromise();
     }
 
@@ -12326,7 +12712,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Enable disable risk event process Description: Enable or disable the risk event process.
      * @param param the request object
      */
-    public riskAnalyticsControllerEnableDisableRiskEventProcessWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventProcessRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse>> {
+    public riskAnalyticsControllerEnableDisableRiskEventProcessWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventProcessRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse>> {
         return this.api.riskAnalyticsControllerEnableDisableRiskEventProcessWithHttpInfo(param.riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest,  options).toPromise();
     }
 
@@ -12334,7 +12720,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Enable disable risk event process Description: Enable or disable the risk event process.
      * @param param the request object
      */
-    public riskAnalyticsControllerEnableDisableRiskEventProcess(param: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventProcessRequest, options?: Configuration): Promise<Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse> {
+    public riskAnalyticsControllerEnableDisableRiskEventProcess(param: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventProcessRequest, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse> {
         return this.api.riskAnalyticsControllerEnableDisableRiskEventProcess(param.riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest,  options).toPromise();
     }
 
@@ -12342,7 +12728,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get all classifications Description: Get all possible classifications for a risk event.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetAllClassificationsListWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetAllClassificationsListRequest = {}, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3GetAllClassificationsListResponse>> {
+    public riskAnalyticsControllerGetAllClassificationsListWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetAllClassificationsListRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3GetAllClassificationsListResponse>> {
         return this.api.riskAnalyticsControllerGetAllClassificationsListWithHttpInfo( options).toPromise();
     }
 
@@ -12350,7 +12736,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get all classifications Description: Get all possible classifications for a risk event.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetAllClassificationsList(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetAllClassificationsListRequest = {}, options?: Configuration): Promise<Riskanalyticscontrollerv3GetAllClassificationsListResponse> {
+    public riskAnalyticsControllerGetAllClassificationsList(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetAllClassificationsListRequest = {}, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3GetAllClassificationsListResponse> {
         return this.api.riskAnalyticsControllerGetAllClassificationsList( options).toPromise();
     }
 
@@ -12358,7 +12744,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventClassificationsListWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventClassificationsListRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse>> {
+    public riskAnalyticsControllerGetRiskEventClassificationsListWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventClassificationsListRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse>> {
         return this.api.riskAnalyticsControllerGetRiskEventClassificationsListWithHttpInfo(param.riskId,  options).toPromise();
     }
 
@@ -12366,7 +12752,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk event classifications list Description: retrieves the ClassificationMatchDetails for a given risk id; classification that did not matched will be with class_value 0.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventClassificationsList(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventClassificationsListRequest, options?: Configuration): Promise<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse> {
+    public riskAnalyticsControllerGetRiskEventClassificationsList(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventClassificationsListRequest, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse> {
         return this.api.riskAnalyticsControllerGetRiskEventClassificationsList(param.riskId,  options).toPromise();
     }
 
@@ -12374,7 +12760,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk event data needed for summarization task Description: Retrieve the full information about this risk event including all findings data
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventDataForSummarizationWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDataForSummarizationRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3RiskEventSummarizationDataResponse>> {
+    public riskAnalyticsControllerGetRiskEventDataForSummarizationWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDataForSummarizationRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3RiskEventSummarizationDataResponse>> {
         return this.api.riskAnalyticsControllerGetRiskEventDataForSummarizationWithHttpInfo(param.riskId, param.includeIndicators, param.numFindingsLimit,  options).toPromise();
     }
 
@@ -12382,7 +12768,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk event data needed for summarization task Description: Retrieve the full information about this risk event including all findings data
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventDataForSummarization(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDataForSummarizationRequest, options?: Configuration): Promise<Riskanalyticscontrollerv3RiskEventSummarizationDataResponse> {
+    public riskAnalyticsControllerGetRiskEventDataForSummarization(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDataForSummarizationRequest, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3RiskEventSummarizationDataResponse> {
         return this.api.riskAnalyticsControllerGetRiskEventDataForSummarization(param.riskId, param.includeIndicators, param.numFindingsLimit,  options).toPromise();
     }
 
@@ -12390,7 +12776,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk event details Description: Return the details of a risk event, including risk general info and a list of observations.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventDetailsWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDetailsRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskEventDetailsResponse>> {
+    public riskAnalyticsControllerGetRiskEventDetailsWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDetailsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskEventDetailsResponse>> {
         return this.api.riskAnalyticsControllerGetRiskEventDetailsWithHttpInfo(param.riskId,  options).toPromise();
     }
 
@@ -12398,7 +12784,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk event details Description: Return the details of a risk event, including risk general info and a list of observations.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventDetails(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDetailsRequest, options?: Configuration): Promise<Riskanalyticscontrollerv3GetRiskEventDetailsResponse> {
+    public riskAnalyticsControllerGetRiskEventDetails(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDetailsRequest, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3GetRiskEventDetailsResponse> {
         return this.api.riskAnalyticsControllerGetRiskEventDetails(param.riskId,  options).toPromise();
     }
 
@@ -12406,7 +12792,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk event process status Description: Get the risk event process status.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventProcessStatusWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventProcessStatusRequest = {}, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse>> {
+    public riskAnalyticsControllerGetRiskEventProcessStatusWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventProcessStatusRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse>> {
         return this.api.riskAnalyticsControllerGetRiskEventProcessStatusWithHttpInfo( options).toPromise();
     }
 
@@ -12414,7 +12800,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk event process status Description: Get the risk event process status.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventProcessStatus(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventProcessStatusRequest = {}, options?: Configuration): Promise<Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse> {
+    public riskAnalyticsControllerGetRiskEventProcessStatus(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventProcessStatusRequest = {}, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse> {
         return this.api.riskAnalyticsControllerGetRiskEventProcessStatus( options).toPromise();
     }
 
@@ -12422,7 +12808,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk event row Description: Return a list of risk events.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventRowWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRowRequest = {}, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskEventRowResponse>> {
+    public riskAnalyticsControllerGetRiskEventRowWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRowRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskEventRowResponse>> {
         return this.api.riskAnalyticsControllerGetRiskEventRowWithHttpInfo(param.status, param.dateFrom, param.dateTo, param.pivotType, param.pivotId, param.pivotDbUser, param.pivotDatabase, param.pivotServerIp, param.pivotOsUser, param.pivotDatabaseSourceField,  options).toPromise();
     }
 
@@ -12430,7 +12816,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk event row Description: Return a list of risk events.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventRow(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRowRequest = {}, options?: Configuration): Promise<Riskanalyticscontrollerv3GetRiskEventRowResponse> {
+    public riskAnalyticsControllerGetRiskEventRow(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRowRequest = {}, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3GetRiskEventRowResponse> {
         return this.api.riskAnalyticsControllerGetRiskEventRow(param.status, param.dateFrom, param.dateTo, param.pivotType, param.pivotId, param.pivotDbUser, param.pivotDatabase, param.pivotServerIp, param.pivotOsUser, param.pivotDatabaseSourceField,  options).toPromise();
     }
 
@@ -12438,7 +12824,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get vulnerability assessment details for a given risk event Description: Retrieve the information about failed VA tests for assets database and db user
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse>> {
+    public riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse>> {
         return this.api.riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsWithHttpInfo(param.riskId,  options).toPromise();
     }
 
@@ -12446,7 +12832,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get vulnerability assessment details for a given risk event Description: Retrieve the information about failed VA tests for assets database and db user
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsRequest, options?: Configuration): Promise<Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse> {
+    public riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsRequest, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse> {
         return this.api.riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails(param.riskId,  options).toPromise();
     }
 
@@ -12454,7 +12840,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk feedback Description: Get all feedbacks that are in status NEW/WIP and change them to status WIP.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskFeedbackWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskFeedbackRequest = {}, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskFeedbackResponse>> {
+    public riskAnalyticsControllerGetRiskFeedbackWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskFeedbackRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskFeedbackResponse>> {
         return this.api.riskAnalyticsControllerGetRiskFeedbackWithHttpInfo( options).toPromise();
     }
 
@@ -12462,7 +12848,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk feedback Description: Get all feedbacks that are in status NEW/WIP and change them to status WIP.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskFeedback(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskFeedbackRequest = {}, options?: Configuration): Promise<Riskanalyticscontrollerv3GetRiskFeedbackResponse> {
+    public riskAnalyticsControllerGetRiskFeedback(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskFeedbackRequest = {}, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3GetRiskFeedbackResponse> {
         return this.api.riskAnalyticsControllerGetRiskFeedback( options).toPromise();
     }
 
@@ -12470,7 +12856,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk observation details Description: Return details of a single risk observation.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskObservationDetailsWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskObservationDetailsRequest = {}, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskObservationDetailsResponse>> {
+    public riskAnalyticsControllerGetRiskObservationDetailsWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskObservationDetailsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3GetRiskObservationDetailsResponse>> {
         return this.api.riskAnalyticsControllerGetRiskObservationDetailsWithHttpInfo(param.leadFeatureId, param.observationType,  options).toPromise();
     }
 
@@ -12478,7 +12864,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get risk observation details Description: Return details of a single risk observation.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetRiskObservationDetails(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskObservationDetailsRequest = {}, options?: Configuration): Promise<Riskanalyticscontrollerv3GetRiskObservationDetailsResponse> {
+    public riskAnalyticsControllerGetRiskObservationDetails(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskObservationDetailsRequest = {}, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3GetRiskObservationDetailsResponse> {
         return this.api.riskAnalyticsControllerGetRiskObservationDetails(param.leadFeatureId, param.observationType,  options).toPromise();
     }
 
@@ -12486,7 +12872,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get user UI settings Description: Get the user settings by user id to display the risk in the UI.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetUserUISettingsWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetUserUISettingsRequest = {}, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3GetUserUISettingsResponse>> {
+    public riskAnalyticsControllerGetUserUISettingsWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetUserUISettingsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3GetUserUISettingsResponse>> {
         return this.api.riskAnalyticsControllerGetUserUISettingsWithHttpInfo( options).toPromise();
     }
 
@@ -12494,7 +12880,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Get user UI settings Description: Get the user settings by user id to display the risk in the UI.
      * @param param the request object
      */
-    public riskAnalyticsControllerGetUserUISettings(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetUserUISettingsRequest = {}, options?: Configuration): Promise<Riskanalyticscontrollerv3GetUserUISettingsResponse> {
+    public riskAnalyticsControllerGetUserUISettings(param: RiskAnalyticsControllerApiRiskAnalyticsControllerGetUserUISettingsRequest = {}, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3GetUserUISettingsResponse> {
         return this.api.riskAnalyticsControllerGetUserUISettings( options).toPromise();
     }
 
@@ -12502,7 +12888,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Risk event tuning Description: Perform tuning risk event actions.
      * @param param the request object
      */
-    public riskAnalyticsControllerRiskEventTuningWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3RiskEventTuningResponse>> {
+    public riskAnalyticsControllerRiskEventTuningWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3RiskEventTuningResponse>> {
         return this.api.riskAnalyticsControllerRiskEventTuningWithHttpInfo(param.riskanalyticscontrollerv3RiskEventTuningRequest,  options).toPromise();
     }
 
@@ -12510,7 +12896,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Risk event tuning Description: Perform tuning risk event actions.
      * @param param the request object
      */
-    public riskAnalyticsControllerRiskEventTuning(param: RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningRequest, options?: Configuration): Promise<Riskanalyticscontrollerv3RiskEventTuningResponse> {
+    public riskAnalyticsControllerRiskEventTuning(param: RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningRequest, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3RiskEventTuningResponse> {
         return this.api.riskAnalyticsControllerRiskEventTuning(param.riskanalyticscontrollerv3RiskEventTuningRequest,  options).toPromise();
     }
 
@@ -12518,7 +12904,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Set risk event status Description: Update the risk status and justification.
      * @param param the request object
      */
-    public riskAnalyticsControllerSetRiskEventStatusWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3SetRiskEventStatusResponse>> {
+    public riskAnalyticsControllerSetRiskEventStatusWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3SetRiskEventStatusResponse>> {
         return this.api.riskAnalyticsControllerSetRiskEventStatusWithHttpInfo(param.riskanalyticscontrollerv3SetRiskEventStatusRequest,  options).toPromise();
     }
 
@@ -12526,7 +12912,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Set risk event status Description: Update the risk status and justification.
      * @param param the request object
      */
-    public riskAnalyticsControllerSetRiskEventStatus(param: RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusRequest, options?: Configuration): Promise<Riskanalyticscontrollerv3SetRiskEventStatusResponse> {
+    public riskAnalyticsControllerSetRiskEventStatus(param: RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusRequest, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3SetRiskEventStatusResponse> {
         return this.api.riskAnalyticsControllerSetRiskEventStatus(param.riskanalyticscontrollerv3SetRiskEventStatusRequest,  options).toPromise();
     }
 
@@ -12534,7 +12920,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
      * @param param the request object
      */
-    public riskAnalyticsControllerSetUserUISettingsWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3SetUserUISettingsResponse>> {
+    public riskAnalyticsControllerSetUserUISettingsWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3SetUserUISettingsResponse>> {
         return this.api.riskAnalyticsControllerSetUserUISettingsWithHttpInfo(param.riskanalyticscontrollerv3SetUserUISettingsRequest,  options).toPromise();
     }
 
@@ -12542,7 +12928,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Set user UI settings Description: Set the user settings by user id in the mongo collection. WARNING: this API should not be used manually or by a system external to GDSC. Using this API to change a user settings may prevent the user from using the Risk Event function within GDSC.
      * @param param the request object
      */
-    public riskAnalyticsControllerSetUserUISettings(param: RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequest, options?: Configuration): Promise<Riskanalyticscontrollerv3SetUserUISettingsResponse> {
+    public riskAnalyticsControllerSetUserUISettings(param: RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequest, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3SetUserUISettingsResponse> {
         return this.api.riskAnalyticsControllerSetUserUISettings(param.riskanalyticscontrollerv3SetUserUISettingsRequest,  options).toPromise();
     }
 
@@ -12550,7 +12936,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Update risk feedback Description: Provide feedback for one or more risk events
      * @param param the request object
      */
-    public riskAnalyticsControllerUpdateRiskFeedbackWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticscontrollerv3UpdateRiskFeedbackResponse>> {
+    public riskAnalyticsControllerUpdateRiskFeedbackWithHttpInfo(param: RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticscontrollerv3UpdateRiskFeedbackResponse>> {
         return this.api.riskAnalyticsControllerUpdateRiskFeedbackWithHttpInfo(param.riskanalyticscontrollerv3UpdateRiskFeedbackRequest,  options).toPromise();
     }
 
@@ -12558,7 +12944,7 @@ export class ObjectRiskAnalyticsControllerApi {
      * Summary: Update risk feedback Description: Provide feedback for one or more risk events
      * @param param the request object
      */
-    public riskAnalyticsControllerUpdateRiskFeedback(param: RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackRequest, options?: Configuration): Promise<Riskanalyticscontrollerv3UpdateRiskFeedbackResponse> {
+    public riskAnalyticsControllerUpdateRiskFeedback(param: RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackRequest, options?: ConfigurationOptions): Promise<Riskanalyticscontrollerv3UpdateRiskFeedbackResponse> {
         return this.api.riskAnalyticsControllerUpdateRiskFeedback(param.riskanalyticscontrollerv3UpdateRiskFeedbackRequest,  options).toPromise();
     }
 
@@ -12570,12 +12956,14 @@ import { RiskAnalyticsDataProcessorApiRequestFactory, RiskAnalyticsDataProcessor
 export interface RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskContextRequest {
     /**
      * Risk id.
+     * Defaults to: undefined
      * @type number
      * @memberof RiskAnalyticsDataProcessorApiriskAnalyticsDataProcessorGetRiskContext
      */
     riskId: number
     /**
      * Timezone in IANA format.
+     * Defaults to: undefined
      * @type string
      * @memberof RiskAnalyticsDataProcessorApiriskAnalyticsDataProcessorGetRiskContext
      */
@@ -12585,6 +12973,7 @@ export interface RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskC
 export interface RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskPredefinedQuestionsRequest {
     /**
      * Risk id.
+     * Defaults to: undefined
      * @type number
      * @memberof RiskAnalyticsDataProcessorApiriskAnalyticsDataProcessorGetRiskPredefinedQuestions
      */
@@ -12602,7 +12991,7 @@ export class ObjectRiskAnalyticsDataProcessorApi {
      * Summary: Get Risk Event Context Description: Retrieve the context of the given risk ID. This context will be used for LLM interactions.
      * @param param the request object
      */
-    public riskAnalyticsDataProcessorGetRiskContextWithHttpInfo(param: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskContextRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticsdataprocessorv3GetRiskContextResponse>> {
+    public riskAnalyticsDataProcessorGetRiskContextWithHttpInfo(param: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskContextRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticsdataprocessorv3GetRiskContextResponse>> {
         return this.api.riskAnalyticsDataProcessorGetRiskContextWithHttpInfo(param.riskId, param.timezone,  options).toPromise();
     }
 
@@ -12610,7 +12999,7 @@ export class ObjectRiskAnalyticsDataProcessorApi {
      * Summary: Get Risk Event Context Description: Retrieve the context of the given risk ID. This context will be used for LLM interactions.
      * @param param the request object
      */
-    public riskAnalyticsDataProcessorGetRiskContext(param: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskContextRequest, options?: Configuration): Promise<Riskanalyticsdataprocessorv3GetRiskContextResponse> {
+    public riskAnalyticsDataProcessorGetRiskContext(param: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskContextRequest, options?: ConfigurationOptions): Promise<Riskanalyticsdataprocessorv3GetRiskContextResponse> {
         return this.api.riskAnalyticsDataProcessorGetRiskContext(param.riskId, param.timezone,  options).toPromise();
     }
 
@@ -12618,7 +13007,7 @@ export class ObjectRiskAnalyticsDataProcessorApi {
      * Summary: Get Risk Event Predefined Questions Description: Retrieve the Predefined Questions of the given risk ID. This Predefined Questions will be used quick actions recommendations.
      * @param param the request object
      */
-    public riskAnalyticsDataProcessorGetRiskPredefinedQuestionsWithHttpInfo(param: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskPredefinedQuestionsRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse>> {
+    public riskAnalyticsDataProcessorGetRiskPredefinedQuestionsWithHttpInfo(param: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskPredefinedQuestionsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse>> {
         return this.api.riskAnalyticsDataProcessorGetRiskPredefinedQuestionsWithHttpInfo(param.riskId,  options).toPromise();
     }
 
@@ -12626,7 +13015,7 @@ export class ObjectRiskAnalyticsDataProcessorApi {
      * Summary: Get Risk Event Predefined Questions Description: Retrieve the Predefined Questions of the given risk ID. This Predefined Questions will be used quick actions recommendations.
      * @param param the request object
      */
-    public riskAnalyticsDataProcessorGetRiskPredefinedQuestions(param: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskPredefinedQuestionsRequest, options?: Configuration): Promise<Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse> {
+    public riskAnalyticsDataProcessorGetRiskPredefinedQuestions(param: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskPredefinedQuestionsRequest, options?: ConfigurationOptions): Promise<Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse> {
         return this.api.riskAnalyticsDataProcessorGetRiskPredefinedQuestions(param.riskId,  options).toPromise();
     }
 
@@ -12658,7 +13047,7 @@ export class ObjectRiskAnalyticsEngineApi {
      * Summary: Get lead generator config Description: Retrieve the configuration of a lead generator.
      * @param param the request object
      */
-    public riskAnalyticsEngineGetLeadGeneratorConfigWithHttpInfo(param: RiskAnalyticsEngineApiRiskAnalyticsEngineGetLeadGeneratorConfigRequest = {}, options?: Configuration): Promise<HttpInfo<Riskanalyticsenginev3GetLeadGeneratorConfigResponse>> {
+    public riskAnalyticsEngineGetLeadGeneratorConfigWithHttpInfo(param: RiskAnalyticsEngineApiRiskAnalyticsEngineGetLeadGeneratorConfigRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticsenginev3GetLeadGeneratorConfigResponse>> {
         return this.api.riskAnalyticsEngineGetLeadGeneratorConfigWithHttpInfo( options).toPromise();
     }
 
@@ -12666,7 +13055,7 @@ export class ObjectRiskAnalyticsEngineApi {
      * Summary: Get lead generator config Description: Retrieve the configuration of a lead generator.
      * @param param the request object
      */
-    public riskAnalyticsEngineGetLeadGeneratorConfig(param: RiskAnalyticsEngineApiRiskAnalyticsEngineGetLeadGeneratorConfigRequest = {}, options?: Configuration): Promise<Riskanalyticsenginev3GetLeadGeneratorConfigResponse> {
+    public riskAnalyticsEngineGetLeadGeneratorConfig(param: RiskAnalyticsEngineApiRiskAnalyticsEngineGetLeadGeneratorConfigRequest = {}, options?: ConfigurationOptions): Promise<Riskanalyticsenginev3GetLeadGeneratorConfigResponse> {
         return this.api.riskAnalyticsEngineGetLeadGeneratorConfig( options).toPromise();
     }
 
@@ -12674,7 +13063,7 @@ export class ObjectRiskAnalyticsEngineApi {
      * Summary: Update lead generator config Description: Update the configuration of a leads generator.
      * @param param the request object
      */
-    public riskAnalyticsEngineUpdateLeadGeneratorConfigWithHttpInfo(param: RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequest, options?: Configuration): Promise<HttpInfo<Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse>> {
+    public riskAnalyticsEngineUpdateLeadGeneratorConfigWithHttpInfo(param: RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequest, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse>> {
         return this.api.riskAnalyticsEngineUpdateLeadGeneratorConfigWithHttpInfo(param.riskanalyticsenginev3UpdateLeadGeneratorConfigRequest,  options).toPromise();
     }
 
@@ -12682,7 +13071,7 @@ export class ObjectRiskAnalyticsEngineApi {
      * Summary: Update lead generator config Description: Update the configuration of a leads generator.
      * @param param the request object
      */
-    public riskAnalyticsEngineUpdateLeadGeneratorConfig(param: RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequest, options?: Configuration): Promise<Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse> {
+    public riskAnalyticsEngineUpdateLeadGeneratorConfig(param: RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequest, options?: ConfigurationOptions): Promise<Riskanalyticsenginev3UpdateLeadGeneratorConfigResponse> {
         return this.api.riskAnalyticsEngineUpdateLeadGeneratorConfig(param.riskanalyticsenginev3UpdateLeadGeneratorConfigRequest,  options).toPromise();
     }
 
@@ -12705,7 +13094,7 @@ export class ObjectRiskAnalyticsMlClassificationApi {
      * Summary: Reset the model to its default weights. Description: Load the initial model instead of the existing model - this action is irreversible.
      * @param param the request object
      */
-    public riskAnalyticsMlClassificationResetModelToDefaultsWithHttpInfo(param: RiskAnalyticsMlClassificationApiRiskAnalyticsMlClassificationResetModelToDefaultsRequest = {}, options?: Configuration): Promise<HttpInfo<Riskanalyticsmlclassificationv3ResetModelToDefaultsResponse>> {
+    public riskAnalyticsMlClassificationResetModelToDefaultsWithHttpInfo(param: RiskAnalyticsMlClassificationApiRiskAnalyticsMlClassificationResetModelToDefaultsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Riskanalyticsmlclassificationv3ResetModelToDefaultsResponse>> {
         return this.api.riskAnalyticsMlClassificationResetModelToDefaultsWithHttpInfo( options).toPromise();
     }
 
@@ -12713,7 +13102,7 @@ export class ObjectRiskAnalyticsMlClassificationApi {
      * Summary: Reset the model to its default weights. Description: Load the initial model instead of the existing model - this action is irreversible.
      * @param param the request object
      */
-    public riskAnalyticsMlClassificationResetModelToDefaults(param: RiskAnalyticsMlClassificationApiRiskAnalyticsMlClassificationResetModelToDefaultsRequest = {}, options?: Configuration): Promise<Riskanalyticsmlclassificationv3ResetModelToDefaultsResponse> {
+    public riskAnalyticsMlClassificationResetModelToDefaults(param: RiskAnalyticsMlClassificationApiRiskAnalyticsMlClassificationResetModelToDefaultsRequest = {}, options?: ConfigurationOptions): Promise<Riskanalyticsmlclassificationv3ResetModelToDefaultsResponse> {
         return this.api.riskAnalyticsMlClassificationResetModelToDefaults( options).toPromise();
     }
 
@@ -12734,6 +13123,7 @@ export interface SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest {
 export interface SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest {
     /**
      * Unique ID, required for delete.
+     * Defaults to: undefined
      * @type string
      * @memberof SchedulerServiceApischedulerServiceDeleteScheduledJob
      */
@@ -12743,6 +13133,7 @@ export interface SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest {
 export interface SchedulerServiceApiSchedulerServiceGetDependenciesRequest {
     /**
      * specify the configuration entry type: Distribution.Rule, workflow_investigation_link, workflow_response_template, etc.
+     * Defaults to: undefined
      * @type string
      * @memberof SchedulerServiceApischedulerServiceGetDependencies
      */
@@ -12755,6 +13146,7 @@ export interface SchedulerServiceApiSchedulerServiceGetDistributionRulesRequest 
 export interface SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsRequest {
     /**
      * Used to return a single scheduledjob.
+     * Defaults to: undefined
      * @type string
      * @memberof SchedulerServiceApischedulerServiceGetScheduledJobDetails
      */
@@ -12764,12 +13156,14 @@ export interface SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsReques
 export interface SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest {
     /**
      * Optional: the amount to offset the rows by for pagination.
+     * Defaults to: undefined
      * @type number
      * @memberof SchedulerServiceApischedulerServiceGetScheduledJobs
      */
     offset?: number
     /**
      * Optional: the max amount of rows to return for pagination.
+     * Defaults to: undefined
      * @type number
      * @memberof SchedulerServiceApischedulerServiceGetScheduledJobs
      */
@@ -12779,6 +13173,7 @@ export interface SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest {
 export interface SchedulerServiceApiSchedulerServiceGetSchedulesByReportRequest {
     /**
      * Report ID for the scheduled report.
+     * Defaults to: undefined
      * @type string
      * @memberof SchedulerServiceApischedulerServiceGetSchedulesByReport
      */
@@ -12815,6 +13210,7 @@ export interface SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsReque
 export interface SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest {
     /**
      * Unique ID, required for update.
+     * Defaults to: undefined
      * @type string
      * @memberof SchedulerServiceApischedulerServiceUpdateScheduledJob
      */
@@ -12838,7 +13234,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Create scheduled job Description: Create a new scheduled job with tasks.
      * @param param the request object
      */
-    public schedulerServiceCreateScheduledJobWithHttpInfo(param: SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest, options?: Configuration): Promise<HttpInfo<Schedulerv3CreateScheduledJobResponse>> {
+    public schedulerServiceCreateScheduledJobWithHttpInfo(param: SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest, options?: ConfigurationOptions): Promise<HttpInfo<Schedulerv3CreateScheduledJobResponse>> {
         return this.api.schedulerServiceCreateScheduledJobWithHttpInfo(param.schedulerv3CreateScheduledJobRequest,  options).toPromise();
     }
 
@@ -12846,7 +13242,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Create scheduled job Description: Create a new scheduled job with tasks.
      * @param param the request object
      */
-    public schedulerServiceCreateScheduledJob(param: SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest, options?: Configuration): Promise<Schedulerv3CreateScheduledJobResponse> {
+    public schedulerServiceCreateScheduledJob(param: SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest, options?: ConfigurationOptions): Promise<Schedulerv3CreateScheduledJobResponse> {
         return this.api.schedulerServiceCreateScheduledJob(param.schedulerv3CreateScheduledJobRequest,  options).toPromise();
     }
 
@@ -12854,7 +13250,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Delete scheduled job Description: Delete a single scheduled job.
      * @param param the request object
      */
-    public schedulerServiceDeleteScheduledJobWithHttpInfo(param: SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest, options?: Configuration): Promise<HttpInfo<Schedulerv3DeleteScheduledJobResponse>> {
+    public schedulerServiceDeleteScheduledJobWithHttpInfo(param: SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest, options?: ConfigurationOptions): Promise<HttpInfo<Schedulerv3DeleteScheduledJobResponse>> {
         return this.api.schedulerServiceDeleteScheduledJobWithHttpInfo(param.scheduleId,  options).toPromise();
     }
 
@@ -12862,7 +13258,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Delete scheduled job Description: Delete a single scheduled job.
      * @param param the request object
      */
-    public schedulerServiceDeleteScheduledJob(param: SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest, options?: Configuration): Promise<Schedulerv3DeleteScheduledJobResponse> {
+    public schedulerServiceDeleteScheduledJob(param: SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest, options?: ConfigurationOptions): Promise<Schedulerv3DeleteScheduledJobResponse> {
         return this.api.schedulerServiceDeleteScheduledJob(param.scheduleId,  options).toPromise();
     }
 
@@ -12870,7 +13266,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get dependencies Description: returns IDs of distribution rules, response templates, or processing rules that are in use
      * @param param the request object
      */
-    public schedulerServiceGetDependenciesWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetDependenciesRequest = {}, options?: Configuration): Promise<HttpInfo<Schedulerv3GetDependenciesResponse>> {
+    public schedulerServiceGetDependenciesWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetDependenciesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Schedulerv3GetDependenciesResponse>> {
         return this.api.schedulerServiceGetDependenciesWithHttpInfo(param.configType,  options).toPromise();
     }
 
@@ -12878,7 +13274,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get dependencies Description: returns IDs of distribution rules, response templates, or processing rules that are in use
      * @param param the request object
      */
-    public schedulerServiceGetDependencies(param: SchedulerServiceApiSchedulerServiceGetDependenciesRequest = {}, options?: Configuration): Promise<Schedulerv3GetDependenciesResponse> {
+    public schedulerServiceGetDependencies(param: SchedulerServiceApiSchedulerServiceGetDependenciesRequest = {}, options?: ConfigurationOptions): Promise<Schedulerv3GetDependenciesResponse> {
         return this.api.schedulerServiceGetDependencies(param.configType,  options).toPromise();
     }
 
@@ -12886,7 +13282,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get distribution rules Description: Return a list of distribution rule IDs that are used by the scheduler Distribution rules can\'t be edited if it is used by a scheduled job.
      * @param param the request object
      */
-    public schedulerServiceGetDistributionRulesWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetDistributionRulesRequest = {}, options?: Configuration): Promise<HttpInfo<Schedulerv3GetDistributionRulesResponse>> {
+    public schedulerServiceGetDistributionRulesWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetDistributionRulesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Schedulerv3GetDistributionRulesResponse>> {
         return this.api.schedulerServiceGetDistributionRulesWithHttpInfo( options).toPromise();
     }
 
@@ -12894,7 +13290,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get distribution rules Description: Return a list of distribution rule IDs that are used by the scheduler Distribution rules can\'t be edited if it is used by a scheduled job.
      * @param param the request object
      */
-    public schedulerServiceGetDistributionRules(param: SchedulerServiceApiSchedulerServiceGetDistributionRulesRequest = {}, options?: Configuration): Promise<Schedulerv3GetDistributionRulesResponse> {
+    public schedulerServiceGetDistributionRules(param: SchedulerServiceApiSchedulerServiceGetDistributionRulesRequest = {}, options?: ConfigurationOptions): Promise<Schedulerv3GetDistributionRulesResponse> {
         return this.api.schedulerServiceGetDistributionRules( options).toPromise();
     }
 
@@ -12902,7 +13298,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get scheduled job Description: Return a single ScheduledJob in detail.
      * @param param the request object
      */
-    public schedulerServiceGetScheduledJobDetailsWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsRequest, options?: Configuration): Promise<HttpInfo<Schedulerv3GetScheduledJobResponse>> {
+    public schedulerServiceGetScheduledJobDetailsWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Schedulerv3GetScheduledJobResponse>> {
         return this.api.schedulerServiceGetScheduledJobDetailsWithHttpInfo(param.scheduleId,  options).toPromise();
     }
 
@@ -12910,7 +13306,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get scheduled job Description: Return a single ScheduledJob in detail.
      * @param param the request object
      */
-    public schedulerServiceGetScheduledJobDetails(param: SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsRequest, options?: Configuration): Promise<Schedulerv3GetScheduledJobResponse> {
+    public schedulerServiceGetScheduledJobDetails(param: SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsRequest, options?: ConfigurationOptions): Promise<Schedulerv3GetScheduledJobResponse> {
         return this.api.schedulerServiceGetScheduledJobDetails(param.scheduleId,  options).toPromise();
     }
 
@@ -12918,7 +13314,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get scheduled jobs Description: Return a list of scheduled jobs and the linked tasks.
      * @param param the request object
      */
-    public schedulerServiceGetScheduledJobsWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest = {}, options?: Configuration): Promise<HttpInfo<Schedulerv3ScheduledJobSummaryResponse>> {
+    public schedulerServiceGetScheduledJobsWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Schedulerv3ScheduledJobSummaryResponse>> {
         return this.api.schedulerServiceGetScheduledJobsWithHttpInfo(param.offset, param.limit,  options).toPromise();
     }
 
@@ -12926,7 +13322,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get scheduled jobs Description: Return a list of scheduled jobs and the linked tasks.
      * @param param the request object
      */
-    public schedulerServiceGetScheduledJobs(param: SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest = {}, options?: Configuration): Promise<Schedulerv3ScheduledJobSummaryResponse> {
+    public schedulerServiceGetScheduledJobs(param: SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest = {}, options?: ConfigurationOptions): Promise<Schedulerv3ScheduledJobSummaryResponse> {
         return this.api.schedulerServiceGetScheduledJobs(param.offset, param.limit,  options).toPromise();
     }
 
@@ -12934,7 +13330,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get schedules by report Description: Return an array of scheduled job IDs that run the report_id.  An empty array is returned if the report_id is not scheduled.
      * @param param the request object
      */
-    public schedulerServiceGetSchedulesByReportWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetSchedulesByReportRequest, options?: Configuration): Promise<HttpInfo<Schedulerv3GetSchedulesByReportResponse>> {
+    public schedulerServiceGetSchedulesByReportWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetSchedulesByReportRequest, options?: ConfigurationOptions): Promise<HttpInfo<Schedulerv3GetSchedulesByReportResponse>> {
         return this.api.schedulerServiceGetSchedulesByReportWithHttpInfo(param.reportId, param.schedulerv3GetSchedulesByReportRequest,  options).toPromise();
     }
 
@@ -12942,7 +13338,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get schedules by report Description: Return an array of scheduled job IDs that run the report_id.  An empty array is returned if the report_id is not scheduled.
      * @param param the request object
      */
-    public schedulerServiceGetSchedulesByReport(param: SchedulerServiceApiSchedulerServiceGetSchedulesByReportRequest, options?: Configuration): Promise<Schedulerv3GetSchedulesByReportResponse> {
+    public schedulerServiceGetSchedulesByReport(param: SchedulerServiceApiSchedulerServiceGetSchedulesByReportRequest, options?: ConfigurationOptions): Promise<Schedulerv3GetSchedulesByReportResponse> {
         return this.api.schedulerServiceGetSchedulesByReport(param.reportId, param.schedulerv3GetSchedulesByReportRequest,  options).toPromise();
     }
 
@@ -12950,7 +13346,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get tags Description: Return an array of all the unique tags from scheduled jobs.
      * @param param the request object
      */
-    public schedulerServiceGetTagsWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetTagsRequest = {}, options?: Configuration): Promise<HttpInfo<Schedulerv3GetTagsResponse>> {
+    public schedulerServiceGetTagsWithHttpInfo(param: SchedulerServiceApiSchedulerServiceGetTagsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Schedulerv3GetTagsResponse>> {
         return this.api.schedulerServiceGetTagsWithHttpInfo( options).toPromise();
     }
 
@@ -12958,7 +13354,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Get tags Description: Return an array of all the unique tags from scheduled jobs.
      * @param param the request object
      */
-    public schedulerServiceGetTags(param: SchedulerServiceApiSchedulerServiceGetTagsRequest = {}, options?: Configuration): Promise<Schedulerv3GetTagsResponse> {
+    public schedulerServiceGetTags(param: SchedulerServiceApiSchedulerServiceGetTagsRequest = {}, options?: ConfigurationOptions): Promise<Schedulerv3GetTagsResponse> {
         return this.api.schedulerServiceGetTags( options).toPromise();
     }
 
@@ -12966,7 +13362,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Search scheduled jobs Description: Return a filtered list of scheduled jobs and the linked tasks.
      * @param param the request object
      */
-    public schedulerServiceSearchScheduledJobsWithHttpInfo(param: SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest, options?: Configuration): Promise<HttpInfo<Schedulerv3ScheduledJobSummaryResponse>> {
+    public schedulerServiceSearchScheduledJobsWithHttpInfo(param: SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Schedulerv3ScheduledJobSummaryResponse>> {
         return this.api.schedulerServiceSearchScheduledJobsWithHttpInfo(param.schedulerv3SearchScheduledJobsRequest,  options).toPromise();
     }
 
@@ -12974,7 +13370,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Search scheduled jobs Description: Return a filtered list of scheduled jobs and the linked tasks.
      * @param param the request object
      */
-    public schedulerServiceSearchScheduledJobs(param: SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest, options?: Configuration): Promise<Schedulerv3ScheduledJobSummaryResponse> {
+    public schedulerServiceSearchScheduledJobs(param: SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest, options?: ConfigurationOptions): Promise<Schedulerv3ScheduledJobSummaryResponse> {
         return this.api.schedulerServiceSearchScheduledJobs(param.schedulerv3SearchScheduledJobsRequest,  options).toPromise();
     }
 
@@ -12982,7 +13378,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Search scheduled task runs Description: Return a list of scheduled task run, start date, end date, status
      * @param param the request object
      */
-    public schedulerServiceSearchScheduledTaskRunsWithHttpInfo(param: SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest, options?: Configuration): Promise<HttpInfo<Schedulerv3SearchScheduledTaskRunsResponse>> {
+    public schedulerServiceSearchScheduledTaskRunsWithHttpInfo(param: SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Schedulerv3SearchScheduledTaskRunsResponse>> {
         return this.api.schedulerServiceSearchScheduledTaskRunsWithHttpInfo(param.schedulerv3SearchScheduledTaskRunsRequest,  options).toPromise();
     }
 
@@ -12990,7 +13386,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Search scheduled task runs Description: Return a list of scheduled task run, start date, end date, status
      * @param param the request object
      */
-    public schedulerServiceSearchScheduledTaskRuns(param: SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest, options?: Configuration): Promise<Schedulerv3SearchScheduledTaskRunsResponse> {
+    public schedulerServiceSearchScheduledTaskRuns(param: SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest, options?: ConfigurationOptions): Promise<Schedulerv3SearchScheduledTaskRunsResponse> {
         return this.api.schedulerServiceSearchScheduledTaskRuns(param.schedulerv3SearchScheduledTaskRunsRequest,  options).toPromise();
     }
 
@@ -12998,7 +13394,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Update scheduled job Description: Update a single schedule job.
      * @param param the request object
      */
-    public schedulerServiceUpdateScheduledJobWithHttpInfo(param: SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest, options?: Configuration): Promise<HttpInfo<Schedulerv3UpdateScheduledJobResponse>> {
+    public schedulerServiceUpdateScheduledJobWithHttpInfo(param: SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest, options?: ConfigurationOptions): Promise<HttpInfo<Schedulerv3UpdateScheduledJobResponse>> {
         return this.api.schedulerServiceUpdateScheduledJobWithHttpInfo(param.scheduleId, param.schedulerv3UpdateScheduledJobRequest,  options).toPromise();
     }
 
@@ -13006,7 +13402,7 @@ export class ObjectSchedulerServiceApi {
      * Summary: Update scheduled job Description: Update a single schedule job.
      * @param param the request object
      */
-    public schedulerServiceUpdateScheduledJob(param: SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest, options?: Configuration): Promise<Schedulerv3UpdateScheduledJobResponse> {
+    public schedulerServiceUpdateScheduledJob(param: SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest, options?: ConfigurationOptions): Promise<Schedulerv3UpdateScheduledJobResponse> {
         return this.api.schedulerServiceUpdateScheduledJob(param.scheduleId, param.schedulerv3UpdateScheduledJobRequest,  options).toPromise();
     }
 
@@ -13018,30 +13414,35 @@ import { SnifAssistServiceApiRequestFactory, SnifAssistServiceApiResponseProcess
 export interface SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest {
     /**
      * Provide tenant_id.
+     * Defaults to: undefined
      * @type string
      * @memberof SnifAssistServiceApisnifAssistServiceGetSnifConfig
      */
     tenantId?: string
     /**
      * Provide edge_id.
+     * Defaults to: undefined
      * @type string
      * @memberof SnifAssistServiceApisnifAssistServiceGetSnifConfig
      */
     edgeId?: string
     /**
      * Provide configuration type.
+     * Defaults to: undefined
      * @type string
      * @memberof SnifAssistServiceApisnifAssistServiceGetSnifConfig
      */
     configType?: string
     /**
      * Specify config_id provided by configuration service.
+     * Defaults to: undefined
      * @type string
      * @memberof SnifAssistServiceApisnifAssistServiceGetSnifConfig
      */
     configId?: string
     /**
      * Provide CRC value of configuration parameters that sniffer is currently using.
+     * Defaults to: undefined
      * @type number
      * @memberof SnifAssistServiceApisnifAssistServiceGetSnifConfig
      */
@@ -13051,18 +13452,21 @@ export interface SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest {
 export interface SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest {
     /**
      * Specify tenant_id.
+     * Defaults to: undefined
      * @type string
      * @memberof SnifAssistServiceApisnifAssistServiceGetSnifPolicy
      */
     tenantId?: string
     /**
      * Specify edge_id if known.
+     * Defaults to: undefined
      * @type string
      * @memberof SnifAssistServiceApisnifAssistServiceGetSnifPolicy
      */
     edgeId?: string
     /**
      * Provide CRC value of installed policy that sniffer is currently using.
+     * Defaults to: undefined
      * @type number
      * @memberof SnifAssistServiceApisnifAssistServiceGetSnifPolicy
      */
@@ -13098,7 +13502,7 @@ export class ObjectSnifAssistServiceApi {
      * Summary: Get sniffer configuration parameters Description: Get edge sniffer configuration parameters from GI-mothership.
      * @param param the request object
      */
-    public snifAssistServiceGetSnifConfigWithHttpInfo(param: SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest = {}, options?: Configuration): Promise<HttpInfo<Snifassistv3GetSnifConfigResponse>> {
+    public snifAssistServiceGetSnifConfigWithHttpInfo(param: SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Snifassistv3GetSnifConfigResponse>> {
         return this.api.snifAssistServiceGetSnifConfigWithHttpInfo(param.tenantId, param.edgeId, param.configType, param.configId, param.configurationParametersCrc,  options).toPromise();
     }
 
@@ -13106,7 +13510,7 @@ export class ObjectSnifAssistServiceApi {
      * Summary: Get sniffer configuration parameters Description: Get edge sniffer configuration parameters from GI-mothership.
      * @param param the request object
      */
-    public snifAssistServiceGetSnifConfig(param: SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest = {}, options?: Configuration): Promise<Snifassistv3GetSnifConfigResponse> {
+    public snifAssistServiceGetSnifConfig(param: SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest = {}, options?: ConfigurationOptions): Promise<Snifassistv3GetSnifConfigResponse> {
         return this.api.snifAssistServiceGetSnifConfig(param.tenantId, param.edgeId, param.configType, param.configId, param.configurationParametersCrc,  options).toPromise();
     }
 
@@ -13114,7 +13518,7 @@ export class ObjectSnifAssistServiceApi {
      * Summary: Get sniffer policy Description: Get edge sniffer policy from GI-mothership.
      * @param param the request object
      */
-    public snifAssistServiceGetSnifPolicyWithHttpInfo(param: SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest = {}, options?: Configuration): Promise<HttpInfo<Snifassistv3StatusResponseBase>> {
+    public snifAssistServiceGetSnifPolicyWithHttpInfo(param: SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Snifassistv3StatusResponseBase>> {
         return this.api.snifAssistServiceGetSnifPolicyWithHttpInfo(param.tenantId, param.edgeId, param.policyCrc,  options).toPromise();
     }
 
@@ -13122,7 +13526,7 @@ export class ObjectSnifAssistServiceApi {
      * Summary: Get sniffer policy Description: Get edge sniffer policy from GI-mothership.
      * @param param the request object
      */
-    public snifAssistServiceGetSnifPolicy(param: SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest = {}, options?: Configuration): Promise<Snifassistv3StatusResponseBase> {
+    public snifAssistServiceGetSnifPolicy(param: SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest = {}, options?: ConfigurationOptions): Promise<Snifassistv3StatusResponseBase> {
         return this.api.snifAssistServiceGetSnifPolicy(param.tenantId, param.edgeId, param.policyCrc,  options).toPromise();
     }
 
@@ -13130,7 +13534,7 @@ export class ObjectSnifAssistServiceApi {
      * Summary: Post sniffer feedback Description: Post policy installation feedback to policy-builder service.
      * @param param the request object
      */
-    public snifAssistServicePostSnifFeedbackWithHttpInfo(param: SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest, options?: Configuration): Promise<HttpInfo<Snifassistv3StatusResponseBase>> {
+    public snifAssistServicePostSnifFeedbackWithHttpInfo(param: SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest, options?: ConfigurationOptions): Promise<HttpInfo<Snifassistv3StatusResponseBase>> {
         return this.api.snifAssistServicePostSnifFeedbackWithHttpInfo(param.snifassistv3PostSnifFeedbackRequest,  options).toPromise();
     }
 
@@ -13138,7 +13542,7 @@ export class ObjectSnifAssistServiceApi {
      * Summary: Post sniffer feedback Description: Post policy installation feedback to policy-builder service.
      * @param param the request object
      */
-    public snifAssistServicePostSnifFeedback(param: SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest, options?: Configuration): Promise<Snifassistv3StatusResponseBase> {
+    public snifAssistServicePostSnifFeedback(param: SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest, options?: ConfigurationOptions): Promise<Snifassistv3StatusResponseBase> {
         return this.api.snifAssistServicePostSnifFeedback(param.snifassistv3PostSnifFeedbackRequest,  options).toPromise();
     }
 
@@ -13146,7 +13550,7 @@ export class ObjectSnifAssistServiceApi {
      * Summary: Test regex Description: Match a text string with a regular expression using the same sniffer  code used in production to match a regex.
      * @param param the request object
      */
-    public snifAssistServiceTestRegexWithHttpInfo(param: SnifAssistServiceApiSnifAssistServiceTestRegexRequest, options?: Configuration): Promise<HttpInfo<Snifassistv3StatusResponseBase>> {
+    public snifAssistServiceTestRegexWithHttpInfo(param: SnifAssistServiceApiSnifAssistServiceTestRegexRequest, options?: ConfigurationOptions): Promise<HttpInfo<Snifassistv3StatusResponseBase>> {
         return this.api.snifAssistServiceTestRegexWithHttpInfo(param.snifassistv3TestRegexRequest,  options).toPromise();
     }
 
@@ -13154,7 +13558,7 @@ export class ObjectSnifAssistServiceApi {
      * Summary: Test regex Description: Match a text string with a regular expression using the same sniffer  code used in production to match a regex.
      * @param param the request object
      */
-    public snifAssistServiceTestRegex(param: SnifAssistServiceApiSnifAssistServiceTestRegexRequest, options?: Configuration): Promise<Snifassistv3StatusResponseBase> {
+    public snifAssistServiceTestRegex(param: SnifAssistServiceApiSnifAssistServiceTestRegexRequest, options?: ConfigurationOptions): Promise<Snifassistv3StatusResponseBase> {
         return this.api.snifAssistServiceTestRegex(param.snifassistv3TestRegexRequest,  options).toPromise();
     }
 
@@ -13213,7 +13617,7 @@ export class ObjectStreamsServiceApi {
      * Summary: Check AWS credentials Description: Service to verify AWS credentials.
      * @param param the request object
      */
-    public streamsServiceCheckAWSCredentialsWithHttpInfo(param: StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest, options?: Configuration): Promise<HttpInfo<Streamsv3CheckAWSCredentialsResponse>> {
+    public streamsServiceCheckAWSCredentialsWithHttpInfo(param: StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Streamsv3CheckAWSCredentialsResponse>> {
         return this.api.streamsServiceCheckAWSCredentialsWithHttpInfo(param.streamsv3CheckAWSCredentialsRequest,  options).toPromise();
     }
 
@@ -13221,7 +13625,7 @@ export class ObjectStreamsServiceApi {
      * Summary: Check AWS credentials Description: Service to verify AWS credentials.
      * @param param the request object
      */
-    public streamsServiceCheckAWSCredentials(param: StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest, options?: Configuration): Promise<Streamsv3CheckAWSCredentialsResponse> {
+    public streamsServiceCheckAWSCredentials(param: StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest, options?: ConfigurationOptions): Promise<Streamsv3CheckAWSCredentialsResponse> {
         return this.api.streamsServiceCheckAWSCredentials(param.streamsv3CheckAWSCredentialsRequest,  options).toPromise();
     }
 
@@ -13229,7 +13633,7 @@ export class ObjectStreamsServiceApi {
      * Summary: Check Azure event hub Description: Service to check Azure event hub.
      * @param param the request object
      */
-    public streamsServiceCheckAzureEventHubWithHttpInfo(param: StreamsServiceApiStreamsServiceCheckAzureEventHubRequest, options?: Configuration): Promise<HttpInfo<Streamsv3CheckAzureEventHubResponse>> {
+    public streamsServiceCheckAzureEventHubWithHttpInfo(param: StreamsServiceApiStreamsServiceCheckAzureEventHubRequest, options?: ConfigurationOptions): Promise<HttpInfo<Streamsv3CheckAzureEventHubResponse>> {
         return this.api.streamsServiceCheckAzureEventHubWithHttpInfo(param.streamsv3CheckAzureEventHubRequest,  options).toPromise();
     }
 
@@ -13237,7 +13641,7 @@ export class ObjectStreamsServiceApi {
      * Summary: Check Azure event hub Description: Service to check Azure event hub.
      * @param param the request object
      */
-    public streamsServiceCheckAzureEventHub(param: StreamsServiceApiStreamsServiceCheckAzureEventHubRequest, options?: Configuration): Promise<Streamsv3CheckAzureEventHubResponse> {
+    public streamsServiceCheckAzureEventHub(param: StreamsServiceApiStreamsServiceCheckAzureEventHubRequest, options?: ConfigurationOptions): Promise<Streamsv3CheckAzureEventHubResponse> {
         return this.api.streamsServiceCheckAzureEventHub(param.streamsv3CheckAzureEventHubRequest,  options).toPromise();
     }
 
@@ -13245,7 +13649,7 @@ export class ObjectStreamsServiceApi {
      * Summary: Check Azure storage string Description: Service to verify Azure storage connection.
      * @param param the request object
      */
-    public streamsServiceCheckAzureStorageStringWithHttpInfo(param: StreamsServiceApiStreamsServiceCheckAzureStorageStringRequest, options?: Configuration): Promise<HttpInfo<Streamsv3CheckAzureStorageStringResponse>> {
+    public streamsServiceCheckAzureStorageStringWithHttpInfo(param: StreamsServiceApiStreamsServiceCheckAzureStorageStringRequest, options?: ConfigurationOptions): Promise<HttpInfo<Streamsv3CheckAzureStorageStringResponse>> {
         return this.api.streamsServiceCheckAzureStorageStringWithHttpInfo(param.streamsv3CheckAzureStorageStringRequest,  options).toPromise();
     }
 
@@ -13253,7 +13657,7 @@ export class ObjectStreamsServiceApi {
      * Summary: Check Azure storage string Description: Service to verify Azure storage connection.
      * @param param the request object
      */
-    public streamsServiceCheckAzureStorageString(param: StreamsServiceApiStreamsServiceCheckAzureStorageStringRequest, options?: Configuration): Promise<Streamsv3CheckAzureStorageStringResponse> {
+    public streamsServiceCheckAzureStorageString(param: StreamsServiceApiStreamsServiceCheckAzureStorageStringRequest, options?: ConfigurationOptions): Promise<Streamsv3CheckAzureStorageStringResponse> {
         return this.api.streamsServiceCheckAzureStorageString(param.streamsv3CheckAzureStorageStringRequest,  options).toPromise();
     }
 
@@ -13261,7 +13665,7 @@ export class ObjectStreamsServiceApi {
      * Summary: Get AWS regions Description: Service to get AWS regions.
      * @param param the request object
      */
-    public streamsServiceGetAWSRegionsWithHttpInfo(param: StreamsServiceApiStreamsServiceGetAWSRegionsRequest = {}, options?: Configuration): Promise<HttpInfo<Streamsv3GetAWSRegionsResponse>> {
+    public streamsServiceGetAWSRegionsWithHttpInfo(param: StreamsServiceApiStreamsServiceGetAWSRegionsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Streamsv3GetAWSRegionsResponse>> {
         return this.api.streamsServiceGetAWSRegionsWithHttpInfo( options).toPromise();
     }
 
@@ -13269,7 +13673,7 @@ export class ObjectStreamsServiceApi {
      * Summary: Get AWS regions Description: Service to get AWS regions.
      * @param param the request object
      */
-    public streamsServiceGetAWSRegions(param: StreamsServiceApiStreamsServiceGetAWSRegionsRequest = {}, options?: Configuration): Promise<Streamsv3GetAWSRegionsResponse> {
+    public streamsServiceGetAWSRegions(param: StreamsServiceApiStreamsServiceGetAWSRegionsRequest = {}, options?: ConfigurationOptions): Promise<Streamsv3GetAWSRegionsResponse> {
         return this.api.streamsServiceGetAWSRegions( options).toPromise();
     }
 
@@ -13277,7 +13681,7 @@ export class ObjectStreamsServiceApi {
      * Summary: List AWS streams Description: Service to list AWS Kinesis streams.
      * @param param the request object
      */
-    public streamsServiceListAWSStreamsWithHttpInfo(param: StreamsServiceApiStreamsServiceListAWSStreamsRequest, options?: Configuration): Promise<HttpInfo<Streamsv3ListAWSStreamsResponse>> {
+    public streamsServiceListAWSStreamsWithHttpInfo(param: StreamsServiceApiStreamsServiceListAWSStreamsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Streamsv3ListAWSStreamsResponse>> {
         return this.api.streamsServiceListAWSStreamsWithHttpInfo(param.streamsv3ListAWSStreamsRequest,  options).toPromise();
     }
 
@@ -13285,7 +13689,7 @@ export class ObjectStreamsServiceApi {
      * Summary: List AWS streams Description: Service to list AWS Kinesis streams.
      * @param param the request object
      */
-    public streamsServiceListAWSStreams(param: StreamsServiceApiStreamsServiceListAWSStreamsRequest, options?: Configuration): Promise<Streamsv3ListAWSStreamsResponse> {
+    public streamsServiceListAWSStreams(param: StreamsServiceApiStreamsServiceListAWSStreamsRequest, options?: ConfigurationOptions): Promise<Streamsv3ListAWSStreamsResponse> {
         return this.api.streamsServiceListAWSStreams(param.streamsv3ListAWSStreamsRequest,  options).toPromise();
     }
 
@@ -13306,6 +13710,7 @@ export interface TenantuserApiTenantuserCreateAPIKeyRequest {
 export interface TenantuserApiTenantuserDeleteAPIKeyRequest {
     /**
      * Apikey id.
+     * Defaults to: undefined
      * @type string
      * @memberof TenantuserApitenantuserDeleteAPIKey
      */
@@ -13315,6 +13720,7 @@ export interface TenantuserApiTenantuserDeleteAPIKeyRequest {
 export interface TenantuserApiTenantuserDeleteRoleRequest {
     /**
      * ID or role deleted.
+     * Defaults to: undefined
      * @type string
      * @memberof TenantuserApitenantuserDeleteRole
      */
@@ -13330,12 +13736,14 @@ export interface TenantuserApiTenantuserGetCurrentUserRequest {
 export interface TenantuserApiTenantuserGetPrivilegeRequest {
     /**
      * Privilege ID.
+     * Defaults to: undefined
      * @type string
      * @memberof TenantuserApitenantuserGetPrivilege
      */
     privilegePrivilegeId: string
     /**
      * Privilege Type - a report, group, and datasource may have the same ID. By passing type, the artifact can be uniquely determined.
+     * Defaults to: undefined
      * @type string
      * @memberof TenantuserApitenantuserGetPrivilege
      */
@@ -13345,12 +13753,14 @@ export interface TenantuserApiTenantuserGetPrivilegeRequest {
 export interface TenantuserApiTenantuserGetPrivilegesRequest {
     /**
      * If empty, will return all privileges.
+     * Defaults to: undefined
      * @type Array&lt;string&gt;
      * @memberof TenantuserApitenantuserGetPrivileges
      */
     roles?: Array<string>
     /**
      * Type of privilege to return: group, page, permission, report, restapi, etc.
+     * Defaults to: undefined
      * @type string
      * @memberof TenantuserApitenantuserGetPrivileges
      */
@@ -13360,6 +13770,7 @@ export interface TenantuserApiTenantuserGetPrivilegesRequest {
 export interface TenantuserApiTenantuserGetRoleRequest {
     /**
      * ID of role to be returned.
+     * Defaults to: undefined
      * @type string
      * @memberof TenantuserApitenantuserGetRole
      */
@@ -13372,6 +13783,7 @@ export interface TenantuserApiTenantuserGetRolesRequest {
 export interface TenantuserApiTenantuserGetUserRequest {
     /**
      * User id defaults to the current user or specify \&quot;current\&quot; or an actual user id.
+     * Defaults to: undefined
      * @type string
      * @memberof TenantuserApitenantuserGetUser
      */
@@ -13390,6 +13802,7 @@ export interface TenantuserApiTenantuserGetUserNamesRequest {
 export interface TenantuserApiTenantuserGetUserTenantRequest {
     /**
      * User id defaults to the current user or specify \&quot;current\&quot; or an actual user id.
+     * Defaults to: undefined
      * @type string
      * @memberof TenantuserApitenantuserGetUserTenant
      */
@@ -13417,6 +13830,7 @@ export interface TenantuserApiTenantuserPostRoleRequest {
 export interface TenantuserApiTenantuserUpdatePrivilegeRequest {
     /**
      * Permanent id of the privilege to be updated or created.
+     * Defaults to: undefined
      * @type string
      * @memberof TenantuserApitenantuserUpdatePrivilege
      */
@@ -13441,6 +13855,7 @@ export interface TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest {
 export interface TenantuserApiTenantuserUpdateRoleRequest {
     /**
      * Permanent id of the role.
+     * Defaults to: undefined
      * @type string
      * @memberof TenantuserApitenantuserUpdateRole
      */
@@ -13473,7 +13888,7 @@ export class ObjectTenantuserApi {
      * Summary: Create API key Description: Create API Key.
      * @param param the request object
      */
-    public tenantuserCreateAPIKeyWithHttpInfo(param: TenantuserApiTenantuserCreateAPIKeyRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3CreateApiKeyResponse>> {
+    public tenantuserCreateAPIKeyWithHttpInfo(param: TenantuserApiTenantuserCreateAPIKeyRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3CreateApiKeyResponse>> {
         return this.api.tenantuserCreateAPIKeyWithHttpInfo(param.tenantuserv3CreateApiKeyRequest,  options).toPromise();
     }
 
@@ -13481,7 +13896,7 @@ export class ObjectTenantuserApi {
      * Summary: Create API key Description: Create API Key.
      * @param param the request object
      */
-    public tenantuserCreateAPIKey(param: TenantuserApiTenantuserCreateAPIKeyRequest, options?: Configuration): Promise<Tenantuserv3CreateApiKeyResponse> {
+    public tenantuserCreateAPIKey(param: TenantuserApiTenantuserCreateAPIKeyRequest, options?: ConfigurationOptions): Promise<Tenantuserv3CreateApiKeyResponse> {
         return this.api.tenantuserCreateAPIKey(param.tenantuserv3CreateApiKeyRequest,  options).toPromise();
     }
 
@@ -13489,7 +13904,7 @@ export class ObjectTenantuserApi {
      * Summary: Delete API key Description: Delete APIKey Document based on the document id.
      * @param param the request object
      */
-    public tenantuserDeleteAPIKeyWithHttpInfo(param: TenantuserApiTenantuserDeleteAPIKeyRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public tenantuserDeleteAPIKeyWithHttpInfo(param: TenantuserApiTenantuserDeleteAPIKeyRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.tenantuserDeleteAPIKeyWithHttpInfo(param.id,  options).toPromise();
     }
 
@@ -13497,7 +13912,7 @@ export class ObjectTenantuserApi {
      * Summary: Delete API key Description: Delete APIKey Document based on the document id.
      * @param param the request object
      */
-    public tenantuserDeleteAPIKey(param: TenantuserApiTenantuserDeleteAPIKeyRequest, options?: Configuration): Promise<any> {
+    public tenantuserDeleteAPIKey(param: TenantuserApiTenantuserDeleteAPIKeyRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.tenantuserDeleteAPIKey(param.id,  options).toPromise();
     }
 
@@ -13505,7 +13920,7 @@ export class ObjectTenantuserApi {
      * Summary: Delete role Description: Delete a role.
      * @param param the request object
      */
-    public tenantuserDeleteRoleWithHttpInfo(param: TenantuserApiTenantuserDeleteRoleRequest, options?: Configuration): Promise<HttpInfo<any>> {
+    public tenantuserDeleteRoleWithHttpInfo(param: TenantuserApiTenantuserDeleteRoleRequest, options?: ConfigurationOptions): Promise<HttpInfo<any>> {
         return this.api.tenantuserDeleteRoleWithHttpInfo(param.roleId,  options).toPromise();
     }
 
@@ -13513,7 +13928,7 @@ export class ObjectTenantuserApi {
      * Summary: Delete role Description: Delete a role.
      * @param param the request object
      */
-    public tenantuserDeleteRole(param: TenantuserApiTenantuserDeleteRoleRequest, options?: Configuration): Promise<any> {
+    public tenantuserDeleteRole(param: TenantuserApiTenantuserDeleteRoleRequest, options?: ConfigurationOptions): Promise<any> {
         return this.api.tenantuserDeleteRole(param.roleId,  options).toPromise();
     }
 
@@ -13521,7 +13936,7 @@ export class ObjectTenantuserApi {
      * Summary: Get API keys Description: Get all APIKeys base on a tenant ID.
      * @param param the request object
      */
-    public tenantuserGetAPIKeysWithHttpInfo(param: TenantuserApiTenantuserGetAPIKeysRequest = {}, options?: Configuration): Promise<HttpInfo<Tenantuserv3GetApiKeysResponse>> {
+    public tenantuserGetAPIKeysWithHttpInfo(param: TenantuserApiTenantuserGetAPIKeysRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3GetApiKeysResponse>> {
         return this.api.tenantuserGetAPIKeysWithHttpInfo( options).toPromise();
     }
 
@@ -13529,7 +13944,7 @@ export class ObjectTenantuserApi {
      * Summary: Get API keys Description: Get all APIKeys base on a tenant ID.
      * @param param the request object
      */
-    public tenantuserGetAPIKeys(param: TenantuserApiTenantuserGetAPIKeysRequest = {}, options?: Configuration): Promise<Tenantuserv3GetApiKeysResponse> {
+    public tenantuserGetAPIKeys(param: TenantuserApiTenantuserGetAPIKeysRequest = {}, options?: ConfigurationOptions): Promise<Tenantuserv3GetApiKeysResponse> {
         return this.api.tenantuserGetAPIKeys( options).toPromise();
     }
 
@@ -13537,7 +13952,7 @@ export class ObjectTenantuserApi {
      * Summary: Get current user Description: Return the currently authenticated user.
      * @param param the request object
      */
-    public tenantuserGetCurrentUserWithHttpInfo(param: TenantuserApiTenantuserGetCurrentUserRequest = {}, options?: Configuration): Promise<HttpInfo<Tenantuserv3GetCurrentUserResponse>> {
+    public tenantuserGetCurrentUserWithHttpInfo(param: TenantuserApiTenantuserGetCurrentUserRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3GetCurrentUserResponse>> {
         return this.api.tenantuserGetCurrentUserWithHttpInfo( options).toPromise();
     }
 
@@ -13545,7 +13960,7 @@ export class ObjectTenantuserApi {
      * Summary: Get current user Description: Return the currently authenticated user.
      * @param param the request object
      */
-    public tenantuserGetCurrentUser(param: TenantuserApiTenantuserGetCurrentUserRequest = {}, options?: Configuration): Promise<Tenantuserv3GetCurrentUserResponse> {
+    public tenantuserGetCurrentUser(param: TenantuserApiTenantuserGetCurrentUserRequest = {}, options?: ConfigurationOptions): Promise<Tenantuserv3GetCurrentUserResponse> {
         return this.api.tenantuserGetCurrentUser( options).toPromise();
     }
 
@@ -13553,7 +13968,7 @@ export class ObjectTenantuserApi {
      * Summary: Get privilege Description: Return privilege.
      * @param param the request object
      */
-    public tenantuserGetPrivilegeWithHttpInfo(param: TenantuserApiTenantuserGetPrivilegeRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3GetPrivilegeResponse>> {
+    public tenantuserGetPrivilegeWithHttpInfo(param: TenantuserApiTenantuserGetPrivilegeRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3GetPrivilegeResponse>> {
         return this.api.tenantuserGetPrivilegeWithHttpInfo(param.privilegePrivilegeId, param.privilegeType,  options).toPromise();
     }
 
@@ -13561,7 +13976,7 @@ export class ObjectTenantuserApi {
      * Summary: Get privilege Description: Return privilege.
      * @param param the request object
      */
-    public tenantuserGetPrivilege(param: TenantuserApiTenantuserGetPrivilegeRequest, options?: Configuration): Promise<Tenantuserv3GetPrivilegeResponse> {
+    public tenantuserGetPrivilege(param: TenantuserApiTenantuserGetPrivilegeRequest, options?: ConfigurationOptions): Promise<Tenantuserv3GetPrivilegeResponse> {
         return this.api.tenantuserGetPrivilege(param.privilegePrivilegeId, param.privilegeType,  options).toPromise();
     }
 
@@ -13569,7 +13984,7 @@ export class ObjectTenantuserApi {
      * Summary: Get privileges Description: Return all available privileges (pages, restapi, reports, etc) if no roles are specified If roles are specified, returns cumulative privileges for the list of roles.
      * @param param the request object
      */
-    public tenantuserGetPrivilegesWithHttpInfo(param: TenantuserApiTenantuserGetPrivilegesRequest = {}, options?: Configuration): Promise<HttpInfo<Tenantuserv3GetPrivilegesResponse>> {
+    public tenantuserGetPrivilegesWithHttpInfo(param: TenantuserApiTenantuserGetPrivilegesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3GetPrivilegesResponse>> {
         return this.api.tenantuserGetPrivilegesWithHttpInfo(param.roles, param.type,  options).toPromise();
     }
 
@@ -13577,7 +13992,7 @@ export class ObjectTenantuserApi {
      * Summary: Get privileges Description: Return all available privileges (pages, restapi, reports, etc) if no roles are specified If roles are specified, returns cumulative privileges for the list of roles.
      * @param param the request object
      */
-    public tenantuserGetPrivileges(param: TenantuserApiTenantuserGetPrivilegesRequest = {}, options?: Configuration): Promise<Tenantuserv3GetPrivilegesResponse> {
+    public tenantuserGetPrivileges(param: TenantuserApiTenantuserGetPrivilegesRequest = {}, options?: ConfigurationOptions): Promise<Tenantuserv3GetPrivilegesResponse> {
         return this.api.tenantuserGetPrivileges(param.roles, param.type,  options).toPromise();
     }
 
@@ -13585,7 +14000,7 @@ export class ObjectTenantuserApi {
      * Summary: Get role Description: Return single role.
      * @param param the request object
      */
-    public tenantuserGetRoleWithHttpInfo(param: TenantuserApiTenantuserGetRoleRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3Role>> {
+    public tenantuserGetRoleWithHttpInfo(param: TenantuserApiTenantuserGetRoleRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3Role>> {
         return this.api.tenantuserGetRoleWithHttpInfo(param.roleId,  options).toPromise();
     }
 
@@ -13593,7 +14008,7 @@ export class ObjectTenantuserApi {
      * Summary: Get role Description: Return single role.
      * @param param the request object
      */
-    public tenantuserGetRole(param: TenantuserApiTenantuserGetRoleRequest, options?: Configuration): Promise<Tenantuserv3Role> {
+    public tenantuserGetRole(param: TenantuserApiTenantuserGetRoleRequest, options?: ConfigurationOptions): Promise<Tenantuserv3Role> {
         return this.api.tenantuserGetRole(param.roleId,  options).toPromise();
     }
 
@@ -13601,7 +14016,7 @@ export class ObjectTenantuserApi {
      * Summary: Get roles Description: Return all roles without privileges.
      * @param param the request object
      */
-    public tenantuserGetRolesWithHttpInfo(param: TenantuserApiTenantuserGetRolesRequest = {}, options?: Configuration): Promise<HttpInfo<Tenantuserv3GetRolesResponse>> {
+    public tenantuserGetRolesWithHttpInfo(param: TenantuserApiTenantuserGetRolesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3GetRolesResponse>> {
         return this.api.tenantuserGetRolesWithHttpInfo( options).toPromise();
     }
 
@@ -13609,7 +14024,7 @@ export class ObjectTenantuserApi {
      * Summary: Get roles Description: Return all roles without privileges.
      * @param param the request object
      */
-    public tenantuserGetRoles(param: TenantuserApiTenantuserGetRolesRequest = {}, options?: Configuration): Promise<Tenantuserv3GetRolesResponse> {
+    public tenantuserGetRoles(param: TenantuserApiTenantuserGetRolesRequest = {}, options?: ConfigurationOptions): Promise<Tenantuserv3GetRolesResponse> {
         return this.api.tenantuserGetRoles( options).toPromise();
     }
 
@@ -13617,7 +14032,7 @@ export class ObjectTenantuserApi {
      * Summary: Get user Description: Return full user for specified user_id.
      * @param param the request object
      */
-    public tenantuserGetUserWithHttpInfo(param: TenantuserApiTenantuserGetUserRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3GetUserResponse>> {
+    public tenantuserGetUserWithHttpInfo(param: TenantuserApiTenantuserGetUserRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3GetUserResponse>> {
         return this.api.tenantuserGetUserWithHttpInfo(param.userId,  options).toPromise();
     }
 
@@ -13625,7 +14040,7 @@ export class ObjectTenantuserApi {
      * Summary: Get user Description: Return full user for specified user_id.
      * @param param the request object
      */
-    public tenantuserGetUser(param: TenantuserApiTenantuserGetUserRequest, options?: Configuration): Promise<Tenantuserv3GetUserResponse> {
+    public tenantuserGetUser(param: TenantuserApiTenantuserGetUserRequest, options?: ConfigurationOptions): Promise<Tenantuserv3GetUserResponse> {
         return this.api.tenantuserGetUser(param.userId,  options).toPromise();
     }
 
@@ -13633,7 +14048,7 @@ export class ObjectTenantuserApi {
      * Summary: Get user names Description: Get user names.
      * @param param the request object
      */
-    public tenantuserGetUserNamesWithHttpInfo(param: TenantuserApiTenantuserGetUserNamesRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3GetUserNamesResponse>> {
+    public tenantuserGetUserNamesWithHttpInfo(param: TenantuserApiTenantuserGetUserNamesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3GetUserNamesResponse>> {
         return this.api.tenantuserGetUserNamesWithHttpInfo(param.tenantuserv3GetUserNamesRequest,  options).toPromise();
     }
 
@@ -13641,7 +14056,7 @@ export class ObjectTenantuserApi {
      * Summary: Get user names Description: Get user names.
      * @param param the request object
      */
-    public tenantuserGetUserNames(param: TenantuserApiTenantuserGetUserNamesRequest, options?: Configuration): Promise<Tenantuserv3GetUserNamesResponse> {
+    public tenantuserGetUserNames(param: TenantuserApiTenantuserGetUserNamesRequest, options?: ConfigurationOptions): Promise<Tenantuserv3GetUserNamesResponse> {
         return this.api.tenantuserGetUserNames(param.tenantuserv3GetUserNamesRequest,  options).toPromise();
     }
 
@@ -13649,7 +14064,7 @@ export class ObjectTenantuserApi {
      * Summary: Get user tenant Description: Return the user plus tenant information.
      * @param param the request object
      */
-    public tenantuserGetUserTenantWithHttpInfo(param: TenantuserApiTenantuserGetUserTenantRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3GetUserTenantResponse>> {
+    public tenantuserGetUserTenantWithHttpInfo(param: TenantuserApiTenantuserGetUserTenantRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3GetUserTenantResponse>> {
         return this.api.tenantuserGetUserTenantWithHttpInfo(param.userId,  options).toPromise();
     }
 
@@ -13657,7 +14072,7 @@ export class ObjectTenantuserApi {
      * Summary: Get user tenant Description: Return the user plus tenant information.
      * @param param the request object
      */
-    public tenantuserGetUserTenant(param: TenantuserApiTenantuserGetUserTenantRequest, options?: Configuration): Promise<Tenantuserv3GetUserTenantResponse> {
+    public tenantuserGetUserTenant(param: TenantuserApiTenantuserGetUserTenantRequest, options?: ConfigurationOptions): Promise<Tenantuserv3GetUserTenantResponse> {
         return this.api.tenantuserGetUserTenant(param.userId,  options).toPromise();
     }
 
@@ -13665,7 +14080,7 @@ export class ObjectTenantuserApi {
      * Summary: Post privileges bulk Description: Perform bulk user add preivilege.
      * @param param the request object
      */
-    public tenantuserPostPrivilegesBulkWithHttpInfo(param: TenantuserApiTenantuserPostPrivilegesBulkRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3PostPrivilegesBulkResponse>> {
+    public tenantuserPostPrivilegesBulkWithHttpInfo(param: TenantuserApiTenantuserPostPrivilegesBulkRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3PostPrivilegesBulkResponse>> {
         return this.api.tenantuserPostPrivilegesBulkWithHttpInfo(param.tenantuserv3PostPrivilegesBulkRequest,  options).toPromise();
     }
 
@@ -13673,7 +14088,7 @@ export class ObjectTenantuserApi {
      * Summary: Post privileges bulk Description: Perform bulk user add preivilege.
      * @param param the request object
      */
-    public tenantuserPostPrivilegesBulk(param: TenantuserApiTenantuserPostPrivilegesBulkRequest, options?: Configuration): Promise<Tenantuserv3PostPrivilegesBulkResponse> {
+    public tenantuserPostPrivilegesBulk(param: TenantuserApiTenantuserPostPrivilegesBulkRequest, options?: ConfigurationOptions): Promise<Tenantuserv3PostPrivilegesBulkResponse> {
         return this.api.tenantuserPostPrivilegesBulk(param.tenantuserv3PostPrivilegesBulkRequest,  options).toPromise();
     }
 
@@ -13681,7 +14096,7 @@ export class ObjectTenantuserApi {
      * Summary: Post role Description: Create a new role.
      * @param param the request object
      */
-    public tenantuserPostRoleWithHttpInfo(param: TenantuserApiTenantuserPostRoleRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3PostRoleResponse>> {
+    public tenantuserPostRoleWithHttpInfo(param: TenantuserApiTenantuserPostRoleRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3PostRoleResponse>> {
         return this.api.tenantuserPostRoleWithHttpInfo(param.tenantuserv3PostRoleRequest,  options).toPromise();
     }
 
@@ -13689,7 +14104,7 @@ export class ObjectTenantuserApi {
      * Summary: Post role Description: Create a new role.
      * @param param the request object
      */
-    public tenantuserPostRole(param: TenantuserApiTenantuserPostRoleRequest, options?: Configuration): Promise<Tenantuserv3PostRoleResponse> {
+    public tenantuserPostRole(param: TenantuserApiTenantuserPostRoleRequest, options?: ConfigurationOptions): Promise<Tenantuserv3PostRoleResponse> {
         return this.api.tenantuserPostRole(param.tenantuserv3PostRoleRequest,  options).toPromise();
     }
 
@@ -13697,7 +14112,7 @@ export class ObjectTenantuserApi {
      * Summary: Update privilege Description: Update privilege.
      * @param param the request object
      */
-    public tenantuserUpdatePrivilegeWithHttpInfo(param: TenantuserApiTenantuserUpdatePrivilegeRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3UpdatePrivilegeResponse>> {
+    public tenantuserUpdatePrivilegeWithHttpInfo(param: TenantuserApiTenantuserUpdatePrivilegeRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3UpdatePrivilegeResponse>> {
         return this.api.tenantuserUpdatePrivilegeWithHttpInfo(param.privilegeId, param.tenantuserv3UpdatePrivilegeRequest,  options).toPromise();
     }
 
@@ -13705,7 +14120,7 @@ export class ObjectTenantuserApi {
      * Summary: Update privilege Description: Update privilege.
      * @param param the request object
      */
-    public tenantuserUpdatePrivilege(param: TenantuserApiTenantuserUpdatePrivilegeRequest, options?: Configuration): Promise<Tenantuserv3UpdatePrivilegeResponse> {
+    public tenantuserUpdatePrivilege(param: TenantuserApiTenantuserUpdatePrivilegeRequest, options?: ConfigurationOptions): Promise<Tenantuserv3UpdatePrivilegeResponse> {
         return this.api.tenantuserUpdatePrivilege(param.privilegeId, param.tenantuserv3UpdatePrivilegeRequest,  options).toPromise();
     }
 
@@ -13713,7 +14128,7 @@ export class ObjectTenantuserApi {
      * Summary: Update privileges role bulk Description: Perform bulk user update role.
      * @param param the request object
      */
-    public tenantuserUpdatePrivilegesRoleBulkWithHttpInfo(param: TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3UpdatePrivilegesBulkResponse>> {
+    public tenantuserUpdatePrivilegesRoleBulkWithHttpInfo(param: TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3UpdatePrivilegesBulkResponse>> {
         return this.api.tenantuserUpdatePrivilegesRoleBulkWithHttpInfo(param.tenantuserv3UpdatePrivilegesBulkRequest,  options).toPromise();
     }
 
@@ -13721,7 +14136,7 @@ export class ObjectTenantuserApi {
      * Summary: Update privileges role bulk Description: Perform bulk user update role.
      * @param param the request object
      */
-    public tenantuserUpdatePrivilegesRoleBulk(param: TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest, options?: Configuration): Promise<Tenantuserv3UpdatePrivilegesBulkResponse> {
+    public tenantuserUpdatePrivilegesRoleBulk(param: TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest, options?: ConfigurationOptions): Promise<Tenantuserv3UpdatePrivilegesBulkResponse> {
         return this.api.tenantuserUpdatePrivilegesRoleBulk(param.tenantuserv3UpdatePrivilegesBulkRequest,  options).toPromise();
     }
 
@@ -13729,7 +14144,7 @@ export class ObjectTenantuserApi {
      * Summary: Update role Description: Update single role.
      * @param param the request object
      */
-    public tenantuserUpdateRoleWithHttpInfo(param: TenantuserApiTenantuserUpdateRoleRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3UpdateRoleResponse>> {
+    public tenantuserUpdateRoleWithHttpInfo(param: TenantuserApiTenantuserUpdateRoleRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3UpdateRoleResponse>> {
         return this.api.tenantuserUpdateRoleWithHttpInfo(param.roleId, param.tenantuserv3UpdateRoleRequest,  options).toPromise();
     }
 
@@ -13737,7 +14152,7 @@ export class ObjectTenantuserApi {
      * Summary: Update role Description: Update single role.
      * @param param the request object
      */
-    public tenantuserUpdateRole(param: TenantuserApiTenantuserUpdateRoleRequest, options?: Configuration): Promise<Tenantuserv3UpdateRoleResponse> {
+    public tenantuserUpdateRole(param: TenantuserApiTenantuserUpdateRoleRequest, options?: ConfigurationOptions): Promise<Tenantuserv3UpdateRoleResponse> {
         return this.api.tenantuserUpdateRole(param.roleId, param.tenantuserv3UpdateRoleRequest,  options).toPromise();
     }
 
@@ -13745,7 +14160,7 @@ export class ObjectTenantuserApi {
      * Summary: Update user role bulk Description: Perform bulk user add or remove role.
      * @param param the request object
      */
-    public tenantuserUpdateUserRoleBulkWithHttpInfo(param: TenantuserApiTenantuserUpdateUserRoleBulkRequest, options?: Configuration): Promise<HttpInfo<Tenantuserv3UpdateUserRoleBulkResponse>> {
+    public tenantuserUpdateUserRoleBulkWithHttpInfo(param: TenantuserApiTenantuserUpdateUserRoleBulkRequest, options?: ConfigurationOptions): Promise<HttpInfo<Tenantuserv3UpdateUserRoleBulkResponse>> {
         return this.api.tenantuserUpdateUserRoleBulkWithHttpInfo(param.tenantuserv3UpdateUserRoleBulkRequest,  options).toPromise();
     }
 
@@ -13753,7 +14168,7 @@ export class ObjectTenantuserApi {
      * Summary: Update user role bulk Description: Perform bulk user add or remove role.
      * @param param the request object
      */
-    public tenantuserUpdateUserRoleBulk(param: TenantuserApiTenantuserUpdateUserRoleBulkRequest, options?: Configuration): Promise<Tenantuserv3UpdateUserRoleBulkResponse> {
+    public tenantuserUpdateUserRoleBulk(param: TenantuserApiTenantuserUpdateUserRoleBulkRequest, options?: ConfigurationOptions): Promise<Tenantuserv3UpdateUserRoleBulkResponse> {
         return this.api.tenantuserUpdateUserRoleBulk(param.tenantuserv3UpdateUserRoleBulkRequest,  options).toPromise();
     }
 
@@ -13765,6 +14180,7 @@ import { ThirdPartyVendorsApiRequestFactory, ThirdPartyVendorsApiResponseProcess
 export interface ThirdPartyVendorsApiGetLinkedVendorRequest {
     /**
      * The third party vendor\&#39;s account ID
+     * Defaults to: undefined
      * @type string
      * @memberof ThirdPartyVendorsApigetLinkedVendor
      */
@@ -13774,6 +14190,7 @@ export interface ThirdPartyVendorsApiGetLinkedVendorRequest {
 export interface ThirdPartyVendorsApiGetSingleLinkedVendorRequest {
     /**
      * vendor id
+     * Defaults to: undefined
      * @type string
      * @memberof ThirdPartyVendorsApigetSingleLinkedVendor
      */
@@ -13783,30 +14200,35 @@ export interface ThirdPartyVendorsApiGetSingleLinkedVendorRequest {
 export interface ThirdPartyVendorsApiListLinkedVendorDataStoresRequest {
     /**
      * The third party vendor\&#39;s account ID
+     * Defaults to: undefined
      * @type string
      * @memberof ThirdPartyVendorsApilistLinkedVendorDataStores
      */
     vendorId: string
     /**
      * 
+     * Defaults to: undefined
      * @type ListVendorDataStoresFilterParameter
      * @memberof ThirdPartyVendorsApilistLinkedVendorDataStores
      */
     filter?: ListVendorDataStoresFilterParameter
     /**
      * 
+     * Defaults to: undefined
      * @type ListLinkedVendorDataStoresSortParameter
      * @memberof ThirdPartyVendorsApilistLinkedVendorDataStores
      */
     sort?: ListLinkedVendorDataStoresSortParameter
     /**
      * 
+     * Defaults to: undefined
      * @type number
      * @memberof ThirdPartyVendorsApilistLinkedVendorDataStores
      */
     pageSize?: number
     /**
      * 
+     * Defaults to: undefined
      * @type string
      * @memberof ThirdPartyVendorsApilistLinkedVendorDataStores
      */
@@ -13819,6 +14241,7 @@ export interface ThirdPartyVendorsApiListLinkedVendorsRequest {
 export interface ThirdPartyVendorsApiListTrustedAssetsRequest {
     /**
      * 
+     * Defaults to: undefined
      * @type ListTrusteesFilterParameter
      * @memberof ThirdPartyVendorsApilistTrustedAssets
      */
@@ -13837,7 +14260,7 @@ export class ObjectThirdPartyVendorsApi {
      * Get additional details of a specific third party vendor
      * @param param the request object
      */
-    public getLinkedVendorWithHttpInfo(param: ThirdPartyVendorsApiGetLinkedVendorRequest, options?: Configuration): Promise<HttpInfo<Array<VendorSummary>>> {
+    public getLinkedVendorWithHttpInfo(param: ThirdPartyVendorsApiGetLinkedVendorRequest, options?: ConfigurationOptions): Promise<HttpInfo<Array<VendorSummary>>> {
         return this.api.getLinkedVendorWithHttpInfo(param.vendorId,  options).toPromise();
     }
 
@@ -13846,7 +14269,7 @@ export class ObjectThirdPartyVendorsApi {
      * Get additional details of a specific third party vendor
      * @param param the request object
      */
-    public getLinkedVendor(param: ThirdPartyVendorsApiGetLinkedVendorRequest, options?: Configuration): Promise<Array<VendorSummary>> {
+    public getLinkedVendor(param: ThirdPartyVendorsApiGetLinkedVendorRequest, options?: ConfigurationOptions): Promise<Array<VendorSummary>> {
         return this.api.getLinkedVendor(param.vendorId,  options).toPromise();
     }
 
@@ -13855,7 +14278,7 @@ export class ObjectThirdPartyVendorsApi {
      * Get the third party vendors list
      * @param param the request object
      */
-    public getSingleLinkedVendorWithHttpInfo(param: ThirdPartyVendorsApiGetSingleLinkedVendorRequest, options?: Configuration): Promise<HttpInfo<LinkedVendor>> {
+    public getSingleLinkedVendorWithHttpInfo(param: ThirdPartyVendorsApiGetSingleLinkedVendorRequest, options?: ConfigurationOptions): Promise<HttpInfo<LinkedVendor>> {
         return this.api.getSingleLinkedVendorWithHttpInfo(param.vendorId,  options).toPromise();
     }
 
@@ -13864,7 +14287,7 @@ export class ObjectThirdPartyVendorsApi {
      * Get the third party vendors list
      * @param param the request object
      */
-    public getSingleLinkedVendor(param: ThirdPartyVendorsApiGetSingleLinkedVendorRequest, options?: Configuration): Promise<LinkedVendor> {
+    public getSingleLinkedVendor(param: ThirdPartyVendorsApiGetSingleLinkedVendorRequest, options?: ConfigurationOptions): Promise<LinkedVendor> {
         return this.api.getSingleLinkedVendor(param.vendorId,  options).toPromise();
     }
 
@@ -13873,7 +14296,7 @@ export class ObjectThirdPartyVendorsApi {
      * Get the data stores associated with a third party vendor
      * @param param the request object
      */
-    public listLinkedVendorDataStoresWithHttpInfo(param: ThirdPartyVendorsApiListLinkedVendorDataStoresRequest, options?: Configuration): Promise<HttpInfo<ListLinkedVendorDataStores200Response>> {
+    public listLinkedVendorDataStoresWithHttpInfo(param: ThirdPartyVendorsApiListLinkedVendorDataStoresRequest, options?: ConfigurationOptions): Promise<HttpInfo<ListLinkedVendorDataStores200Response>> {
         return this.api.listLinkedVendorDataStoresWithHttpInfo(param.vendorId, param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -13882,7 +14305,7 @@ export class ObjectThirdPartyVendorsApi {
      * Get the data stores associated with a third party vendor
      * @param param the request object
      */
-    public listLinkedVendorDataStores(param: ThirdPartyVendorsApiListLinkedVendorDataStoresRequest, options?: Configuration): Promise<ListLinkedVendorDataStores200Response> {
+    public listLinkedVendorDataStores(param: ThirdPartyVendorsApiListLinkedVendorDataStoresRequest, options?: ConfigurationOptions): Promise<ListLinkedVendorDataStores200Response> {
         return this.api.listLinkedVendorDataStores(param.vendorId, param.filter, param.sort, param.pageSize, param.nextToken,  options).toPromise();
     }
 
@@ -13891,7 +14314,7 @@ export class ObjectThirdPartyVendorsApi {
      * Get the summary of a third party vendor
      * @param param the request object
      */
-    public listLinkedVendorsWithHttpInfo(param: ThirdPartyVendorsApiListLinkedVendorsRequest = {}, options?: Configuration): Promise<HttpInfo<Array<LinkedVendor>>> {
+    public listLinkedVendorsWithHttpInfo(param: ThirdPartyVendorsApiListLinkedVendorsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Array<LinkedVendor>>> {
         return this.api.listLinkedVendorsWithHttpInfo( options).toPromise();
     }
 
@@ -13900,7 +14323,7 @@ export class ObjectThirdPartyVendorsApi {
      * Get the summary of a third party vendor
      * @param param the request object
      */
-    public listLinkedVendors(param: ThirdPartyVendorsApiListLinkedVendorsRequest = {}, options?: Configuration): Promise<Array<LinkedVendor>> {
+    public listLinkedVendors(param: ThirdPartyVendorsApiListLinkedVendorsRequest = {}, options?: ConfigurationOptions): Promise<Array<LinkedVendor>> {
         return this.api.listLinkedVendors( options).toPromise();
     }
 
@@ -13909,7 +14332,7 @@ export class ObjectThirdPartyVendorsApi {
      * Get a list of all the actual trusted assets
      * @param param the request object
      */
-    public listTrustedAssetsWithHttpInfo(param: ThirdPartyVendorsApiListTrustedAssetsRequest = {}, options?: Configuration): Promise<HttpInfo<Array<Trustee>>> {
+    public listTrustedAssetsWithHttpInfo(param: ThirdPartyVendorsApiListTrustedAssetsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Array<Trustee>>> {
         return this.api.listTrustedAssetsWithHttpInfo(param.filter,  options).toPromise();
     }
 
@@ -13918,7 +14341,7 @@ export class ObjectThirdPartyVendorsApi {
      * Get a list of all the actual trusted assets
      * @param param the request object
      */
-    public listTrustedAssets(param: ThirdPartyVendorsApiListTrustedAssetsRequest = {}, options?: Configuration): Promise<Array<Trustee>> {
+    public listTrustedAssets(param: ThirdPartyVendorsApiListTrustedAssetsRequest = {}, options?: ConfigurationOptions): Promise<Array<Trustee>> {
         return this.api.listTrustedAssets(param.filter,  options).toPromise();
     }
 
@@ -13936,6 +14359,7 @@ export interface UniversalConnectorManagerApiUniversalConnectorManagerGetConnect
 export interface UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest {
     /**
      * UC plugin id.
+     * Defaults to: undefined
      * @type number
      * @memberof UniversalConnectorManagerApiuniversalConnectorManagerGetUCSetup
      */
@@ -13968,7 +14392,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC.
      * @param param the request object
      */
-    public universalConnectorManagerGetCertificateWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerGetCertificateRequest = {}, options?: Configuration): Promise<HttpInfo<Universalconnectormanagerv3FileResponse>> {
+    public universalConnectorManagerGetCertificateWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerGetCertificateRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Universalconnectormanagerv3FileResponse>> {
         return this.api.universalConnectorManagerGetCertificateWithHttpInfo( options).toPromise();
     }
 
@@ -13976,7 +14400,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Summary: Get certificate Description: Get the certificate that allows secure communication between data sources and universal connections in GDSC.
      * @param param the request object
      */
-    public universalConnectorManagerGetCertificate(param: UniversalConnectorManagerApiUniversalConnectorManagerGetCertificateRequest = {}, options?: Configuration): Promise<Universalconnectormanagerv3FileResponse> {
+    public universalConnectorManagerGetCertificate(param: UniversalConnectorManagerApiUniversalConnectorManagerGetCertificateRequest = {}, options?: ConfigurationOptions): Promise<Universalconnectormanagerv3FileResponse> {
         return this.api.universalConnectorManagerGetCertificate( options).toPromise();
     }
 
@@ -13984,7 +14408,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Summary: Get connectors Description: Get all the connectors Universal Connector can support. Includes a list of event pipelines (input--filter pairs), along with the supported data source types and platforms.
      * @param param the request object
      */
-    public universalConnectorManagerGetConnectorsWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerGetConnectorsRequest = {}, options?: Configuration): Promise<HttpInfo<Universalconnectormanagerv3GetConnectorsResponse>> {
+    public universalConnectorManagerGetConnectorsWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerGetConnectorsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Universalconnectormanagerv3GetConnectorsResponse>> {
         return this.api.universalConnectorManagerGetConnectorsWithHttpInfo( options).toPromise();
     }
 
@@ -13992,7 +14416,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Summary: Get connectors Description: Get all the connectors Universal Connector can support. Includes a list of event pipelines (input--filter pairs), along with the supported data source types and platforms.
      * @param param the request object
      */
-    public universalConnectorManagerGetConnectors(param: UniversalConnectorManagerApiUniversalConnectorManagerGetConnectorsRequest = {}, options?: Configuration): Promise<Universalconnectormanagerv3GetConnectorsResponse> {
+    public universalConnectorManagerGetConnectors(param: UniversalConnectorManagerApiUniversalConnectorManagerGetConnectorsRequest = {}, options?: ConfigurationOptions): Promise<Universalconnectormanagerv3GetConnectorsResponse> {
         return this.api.universalConnectorManagerGetConnectors( options).toPromise();
     }
 
@@ -14000,7 +14424,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Gets information to setup the new Universal connection.
      * @param param the request object
      */
-    public universalConnectorManagerGetUCSetupWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest, options?: Configuration): Promise<HttpInfo<Universalconnectormanagerv3GetUCSetupResponse>> {
+    public universalConnectorManagerGetUCSetupWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest, options?: ConfigurationOptions): Promise<HttpInfo<Universalconnectormanagerv3GetUCSetupResponse>> {
         return this.api.universalConnectorManagerGetUCSetupWithHttpInfo(param.pluginId,  options).toPromise();
     }
 
@@ -14008,7 +14432,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Gets information to setup the new Universal connection.
      * @param param the request object
      */
-    public universalConnectorManagerGetUCSetup(param: UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest, options?: Configuration): Promise<Universalconnectormanagerv3GetUCSetupResponse> {
+    public universalConnectorManagerGetUCSetup(param: UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest, options?: ConfigurationOptions): Promise<Universalconnectormanagerv3GetUCSetupResponse> {
         return this.api.universalConnectorManagerGetUCSetup(param.pluginId,  options).toPromise();
     }
 
@@ -14016,7 +14440,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Summary: List connections summary Description: List a summary of Universal Connector configured connections (AKA datasources).
      * @param param the request object
      */
-    public universalConnectorManagerListConnectionsSummaryWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerListConnectionsSummaryRequest = {}, options?: Configuration): Promise<HttpInfo<Universalconnectormanagerv3ListConnectionsResponse>> {
+    public universalConnectorManagerListConnectionsSummaryWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerListConnectionsSummaryRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Universalconnectormanagerv3ListConnectionsResponse>> {
         return this.api.universalConnectorManagerListConnectionsSummaryWithHttpInfo( options).toPromise();
     }
 
@@ -14024,7 +14448,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Summary: List connections summary Description: List a summary of Universal Connector configured connections (AKA datasources).
      * @param param the request object
      */
-    public universalConnectorManagerListConnectionsSummary(param: UniversalConnectorManagerApiUniversalConnectorManagerListConnectionsSummaryRequest = {}, options?: Configuration): Promise<Universalconnectormanagerv3ListConnectionsResponse> {
+    public universalConnectorManagerListConnectionsSummary(param: UniversalConnectorManagerApiUniversalConnectorManagerListConnectionsSummaryRequest = {}, options?: ConfigurationOptions): Promise<Universalconnectormanagerv3ListConnectionsResponse> {
         return this.api.universalConnectorManagerListConnectionsSummary( options).toPromise();
     }
 
@@ -14032,7 +14456,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Summary: Plugins list Description: List of all universal connector plugins.
      * @param param the request object
      */
-    public universalConnectorManagerPluginsListWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerPluginsListRequest = {}, options?: Configuration): Promise<HttpInfo<Universalconnectormanagerv3PluginsListResponse>> {
+    public universalConnectorManagerPluginsListWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerPluginsListRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Universalconnectormanagerv3PluginsListResponse>> {
         return this.api.universalConnectorManagerPluginsListWithHttpInfo( options).toPromise();
     }
 
@@ -14040,7 +14464,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Summary: Plugins list Description: List of all universal connector plugins.
      * @param param the request object
      */
-    public universalConnectorManagerPluginsList(param: UniversalConnectorManagerApiUniversalConnectorManagerPluginsListRequest = {}, options?: Configuration): Promise<Universalconnectormanagerv3PluginsListResponse> {
+    public universalConnectorManagerPluginsList(param: UniversalConnectorManagerApiUniversalConnectorManagerPluginsListRequest = {}, options?: ConfigurationOptions): Promise<Universalconnectormanagerv3PluginsListResponse> {
         return this.api.universalConnectorManagerPluginsList( options).toPromise();
     }
 
@@ -14048,7 +14472,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Summary: Upload plugin Description: Upload a plugin-package for Universal Connector.
      * @param param the request object
      */
-    public universalConnectorManagerUploadPluginWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerUploadPluginRequest, options?: Configuration): Promise<HttpInfo<RpcStatus>> {
+    public universalConnectorManagerUploadPluginWithHttpInfo(param: UniversalConnectorManagerApiUniversalConnectorManagerUploadPluginRequest, options?: ConfigurationOptions): Promise<HttpInfo<RpcStatus>> {
         return this.api.universalConnectorManagerUploadPluginWithHttpInfo(param.universalconnectormanagerv3UploadPluginRequest,  options).toPromise();
     }
 
@@ -14056,7 +14480,7 @@ export class ObjectUniversalConnectorManagerApi {
      * Summary: Upload plugin Description: Upload a plugin-package for Universal Connector.
      * @param param the request object
      */
-    public universalConnectorManagerUploadPlugin(param: UniversalConnectorManagerApiUniversalConnectorManagerUploadPluginRequest, options?: Configuration): Promise<RpcStatus> {
+    public universalConnectorManagerUploadPlugin(param: UniversalConnectorManagerApiUniversalConnectorManagerUploadPluginRequest, options?: ConfigurationOptions): Promise<RpcStatus> {
         return this.api.universalConnectorManagerUploadPlugin(param.universalconnectormanagerv3UploadPluginRequest,  options).toPromise();
     }
 
@@ -14092,6 +14516,7 @@ export interface VulnerabilityManagementServiceApiVulnerabilityManagementService
 export interface VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest {
     /**
      * ID for the record to return.
+     * Defaults to: undefined
      * @type string
      * @memberof VulnerabilityManagementServiceApivulnerabilityManagementServiceGetVulnerability
      */
@@ -14127,7 +14552,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Create a vulnerability Description: Create a vulnerability based on request
      * @param param the request object
      */
-    public vulnerabilityManagementServiceCreateVulnerabilityWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateVulnerabilityRequest, options?: Configuration): Promise<HttpInfo<Vulmanagementv3CreateVulnerabilityResponse>> {
+    public vulnerabilityManagementServiceCreateVulnerabilityWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateVulnerabilityRequest, options?: ConfigurationOptions): Promise<HttpInfo<Vulmanagementv3CreateVulnerabilityResponse>> {
         return this.api.vulnerabilityManagementServiceCreateVulnerabilityWithHttpInfo(param.vulmanagementv3CreateVulnerabilityRequest,  options).toPromise();
     }
 
@@ -14135,7 +14560,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Create a vulnerability Description: Create a vulnerability based on request
      * @param param the request object
      */
-    public vulnerabilityManagementServiceCreateVulnerability(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateVulnerabilityRequest, options?: Configuration): Promise<Vulmanagementv3CreateVulnerabilityResponse> {
+    public vulnerabilityManagementServiceCreateVulnerability(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateVulnerabilityRequest, options?: ConfigurationOptions): Promise<Vulmanagementv3CreateVulnerabilityResponse> {
         return this.api.vulnerabilityManagementServiceCreateVulnerability(param.vulmanagementv3CreateVulnerabilityRequest,  options).toPromise();
     }
 
@@ -14143,7 +14568,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Get filters for vulnerabilities Description: Get a list of filters category and sub category with all data.
      * @param param the request object
      */
-    public vulnerabilityManagementServiceGetFiltersForVulnerabilitiesWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetFiltersForVulnerabilitiesRequest = {}, options?: Configuration): Promise<HttpInfo<Vulmanagementv3GetFiltersDataResponse>> {
+    public vulnerabilityManagementServiceGetFiltersForVulnerabilitiesWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetFiltersForVulnerabilitiesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Vulmanagementv3GetFiltersDataResponse>> {
         return this.api.vulnerabilityManagementServiceGetFiltersForVulnerabilitiesWithHttpInfo( options).toPromise();
     }
 
@@ -14151,7 +14576,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Get filters for vulnerabilities Description: Get a list of filters category and sub category with all data.
      * @param param the request object
      */
-    public vulnerabilityManagementServiceGetFiltersForVulnerabilities(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetFiltersForVulnerabilitiesRequest = {}, options?: Configuration): Promise<Vulmanagementv3GetFiltersDataResponse> {
+    public vulnerabilityManagementServiceGetFiltersForVulnerabilities(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetFiltersForVulnerabilitiesRequest = {}, options?: ConfigurationOptions): Promise<Vulmanagementv3GetFiltersDataResponse> {
         return this.api.vulnerabilityManagementServiceGetFiltersForVulnerabilities( options).toPromise();
     }
 
@@ -14159,7 +14584,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Get vulnerabilities Description: Returns a list of vulnerabilities.
      * @param param the request object
      */
-    public vulnerabilityManagementServiceGetVulnerabilitiesWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesRequest, options?: Configuration): Promise<HttpInfo<Vulmanagementv3GetVulnerabilitiesResponse>> {
+    public vulnerabilityManagementServiceGetVulnerabilitiesWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Vulmanagementv3GetVulnerabilitiesResponse>> {
         return this.api.vulnerabilityManagementServiceGetVulnerabilitiesWithHttpInfo(param.vulmanagementv3GetVulnerabilitiesRequest,  options).toPromise();
     }
 
@@ -14167,7 +14592,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Get vulnerabilities Description: Returns a list of vulnerabilities.
      * @param param the request object
      */
-    public vulnerabilityManagementServiceGetVulnerabilities(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesRequest, options?: Configuration): Promise<Vulmanagementv3GetVulnerabilitiesResponse> {
+    public vulnerabilityManagementServiceGetVulnerabilities(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesRequest, options?: ConfigurationOptions): Promise<Vulmanagementv3GetVulnerabilitiesResponse> {
         return this.api.vulnerabilityManagementServiceGetVulnerabilities(param.vulmanagementv3GetVulnerabilitiesRequest,  options).toPromise();
     }
 
@@ -14175,7 +14600,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Get vulnerabilities stats Description: Get various vulnerabilities stats.
      * @param param the request object
      */
-    public vulnerabilityManagementServiceGetVulnerabilitiesStatsWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesStatsRequest = {}, options?: Configuration): Promise<HttpInfo<Vulmanagementv3VulnerabilitiesStatsDataResponse>> {
+    public vulnerabilityManagementServiceGetVulnerabilitiesStatsWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesStatsRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Vulmanagementv3VulnerabilitiesStatsDataResponse>> {
         return this.api.vulnerabilityManagementServiceGetVulnerabilitiesStatsWithHttpInfo( options).toPromise();
     }
 
@@ -14183,7 +14608,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Get vulnerabilities stats Description: Get various vulnerabilities stats.
      * @param param the request object
      */
-    public vulnerabilityManagementServiceGetVulnerabilitiesStats(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesStatsRequest = {}, options?: Configuration): Promise<Vulmanagementv3VulnerabilitiesStatsDataResponse> {
+    public vulnerabilityManagementServiceGetVulnerabilitiesStats(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesStatsRequest = {}, options?: ConfigurationOptions): Promise<Vulmanagementv3VulnerabilitiesStatsDataResponse> {
         return this.api.vulnerabilityManagementServiceGetVulnerabilitiesStats( options).toPromise();
     }
 
@@ -14191,7 +14616,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Get vulnerability Description: Returns a vulnerability based on vulnerability.
      * @param param the request object
      */
-    public vulnerabilityManagementServiceGetVulnerabilityWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest, options?: Configuration): Promise<HttpInfo<Vulmanagementv3GetVulnerabilityResponse>> {
+    public vulnerabilityManagementServiceGetVulnerabilityWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest, options?: ConfigurationOptions): Promise<HttpInfo<Vulmanagementv3GetVulnerabilityResponse>> {
         return this.api.vulnerabilityManagementServiceGetVulnerabilityWithHttpInfo(param.vulnerabilityId,  options).toPromise();
     }
 
@@ -14199,7 +14624,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Get vulnerability Description: Returns a vulnerability based on vulnerability.
      * @param param the request object
      */
-    public vulnerabilityManagementServiceGetVulnerability(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest, options?: Configuration): Promise<Vulmanagementv3GetVulnerabilityResponse> {
+    public vulnerabilityManagementServiceGetVulnerability(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest, options?: ConfigurationOptions): Promise<Vulmanagementv3GetVulnerabilityResponse> {
         return this.api.vulnerabilityManagementServiceGetVulnerability(param.vulnerabilityId,  options).toPromise();
     }
 
@@ -14207,7 +14632,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Updates comments, assignee, and status for vulnerabilities
      * @param param the request object
      */
-    public vulnerabilityManagementServiceUpdateVulnerabilitiesWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateVulnerabilitiesRequest, options?: Configuration): Promise<HttpInfo<Vulmanagementv3UpdateVulnerabilitiesResponse>> {
+    public vulnerabilityManagementServiceUpdateVulnerabilitiesWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateVulnerabilitiesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Vulmanagementv3UpdateVulnerabilitiesResponse>> {
         return this.api.vulnerabilityManagementServiceUpdateVulnerabilitiesWithHttpInfo(param.vulmanagementv3UpdateVulnerabilitiesRequest,  options).toPromise();
     }
 
@@ -14215,7 +14640,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Updates comments, assignee, and status for vulnerabilities
      * @param param the request object
      */
-    public vulnerabilityManagementServiceUpdateVulnerabilities(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateVulnerabilitiesRequest, options?: Configuration): Promise<Vulmanagementv3UpdateVulnerabilitiesResponse> {
+    public vulnerabilityManagementServiceUpdateVulnerabilities(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateVulnerabilitiesRequest, options?: ConfigurationOptions): Promise<Vulmanagementv3UpdateVulnerabilitiesResponse> {
         return this.api.vulnerabilityManagementServiceUpdateVulnerabilities(param.vulmanagementv3UpdateVulnerabilitiesRequest,  options).toPromise();
     }
 
@@ -14223,7 +14648,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Vulnerability ingest manual trigger Description: Manual trigger for Scheduled Vulnerability Ingestion.
      * @param param the request object
      */
-    public vulnerabilityManagementServiceVulnerabilityIngestionManualTriggerWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceVulnerabilityIngestionManualTriggerRequest, options?: Configuration): Promise<HttpInfo<Vulmanagementv3VulnerabilityIngestionResponse>> {
+    public vulnerabilityManagementServiceVulnerabilityIngestionManualTriggerWithHttpInfo(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceVulnerabilityIngestionManualTriggerRequest, options?: ConfigurationOptions): Promise<HttpInfo<Vulmanagementv3VulnerabilityIngestionResponse>> {
         return this.api.vulnerabilityManagementServiceVulnerabilityIngestionManualTriggerWithHttpInfo(param.body,  options).toPromise();
     }
 
@@ -14231,7 +14656,7 @@ export class ObjectVulnerabilityManagementServiceApi {
      * Summary: Vulnerability ingest manual trigger Description: Manual trigger for Scheduled Vulnerability Ingestion.
      * @param param the request object
      */
-    public vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceVulnerabilityIngestionManualTriggerRequest, options?: Configuration): Promise<Vulmanagementv3VulnerabilityIngestionResponse> {
+    public vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger(param: VulnerabilityManagementServiceApiVulnerabilityManagementServiceVulnerabilityIngestionManualTriggerRequest, options?: ConfigurationOptions): Promise<Vulmanagementv3VulnerabilityIngestionResponse> {
         return this.api.vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger(param.body,  options).toPromise();
     }
 
@@ -14261,6 +14686,7 @@ export interface WorkflowApiWorkflowCreateProductEntityRequest {
 export interface WorkflowApiWorkflowCreateTaskRequest {
     /**
      * Create tasks with common parent.
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowCreateTask
      */
@@ -14285,6 +14711,7 @@ export interface WorkflowApiWorkflowCreateWorkflowEventRequest {
 export interface WorkflowApiWorkflowDeleteProductEntityRequest {
     /**
      * Unique id for the product entity
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowDeleteProductEntity
      */
@@ -14294,24 +14721,28 @@ export interface WorkflowApiWorkflowDeleteProductEntityRequest {
 export interface WorkflowApiWorkflowGetCasesRequest {
     /**
      * Optional case_id to get a response of an array of one member.
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowGetCases
      */
     caseId?: string
     /**
      * Optional field to sort by | first character determines ascending (&gt;) or descending (&lt;).
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowGetCases
      */
     sortBy?: string
     /**
      * Optional starting point for the page of data.
+     * Defaults to: undefined
      * @type number
      * @memberof WorkflowApiworkflowGetCases
      */
     offset?: number
     /**
      * Optional page size.
+     * Defaults to: undefined
      * @type number
      * @memberof WorkflowApiworkflowGetCases
      */
@@ -14330,12 +14761,14 @@ export interface WorkflowApiWorkflowGetCasesCountRequest {
 export interface WorkflowApiWorkflowGetFilenameRequest {
     /**
      * Can be \&quot;*\&quot; if JWT token contains the case_id.
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowGetFilename
      */
     caseId: string
     /**
      * Can be \&quot;*\&quot; if JWT token contains the task_id.
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowGetFilename
      */
@@ -14345,6 +14778,7 @@ export interface WorkflowApiWorkflowGetFilenameRequest {
 export interface WorkflowApiWorkflowGetJobsCountRequest {
     /**
      * Case ID - can be * for all
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowGetJobsCount
      */
@@ -14360,12 +14794,14 @@ export interface WorkflowApiWorkflowGetJobsCountRequest {
 export interface WorkflowApiWorkflowGetProductEntitiesRequest {
     /**
      * Optional starting point for the page of data.
+     * Defaults to: undefined
      * @type number
      * @memberof WorkflowApiworkflowGetProductEntities
      */
     offset?: number
     /**
      * Optional page size.
+     * Defaults to: undefined
      * @type number
      * @memberof WorkflowApiworkflowGetProductEntities
      */
@@ -14375,6 +14811,7 @@ export interface WorkflowApiWorkflowGetProductEntitiesRequest {
 export interface WorkflowApiWorkflowGetProductEntityRequest {
     /**
      * Unique id for the product entity
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowGetProductEntity
      */
@@ -14384,24 +14821,28 @@ export interface WorkflowApiWorkflowGetProductEntityRequest {
 export interface WorkflowApiWorkflowGetReportResultRequest {
     /**
      * ID to get the case  (read-only).
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowGetReportResult
      */
     caseId: string
     /**
      * ID to get the task for case(read-only).
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowGetReportResult
      */
     taskId: string
     /**
      * Optional starting point for the page of data.
+     * Defaults to: undefined
      * @type number
      * @memberof WorkflowApiworkflowGetReportResult
      */
     offset?: number
     /**
      * Optional page size.
+     * Defaults to: undefined
      * @type number
      * @memberof WorkflowApiworkflowGetReportResult
      */
@@ -14411,12 +14852,14 @@ export interface WorkflowApiWorkflowGetReportResultRequest {
 export interface WorkflowApiWorkflowGetTasksRequest {
     /**
      * Mandaroty: The parent case which contains the tasks.
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowGetTasks
      */
     caseId: string
     /**
      * Optional: task_id to return an array of one.
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowGetTasks
      */
@@ -14426,6 +14869,7 @@ export interface WorkflowApiWorkflowGetTasksRequest {
 export interface WorkflowApiWorkflowGetTasksCountRequest {
     /**
      * Case ID - can be * for all
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowGetTasksCount
      */
@@ -14459,6 +14903,7 @@ export interface WorkflowApiWorkflowSearchReportsRequest {
 export interface WorkflowApiWorkflowSearchTasksRequest {
     /**
      * Case ID - can be * for all
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowSearchTasks
      */
@@ -14483,6 +14928,7 @@ export interface WorkflowApiWorkflowUpdateCasesRequest {
 export interface WorkflowApiWorkflowUpdateProductEntityRequest {
     /**
      * Unique Entity id, required for update.
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowUpdateProductEntity
      */
@@ -14498,6 +14944,7 @@ export interface WorkflowApiWorkflowUpdateProductEntityRequest {
 export interface WorkflowApiWorkflowUpdateTasksRequest {
     /**
      * Update tasks belonging to common parent.
+     * Defaults to: undefined
      * @type string
      * @memberof WorkflowApiworkflowUpdateTasks
      */
@@ -14521,7 +14968,7 @@ export class ObjectWorkflowApi {
      * Summary: Create case Description: Create single case.
      * @param param the request object
      */
-    public workflowCreateCaseWithHttpInfo(param: WorkflowApiWorkflowCreateCaseRequest, options?: Configuration): Promise<HttpInfo<Workflowv3CreateCaseResponse>> {
+    public workflowCreateCaseWithHttpInfo(param: WorkflowApiWorkflowCreateCaseRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3CreateCaseResponse>> {
         return this.api.workflowCreateCaseWithHttpInfo(param.workflowv3CreateCaseRequest,  options).toPromise();
     }
 
@@ -14529,7 +14976,7 @@ export class ObjectWorkflowApi {
      * Summary: Create case Description: Create single case.
      * @param param the request object
      */
-    public workflowCreateCase(param: WorkflowApiWorkflowCreateCaseRequest, options?: Configuration): Promise<Workflowv3CreateCaseResponse> {
+    public workflowCreateCase(param: WorkflowApiWorkflowCreateCaseRequest, options?: ConfigurationOptions): Promise<Workflowv3CreateCaseResponse> {
         return this.api.workflowCreateCase(param.workflowv3CreateCaseRequest,  options).toPromise();
     }
 
@@ -14537,7 +14984,7 @@ export class ObjectWorkflowApi {
      * Summary: Create product entity Description: Create single product entity.
      * @param param the request object
      */
-    public workflowCreateProductEntityWithHttpInfo(param: WorkflowApiWorkflowCreateProductEntityRequest, options?: Configuration): Promise<HttpInfo<Workflowv3CreateProductEntityResponse>> {
+    public workflowCreateProductEntityWithHttpInfo(param: WorkflowApiWorkflowCreateProductEntityRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3CreateProductEntityResponse>> {
         return this.api.workflowCreateProductEntityWithHttpInfo(param.workflowv3ProductEntity,  options).toPromise();
     }
 
@@ -14545,7 +14992,7 @@ export class ObjectWorkflowApi {
      * Summary: Create product entity Description: Create single product entity.
      * @param param the request object
      */
-    public workflowCreateProductEntity(param: WorkflowApiWorkflowCreateProductEntityRequest, options?: Configuration): Promise<Workflowv3CreateProductEntityResponse> {
+    public workflowCreateProductEntity(param: WorkflowApiWorkflowCreateProductEntityRequest, options?: ConfigurationOptions): Promise<Workflowv3CreateProductEntityResponse> {
         return this.api.workflowCreateProductEntity(param.workflowv3ProductEntity,  options).toPromise();
     }
 
@@ -14553,7 +15000,7 @@ export class ObjectWorkflowApi {
      * Summary: Create task Description: Create single task within a parent case.
      * @param param the request object
      */
-    public workflowCreateTaskWithHttpInfo(param: WorkflowApiWorkflowCreateTaskRequest, options?: Configuration): Promise<HttpInfo<Workflowv3CreateTaskResponse>> {
+    public workflowCreateTaskWithHttpInfo(param: WorkflowApiWorkflowCreateTaskRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3CreateTaskResponse>> {
         return this.api.workflowCreateTaskWithHttpInfo(param.caseId, param.workflowv3CreateTaskRequest,  options).toPromise();
     }
 
@@ -14561,7 +15008,7 @@ export class ObjectWorkflowApi {
      * Summary: Create task Description: Create single task within a parent case.
      * @param param the request object
      */
-    public workflowCreateTask(param: WorkflowApiWorkflowCreateTaskRequest, options?: Configuration): Promise<Workflowv3CreateTaskResponse> {
+    public workflowCreateTask(param: WorkflowApiWorkflowCreateTaskRequest, options?: ConfigurationOptions): Promise<Workflowv3CreateTaskResponse> {
         return this.api.workflowCreateTask(param.caseId, param.workflowv3CreateTaskRequest,  options).toPromise();
     }
 
@@ -14569,7 +15016,7 @@ export class ObjectWorkflowApi {
      * Summary: Post event for processing by workflow rules Description: Find matching workflow rule and run it
      * @param param the request object
      */
-    public workflowCreateWorkflowEventWithHttpInfo(param: WorkflowApiWorkflowCreateWorkflowEventRequest, options?: Configuration): Promise<HttpInfo<Workflowv3WorkflowEventResponse>> {
+    public workflowCreateWorkflowEventWithHttpInfo(param: WorkflowApiWorkflowCreateWorkflowEventRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3WorkflowEventResponse>> {
         return this.api.workflowCreateWorkflowEventWithHttpInfo(param.workflowv3WorkflowEvent,  options).toPromise();
     }
 
@@ -14577,7 +15024,7 @@ export class ObjectWorkflowApi {
      * Summary: Post event for processing by workflow rules Description: Find matching workflow rule and run it
      * @param param the request object
      */
-    public workflowCreateWorkflowEvent(param: WorkflowApiWorkflowCreateWorkflowEventRequest, options?: Configuration): Promise<Workflowv3WorkflowEventResponse> {
+    public workflowCreateWorkflowEvent(param: WorkflowApiWorkflowCreateWorkflowEventRequest, options?: ConfigurationOptions): Promise<Workflowv3WorkflowEventResponse> {
         return this.api.workflowCreateWorkflowEvent(param.workflowv3WorkflowEvent,  options).toPromise();
     }
 
@@ -14585,7 +15032,7 @@ export class ObjectWorkflowApi {
      * Summary: Delete a product entity Description: Delete a single product entity.
      * @param param the request object
      */
-    public workflowDeleteProductEntityWithHttpInfo(param: WorkflowApiWorkflowDeleteProductEntityRequest, options?: Configuration): Promise<HttpInfo<Workflowv3DeleteProductEntityResponse>> {
+    public workflowDeleteProductEntityWithHttpInfo(param: WorkflowApiWorkflowDeleteProductEntityRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3DeleteProductEntityResponse>> {
         return this.api.workflowDeleteProductEntityWithHttpInfo(param.entityId,  options).toPromise();
     }
 
@@ -14593,7 +15040,7 @@ export class ObjectWorkflowApi {
      * Summary: Delete a product entity Description: Delete a single product entity.
      * @param param the request object
      */
-    public workflowDeleteProductEntity(param: WorkflowApiWorkflowDeleteProductEntityRequest, options?: Configuration): Promise<Workflowv3DeleteProductEntityResponse> {
+    public workflowDeleteProductEntity(param: WorkflowApiWorkflowDeleteProductEntityRequest, options?: ConfigurationOptions): Promise<Workflowv3DeleteProductEntityResponse> {
         return this.api.workflowDeleteProductEntity(param.entityId,  options).toPromise();
     }
 
@@ -14601,7 +15048,7 @@ export class ObjectWorkflowApi {
      * Summary: Get cases Description: Return all cases requested.
      * @param param the request object
      */
-    public workflowGetCasesWithHttpInfo(param: WorkflowApiWorkflowGetCasesRequest = {}, options?: Configuration): Promise<HttpInfo<Workflowv3CaseListResponse>> {
+    public workflowGetCasesWithHttpInfo(param: WorkflowApiWorkflowGetCasesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3CaseListResponse>> {
         return this.api.workflowGetCasesWithHttpInfo(param.caseId, param.sortBy, param.offset, param.limit,  options).toPromise();
     }
 
@@ -14609,7 +15056,7 @@ export class ObjectWorkflowApi {
      * Summary: Get cases Description: Return all cases requested.
      * @param param the request object
      */
-    public workflowGetCases(param: WorkflowApiWorkflowGetCasesRequest = {}, options?: Configuration): Promise<Workflowv3CaseListResponse> {
+    public workflowGetCases(param: WorkflowApiWorkflowGetCasesRequest = {}, options?: ConfigurationOptions): Promise<Workflowv3CaseListResponse> {
         return this.api.workflowGetCases(param.caseId, param.sortBy, param.offset, param.limit,  options).toPromise();
     }
 
@@ -14617,7 +15064,7 @@ export class ObjectWorkflowApi {
      * Summary: Get cases count Description: Get case count.
      * @param param the request object
      */
-    public workflowGetCasesCountWithHttpInfo(param: WorkflowApiWorkflowGetCasesCountRequest, options?: Configuration): Promise<HttpInfo<Workflowv3GetCasesCountResponse>> {
+    public workflowGetCasesCountWithHttpInfo(param: WorkflowApiWorkflowGetCasesCountRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3GetCasesCountResponse>> {
         return this.api.workflowGetCasesCountWithHttpInfo(param.workflowv3GetCasesCountRequest,  options).toPromise();
     }
 
@@ -14625,7 +15072,7 @@ export class ObjectWorkflowApi {
      * Summary: Get cases count Description: Get case count.
      * @param param the request object
      */
-    public workflowGetCasesCount(param: WorkflowApiWorkflowGetCasesCountRequest, options?: Configuration): Promise<Workflowv3GetCasesCountResponse> {
+    public workflowGetCasesCount(param: WorkflowApiWorkflowGetCasesCountRequest, options?: ConfigurationOptions): Promise<Workflowv3GetCasesCountResponse> {
         return this.api.workflowGetCasesCount(param.workflowv3GetCasesCountRequest,  options).toPromise();
     }
 
@@ -14633,7 +15080,7 @@ export class ObjectWorkflowApi {
      * Summary: Get filename Description: Return filename associated with the task referenced in the associated context record.
      * @param param the request object
      */
-    public workflowGetFilenameWithHttpInfo(param: WorkflowApiWorkflowGetFilenameRequest, options?: Configuration): Promise<HttpInfo<Workflowv3GetFilenameResponse>> {
+    public workflowGetFilenameWithHttpInfo(param: WorkflowApiWorkflowGetFilenameRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3GetFilenameResponse>> {
         return this.api.workflowGetFilenameWithHttpInfo(param.caseId, param.taskId,  options).toPromise();
     }
 
@@ -14641,7 +15088,7 @@ export class ObjectWorkflowApi {
      * Summary: Get filename Description: Return filename associated with the task referenced in the associated context record.
      * @param param the request object
      */
-    public workflowGetFilename(param: WorkflowApiWorkflowGetFilenameRequest, options?: Configuration): Promise<Workflowv3GetFilenameResponse> {
+    public workflowGetFilename(param: WorkflowApiWorkflowGetFilenameRequest, options?: ConfigurationOptions): Promise<Workflowv3GetFilenameResponse> {
         return this.api.workflowGetFilename(param.caseId, param.taskId,  options).toPromise();
     }
 
@@ -14649,7 +15096,7 @@ export class ObjectWorkflowApi {
      * Summary: Get jobs count Description: Get jobs count.
      * @param param the request object
      */
-    public workflowGetJobsCountWithHttpInfo(param: WorkflowApiWorkflowGetJobsCountRequest, options?: Configuration): Promise<HttpInfo<Workflowv3GetJobsCountResponse>> {
+    public workflowGetJobsCountWithHttpInfo(param: WorkflowApiWorkflowGetJobsCountRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3GetJobsCountResponse>> {
         return this.api.workflowGetJobsCountWithHttpInfo(param.caseId, param.workflowv3GetJobsCountRequest,  options).toPromise();
     }
 
@@ -14657,7 +15104,7 @@ export class ObjectWorkflowApi {
      * Summary: Get jobs count Description: Get jobs count.
      * @param param the request object
      */
-    public workflowGetJobsCount(param: WorkflowApiWorkflowGetJobsCountRequest, options?: Configuration): Promise<Workflowv3GetJobsCountResponse> {
+    public workflowGetJobsCount(param: WorkflowApiWorkflowGetJobsCountRequest, options?: ConfigurationOptions): Promise<Workflowv3GetJobsCountResponse> {
         return this.api.workflowGetJobsCount(param.caseId, param.workflowv3GetJobsCountRequest,  options).toPromise();
     }
 
@@ -14665,7 +15112,7 @@ export class ObjectWorkflowApi {
      * Summary: Get products and their associated event entities Description: Return a list of integrated products and their associated event entities
      * @param param the request object
      */
-    public workflowGetProductEntitiesWithHttpInfo(param: WorkflowApiWorkflowGetProductEntitiesRequest = {}, options?: Configuration): Promise<HttpInfo<Workflowv3GetProductEntitiesResponse>> {
+    public workflowGetProductEntitiesWithHttpInfo(param: WorkflowApiWorkflowGetProductEntitiesRequest = {}, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3GetProductEntitiesResponse>> {
         return this.api.workflowGetProductEntitiesWithHttpInfo(param.offset, param.limit,  options).toPromise();
     }
 
@@ -14673,7 +15120,7 @@ export class ObjectWorkflowApi {
      * Summary: Get products and their associated event entities Description: Return a list of integrated products and their associated event entities
      * @param param the request object
      */
-    public workflowGetProductEntities(param: WorkflowApiWorkflowGetProductEntitiesRequest = {}, options?: Configuration): Promise<Workflowv3GetProductEntitiesResponse> {
+    public workflowGetProductEntities(param: WorkflowApiWorkflowGetProductEntitiesRequest = {}, options?: ConfigurationOptions): Promise<Workflowv3GetProductEntitiesResponse> {
         return this.api.workflowGetProductEntities(param.offset, param.limit,  options).toPromise();
     }
 
@@ -14681,7 +15128,7 @@ export class ObjectWorkflowApi {
      * Summary: Get event entity field names, field labels, and field data types Description: Return a list of fields similar to report headers
      * @param param the request object
      */
-    public workflowGetProductEntityWithHttpInfo(param: WorkflowApiWorkflowGetProductEntityRequest, options?: Configuration): Promise<HttpInfo<Workflowv3ProductEntity>> {
+    public workflowGetProductEntityWithHttpInfo(param: WorkflowApiWorkflowGetProductEntityRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3ProductEntity>> {
         return this.api.workflowGetProductEntityWithHttpInfo(param.entityId,  options).toPromise();
     }
 
@@ -14689,7 +15136,7 @@ export class ObjectWorkflowApi {
      * Summary: Get event entity field names, field labels, and field data types Description: Return a list of fields similar to report headers
      * @param param the request object
      */
-    public workflowGetProductEntity(param: WorkflowApiWorkflowGetProductEntityRequest, options?: Configuration): Promise<Workflowv3ProductEntity> {
+    public workflowGetProductEntity(param: WorkflowApiWorkflowGetProductEntityRequest, options?: ConfigurationOptions): Promise<Workflowv3ProductEntity> {
         return this.api.workflowGetProductEntity(param.entityId,  options).toPromise();
     }
 
@@ -14697,7 +15144,7 @@ export class ObjectWorkflowApi {
      * Summary: Get report result Description: Return a page of results.
      * @param param the request object
      */
-    public workflowGetReportResultWithHttpInfo(param: WorkflowApiWorkflowGetReportResultRequest, options?: Configuration): Promise<HttpInfo<Workflowv3GetReportResultResponse>> {
+    public workflowGetReportResultWithHttpInfo(param: WorkflowApiWorkflowGetReportResultRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3GetReportResultResponse>> {
         return this.api.workflowGetReportResultWithHttpInfo(param.caseId, param.taskId, param.offset, param.limit,  options).toPromise();
     }
 
@@ -14705,7 +15152,7 @@ export class ObjectWorkflowApi {
      * Summary: Get report result Description: Return a page of results.
      * @param param the request object
      */
-    public workflowGetReportResult(param: WorkflowApiWorkflowGetReportResultRequest, options?: Configuration): Promise<Workflowv3GetReportResultResponse> {
+    public workflowGetReportResult(param: WorkflowApiWorkflowGetReportResultRequest, options?: ConfigurationOptions): Promise<Workflowv3GetReportResultResponse> {
         return this.api.workflowGetReportResult(param.caseId, param.taskId, param.offset, param.limit,  options).toPromise();
     }
 
@@ -14713,7 +15160,7 @@ export class ObjectWorkflowApi {
      * Summary: Get tasks Description: Return all tasks requested.
      * @param param the request object
      */
-    public workflowGetTasksWithHttpInfo(param: WorkflowApiWorkflowGetTasksRequest, options?: Configuration): Promise<HttpInfo<Workflowv3TaskListResponse>> {
+    public workflowGetTasksWithHttpInfo(param: WorkflowApiWorkflowGetTasksRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3TaskListResponse>> {
         return this.api.workflowGetTasksWithHttpInfo(param.caseId, param.taskId,  options).toPromise();
     }
 
@@ -14721,7 +15168,7 @@ export class ObjectWorkflowApi {
      * Summary: Get tasks Description: Return all tasks requested.
      * @param param the request object
      */
-    public workflowGetTasks(param: WorkflowApiWorkflowGetTasksRequest, options?: Configuration): Promise<Workflowv3TaskListResponse> {
+    public workflowGetTasks(param: WorkflowApiWorkflowGetTasksRequest, options?: ConfigurationOptions): Promise<Workflowv3TaskListResponse> {
         return this.api.workflowGetTasks(param.caseId, param.taskId,  options).toPromise();
     }
 
@@ -14729,7 +15176,7 @@ export class ObjectWorkflowApi {
      * Summary: Get cases count Description: Get case count.
      * @param param the request object
      */
-    public workflowGetTasksCountWithHttpInfo(param: WorkflowApiWorkflowGetTasksCountRequest, options?: Configuration): Promise<HttpInfo<Workflowv3GetTasksCountResponse>> {
+    public workflowGetTasksCountWithHttpInfo(param: WorkflowApiWorkflowGetTasksCountRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3GetTasksCountResponse>> {
         return this.api.workflowGetTasksCountWithHttpInfo(param.caseId, param.workflowv3GetTasksCountRequest,  options).toPromise();
     }
 
@@ -14737,7 +15184,7 @@ export class ObjectWorkflowApi {
      * Summary: Get cases count Description: Get case count.
      * @param param the request object
      */
-    public workflowGetTasksCount(param: WorkflowApiWorkflowGetTasksCountRequest, options?: Configuration): Promise<Workflowv3GetTasksCountResponse> {
+    public workflowGetTasksCount(param: WorkflowApiWorkflowGetTasksCountRequest, options?: ConfigurationOptions): Promise<Workflowv3GetTasksCountResponse> {
         return this.api.workflowGetTasksCount(param.caseId, param.workflowv3GetTasksCountRequest,  options).toPromise();
     }
 
@@ -14745,7 +15192,7 @@ export class ObjectWorkflowApi {
      * Summary: Search cases Description: Return a subset of cases.
      * @param param the request object
      */
-    public workflowSearchCasesWithHttpInfo(param: WorkflowApiWorkflowSearchCasesRequest, options?: Configuration): Promise<HttpInfo<Workflowv3CaseListResponse>> {
+    public workflowSearchCasesWithHttpInfo(param: WorkflowApiWorkflowSearchCasesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3CaseListResponse>> {
         return this.api.workflowSearchCasesWithHttpInfo(param.workflowv3SearchCasesRequest,  options).toPromise();
     }
 
@@ -14753,7 +15200,7 @@ export class ObjectWorkflowApi {
      * Summary: Search cases Description: Return a subset of cases.
      * @param param the request object
      */
-    public workflowSearchCases(param: WorkflowApiWorkflowSearchCasesRequest, options?: Configuration): Promise<Workflowv3CaseListResponse> {
+    public workflowSearchCases(param: WorkflowApiWorkflowSearchCasesRequest, options?: ConfigurationOptions): Promise<Workflowv3CaseListResponse> {
         return this.api.workflowSearchCases(param.workflowv3SearchCasesRequest,  options).toPromise();
     }
 
@@ -14761,7 +15208,7 @@ export class ObjectWorkflowApi {
      * Summary: Get a list of report IDs Description: Returns a list of report IDs referenced in all cases and tasks
      * @param param the request object
      */
-    public workflowSearchReportsWithHttpInfo(param: WorkflowApiWorkflowSearchReportsRequest, options?: Configuration): Promise<HttpInfo<Workflowv3SearchReportsResponse>> {
+    public workflowSearchReportsWithHttpInfo(param: WorkflowApiWorkflowSearchReportsRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3SearchReportsResponse>> {
         return this.api.workflowSearchReportsWithHttpInfo(param.workflowv3SearchCasesRequest,  options).toPromise();
     }
 
@@ -14769,7 +15216,7 @@ export class ObjectWorkflowApi {
      * Summary: Get a list of report IDs Description: Returns a list of report IDs referenced in all cases and tasks
      * @param param the request object
      */
-    public workflowSearchReports(param: WorkflowApiWorkflowSearchReportsRequest, options?: Configuration): Promise<Workflowv3SearchReportsResponse> {
+    public workflowSearchReports(param: WorkflowApiWorkflowSearchReportsRequest, options?: ConfigurationOptions): Promise<Workflowv3SearchReportsResponse> {
         return this.api.workflowSearchReports(param.workflowv3SearchCasesRequest,  options).toPromise();
     }
 
@@ -14777,7 +15224,7 @@ export class ObjectWorkflowApi {
      * Summary: Search cases Description: Return a subset of cases.
      * @param param the request object
      */
-    public workflowSearchTasksWithHttpInfo(param: WorkflowApiWorkflowSearchTasksRequest, options?: Configuration): Promise<HttpInfo<Workflowv3TaskListResponse>> {
+    public workflowSearchTasksWithHttpInfo(param: WorkflowApiWorkflowSearchTasksRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3TaskListResponse>> {
         return this.api.workflowSearchTasksWithHttpInfo(param.caseId, param.workflowv3SearchTasksRequest,  options).toPromise();
     }
 
@@ -14785,7 +15232,7 @@ export class ObjectWorkflowApi {
      * Summary: Search cases Description: Return a subset of cases.
      * @param param the request object
      */
-    public workflowSearchTasks(param: WorkflowApiWorkflowSearchTasksRequest, options?: Configuration): Promise<Workflowv3TaskListResponse> {
+    public workflowSearchTasks(param: WorkflowApiWorkflowSearchTasksRequest, options?: ConfigurationOptions): Promise<Workflowv3TaskListResponse> {
         return this.api.workflowSearchTasks(param.caseId, param.workflowv3SearchTasksRequest,  options).toPromise();
     }
 
@@ -14793,7 +15240,7 @@ export class ObjectWorkflowApi {
      * Summary: Update cases Description: Update multiple cases in one request.
      * @param param the request object
      */
-    public workflowUpdateCasesWithHttpInfo(param: WorkflowApiWorkflowUpdateCasesRequest, options?: Configuration): Promise<HttpInfo<Workflowv3UpdateCasesResponse>> {
+    public workflowUpdateCasesWithHttpInfo(param: WorkflowApiWorkflowUpdateCasesRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3UpdateCasesResponse>> {
         return this.api.workflowUpdateCasesWithHttpInfo(param.workflowv3UpdateCasesRequest,  options).toPromise();
     }
 
@@ -14801,7 +15248,7 @@ export class ObjectWorkflowApi {
      * Summary: Update cases Description: Update multiple cases in one request.
      * @param param the request object
      */
-    public workflowUpdateCases(param: WorkflowApiWorkflowUpdateCasesRequest, options?: Configuration): Promise<Workflowv3UpdateCasesResponse> {
+    public workflowUpdateCases(param: WorkflowApiWorkflowUpdateCasesRequest, options?: ConfigurationOptions): Promise<Workflowv3UpdateCasesResponse> {
         return this.api.workflowUpdateCases(param.workflowv3UpdateCasesRequest,  options).toPromise();
     }
 
@@ -14809,7 +15256,7 @@ export class ObjectWorkflowApi {
      * Summary: Update a product entity Description: Update a single product entity.
      * @param param the request object
      */
-    public workflowUpdateProductEntityWithHttpInfo(param: WorkflowApiWorkflowUpdateProductEntityRequest, options?: Configuration): Promise<HttpInfo<Workflowv3UpdateProductEntityResponse>> {
+    public workflowUpdateProductEntityWithHttpInfo(param: WorkflowApiWorkflowUpdateProductEntityRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3UpdateProductEntityResponse>> {
         return this.api.workflowUpdateProductEntityWithHttpInfo(param.entityId, param.workflowv3UpdateProductEntityRequest,  options).toPromise();
     }
 
@@ -14817,7 +15264,7 @@ export class ObjectWorkflowApi {
      * Summary: Update a product entity Description: Update a single product entity.
      * @param param the request object
      */
-    public workflowUpdateProductEntity(param: WorkflowApiWorkflowUpdateProductEntityRequest, options?: Configuration): Promise<Workflowv3UpdateProductEntityResponse> {
+    public workflowUpdateProductEntity(param: WorkflowApiWorkflowUpdateProductEntityRequest, options?: ConfigurationOptions): Promise<Workflowv3UpdateProductEntityResponse> {
         return this.api.workflowUpdateProductEntity(param.entityId, param.workflowv3UpdateProductEntityRequest,  options).toPromise();
     }
 
@@ -14825,7 +15272,7 @@ export class ObjectWorkflowApi {
      * Summary: Update tasks Description: Update multiple tasks for the same parent in one request.
      * @param param the request object
      */
-    public workflowUpdateTasksWithHttpInfo(param: WorkflowApiWorkflowUpdateTasksRequest, options?: Configuration): Promise<HttpInfo<Workflowv3UpdateTasksResponse>> {
+    public workflowUpdateTasksWithHttpInfo(param: WorkflowApiWorkflowUpdateTasksRequest, options?: ConfigurationOptions): Promise<HttpInfo<Workflowv3UpdateTasksResponse>> {
         return this.api.workflowUpdateTasksWithHttpInfo(param.caseId, param.workflowv3UpdateTasksRequest,  options).toPromise();
     }
 
@@ -14833,7 +15280,7 @@ export class ObjectWorkflowApi {
      * Summary: Update tasks Description: Update multiple tasks for the same parent in one request.
      * @param param the request object
      */
-    public workflowUpdateTasks(param: WorkflowApiWorkflowUpdateTasksRequest, options?: Configuration): Promise<Workflowv3UpdateTasksResponse> {
+    public workflowUpdateTasks(param: WorkflowApiWorkflowUpdateTasksRequest, options?: ConfigurationOptions): Promise<Workflowv3UpdateTasksResponse> {
         return this.api.workflowUpdateTasks(param.caseId, param.workflowv3UpdateTasksRequest,  options).toPromise();
     }
 

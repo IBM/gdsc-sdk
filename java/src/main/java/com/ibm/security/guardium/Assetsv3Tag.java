@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,272 +39,283 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3Tag
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3Tag {
   public static final String SERIALIZED_NAME_CREATION_TIME = "creation_time";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime creationTime;
 
   public static final String SERIALIZED_NAME_CREATION_TIME_UTC = "creation_time_utc";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME_UTC)
+  @javax.annotation.Nullable
   private OffsetDateTime creationTimeUtc;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_DOMAIN_ID = "domain_id";
   @SerializedName(SERIALIZED_NAME_DOMAIN_ID)
+  @javax.annotation.Nullable
   private String domainId;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_IS_DELETE = "is_delete";
   @SerializedName(SERIALIZED_NAME_IS_DELETE)
+  @javax.annotation.Nullable
   private Boolean isDelete;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
+  @javax.annotation.Nullable
   private String properties;
 
   public static final String SERIALIZED_NAME_SOURCE = "source";
   @SerializedName(SERIALIZED_NAME_SOURCE)
+  @javax.annotation.Nullable
   private String source;
 
   public static final String SERIALIZED_NAME_UPDATED_TIME = "updated_time";
   @SerializedName(SERIALIZED_NAME_UPDATED_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime updatedTime;
 
   public static final String SERIALIZED_NAME_UTC_OFFSET = "utc_offset";
   @SerializedName(SERIALIZED_NAME_UTC_OFFSET)
+  @javax.annotation.Nullable
   private Integer utcOffset;
 
   public Assetsv3Tag() {
   }
 
-  public Assetsv3Tag creationTime(OffsetDateTime creationTime) {
+  public Assetsv3Tag creationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
     return this;
   }
 
-   /**
+  /**
    * Get creationTime
    * @return creationTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(OffsetDateTime creationTime) {
+  public void setCreationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
   }
 
 
-  public Assetsv3Tag creationTimeUtc(OffsetDateTime creationTimeUtc) {
+  public Assetsv3Tag creationTimeUtc(@javax.annotation.Nullable OffsetDateTime creationTimeUtc) {
     this.creationTimeUtc = creationTimeUtc;
     return this;
   }
 
-   /**
+  /**
    * Get creationTimeUtc
    * @return creationTimeUtc
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getCreationTimeUtc() {
     return creationTimeUtc;
   }
 
-  public void setCreationTimeUtc(OffsetDateTime creationTimeUtc) {
+  public void setCreationTimeUtc(@javax.annotation.Nullable OffsetDateTime creationTimeUtc) {
     this.creationTimeUtc = creationTimeUtc;
   }
 
 
-  public Assetsv3Tag description(String description) {
+  public Assetsv3Tag description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Description of Tag concept.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Assetsv3Tag domainId(String domainId) {
+  public Assetsv3Tag domainId(@javax.annotation.Nullable String domainId) {
     this.domainId = domainId;
     return this;
   }
 
-   /**
+  /**
    * Id of  Domain of the tag concept.
    * @return domainId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDomainId() {
     return domainId;
   }
 
-  public void setDomainId(String domainId) {
+  public void setDomainId(@javax.annotation.Nullable String domainId) {
     this.domainId = domainId;
   }
 
 
-  public Assetsv3Tag id(String id) {
+  public Assetsv3Tag id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * id of  concept.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Assetsv3Tag isDelete(Boolean isDelete) {
+  public Assetsv3Tag isDelete(@javax.annotation.Nullable Boolean isDelete) {
     this.isDelete = isDelete;
     return this;
   }
 
-   /**
+  /**
    * Get isDelete
    * @return isDelete
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsDelete() {
     return isDelete;
   }
 
-  public void setIsDelete(Boolean isDelete) {
+  public void setIsDelete(@javax.annotation.Nullable Boolean isDelete) {
     this.isDelete = isDelete;
   }
 
 
-  public Assetsv3Tag name(String name) {
+  public Assetsv3Tag name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of Tag concept.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Assetsv3Tag properties(String properties) {
+  public Assetsv3Tag properties(@javax.annotation.Nullable String properties) {
     this.properties = properties;
     return this;
   }
 
-   /**
+  /**
    * Get properties
    * @return properties
-  **/
+   */
   @javax.annotation.Nullable
   public String getProperties() {
     return properties;
   }
 
-  public void setProperties(String properties) {
+  public void setProperties(@javax.annotation.Nullable String properties) {
     this.properties = properties;
   }
 
 
-  public Assetsv3Tag source(String source) {
+  public Assetsv3Tag source(@javax.annotation.Nullable String source) {
     this.source = source;
     return this;
   }
 
-   /**
+  /**
    * Get source
    * @return source
-  **/
+   */
   @javax.annotation.Nullable
   public String getSource() {
     return source;
   }
 
-  public void setSource(String source) {
+  public void setSource(@javax.annotation.Nullable String source) {
     this.source = source;
   }
 
 
-  public Assetsv3Tag updatedTime(OffsetDateTime updatedTime) {
+  public Assetsv3Tag updatedTime(@javax.annotation.Nullable OffsetDateTime updatedTime) {
     this.updatedTime = updatedTime;
     return this;
   }
 
-   /**
+  /**
    * Get updatedTime
    * @return updatedTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getUpdatedTime() {
     return updatedTime;
   }
 
-  public void setUpdatedTime(OffsetDateTime updatedTime) {
+  public void setUpdatedTime(@javax.annotation.Nullable OffsetDateTime updatedTime) {
     this.updatedTime = updatedTime;
   }
 
 
-  public Assetsv3Tag utcOffset(Integer utcOffset) {
+  public Assetsv3Tag utcOffset(@javax.annotation.Nullable Integer utcOffset) {
     this.utcOffset = utcOffset;
     return this;
   }
 
-   /**
+  /**
    * Get utcOffset
    * @return utcOffset
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getUtcOffset() {
     return utcOffset;
   }
 
-  public void setUtcOffset(Integer utcOffset) {
+  public void setUtcOffset(@javax.annotation.Nullable Integer utcOffset) {
     this.utcOffset = utcOffset;
   }
 
@@ -372,33 +384,22 @@ public class Assetsv3Tag {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("creation_time");
-    openapiFields.add("creation_time_utc");
-    openapiFields.add("description");
-    openapiFields.add("domain_id");
-    openapiFields.add("id");
-    openapiFields.add("is_delete");
-    openapiFields.add("name");
-    openapiFields.add("properties");
-    openapiFields.add("source");
-    openapiFields.add("updated_time");
-    openapiFields.add("utc_offset");
+    openapiFields = new HashSet<String>(Arrays.asList("creation_time", "creation_time_utc", "description", "domain_id", "id", "is_delete", "name", "properties", "source", "updated_time", "utc_offset"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3Tag
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3Tag
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3Tag.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3Tag is not found in the empty JSON string", Assetsv3Tag.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3Tag is not found in the empty JSON string", Assetsv3Tag.openapiRequiredFields.toString()));
         }
       }
 
@@ -406,27 +407,27 @@ public class Assetsv3Tag {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3Tag.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3Tag` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3Tag` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if ((jsonObj.get("domain_id") != null && !jsonObj.get("domain_id").isJsonNull()) && !jsonObj.get("domain_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `domain_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("domain_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `domain_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("domain_id").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("properties") != null && !jsonObj.get("properties").isJsonNull()) && !jsonObj.get("properties").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `properties` to be a primitive type in the JSON string but got `%s`", jsonObj.get("properties").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `properties` to be a primitive type in the JSON string but got `%s`", jsonObj.get("properties").toString()));
       }
       if ((jsonObj.get("source") != null && !jsonObj.get("source").isJsonNull()) && !jsonObj.get("source").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `source` to be a primitive type in the JSON string but got `%s`", jsonObj.get("source").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `source` to be a primitive type in the JSON string but got `%s`", jsonObj.get("source").toString()));
       }
   }
 
@@ -459,22 +460,22 @@ public class Assetsv3Tag {
     }
   }
 
- /**
-  * Create an instance of Assetsv3Tag given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3Tag
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3Tag
-  */
+  /**
+   * Create an instance of Assetsv3Tag given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3Tag
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3Tag
+   */
   public static Assetsv3Tag fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3Tag.class);
   }
 
- /**
-  * Convert an instance of Assetsv3Tag to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3Tag to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

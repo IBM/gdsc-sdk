@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Riskanalyticscontrollerv3FailedVATests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3FailedVATests {
   public static final String SERIALIZED_NAME_SEVERITY = "severity";
   @SerializedName(SERIALIZED_NAME_SEVERITY)
+  @javax.annotation.Nullable
   private String severity;
 
   public static final String SERIALIZED_NAME_TEST_DESCRIPTION = "test_description";
   @SerializedName(SERIALIZED_NAME_TEST_DESCRIPTION)
+  @javax.annotation.Nullable
   private String testDescription;
 
   public static final String SERIALIZED_NAME_TEST_RESULT = "test_result";
   @SerializedName(SERIALIZED_NAME_TEST_RESULT)
+  @javax.annotation.Nullable
   private String testResult;
 
   public Riskanalyticscontrollerv3FailedVATests() {
   }
 
-  public Riskanalyticscontrollerv3FailedVATests severity(String severity) {
+  public Riskanalyticscontrollerv3FailedVATests severity(@javax.annotation.Nullable String severity) {
     this.severity = severity;
     return this;
   }
 
-   /**
+  /**
    * Get severity
    * @return severity
-  **/
+   */
   @javax.annotation.Nullable
   public String getSeverity() {
     return severity;
   }
 
-  public void setSeverity(String severity) {
+  public void setSeverity(@javax.annotation.Nullable String severity) {
     this.severity = severity;
   }
 
 
-  public Riskanalyticscontrollerv3FailedVATests testDescription(String testDescription) {
+  public Riskanalyticscontrollerv3FailedVATests testDescription(@javax.annotation.Nullable String testDescription) {
     this.testDescription = testDescription;
     return this;
   }
 
-   /**
+  /**
    * Get testDescription
    * @return testDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getTestDescription() {
     return testDescription;
   }
 
-  public void setTestDescription(String testDescription) {
+  public void setTestDescription(@javax.annotation.Nullable String testDescription) {
     this.testDescription = testDescription;
   }
 
 
-  public Riskanalyticscontrollerv3FailedVATests testResult(String testResult) {
+  public Riskanalyticscontrollerv3FailedVATests testResult(@javax.annotation.Nullable String testResult) {
     this.testResult = testResult;
     return this;
   }
 
-   /**
+  /**
    * Get testResult
    * @return testResult
-  **/
+   */
   @javax.annotation.Nullable
   public String getTestResult() {
     return testResult;
   }
 
-  public void setTestResult(String testResult) {
+  public void setTestResult(@javax.annotation.Nullable String testResult) {
     this.testResult = testResult;
   }
 
@@ -171,25 +175,22 @@ public class Riskanalyticscontrollerv3FailedVATests {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("severity");
-    openapiFields.add("test_description");
-    openapiFields.add("test_result");
+    openapiFields = new HashSet<String>(Arrays.asList("severity", "test_description", "test_result"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3FailedVATests
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3FailedVATests
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3FailedVATests.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3FailedVATests is not found in the empty JSON string", Riskanalyticscontrollerv3FailedVATests.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3FailedVATests is not found in the empty JSON string", Riskanalyticscontrollerv3FailedVATests.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Riskanalyticscontrollerv3FailedVATests {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3FailedVATests.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3FailedVATests` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3FailedVATests` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("severity") != null && !jsonObj.get("severity").isJsonNull()) && !jsonObj.get("severity").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `severity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `severity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("severity").toString()));
       }
       if ((jsonObj.get("test_description") != null && !jsonObj.get("test_description").isJsonNull()) && !jsonObj.get("test_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `test_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("test_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `test_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("test_description").toString()));
       }
       if ((jsonObj.get("test_result") != null && !jsonObj.get("test_result").isJsonNull()) && !jsonObj.get("test_result").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `test_result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("test_result").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `test_result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("test_result").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Riskanalyticscontrollerv3FailedVATests {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3FailedVATests given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3FailedVATests
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3FailedVATests
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3FailedVATests given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3FailedVATests
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3FailedVATests
+   */
   public static Riskanalyticscontrollerv3FailedVATests fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3FailedVATests.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3FailedVATests to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3FailedVATests to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

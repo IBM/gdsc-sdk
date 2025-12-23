@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -45,224 +46,236 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3GetQueryByReportDefinitionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3GetQueryByReportDefinitionRequest {
   public static final String SERIALIZED_NAME_ADD_GROUP_LITERAL = "add_group_literal";
   @SerializedName(SERIALIZED_NAME_ADD_GROUP_LITERAL)
+  @javax.annotation.Nullable
   private String addGroupLiteral;
 
   public static final String SERIALIZED_NAME_ADD_JOB_ID_LITERAL = "add_job_id_literal";
   @SerializedName(SERIALIZED_NAME_ADD_JOB_ID_LITERAL)
+  @javax.annotation.Nullable
   private String addJobIdLiteral;
 
   public static final String SERIALIZED_NAME_DATE_RANGE = "date_range";
   @SerializedName(SERIALIZED_NAME_DATE_RANGE)
+  @javax.annotation.Nullable
   private Reportsv3DateRange dateRange;
 
   public static final String SERIALIZED_NAME_DEFAULT_CHART_EXPANDED = "default_chart_expanded";
   @SerializedName(SERIALIZED_NAME_DEFAULT_CHART_EXPANDED)
+  @javax.annotation.Nullable
   private Boolean defaultChartExpanded;
 
   public static final String SERIALIZED_NAME_EXCLUDE_GROUP_ID = "exclude_group_id";
   @SerializedName(SERIALIZED_NAME_EXCLUDE_GROUP_ID)
+  @javax.annotation.Nullable
   private String excludeGroupId;
 
   public static final String SERIALIZED_NAME_FACET_SELECTED_HEADER = "facet_selected_header";
   @SerializedName(SERIALIZED_NAME_FACET_SELECTED_HEADER)
+  @javax.annotation.Nullable
   private Reportsv3ReportHeader facetSelectedHeader;
 
   public static final String SERIALIZED_NAME_FILTER_FOR_JOB_ID = "filter_for_job_id";
   @SerializedName(SERIALIZED_NAME_FILTER_FOR_JOB_ID)
+  @javax.annotation.Nullable
   private String filterForJobId;
 
   public static final String SERIALIZED_NAME_JOB_TYPE = "job_type";
   @SerializedName(SERIALIZED_NAME_JOB_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3JobType jobType = Reportsv3JobType.UNDEFINED_JOB_TYPE;
 
   public static final String SERIALIZED_NAME_MODEL_TYPES = "model_types";
   @SerializedName(SERIALIZED_NAME_MODEL_TYPES)
+  @javax.annotation.Nullable
   private List<Reportsv3ModelType> modelTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REPORT_DEFINITION = "report_definition";
   @SerializedName(SERIALIZED_NAME_REPORT_DEFINITION)
+  @javax.annotation.Nullable
   private Reportsv3ReportDefinition reportDefinition;
 
   public static final String SERIALIZED_NAME_SQL_TYPE = "sql_type";
   @SerializedName(SERIALIZED_NAME_SQL_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3SqlType sqlType = Reportsv3SqlType.UNDEFINED_SQL_TYPE;
 
   public static final String SERIALIZED_NAME_TABLE_JOIN_OPTIMIZATION = "table_join_optimization";
   @SerializedName(SERIALIZED_NAME_TABLE_JOIN_OPTIMIZATION)
+  @javax.annotation.Nullable
   private Boolean tableJoinOptimization;
 
   public Reportsv3GetQueryByReportDefinitionRequest() {
   }
 
-  public Reportsv3GetQueryByReportDefinitionRequest addGroupLiteral(String addGroupLiteral) {
+  public Reportsv3GetQueryByReportDefinitionRequest addGroupLiteral(@javax.annotation.Nullable String addGroupLiteral) {
     this.addGroupLiteral = addGroupLiteral;
     return this;
   }
 
-   /**
+  /**
    * Get addGroupLiteral
    * @return addGroupLiteral
-  **/
+   */
   @javax.annotation.Nullable
   public String getAddGroupLiteral() {
     return addGroupLiteral;
   }
 
-  public void setAddGroupLiteral(String addGroupLiteral) {
+  public void setAddGroupLiteral(@javax.annotation.Nullable String addGroupLiteral) {
     this.addGroupLiteral = addGroupLiteral;
   }
 
 
-  public Reportsv3GetQueryByReportDefinitionRequest addJobIdLiteral(String addJobIdLiteral) {
+  public Reportsv3GetQueryByReportDefinitionRequest addJobIdLiteral(@javax.annotation.Nullable String addJobIdLiteral) {
     this.addJobIdLiteral = addJobIdLiteral;
     return this;
   }
 
-   /**
+  /**
    * Get addJobIdLiteral
    * @return addJobIdLiteral
-  **/
+   */
   @javax.annotation.Nullable
   public String getAddJobIdLiteral() {
     return addJobIdLiteral;
   }
 
-  public void setAddJobIdLiteral(String addJobIdLiteral) {
+  public void setAddJobIdLiteral(@javax.annotation.Nullable String addJobIdLiteral) {
     this.addJobIdLiteral = addJobIdLiteral;
   }
 
 
-  public Reportsv3GetQueryByReportDefinitionRequest dateRange(Reportsv3DateRange dateRange) {
+  public Reportsv3GetQueryByReportDefinitionRequest dateRange(@javax.annotation.Nullable Reportsv3DateRange dateRange) {
     this.dateRange = dateRange;
     return this;
   }
 
-   /**
+  /**
    * Get dateRange
    * @return dateRange
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3DateRange getDateRange() {
     return dateRange;
   }
 
-  public void setDateRange(Reportsv3DateRange dateRange) {
+  public void setDateRange(@javax.annotation.Nullable Reportsv3DateRange dateRange) {
     this.dateRange = dateRange;
   }
 
 
-  public Reportsv3GetQueryByReportDefinitionRequest defaultChartExpanded(Boolean defaultChartExpanded) {
+  public Reportsv3GetQueryByReportDefinitionRequest defaultChartExpanded(@javax.annotation.Nullable Boolean defaultChartExpanded) {
     this.defaultChartExpanded = defaultChartExpanded;
     return this;
   }
 
-   /**
+  /**
    * Optional: if report has chart -send  default_chart_expanded be saved in user settings collection per report and user.
    * @return defaultChartExpanded
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getDefaultChartExpanded() {
     return defaultChartExpanded;
   }
 
-  public void setDefaultChartExpanded(Boolean defaultChartExpanded) {
+  public void setDefaultChartExpanded(@javax.annotation.Nullable Boolean defaultChartExpanded) {
     this.defaultChartExpanded = defaultChartExpanded;
   }
 
 
-  public Reportsv3GetQueryByReportDefinitionRequest excludeGroupId(String excludeGroupId) {
+  public Reportsv3GetQueryByReportDefinitionRequest excludeGroupId(@javax.annotation.Nullable String excludeGroupId) {
     this.excludeGroupId = excludeGroupId;
     return this;
   }
 
-   /**
+  /**
    * Get excludeGroupId
    * @return excludeGroupId
-  **/
+   */
   @javax.annotation.Nullable
   public String getExcludeGroupId() {
     return excludeGroupId;
   }
 
-  public void setExcludeGroupId(String excludeGroupId) {
+  public void setExcludeGroupId(@javax.annotation.Nullable String excludeGroupId) {
     this.excludeGroupId = excludeGroupId;
   }
 
 
-  public Reportsv3GetQueryByReportDefinitionRequest facetSelectedHeader(Reportsv3ReportHeader facetSelectedHeader) {
+  public Reportsv3GetQueryByReportDefinitionRequest facetSelectedHeader(@javax.annotation.Nullable Reportsv3ReportHeader facetSelectedHeader) {
     this.facetSelectedHeader = facetSelectedHeader;
     return this;
   }
 
-   /**
+  /**
    * Get facetSelectedHeader
    * @return facetSelectedHeader
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportHeader getFacetSelectedHeader() {
     return facetSelectedHeader;
   }
 
-  public void setFacetSelectedHeader(Reportsv3ReportHeader facetSelectedHeader) {
+  public void setFacetSelectedHeader(@javax.annotation.Nullable Reportsv3ReportHeader facetSelectedHeader) {
     this.facetSelectedHeader = facetSelectedHeader;
   }
 
 
-  public Reportsv3GetQueryByReportDefinitionRequest filterForJobId(String filterForJobId) {
+  public Reportsv3GetQueryByReportDefinitionRequest filterForJobId(@javax.annotation.Nullable String filterForJobId) {
     this.filterForJobId = filterForJobId;
     return this;
   }
 
-   /**
+  /**
    * Get filterForJobId
    * @return filterForJobId
-  **/
+   */
   @javax.annotation.Nullable
   public String getFilterForJobId() {
     return filterForJobId;
   }
 
-  public void setFilterForJobId(String filterForJobId) {
+  public void setFilterForJobId(@javax.annotation.Nullable String filterForJobId) {
     this.filterForJobId = filterForJobId;
   }
 
 
-  public Reportsv3GetQueryByReportDefinitionRequest jobType(Reportsv3JobType jobType) {
+  public Reportsv3GetQueryByReportDefinitionRequest jobType(@javax.annotation.Nullable Reportsv3JobType jobType) {
     this.jobType = jobType;
     return this;
   }
 
-   /**
+  /**
    * Get jobType
    * @return jobType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3JobType getJobType() {
     return jobType;
   }
 
-  public void setJobType(Reportsv3JobType jobType) {
+  public void setJobType(@javax.annotation.Nullable Reportsv3JobType jobType) {
     this.jobType = jobType;
   }
 
 
-  public Reportsv3GetQueryByReportDefinitionRequest modelTypes(List<Reportsv3ModelType> modelTypes) {
+  public Reportsv3GetQueryByReportDefinitionRequest modelTypes(@javax.annotation.Nullable List<Reportsv3ModelType> modelTypes) {
     this.modelTypes = modelTypes;
     return this;
   }
@@ -275,73 +288,73 @@ public class Reportsv3GetQueryByReportDefinitionRequest {
     return this;
   }
 
-   /**
+  /**
    * Get modelTypes
    * @return modelTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3ModelType> getModelTypes() {
     return modelTypes;
   }
 
-  public void setModelTypes(List<Reportsv3ModelType> modelTypes) {
+  public void setModelTypes(@javax.annotation.Nullable List<Reportsv3ModelType> modelTypes) {
     this.modelTypes = modelTypes;
   }
 
 
-  public Reportsv3GetQueryByReportDefinitionRequest reportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public Reportsv3GetQueryByReportDefinitionRequest reportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
     return this;
   }
 
-   /**
+  /**
    * Get reportDefinition
    * @return reportDefinition
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportDefinition getReportDefinition() {
     return reportDefinition;
   }
 
-  public void setReportDefinition(Reportsv3ReportDefinition reportDefinition) {
+  public void setReportDefinition(@javax.annotation.Nullable Reportsv3ReportDefinition reportDefinition) {
     this.reportDefinition = reportDefinition;
   }
 
 
-  public Reportsv3GetQueryByReportDefinitionRequest sqlType(Reportsv3SqlType sqlType) {
+  public Reportsv3GetQueryByReportDefinitionRequest sqlType(@javax.annotation.Nullable Reportsv3SqlType sqlType) {
     this.sqlType = sqlType;
     return this;
   }
 
-   /**
+  /**
    * Get sqlType
    * @return sqlType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3SqlType getSqlType() {
     return sqlType;
   }
 
-  public void setSqlType(Reportsv3SqlType sqlType) {
+  public void setSqlType(@javax.annotation.Nullable Reportsv3SqlType sqlType) {
     this.sqlType = sqlType;
   }
 
 
-  public Reportsv3GetQueryByReportDefinitionRequest tableJoinOptimization(Boolean tableJoinOptimization) {
+  public Reportsv3GetQueryByReportDefinitionRequest tableJoinOptimization(@javax.annotation.Nullable Boolean tableJoinOptimization) {
     this.tableJoinOptimization = tableJoinOptimization;
     return this;
   }
 
-   /**
+  /**
    * Optional: disable or enable the table join optimization.
    * @return tableJoinOptimization
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getTableJoinOptimization() {
     return tableJoinOptimization;
   }
 
-  public void setTableJoinOptimization(Boolean tableJoinOptimization) {
+  public void setTableJoinOptimization(@javax.annotation.Nullable Boolean tableJoinOptimization) {
     this.tableJoinOptimization = tableJoinOptimization;
   }
 
@@ -412,34 +425,22 @@ public class Reportsv3GetQueryByReportDefinitionRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("add_group_literal");
-    openapiFields.add("add_job_id_literal");
-    openapiFields.add("date_range");
-    openapiFields.add("default_chart_expanded");
-    openapiFields.add("exclude_group_id");
-    openapiFields.add("facet_selected_header");
-    openapiFields.add("filter_for_job_id");
-    openapiFields.add("job_type");
-    openapiFields.add("model_types");
-    openapiFields.add("report_definition");
-    openapiFields.add("sql_type");
-    openapiFields.add("table_join_optimization");
+    openapiFields = new HashSet<String>(Arrays.asList("add_group_literal", "add_job_id_literal", "date_range", "default_chart_expanded", "exclude_group_id", "facet_selected_header", "filter_for_job_id", "job_type", "model_types", "report_definition", "sql_type", "table_join_optimization"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetQueryByReportDefinitionRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetQueryByReportDefinitionRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3GetQueryByReportDefinitionRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3GetQueryByReportDefinitionRequest is not found in the empty JSON string", Reportsv3GetQueryByReportDefinitionRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3GetQueryByReportDefinitionRequest is not found in the empty JSON string", Reportsv3GetQueryByReportDefinitionRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -447,29 +448,29 @@ public class Reportsv3GetQueryByReportDefinitionRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3GetQueryByReportDefinitionRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3GetQueryByReportDefinitionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3GetQueryByReportDefinitionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("add_group_literal") != null && !jsonObj.get("add_group_literal").isJsonNull()) && !jsonObj.get("add_group_literal").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `add_group_literal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("add_group_literal").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `add_group_literal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("add_group_literal").toString()));
       }
       if ((jsonObj.get("add_job_id_literal") != null && !jsonObj.get("add_job_id_literal").isJsonNull()) && !jsonObj.get("add_job_id_literal").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `add_job_id_literal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("add_job_id_literal").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `add_job_id_literal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("add_job_id_literal").toString()));
       }
       // validate the optional field `date_range`
       if (jsonObj.get("date_range") != null && !jsonObj.get("date_range").isJsonNull()) {
         Reportsv3DateRange.validateJsonElement(jsonObj.get("date_range"));
       }
       if ((jsonObj.get("exclude_group_id") != null && !jsonObj.get("exclude_group_id").isJsonNull()) && !jsonObj.get("exclude_group_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `exclude_group_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("exclude_group_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `exclude_group_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("exclude_group_id").toString()));
       }
       // validate the optional field `facet_selected_header`
       if (jsonObj.get("facet_selected_header") != null && !jsonObj.get("facet_selected_header").isJsonNull()) {
         Reportsv3ReportHeader.validateJsonElement(jsonObj.get("facet_selected_header"));
       }
       if ((jsonObj.get("filter_for_job_id") != null && !jsonObj.get("filter_for_job_id").isJsonNull()) && !jsonObj.get("filter_for_job_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `filter_for_job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter_for_job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filter_for_job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter_for_job_id").toString()));
       }
       // validate the optional field `job_type`
       if (jsonObj.get("job_type") != null && !jsonObj.get("job_type").isJsonNull()) {
@@ -477,7 +478,7 @@ public class Reportsv3GetQueryByReportDefinitionRequest {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("model_types") != null && !jsonObj.get("model_types").isJsonNull() && !jsonObj.get("model_types").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `model_types` to be an array in the JSON string but got `%s`", jsonObj.get("model_types").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `model_types` to be an array in the JSON string but got `%s`", jsonObj.get("model_types").toString()));
       }
       // validate the optional field `report_definition`
       if (jsonObj.get("report_definition") != null && !jsonObj.get("report_definition").isJsonNull()) {
@@ -518,22 +519,22 @@ public class Reportsv3GetQueryByReportDefinitionRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3GetQueryByReportDefinitionRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3GetQueryByReportDefinitionRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3GetQueryByReportDefinitionRequest
-  */
+  /**
+   * Create an instance of Reportsv3GetQueryByReportDefinitionRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3GetQueryByReportDefinitionRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3GetQueryByReportDefinitionRequest
+   */
   public static Reportsv3GetQueryByReportDefinitionRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3GetQueryByReportDefinitionRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3GetQueryByReportDefinitionRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3GetQueryByReportDefinitionRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -75,9 +75,9 @@ class Reportsv3CategoryDetail(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in timestamp_mapping (list)
         _items = []
         if self.timestamp_mapping:
-            for _item in self.timestamp_mapping:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_timestamp_mapping in self.timestamp_mapping:
+                if _item_timestamp_mapping:
+                    _items.append(_item_timestamp_mapping.to_dict())
             _dict['timestamp_mapping'] = _items
         return _dict
 

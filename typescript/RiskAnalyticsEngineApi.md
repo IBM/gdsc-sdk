@@ -16,17 +16,15 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsEngineApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsEngineApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.riskAnalyticsEngineGetLeadGeneratorConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsEngineGetLeadGeneratorConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -64,14 +62,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsEngineApi } from '';
+import type { RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsEngineApi(configuration);
 
-let body:.RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequest = {
-  // Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest
+const request: RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequest = {
+  
   riskanalyticsenginev3UpdateLeadGeneratorConfigRequest: {
     config: {
       isActive: true,
@@ -86,9 +84,8 @@ let body:.RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequ
   },
 };
 
-apiInstance.riskAnalyticsEngineUpdateLeadGeneratorConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsEngineUpdateLeadGeneratorConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

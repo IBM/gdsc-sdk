@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 **is_observation** | **bool** | Is observation flag to let the score service update it if need it. | [optional] 
 **is_zero** | **bool** | If value is zero - there is no value or original value so this flag will be true. | [optional] 
 **key** | **str** | Feature key. | [optional] 
-**method_type** | [**Riskanalyticsenginev3MethodType**](Riskanalyticsenginev3MethodType.md) |  | [optional] 
+**method_type** | [**Riskanalyticsenginev3MethodType**](Riskanalyticsenginev3MethodType.md) |  | [optional] [default to Riskanalyticsenginev3MethodType.UNDEFINED_METHOD_TYPE]
 **original_value** | **float** | Feature value before normalization. | [optional] 
 **score** | **int** | The feature score that was defined by riskApp. | [optional] 
 **sequence** | **int** | Sequence. | [optional] 
-**severity_level** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] 
+**severity_level** | [**Riskanalyticsenginev3SeverityLevel**](Riskanalyticsenginev3SeverityLevel.md) |  | [optional] [default to Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL]
 **value** | **float** | Feature value. | [optional] 
 
 ## Example

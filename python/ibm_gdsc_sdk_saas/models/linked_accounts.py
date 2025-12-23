@@ -86,9 +86,9 @@ class LinkedAccounts(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in regions (list)
         _items = []
         if self.regions:
-            for _item in self.regions:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_regions in self.regions:
+                if _item_regions:
+                    _items.append(_item_regions.to_dict())
             _dict['regions'] = _items
         return _dict
 

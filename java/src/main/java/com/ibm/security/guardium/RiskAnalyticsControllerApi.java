@@ -102,13 +102,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventFeedbackCall(Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventFeedbackCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -154,7 +155,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventFeedbackValidateBeforeCall(Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventFeedbackValidateBeforeCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest' is set
         if (riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest == null) {
             throw new ApiException("Missing the required parameter 'riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest' when calling riskAnalyticsControllerEnableDisableRiskEventFeedback(Async)");
@@ -171,13 +172,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse riskAnalyticsControllerEnableDisableRiskEventFeedback(Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest) throws ApiException {
+    public Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse riskAnalyticsControllerEnableDisableRiskEventFeedback(@javax.annotation.Nonnull Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse> localVarResp = riskAnalyticsControllerEnableDisableRiskEventFeedbackWithHttpInfo(riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest);
         return localVarResp.getData();
     }
@@ -189,13 +191,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse> riskAnalyticsControllerEnableDisableRiskEventFeedbackWithHttpInfo(Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse> riskAnalyticsControllerEnableDisableRiskEventFeedbackWithHttpInfo(@javax.annotation.Nonnull Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerEnableDisableRiskEventFeedbackValidateBeforeCall(riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -209,13 +212,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventFeedbackAsync(Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest, final ApiCallback<Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventFeedbackAsync(@javax.annotation.Nonnull Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest, final ApiCallback<Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerEnableDisableRiskEventFeedbackValidateBeforeCall(riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackResponse>(){}.getType();
@@ -229,13 +233,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventProcessCall(Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventProcessCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -281,7 +286,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventProcessValidateBeforeCall(Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventProcessValidateBeforeCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest' is set
         if (riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest == null) {
             throw new ApiException("Missing the required parameter 'riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest' when calling riskAnalyticsControllerEnableDisableRiskEventProcess(Async)");
@@ -298,13 +303,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse riskAnalyticsControllerEnableDisableRiskEventProcess(Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest) throws ApiException {
+    public Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse riskAnalyticsControllerEnableDisableRiskEventProcess(@javax.annotation.Nonnull Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse> localVarResp = riskAnalyticsControllerEnableDisableRiskEventProcessWithHttpInfo(riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest);
         return localVarResp.getData();
     }
@@ -316,13 +322,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse> riskAnalyticsControllerEnableDisableRiskEventProcessWithHttpInfo(Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse> riskAnalyticsControllerEnableDisableRiskEventProcessWithHttpInfo(@javax.annotation.Nonnull Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerEnableDisableRiskEventProcessValidateBeforeCall(riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -336,13 +343,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventProcessAsync(Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest, final ApiCallback<Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerEnableDisableRiskEventProcessAsync(@javax.annotation.Nonnull Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest, final ApiCallback<Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerEnableDisableRiskEventProcessValidateBeforeCall(riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3EnableDisableRiskEventProcessResponse>(){}.getType();
@@ -355,7 +363,8 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -417,7 +426,8 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3GetAllClassificationsListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -434,7 +444,8 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3GetAllClassificationsListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -453,7 +464,8 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -473,13 +485,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskEventClassificationsListCall(Integer riskId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskEventClassificationsListCall(@javax.annotation.Nonnull Integer riskId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -525,7 +538,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerGetRiskEventClassificationsListValidateBeforeCall(Integer riskId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerGetRiskEventClassificationsListValidateBeforeCall(@javax.annotation.Nonnull Integer riskId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'riskId' is set
         if (riskId == null) {
             throw new ApiException("Missing the required parameter 'riskId' when calling riskAnalyticsControllerGetRiskEventClassificationsList(Async)");
@@ -542,13 +555,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse riskAnalyticsControllerGetRiskEventClassificationsList(Integer riskId) throws ApiException {
+    public Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse riskAnalyticsControllerGetRiskEventClassificationsList(@javax.annotation.Nonnull Integer riskId) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse> localVarResp = riskAnalyticsControllerGetRiskEventClassificationsListWithHttpInfo(riskId);
         return localVarResp.getData();
     }
@@ -560,13 +574,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse> riskAnalyticsControllerGetRiskEventClassificationsListWithHttpInfo(Integer riskId) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse> riskAnalyticsControllerGetRiskEventClassificationsListWithHttpInfo(@javax.annotation.Nonnull Integer riskId) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskEventClassificationsListValidateBeforeCall(riskId, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -580,13 +595,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskEventClassificationsListAsync(Integer riskId, final ApiCallback<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskEventClassificationsListAsync(@javax.annotation.Nonnull Integer riskId, final ApiCallback<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskEventClassificationsListValidateBeforeCall(riskId, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3GetRiskEventClassificationsListResponse>(){}.getType();
@@ -602,13 +618,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskEventDataForSummarizationCall(Integer riskId, Boolean includeIndicators, Integer numFindingsLimit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskEventDataForSummarizationCall(@javax.annotation.Nonnull Integer riskId, @javax.annotation.Nullable Boolean includeIndicators, @javax.annotation.Nullable Integer numFindingsLimit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -662,7 +679,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerGetRiskEventDataForSummarizationValidateBeforeCall(Integer riskId, Boolean includeIndicators, Integer numFindingsLimit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerGetRiskEventDataForSummarizationValidateBeforeCall(@javax.annotation.Nonnull Integer riskId, @javax.annotation.Nullable Boolean includeIndicators, @javax.annotation.Nullable Integer numFindingsLimit, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'riskId' is set
         if (riskId == null) {
             throw new ApiException("Missing the required parameter 'riskId' when calling riskAnalyticsControllerGetRiskEventDataForSummarization(Async)");
@@ -681,13 +698,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3RiskEventSummarizationDataResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3RiskEventSummarizationDataResponse riskAnalyticsControllerGetRiskEventDataForSummarization(Integer riskId, Boolean includeIndicators, Integer numFindingsLimit) throws ApiException {
+    public Riskanalyticscontrollerv3RiskEventSummarizationDataResponse riskAnalyticsControllerGetRiskEventDataForSummarization(@javax.annotation.Nonnull Integer riskId, @javax.annotation.Nullable Boolean includeIndicators, @javax.annotation.Nullable Integer numFindingsLimit) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3RiskEventSummarizationDataResponse> localVarResp = riskAnalyticsControllerGetRiskEventDataForSummarizationWithHttpInfo(riskId, includeIndicators, numFindingsLimit);
         return localVarResp.getData();
     }
@@ -701,13 +719,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3RiskEventSummarizationDataResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3RiskEventSummarizationDataResponse> riskAnalyticsControllerGetRiskEventDataForSummarizationWithHttpInfo(Integer riskId, Boolean includeIndicators, Integer numFindingsLimit) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3RiskEventSummarizationDataResponse> riskAnalyticsControllerGetRiskEventDataForSummarizationWithHttpInfo(@javax.annotation.Nonnull Integer riskId, @javax.annotation.Nullable Boolean includeIndicators, @javax.annotation.Nullable Integer numFindingsLimit) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskEventDataForSummarizationValidateBeforeCall(riskId, includeIndicators, numFindingsLimit, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3RiskEventSummarizationDataResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -723,13 +742,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskEventDataForSummarizationAsync(Integer riskId, Boolean includeIndicators, Integer numFindingsLimit, final ApiCallback<Riskanalyticscontrollerv3RiskEventSummarizationDataResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskEventDataForSummarizationAsync(@javax.annotation.Nonnull Integer riskId, @javax.annotation.Nullable Boolean includeIndicators, @javax.annotation.Nullable Integer numFindingsLimit, final ApiCallback<Riskanalyticscontrollerv3RiskEventSummarizationDataResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskEventDataForSummarizationValidateBeforeCall(riskId, includeIndicators, numFindingsLimit, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3RiskEventSummarizationDataResponse>(){}.getType();
@@ -743,13 +763,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskEventDetailsCall(Integer riskId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskEventDetailsCall(@javax.annotation.Nonnull Integer riskId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -795,7 +816,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerGetRiskEventDetailsValidateBeforeCall(Integer riskId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerGetRiskEventDetailsValidateBeforeCall(@javax.annotation.Nonnull Integer riskId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'riskId' is set
         if (riskId == null) {
             throw new ApiException("Missing the required parameter 'riskId' when calling riskAnalyticsControllerGetRiskEventDetails(Async)");
@@ -812,13 +833,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3GetRiskEventDetailsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3GetRiskEventDetailsResponse riskAnalyticsControllerGetRiskEventDetails(Integer riskId) throws ApiException {
+    public Riskanalyticscontrollerv3GetRiskEventDetailsResponse riskAnalyticsControllerGetRiskEventDetails(@javax.annotation.Nonnull Integer riskId) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3GetRiskEventDetailsResponse> localVarResp = riskAnalyticsControllerGetRiskEventDetailsWithHttpInfo(riskId);
         return localVarResp.getData();
     }
@@ -830,13 +852,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3GetRiskEventDetailsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3GetRiskEventDetailsResponse> riskAnalyticsControllerGetRiskEventDetailsWithHttpInfo(Integer riskId) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3GetRiskEventDetailsResponse> riskAnalyticsControllerGetRiskEventDetailsWithHttpInfo(@javax.annotation.Nonnull Integer riskId) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskEventDetailsValidateBeforeCall(riskId, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3GetRiskEventDetailsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -850,13 +873,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskEventDetailsAsync(Integer riskId, final ApiCallback<Riskanalyticscontrollerv3GetRiskEventDetailsResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskEventDetailsAsync(@javax.annotation.Nonnull Integer riskId, final ApiCallback<Riskanalyticscontrollerv3GetRiskEventDetailsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskEventDetailsValidateBeforeCall(riskId, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3GetRiskEventDetailsResponse>(){}.getType();
@@ -869,7 +893,8 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -931,7 +956,8 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -948,7 +974,8 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -967,7 +994,8 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -996,13 +1024,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskEventRowCall(String status, OffsetDateTime dateFrom, OffsetDateTime dateTo, String pivotType, String pivotId, String pivotDbUser, String pivotDatabase, String pivotServerIp, String pivotOsUser, String pivotDatabaseSourceField, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskEventRowCall(@javax.annotation.Nullable String status, @javax.annotation.Nullable OffsetDateTime dateFrom, @javax.annotation.Nullable OffsetDateTime dateTo, @javax.annotation.Nullable String pivotType, @javax.annotation.Nullable String pivotId, @javax.annotation.Nullable String pivotDbUser, @javax.annotation.Nullable String pivotDatabase, @javax.annotation.Nullable String pivotServerIp, @javax.annotation.Nullable String pivotOsUser, @javax.annotation.Nullable String pivotDatabaseSourceField, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1087,7 +1116,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerGetRiskEventRowValidateBeforeCall(String status, OffsetDateTime dateFrom, OffsetDateTime dateTo, String pivotType, String pivotId, String pivotDbUser, String pivotDatabase, String pivotServerIp, String pivotOsUser, String pivotDatabaseSourceField, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerGetRiskEventRowValidateBeforeCall(@javax.annotation.Nullable String status, @javax.annotation.Nullable OffsetDateTime dateFrom, @javax.annotation.Nullable OffsetDateTime dateTo, @javax.annotation.Nullable String pivotType, @javax.annotation.Nullable String pivotId, @javax.annotation.Nullable String pivotDbUser, @javax.annotation.Nullable String pivotDatabase, @javax.annotation.Nullable String pivotServerIp, @javax.annotation.Nullable String pivotOsUser, @javax.annotation.Nullable String pivotDatabaseSourceField, final ApiCallback _callback) throws ApiException {
         return riskAnalyticsControllerGetRiskEventRowCall(status, dateFrom, dateTo, pivotType, pivotId, pivotDbUser, pivotDatabase, pivotServerIp, pivotOsUser, pivotDatabaseSourceField, _callback);
 
     }
@@ -1108,13 +1137,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3GetRiskEventRowResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3GetRiskEventRowResponse riskAnalyticsControllerGetRiskEventRow(String status, OffsetDateTime dateFrom, OffsetDateTime dateTo, String pivotType, String pivotId, String pivotDbUser, String pivotDatabase, String pivotServerIp, String pivotOsUser, String pivotDatabaseSourceField) throws ApiException {
+    public Riskanalyticscontrollerv3GetRiskEventRowResponse riskAnalyticsControllerGetRiskEventRow(@javax.annotation.Nullable String status, @javax.annotation.Nullable OffsetDateTime dateFrom, @javax.annotation.Nullable OffsetDateTime dateTo, @javax.annotation.Nullable String pivotType, @javax.annotation.Nullable String pivotId, @javax.annotation.Nullable String pivotDbUser, @javax.annotation.Nullable String pivotDatabase, @javax.annotation.Nullable String pivotServerIp, @javax.annotation.Nullable String pivotOsUser, @javax.annotation.Nullable String pivotDatabaseSourceField) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3GetRiskEventRowResponse> localVarResp = riskAnalyticsControllerGetRiskEventRowWithHttpInfo(status, dateFrom, dateTo, pivotType, pivotId, pivotDbUser, pivotDatabase, pivotServerIp, pivotOsUser, pivotDatabaseSourceField);
         return localVarResp.getData();
     }
@@ -1135,13 +1165,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3GetRiskEventRowResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3GetRiskEventRowResponse> riskAnalyticsControllerGetRiskEventRowWithHttpInfo(String status, OffsetDateTime dateFrom, OffsetDateTime dateTo, String pivotType, String pivotId, String pivotDbUser, String pivotDatabase, String pivotServerIp, String pivotOsUser, String pivotDatabaseSourceField) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3GetRiskEventRowResponse> riskAnalyticsControllerGetRiskEventRowWithHttpInfo(@javax.annotation.Nullable String status, @javax.annotation.Nullable OffsetDateTime dateFrom, @javax.annotation.Nullable OffsetDateTime dateTo, @javax.annotation.Nullable String pivotType, @javax.annotation.Nullable String pivotId, @javax.annotation.Nullable String pivotDbUser, @javax.annotation.Nullable String pivotDatabase, @javax.annotation.Nullable String pivotServerIp, @javax.annotation.Nullable String pivotOsUser, @javax.annotation.Nullable String pivotDatabaseSourceField) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskEventRowValidateBeforeCall(status, dateFrom, dateTo, pivotType, pivotId, pivotDbUser, pivotDatabase, pivotServerIp, pivotOsUser, pivotDatabaseSourceField, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3GetRiskEventRowResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1164,13 +1195,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskEventRowAsync(String status, OffsetDateTime dateFrom, OffsetDateTime dateTo, String pivotType, String pivotId, String pivotDbUser, String pivotDatabase, String pivotServerIp, String pivotOsUser, String pivotDatabaseSourceField, final ApiCallback<Riskanalyticscontrollerv3GetRiskEventRowResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskEventRowAsync(@javax.annotation.Nullable String status, @javax.annotation.Nullable OffsetDateTime dateFrom, @javax.annotation.Nullable OffsetDateTime dateTo, @javax.annotation.Nullable String pivotType, @javax.annotation.Nullable String pivotId, @javax.annotation.Nullable String pivotDbUser, @javax.annotation.Nullable String pivotDatabase, @javax.annotation.Nullable String pivotServerIp, @javax.annotation.Nullable String pivotOsUser, @javax.annotation.Nullable String pivotDatabaseSourceField, final ApiCallback<Riskanalyticscontrollerv3GetRiskEventRowResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskEventRowValidateBeforeCall(status, dateFrom, dateTo, pivotType, pivotId, pivotDbUser, pivotDatabase, pivotServerIp, pivotOsUser, pivotDatabaseSourceField, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3GetRiskEventRowResponse>(){}.getType();
@@ -1184,13 +1216,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsCall(Integer riskId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsCall(@javax.annotation.Nonnull Integer riskId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1236,7 +1269,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsValidateBeforeCall(Integer riskId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsValidateBeforeCall(@javax.annotation.Nonnull Integer riskId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'riskId' is set
         if (riskId == null) {
             throw new ApiException("Missing the required parameter 'riskId' when calling riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails(Async)");
@@ -1253,13 +1286,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails(Integer riskId) throws ApiException {
+    public Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails(@javax.annotation.Nonnull Integer riskId) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse> localVarResp = riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsWithHttpInfo(riskId);
         return localVarResp.getData();
     }
@@ -1271,13 +1305,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse> riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsWithHttpInfo(Integer riskId) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse> riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsWithHttpInfo(@javax.annotation.Nonnull Integer riskId) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsValidateBeforeCall(riskId, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1291,13 +1326,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsAsync(Integer riskId, final ApiCallback<Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsAsync(@javax.annotation.Nonnull Integer riskId, final ApiCallback<Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsValidateBeforeCall(riskId, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3RiskEventVulnerabilityAssessmentDetailsResponse>(){}.getType();
@@ -1310,7 +1346,8 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1375,7 +1412,8 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3GetRiskFeedbackResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1394,7 +1432,8 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3GetRiskFeedbackResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1415,7 +1454,8 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1438,13 +1478,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskObservationDetailsCall(Integer leadFeatureId, String observationType, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskObservationDetailsCall(@javax.annotation.Nullable Integer leadFeatureId, @javax.annotation.Nullable String observationType, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1497,7 +1538,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerGetRiskObservationDetailsValidateBeforeCall(Integer leadFeatureId, String observationType, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerGetRiskObservationDetailsValidateBeforeCall(@javax.annotation.Nullable Integer leadFeatureId, @javax.annotation.Nullable String observationType, final ApiCallback _callback) throws ApiException {
         return riskAnalyticsControllerGetRiskObservationDetailsCall(leadFeatureId, observationType, _callback);
 
     }
@@ -1510,13 +1551,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3GetRiskObservationDetailsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3GetRiskObservationDetailsResponse riskAnalyticsControllerGetRiskObservationDetails(Integer leadFeatureId, String observationType) throws ApiException {
+    public Riskanalyticscontrollerv3GetRiskObservationDetailsResponse riskAnalyticsControllerGetRiskObservationDetails(@javax.annotation.Nullable Integer leadFeatureId, @javax.annotation.Nullable String observationType) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3GetRiskObservationDetailsResponse> localVarResp = riskAnalyticsControllerGetRiskObservationDetailsWithHttpInfo(leadFeatureId, observationType);
         return localVarResp.getData();
     }
@@ -1529,13 +1571,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3GetRiskObservationDetailsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3GetRiskObservationDetailsResponse> riskAnalyticsControllerGetRiskObservationDetailsWithHttpInfo(Integer leadFeatureId, String observationType) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3GetRiskObservationDetailsResponse> riskAnalyticsControllerGetRiskObservationDetailsWithHttpInfo(@javax.annotation.Nullable Integer leadFeatureId, @javax.annotation.Nullable String observationType) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskObservationDetailsValidateBeforeCall(leadFeatureId, observationType, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3GetRiskObservationDetailsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1550,13 +1593,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerGetRiskObservationDetailsAsync(Integer leadFeatureId, String observationType, final ApiCallback<Riskanalyticscontrollerv3GetRiskObservationDetailsResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerGetRiskObservationDetailsAsync(@javax.annotation.Nullable Integer leadFeatureId, @javax.annotation.Nullable String observationType, final ApiCallback<Riskanalyticscontrollerv3GetRiskObservationDetailsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerGetRiskObservationDetailsValidateBeforeCall(leadFeatureId, observationType, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3GetRiskObservationDetailsResponse>(){}.getType();
@@ -1569,7 +1613,8 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1631,7 +1676,8 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3GetUserUISettingsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1648,7 +1694,8 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3GetUserUISettingsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1667,7 +1714,8 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1687,13 +1735,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerRiskEventTuningCall(Riskanalyticscontrollerv3RiskEventTuningRequest riskanalyticscontrollerv3RiskEventTuningRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerRiskEventTuningCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3RiskEventTuningRequest riskanalyticscontrollerv3RiskEventTuningRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1739,7 +1788,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerRiskEventTuningValidateBeforeCall(Riskanalyticscontrollerv3RiskEventTuningRequest riskanalyticscontrollerv3RiskEventTuningRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerRiskEventTuningValidateBeforeCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3RiskEventTuningRequest riskanalyticscontrollerv3RiskEventTuningRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'riskanalyticscontrollerv3RiskEventTuningRequest' is set
         if (riskanalyticscontrollerv3RiskEventTuningRequest == null) {
             throw new ApiException("Missing the required parameter 'riskanalyticscontrollerv3RiskEventTuningRequest' when calling riskAnalyticsControllerRiskEventTuning(Async)");
@@ -1756,13 +1805,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3RiskEventTuningResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3RiskEventTuningResponse riskAnalyticsControllerRiskEventTuning(Riskanalyticscontrollerv3RiskEventTuningRequest riskanalyticscontrollerv3RiskEventTuningRequest) throws ApiException {
+    public Riskanalyticscontrollerv3RiskEventTuningResponse riskAnalyticsControllerRiskEventTuning(@javax.annotation.Nonnull Riskanalyticscontrollerv3RiskEventTuningRequest riskanalyticscontrollerv3RiskEventTuningRequest) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3RiskEventTuningResponse> localVarResp = riskAnalyticsControllerRiskEventTuningWithHttpInfo(riskanalyticscontrollerv3RiskEventTuningRequest);
         return localVarResp.getData();
     }
@@ -1774,13 +1824,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3RiskEventTuningResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3RiskEventTuningResponse> riskAnalyticsControllerRiskEventTuningWithHttpInfo(Riskanalyticscontrollerv3RiskEventTuningRequest riskanalyticscontrollerv3RiskEventTuningRequest) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3RiskEventTuningResponse> riskAnalyticsControllerRiskEventTuningWithHttpInfo(@javax.annotation.Nonnull Riskanalyticscontrollerv3RiskEventTuningRequest riskanalyticscontrollerv3RiskEventTuningRequest) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerRiskEventTuningValidateBeforeCall(riskanalyticscontrollerv3RiskEventTuningRequest, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3RiskEventTuningResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1794,13 +1845,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerRiskEventTuningAsync(Riskanalyticscontrollerv3RiskEventTuningRequest riskanalyticscontrollerv3RiskEventTuningRequest, final ApiCallback<Riskanalyticscontrollerv3RiskEventTuningResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerRiskEventTuningAsync(@javax.annotation.Nonnull Riskanalyticscontrollerv3RiskEventTuningRequest riskanalyticscontrollerv3RiskEventTuningRequest, final ApiCallback<Riskanalyticscontrollerv3RiskEventTuningResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerRiskEventTuningValidateBeforeCall(riskanalyticscontrollerv3RiskEventTuningRequest, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3RiskEventTuningResponse>(){}.getType();
@@ -1814,13 +1866,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerSetRiskEventStatusCall(Riskanalyticscontrollerv3SetRiskEventStatusRequest riskanalyticscontrollerv3SetRiskEventStatusRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerSetRiskEventStatusCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3SetRiskEventStatusRequest riskanalyticscontrollerv3SetRiskEventStatusRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1866,7 +1919,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerSetRiskEventStatusValidateBeforeCall(Riskanalyticscontrollerv3SetRiskEventStatusRequest riskanalyticscontrollerv3SetRiskEventStatusRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerSetRiskEventStatusValidateBeforeCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3SetRiskEventStatusRequest riskanalyticscontrollerv3SetRiskEventStatusRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'riskanalyticscontrollerv3SetRiskEventStatusRequest' is set
         if (riskanalyticscontrollerv3SetRiskEventStatusRequest == null) {
             throw new ApiException("Missing the required parameter 'riskanalyticscontrollerv3SetRiskEventStatusRequest' when calling riskAnalyticsControllerSetRiskEventStatus(Async)");
@@ -1883,13 +1936,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3SetRiskEventStatusResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3SetRiskEventStatusResponse riskAnalyticsControllerSetRiskEventStatus(Riskanalyticscontrollerv3SetRiskEventStatusRequest riskanalyticscontrollerv3SetRiskEventStatusRequest) throws ApiException {
+    public Riskanalyticscontrollerv3SetRiskEventStatusResponse riskAnalyticsControllerSetRiskEventStatus(@javax.annotation.Nonnull Riskanalyticscontrollerv3SetRiskEventStatusRequest riskanalyticscontrollerv3SetRiskEventStatusRequest) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3SetRiskEventStatusResponse> localVarResp = riskAnalyticsControllerSetRiskEventStatusWithHttpInfo(riskanalyticscontrollerv3SetRiskEventStatusRequest);
         return localVarResp.getData();
     }
@@ -1901,13 +1955,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3SetRiskEventStatusResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3SetRiskEventStatusResponse> riskAnalyticsControllerSetRiskEventStatusWithHttpInfo(Riskanalyticscontrollerv3SetRiskEventStatusRequest riskanalyticscontrollerv3SetRiskEventStatusRequest) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3SetRiskEventStatusResponse> riskAnalyticsControllerSetRiskEventStatusWithHttpInfo(@javax.annotation.Nonnull Riskanalyticscontrollerv3SetRiskEventStatusRequest riskanalyticscontrollerv3SetRiskEventStatusRequest) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerSetRiskEventStatusValidateBeforeCall(riskanalyticscontrollerv3SetRiskEventStatusRequest, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3SetRiskEventStatusResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1921,13 +1976,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerSetRiskEventStatusAsync(Riskanalyticscontrollerv3SetRiskEventStatusRequest riskanalyticscontrollerv3SetRiskEventStatusRequest, final ApiCallback<Riskanalyticscontrollerv3SetRiskEventStatusResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerSetRiskEventStatusAsync(@javax.annotation.Nonnull Riskanalyticscontrollerv3SetRiskEventStatusRequest riskanalyticscontrollerv3SetRiskEventStatusRequest, final ApiCallback<Riskanalyticscontrollerv3SetRiskEventStatusResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerSetRiskEventStatusValidateBeforeCall(riskanalyticscontrollerv3SetRiskEventStatusRequest, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3SetRiskEventStatusResponse>(){}.getType();
@@ -1941,13 +1997,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerSetUserUISettingsCall(Riskanalyticscontrollerv3SetUserUISettingsRequest riskanalyticscontrollerv3SetUserUISettingsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerSetUserUISettingsCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3SetUserUISettingsRequest riskanalyticscontrollerv3SetUserUISettingsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1993,7 +2050,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerSetUserUISettingsValidateBeforeCall(Riskanalyticscontrollerv3SetUserUISettingsRequest riskanalyticscontrollerv3SetUserUISettingsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerSetUserUISettingsValidateBeforeCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3SetUserUISettingsRequest riskanalyticscontrollerv3SetUserUISettingsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'riskanalyticscontrollerv3SetUserUISettingsRequest' is set
         if (riskanalyticscontrollerv3SetUserUISettingsRequest == null) {
             throw new ApiException("Missing the required parameter 'riskanalyticscontrollerv3SetUserUISettingsRequest' when calling riskAnalyticsControllerSetUserUISettings(Async)");
@@ -2010,13 +2067,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3SetUserUISettingsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3SetUserUISettingsResponse riskAnalyticsControllerSetUserUISettings(Riskanalyticscontrollerv3SetUserUISettingsRequest riskanalyticscontrollerv3SetUserUISettingsRequest) throws ApiException {
+    public Riskanalyticscontrollerv3SetUserUISettingsResponse riskAnalyticsControllerSetUserUISettings(@javax.annotation.Nonnull Riskanalyticscontrollerv3SetUserUISettingsRequest riskanalyticscontrollerv3SetUserUISettingsRequest) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3SetUserUISettingsResponse> localVarResp = riskAnalyticsControllerSetUserUISettingsWithHttpInfo(riskanalyticscontrollerv3SetUserUISettingsRequest);
         return localVarResp.getData();
     }
@@ -2028,13 +2086,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3SetUserUISettingsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3SetUserUISettingsResponse> riskAnalyticsControllerSetUserUISettingsWithHttpInfo(Riskanalyticscontrollerv3SetUserUISettingsRequest riskanalyticscontrollerv3SetUserUISettingsRequest) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3SetUserUISettingsResponse> riskAnalyticsControllerSetUserUISettingsWithHttpInfo(@javax.annotation.Nonnull Riskanalyticscontrollerv3SetUserUISettingsRequest riskanalyticscontrollerv3SetUserUISettingsRequest) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerSetUserUISettingsValidateBeforeCall(riskanalyticscontrollerv3SetUserUISettingsRequest, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3SetUserUISettingsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2048,13 +2107,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerSetUserUISettingsAsync(Riskanalyticscontrollerv3SetUserUISettingsRequest riskanalyticscontrollerv3SetUserUISettingsRequest, final ApiCallback<Riskanalyticscontrollerv3SetUserUISettingsResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerSetUserUISettingsAsync(@javax.annotation.Nonnull Riskanalyticscontrollerv3SetUserUISettingsRequest riskanalyticscontrollerv3SetUserUISettingsRequest, final ApiCallback<Riskanalyticscontrollerv3SetUserUISettingsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerSetUserUISettingsValidateBeforeCall(riskanalyticscontrollerv3SetUserUISettingsRequest, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3SetUserUISettingsResponse>(){}.getType();
@@ -2068,13 +2128,14 @@ public class RiskAnalyticsControllerApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerUpdateRiskFeedbackCall(Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskanalyticscontrollerv3UpdateRiskFeedbackRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerUpdateRiskFeedbackCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskanalyticscontrollerv3UpdateRiskFeedbackRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2120,7 +2181,7 @@ public class RiskAnalyticsControllerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call riskAnalyticsControllerUpdateRiskFeedbackValidateBeforeCall(Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskanalyticscontrollerv3UpdateRiskFeedbackRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call riskAnalyticsControllerUpdateRiskFeedbackValidateBeforeCall(@javax.annotation.Nonnull Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskanalyticscontrollerv3UpdateRiskFeedbackRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'riskanalyticscontrollerv3UpdateRiskFeedbackRequest' is set
         if (riskanalyticscontrollerv3UpdateRiskFeedbackRequest == null) {
             throw new ApiException("Missing the required parameter 'riskanalyticscontrollerv3UpdateRiskFeedbackRequest' when calling riskAnalyticsControllerUpdateRiskFeedback(Async)");
@@ -2137,13 +2198,14 @@ public class RiskAnalyticsControllerApi {
      * @return Riskanalyticscontrollerv3UpdateRiskFeedbackResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Riskanalyticscontrollerv3UpdateRiskFeedbackResponse riskAnalyticsControllerUpdateRiskFeedback(Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskanalyticscontrollerv3UpdateRiskFeedbackRequest) throws ApiException {
+    public Riskanalyticscontrollerv3UpdateRiskFeedbackResponse riskAnalyticsControllerUpdateRiskFeedback(@javax.annotation.Nonnull Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskanalyticscontrollerv3UpdateRiskFeedbackRequest) throws ApiException {
         ApiResponse<Riskanalyticscontrollerv3UpdateRiskFeedbackResponse> localVarResp = riskAnalyticsControllerUpdateRiskFeedbackWithHttpInfo(riskanalyticscontrollerv3UpdateRiskFeedbackRequest);
         return localVarResp.getData();
     }
@@ -2155,13 +2217,14 @@ public class RiskAnalyticsControllerApi {
      * @return ApiResponse&lt;Riskanalyticscontrollerv3UpdateRiskFeedbackResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Riskanalyticscontrollerv3UpdateRiskFeedbackResponse> riskAnalyticsControllerUpdateRiskFeedbackWithHttpInfo(Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskanalyticscontrollerv3UpdateRiskFeedbackRequest) throws ApiException {
+    public ApiResponse<Riskanalyticscontrollerv3UpdateRiskFeedbackResponse> riskAnalyticsControllerUpdateRiskFeedbackWithHttpInfo(@javax.annotation.Nonnull Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskanalyticscontrollerv3UpdateRiskFeedbackRequest) throws ApiException {
         okhttp3.Call localVarCall = riskAnalyticsControllerUpdateRiskFeedbackValidateBeforeCall(riskanalyticscontrollerv3UpdateRiskFeedbackRequest, null);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3UpdateRiskFeedbackResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2175,13 +2238,14 @@ public class RiskAnalyticsControllerApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call riskAnalyticsControllerUpdateRiskFeedbackAsync(Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskanalyticscontrollerv3UpdateRiskFeedbackRequest, final ApiCallback<Riskanalyticscontrollerv3UpdateRiskFeedbackResponse> _callback) throws ApiException {
+    public okhttp3.Call riskAnalyticsControllerUpdateRiskFeedbackAsync(@javax.annotation.Nonnull Riskanalyticscontrollerv3UpdateRiskFeedbackRequest riskanalyticscontrollerv3UpdateRiskFeedbackRequest, final ApiCallback<Riskanalyticscontrollerv3UpdateRiskFeedbackResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = riskAnalyticsControllerUpdateRiskFeedbackValidateBeforeCall(riskanalyticscontrollerv3UpdateRiskFeedbackRequest, _callback);
         Type localVarReturnType = new TypeToken<Riskanalyticscontrollerv3UpdateRiskFeedbackResponse>(){}.getType();

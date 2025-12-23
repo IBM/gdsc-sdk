@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -45,228 +46,241 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CreateScheduledJobRequest message for Post v3/schedules api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3CreateScheduledJobRequest {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_ENABLED = "enabled";
   @SerializedName(SERIALIZED_NAME_ENABLED)
+  @javax.annotation.Nullable
   private Boolean enabled;
 
   public static final String SERIALIZED_NAME_INSTRUCTIONS = "instructions";
   @SerializedName(SERIALIZED_NAME_INSTRUCTIONS)
+  @javax.annotation.Nullable
   private String instructions;
 
   public static final String SERIALIZED_NAME_INTERNAL_AUDIT = "internal_audit";
   @SerializedName(SERIALIZED_NAME_INTERNAL_AUDIT)
+  @javax.annotation.Nullable
   private Schedulerv3AuditType internalAudit = Schedulerv3AuditType.UNDEFINED_TYPE;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_NOTIFICATION = "notification";
   @SerializedName(SERIALIZED_NAME_NOTIFICATION)
+  @javax.annotation.Nullable
   private Schedulerv3NotificationType notification = Schedulerv3NotificationType.UNDEFINED_NOTIFICATION;
 
   public static final String SERIALIZED_NAME_ORIGIN = "origin";
   @SerializedName(SERIALIZED_NAME_ORIGIN)
+  @javax.annotation.Nullable
   private String origin;
 
   public static final String SERIALIZED_NAME_RECIPIENT = "recipient";
   @SerializedName(SERIALIZED_NAME_RECIPIENT)
+  @javax.annotation.Nullable
   private Schedulerv3Recipient recipient;
 
   public static final String SERIALIZED_NAME_RECIPIENTS = "recipients";
   @SerializedName(SERIALIZED_NAME_RECIPIENTS)
+  @javax.annotation.Nullable
   private List<Schedulerv3Recipient> recipients = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RETENTION = "retention";
   @SerializedName(SERIALIZED_NAME_RETENTION)
+  @javax.annotation.Nullable
   private Schedulerv3Retention retention;
 
   public static final String SERIALIZED_NAME_SCHEDULER = "scheduler";
   @SerializedName(SERIALIZED_NAME_SCHEDULER)
+  @javax.annotation.Nullable
   private Schedulerv3Scheduler scheduler;
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
+  @javax.annotation.Nullable
   private List<String> tags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TASKS = "tasks";
   @SerializedName(SERIALIZED_NAME_TASKS)
+  @javax.annotation.Nullable
   private List<Schedulerv3ScheduledTask> tasks = new ArrayList<>();
 
   public Schedulerv3CreateScheduledJobRequest() {
   }
 
-  public Schedulerv3CreateScheduledJobRequest description(String description) {
+  public Schedulerv3CreateScheduledJobRequest description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Optional: Description for the scheduledJob.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest enabled(Boolean enabled) {
+  public Schedulerv3CreateScheduledJobRequest enabled(@javax.annotation.Nullable Boolean enabled) {
     this.enabled = enabled;
     return this;
   }
 
-   /**
+  /**
    * Optional: Enable or disable.
    * @return enabled
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getEnabled() {
     return enabled;
   }
 
-  public void setEnabled(Boolean enabled) {
+  public void setEnabled(@javax.annotation.Nullable Boolean enabled) {
     this.enabled = enabled;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest instructions(String instructions) {
+  public Schedulerv3CreateScheduledJobRequest instructions(@javax.annotation.Nullable String instructions) {
     this.instructions = instructions;
     return this;
   }
 
-   /**
+  /**
    * Optional: The instructions for the recipient.
    * @return instructions
-  **/
+   */
   @javax.annotation.Nullable
   public String getInstructions() {
     return instructions;
   }
 
-  public void setInstructions(String instructions) {
+  public void setInstructions(@javax.annotation.Nullable String instructions) {
     this.instructions = instructions;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest internalAudit(Schedulerv3AuditType internalAudit) {
+  public Schedulerv3CreateScheduledJobRequest internalAudit(@javax.annotation.Nullable Schedulerv3AuditType internalAudit) {
     this.internalAudit = internalAudit;
     return this;
   }
 
-   /**
+  /**
    * Get internalAudit
    * @return internalAudit
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3AuditType getInternalAudit() {
     return internalAudit;
   }
 
-  public void setInternalAudit(Schedulerv3AuditType internalAudit) {
+  public void setInternalAudit(@javax.annotation.Nullable Schedulerv3AuditType internalAudit) {
     this.internalAudit = internalAudit;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest name(String name) {
+  public Schedulerv3CreateScheduledJobRequest name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of the schedule.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest notification(Schedulerv3NotificationType notification) {
+  public Schedulerv3CreateScheduledJobRequest notification(@javax.annotation.Nullable Schedulerv3NotificationType notification) {
     this.notification = notification;
     return this;
   }
 
-   /**
+  /**
    * Get notification
    * @return notification
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3NotificationType getNotification() {
     return notification;
   }
 
-  public void setNotification(Schedulerv3NotificationType notification) {
+  public void setNotification(@javax.annotation.Nullable Schedulerv3NotificationType notification) {
     this.notification = notification;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest origin(String origin) {
+  public Schedulerv3CreateScheduledJobRequest origin(@javax.annotation.Nullable String origin) {
     this.origin = origin;
     return this;
   }
 
-   /**
+  /**
    * Get origin
    * @return origin
-  **/
+   */
   @javax.annotation.Nullable
   public String getOrigin() {
     return origin;
   }
 
-  public void setOrigin(String origin) {
+  public void setOrigin(@javax.annotation.Nullable String origin) {
     this.origin = origin;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest recipient(Schedulerv3Recipient recipient) {
+  public Schedulerv3CreateScheduledJobRequest recipient(@javax.annotation.Nullable Schedulerv3Recipient recipient) {
     this.recipient = recipient;
     return this;
   }
 
-   /**
+  /**
    * Get recipient
    * @return recipient
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3Recipient getRecipient() {
     return recipient;
   }
 
-  public void setRecipient(Schedulerv3Recipient recipient) {
+  public void setRecipient(@javax.annotation.Nullable Schedulerv3Recipient recipient) {
     this.recipient = recipient;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest recipients(List<Schedulerv3Recipient> recipients) {
+  public Schedulerv3CreateScheduledJobRequest recipients(@javax.annotation.Nullable List<Schedulerv3Recipient> recipients) {
     this.recipients = recipients;
     return this;
   }
@@ -279,59 +293,59 @@ public class Schedulerv3CreateScheduledJobRequest {
     return this;
   }
 
-   /**
+  /**
    * Get recipients
    * @return recipients
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3Recipient> getRecipients() {
     return recipients;
   }
 
-  public void setRecipients(List<Schedulerv3Recipient> recipients) {
+  public void setRecipients(@javax.annotation.Nullable List<Schedulerv3Recipient> recipients) {
     this.recipients = recipients;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest retention(Schedulerv3Retention retention) {
+  public Schedulerv3CreateScheduledJobRequest retention(@javax.annotation.Nullable Schedulerv3Retention retention) {
     this.retention = retention;
     return this;
   }
 
-   /**
+  /**
    * Get retention
    * @return retention
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3Retention getRetention() {
     return retention;
   }
 
-  public void setRetention(Schedulerv3Retention retention) {
+  public void setRetention(@javax.annotation.Nullable Schedulerv3Retention retention) {
     this.retention = retention;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest scheduler(Schedulerv3Scheduler scheduler) {
+  public Schedulerv3CreateScheduledJobRequest scheduler(@javax.annotation.Nullable Schedulerv3Scheduler scheduler) {
     this.scheduler = scheduler;
     return this;
   }
 
-   /**
+  /**
    * Get scheduler
    * @return scheduler
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3Scheduler getScheduler() {
     return scheduler;
   }
 
-  public void setScheduler(Schedulerv3Scheduler scheduler) {
+  public void setScheduler(@javax.annotation.Nullable Schedulerv3Scheduler scheduler) {
     this.scheduler = scheduler;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest tags(List<String> tags) {
+  public Schedulerv3CreateScheduledJobRequest tags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
     return this;
   }
@@ -344,21 +358,21 @@ public class Schedulerv3CreateScheduledJobRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Tags to use.
    * @return tags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
 
-  public void setTags(List<String> tags) {
+  public void setTags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
   }
 
 
-  public Schedulerv3CreateScheduledJobRequest tasks(List<Schedulerv3ScheduledTask> tasks) {
+  public Schedulerv3CreateScheduledJobRequest tasks(@javax.annotation.Nullable List<Schedulerv3ScheduledTask> tasks) {
     this.tasks = tasks;
     return this;
   }
@@ -371,16 +385,16 @@ public class Schedulerv3CreateScheduledJobRequest {
     return this;
   }
 
-   /**
+  /**
    * Get tasks
    * @return tasks
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3ScheduledTask> getTasks() {
     return tasks;
   }
 
-  public void setTasks(List<Schedulerv3ScheduledTask> tasks) {
+  public void setTasks(@javax.annotation.Nullable List<Schedulerv3ScheduledTask> tasks) {
     this.tasks = tasks;
   }
 
@@ -453,35 +467,22 @@ public class Schedulerv3CreateScheduledJobRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("description");
-    openapiFields.add("enabled");
-    openapiFields.add("instructions");
-    openapiFields.add("internal_audit");
-    openapiFields.add("name");
-    openapiFields.add("notification");
-    openapiFields.add("origin");
-    openapiFields.add("recipient");
-    openapiFields.add("recipients");
-    openapiFields.add("retention");
-    openapiFields.add("scheduler");
-    openapiFields.add("tags");
-    openapiFields.add("tasks");
+    openapiFields = new HashSet<String>(Arrays.asList("description", "enabled", "instructions", "internal_audit", "name", "notification", "origin", "recipient", "recipients", "retention", "scheduler", "tags", "tasks"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3CreateScheduledJobRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3CreateScheduledJobRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3CreateScheduledJobRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3CreateScheduledJobRequest is not found in the empty JSON string", Schedulerv3CreateScheduledJobRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3CreateScheduledJobRequest is not found in the empty JSON string", Schedulerv3CreateScheduledJobRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -489,29 +490,29 @@ public class Schedulerv3CreateScheduledJobRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3CreateScheduledJobRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3CreateScheduledJobRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3CreateScheduledJobRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if ((jsonObj.get("instructions") != null && !jsonObj.get("instructions").isJsonNull()) && !jsonObj.get("instructions").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `instructions` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instructions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `instructions` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instructions").toString()));
       }
       // validate the optional field `internal_audit`
       if (jsonObj.get("internal_audit") != null && !jsonObj.get("internal_audit").isJsonNull()) {
         Schedulerv3AuditType.validateJsonElement(jsonObj.get("internal_audit"));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       // validate the optional field `notification`
       if (jsonObj.get("notification") != null && !jsonObj.get("notification").isJsonNull()) {
         Schedulerv3NotificationType.validateJsonElement(jsonObj.get("notification"));
       }
       if ((jsonObj.get("origin") != null && !jsonObj.get("origin").isJsonNull()) && !jsonObj.get("origin").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `origin` to be a primitive type in the JSON string but got `%s`", jsonObj.get("origin").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `origin` to be a primitive type in the JSON string but got `%s`", jsonObj.get("origin").toString()));
       }
       // validate the optional field `recipient`
       if (jsonObj.get("recipient") != null && !jsonObj.get("recipient").isJsonNull()) {
@@ -522,7 +523,7 @@ public class Schedulerv3CreateScheduledJobRequest {
         if (jsonArrayrecipients != null) {
           // ensure the json data is an array
           if (!jsonObj.get("recipients").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `recipients` to be an array in the JSON string but got `%s`", jsonObj.get("recipients").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `recipients` to be an array in the JSON string but got `%s`", jsonObj.get("recipients").toString()));
           }
 
           // validate the optional field `recipients` (array)
@@ -541,14 +542,14 @@ public class Schedulerv3CreateScheduledJobRequest {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull() && !jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
       }
       if (jsonObj.get("tasks") != null && !jsonObj.get("tasks").isJsonNull()) {
         JsonArray jsonArraytasks = jsonObj.getAsJsonArray("tasks");
         if (jsonArraytasks != null) {
           // ensure the json data is an array
           if (!jsonObj.get("tasks").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tasks` to be an array in the JSON string but got `%s`", jsonObj.get("tasks").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tasks` to be an array in the JSON string but got `%s`", jsonObj.get("tasks").toString()));
           }
 
           // validate the optional field `tasks` (array)
@@ -588,22 +589,22 @@ public class Schedulerv3CreateScheduledJobRequest {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3CreateScheduledJobRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3CreateScheduledJobRequest
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3CreateScheduledJobRequest
-  */
+  /**
+   * Create an instance of Schedulerv3CreateScheduledJobRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3CreateScheduledJobRequest
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3CreateScheduledJobRequest
+   */
   public static Schedulerv3CreateScheduledJobRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3CreateScheduledJobRequest.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3CreateScheduledJobRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3CreateScheduledJobRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

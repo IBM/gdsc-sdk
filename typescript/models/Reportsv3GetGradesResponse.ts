@@ -24,6 +24,8 @@ export class Reportsv3GetGradesResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "gradesList",
@@ -39,4 +41,3 @@ export class Reportsv3GetGradesResponse {
     public constructor() {
     }
 }
-

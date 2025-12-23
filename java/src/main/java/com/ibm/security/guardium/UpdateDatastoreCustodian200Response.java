@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateDatastoreCustodian200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class UpdateDatastoreCustodian200Response {
   public static final String SERIALIZED_NAME_DATA_STORE_IDS = "dataStoreIds";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_IDS)
+  @javax.annotation.Nullable
   private String dataStoreIds;
 
   public static final String SERIALIZED_NAME_CUSTODIAN = "custodian";
   @SerializedName(SERIALIZED_NAME_CUSTODIAN)
+  @javax.annotation.Nonnull
   private String custodian;
 
   public UpdateDatastoreCustodian200Response() {
   }
 
-  public UpdateDatastoreCustodian200Response dataStoreIds(String dataStoreIds) {
+  public UpdateDatastoreCustodian200Response dataStoreIds(@javax.annotation.Nullable String dataStoreIds) {
     this.dataStoreIds = dataStoreIds;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreIds
    * @return dataStoreIds
-  **/
+   */
   @javax.annotation.Nullable
   public String getDataStoreIds() {
     return dataStoreIds;
   }
 
-  public void setDataStoreIds(String dataStoreIds) {
+  public void setDataStoreIds(@javax.annotation.Nullable String dataStoreIds) {
     this.dataStoreIds = dataStoreIds;
   }
 
 
-  public UpdateDatastoreCustodian200Response custodian(String custodian) {
+  public UpdateDatastoreCustodian200Response custodian(@javax.annotation.Nonnull String custodian) {
     this.custodian = custodian;
     return this;
   }
 
-   /**
+  /**
    * Get custodian
    * @return custodian
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCustodian() {
     return custodian;
   }
 
-  public void setCustodian(String custodian) {
+  public void setCustodian(@javax.annotation.Nonnull String custodian) {
     this.custodian = custodian;
   }
 
@@ -146,25 +149,22 @@ public class UpdateDatastoreCustodian200Response {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dataStoreIds");
-    openapiFields.add("custodian");
+    openapiFields = new HashSet<String>(Arrays.asList("dataStoreIds", "custodian"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("custodian");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("custodian"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UpdateDatastoreCustodian200Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UpdateDatastoreCustodian200Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UpdateDatastoreCustodian200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateDatastoreCustodian200Response is not found in the empty JSON string", UpdateDatastoreCustodian200Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in UpdateDatastoreCustodian200Response is not found in the empty JSON string", UpdateDatastoreCustodian200Response.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,22 +172,22 @@ public class UpdateDatastoreCustodian200Response {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!UpdateDatastoreCustodian200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UpdateDatastoreCustodian200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `UpdateDatastoreCustodian200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : UpdateDatastoreCustodian200Response.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("dataStoreIds") != null && !jsonObj.get("dataStoreIds").isJsonNull()) && !jsonObj.get("dataStoreIds").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreIds` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreIds` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreIds").toString()));
       }
       if (!jsonObj.get("custodian").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `custodian` to be a primitive type in the JSON string but got `%s`", jsonObj.get("custodian").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `custodian` to be a primitive type in the JSON string but got `%s`", jsonObj.get("custodian").toString()));
       }
   }
 
@@ -220,22 +220,22 @@ public class UpdateDatastoreCustodian200Response {
     }
   }
 
- /**
-  * Create an instance of UpdateDatastoreCustodian200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UpdateDatastoreCustodian200Response
-  * @throws IOException if the JSON string is invalid with respect to UpdateDatastoreCustodian200Response
-  */
+  /**
+   * Create an instance of UpdateDatastoreCustodian200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UpdateDatastoreCustodian200Response
+   * @throws IOException if the JSON string is invalid with respect to UpdateDatastoreCustodian200Response
+   */
   public static UpdateDatastoreCustodian200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UpdateDatastoreCustodian200Response.class);
   }
 
- /**
-  * Convert an instance of UpdateDatastoreCustodian200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UpdateDatastoreCustodian200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

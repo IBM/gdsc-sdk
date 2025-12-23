@@ -72,9 +72,9 @@ class Tenantuserv3GetPrivilegesResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in privileges (list)
         _items = []
         if self.privileges:
-            for _item in self.privileges:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_privileges in self.privileges:
+                if _item_privileges:
+                    _items.append(_item_privileges.to_dict())
             _dict['privileges'] = _items
         return _dict
 

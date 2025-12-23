@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,124 +42,130 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Vendor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Vendor {
   public static final String SERIALIZED_NAME_VENDOR_ID = "vendorId";
   @SerializedName(SERIALIZED_NAME_VENDOR_ID)
+  @javax.annotation.Nonnull
   private String vendorId;
 
   public static final String SERIALIZED_NAME_VENDOR_NAME = "vendorName";
   @SerializedName(SERIALIZED_NAME_VENDOR_NAME)
+  @javax.annotation.Nonnull
   private String vendorName;
 
   public static final String SERIALIZED_NAME_VENDOR_URL = "vendorUrl";
   @SerializedName(SERIALIZED_NAME_VENDOR_URL)
+  @javax.annotation.Nullable
   private String vendorUrl;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String description;
 
   public static final String SERIALIZED_NAME_ACCOUNTS = "accounts";
   @SerializedName(SERIALIZED_NAME_ACCOUNTS)
+  @javax.annotation.Nullable
   private List<VendorAccount> accounts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CERTIFICATES = "certificates";
   @SerializedName(SERIALIZED_NAME_CERTIFICATES)
+  @javax.annotation.Nullable
   private List<VendorCertificate> certificates = new ArrayList<>();
 
   public Vendor() {
   }
 
-  public Vendor vendorId(String vendorId) {
+  public Vendor vendorId(@javax.annotation.Nonnull String vendorId) {
     this.vendorId = vendorId;
     return this;
   }
 
-   /**
+  /**
    * The 3rd party vendor unique ID
    * @return vendorId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getVendorId() {
     return vendorId;
   }
 
-  public void setVendorId(String vendorId) {
+  public void setVendorId(@javax.annotation.Nonnull String vendorId) {
     this.vendorId = vendorId;
   }
 
 
-  public Vendor vendorName(String vendorName) {
+  public Vendor vendorName(@javax.annotation.Nonnull String vendorName) {
     this.vendorName = vendorName;
     return this;
   }
 
-   /**
+  /**
    * The 3rd party vendor name (Company name)
    * @return vendorName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getVendorName() {
     return vendorName;
   }
 
-  public void setVendorName(String vendorName) {
+  public void setVendorName(@javax.annotation.Nonnull String vendorName) {
     this.vendorName = vendorName;
   }
 
 
-  public Vendor vendorUrl(String vendorUrl) {
+  public Vendor vendorUrl(@javax.annotation.Nullable String vendorUrl) {
     this.vendorUrl = vendorUrl;
     return this;
   }
 
-   /**
+  /**
    * The 3rd party company website URL
    * @return vendorUrl
-  **/
+   */
   @javax.annotation.Nullable
   public String getVendorUrl() {
     return vendorUrl;
   }
 
-  public void setVendorUrl(String vendorUrl) {
+  public void setVendorUrl(@javax.annotation.Nullable String vendorUrl) {
     this.vendorUrl = vendorUrl;
   }
 
 
-  public Vendor description(String description) {
+  public Vendor description(@javax.annotation.Nonnull String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Short description of the 3rd party vendor
    * @return description
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nonnull String description) {
     this.description = description;
   }
 
 
-  public Vendor accounts(List<VendorAccount> accounts) {
+  public Vendor accounts(@javax.annotation.Nullable List<VendorAccount> accounts) {
     this.accounts = accounts;
     return this;
   }
@@ -171,21 +178,21 @@ public class Vendor {
     return this;
   }
 
-   /**
+  /**
    * Get accounts
    * @return accounts
-  **/
+   */
   @javax.annotation.Nullable
   public List<VendorAccount> getAccounts() {
     return accounts;
   }
 
-  public void setAccounts(List<VendorAccount> accounts) {
+  public void setAccounts(@javax.annotation.Nullable List<VendorAccount> accounts) {
     this.accounts = accounts;
   }
 
 
-  public Vendor certificates(List<VendorCertificate> certificates) {
+  public Vendor certificates(@javax.annotation.Nullable List<VendorCertificate> certificates) {
     this.certificates = certificates;
     return this;
   }
@@ -198,16 +205,16 @@ public class Vendor {
     return this;
   }
 
-   /**
+  /**
    * Get certificates
    * @return certificates
-  **/
+   */
   @javax.annotation.Nullable
   public List<VendorCertificate> getCertificates() {
     return certificates;
   }
 
-  public void setCertificates(List<VendorCertificate> certificates) {
+  public void setCertificates(@javax.annotation.Nullable List<VendorCertificate> certificates) {
     this.certificates = certificates;
   }
 
@@ -266,31 +273,22 @@ public class Vendor {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("vendorId");
-    openapiFields.add("vendorName");
-    openapiFields.add("vendorUrl");
-    openapiFields.add("description");
-    openapiFields.add("accounts");
-    openapiFields.add("certificates");
+    openapiFields = new HashSet<String>(Arrays.asList("vendorId", "vendorName", "vendorUrl", "description", "accounts", "certificates"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("vendorId");
-    openapiRequiredFields.add("vendorName");
-    openapiRequiredFields.add("description");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("vendorId", "vendorName", "description"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Vendor
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Vendor
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Vendor.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Vendor is not found in the empty JSON string", Vendor.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Vendor is not found in the empty JSON string", Vendor.openapiRequiredFields.toString()));
         }
       }
 
@@ -298,35 +296,35 @@ public class Vendor {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Vendor.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Vendor` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Vendor` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : Vendor.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("vendorId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vendorId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vendorId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorId").toString()));
       }
       if (!jsonObj.get("vendorName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vendorName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vendorName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorName").toString()));
       }
       if ((jsonObj.get("vendorUrl") != null && !jsonObj.get("vendorUrl").isJsonNull()) && !jsonObj.get("vendorUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vendorUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorUrl").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vendorUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorUrl").toString()));
       }
       if (!jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if (jsonObj.get("accounts") != null && !jsonObj.get("accounts").isJsonNull()) {
         JsonArray jsonArrayaccounts = jsonObj.getAsJsonArray("accounts");
         if (jsonArrayaccounts != null) {
           // ensure the json data is an array
           if (!jsonObj.get("accounts").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `accounts` to be an array in the JSON string but got `%s`", jsonObj.get("accounts").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `accounts` to be an array in the JSON string but got `%s`", jsonObj.get("accounts").toString()));
           }
 
           // validate the optional field `accounts` (array)
@@ -340,7 +338,7 @@ public class Vendor {
         if (jsonArraycertificates != null) {
           // ensure the json data is an array
           if (!jsonObj.get("certificates").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `certificates` to be an array in the JSON string but got `%s`", jsonObj.get("certificates").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `certificates` to be an array in the JSON string but got `%s`", jsonObj.get("certificates").toString()));
           }
 
           // validate the optional field `certificates` (array)
@@ -380,22 +378,22 @@ public class Vendor {
     }
   }
 
- /**
-  * Create an instance of Vendor given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Vendor
-  * @throws IOException if the JSON string is invalid with respect to Vendor
-  */
+  /**
+   * Create an instance of Vendor given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Vendor
+   * @throws IOException if the JSON string is invalid with respect to Vendor
+   */
   public static Vendor fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Vendor.class);
   }
 
- /**
-  * Convert an instance of Vendor to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Vendor to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -425,7 +425,7 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     rows_required = 'rows_required_example' # str | which rows are required, existing or new or all. (optional)
     page_number = 56 # int | page number. (optional)
     page_size = 56 # int | page size. (optional)
-    template_type = 'DATABASE' # str | Asset CSV template type.   - DATABASE: Template for database (optional) (default to 'DATABASE')
+    template_type = DATABASE # str | Asset CSV template type.   - DATABASE: Template for database (optional) (default to DATABASE)
 
     try:
         # CompareCSVToExistingAssets - Compare CSV with existing assets and return list of assets(existing/to be imported/both) on demand from csv.
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
  **rows_required** | **str**| which rows are required, existing or new or all. | [optional] 
  **page_number** | **int**| page number. | [optional] 
  **page_size** | **int**| page size. | [optional] 
- **template_type** | **str**| Asset CSV template type.   - DATABASE: Template for database | [optional] [default to &#39;DATABASE&#39;]
+ **template_type** | **str**| Asset CSV template type.   - DATABASE: Template for database | [optional] [default to DATABASE]
 
 ### Return type
 
@@ -1228,7 +1228,7 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     asset_id = 'asset_id_example' # str | Asset grouper Id. (optional)
     page_number = 56 # int | Page number. (optional)
     size = 56 # int | Page size. (optional)
-    widget = 'ALL' # str | Widget type.   - ALL: All Asset Overview Widgets.  - CLASSIFICATION: Classification Asset Overview Widgets.  - TAG: Tag Asset Overview Widgets.  - RESOURCE: Resource Asset Overview Widgets. (optional) (default to 'ALL')
+    widget = ALL # str | Widget type.   - ALL: All Asset Overview Widgets.  - CLASSIFICATION: Classification Asset Overview Widgets.  - TAG: Tag Asset Overview Widgets.  - RESOURCE: Resource Asset Overview Widgets. (optional) (default to ALL)
     ip = 'ip_example' # str | Asset IP. (optional)
     host = 'host_example' # str | Asset Host. (optional)
     database = 'database_example' # str | Database Name. (optional)
@@ -1253,7 +1253,7 @@ Name | Type | Description  | Notes
  **asset_id** | **str**| Asset grouper Id. | [optional] 
  **page_number** | **int**| Page number. | [optional] 
  **size** | **int**| Page size. | [optional] 
- **widget** | **str**| Widget type.   - ALL: All Asset Overview Widgets.  - CLASSIFICATION: Classification Asset Overview Widgets.  - TAG: Tag Asset Overview Widgets.  - RESOURCE: Resource Asset Overview Widgets. | [optional] [default to &#39;ALL&#39;]
+ **widget** | **str**| Widget type.   - ALL: All Asset Overview Widgets.  - CLASSIFICATION: Classification Asset Overview Widgets.  - TAG: Tag Asset Overview Widgets.  - RESOURCE: Resource Asset Overview Widgets. | [optional] [default to ALL]
  **ip** | **str**| Asset IP. | [optional] 
  **host** | **str**| Asset Host. | [optional] 
  **database** | **str**| Database Name. | [optional] 

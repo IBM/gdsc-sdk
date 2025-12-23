@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AggregationDetailsObject gets additional information about aggregation.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3AggregationDetailsObject {
   public static final String SERIALIZED_NAME_AGGREGATION_ACTION_ERROR = "aggregation_action_error";
   @SerializedName(SERIALIZED_NAME_AGGREGATION_ACTION_ERROR)
+  @javax.annotation.Nullable
   private String aggregationActionError;
 
   public static final String SERIALIZED_NAME_AGGREGATION_ACTION_HEALTH_STATUS = "aggregation_action_health_status";
   @SerializedName(SERIALIZED_NAME_AGGREGATION_ACTION_HEALTH_STATUS)
+  @javax.annotation.Nullable
   private Integer aggregationActionHealthStatus;
 
   public static final String SERIALIZED_NAME_AGGREGATION_TYPE = "aggregation_type";
   @SerializedName(SERIALIZED_NAME_AGGREGATION_TYPE)
+  @javax.annotation.Nullable
   private String aggregationType;
 
   public static final String SERIALIZED_NAME_ERROR = "error";
   @SerializedName(SERIALIZED_NAME_ERROR)
+  @javax.annotation.Nullable
   private Integer error;
 
   public static final String SERIALIZED_NAME_UNIT = "unit";
   @SerializedName(SERIALIZED_NAME_UNIT)
+  @javax.annotation.Nullable
   private String unit;
 
   public Healthcollectorv3AggregationDetailsObject() {
   }
 
-  public Healthcollectorv3AggregationDetailsObject aggregationActionError(String aggregationActionError) {
+  public Healthcollectorv3AggregationDetailsObject aggregationActionError(@javax.annotation.Nullable String aggregationActionError) {
     this.aggregationActionError = aggregationActionError;
     return this;
   }
 
-   /**
+  /**
    * Aggregation action error.
    * @return aggregationActionError
-  **/
+   */
   @javax.annotation.Nullable
   public String getAggregationActionError() {
     return aggregationActionError;
   }
 
-  public void setAggregationActionError(String aggregationActionError) {
+  public void setAggregationActionError(@javax.annotation.Nullable String aggregationActionError) {
     this.aggregationActionError = aggregationActionError;
   }
 
 
-  public Healthcollectorv3AggregationDetailsObject aggregationActionHealthStatus(Integer aggregationActionHealthStatus) {
+  public Healthcollectorv3AggregationDetailsObject aggregationActionHealthStatus(@javax.annotation.Nullable Integer aggregationActionHealthStatus) {
     this.aggregationActionHealthStatus = aggregationActionHealthStatus;
     return this;
   }
 
-   /**
+  /**
    * Aggregation health status.
    * @return aggregationActionHealthStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getAggregationActionHealthStatus() {
     return aggregationActionHealthStatus;
   }
 
-  public void setAggregationActionHealthStatus(Integer aggregationActionHealthStatus) {
+  public void setAggregationActionHealthStatus(@javax.annotation.Nullable Integer aggregationActionHealthStatus) {
     this.aggregationActionHealthStatus = aggregationActionHealthStatus;
   }
 
 
-  public Healthcollectorv3AggregationDetailsObject aggregationType(String aggregationType) {
+  public Healthcollectorv3AggregationDetailsObject aggregationType(@javax.annotation.Nullable String aggregationType) {
     this.aggregationType = aggregationType;
     return this;
   }
 
-   /**
+  /**
    * Aggregation type.
    * @return aggregationType
-  **/
+   */
   @javax.annotation.Nullable
   public String getAggregationType() {
     return aggregationType;
   }
 
-  public void setAggregationType(String aggregationType) {
+  public void setAggregationType(@javax.annotation.Nullable String aggregationType) {
     this.aggregationType = aggregationType;
   }
 
 
-  public Healthcollectorv3AggregationDetailsObject error(Integer error) {
+  public Healthcollectorv3AggregationDetailsObject error(@javax.annotation.Nullable Integer error) {
     this.error = error;
     return this;
   }
 
-   /**
+  /**
    * Error code for the aggregator.
    * @return error
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getError() {
     return error;
   }
 
-  public void setError(Integer error) {
+  public void setError(@javax.annotation.Nullable Integer error) {
     this.error = error;
   }
 
 
-  public Healthcollectorv3AggregationDetailsObject unit(String unit) {
+  public Healthcollectorv3AggregationDetailsObject unit(@javax.annotation.Nullable String unit) {
     this.unit = unit;
     return this;
   }
 
-   /**
+  /**
    * Aggregator host name or IP address.
    * @return unit
-  **/
+   */
   @javax.annotation.Nullable
   public String getUnit() {
     return unit;
   }
 
-  public void setUnit(String unit) {
+  public void setUnit(@javax.annotation.Nullable String unit) {
     this.unit = unit;
   }
 
@@ -221,27 +227,22 @@ public class Healthcollectorv3AggregationDetailsObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("aggregation_action_error");
-    openapiFields.add("aggregation_action_health_status");
-    openapiFields.add("aggregation_type");
-    openapiFields.add("error");
-    openapiFields.add("unit");
+    openapiFields = new HashSet<String>(Arrays.asList("aggregation_action_error", "aggregation_action_health_status", "aggregation_type", "error", "unit"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3AggregationDetailsObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3AggregationDetailsObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3AggregationDetailsObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3AggregationDetailsObject is not found in the empty JSON string", Healthcollectorv3AggregationDetailsObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3AggregationDetailsObject is not found in the empty JSON string", Healthcollectorv3AggregationDetailsObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,18 +250,18 @@ public class Healthcollectorv3AggregationDetailsObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3AggregationDetailsObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3AggregationDetailsObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3AggregationDetailsObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("aggregation_action_error") != null && !jsonObj.get("aggregation_action_error").isJsonNull()) && !jsonObj.get("aggregation_action_error").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `aggregation_action_error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("aggregation_action_error").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `aggregation_action_error` to be a primitive type in the JSON string but got `%s`", jsonObj.get("aggregation_action_error").toString()));
       }
       if ((jsonObj.get("aggregation_type") != null && !jsonObj.get("aggregation_type").isJsonNull()) && !jsonObj.get("aggregation_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `aggregation_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("aggregation_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `aggregation_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("aggregation_type").toString()));
       }
       if ((jsonObj.get("unit") != null && !jsonObj.get("unit").isJsonNull()) && !jsonObj.get("unit").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `unit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `unit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit").toString()));
       }
   }
 
@@ -293,22 +294,22 @@ public class Healthcollectorv3AggregationDetailsObject {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3AggregationDetailsObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3AggregationDetailsObject
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3AggregationDetailsObject
-  */
+  /**
+   * Create an instance of Healthcollectorv3AggregationDetailsObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3AggregationDetailsObject
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3AggregationDetailsObject
+   */
   public static Healthcollectorv3AggregationDetailsObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3AggregationDetailsObject.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3AggregationDetailsObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3AggregationDetailsObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

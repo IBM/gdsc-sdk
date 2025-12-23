@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,36 +41,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * SubCategory - Sub Category Data for Manage Asset Filter Panel.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3SubCategory {
   public static final String SERIALIZED_NAME_CHILDREN_CATEGORY = "children_category";
   @SerializedName(SERIALIZED_NAME_CHILDREN_CATEGORY)
+  @javax.annotation.Nullable
   private List<Assetsv3ChildCategory> childrenCategory = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public Assetsv3SubCategory() {
   }
 
-  public Assetsv3SubCategory childrenCategory(List<Assetsv3ChildCategory> childrenCategory) {
+  public Assetsv3SubCategory childrenCategory(@javax.annotation.Nullable List<Assetsv3ChildCategory> childrenCategory) {
     this.childrenCategory = childrenCategory;
     return this;
   }
@@ -82,54 +86,54 @@ public class Assetsv3SubCategory {
     return this;
   }
 
-   /**
+  /**
    * Get childrenCategory
    * @return childrenCategory
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ChildCategory> getChildrenCategory() {
     return childrenCategory;
   }
 
-  public void setChildrenCategory(List<Assetsv3ChildCategory> childrenCategory) {
+  public void setChildrenCategory(@javax.annotation.Nullable List<Assetsv3ChildCategory> childrenCategory) {
     this.childrenCategory = childrenCategory;
   }
 
 
-  public Assetsv3SubCategory id(String id) {
+  public Assetsv3SubCategory id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Assetsv3SubCategory name(String name) {
+  public Assetsv3SubCategory name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
@@ -182,25 +186,22 @@ public class Assetsv3SubCategory {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("children_category");
-    openapiFields.add("id");
-    openapiFields.add("name");
+    openapiFields = new HashSet<String>(Arrays.asList("children_category", "id", "name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3SubCategory
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3SubCategory
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3SubCategory.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3SubCategory is not found in the empty JSON string", Assetsv3SubCategory.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3SubCategory is not found in the empty JSON string", Assetsv3SubCategory.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,7 +209,7 @@ public class Assetsv3SubCategory {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3SubCategory.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3SubCategory` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3SubCategory` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -217,7 +218,7 @@ public class Assetsv3SubCategory {
         if (jsonArraychildrenCategory != null) {
           // ensure the json data is an array
           if (!jsonObj.get("children_category").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `children_category` to be an array in the JSON string but got `%s`", jsonObj.get("children_category").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `children_category` to be an array in the JSON string but got `%s`", jsonObj.get("children_category").toString()));
           }
 
           // validate the optional field `children_category` (array)
@@ -227,10 +228,10 @@ public class Assetsv3SubCategory {
         }
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
   }
 
@@ -263,22 +264,22 @@ public class Assetsv3SubCategory {
     }
   }
 
- /**
-  * Create an instance of Assetsv3SubCategory given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3SubCategory
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3SubCategory
-  */
+  /**
+   * Create an instance of Assetsv3SubCategory given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3SubCategory
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3SubCategory
+   */
   public static Assetsv3SubCategory fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3SubCategory.class);
   }
 
- /**
-  * Convert an instance of Assetsv3SubCategory to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3SubCategory to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -23,6 +23,8 @@ export class Assetsv3OverviewParameter {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "databaseName",
@@ -50,4 +52,3 @@ export class Assetsv3OverviewParameter {
     public constructor() {
     }
 }
-

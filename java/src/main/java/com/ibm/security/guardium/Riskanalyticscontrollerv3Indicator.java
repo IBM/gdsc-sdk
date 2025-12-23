@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Riskanalyticscontrollerv3Indicator
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3Indicator {
   public static final String SERIALIZED_NAME_INDICATOR_DESC = "indicator_desc";
   @SerializedName(SERIALIZED_NAME_INDICATOR_DESC)
+  @javax.annotation.Nullable
   private String indicatorDesc;
 
   public static final String SERIALIZED_NAME_INDICATOR_SCORE = "indicator_score";
   @SerializedName(SERIALIZED_NAME_INDICATOR_SCORE)
+  @javax.annotation.Nullable
   private Integer indicatorScore;
 
   public Riskanalyticscontrollerv3Indicator() {
   }
 
-  public Riskanalyticscontrollerv3Indicator indicatorDesc(String indicatorDesc) {
+  public Riskanalyticscontrollerv3Indicator indicatorDesc(@javax.annotation.Nullable String indicatorDesc) {
     this.indicatorDesc = indicatorDesc;
     return this;
   }
 
-   /**
+  /**
    * Indicator (feature) description.
    * @return indicatorDesc
-  **/
+   */
   @javax.annotation.Nullable
   public String getIndicatorDesc() {
     return indicatorDesc;
   }
 
-  public void setIndicatorDesc(String indicatorDesc) {
+  public void setIndicatorDesc(@javax.annotation.Nullable String indicatorDesc) {
     this.indicatorDesc = indicatorDesc;
   }
 
 
-  public Riskanalyticscontrollerv3Indicator indicatorScore(Integer indicatorScore) {
+  public Riskanalyticscontrollerv3Indicator indicatorScore(@javax.annotation.Nullable Integer indicatorScore) {
     this.indicatorScore = indicatorScore;
     return this;
   }
 
-   /**
+  /**
    * Indicator (feature) score.
    * @return indicatorScore
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getIndicatorScore() {
     return indicatorScore;
   }
 
-  public void setIndicatorScore(Integer indicatorScore) {
+  public void setIndicatorScore(@javax.annotation.Nullable Integer indicatorScore) {
     this.indicatorScore = indicatorScore;
   }
 
@@ -146,24 +149,22 @@ public class Riskanalyticscontrollerv3Indicator {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("indicator_desc");
-    openapiFields.add("indicator_score");
+    openapiFields = new HashSet<String>(Arrays.asList("indicator_desc", "indicator_score"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3Indicator
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3Indicator
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3Indicator.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3Indicator is not found in the empty JSON string", Riskanalyticscontrollerv3Indicator.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3Indicator is not found in the empty JSON string", Riskanalyticscontrollerv3Indicator.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,12 +172,12 @@ public class Riskanalyticscontrollerv3Indicator {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3Indicator.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3Indicator` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3Indicator` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("indicator_desc") != null && !jsonObj.get("indicator_desc").isJsonNull()) && !jsonObj.get("indicator_desc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `indicator_desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("indicator_desc").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `indicator_desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("indicator_desc").toString()));
       }
   }
 
@@ -209,22 +210,22 @@ public class Riskanalyticscontrollerv3Indicator {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3Indicator given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3Indicator
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3Indicator
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3Indicator given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3Indicator
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3Indicator
+   */
   public static Riskanalyticscontrollerv3Indicator fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3Indicator.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3Indicator to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3Indicator to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

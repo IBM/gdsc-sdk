@@ -27,7 +27,7 @@ class Streamsv3CheckAWSCredentialsResponse(BaseModel):
     """
     CheckAWSCredentialsResponse defines response of CheckAWSCredentialsRequest call.
     """ # noqa: E501
-    status: Optional[Streamsv3AWSCheckStreamStatus] = None
+    status: Optional[Streamsv3AWSCheckStreamStatus] = Streamsv3AWSCheckStreamStatus.STREAM_OK
     __properties: ClassVar[List[str]] = ["status"]
 
     model_config = ConfigDict(
@@ -81,7 +81,7 @@ class Streamsv3CheckAWSCredentialsResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "status": obj.get("status")
+            "status": obj.get("status") if obj.get("status") is not None else Streamsv3AWSCheckStreamStatus.STREAM_OK
         })
         return _obj
 

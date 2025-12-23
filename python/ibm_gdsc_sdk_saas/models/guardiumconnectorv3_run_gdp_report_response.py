@@ -74,9 +74,9 @@ class Guardiumconnectorv3RunGDPReportResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in report_data (list)
         _items = []
         if self.report_data:
-            for _item in self.report_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_data in self.report_data:
+                if _item_report_data:
+                    _items.append(_item_report_data.to_dict())
             _dict['report_data'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

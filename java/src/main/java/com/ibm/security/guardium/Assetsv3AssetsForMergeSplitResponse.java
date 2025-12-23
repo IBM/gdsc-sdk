@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,249 +38,259 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3AssetsForMergeSplitResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetsForMergeSplitResponse {
   public static final String SERIALIZED_NAME_ASSET_ID = "asset_id";
   @SerializedName(SERIALIZED_NAME_ASSET_ID)
+  @javax.annotation.Nullable
   private Integer assetId;
 
   public static final String SERIALIZED_NAME_ASSET_NAME = "asset_name";
   @SerializedName(SERIALIZED_NAME_ASSET_NAME)
+  @javax.annotation.Nullable
   private String assetName;
 
   public static final String SERIALIZED_NAME_DATABASE_NAME = "database_name";
   @SerializedName(SERIALIZED_NAME_DATABASE_NAME)
+  @javax.annotation.Nullable
   private String databaseName;
 
   public static final String SERIALIZED_NAME_DSDEF_KEY = "dsdef_key";
   @SerializedName(SERIALIZED_NAME_DSDEF_KEY)
+  @javax.annotation.Nullable
   private String dsdefKey;
 
   public static final String SERIALIZED_NAME_HOST_NAME = "host_name";
   @SerializedName(SERIALIZED_NAME_HOST_NAME)
+  @javax.annotation.Nullable
   private String hostName;
 
   public static final String SERIALIZED_NAME_HOST_PORT = "host_port";
   @SerializedName(SERIALIZED_NAME_HOST_PORT)
+  @javax.annotation.Nullable
   private String hostPort;
 
   public static final String SERIALIZED_NAME_IP_ADDRESS = "ip_address";
   @SerializedName(SERIALIZED_NAME_IP_ADDRESS)
+  @javax.annotation.Nullable
   private String ipAddress;
 
   public static final String SERIALIZED_NAME_IP_PORT = "ip_port";
   @SerializedName(SERIALIZED_NAME_IP_PORT)
+  @javax.annotation.Nullable
   private String ipPort;
 
   public static final String SERIALIZED_NAME_IS_MERGEABLE = "is_mergeable";
   @SerializedName(SERIALIZED_NAME_IS_MERGEABLE)
+  @javax.annotation.Nullable
   private Boolean isMergeable;
 
   public static final String SERIALIZED_NAME_IS_SPLITTABLE = "is_splittable";
   @SerializedName(SERIALIZED_NAME_IS_SPLITTABLE)
+  @javax.annotation.Nullable
   private Boolean isSplittable;
 
   public Assetsv3AssetsForMergeSplitResponse() {
   }
 
-  public Assetsv3AssetsForMergeSplitResponse assetId(Integer assetId) {
+  public Assetsv3AssetsForMergeSplitResponse assetId(@javax.annotation.Nullable Integer assetId) {
     this.assetId = assetId;
     return this;
   }
 
-   /**
+  /**
    * Get assetId
    * @return assetId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getAssetId() {
     return assetId;
   }
 
-  public void setAssetId(Integer assetId) {
+  public void setAssetId(@javax.annotation.Nullable Integer assetId) {
     this.assetId = assetId;
   }
 
 
-  public Assetsv3AssetsForMergeSplitResponse assetName(String assetName) {
+  public Assetsv3AssetsForMergeSplitResponse assetName(@javax.annotation.Nullable String assetName) {
     this.assetName = assetName;
     return this;
   }
 
-   /**
+  /**
    * Get assetName
    * @return assetName
-  **/
+   */
   @javax.annotation.Nullable
   public String getAssetName() {
     return assetName;
   }
 
-  public void setAssetName(String assetName) {
+  public void setAssetName(@javax.annotation.Nullable String assetName) {
     this.assetName = assetName;
   }
 
 
-  public Assetsv3AssetsForMergeSplitResponse databaseName(String databaseName) {
+  public Assetsv3AssetsForMergeSplitResponse databaseName(@javax.annotation.Nullable String databaseName) {
     this.databaseName = databaseName;
     return this;
   }
 
-   /**
+  /**
    * Get databaseName
    * @return databaseName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatabaseName() {
     return databaseName;
   }
 
-  public void setDatabaseName(String databaseName) {
+  public void setDatabaseName(@javax.annotation.Nullable String databaseName) {
     this.databaseName = databaseName;
   }
 
 
-  public Assetsv3AssetsForMergeSplitResponse dsdefKey(String dsdefKey) {
+  public Assetsv3AssetsForMergeSplitResponse dsdefKey(@javax.annotation.Nullable String dsdefKey) {
     this.dsdefKey = dsdefKey;
     return this;
   }
 
-   /**
+  /**
    * Get dsdefKey
    * @return dsdefKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getDsdefKey() {
     return dsdefKey;
   }
 
-  public void setDsdefKey(String dsdefKey) {
+  public void setDsdefKey(@javax.annotation.Nullable String dsdefKey) {
     this.dsdefKey = dsdefKey;
   }
 
 
-  public Assetsv3AssetsForMergeSplitResponse hostName(String hostName) {
+  public Assetsv3AssetsForMergeSplitResponse hostName(@javax.annotation.Nullable String hostName) {
     this.hostName = hostName;
     return this;
   }
 
-   /**
+  /**
    * Get hostName
    * @return hostName
-  **/
+   */
   @javax.annotation.Nullable
   public String getHostName() {
     return hostName;
   }
 
-  public void setHostName(String hostName) {
+  public void setHostName(@javax.annotation.Nullable String hostName) {
     this.hostName = hostName;
   }
 
 
-  public Assetsv3AssetsForMergeSplitResponse hostPort(String hostPort) {
+  public Assetsv3AssetsForMergeSplitResponse hostPort(@javax.annotation.Nullable String hostPort) {
     this.hostPort = hostPort;
     return this;
   }
 
-   /**
+  /**
    * Get hostPort
    * @return hostPort
-  **/
+   */
   @javax.annotation.Nullable
   public String getHostPort() {
     return hostPort;
   }
 
-  public void setHostPort(String hostPort) {
+  public void setHostPort(@javax.annotation.Nullable String hostPort) {
     this.hostPort = hostPort;
   }
 
 
-  public Assetsv3AssetsForMergeSplitResponse ipAddress(String ipAddress) {
+  public Assetsv3AssetsForMergeSplitResponse ipAddress(@javax.annotation.Nullable String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
   }
 
-   /**
+  /**
    * Get ipAddress
    * @return ipAddress
-  **/
+   */
   @javax.annotation.Nullable
   public String getIpAddress() {
     return ipAddress;
   }
 
-  public void setIpAddress(String ipAddress) {
+  public void setIpAddress(@javax.annotation.Nullable String ipAddress) {
     this.ipAddress = ipAddress;
   }
 
 
-  public Assetsv3AssetsForMergeSplitResponse ipPort(String ipPort) {
+  public Assetsv3AssetsForMergeSplitResponse ipPort(@javax.annotation.Nullable String ipPort) {
     this.ipPort = ipPort;
     return this;
   }
 
-   /**
+  /**
    * Get ipPort
    * @return ipPort
-  **/
+   */
   @javax.annotation.Nullable
   public String getIpPort() {
     return ipPort;
   }
 
-  public void setIpPort(String ipPort) {
+  public void setIpPort(@javax.annotation.Nullable String ipPort) {
     this.ipPort = ipPort;
   }
 
 
-  public Assetsv3AssetsForMergeSplitResponse isMergeable(Boolean isMergeable) {
+  public Assetsv3AssetsForMergeSplitResponse isMergeable(@javax.annotation.Nullable Boolean isMergeable) {
     this.isMergeable = isMergeable;
     return this;
   }
 
-   /**
+  /**
    * Get isMergeable
    * @return isMergeable
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsMergeable() {
     return isMergeable;
   }
 
-  public void setIsMergeable(Boolean isMergeable) {
+  public void setIsMergeable(@javax.annotation.Nullable Boolean isMergeable) {
     this.isMergeable = isMergeable;
   }
 
 
-  public Assetsv3AssetsForMergeSplitResponse isSplittable(Boolean isSplittable) {
+  public Assetsv3AssetsForMergeSplitResponse isSplittable(@javax.annotation.Nullable Boolean isSplittable) {
     this.isSplittable = isSplittable;
     return this;
   }
 
-   /**
+  /**
    * Get isSplittable
    * @return isSplittable
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsSplittable() {
     return isSplittable;
   }
 
-  public void setIsSplittable(Boolean isSplittable) {
+  public void setIsSplittable(@javax.annotation.Nullable Boolean isSplittable) {
     this.isSplittable = isSplittable;
   }
 
@@ -346,32 +357,22 @@ public class Assetsv3AssetsForMergeSplitResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("asset_id");
-    openapiFields.add("asset_name");
-    openapiFields.add("database_name");
-    openapiFields.add("dsdef_key");
-    openapiFields.add("host_name");
-    openapiFields.add("host_port");
-    openapiFields.add("ip_address");
-    openapiFields.add("ip_port");
-    openapiFields.add("is_mergeable");
-    openapiFields.add("is_splittable");
+    openapiFields = new HashSet<String>(Arrays.asList("asset_id", "asset_name", "database_name", "dsdef_key", "host_name", "host_port", "ip_address", "ip_port", "is_mergeable", "is_splittable"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetsForMergeSplitResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetsForMergeSplitResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetsForMergeSplitResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetsForMergeSplitResponse is not found in the empty JSON string", Assetsv3AssetsForMergeSplitResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetsForMergeSplitResponse is not found in the empty JSON string", Assetsv3AssetsForMergeSplitResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -379,30 +380,30 @@ public class Assetsv3AssetsForMergeSplitResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetsForMergeSplitResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetsForMergeSplitResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetsForMergeSplitResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("asset_name") != null && !jsonObj.get("asset_name").isJsonNull()) && !jsonObj.get("asset_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `asset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_name").toString()));
       }
       if ((jsonObj.get("database_name") != null && !jsonObj.get("database_name").isJsonNull()) && !jsonObj.get("database_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `database_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `database_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("database_name").toString()));
       }
       if ((jsonObj.get("dsdef_key") != null && !jsonObj.get("dsdef_key").isJsonNull()) && !jsonObj.get("dsdef_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dsdef_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dsdef_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dsdef_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dsdef_key").toString()));
       }
       if ((jsonObj.get("host_name") != null && !jsonObj.get("host_name").isJsonNull()) && !jsonObj.get("host_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `host_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `host_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host_name").toString()));
       }
       if ((jsonObj.get("host_port") != null && !jsonObj.get("host_port").isJsonNull()) && !jsonObj.get("host_port").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `host_port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host_port").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `host_port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host_port").toString()));
       }
       if ((jsonObj.get("ip_address") != null && !jsonObj.get("ip_address").isJsonNull()) && !jsonObj.get("ip_address").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ip_address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ip_address").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ip_address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ip_address").toString()));
       }
       if ((jsonObj.get("ip_port") != null && !jsonObj.get("ip_port").isJsonNull()) && !jsonObj.get("ip_port").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ip_port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ip_port").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ip_port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ip_port").toString()));
       }
   }
 
@@ -435,22 +436,22 @@ public class Assetsv3AssetsForMergeSplitResponse {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetsForMergeSplitResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetsForMergeSplitResponse
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetsForMergeSplitResponse
-  */
+  /**
+   * Create an instance of Assetsv3AssetsForMergeSplitResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetsForMergeSplitResponse
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetsForMergeSplitResponse
+   */
   public static Assetsv3AssetsForMergeSplitResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetsForMergeSplitResponse.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetsForMergeSplitResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetsForMergeSplitResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

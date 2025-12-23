@@ -18,17 +18,15 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.qSDataManagerGetMasterData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataManagerGetMasterData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -66,17 +64,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.qSDataManagerGetPluginData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataManagerGetPluginData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -114,14 +110,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataManagerApi } from '';
+import type { QSDataManagerApiQSDataManagerRegisterScanRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataManagerApi(configuration);
 
-let body:.QSDataManagerApiQSDataManagerRegisterScanRequest = {
-  // Qspmdatamanagerv3ScanRequest
+const request: QSDataManagerApiQSDataManagerRegisterScanRequest = {
+  
   qspmdatamanagerv3ScanRequest: {
     pluginId: "pluginId_example",
     scanCbomId: "scanCbomId_example",
@@ -134,9 +130,8 @@ let body:.QSDataManagerApiQSDataManagerRegisterScanRequest = {
   },
 };
 
-apiInstance.qSDataManagerRegisterScan(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataManagerRegisterScan(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -177,20 +172,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataManagerApi } from '';
+import type { QSDataManagerApiQSDataManagerRetrieveScanRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataManagerApi(configuration);
 
-let body:.QSDataManagerApiQSDataManagerRetrieveScanRequest = {
-  // string
+const request: QSDataManagerApiQSDataManagerRetrieveScanRequest = {
+  
   scanId: "scan_id_example",
 };
 
-apiInstance.qSDataManagerRetrieveScan(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataManagerRetrieveScan(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

@@ -35,7 +35,7 @@ class Connectionsv3GetConnectionsWithFiltersRequest(BaseModel):
     filters: Optional[List[Connectionsv3HeaderFilter]] = Field(default=None, description="The filters to apply.")
     headers: Optional[List[StrictStr]] = Field(default=None, description="The headers used.")
     offset: Optional[StrictInt] = Field(default=None, description="The amount to offset the rows by for pagination.")
-    order: Optional[Connectionsv3OrderType] = None
+    order: Optional[Connectionsv3OrderType] = Connectionsv3OrderType.NONE
     search: Optional[StrictStr] = Field(default=None, description="The text to search.")
     sort_by: Optional[StrictStr] = Field(default=None, description="The header key used for sorting.")
     __properties: ClassVar[List[str]] = ["calculate_facets", "calculate_preset_stats", "calculate_total", "fetch_size", "filters", "headers", "offset", "order", "search", "sort_by"]
@@ -82,9 +82,9 @@ class Connectionsv3GetConnectionsWithFiltersRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in filters (list)
         _items = []
         if self.filters:
-            for _item in self.filters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_filters in self.filters:
+                if _item_filters:
+                    _items.append(_item_filters.to_dict())
             _dict['filters'] = _items
         return _dict
 
@@ -105,7 +105,7 @@ class Connectionsv3GetConnectionsWithFiltersRequest(BaseModel):
             "filters": [Connectionsv3HeaderFilter.from_dict(_item) for _item in obj["filters"]] if obj.get("filters") is not None else None,
             "headers": obj.get("headers"),
             "offset": obj.get("offset"),
-            "order": obj.get("order"),
+            "order": obj.get("order") if obj.get("order") is not None else Connectionsv3OrderType.NONE,
             "search": obj.get("search"),
             "sort_by": obj.get("sort_by")
         })

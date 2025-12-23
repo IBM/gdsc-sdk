@@ -27,6 +27,8 @@ export class Reportsv3UpdateReportRequest {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "chartSettings",
@@ -54,4 +56,3 @@ export class Reportsv3UpdateReportRequest {
     public constructor() {
     }
 }
-

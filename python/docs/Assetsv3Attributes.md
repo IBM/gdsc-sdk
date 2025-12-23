@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **has_training_data** | **bool** |  | [optional] 
 **major_vulnerability_count** | **str** |  | [optional] 
 **sensitive_data_count** | **str** |  | [optional] 
-**status_type** | [**Assetsv3StatusType**](Assetsv3StatusType.md) |  | [optional] 
+**status_type** | [**Assetsv3StatusType**](Assetsv3StatusType.md) |  | [optional] [default to Assetsv3StatusType.NA]
 **type** | **str** |  | [optional] 
 
 ## Example

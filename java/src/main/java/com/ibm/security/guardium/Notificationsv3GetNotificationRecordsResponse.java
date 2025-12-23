@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,40 +43,44 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Returns the notifications that match the specified filter.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Notificationsv3GetNotificationRecordsResponse {
   public static final String SERIALIZED_NAME_FILTERS = "filters";
   @SerializedName(SERIALIZED_NAME_FILTERS)
+  @javax.annotation.Nullable
   private List<Notificationsv3FilterField> filters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RECORD_COUNT = "record_count";
   @SerializedName(SERIALIZED_NAME_RECORD_COUNT)
+  @javax.annotation.Nullable
   private Long recordCount;
 
   public static final String SERIALIZED_NAME_RECORDS = "records";
   @SerializedName(SERIALIZED_NAME_RECORDS)
+  @javax.annotation.Nullable
   private List<Notificationsv3NotificationRecord> records = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private RpcStatus status;
 
   public Notificationsv3GetNotificationRecordsResponse() {
   }
 
-  public Notificationsv3GetNotificationRecordsResponse filters(List<Notificationsv3FilterField> filters) {
+  public Notificationsv3GetNotificationRecordsResponse filters(@javax.annotation.Nullable List<Notificationsv3FilterField> filters) {
     this.filters = filters;
     return this;
   }
@@ -88,40 +93,40 @@ public class Notificationsv3GetNotificationRecordsResponse {
     return this;
   }
 
-   /**
+  /**
    * Filter counts associated with the search.
    * @return filters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Notificationsv3FilterField> getFilters() {
     return filters;
   }
 
-  public void setFilters(List<Notificationsv3FilterField> filters) {
+  public void setFilters(@javax.annotation.Nullable List<Notificationsv3FilterField> filters) {
     this.filters = filters;
   }
 
 
-  public Notificationsv3GetNotificationRecordsResponse recordCount(Long recordCount) {
+  public Notificationsv3GetNotificationRecordsResponse recordCount(@javax.annotation.Nullable Long recordCount) {
     this.recordCount = recordCount;
     return this;
   }
 
-   /**
+  /**
    * Total number of records associated with the filter (ignoring Limit &amp; Offset).
    * @return recordCount
-  **/
+   */
   @javax.annotation.Nullable
   public Long getRecordCount() {
     return recordCount;
   }
 
-  public void setRecordCount(Long recordCount) {
+  public void setRecordCount(@javax.annotation.Nullable Long recordCount) {
     this.recordCount = recordCount;
   }
 
 
-  public Notificationsv3GetNotificationRecordsResponse records(List<Notificationsv3NotificationRecord> records) {
+  public Notificationsv3GetNotificationRecordsResponse records(@javax.annotation.Nullable List<Notificationsv3NotificationRecord> records) {
     this.records = records;
     return this;
   }
@@ -134,35 +139,35 @@ public class Notificationsv3GetNotificationRecordsResponse {
     return this;
   }
 
-   /**
+  /**
    * Records associated with the specified filter.
    * @return records
-  **/
+   */
   @javax.annotation.Nullable
   public List<Notificationsv3NotificationRecord> getRecords() {
     return records;
   }
 
-  public void setRecords(List<Notificationsv3NotificationRecord> records) {
+  public void setRecords(@javax.annotation.Nullable List<Notificationsv3NotificationRecord> records) {
     this.records = records;
   }
 
 
-  public Notificationsv3GetNotificationRecordsResponse status(RpcStatus status) {
+  public Notificationsv3GetNotificationRecordsResponse status(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public RpcStatus getStatus() {
     return status;
   }
 
-  public void setStatus(RpcStatus status) {
+  public void setStatus(@javax.annotation.Nullable RpcStatus status) {
     this.status = status;
   }
 
@@ -217,26 +222,22 @@ public class Notificationsv3GetNotificationRecordsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("filters");
-    openapiFields.add("record_count");
-    openapiFields.add("records");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("filters", "record_count", "records", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Notificationsv3GetNotificationRecordsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Notificationsv3GetNotificationRecordsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Notificationsv3GetNotificationRecordsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Notificationsv3GetNotificationRecordsResponse is not found in the empty JSON string", Notificationsv3GetNotificationRecordsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Notificationsv3GetNotificationRecordsResponse is not found in the empty JSON string", Notificationsv3GetNotificationRecordsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -244,7 +245,7 @@ public class Notificationsv3GetNotificationRecordsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Notificationsv3GetNotificationRecordsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Notificationsv3GetNotificationRecordsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Notificationsv3GetNotificationRecordsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -253,7 +254,7 @@ public class Notificationsv3GetNotificationRecordsResponse {
         if (jsonArrayfilters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("filters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
           }
 
           // validate the optional field `filters` (array)
@@ -267,7 +268,7 @@ public class Notificationsv3GetNotificationRecordsResponse {
         if (jsonArrayrecords != null) {
           // ensure the json data is an array
           if (!jsonObj.get("records").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `records` to be an array in the JSON string but got `%s`", jsonObj.get("records").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `records` to be an array in the JSON string but got `%s`", jsonObj.get("records").toString()));
           }
 
           // validate the optional field `records` (array)
@@ -311,22 +312,22 @@ public class Notificationsv3GetNotificationRecordsResponse {
     }
   }
 
- /**
-  * Create an instance of Notificationsv3GetNotificationRecordsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Notificationsv3GetNotificationRecordsResponse
-  * @throws IOException if the JSON string is invalid with respect to Notificationsv3GetNotificationRecordsResponse
-  */
+  /**
+   * Create an instance of Notificationsv3GetNotificationRecordsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Notificationsv3GetNotificationRecordsResponse
+   * @throws IOException if the JSON string is invalid with respect to Notificationsv3GetNotificationRecordsResponse
+   */
   public static Notificationsv3GetNotificationRecordsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Notificationsv3GetNotificationRecordsResponse.class);
   }
 
- /**
-  * Convert an instance of Notificationsv3GetNotificationRecordsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Notificationsv3GetNotificationRecordsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

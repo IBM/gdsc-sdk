@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3ImportCSVRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3ImportCSVRequest {
   public static final String SERIALIZED_NAME_CSV_ID = "csv_id";
   @SerializedName(SERIALIZED_NAME_CSV_ID)
+  @javax.annotation.Nullable
   private String csvId;
 
   public static final String SERIALIZED_NAME_IMPORT_ACTION = "import_action";
   @SerializedName(SERIALIZED_NAME_IMPORT_ACTION)
+  @javax.annotation.Nullable
   private String importAction;
 
   public static final String SERIALIZED_NAME_TEMPLATE_TYPE = "template_type";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_TYPE)
+  @javax.annotation.Nullable
   private Assetsv3TemplateType templateType = Assetsv3TemplateType.DATABASE;
 
   public Assetsv3ImportCSVRequest() {
   }
 
-  public Assetsv3ImportCSVRequest csvId(String csvId) {
+  public Assetsv3ImportCSVRequest csvId(@javax.annotation.Nullable String csvId) {
     this.csvId = csvId;
     return this;
   }
 
-   /**
+  /**
    * Get csvId
    * @return csvId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCsvId() {
     return csvId;
   }
 
-  public void setCsvId(String csvId) {
+  public void setCsvId(@javax.annotation.Nullable String csvId) {
     this.csvId = csvId;
   }
 
 
-  public Assetsv3ImportCSVRequest importAction(String importAction) {
+  public Assetsv3ImportCSVRequest importAction(@javax.annotation.Nullable String importAction) {
     this.importAction = importAction;
     return this;
   }
 
-   /**
+  /**
    * Get importAction
    * @return importAction
-  **/
+   */
   @javax.annotation.Nullable
   public String getImportAction() {
     return importAction;
   }
 
-  public void setImportAction(String importAction) {
+  public void setImportAction(@javax.annotation.Nullable String importAction) {
     this.importAction = importAction;
   }
 
 
-  public Assetsv3ImportCSVRequest templateType(Assetsv3TemplateType templateType) {
+  public Assetsv3ImportCSVRequest templateType(@javax.annotation.Nullable Assetsv3TemplateType templateType) {
     this.templateType = templateType;
     return this;
   }
 
-   /**
+  /**
    * Get templateType
    * @return templateType
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3TemplateType getTemplateType() {
     return templateType;
   }
 
-  public void setTemplateType(Assetsv3TemplateType templateType) {
+  public void setTemplateType(@javax.annotation.Nullable Assetsv3TemplateType templateType) {
     this.templateType = templateType;
   }
 
@@ -172,25 +176,22 @@ public class Assetsv3ImportCSVRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("csv_id");
-    openapiFields.add("import_action");
-    openapiFields.add("template_type");
+    openapiFields = new HashSet<String>(Arrays.asList("csv_id", "import_action", "template_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3ImportCSVRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3ImportCSVRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3ImportCSVRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3ImportCSVRequest is not found in the empty JSON string", Assetsv3ImportCSVRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3ImportCSVRequest is not found in the empty JSON string", Assetsv3ImportCSVRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,15 +199,15 @@ public class Assetsv3ImportCSVRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3ImportCSVRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3ImportCSVRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3ImportCSVRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("csv_id") != null && !jsonObj.get("csv_id").isJsonNull()) && !jsonObj.get("csv_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `csv_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("csv_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `csv_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("csv_id").toString()));
       }
       if ((jsonObj.get("import_action") != null && !jsonObj.get("import_action").isJsonNull()) && !jsonObj.get("import_action").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `import_action` to be a primitive type in the JSON string but got `%s`", jsonObj.get("import_action").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `import_action` to be a primitive type in the JSON string but got `%s`", jsonObj.get("import_action").toString()));
       }
       // validate the optional field `template_type`
       if (jsonObj.get("template_type") != null && !jsonObj.get("template_type").isJsonNull()) {
@@ -243,22 +244,22 @@ public class Assetsv3ImportCSVRequest {
     }
   }
 
- /**
-  * Create an instance of Assetsv3ImportCSVRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3ImportCSVRequest
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3ImportCSVRequest
-  */
+  /**
+   * Create an instance of Assetsv3ImportCSVRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3ImportCSVRequest
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3ImportCSVRequest
+   */
   public static Assetsv3ImportCSVRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3ImportCSVRequest.class);
   }
 
- /**
-  * Convert an instance of Assetsv3ImportCSVRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3ImportCSVRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

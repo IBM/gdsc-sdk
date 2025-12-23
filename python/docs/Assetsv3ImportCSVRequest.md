@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **csv_id** | **str** |  | [optional] 
 **import_action** | **str** |  | [optional] 
-**template_type** | [**Assetsv3TemplateType**](Assetsv3TemplateType.md) |  | [optional] 
+**template_type** | [**Assetsv3TemplateType**](Assetsv3TemplateType.md) |  | [optional] [default to Assetsv3TemplateType.DATABASE]
 
 ## Example
 

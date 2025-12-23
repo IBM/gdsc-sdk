@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,124 +42,130 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * VendorDataStore
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class VendorDataStore {
   public static final String SERIALIZED_NAME_DATA_STORE_ID = "dataStoreId";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_ID)
+  @javax.annotation.Nonnull
   private String dataStoreId;
 
   public static final String SERIALIZED_NAME_DATA_STORE_TYPE = "dataStoreType";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_TYPE)
+  @javax.annotation.Nonnull
   private String dataStoreType;
 
   public static final String SERIALIZED_NAME_DATA_STORE_NAME = "dataStoreName";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_NAME)
+  @javax.annotation.Nonnull
   private String dataStoreName;
 
   public static final String SERIALIZED_NAME_CLOUD_REGION = "cloudRegion";
   @SerializedName(SERIALIZED_NAME_CLOUD_REGION)
+  @javax.annotation.Nonnull
   private String cloudRegion;
 
   public static final String SERIALIZED_NAME_SENSITIVITIES_SUMMARY = "sensitivitiesSummary";
   @SerializedName(SERIALIZED_NAME_SENSITIVITIES_SUMMARY)
+  @javax.annotation.Nonnull
   private List<SensitivitySummary> sensitivitiesSummary = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_PROVIDER = "cloudProvider";
   @SerializedName(SERIALIZED_NAME_CLOUD_PROVIDER)
+  @javax.annotation.Nonnull
   private CloudServiceProvider cloudProvider;
 
   public VendorDataStore() {
   }
 
-  public VendorDataStore dataStoreId(String dataStoreId) {
+  public VendorDataStore dataStoreId(@javax.annotation.Nonnull String dataStoreId) {
     this.dataStoreId = dataStoreId;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreId
    * @return dataStoreId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataStoreId() {
     return dataStoreId;
   }
 
-  public void setDataStoreId(String dataStoreId) {
+  public void setDataStoreId(@javax.annotation.Nonnull String dataStoreId) {
     this.dataStoreId = dataStoreId;
   }
 
 
-  public VendorDataStore dataStoreType(String dataStoreType) {
+  public VendorDataStore dataStoreType(@javax.annotation.Nonnull String dataStoreType) {
     this.dataStoreType = dataStoreType;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreType
    * @return dataStoreType
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataStoreType() {
     return dataStoreType;
   }
 
-  public void setDataStoreType(String dataStoreType) {
+  public void setDataStoreType(@javax.annotation.Nonnull String dataStoreType) {
     this.dataStoreType = dataStoreType;
   }
 
 
-  public VendorDataStore dataStoreName(String dataStoreName) {
+  public VendorDataStore dataStoreName(@javax.annotation.Nonnull String dataStoreName) {
     this.dataStoreName = dataStoreName;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreName
    * @return dataStoreName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataStoreName() {
     return dataStoreName;
   }
 
-  public void setDataStoreName(String dataStoreName) {
+  public void setDataStoreName(@javax.annotation.Nonnull String dataStoreName) {
     this.dataStoreName = dataStoreName;
   }
 
 
-  public VendorDataStore cloudRegion(String cloudRegion) {
+  public VendorDataStore cloudRegion(@javax.annotation.Nonnull String cloudRegion) {
     this.cloudRegion = cloudRegion;
     return this;
   }
 
-   /**
+  /**
    * Get cloudRegion
    * @return cloudRegion
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCloudRegion() {
     return cloudRegion;
   }
 
-  public void setCloudRegion(String cloudRegion) {
+  public void setCloudRegion(@javax.annotation.Nonnull String cloudRegion) {
     this.cloudRegion = cloudRegion;
   }
 
 
-  public VendorDataStore sensitivitiesSummary(List<SensitivitySummary> sensitivitiesSummary) {
+  public VendorDataStore sensitivitiesSummary(@javax.annotation.Nonnull List<SensitivitySummary> sensitivitiesSummary) {
     this.sensitivitiesSummary = sensitivitiesSummary;
     return this;
   }
@@ -171,35 +178,35 @@ public class VendorDataStore {
     return this;
   }
 
-   /**
+  /**
    * Get sensitivitiesSummary
    * @return sensitivitiesSummary
-  **/
+   */
   @javax.annotation.Nonnull
   public List<SensitivitySummary> getSensitivitiesSummary() {
     return sensitivitiesSummary;
   }
 
-  public void setSensitivitiesSummary(List<SensitivitySummary> sensitivitiesSummary) {
+  public void setSensitivitiesSummary(@javax.annotation.Nonnull List<SensitivitySummary> sensitivitiesSummary) {
     this.sensitivitiesSummary = sensitivitiesSummary;
   }
 
 
-  public VendorDataStore cloudProvider(CloudServiceProvider cloudProvider) {
+  public VendorDataStore cloudProvider(@javax.annotation.Nonnull CloudServiceProvider cloudProvider) {
     this.cloudProvider = cloudProvider;
     return this;
   }
 
-   /**
+  /**
    * Get cloudProvider
    * @return cloudProvider
-  **/
+   */
   @javax.annotation.Nonnull
   public CloudServiceProvider getCloudProvider() {
     return cloudProvider;
   }
 
-  public void setCloudProvider(CloudServiceProvider cloudProvider) {
+  public void setCloudProvider(@javax.annotation.Nonnull CloudServiceProvider cloudProvider) {
     this.cloudProvider = cloudProvider;
   }
 
@@ -258,34 +265,22 @@ public class VendorDataStore {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dataStoreId");
-    openapiFields.add("dataStoreType");
-    openapiFields.add("dataStoreName");
-    openapiFields.add("cloudRegion");
-    openapiFields.add("sensitivitiesSummary");
-    openapiFields.add("cloudProvider");
+    openapiFields = new HashSet<String>(Arrays.asList("dataStoreId", "dataStoreType", "dataStoreName", "cloudRegion", "sensitivitiesSummary", "cloudProvider"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("dataStoreId");
-    openapiRequiredFields.add("dataStoreType");
-    openapiRequiredFields.add("dataStoreName");
-    openapiRequiredFields.add("cloudRegion");
-    openapiRequiredFields.add("sensitivitiesSummary");
-    openapiRequiredFields.add("cloudProvider");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("dataStoreId", "dataStoreType", "dataStoreName", "cloudRegion", "sensitivitiesSummary", "cloudProvider"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to VendorDataStore
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to VendorDataStore
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VendorDataStore.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in VendorDataStore is not found in the empty JSON string", VendorDataStore.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in VendorDataStore is not found in the empty JSON string", VendorDataStore.openapiRequiredFields.toString()));
         }
       }
 
@@ -293,32 +288,32 @@ public class VendorDataStore {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!VendorDataStore.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VendorDataStore` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `VendorDataStore` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : VendorDataStore.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dataStoreId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
       }
       if (!jsonObj.get("dataStoreType").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreType").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreType").toString()));
       }
       if (!jsonObj.get("dataStoreName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreName").toString()));
       }
       if (!jsonObj.get("cloudRegion").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudRegion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudRegion").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudRegion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudRegion").toString()));
       }
       // ensure the json data is an array
       if (!jsonObj.get("sensitivitiesSummary").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitivitiesSummary` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivitiesSummary").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitivitiesSummary` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivitiesSummary").toString()));
       }
 
       JsonArray jsonArraysensitivitiesSummary = jsonObj.getAsJsonArray("sensitivitiesSummary");
@@ -359,22 +354,22 @@ public class VendorDataStore {
     }
   }
 
- /**
-  * Create an instance of VendorDataStore given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of VendorDataStore
-  * @throws IOException if the JSON string is invalid with respect to VendorDataStore
-  */
+  /**
+   * Create an instance of VendorDataStore given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of VendorDataStore
+   * @throws IOException if the JSON string is invalid with respect to VendorDataStore
+   */
   public static VendorDataStore fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, VendorDataStore.class);
   }
 
- /**
-  * Convert an instance of VendorDataStore to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of VendorDataStore to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

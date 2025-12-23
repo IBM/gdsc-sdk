@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,205 +44,217 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * User has information about a single user typically used in listing and editing users.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3User {
   public static final String SERIALIZED_NAME_ACTIVATION_DATE = "activation_date";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_DATE)
+  @javax.annotation.Nullable
   private OffsetDateTime activationDate;
 
   public static final String SERIALIZED_NAME_DIRECTORY_ID = "directory_id";
   @SerializedName(SERIALIZED_NAME_DIRECTORY_ID)
+  @javax.annotation.Nullable
   private String directoryId;
 
   public static final String SERIALIZED_NAME_DISABLED = "disabled";
   @SerializedName(SERIALIZED_NAME_DISABLED)
+  @javax.annotation.Nullable
   private Boolean disabled;
 
   public static final String SERIALIZED_NAME_DISPLAY_NAME = "display_name";
   @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
+  @javax.annotation.Nullable
   private String displayName;
 
   public static final String SERIALIZED_NAME_DISTINGUISHED_NAME = "distinguished_name";
   @SerializedName(SERIALIZED_NAME_DISTINGUISHED_NAME)
+  @javax.annotation.Nullable
   private String distinguishedName;
 
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
+  @javax.annotation.Nullable
   private String email;
 
   public static final String SERIALIZED_NAME_EXTERNAL_ID = "external_id";
   @SerializedName(SERIALIZED_NAME_EXTERNAL_ID)
+  @javax.annotation.Nullable
   private String externalId;
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
+  @javax.annotation.Nullable
   private Map<String, String> metadata = new HashMap<>();
 
   public static final String SERIALIZED_NAME_ROLES = "roles";
   @SerializedName(SERIALIZED_NAME_ROLES)
+  @javax.annotation.Nullable
   private List<String> roles = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE)
+  @javax.annotation.Nullable
   private Tenantuserv3UserState state = Tenantuserv3UserState.ACTIVE;
 
   public static final String SERIALIZED_NAME_UID = "uid";
   @SerializedName(SERIALIZED_NAME_UID)
+  @javax.annotation.Nullable
   private String uid;
 
   public static final String SERIALIZED_NAME_USER_ID = "user_id";
   @SerializedName(SERIALIZED_NAME_USER_ID)
+  @javax.annotation.Nullable
   private String userId;
 
   public Tenantuserv3User() {
   }
 
-  public Tenantuserv3User activationDate(OffsetDateTime activationDate) {
+  public Tenantuserv3User activationDate(@javax.annotation.Nullable OffsetDateTime activationDate) {
     this.activationDate = activationDate;
     return this;
   }
 
-   /**
+  /**
    * Creation date.
    * @return activationDate
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getActivationDate() {
     return activationDate;
   }
 
-  public void setActivationDate(OffsetDateTime activationDate) {
+  public void setActivationDate(@javax.annotation.Nullable OffsetDateTime activationDate) {
     this.activationDate = activationDate;
   }
 
 
-  public Tenantuserv3User directoryId(String directoryId) {
+  public Tenantuserv3User directoryId(@javax.annotation.Nullable String directoryId) {
     this.directoryId = directoryId;
     return this;
   }
 
-   /**
+  /**
    * Which directory did this user come from.
    * @return directoryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDirectoryId() {
     return directoryId;
   }
 
-  public void setDirectoryId(String directoryId) {
+  public void setDirectoryId(@javax.annotation.Nullable String directoryId) {
     this.directoryId = directoryId;
   }
 
 
-  public Tenantuserv3User disabled(Boolean disabled) {
+  public Tenantuserv3User disabled(@javax.annotation.Nullable Boolean disabled) {
     this.disabled = disabled;
     return this;
   }
 
-   /**
+  /**
    * User disabled.
    * @return disabled
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getDisabled() {
     return disabled;
   }
 
-  public void setDisabled(Boolean disabled) {
+  public void setDisabled(@javax.annotation.Nullable Boolean disabled) {
     this.disabled = disabled;
   }
 
 
-  public Tenantuserv3User displayName(String displayName) {
+  public Tenantuserv3User displayName(@javax.annotation.Nullable String displayName) {
     this.displayName = displayName;
     return this;
   }
 
-   /**
+  /**
    * LDAP cn.
    * @return displayName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDisplayName() {
     return displayName;
   }
 
-  public void setDisplayName(String displayName) {
+  public void setDisplayName(@javax.annotation.Nullable String displayName) {
     this.displayName = displayName;
   }
 
 
-  public Tenantuserv3User distinguishedName(String distinguishedName) {
+  public Tenantuserv3User distinguishedName(@javax.annotation.Nullable String distinguishedName) {
     this.distinguishedName = distinguishedName;
     return this;
   }
 
-   /**
+  /**
    * LDAP dn&#x3D;  (needed to import user from LDAP into TenantUser).
    * @return distinguishedName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDistinguishedName() {
     return distinguishedName;
   }
 
-  public void setDistinguishedName(String distinguishedName) {
+  public void setDistinguishedName(@javax.annotation.Nullable String distinguishedName) {
     this.distinguishedName = distinguishedName;
   }
 
 
-  public Tenantuserv3User email(String email) {
+  public Tenantuserv3User email(@javax.annotation.Nullable String email) {
     this.email = email;
     return this;
   }
 
-   /**
+  /**
    * The email address of the user for communication.
    * @return email
-  **/
+   */
   @javax.annotation.Nullable
   public String getEmail() {
     return email;
   }
 
-  public void setEmail(String email) {
+  public void setEmail(@javax.annotation.Nullable String email) {
     this.email = email;
   }
 
 
-  public Tenantuserv3User externalId(String externalId) {
+  public Tenantuserv3User externalId(@javax.annotation.Nullable String externalId) {
     this.externalId = externalId;
     return this;
   }
 
-   /**
+  /**
    * External id of this user. E.g. ISV id.
    * @return externalId
-  **/
+   */
   @javax.annotation.Nullable
   public String getExternalId() {
     return externalId;
   }
 
-  public void setExternalId(String externalId) {
+  public void setExternalId(@javax.annotation.Nullable String externalId) {
     this.externalId = externalId;
   }
 
 
-  public Tenantuserv3User metadata(Map<String, String> metadata) {
+  public Tenantuserv3User metadata(@javax.annotation.Nullable Map<String, String> metadata) {
     this.metadata = metadata;
     return this;
   }
@@ -254,21 +267,21 @@ public class Tenantuserv3User {
     return this;
   }
 
-   /**
+  /**
    * Metadata will contain all preferences.
    * @return metadata
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getMetadata() {
     return metadata;
   }
 
-  public void setMetadata(Map<String, String> metadata) {
+  public void setMetadata(@javax.annotation.Nullable Map<String, String> metadata) {
     this.metadata = metadata;
   }
 
 
-  public Tenantuserv3User roles(List<String> roles) {
+  public Tenantuserv3User roles(@javax.annotation.Nullable List<String> roles) {
     this.roles = roles;
     return this;
   }
@@ -281,73 +294,73 @@ public class Tenantuserv3User {
     return this;
   }
 
-   /**
+  /**
    * Roles.
    * @return roles
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getRoles() {
     return roles;
   }
 
-  public void setRoles(List<String> roles) {
+  public void setRoles(@javax.annotation.Nullable List<String> roles) {
     this.roles = roles;
   }
 
 
-  public Tenantuserv3User state(Tenantuserv3UserState state) {
+  public Tenantuserv3User state(@javax.annotation.Nullable Tenantuserv3UserState state) {
     this.state = state;
     return this;
   }
 
-   /**
+  /**
    * Get state
    * @return state
-  **/
+   */
   @javax.annotation.Nullable
   public Tenantuserv3UserState getState() {
     return state;
   }
 
-  public void setState(Tenantuserv3UserState state) {
+  public void setState(@javax.annotation.Nullable Tenantuserv3UserState state) {
     this.state = state;
   }
 
 
-  public Tenantuserv3User uid(String uid) {
+  public Tenantuserv3User uid(@javax.annotation.Nullable String uid) {
     this.uid = uid;
     return this;
   }
 
-   /**
+  /**
    * Email.
    * @return uid
-  **/
+   */
   @javax.annotation.Nullable
   public String getUid() {
     return uid;
   }
 
-  public void setUid(String uid) {
+  public void setUid(@javax.annotation.Nullable String uid) {
     this.uid = uid;
   }
 
 
-  public Tenantuserv3User userId(String userId) {
+  public Tenantuserv3User userId(@javax.annotation.Nullable String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
+  /**
    * Unique id for user.
    * @return userId
-  **/
+   */
   @javax.annotation.Nullable
   public String getUserId() {
     return userId;
   }
 
-  public void setUserId(String userId) {
+  public void setUserId(@javax.annotation.Nullable String userId) {
     this.userId = userId;
   }
 
@@ -418,34 +431,22 @@ public class Tenantuserv3User {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("activation_date");
-    openapiFields.add("directory_id");
-    openapiFields.add("disabled");
-    openapiFields.add("display_name");
-    openapiFields.add("distinguished_name");
-    openapiFields.add("email");
-    openapiFields.add("external_id");
-    openapiFields.add("metadata");
-    openapiFields.add("roles");
-    openapiFields.add("state");
-    openapiFields.add("uid");
-    openapiFields.add("user_id");
+    openapiFields = new HashSet<String>(Arrays.asList("activation_date", "directory_id", "disabled", "display_name", "distinguished_name", "email", "external_id", "metadata", "roles", "state", "uid", "user_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3User
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3User
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3User.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3User is not found in the empty JSON string", Tenantuserv3User.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3User is not found in the empty JSON string", Tenantuserv3User.openapiRequiredFields.toString()));
         }
       }
 
@@ -453,38 +454,38 @@ public class Tenantuserv3User {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3User.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3User` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3User` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("directory_id") != null && !jsonObj.get("directory_id").isJsonNull()) && !jsonObj.get("directory_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `directory_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("directory_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `directory_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("directory_id").toString()));
       }
       if ((jsonObj.get("display_name") != null && !jsonObj.get("display_name").isJsonNull()) && !jsonObj.get("display_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `display_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("display_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `display_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("display_name").toString()));
       }
       if ((jsonObj.get("distinguished_name") != null && !jsonObj.get("distinguished_name").isJsonNull()) && !jsonObj.get("distinguished_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `distinguished_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("distinguished_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `distinguished_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("distinguished_name").toString()));
       }
       if ((jsonObj.get("email") != null && !jsonObj.get("email").isJsonNull()) && !jsonObj.get("email").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email").toString()));
       }
       if ((jsonObj.get("external_id") != null && !jsonObj.get("external_id").isJsonNull()) && !jsonObj.get("external_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `external_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("external_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `external_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("external_id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("roles") != null && !jsonObj.get("roles").isJsonNull() && !jsonObj.get("roles").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `roles` to be an array in the JSON string but got `%s`", jsonObj.get("roles").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `roles` to be an array in the JSON string but got `%s`", jsonObj.get("roles").toString()));
       }
       // validate the optional field `state`
       if (jsonObj.get("state") != null && !jsonObj.get("state").isJsonNull()) {
         Tenantuserv3UserState.validateJsonElement(jsonObj.get("state"));
       }
       if ((jsonObj.get("uid") != null && !jsonObj.get("uid").isJsonNull()) && !jsonObj.get("uid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uid").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uid").toString()));
       }
       if ((jsonObj.get("user_id") != null && !jsonObj.get("user_id").isJsonNull()) && !jsonObj.get("user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user_id").toString()));
       }
   }
 
@@ -517,22 +518,22 @@ public class Tenantuserv3User {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3User given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3User
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3User
-  */
+  /**
+   * Create an instance of Tenantuserv3User given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3User
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3User
+   */
   public static Tenantuserv3User fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3User.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3User to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3User to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

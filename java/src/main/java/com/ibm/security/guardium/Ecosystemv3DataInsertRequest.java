@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,51 +41,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Requires dataset name, fields and data to be inserted.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Ecosystemv3DataInsertRequest {
   public static final String SERIALIZED_NAME_DATASET_NAME = "dataset_name";
   @SerializedName(SERIALIZED_NAME_DATASET_NAME)
+  @javax.annotation.Nullable
   private String datasetName;
 
   public static final String SERIALIZED_NAME_ENTRIES = "entries";
   @SerializedName(SERIALIZED_NAME_ENTRIES)
+  @javax.annotation.Nullable
   private List<Ecosystemv3DataEntry> entries = new ArrayList<>();
 
   public Ecosystemv3DataInsertRequest() {
   }
 
-  public Ecosystemv3DataInsertRequest datasetName(String datasetName) {
+  public Ecosystemv3DataInsertRequest datasetName(@javax.annotation.Nullable String datasetName) {
     this.datasetName = datasetName;
     return this;
   }
 
-   /**
+  /**
    * Data set target name.
    * @return datasetName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasetName() {
     return datasetName;
   }
 
-  public void setDatasetName(String datasetName) {
+  public void setDatasetName(@javax.annotation.Nullable String datasetName) {
     this.datasetName = datasetName;
   }
 
 
-  public Ecosystemv3DataInsertRequest entries(List<Ecosystemv3DataEntry> entries) {
+  public Ecosystemv3DataInsertRequest entries(@javax.annotation.Nullable List<Ecosystemv3DataEntry> entries) {
     this.entries = entries;
     return this;
   }
@@ -97,16 +100,16 @@ public class Ecosystemv3DataInsertRequest {
     return this;
   }
 
-   /**
+  /**
    * Data set entries to insert.
    * @return entries
-  **/
+   */
   @javax.annotation.Nullable
   public List<Ecosystemv3DataEntry> getEntries() {
     return entries;
   }
 
-  public void setEntries(List<Ecosystemv3DataEntry> entries) {
+  public void setEntries(@javax.annotation.Nullable List<Ecosystemv3DataEntry> entries) {
     this.entries = entries;
   }
 
@@ -157,24 +160,22 @@ public class Ecosystemv3DataInsertRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dataset_name");
-    openapiFields.add("entries");
+    openapiFields = new HashSet<String>(Arrays.asList("dataset_name", "entries"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3DataInsertRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3DataInsertRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Ecosystemv3DataInsertRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Ecosystemv3DataInsertRequest is not found in the empty JSON string", Ecosystemv3DataInsertRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Ecosystemv3DataInsertRequest is not found in the empty JSON string", Ecosystemv3DataInsertRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,19 +183,19 @@ public class Ecosystemv3DataInsertRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Ecosystemv3DataInsertRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Ecosystemv3DataInsertRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Ecosystemv3DataInsertRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("dataset_name") != null && !jsonObj.get("dataset_name").isJsonNull()) && !jsonObj.get("dataset_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataset_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataset_name").toString()));
       }
       if (jsonObj.get("entries") != null && !jsonObj.get("entries").isJsonNull()) {
         JsonArray jsonArrayentries = jsonObj.getAsJsonArray("entries");
         if (jsonArrayentries != null) {
           // ensure the json data is an array
           if (!jsonObj.get("entries").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `entries` to be an array in the JSON string but got `%s`", jsonObj.get("entries").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `entries` to be an array in the JSON string but got `%s`", jsonObj.get("entries").toString()));
           }
 
           // validate the optional field `entries` (array)
@@ -234,22 +235,22 @@ public class Ecosystemv3DataInsertRequest {
     }
   }
 
- /**
-  * Create an instance of Ecosystemv3DataInsertRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Ecosystemv3DataInsertRequest
-  * @throws IOException if the JSON string is invalid with respect to Ecosystemv3DataInsertRequest
-  */
+  /**
+   * Create an instance of Ecosystemv3DataInsertRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Ecosystemv3DataInsertRequest
+   * @throws IOException if the JSON string is invalid with respect to Ecosystemv3DataInsertRequest
+   */
   public static Ecosystemv3DataInsertRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Ecosystemv3DataInsertRequest.class);
   }
 
- /**
-  * Convert an instance of Ecosystemv3DataInsertRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Ecosystemv3DataInsertRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

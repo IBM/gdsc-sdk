@@ -90,9 +90,9 @@ class Healthcollectorv3ManagedUnitObject(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in staps (list)
         _items = []
         if self.staps:
-            for _item in self.staps:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_staps in self.staps:
+                if _item_staps:
+                    _items.append(_item_staps.to_dict())
             _dict['staps'] = _items
         return _dict
 

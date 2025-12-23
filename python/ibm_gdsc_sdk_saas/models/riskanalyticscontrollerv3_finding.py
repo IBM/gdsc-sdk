@@ -30,7 +30,7 @@ class Riskanalyticscontrollerv3Finding(BaseModel):
     """ # noqa: E501
     finding_description: Optional[StrictStr] = Field(default=None, description="Finding description.")
     finding_details_map: Optional[List[Riskanalyticscontrollerv3FindingDetailsMap]] = Field(default=None, description="Finding details - Optional.")
-    finding_type: Optional[Riskanalyticscontrollerv3ObservationType] = None
+    finding_type: Optional[Riskanalyticscontrollerv3ObservationType] = Riskanalyticscontrollerv3ObservationType.UNDEFINED_OBSERVATION_TYPE
     __properties: ClassVar[List[str]] = ["finding_description", "finding_details_map", "finding_type"]
 
     model_config = ConfigDict(
@@ -75,9 +75,9 @@ class Riskanalyticscontrollerv3Finding(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in finding_details_map (list)
         _items = []
         if self.finding_details_map:
-            for _item in self.finding_details_map:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_finding_details_map in self.finding_details_map:
+                if _item_finding_details_map:
+                    _items.append(_item_finding_details_map.to_dict())
             _dict['finding_details_map'] = _items
         return _dict
 
@@ -93,7 +93,7 @@ class Riskanalyticscontrollerv3Finding(BaseModel):
         _obj = cls.model_validate({
             "finding_description": obj.get("finding_description"),
             "finding_details_map": [Riskanalyticscontrollerv3FindingDetailsMap.from_dict(_item) for _item in obj["finding_details_map"]] if obj.get("finding_details_map") is not None else None,
-            "finding_type": obj.get("finding_type")
+            "finding_type": obj.get("finding_type") if obj.get("finding_type") is not None else Riskanalyticscontrollerv3ObservationType.UNDEFINED_OBSERVATION_TYPE
         })
         return _obj
 

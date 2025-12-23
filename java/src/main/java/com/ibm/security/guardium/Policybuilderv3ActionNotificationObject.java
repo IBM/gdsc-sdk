@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,51 +41,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Notification object for action.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3ActionNotificationObject {
   public static final String SERIALIZED_NAME_ACTION_ID = "action_id";
   @SerializedName(SERIALIZED_NAME_ACTION_ID)
+  @javax.annotation.Nullable
   private String actionId;
 
   public static final String SERIALIZED_NAME_RECEIVERS = "receivers";
   @SerializedName(SERIALIZED_NAME_RECEIVERS)
+  @javax.annotation.Nullable
   private List<Policybuilderv3TargetReceiver> receivers = new ArrayList<>();
 
   public Policybuilderv3ActionNotificationObject() {
   }
 
-  public Policybuilderv3ActionNotificationObject actionId(String actionId) {
+  public Policybuilderv3ActionNotificationObject actionId(@javax.annotation.Nullable String actionId) {
     this.actionId = actionId;
     return this;
   }
 
-   /**
+  /**
    * Action id.
    * @return actionId
-  **/
+   */
   @javax.annotation.Nullable
   public String getActionId() {
     return actionId;
   }
 
-  public void setActionId(String actionId) {
+  public void setActionId(@javax.annotation.Nullable String actionId) {
     this.actionId = actionId;
   }
 
 
-  public Policybuilderv3ActionNotificationObject receivers(List<Policybuilderv3TargetReceiver> receivers) {
+  public Policybuilderv3ActionNotificationObject receivers(@javax.annotation.Nullable List<Policybuilderv3TargetReceiver> receivers) {
     this.receivers = receivers;
     return this;
   }
@@ -97,16 +100,16 @@ public class Policybuilderv3ActionNotificationObject {
     return this;
   }
 
-   /**
+  /**
    * Receiver object.
    * @return receivers
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3TargetReceiver> getReceivers() {
     return receivers;
   }
 
-  public void setReceivers(List<Policybuilderv3TargetReceiver> receivers) {
+  public void setReceivers(@javax.annotation.Nullable List<Policybuilderv3TargetReceiver> receivers) {
     this.receivers = receivers;
   }
 
@@ -157,24 +160,22 @@ public class Policybuilderv3ActionNotificationObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("action_id");
-    openapiFields.add("receivers");
+    openapiFields = new HashSet<String>(Arrays.asList("action_id", "receivers"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3ActionNotificationObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3ActionNotificationObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3ActionNotificationObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3ActionNotificationObject is not found in the empty JSON string", Policybuilderv3ActionNotificationObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3ActionNotificationObject is not found in the empty JSON string", Policybuilderv3ActionNotificationObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,19 +183,19 @@ public class Policybuilderv3ActionNotificationObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3ActionNotificationObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3ActionNotificationObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3ActionNotificationObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("action_id") != null && !jsonObj.get("action_id").isJsonNull()) && !jsonObj.get("action_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `action_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `action_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_id").toString()));
       }
       if (jsonObj.get("receivers") != null && !jsonObj.get("receivers").isJsonNull()) {
         JsonArray jsonArrayreceivers = jsonObj.getAsJsonArray("receivers");
         if (jsonArrayreceivers != null) {
           // ensure the json data is an array
           if (!jsonObj.get("receivers").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `receivers` to be an array in the JSON string but got `%s`", jsonObj.get("receivers").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `receivers` to be an array in the JSON string but got `%s`", jsonObj.get("receivers").toString()));
           }
 
           // validate the optional field `receivers` (array)
@@ -234,22 +235,22 @@ public class Policybuilderv3ActionNotificationObject {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3ActionNotificationObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3ActionNotificationObject
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3ActionNotificationObject
-  */
+  /**
+   * Create an instance of Policybuilderv3ActionNotificationObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3ActionNotificationObject
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3ActionNotificationObject
+   */
   public static Policybuilderv3ActionNotificationObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3ActionNotificationObject.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3ActionNotificationObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3ActionNotificationObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

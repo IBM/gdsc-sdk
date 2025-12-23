@@ -32,6 +32,8 @@ export class Assetsv3FilterTemplate {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "colummnsList",
@@ -107,4 +109,3 @@ export class Assetsv3FilterTemplate {
     public constructor() {
     }
 }
-

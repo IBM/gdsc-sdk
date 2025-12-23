@@ -24,6 +24,8 @@ export class Qspmpluginmanagerv3PolicyPluginRS {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "orgId",
@@ -63,4 +65,3 @@ export class Qspmpluginmanagerv3PolicyPluginRS {
     public constructor() {
     }
 }
-

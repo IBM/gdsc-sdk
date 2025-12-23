@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,105 +40,111 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ConfigureAggExportRequest definition.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3ConfigureAggregatorExportRequest {
   public static final String SERIALIZED_NAME_CENTRAL_MANAGER_ID = "central_manager_id";
   @SerializedName(SERIALIZED_NAME_CENTRAL_MANAGER_ID)
+  @javax.annotation.Nullable
   private String centralManagerId;
 
   public static final String SERIALIZED_NAME_DATAMART_END_DATE_AGGREGATOR = "datamart_end_date_aggregator";
   @SerializedName(SERIALIZED_NAME_DATAMART_END_DATE_AGGREGATOR)
+  @javax.annotation.Nullable
   private String datamartEndDateAggregator;
 
   public static final String SERIALIZED_NAME_DATAMART_START_DATE_AGGREGATOR = "datamart_start_date_aggregator";
   @SerializedName(SERIALIZED_NAME_DATAMART_START_DATE_AGGREGATOR)
+  @javax.annotation.Nullable
   private String datamartStartDateAggregator;
 
   public static final String SERIALIZED_NAME_MANAGED_UNITS = "managed_units";
   @SerializedName(SERIALIZED_NAME_MANAGED_UNITS)
+  @javax.annotation.Nullable
   private List<String> managedUnits = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SKIP_HISTORICAL_DATAMARTS = "skip_historical_datamarts";
   @SerializedName(SERIALIZED_NAME_SKIP_HISTORICAL_DATAMARTS)
+  @javax.annotation.Nullable
   private Boolean skipHistoricalDatamarts;
 
   public static final String SERIALIZED_NAME_UPDATE_CENTRAL_MANAGER = "update_central_manager";
   @SerializedName(SERIALIZED_NAME_UPDATE_CENTRAL_MANAGER)
+  @javax.annotation.Nullable
   private Boolean updateCentralManager;
 
   public Guardiumconnectorv3ConfigureAggregatorExportRequest() {
   }
 
-  public Guardiumconnectorv3ConfigureAggregatorExportRequest centralManagerId(String centralManagerId) {
+  public Guardiumconnectorv3ConfigureAggregatorExportRequest centralManagerId(@javax.annotation.Nullable String centralManagerId) {
     this.centralManagerId = centralManagerId;
     return this;
   }
 
-   /**
+  /**
    * Central Manager ID.
    * @return centralManagerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCentralManagerId() {
     return centralManagerId;
   }
 
-  public void setCentralManagerId(String centralManagerId) {
+  public void setCentralManagerId(@javax.annotation.Nullable String centralManagerId) {
     this.centralManagerId = centralManagerId;
   }
 
 
-  public Guardiumconnectorv3ConfigureAggregatorExportRequest datamartEndDateAggregator(String datamartEndDateAggregator) {
+  public Guardiumconnectorv3ConfigureAggregatorExportRequest datamartEndDateAggregator(@javax.annotation.Nullable String datamartEndDateAggregator) {
     this.datamartEndDateAggregator = datamartEndDateAggregator;
     return this;
   }
 
-   /**
+  /**
    * End date for aggregator datamart export.
    * @return datamartEndDateAggregator
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatamartEndDateAggregator() {
     return datamartEndDateAggregator;
   }
 
-  public void setDatamartEndDateAggregator(String datamartEndDateAggregator) {
+  public void setDatamartEndDateAggregator(@javax.annotation.Nullable String datamartEndDateAggregator) {
     this.datamartEndDateAggregator = datamartEndDateAggregator;
   }
 
 
-  public Guardiumconnectorv3ConfigureAggregatorExportRequest datamartStartDateAggregator(String datamartStartDateAggregator) {
+  public Guardiumconnectorv3ConfigureAggregatorExportRequest datamartStartDateAggregator(@javax.annotation.Nullable String datamartStartDateAggregator) {
     this.datamartStartDateAggregator = datamartStartDateAggregator;
     return this;
   }
 
-   /**
+  /**
    * Start date for aggregator datamart export.
    * @return datamartStartDateAggregator
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatamartStartDateAggregator() {
     return datamartStartDateAggregator;
   }
 
-  public void setDatamartStartDateAggregator(String datamartStartDateAggregator) {
+  public void setDatamartStartDateAggregator(@javax.annotation.Nullable String datamartStartDateAggregator) {
     this.datamartStartDateAggregator = datamartStartDateAggregator;
   }
 
 
-  public Guardiumconnectorv3ConfigureAggregatorExportRequest managedUnits(List<String> managedUnits) {
+  public Guardiumconnectorv3ConfigureAggregatorExportRequest managedUnits(@javax.annotation.Nullable List<String> managedUnits) {
     this.managedUnits = managedUnits;
     return this;
   }
@@ -150,54 +157,54 @@ public class Guardiumconnectorv3ConfigureAggregatorExportRequest {
     return this;
   }
 
-   /**
+  /**
    * List of managed units to which apply the dm export start/end dates.
    * @return managedUnits
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getManagedUnits() {
     return managedUnits;
   }
 
-  public void setManagedUnits(List<String> managedUnits) {
+  public void setManagedUnits(@javax.annotation.Nullable List<String> managedUnits) {
     this.managedUnits = managedUnits;
   }
 
 
-  public Guardiumconnectorv3ConfigureAggregatorExportRequest skipHistoricalDatamarts(Boolean skipHistoricalDatamarts) {
+  public Guardiumconnectorv3ConfigureAggregatorExportRequest skipHistoricalDatamarts(@javax.annotation.Nullable Boolean skipHistoricalDatamarts) {
     this.skipHistoricalDatamarts = skipHistoricalDatamarts;
     return this;
   }
 
-   /**
+  /**
    * Flag to either skip or include historical datamarts as part of configure streaming API.
    * @return skipHistoricalDatamarts
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getSkipHistoricalDatamarts() {
     return skipHistoricalDatamarts;
   }
 
-  public void setSkipHistoricalDatamarts(Boolean skipHistoricalDatamarts) {
+  public void setSkipHistoricalDatamarts(@javax.annotation.Nullable Boolean skipHistoricalDatamarts) {
     this.skipHistoricalDatamarts = skipHistoricalDatamarts;
   }
 
 
-  public Guardiumconnectorv3ConfigureAggregatorExportRequest updateCentralManager(Boolean updateCentralManager) {
+  public Guardiumconnectorv3ConfigureAggregatorExportRequest updateCentralManager(@javax.annotation.Nullable Boolean updateCentralManager) {
     this.updateCentralManager = updateCentralManager;
     return this;
   }
 
-   /**
+  /**
    * Flag to update the cm record with date ranges.
    * @return updateCentralManager
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getUpdateCentralManager() {
     return updateCentralManager;
   }
 
-  public void setUpdateCentralManager(Boolean updateCentralManager) {
+  public void setUpdateCentralManager(@javax.annotation.Nullable Boolean updateCentralManager) {
     this.updateCentralManager = updateCentralManager;
   }
 
@@ -256,28 +263,22 @@ public class Guardiumconnectorv3ConfigureAggregatorExportRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("central_manager_id");
-    openapiFields.add("datamart_end_date_aggregator");
-    openapiFields.add("datamart_start_date_aggregator");
-    openapiFields.add("managed_units");
-    openapiFields.add("skip_historical_datamarts");
-    openapiFields.add("update_central_manager");
+    openapiFields = new HashSet<String>(Arrays.asList("central_manager_id", "datamart_end_date_aggregator", "datamart_start_date_aggregator", "managed_units", "skip_historical_datamarts", "update_central_manager"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3ConfigureAggregatorExportRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3ConfigureAggregatorExportRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3ConfigureAggregatorExportRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3ConfigureAggregatorExportRequest is not found in the empty JSON string", Guardiumconnectorv3ConfigureAggregatorExportRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3ConfigureAggregatorExportRequest is not found in the empty JSON string", Guardiumconnectorv3ConfigureAggregatorExportRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -285,22 +286,22 @@ public class Guardiumconnectorv3ConfigureAggregatorExportRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3ConfigureAggregatorExportRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3ConfigureAggregatorExportRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3ConfigureAggregatorExportRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("central_manager_id") != null && !jsonObj.get("central_manager_id").isJsonNull()) && !jsonObj.get("central_manager_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `central_manager_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("central_manager_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `central_manager_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("central_manager_id").toString()));
       }
       if ((jsonObj.get("datamart_end_date_aggregator") != null && !jsonObj.get("datamart_end_date_aggregator").isJsonNull()) && !jsonObj.get("datamart_end_date_aggregator").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `datamart_end_date_aggregator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datamart_end_date_aggregator").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `datamart_end_date_aggregator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datamart_end_date_aggregator").toString()));
       }
       if ((jsonObj.get("datamart_start_date_aggregator") != null && !jsonObj.get("datamart_start_date_aggregator").isJsonNull()) && !jsonObj.get("datamart_start_date_aggregator").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `datamart_start_date_aggregator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datamart_start_date_aggregator").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `datamart_start_date_aggregator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datamart_start_date_aggregator").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("managed_units") != null && !jsonObj.get("managed_units").isJsonNull() && !jsonObj.get("managed_units").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `managed_units` to be an array in the JSON string but got `%s`", jsonObj.get("managed_units").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `managed_units` to be an array in the JSON string but got `%s`", jsonObj.get("managed_units").toString()));
       }
   }
 
@@ -333,22 +334,22 @@ public class Guardiumconnectorv3ConfigureAggregatorExportRequest {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3ConfigureAggregatorExportRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3ConfigureAggregatorExportRequest
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3ConfigureAggregatorExportRequest
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3ConfigureAggregatorExportRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3ConfigureAggregatorExportRequest
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3ConfigureAggregatorExportRequest
+   */
   public static Guardiumconnectorv3ConfigureAggregatorExportRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3ConfigureAggregatorExportRequest.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3ConfigureAggregatorExportRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3ConfigureAggregatorExportRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

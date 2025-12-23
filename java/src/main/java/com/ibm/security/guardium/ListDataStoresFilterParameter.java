@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -44,19 +45,19 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ListDataStoresFilterParameter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ListDataStoresFilterParameter {
   /**
    * Gets or Sets storeTypesFamily
@@ -112,64 +113,78 @@ public class ListDataStoresFilterParameter {
 
   public static final String SERIALIZED_NAME_STORE_TYPES_FAMILY = "storeTypesFamily";
   @SerializedName(SERIALIZED_NAME_STORE_TYPES_FAMILY)
+  @javax.annotation.Nullable
   private List<StoreTypesFamilyEnum> storeTypesFamily = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STORE_NAMES = "storeNames";
   @SerializedName(SERIALIZED_NAME_STORE_NAMES)
+  @javax.annotation.Nullable
   private List<String> storeNames = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STORE_TYPES = "storeTypes";
   @SerializedName(SERIALIZED_NAME_STORE_TYPES)
+  @javax.annotation.Nullable
   private List<String> storeTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SERVICE_PROVIDERS = "serviceProviders";
   @SerializedName(SERIALIZED_NAME_SERVICE_PROVIDERS)
+  @javax.annotation.Nullable
   private List<ServiceProvider> serviceProviders = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_IDS = "cloudAccountIds";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_IDS)
+  @javax.annotation.Nullable
   private List<String> cloudAccountIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_REGIONS = "cloudRegions";
   @SerializedName(SERIALIZED_NAME_CLOUD_REGIONS)
+  @javax.annotation.Nullable
   private List<String> cloudRegions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
+  @javax.annotation.Nullable
   private List<String> labels = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLASSIFICATION_STATUSES = "classificationStatuses";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION_STATUSES)
+  @javax.annotation.Nullable
   private List<StoreClassificationStatus> classificationStatuses = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SENSITIVITY_TAGS = "sensitivityTags";
   @SerializedName(SERIALIZED_NAME_SENSITIVITY_TAGS)
+  @javax.annotation.Nullable
   private List<String> sensitivityTags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SENSITIVITY_CATEGORIES = "sensitivityCategories";
   @SerializedName(SERIALIZED_NAME_SENSITIVITY_CATEGORIES)
+  @javax.annotation.Nullable
   private List<SensitivityCategory> sensitivityCategories = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_COMPLIANCES = "compliances";
   @SerializedName(SERIALIZED_NAME_COMPLIANCES)
+  @javax.annotation.Nullable
   private List<Compliance> compliances = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLOUD_TAGS = "cloudTags";
   @SerializedName(SERIALIZED_NAME_CLOUD_TAGS)
+  @javax.annotation.Nullable
   private List<String> cloudTags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ENCRYPTION_STATUSES = "encryptionStatuses";
   @SerializedName(SERIALIZED_NAME_ENCRYPTION_STATUSES)
+  @javax.annotation.Nullable
   private List<DataStoreEncryptionStatus> encryptionStatuses = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STORE_PARTIAL_NAME = "storePartialName";
   @SerializedName(SERIALIZED_NAME_STORE_PARTIAL_NAME)
+  @javax.annotation.Nullable
   private String storePartialName;
 
   public ListDataStoresFilterParameter() {
   }
 
-  public ListDataStoresFilterParameter storeTypesFamily(List<StoreTypesFamilyEnum> storeTypesFamily) {
+  public ListDataStoresFilterParameter storeTypesFamily(@javax.annotation.Nullable List<StoreTypesFamilyEnum> storeTypesFamily) {
     this.storeTypesFamily = storeTypesFamily;
     return this;
   }
@@ -182,21 +197,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get storeTypesFamily
    * @return storeTypesFamily
-  **/
+   */
   @javax.annotation.Nullable
   public List<StoreTypesFamilyEnum> getStoreTypesFamily() {
     return storeTypesFamily;
   }
 
-  public void setStoreTypesFamily(List<StoreTypesFamilyEnum> storeTypesFamily) {
+  public void setStoreTypesFamily(@javax.annotation.Nullable List<StoreTypesFamilyEnum> storeTypesFamily) {
     this.storeTypesFamily = storeTypesFamily;
   }
 
 
-  public ListDataStoresFilterParameter storeNames(List<String> storeNames) {
+  public ListDataStoresFilterParameter storeNames(@javax.annotation.Nullable List<String> storeNames) {
     this.storeNames = storeNames;
     return this;
   }
@@ -209,21 +224,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get storeNames
    * @return storeNames
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getStoreNames() {
     return storeNames;
   }
 
-  public void setStoreNames(List<String> storeNames) {
+  public void setStoreNames(@javax.annotation.Nullable List<String> storeNames) {
     this.storeNames = storeNames;
   }
 
 
-  public ListDataStoresFilterParameter storeTypes(List<String> storeTypes) {
+  public ListDataStoresFilterParameter storeTypes(@javax.annotation.Nullable List<String> storeTypes) {
     this.storeTypes = storeTypes;
     return this;
   }
@@ -236,21 +251,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get storeTypes
    * @return storeTypes
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getStoreTypes() {
     return storeTypes;
   }
 
-  public void setStoreTypes(List<String> storeTypes) {
+  public void setStoreTypes(@javax.annotation.Nullable List<String> storeTypes) {
     this.storeTypes = storeTypes;
   }
 
 
-  public ListDataStoresFilterParameter serviceProviders(List<ServiceProvider> serviceProviders) {
+  public ListDataStoresFilterParameter serviceProviders(@javax.annotation.Nullable List<ServiceProvider> serviceProviders) {
     this.serviceProviders = serviceProviders;
     return this;
   }
@@ -263,21 +278,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get serviceProviders
    * @return serviceProviders
-  **/
+   */
   @javax.annotation.Nullable
   public List<ServiceProvider> getServiceProviders() {
     return serviceProviders;
   }
 
-  public void setServiceProviders(List<ServiceProvider> serviceProviders) {
+  public void setServiceProviders(@javax.annotation.Nullable List<ServiceProvider> serviceProviders) {
     this.serviceProviders = serviceProviders;
   }
 
 
-  public ListDataStoresFilterParameter cloudAccountIds(List<String> cloudAccountIds) {
+  public ListDataStoresFilterParameter cloudAccountIds(@javax.annotation.Nullable List<String> cloudAccountIds) {
     this.cloudAccountIds = cloudAccountIds;
     return this;
   }
@@ -290,21 +305,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountIds
    * @return cloudAccountIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getCloudAccountIds() {
     return cloudAccountIds;
   }
 
-  public void setCloudAccountIds(List<String> cloudAccountIds) {
+  public void setCloudAccountIds(@javax.annotation.Nullable List<String> cloudAccountIds) {
     this.cloudAccountIds = cloudAccountIds;
   }
 
 
-  public ListDataStoresFilterParameter cloudRegions(List<String> cloudRegions) {
+  public ListDataStoresFilterParameter cloudRegions(@javax.annotation.Nullable List<String> cloudRegions) {
     this.cloudRegions = cloudRegions;
     return this;
   }
@@ -317,21 +332,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get cloudRegions
    * @return cloudRegions
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getCloudRegions() {
     return cloudRegions;
   }
 
-  public void setCloudRegions(List<String> cloudRegions) {
+  public void setCloudRegions(@javax.annotation.Nullable List<String> cloudRegions) {
     this.cloudRegions = cloudRegions;
   }
 
 
-  public ListDataStoresFilterParameter labels(List<String> labels) {
+  public ListDataStoresFilterParameter labels(@javax.annotation.Nullable List<String> labels) {
     this.labels = labels;
     return this;
   }
@@ -344,21 +359,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get labels
    * @return labels
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getLabels() {
     return labels;
   }
 
-  public void setLabels(List<String> labels) {
+  public void setLabels(@javax.annotation.Nullable List<String> labels) {
     this.labels = labels;
   }
 
 
-  public ListDataStoresFilterParameter classificationStatuses(List<StoreClassificationStatus> classificationStatuses) {
+  public ListDataStoresFilterParameter classificationStatuses(@javax.annotation.Nullable List<StoreClassificationStatus> classificationStatuses) {
     this.classificationStatuses = classificationStatuses;
     return this;
   }
@@ -371,21 +386,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get classificationStatuses
    * @return classificationStatuses
-  **/
+   */
   @javax.annotation.Nullable
   public List<StoreClassificationStatus> getClassificationStatuses() {
     return classificationStatuses;
   }
 
-  public void setClassificationStatuses(List<StoreClassificationStatus> classificationStatuses) {
+  public void setClassificationStatuses(@javax.annotation.Nullable List<StoreClassificationStatus> classificationStatuses) {
     this.classificationStatuses = classificationStatuses;
   }
 
 
-  public ListDataStoresFilterParameter sensitivityTags(List<String> sensitivityTags) {
+  public ListDataStoresFilterParameter sensitivityTags(@javax.annotation.Nullable List<String> sensitivityTags) {
     this.sensitivityTags = sensitivityTags;
     return this;
   }
@@ -398,21 +413,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get sensitivityTags
    * @return sensitivityTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSensitivityTags() {
     return sensitivityTags;
   }
 
-  public void setSensitivityTags(List<String> sensitivityTags) {
+  public void setSensitivityTags(@javax.annotation.Nullable List<String> sensitivityTags) {
     this.sensitivityTags = sensitivityTags;
   }
 
 
-  public ListDataStoresFilterParameter sensitivityCategories(List<SensitivityCategory> sensitivityCategories) {
+  public ListDataStoresFilterParameter sensitivityCategories(@javax.annotation.Nullable List<SensitivityCategory> sensitivityCategories) {
     this.sensitivityCategories = sensitivityCategories;
     return this;
   }
@@ -425,21 +440,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get sensitivityCategories
    * @return sensitivityCategories
-  **/
+   */
   @javax.annotation.Nullable
   public List<SensitivityCategory> getSensitivityCategories() {
     return sensitivityCategories;
   }
 
-  public void setSensitivityCategories(List<SensitivityCategory> sensitivityCategories) {
+  public void setSensitivityCategories(@javax.annotation.Nullable List<SensitivityCategory> sensitivityCategories) {
     this.sensitivityCategories = sensitivityCategories;
   }
 
 
-  public ListDataStoresFilterParameter compliances(List<Compliance> compliances) {
+  public ListDataStoresFilterParameter compliances(@javax.annotation.Nullable List<Compliance> compliances) {
     this.compliances = compliances;
     return this;
   }
@@ -452,21 +467,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get compliances
    * @return compliances
-  **/
+   */
   @javax.annotation.Nullable
   public List<Compliance> getCompliances() {
     return compliances;
   }
 
-  public void setCompliances(List<Compliance> compliances) {
+  public void setCompliances(@javax.annotation.Nullable List<Compliance> compliances) {
     this.compliances = compliances;
   }
 
 
-  public ListDataStoresFilterParameter cloudTags(List<String> cloudTags) {
+  public ListDataStoresFilterParameter cloudTags(@javax.annotation.Nullable List<String> cloudTags) {
     this.cloudTags = cloudTags;
     return this;
   }
@@ -479,21 +494,21 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get cloudTags
    * @return cloudTags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getCloudTags() {
     return cloudTags;
   }
 
-  public void setCloudTags(List<String> cloudTags) {
+  public void setCloudTags(@javax.annotation.Nullable List<String> cloudTags) {
     this.cloudTags = cloudTags;
   }
 
 
-  public ListDataStoresFilterParameter encryptionStatuses(List<DataStoreEncryptionStatus> encryptionStatuses) {
+  public ListDataStoresFilterParameter encryptionStatuses(@javax.annotation.Nullable List<DataStoreEncryptionStatus> encryptionStatuses) {
     this.encryptionStatuses = encryptionStatuses;
     return this;
   }
@@ -506,35 +521,35 @@ public class ListDataStoresFilterParameter {
     return this;
   }
 
-   /**
+  /**
    * Get encryptionStatuses
    * @return encryptionStatuses
-  **/
+   */
   @javax.annotation.Nullable
   public List<DataStoreEncryptionStatus> getEncryptionStatuses() {
     return encryptionStatuses;
   }
 
-  public void setEncryptionStatuses(List<DataStoreEncryptionStatus> encryptionStatuses) {
+  public void setEncryptionStatuses(@javax.annotation.Nullable List<DataStoreEncryptionStatus> encryptionStatuses) {
     this.encryptionStatuses = encryptionStatuses;
   }
 
 
-  public ListDataStoresFilterParameter storePartialName(String storePartialName) {
+  public ListDataStoresFilterParameter storePartialName(@javax.annotation.Nullable String storePartialName) {
     this.storePartialName = storePartialName;
     return this;
   }
 
-   /**
+  /**
    * Get storePartialName
    * @return storePartialName
-  **/
+   */
   @javax.annotation.Nullable
   public String getStorePartialName() {
     return storePartialName;
   }
 
-  public void setStorePartialName(String storePartialName) {
+  public void setStorePartialName(@javax.annotation.Nullable String storePartialName) {
     this.storePartialName = storePartialName;
   }
 
@@ -609,36 +624,22 @@ public class ListDataStoresFilterParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("storeTypesFamily");
-    openapiFields.add("storeNames");
-    openapiFields.add("storeTypes");
-    openapiFields.add("serviceProviders");
-    openapiFields.add("cloudAccountIds");
-    openapiFields.add("cloudRegions");
-    openapiFields.add("labels");
-    openapiFields.add("classificationStatuses");
-    openapiFields.add("sensitivityTags");
-    openapiFields.add("sensitivityCategories");
-    openapiFields.add("compliances");
-    openapiFields.add("cloudTags");
-    openapiFields.add("encryptionStatuses");
-    openapiFields.add("storePartialName");
+    openapiFields = new HashSet<String>(Arrays.asList("storeTypesFamily", "storeNames", "storeTypes", "serviceProviders", "cloudAccountIds", "cloudRegions", "labels", "classificationStatuses", "sensitivityTags", "sensitivityCategories", "compliances", "cloudTags", "encryptionStatuses", "storePartialName"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ListDataStoresFilterParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ListDataStoresFilterParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ListDataStoresFilterParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListDataStoresFilterParameter is not found in the empty JSON string", ListDataStoresFilterParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ListDataStoresFilterParameter is not found in the empty JSON string", ListDataStoresFilterParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -646,64 +647,64 @@ public class ListDataStoresFilterParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ListDataStoresFilterParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListDataStoresFilterParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ListDataStoresFilterParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("storeTypesFamily") != null && !jsonObj.get("storeTypesFamily").isJsonNull() && !jsonObj.get("storeTypesFamily").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storeTypesFamily` to be an array in the JSON string but got `%s`", jsonObj.get("storeTypesFamily").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storeTypesFamily` to be an array in the JSON string but got `%s`", jsonObj.get("storeTypesFamily").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("storeNames") != null && !jsonObj.get("storeNames").isJsonNull() && !jsonObj.get("storeNames").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storeNames` to be an array in the JSON string but got `%s`", jsonObj.get("storeNames").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storeNames` to be an array in the JSON string but got `%s`", jsonObj.get("storeNames").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("storeTypes") != null && !jsonObj.get("storeTypes").isJsonNull() && !jsonObj.get("storeTypes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storeTypes` to be an array in the JSON string but got `%s`", jsonObj.get("storeTypes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storeTypes` to be an array in the JSON string but got `%s`", jsonObj.get("storeTypes").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("serviceProviders") != null && !jsonObj.get("serviceProviders").isJsonNull() && !jsonObj.get("serviceProviders").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `serviceProviders` to be an array in the JSON string but got `%s`", jsonObj.get("serviceProviders").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `serviceProviders` to be an array in the JSON string but got `%s`", jsonObj.get("serviceProviders").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("cloudAccountIds") != null && !jsonObj.get("cloudAccountIds").isJsonNull() && !jsonObj.get("cloudAccountIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccountIds` to be an array in the JSON string but got `%s`", jsonObj.get("cloudAccountIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccountIds` to be an array in the JSON string but got `%s`", jsonObj.get("cloudAccountIds").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("cloudRegions") != null && !jsonObj.get("cloudRegions").isJsonNull() && !jsonObj.get("cloudRegions").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudRegions` to be an array in the JSON string but got `%s`", jsonObj.get("cloudRegions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudRegions` to be an array in the JSON string but got `%s`", jsonObj.get("cloudRegions").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("labels") != null && !jsonObj.get("labels").isJsonNull() && !jsonObj.get("labels").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `labels` to be an array in the JSON string but got `%s`", jsonObj.get("labels").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `labels` to be an array in the JSON string but got `%s`", jsonObj.get("labels").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("classificationStatuses") != null && !jsonObj.get("classificationStatuses").isJsonNull() && !jsonObj.get("classificationStatuses").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `classificationStatuses` to be an array in the JSON string but got `%s`", jsonObj.get("classificationStatuses").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `classificationStatuses` to be an array in the JSON string but got `%s`", jsonObj.get("classificationStatuses").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sensitivityTags") != null && !jsonObj.get("sensitivityTags").isJsonNull() && !jsonObj.get("sensitivityTags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitivityTags` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivityTags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitivityTags` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivityTags").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sensitivityCategories") != null && !jsonObj.get("sensitivityCategories").isJsonNull() && !jsonObj.get("sensitivityCategories").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitivityCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivityCategories").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitivityCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivityCategories").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("compliances") != null && !jsonObj.get("compliances").isJsonNull() && !jsonObj.get("compliances").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `compliances` to be an array in the JSON string but got `%s`", jsonObj.get("compliances").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `compliances` to be an array in the JSON string but got `%s`", jsonObj.get("compliances").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("cloudTags") != null && !jsonObj.get("cloudTags").isJsonNull() && !jsonObj.get("cloudTags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudTags` to be an array in the JSON string but got `%s`", jsonObj.get("cloudTags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudTags` to be an array in the JSON string but got `%s`", jsonObj.get("cloudTags").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("encryptionStatuses") != null && !jsonObj.get("encryptionStatuses").isJsonNull() && !jsonObj.get("encryptionStatuses").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `encryptionStatuses` to be an array in the JSON string but got `%s`", jsonObj.get("encryptionStatuses").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `encryptionStatuses` to be an array in the JSON string but got `%s`", jsonObj.get("encryptionStatuses").toString()));
       }
       if ((jsonObj.get("storePartialName") != null && !jsonObj.get("storePartialName").isJsonNull()) && !jsonObj.get("storePartialName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storePartialName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storePartialName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storePartialName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storePartialName").toString()));
       }
   }
 
@@ -736,22 +737,22 @@ public class ListDataStoresFilterParameter {
     }
   }
 
- /**
-  * Create an instance of ListDataStoresFilterParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListDataStoresFilterParameter
-  * @throws IOException if the JSON string is invalid with respect to ListDataStoresFilterParameter
-  */
+  /**
+   * Create an instance of ListDataStoresFilterParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ListDataStoresFilterParameter
+   * @throws IOException if the JSON string is invalid with respect to ListDataStoresFilterParameter
+   */
   public static ListDataStoresFilterParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ListDataStoresFilterParameter.class);
   }
 
- /**
-  * Convert an instance of ListDataStoresFilterParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ListDataStoresFilterParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

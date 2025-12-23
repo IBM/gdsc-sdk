@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3AssetOpenRiskEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetOpenRiskEvent {
   public static final String SERIALIZED_NAME_CRITICALLITY = "criticallity";
   @SerializedName(SERIALIZED_NAME_CRITICALLITY)
+  @javax.annotation.Nullable
   private String criticallity;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_RISK_ID = "risk_id";
   @SerializedName(SERIALIZED_NAME_RISK_ID)
+  @javax.annotation.Nullable
   private String riskId;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public Assetsv3AssetOpenRiskEvent() {
   }
 
-  public Assetsv3AssetOpenRiskEvent criticallity(String criticallity) {
+  public Assetsv3AssetOpenRiskEvent criticallity(@javax.annotation.Nullable String criticallity) {
     this.criticallity = criticallity;
     return this;
   }
 
-   /**
+  /**
    * Get criticallity
    * @return criticallity
-  **/
+   */
   @javax.annotation.Nullable
   public String getCriticallity() {
     return criticallity;
   }
 
-  public void setCriticallity(String criticallity) {
+  public void setCriticallity(@javax.annotation.Nullable String criticallity) {
     this.criticallity = criticallity;
   }
 
 
-  public Assetsv3AssetOpenRiskEvent id(String id) {
+  public Assetsv3AssetOpenRiskEvent id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Assetsv3AssetOpenRiskEvent name(String name) {
+  public Assetsv3AssetOpenRiskEvent name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Assetsv3AssetOpenRiskEvent riskId(String riskId) {
+  public Assetsv3AssetOpenRiskEvent riskId(@javax.annotation.Nullable String riskId) {
     this.riskId = riskId;
     return this;
   }
 
-   /**
+  /**
    * Get riskId
    * @return riskId
-  **/
+   */
   @javax.annotation.Nullable
   public String getRiskId() {
     return riskId;
   }
 
-  public void setRiskId(String riskId) {
+  public void setRiskId(@javax.annotation.Nullable String riskId) {
     this.riskId = riskId;
   }
 
 
-  public Assetsv3AssetOpenRiskEvent type(String type) {
+  public Assetsv3AssetOpenRiskEvent type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
@@ -221,27 +227,22 @@ public class Assetsv3AssetOpenRiskEvent {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("criticallity");
-    openapiFields.add("id");
-    openapiFields.add("name");
-    openapiFields.add("risk_id");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("criticallity", "id", "name", "risk_id", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetOpenRiskEvent
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetOpenRiskEvent
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetOpenRiskEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetOpenRiskEvent is not found in the empty JSON string", Assetsv3AssetOpenRiskEvent.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetOpenRiskEvent is not found in the empty JSON string", Assetsv3AssetOpenRiskEvent.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,24 +250,24 @@ public class Assetsv3AssetOpenRiskEvent {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetOpenRiskEvent.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetOpenRiskEvent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetOpenRiskEvent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("criticallity") != null && !jsonObj.get("criticallity").isJsonNull()) && !jsonObj.get("criticallity").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `criticallity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("criticallity").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `criticallity` to be a primitive type in the JSON string but got `%s`", jsonObj.get("criticallity").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("risk_id") != null && !jsonObj.get("risk_id").isJsonNull()) && !jsonObj.get("risk_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `risk_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("risk_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `risk_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("risk_id").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }
 
@@ -299,22 +300,22 @@ public class Assetsv3AssetOpenRiskEvent {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetOpenRiskEvent given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetOpenRiskEvent
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetOpenRiskEvent
-  */
+  /**
+   * Create an instance of Assetsv3AssetOpenRiskEvent given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetOpenRiskEvent
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetOpenRiskEvent
+   */
   public static Assetsv3AssetOpenRiskEvent fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetOpenRiskEvent.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetOpenRiskEvent to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetOpenRiskEvent to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

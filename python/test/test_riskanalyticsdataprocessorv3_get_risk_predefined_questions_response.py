@@ -27,7 +27,7 @@ class TestRiskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse(unittes
 
     def make_instance(self, include_optional) -> Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse:
         """Test Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse`

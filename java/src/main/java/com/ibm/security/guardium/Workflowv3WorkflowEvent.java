@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,48 +41,54 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Workflowv3WorkflowEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3WorkflowEvent {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
+  @javax.annotation.Nullable
   private Map<String, String> data = new HashMap<>();
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
   @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @javax.annotation.Nullable
   private String entityId;
 
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
+  @javax.annotation.Nullable
   private String href;
 
   public static final String SERIALIZED_NAME_SEVERITY = "severity";
   @SerializedName(SERIALIZED_NAME_SEVERITY)
+  @javax.annotation.Nullable
   private Workflowv3Priority severity = Workflowv3Priority.UNDEFINED_PRIORITY;
 
   public static final String SERIALIZED_NAME_TENANT_ID = "tenant_id";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
+  @javax.annotation.Nullable
   private String tenantId;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
+  @javax.annotation.Nullable
   private String title;
 
   public Workflowv3WorkflowEvent() {
   }
 
-  public Workflowv3WorkflowEvent data(Map<String, String> data) {
+  public Workflowv3WorkflowEvent data(@javax.annotation.Nullable Map<String, String> data) {
     this.data = data;
     return this;
   }
@@ -94,111 +101,111 @@ public class Workflowv3WorkflowEvent {
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getData() {
     return data;
   }
 
-  public void setData(Map<String, String> data) {
+  public void setData(@javax.annotation.Nullable Map<String, String> data) {
     this.data = data;
   }
 
 
-  public Workflowv3WorkflowEvent entityId(String entityId) {
+  public Workflowv3WorkflowEvent entityId(@javax.annotation.Nullable String entityId) {
     this.entityId = entityId;
     return this;
   }
 
-   /**
+  /**
    * Get entityId
    * @return entityId
-  **/
+   */
   @javax.annotation.Nullable
   public String getEntityId() {
     return entityId;
   }
 
-  public void setEntityId(String entityId) {
+  public void setEntityId(@javax.annotation.Nullable String entityId) {
     this.entityId = entityId;
   }
 
 
-  public Workflowv3WorkflowEvent href(String href) {
+  public Workflowv3WorkflowEvent href(@javax.annotation.Nullable String href) {
     this.href = href;
     return this;
   }
 
-   /**
+  /**
    * Get href
    * @return href
-  **/
+   */
   @javax.annotation.Nullable
   public String getHref() {
     return href;
   }
 
-  public void setHref(String href) {
+  public void setHref(@javax.annotation.Nullable String href) {
     this.href = href;
   }
 
 
-  public Workflowv3WorkflowEvent severity(Workflowv3Priority severity) {
+  public Workflowv3WorkflowEvent severity(@javax.annotation.Nullable Workflowv3Priority severity) {
     this.severity = severity;
     return this;
   }
 
-   /**
+  /**
    * Get severity
    * @return severity
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3Priority getSeverity() {
     return severity;
   }
 
-  public void setSeverity(Workflowv3Priority severity) {
+  public void setSeverity(@javax.annotation.Nullable Workflowv3Priority severity) {
     this.severity = severity;
   }
 
 
-  public Workflowv3WorkflowEvent tenantId(String tenantId) {
+  public Workflowv3WorkflowEvent tenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
     return this;
   }
 
-   /**
+  /**
    * Get tenantId
    * @return tenantId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTenantId() {
     return tenantId;
   }
 
-  public void setTenantId(String tenantId) {
+  public void setTenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
   }
 
 
-  public Workflowv3WorkflowEvent title(String title) {
+  public Workflowv3WorkflowEvent title(@javax.annotation.Nullable String title) {
     this.title = title;
     return this;
   }
 
-   /**
+  /**
    * Get title
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
   public String getTitle() {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(@javax.annotation.Nullable String title) {
     this.title = title;
   }
 
@@ -257,28 +264,22 @@ public class Workflowv3WorkflowEvent {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("data");
-    openapiFields.add("entity_id");
-    openapiFields.add("href");
-    openapiFields.add("severity");
-    openapiFields.add("tenant_id");
-    openapiFields.add("title");
+    openapiFields = new HashSet<String>(Arrays.asList("data", "entity_id", "href", "severity", "tenant_id", "title"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3WorkflowEvent
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3WorkflowEvent
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3WorkflowEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3WorkflowEvent is not found in the empty JSON string", Workflowv3WorkflowEvent.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3WorkflowEvent is not found in the empty JSON string", Workflowv3WorkflowEvent.openapiRequiredFields.toString()));
         }
       }
 
@@ -286,25 +287,25 @@ public class Workflowv3WorkflowEvent {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3WorkflowEvent.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3WorkflowEvent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3WorkflowEvent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("entity_id") != null && !jsonObj.get("entity_id").isJsonNull()) && !jsonObj.get("entity_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entity_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `entity_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_id").toString()));
       }
       if ((jsonObj.get("href") != null && !jsonObj.get("href").isJsonNull()) && !jsonObj.get("href").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `href` to be a primitive type in the JSON string but got `%s`", jsonObj.get("href").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `href` to be a primitive type in the JSON string but got `%s`", jsonObj.get("href").toString()));
       }
       // validate the optional field `severity`
       if (jsonObj.get("severity") != null && !jsonObj.get("severity").isJsonNull()) {
         Workflowv3Priority.validateJsonElement(jsonObj.get("severity"));
       }
       if ((jsonObj.get("tenant_id") != null && !jsonObj.get("tenant_id").isJsonNull()) && !jsonObj.get("tenant_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
       }
       if ((jsonObj.get("title") != null && !jsonObj.get("title").isJsonNull()) && !jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
       }
   }
 
@@ -337,22 +338,22 @@ public class Workflowv3WorkflowEvent {
     }
   }
 
- /**
-  * Create an instance of Workflowv3WorkflowEvent given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3WorkflowEvent
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3WorkflowEvent
-  */
+  /**
+   * Create an instance of Workflowv3WorkflowEvent given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3WorkflowEvent
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3WorkflowEvent
+   */
   public static Workflowv3WorkflowEvent fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3WorkflowEvent.class);
   }
 
- /**
-  * Convert an instance of Workflowv3WorkflowEvent to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3WorkflowEvent to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

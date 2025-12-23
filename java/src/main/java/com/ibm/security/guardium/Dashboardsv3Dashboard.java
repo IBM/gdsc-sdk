@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,48 +43,54 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Dashboard - a small-scale representation of a Dashboard.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Dashboardsv3Dashboard {
   public static final String SERIALIZED_NAME_CARDS = "cards";
   @SerializedName(SERIALIZED_NAME_CARDS)
+  @javax.annotation.Nullable
   private List<Dashboardsv3Card> cards = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DASHBOARD_DESCRIPTION = "dashboard_description";
   @SerializedName(SERIALIZED_NAME_DASHBOARD_DESCRIPTION)
+  @javax.annotation.Nullable
   private String dashboardDescription;
 
   public static final String SERIALIZED_NAME_DASHBOARD_ID = "dashboard_id";
   @SerializedName(SERIALIZED_NAME_DASHBOARD_ID)
+  @javax.annotation.Nullable
   private String dashboardId;
 
   public static final String SERIALIZED_NAME_DASHBOARD_TITLE = "dashboard_title";
   @SerializedName(SERIALIZED_NAME_DASHBOARD_TITLE)
+  @javax.annotation.Nullable
   private String dashboardTitle;
 
   public static final String SERIALIZED_NAME_GLOBAL_TIME_FILTER = "global_time_filter";
   @SerializedName(SERIALIZED_NAME_GLOBAL_TIME_FILTER)
+  @javax.annotation.Nullable
   private Dashboardsv3TimeRange globalTimeFilter;
 
   public static final String SERIALIZED_NAME_REPORT_GLOBAL_FILTER_LIST = "report_global_filter_list";
   @SerializedName(SERIALIZED_NAME_REPORT_GLOBAL_FILTER_LIST)
+  @javax.annotation.Nullable
   private List<Dashboardsv3ReportGlobalFilter> reportGlobalFilterList = new ArrayList<>();
 
   public Dashboardsv3Dashboard() {
   }
 
-  public Dashboardsv3Dashboard cards(List<Dashboardsv3Card> cards) {
+  public Dashboardsv3Dashboard cards(@javax.annotation.Nullable List<Dashboardsv3Card> cards) {
     this.cards = cards;
     return this;
   }
@@ -96,97 +103,97 @@ public class Dashboardsv3Dashboard {
     return this;
   }
 
-   /**
+  /**
    * Dashboard cards.
    * @return cards
-  **/
+   */
   @javax.annotation.Nullable
   public List<Dashboardsv3Card> getCards() {
     return cards;
   }
 
-  public void setCards(List<Dashboardsv3Card> cards) {
+  public void setCards(@javax.annotation.Nullable List<Dashboardsv3Card> cards) {
     this.cards = cards;
   }
 
 
-  public Dashboardsv3Dashboard dashboardDescription(String dashboardDescription) {
+  public Dashboardsv3Dashboard dashboardDescription(@javax.annotation.Nullable String dashboardDescription) {
     this.dashboardDescription = dashboardDescription;
     return this;
   }
 
-   /**
+  /**
    * Dashboard description.
    * @return dashboardDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getDashboardDescription() {
     return dashboardDescription;
   }
 
-  public void setDashboardDescription(String dashboardDescription) {
+  public void setDashboardDescription(@javax.annotation.Nullable String dashboardDescription) {
     this.dashboardDescription = dashboardDescription;
   }
 
 
-  public Dashboardsv3Dashboard dashboardId(String dashboardId) {
+  public Dashboardsv3Dashboard dashboardId(@javax.annotation.Nullable String dashboardId) {
     this.dashboardId = dashboardId;
     return this;
   }
 
-   /**
+  /**
    * Unique Dashboard ID.
    * @return dashboardId
-  **/
+   */
   @javax.annotation.Nullable
   public String getDashboardId() {
     return dashboardId;
   }
 
-  public void setDashboardId(String dashboardId) {
+  public void setDashboardId(@javax.annotation.Nullable String dashboardId) {
     this.dashboardId = dashboardId;
   }
 
 
-  public Dashboardsv3Dashboard dashboardTitle(String dashboardTitle) {
+  public Dashboardsv3Dashboard dashboardTitle(@javax.annotation.Nullable String dashboardTitle) {
     this.dashboardTitle = dashboardTitle;
     return this;
   }
 
-   /**
+  /**
    * Dashboard title.
    * @return dashboardTitle
-  **/
+   */
   @javax.annotation.Nullable
   public String getDashboardTitle() {
     return dashboardTitle;
   }
 
-  public void setDashboardTitle(String dashboardTitle) {
+  public void setDashboardTitle(@javax.annotation.Nullable String dashboardTitle) {
     this.dashboardTitle = dashboardTitle;
   }
 
 
-  public Dashboardsv3Dashboard globalTimeFilter(Dashboardsv3TimeRange globalTimeFilter) {
+  public Dashboardsv3Dashboard globalTimeFilter(@javax.annotation.Nullable Dashboardsv3TimeRange globalTimeFilter) {
     this.globalTimeFilter = globalTimeFilter;
     return this;
   }
 
-   /**
+  /**
    * Get globalTimeFilter
    * @return globalTimeFilter
-  **/
+   */
   @javax.annotation.Nullable
   public Dashboardsv3TimeRange getGlobalTimeFilter() {
     return globalTimeFilter;
   }
 
-  public void setGlobalTimeFilter(Dashboardsv3TimeRange globalTimeFilter) {
+  public void setGlobalTimeFilter(@javax.annotation.Nullable Dashboardsv3TimeRange globalTimeFilter) {
     this.globalTimeFilter = globalTimeFilter;
   }
 
 
-  public Dashboardsv3Dashboard reportGlobalFilterList(List<Dashboardsv3ReportGlobalFilter> reportGlobalFilterList) {
+  public Dashboardsv3Dashboard reportGlobalFilterList(@javax.annotation.Nullable List<Dashboardsv3ReportGlobalFilter> reportGlobalFilterList) {
     this.reportGlobalFilterList = reportGlobalFilterList;
     return this;
   }
@@ -199,16 +206,16 @@ public class Dashboardsv3Dashboard {
     return this;
   }
 
-   /**
+  /**
    * Get reportGlobalFilterList
    * @return reportGlobalFilterList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Dashboardsv3ReportGlobalFilter> getReportGlobalFilterList() {
     return reportGlobalFilterList;
   }
 
-  public void setReportGlobalFilterList(List<Dashboardsv3ReportGlobalFilter> reportGlobalFilterList) {
+  public void setReportGlobalFilterList(@javax.annotation.Nullable List<Dashboardsv3ReportGlobalFilter> reportGlobalFilterList) {
     this.reportGlobalFilterList = reportGlobalFilterList;
   }
 
@@ -267,28 +274,22 @@ public class Dashboardsv3Dashboard {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cards");
-    openapiFields.add("dashboard_description");
-    openapiFields.add("dashboard_id");
-    openapiFields.add("dashboard_title");
-    openapiFields.add("global_time_filter");
-    openapiFields.add("report_global_filter_list");
+    openapiFields = new HashSet<String>(Arrays.asList("cards", "dashboard_description", "dashboard_id", "dashboard_title", "global_time_filter", "report_global_filter_list"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3Dashboard
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Dashboardsv3Dashboard
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Dashboardsv3Dashboard.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Dashboardsv3Dashboard is not found in the empty JSON string", Dashboardsv3Dashboard.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Dashboardsv3Dashboard is not found in the empty JSON string", Dashboardsv3Dashboard.openapiRequiredFields.toString()));
         }
       }
 
@@ -296,7 +297,7 @@ public class Dashboardsv3Dashboard {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Dashboardsv3Dashboard.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Dashboardsv3Dashboard` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Dashboardsv3Dashboard` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -305,7 +306,7 @@ public class Dashboardsv3Dashboard {
         if (jsonArraycards != null) {
           // ensure the json data is an array
           if (!jsonObj.get("cards").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `cards` to be an array in the JSON string but got `%s`", jsonObj.get("cards").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cards` to be an array in the JSON string but got `%s`", jsonObj.get("cards").toString()));
           }
 
           // validate the optional field `cards` (array)
@@ -315,13 +316,13 @@ public class Dashboardsv3Dashboard {
         }
       }
       if ((jsonObj.get("dashboard_description") != null && !jsonObj.get("dashboard_description").isJsonNull()) && !jsonObj.get("dashboard_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dashboard_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dashboard_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dashboard_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dashboard_description").toString()));
       }
       if ((jsonObj.get("dashboard_id") != null && !jsonObj.get("dashboard_id").isJsonNull()) && !jsonObj.get("dashboard_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dashboard_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dashboard_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dashboard_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dashboard_id").toString()));
       }
       if ((jsonObj.get("dashboard_title") != null && !jsonObj.get("dashboard_title").isJsonNull()) && !jsonObj.get("dashboard_title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dashboard_title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dashboard_title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dashboard_title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dashboard_title").toString()));
       }
       // validate the optional field `global_time_filter`
       if (jsonObj.get("global_time_filter") != null && !jsonObj.get("global_time_filter").isJsonNull()) {
@@ -332,7 +333,7 @@ public class Dashboardsv3Dashboard {
         if (jsonArrayreportGlobalFilterList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("report_global_filter_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `report_global_filter_list` to be an array in the JSON string but got `%s`", jsonObj.get("report_global_filter_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_global_filter_list` to be an array in the JSON string but got `%s`", jsonObj.get("report_global_filter_list").toString()));
           }
 
           // validate the optional field `report_global_filter_list` (array)
@@ -372,22 +373,22 @@ public class Dashboardsv3Dashboard {
     }
   }
 
- /**
-  * Create an instance of Dashboardsv3Dashboard given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Dashboardsv3Dashboard
-  * @throws IOException if the JSON string is invalid with respect to Dashboardsv3Dashboard
-  */
+  /**
+   * Create an instance of Dashboardsv3Dashboard given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Dashboardsv3Dashboard
+   * @throws IOException if the JSON string is invalid with respect to Dashboardsv3Dashboard
+   */
   public static Dashboardsv3Dashboard fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Dashboardsv3Dashboard.class);
   }
 
- /**
-  * Convert an instance of Dashboardsv3Dashboard to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Dashboardsv3Dashboard to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

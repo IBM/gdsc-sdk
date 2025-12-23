@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,157 +40,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ScheduledTaskSummary returns enough details for list view.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3ScheduledTaskSummary {
   public static final String SERIALIZED_NAME_AUDIT_TYPE = "audit_type";
   @SerializedName(SERIALIZED_NAME_AUDIT_TYPE)
+  @javax.annotation.Nullable
   private Schedulerv3AuditType auditType = Schedulerv3AuditType.UNDEFINED_TYPE;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_REPORT_NAME = "report_name";
   @SerializedName(SERIALIZED_NAME_REPORT_NAME)
+  @javax.annotation.Nullable
   private String reportName;
 
   public static final String SERIALIZED_NAME_SCHEDULED_TASK_ID = "scheduled_task_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_TASK_ID)
+  @javax.annotation.Nullable
   private String scheduledTaskId;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Schedulerv3TaskType type = Schedulerv3TaskType.UNDEFINED_JOBTYPE;
 
   public Schedulerv3ScheduledTaskSummary() {
   }
 
-  public Schedulerv3ScheduledTaskSummary auditType(Schedulerv3AuditType auditType) {
+  public Schedulerv3ScheduledTaskSummary auditType(@javax.annotation.Nullable Schedulerv3AuditType auditType) {
     this.auditType = auditType;
     return this;
   }
 
-   /**
+  /**
    * Get auditType
    * @return auditType
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3AuditType getAuditType() {
     return auditType;
   }
 
-  public void setAuditType(Schedulerv3AuditType auditType) {
+  public void setAuditType(@javax.annotation.Nullable Schedulerv3AuditType auditType) {
     this.auditType = auditType;
   }
 
 
-  public Schedulerv3ScheduledTaskSummary name(String name) {
+  public Schedulerv3ScheduledTaskSummary name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Task name (usually the same as the report name).
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Schedulerv3ScheduledTaskSummary reportId(String reportId) {
+  public Schedulerv3ScheduledTaskSummary reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Get reportId
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Schedulerv3ScheduledTaskSummary reportName(String reportName) {
+  public Schedulerv3ScheduledTaskSummary reportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
     return this;
   }
 
-   /**
+  /**
    * Get reportName
    * @return reportName
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportName() {
     return reportName;
   }
 
-  public void setReportName(String reportName) {
+  public void setReportName(@javax.annotation.Nullable String reportName) {
     this.reportName = reportName;
   }
 
 
-  public Schedulerv3ScheduledTaskSummary scheduledTaskId(String scheduledTaskId) {
+  public Schedulerv3ScheduledTaskSummary scheduledTaskId(@javax.annotation.Nullable String scheduledTaskId) {
     this.scheduledTaskId = scheduledTaskId;
     return this;
   }
 
-   /**
+  /**
    * Id for the task.
    * @return scheduledTaskId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScheduledTaskId() {
     return scheduledTaskId;
   }
 
-  public void setScheduledTaskId(String scheduledTaskId) {
+  public void setScheduledTaskId(@javax.annotation.Nullable String scheduledTaskId) {
     this.scheduledTaskId = scheduledTaskId;
   }
 
 
-  public Schedulerv3ScheduledTaskSummary type(Schedulerv3TaskType type) {
+  public Schedulerv3ScheduledTaskSummary type(@javax.annotation.Nullable Schedulerv3TaskType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3TaskType getType() {
     return type;
   }
 
-  public void setType(Schedulerv3TaskType type) {
+  public void setType(@javax.annotation.Nullable Schedulerv3TaskType type) {
     this.type = type;
   }
 
@@ -248,28 +255,22 @@ public class Schedulerv3ScheduledTaskSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("audit_type");
-    openapiFields.add("name");
-    openapiFields.add("report_id");
-    openapiFields.add("report_name");
-    openapiFields.add("scheduled_task_id");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("audit_type", "name", "report_id", "report_name", "scheduled_task_id", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledTaskSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledTaskSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3ScheduledTaskSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3ScheduledTaskSummary is not found in the empty JSON string", Schedulerv3ScheduledTaskSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3ScheduledTaskSummary is not found in the empty JSON string", Schedulerv3ScheduledTaskSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -277,7 +278,7 @@ public class Schedulerv3ScheduledTaskSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3ScheduledTaskSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledTaskSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledTaskSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -286,16 +287,16 @@ public class Schedulerv3ScheduledTaskSummary {
         Schedulerv3AuditType.validateJsonElement(jsonObj.get("audit_type"));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
       if ((jsonObj.get("report_name") != null && !jsonObj.get("report_name").isJsonNull()) && !jsonObj.get("report_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_name").toString()));
       }
       if ((jsonObj.get("scheduled_task_id") != null && !jsonObj.get("scheduled_task_id").isJsonNull()) && !jsonObj.get("scheduled_task_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scheduled_task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_task_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scheduled_task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_task_id").toString()));
       }
       // validate the optional field `type`
       if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
@@ -332,22 +333,22 @@ public class Schedulerv3ScheduledTaskSummary {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3ScheduledTaskSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3ScheduledTaskSummary
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledTaskSummary
-  */
+  /**
+   * Create an instance of Schedulerv3ScheduledTaskSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3ScheduledTaskSummary
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledTaskSummary
+   */
   public static Schedulerv3ScheduledTaskSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3ScheduledTaskSummary.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3ScheduledTaskSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3ScheduledTaskSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

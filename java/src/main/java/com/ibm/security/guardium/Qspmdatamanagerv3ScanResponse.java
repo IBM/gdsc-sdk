@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,272 +39,283 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmdatamanagerv3ScanResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmdatamanagerv3ScanResponse {
   public static final String SERIALIZED_NAME_PLUGIN_ID = "plugin_id";
   @SerializedName(SERIALIZED_NAME_PLUGIN_ID)
+  @javax.annotation.Nullable
   private String pluginId;
 
   public static final String SERIALIZED_NAME_SCAN_CBOM_ID = "scan_cbom_id";
   @SerializedName(SERIALIZED_NAME_SCAN_CBOM_ID)
+  @javax.annotation.Nullable
   private String scanCbomId;
 
   public static final String SERIALIZED_NAME_SCAN_DATA_TS = "scan_data_ts";
   @SerializedName(SERIALIZED_NAME_SCAN_DATA_TS)
+  @javax.annotation.Nullable
   private OffsetDateTime scanDataTs;
 
   public static final String SERIALIZED_NAME_SCAN_DATA_UPDATE_TS = "scan_data_update_ts";
   @SerializedName(SERIALIZED_NAME_SCAN_DATA_UPDATE_TS)
+  @javax.annotation.Nullable
   private OffsetDateTime scanDataUpdateTs;
 
   public static final String SERIALIZED_NAME_SCAN_DESC = "scan_desc";
   @SerializedName(SERIALIZED_NAME_SCAN_DESC)
+  @javax.annotation.Nullable
   private String scanDesc;
 
   public static final String SERIALIZED_NAME_SCAN_FAILURE_MESSAGE = "scan_failure_message";
   @SerializedName(SERIALIZED_NAME_SCAN_FAILURE_MESSAGE)
+  @javax.annotation.Nullable
   private String scanFailureMessage;
 
   public static final String SERIALIZED_NAME_SCAN_ID = "scan_id";
   @SerializedName(SERIALIZED_NAME_SCAN_ID)
+  @javax.annotation.Nullable
   private String scanId;
 
   public static final String SERIALIZED_NAME_SCAN_PERCENTAGE_COMPLETION = "scan_percentage_completion";
   @SerializedName(SERIALIZED_NAME_SCAN_PERCENTAGE_COMPLETION)
+  @javax.annotation.Nullable
   private String scanPercentageCompletion;
 
   public static final String SERIALIZED_NAME_SCAN_REG_TS = "scan_reg_ts";
   @SerializedName(SERIALIZED_NAME_SCAN_REG_TS)
+  @javax.annotation.Nullable
   private OffsetDateTime scanRegTs;
 
   public static final String SERIALIZED_NAME_SCAN_STATUS = "scan_status";
   @SerializedName(SERIALIZED_NAME_SCAN_STATUS)
+  @javax.annotation.Nullable
   private String scanStatus;
 
   public static final String SERIALIZED_NAME_USER_EMAIL = "user_email";
   @SerializedName(SERIALIZED_NAME_USER_EMAIL)
+  @javax.annotation.Nullable
   private String userEmail;
 
   public Qspmdatamanagerv3ScanResponse() {
   }
 
-  public Qspmdatamanagerv3ScanResponse pluginId(String pluginId) {
+  public Qspmdatamanagerv3ScanResponse pluginId(@javax.annotation.Nullable String pluginId) {
     this.pluginId = pluginId;
     return this;
   }
 
-   /**
+  /**
    * Get pluginId
    * @return pluginId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginId() {
     return pluginId;
   }
 
-  public void setPluginId(String pluginId) {
+  public void setPluginId(@javax.annotation.Nullable String pluginId) {
     this.pluginId = pluginId;
   }
 
 
-  public Qspmdatamanagerv3ScanResponse scanCbomId(String scanCbomId) {
+  public Qspmdatamanagerv3ScanResponse scanCbomId(@javax.annotation.Nullable String scanCbomId) {
     this.scanCbomId = scanCbomId;
     return this;
   }
 
-   /**
+  /**
    * Get scanCbomId
    * @return scanCbomId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScanCbomId() {
     return scanCbomId;
   }
 
-  public void setScanCbomId(String scanCbomId) {
+  public void setScanCbomId(@javax.annotation.Nullable String scanCbomId) {
     this.scanCbomId = scanCbomId;
   }
 
 
-  public Qspmdatamanagerv3ScanResponse scanDataTs(OffsetDateTime scanDataTs) {
+  public Qspmdatamanagerv3ScanResponse scanDataTs(@javax.annotation.Nullable OffsetDateTime scanDataTs) {
     this.scanDataTs = scanDataTs;
     return this;
   }
 
-   /**
+  /**
    * Get scanDataTs
    * @return scanDataTs
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getScanDataTs() {
     return scanDataTs;
   }
 
-  public void setScanDataTs(OffsetDateTime scanDataTs) {
+  public void setScanDataTs(@javax.annotation.Nullable OffsetDateTime scanDataTs) {
     this.scanDataTs = scanDataTs;
   }
 
 
-  public Qspmdatamanagerv3ScanResponse scanDataUpdateTs(OffsetDateTime scanDataUpdateTs) {
+  public Qspmdatamanagerv3ScanResponse scanDataUpdateTs(@javax.annotation.Nullable OffsetDateTime scanDataUpdateTs) {
     this.scanDataUpdateTs = scanDataUpdateTs;
     return this;
   }
 
-   /**
+  /**
    * Get scanDataUpdateTs
    * @return scanDataUpdateTs
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getScanDataUpdateTs() {
     return scanDataUpdateTs;
   }
 
-  public void setScanDataUpdateTs(OffsetDateTime scanDataUpdateTs) {
+  public void setScanDataUpdateTs(@javax.annotation.Nullable OffsetDateTime scanDataUpdateTs) {
     this.scanDataUpdateTs = scanDataUpdateTs;
   }
 
 
-  public Qspmdatamanagerv3ScanResponse scanDesc(String scanDesc) {
+  public Qspmdatamanagerv3ScanResponse scanDesc(@javax.annotation.Nullable String scanDesc) {
     this.scanDesc = scanDesc;
     return this;
   }
 
-   /**
+  /**
    * Get scanDesc
    * @return scanDesc
-  **/
+   */
   @javax.annotation.Nullable
   public String getScanDesc() {
     return scanDesc;
   }
 
-  public void setScanDesc(String scanDesc) {
+  public void setScanDesc(@javax.annotation.Nullable String scanDesc) {
     this.scanDesc = scanDesc;
   }
 
 
-  public Qspmdatamanagerv3ScanResponse scanFailureMessage(String scanFailureMessage) {
+  public Qspmdatamanagerv3ScanResponse scanFailureMessage(@javax.annotation.Nullable String scanFailureMessage) {
     this.scanFailureMessage = scanFailureMessage;
     return this;
   }
 
-   /**
+  /**
    * Get scanFailureMessage
    * @return scanFailureMessage
-  **/
+   */
   @javax.annotation.Nullable
   public String getScanFailureMessage() {
     return scanFailureMessage;
   }
 
-  public void setScanFailureMessage(String scanFailureMessage) {
+  public void setScanFailureMessage(@javax.annotation.Nullable String scanFailureMessage) {
     this.scanFailureMessage = scanFailureMessage;
   }
 
 
-  public Qspmdatamanagerv3ScanResponse scanId(String scanId) {
+  public Qspmdatamanagerv3ScanResponse scanId(@javax.annotation.Nullable String scanId) {
     this.scanId = scanId;
     return this;
   }
 
-   /**
+  /**
    * Get scanId
    * @return scanId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScanId() {
     return scanId;
   }
 
-  public void setScanId(String scanId) {
+  public void setScanId(@javax.annotation.Nullable String scanId) {
     this.scanId = scanId;
   }
 
 
-  public Qspmdatamanagerv3ScanResponse scanPercentageCompletion(String scanPercentageCompletion) {
+  public Qspmdatamanagerv3ScanResponse scanPercentageCompletion(@javax.annotation.Nullable String scanPercentageCompletion) {
     this.scanPercentageCompletion = scanPercentageCompletion;
     return this;
   }
 
-   /**
+  /**
    * Get scanPercentageCompletion
    * @return scanPercentageCompletion
-  **/
+   */
   @javax.annotation.Nullable
   public String getScanPercentageCompletion() {
     return scanPercentageCompletion;
   }
 
-  public void setScanPercentageCompletion(String scanPercentageCompletion) {
+  public void setScanPercentageCompletion(@javax.annotation.Nullable String scanPercentageCompletion) {
     this.scanPercentageCompletion = scanPercentageCompletion;
   }
 
 
-  public Qspmdatamanagerv3ScanResponse scanRegTs(OffsetDateTime scanRegTs) {
+  public Qspmdatamanagerv3ScanResponse scanRegTs(@javax.annotation.Nullable OffsetDateTime scanRegTs) {
     this.scanRegTs = scanRegTs;
     return this;
   }
 
-   /**
+  /**
    * Get scanRegTs
    * @return scanRegTs
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getScanRegTs() {
     return scanRegTs;
   }
 
-  public void setScanRegTs(OffsetDateTime scanRegTs) {
+  public void setScanRegTs(@javax.annotation.Nullable OffsetDateTime scanRegTs) {
     this.scanRegTs = scanRegTs;
   }
 
 
-  public Qspmdatamanagerv3ScanResponse scanStatus(String scanStatus) {
+  public Qspmdatamanagerv3ScanResponse scanStatus(@javax.annotation.Nullable String scanStatus) {
     this.scanStatus = scanStatus;
     return this;
   }
 
-   /**
+  /**
    * Get scanStatus
    * @return scanStatus
-  **/
+   */
   @javax.annotation.Nullable
   public String getScanStatus() {
     return scanStatus;
   }
 
-  public void setScanStatus(String scanStatus) {
+  public void setScanStatus(@javax.annotation.Nullable String scanStatus) {
     this.scanStatus = scanStatus;
   }
 
 
-  public Qspmdatamanagerv3ScanResponse userEmail(String userEmail) {
+  public Qspmdatamanagerv3ScanResponse userEmail(@javax.annotation.Nullable String userEmail) {
     this.userEmail = userEmail;
     return this;
   }
 
-   /**
+  /**
    * Get userEmail
    * @return userEmail
-  **/
+   */
   @javax.annotation.Nullable
   public String getUserEmail() {
     return userEmail;
   }
 
-  public void setUserEmail(String userEmail) {
+  public void setUserEmail(@javax.annotation.Nullable String userEmail) {
     this.userEmail = userEmail;
   }
 
@@ -372,33 +384,22 @@ public class Qspmdatamanagerv3ScanResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("plugin_id");
-    openapiFields.add("scan_cbom_id");
-    openapiFields.add("scan_data_ts");
-    openapiFields.add("scan_data_update_ts");
-    openapiFields.add("scan_desc");
-    openapiFields.add("scan_failure_message");
-    openapiFields.add("scan_id");
-    openapiFields.add("scan_percentage_completion");
-    openapiFields.add("scan_reg_ts");
-    openapiFields.add("scan_status");
-    openapiFields.add("user_email");
+    openapiFields = new HashSet<String>(Arrays.asList("plugin_id", "scan_cbom_id", "scan_data_ts", "scan_data_update_ts", "scan_desc", "scan_failure_message", "scan_id", "scan_percentage_completion", "scan_reg_ts", "scan_status", "user_email"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3ScanResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3ScanResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmdatamanagerv3ScanResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmdatamanagerv3ScanResponse is not found in the empty JSON string", Qspmdatamanagerv3ScanResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmdatamanagerv3ScanResponse is not found in the empty JSON string", Qspmdatamanagerv3ScanResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -406,33 +407,33 @@ public class Qspmdatamanagerv3ScanResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmdatamanagerv3ScanResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3ScanResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3ScanResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("plugin_id") != null && !jsonObj.get("plugin_id").isJsonNull()) && !jsonObj.get("plugin_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_id").toString()));
       }
       if ((jsonObj.get("scan_cbom_id") != null && !jsonObj.get("scan_cbom_id").isJsonNull()) && !jsonObj.get("scan_cbom_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scan_cbom_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_cbom_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scan_cbom_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_cbom_id").toString()));
       }
       if ((jsonObj.get("scan_desc") != null && !jsonObj.get("scan_desc").isJsonNull()) && !jsonObj.get("scan_desc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scan_desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_desc").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scan_desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_desc").toString()));
       }
       if ((jsonObj.get("scan_failure_message") != null && !jsonObj.get("scan_failure_message").isJsonNull()) && !jsonObj.get("scan_failure_message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scan_failure_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_failure_message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scan_failure_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_failure_message").toString()));
       }
       if ((jsonObj.get("scan_id") != null && !jsonObj.get("scan_id").isJsonNull()) && !jsonObj.get("scan_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scan_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scan_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_id").toString()));
       }
       if ((jsonObj.get("scan_percentage_completion") != null && !jsonObj.get("scan_percentage_completion").isJsonNull()) && !jsonObj.get("scan_percentage_completion").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scan_percentage_completion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_percentage_completion").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scan_percentage_completion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_percentage_completion").toString()));
       }
       if ((jsonObj.get("scan_status") != null && !jsonObj.get("scan_status").isJsonNull()) && !jsonObj.get("scan_status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scan_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_status").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scan_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scan_status").toString()));
       }
       if ((jsonObj.get("user_email") != null && !jsonObj.get("user_email").isJsonNull()) && !jsonObj.get("user_email").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `user_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user_email").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `user_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user_email").toString()));
       }
   }
 
@@ -465,22 +466,22 @@ public class Qspmdatamanagerv3ScanResponse {
     }
   }
 
- /**
-  * Create an instance of Qspmdatamanagerv3ScanResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmdatamanagerv3ScanResponse
-  * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3ScanResponse
-  */
+  /**
+   * Create an instance of Qspmdatamanagerv3ScanResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmdatamanagerv3ScanResponse
+   * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3ScanResponse
+   */
   public static Qspmdatamanagerv3ScanResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmdatamanagerv3ScanResponse.class);
   }
 
- /**
-  * Convert an instance of Qspmdatamanagerv3ScanResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmdatamanagerv3ScanResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -40,6 +40,8 @@ export class Reportsv3DateRange {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "endDate",
@@ -91,6 +93,5 @@ export class Reportsv3DateRange {
     public constructor() {
     }
 }
-
 
 

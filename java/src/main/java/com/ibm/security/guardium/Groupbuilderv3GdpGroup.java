@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,249 +38,259 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Groupbuilderv3GdpGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3GdpGroup {
   public static final String SERIALIZED_NAME_APPLICATION = "application";
   @SerializedName(SERIALIZED_NAME_APPLICATION)
+  @javax.annotation.Nullable
   private String application;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_HIERARCHICAL = "hierarchical";
   @SerializedName(SERIALIZED_NAME_HIERARCHICAL)
+  @javax.annotation.Nullable
   private Boolean hierarchical;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Integer id;
 
   public static final String SERIALIZED_NAME_MEMBER_COUNT = "member_count";
   @SerializedName(SERIALIZED_NAME_MEMBER_COUNT)
+  @javax.annotation.Nullable
   private Integer memberCount;
 
   public static final String SERIALIZED_NAME_MEMBERS = "members";
   @SerializedName(SERIALIZED_NAME_MEMBERS)
+  @javax.annotation.Nullable
   private String members;
 
   public static final String SERIALIZED_NAME_TUPLE_COUNT = "tuple_count";
   @SerializedName(SERIALIZED_NAME_TUPLE_COUNT)
+  @javax.annotation.Nullable
   private Integer tupleCount;
 
   public static final String SERIALIZED_NAME_TUPLES = "tuples";
   @SerializedName(SERIALIZED_NAME_TUPLES)
+  @javax.annotation.Nullable
   private String tuples;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public static final String SERIALIZED_NAME_TYPE_ID = "type_id";
   @SerializedName(SERIALIZED_NAME_TYPE_ID)
+  @javax.annotation.Nullable
   private Integer typeId;
 
   public Groupbuilderv3GdpGroup() {
   }
 
-  public Groupbuilderv3GdpGroup application(String application) {
+  public Groupbuilderv3GdpGroup application(@javax.annotation.Nullable String application) {
     this.application = application;
     return this;
   }
 
-   /**
+  /**
    * Application of the group.
    * @return application
-  **/
+   */
   @javax.annotation.Nullable
   public String getApplication() {
     return application;
   }
 
-  public void setApplication(String application) {
+  public void setApplication(@javax.annotation.Nullable String application) {
     this.application = application;
   }
 
 
-  public Groupbuilderv3GdpGroup description(String description) {
+  public Groupbuilderv3GdpGroup description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Name of the group.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Groupbuilderv3GdpGroup hierarchical(Boolean hierarchical) {
+  public Groupbuilderv3GdpGroup hierarchical(@javax.annotation.Nullable Boolean hierarchical) {
     this.hierarchical = hierarchical;
     return this;
   }
 
-   /**
+  /**
    * If the group is nested or not.
    * @return hierarchical
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getHierarchical() {
     return hierarchical;
   }
 
-  public void setHierarchical(Boolean hierarchical) {
+  public void setHierarchical(@javax.annotation.Nullable Boolean hierarchical) {
     this.hierarchical = hierarchical;
   }
 
 
-  public Groupbuilderv3GdpGroup id(Integer id) {
+  public Groupbuilderv3GdpGroup id(@javax.annotation.Nullable Integer id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * GDP group ID.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(@javax.annotation.Nullable Integer id) {
     this.id = id;
   }
 
 
-  public Groupbuilderv3GdpGroup memberCount(Integer memberCount) {
+  public Groupbuilderv3GdpGroup memberCount(@javax.annotation.Nullable Integer memberCount) {
     this.memberCount = memberCount;
     return this;
   }
 
-   /**
+  /**
    * Number of group members.
    * @return memberCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getMemberCount() {
     return memberCount;
   }
 
-  public void setMemberCount(Integer memberCount) {
+  public void setMemberCount(@javax.annotation.Nullable Integer memberCount) {
     this.memberCount = memberCount;
   }
 
 
-  public Groupbuilderv3GdpGroup members(String members) {
+  public Groupbuilderv3GdpGroup members(@javax.annotation.Nullable String members) {
     this.members = members;
     return this;
   }
 
-   /**
+  /**
    * Json object of nested or regular members.
    * @return members
-  **/
+   */
   @javax.annotation.Nullable
   public String getMembers() {
     return members;
   }
 
-  public void setMembers(String members) {
+  public void setMembers(@javax.annotation.Nullable String members) {
     this.members = members;
   }
 
 
-  public Groupbuilderv3GdpGroup tupleCount(Integer tupleCount) {
+  public Groupbuilderv3GdpGroup tupleCount(@javax.annotation.Nullable Integer tupleCount) {
     this.tupleCount = tupleCount;
     return this;
   }
 
-   /**
+  /**
    * Number of tuples.
    * @return tupleCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTupleCount() {
     return tupleCount;
   }
 
-  public void setTupleCount(Integer tupleCount) {
+  public void setTupleCount(@javax.annotation.Nullable Integer tupleCount) {
     this.tupleCount = tupleCount;
   }
 
 
-  public Groupbuilderv3GdpGroup tuples(String tuples) {
+  public Groupbuilderv3GdpGroup tuples(@javax.annotation.Nullable String tuples) {
     this.tuples = tuples;
     return this;
   }
 
-   /**
+  /**
    * The tuples of the group.
    * @return tuples
-  **/
+   */
   @javax.annotation.Nullable
   public String getTuples() {
     return tuples;
   }
 
-  public void setTuples(String tuples) {
+  public void setTuples(@javax.annotation.Nullable String tuples) {
     this.tuples = tuples;
   }
 
 
-  public Groupbuilderv3GdpGroup type(String type) {
+  public Groupbuilderv3GdpGroup type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * GDP type name.
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
 
-  public Groupbuilderv3GdpGroup typeId(Integer typeId) {
+  public Groupbuilderv3GdpGroup typeId(@javax.annotation.Nullable Integer typeId) {
     this.typeId = typeId;
     return this;
   }
 
-   /**
+  /**
    * GDP type ID of group.
    * @return typeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTypeId() {
     return typeId;
   }
 
-  public void setTypeId(Integer typeId) {
+  public void setTypeId(@javax.annotation.Nullable Integer typeId) {
     this.typeId = typeId;
   }
 
@@ -346,32 +357,22 @@ public class Groupbuilderv3GdpGroup {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("application");
-    openapiFields.add("description");
-    openapiFields.add("hierarchical");
-    openapiFields.add("id");
-    openapiFields.add("member_count");
-    openapiFields.add("members");
-    openapiFields.add("tuple_count");
-    openapiFields.add("tuples");
-    openapiFields.add("type");
-    openapiFields.add("type_id");
+    openapiFields = new HashSet<String>(Arrays.asList("application", "description", "hierarchical", "id", "member_count", "members", "tuple_count", "tuples", "type", "type_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3GdpGroup
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3GdpGroup
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3GdpGroup.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3GdpGroup is not found in the empty JSON string", Groupbuilderv3GdpGroup.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3GdpGroup is not found in the empty JSON string", Groupbuilderv3GdpGroup.openapiRequiredFields.toString()));
         }
       }
 
@@ -379,24 +380,24 @@ public class Groupbuilderv3GdpGroup {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3GdpGroup.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3GdpGroup` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3GdpGroup` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("application") != null && !jsonObj.get("application").isJsonNull()) && !jsonObj.get("application").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `application` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if ((jsonObj.get("members") != null && !jsonObj.get("members").isJsonNull()) && !jsonObj.get("members").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `members` to be a primitive type in the JSON string but got `%s`", jsonObj.get("members").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `members` to be a primitive type in the JSON string but got `%s`", jsonObj.get("members").toString()));
       }
       if ((jsonObj.get("tuples") != null && !jsonObj.get("tuples").isJsonNull()) && !jsonObj.get("tuples").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tuples` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tuples").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tuples` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tuples").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }
 
@@ -429,22 +430,22 @@ public class Groupbuilderv3GdpGroup {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3GdpGroup given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3GdpGroup
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3GdpGroup
-  */
+  /**
+   * Create an instance of Groupbuilderv3GdpGroup given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3GdpGroup
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3GdpGroup
+   */
   public static Groupbuilderv3GdpGroup fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3GdpGroup.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3GdpGroup to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3GdpGroup to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

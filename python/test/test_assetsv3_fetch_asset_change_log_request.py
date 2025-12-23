@@ -27,7 +27,7 @@ class TestAssetsv3FetchAssetChangeLogRequest(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Assetsv3FetchAssetChangeLogRequest:
         """Test Assetsv3FetchAssetChangeLogRequest
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Assetsv3FetchAssetChangeLogRequest`

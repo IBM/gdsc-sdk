@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,157 +38,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Before and after the action was performed on the asset.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3BeforeAfter {
   public static final String SERIALIZED_NAME_ASSET_ID = "asset_id";
   @SerializedName(SERIALIZED_NAME_ASSET_ID)
+  @javax.annotation.Nullable
   private String assetId;
 
   public static final String SERIALIZED_NAME_ASSET_NAME = "asset_name";
   @SerializedName(SERIALIZED_NAME_ASSET_NAME)
+  @javax.annotation.Nullable
   private String assetName;
 
   public static final String SERIALIZED_NAME_RULE_ID = "rule_id";
   @SerializedName(SERIALIZED_NAME_RULE_ID)
+  @javax.annotation.Nullable
   private String ruleId;
 
   public static final String SERIALIZED_NAME_RULE_NAME = "rule_name";
   @SerializedName(SERIALIZED_NAME_RULE_NAME)
+  @javax.annotation.Nullable
   private String ruleName;
 
   public static final String SERIALIZED_NAME_TAG_CATEGORY = "tag_category";
   @SerializedName(SERIALIZED_NAME_TAG_CATEGORY)
+  @javax.annotation.Nullable
   private String tagCategory;
 
   public static final String SERIALIZED_NAME_TAG_NAME = "tag_name";
   @SerializedName(SERIALIZED_NAME_TAG_NAME)
+  @javax.annotation.Nullable
   private String tagName;
 
   public Assetsv3BeforeAfter() {
   }
 
-  public Assetsv3BeforeAfter assetId(String assetId) {
+  public Assetsv3BeforeAfter assetId(@javax.annotation.Nullable String assetId) {
     this.assetId = assetId;
     return this;
   }
 
-   /**
+  /**
    * Get assetId
    * @return assetId
-  **/
+   */
   @javax.annotation.Nullable
   public String getAssetId() {
     return assetId;
   }
 
-  public void setAssetId(String assetId) {
+  public void setAssetId(@javax.annotation.Nullable String assetId) {
     this.assetId = assetId;
   }
 
 
-  public Assetsv3BeforeAfter assetName(String assetName) {
+  public Assetsv3BeforeAfter assetName(@javax.annotation.Nullable String assetName) {
     this.assetName = assetName;
     return this;
   }
 
-   /**
+  /**
    * Get assetName
    * @return assetName
-  **/
+   */
   @javax.annotation.Nullable
   public String getAssetName() {
     return assetName;
   }
 
-  public void setAssetName(String assetName) {
+  public void setAssetName(@javax.annotation.Nullable String assetName) {
     this.assetName = assetName;
   }
 
 
-  public Assetsv3BeforeAfter ruleId(String ruleId) {
+  public Assetsv3BeforeAfter ruleId(@javax.annotation.Nullable String ruleId) {
     this.ruleId = ruleId;
     return this;
   }
 
-   /**
+  /**
    * Get ruleId
    * @return ruleId
-  **/
+   */
   @javax.annotation.Nullable
   public String getRuleId() {
     return ruleId;
   }
 
-  public void setRuleId(String ruleId) {
+  public void setRuleId(@javax.annotation.Nullable String ruleId) {
     this.ruleId = ruleId;
   }
 
 
-  public Assetsv3BeforeAfter ruleName(String ruleName) {
+  public Assetsv3BeforeAfter ruleName(@javax.annotation.Nullable String ruleName) {
     this.ruleName = ruleName;
     return this;
   }
 
-   /**
+  /**
    * Get ruleName
    * @return ruleName
-  **/
+   */
   @javax.annotation.Nullable
   public String getRuleName() {
     return ruleName;
   }
 
-  public void setRuleName(String ruleName) {
+  public void setRuleName(@javax.annotation.Nullable String ruleName) {
     this.ruleName = ruleName;
   }
 
 
-  public Assetsv3BeforeAfter tagCategory(String tagCategory) {
+  public Assetsv3BeforeAfter tagCategory(@javax.annotation.Nullable String tagCategory) {
     this.tagCategory = tagCategory;
     return this;
   }
 
-   /**
+  /**
    * Get tagCategory
    * @return tagCategory
-  **/
+   */
   @javax.annotation.Nullable
   public String getTagCategory() {
     return tagCategory;
   }
 
-  public void setTagCategory(String tagCategory) {
+  public void setTagCategory(@javax.annotation.Nullable String tagCategory) {
     this.tagCategory = tagCategory;
   }
 
 
-  public Assetsv3BeforeAfter tagName(String tagName) {
+  public Assetsv3BeforeAfter tagName(@javax.annotation.Nullable String tagName) {
     this.tagName = tagName;
     return this;
   }
 
-   /**
+  /**
    * Get tagName
    * @return tagName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTagName() {
     return tagName;
   }
 
-  public void setTagName(String tagName) {
+  public void setTagName(@javax.annotation.Nullable String tagName) {
     this.tagName = tagName;
   }
 
@@ -246,28 +253,22 @@ public class Assetsv3BeforeAfter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("asset_id");
-    openapiFields.add("asset_name");
-    openapiFields.add("rule_id");
-    openapiFields.add("rule_name");
-    openapiFields.add("tag_category");
-    openapiFields.add("tag_name");
+    openapiFields = new HashSet<String>(Arrays.asList("asset_id", "asset_name", "rule_id", "rule_name", "tag_category", "tag_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3BeforeAfter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3BeforeAfter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3BeforeAfter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3BeforeAfter is not found in the empty JSON string", Assetsv3BeforeAfter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3BeforeAfter is not found in the empty JSON string", Assetsv3BeforeAfter.openapiRequiredFields.toString()));
         }
       }
 
@@ -275,27 +276,27 @@ public class Assetsv3BeforeAfter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3BeforeAfter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3BeforeAfter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3BeforeAfter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("asset_id") != null && !jsonObj.get("asset_id").isJsonNull()) && !jsonObj.get("asset_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `asset_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_id").toString()));
       }
       if ((jsonObj.get("asset_name") != null && !jsonObj.get("asset_name").isJsonNull()) && !jsonObj.get("asset_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `asset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_name").toString()));
       }
       if ((jsonObj.get("rule_id") != null && !jsonObj.get("rule_id").isJsonNull()) && !jsonObj.get("rule_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_id").toString()));
       }
       if ((jsonObj.get("rule_name") != null && !jsonObj.get("rule_name").isJsonNull()) && !jsonObj.get("rule_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rule_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rule_name").toString()));
       }
       if ((jsonObj.get("tag_category") != null && !jsonObj.get("tag_category").isJsonNull()) && !jsonObj.get("tag_category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_category").toString()));
       }
       if ((jsonObj.get("tag_name") != null && !jsonObj.get("tag_name").isJsonNull()) && !jsonObj.get("tag_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_name").toString()));
       }
   }
 
@@ -328,22 +329,22 @@ public class Assetsv3BeforeAfter {
     }
   }
 
- /**
-  * Create an instance of Assetsv3BeforeAfter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3BeforeAfter
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3BeforeAfter
-  */
+  /**
+   * Create an instance of Assetsv3BeforeAfter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3BeforeAfter
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3BeforeAfter
+   */
   public static Assetsv3BeforeAfter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3BeforeAfter.class);
   }
 
- /**
-  * Convert an instance of Assetsv3BeforeAfter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3BeforeAfter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

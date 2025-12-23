@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3ClassificationScanStatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3ClassificationScanStatus {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nullable
   private String count;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
+  @javax.annotation.Nullable
   private String key;
 
   public static final String SERIALIZED_NAME_TAG_CATEGORY = "tag_category";
   @SerializedName(SERIALIZED_NAME_TAG_CATEGORY)
+  @javax.annotation.Nullable
   private String tagCategory;
 
   public static final String SERIALIZED_NAME_TAG_ID = "tag_id";
   @SerializedName(SERIALIZED_NAME_TAG_ID)
+  @javax.annotation.Nullable
   private String tagId;
 
   public static final String SERIALIZED_NAME_TAG_NAME = "tag_name";
   @SerializedName(SERIALIZED_NAME_TAG_NAME)
+  @javax.annotation.Nullable
   private String tagName;
 
   public Assetsv3ClassificationScanStatus() {
   }
 
-  public Assetsv3ClassificationScanStatus count(String count) {
+  public Assetsv3ClassificationScanStatus count(@javax.annotation.Nullable String count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Get count
    * @return count
-  **/
+   */
   @javax.annotation.Nullable
   public String getCount() {
     return count;
   }
 
-  public void setCount(String count) {
+  public void setCount(@javax.annotation.Nullable String count) {
     this.count = count;
   }
 
 
-  public Assetsv3ClassificationScanStatus key(String key) {
+  public Assetsv3ClassificationScanStatus key(@javax.annotation.Nullable String key) {
     this.key = key;
     return this;
   }
 
-   /**
+  /**
    * Get key
    * @return key
-  **/
+   */
   @javax.annotation.Nullable
   public String getKey() {
     return key;
   }
 
-  public void setKey(String key) {
+  public void setKey(@javax.annotation.Nullable String key) {
     this.key = key;
   }
 
 
-  public Assetsv3ClassificationScanStatus tagCategory(String tagCategory) {
+  public Assetsv3ClassificationScanStatus tagCategory(@javax.annotation.Nullable String tagCategory) {
     this.tagCategory = tagCategory;
     return this;
   }
 
-   /**
+  /**
    * Get tagCategory
    * @return tagCategory
-  **/
+   */
   @javax.annotation.Nullable
   public String getTagCategory() {
     return tagCategory;
   }
 
-  public void setTagCategory(String tagCategory) {
+  public void setTagCategory(@javax.annotation.Nullable String tagCategory) {
     this.tagCategory = tagCategory;
   }
 
 
-  public Assetsv3ClassificationScanStatus tagId(String tagId) {
+  public Assetsv3ClassificationScanStatus tagId(@javax.annotation.Nullable String tagId) {
     this.tagId = tagId;
     return this;
   }
 
-   /**
+  /**
    * Get tagId
    * @return tagId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTagId() {
     return tagId;
   }
 
-  public void setTagId(String tagId) {
+  public void setTagId(@javax.annotation.Nullable String tagId) {
     this.tagId = tagId;
   }
 
 
-  public Assetsv3ClassificationScanStatus tagName(String tagName) {
+  public Assetsv3ClassificationScanStatus tagName(@javax.annotation.Nullable String tagName) {
     this.tagName = tagName;
     return this;
   }
 
-   /**
+  /**
    * Get tagName
    * @return tagName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTagName() {
     return tagName;
   }
 
-  public void setTagName(String tagName) {
+  public void setTagName(@javax.annotation.Nullable String tagName) {
     this.tagName = tagName;
   }
 
@@ -221,27 +227,22 @@ public class Assetsv3ClassificationScanStatus {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("count");
-    openapiFields.add("key");
-    openapiFields.add("tag_category");
-    openapiFields.add("tag_id");
-    openapiFields.add("tag_name");
+    openapiFields = new HashSet<String>(Arrays.asList("count", "key", "tag_category", "tag_id", "tag_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3ClassificationScanStatus
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3ClassificationScanStatus
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3ClassificationScanStatus.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3ClassificationScanStatus is not found in the empty JSON string", Assetsv3ClassificationScanStatus.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3ClassificationScanStatus is not found in the empty JSON string", Assetsv3ClassificationScanStatus.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,24 +250,24 @@ public class Assetsv3ClassificationScanStatus {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3ClassificationScanStatus.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3ClassificationScanStatus` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3ClassificationScanStatus` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("count") != null && !jsonObj.get("count").isJsonNull()) && !jsonObj.get("count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("count").toString()));
       }
       if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
       }
       if ((jsonObj.get("tag_category") != null && !jsonObj.get("tag_category").isJsonNull()) && !jsonObj.get("tag_category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_category").toString()));
       }
       if ((jsonObj.get("tag_id") != null && !jsonObj.get("tag_id").isJsonNull()) && !jsonObj.get("tag_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_id").toString()));
       }
       if ((jsonObj.get("tag_name") != null && !jsonObj.get("tag_name").isJsonNull()) && !jsonObj.get("tag_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag_name").toString()));
       }
   }
 
@@ -299,22 +300,22 @@ public class Assetsv3ClassificationScanStatus {
     }
   }
 
- /**
-  * Create an instance of Assetsv3ClassificationScanStatus given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3ClassificationScanStatus
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3ClassificationScanStatus
-  */
+  /**
+   * Create an instance of Assetsv3ClassificationScanStatus given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3ClassificationScanStatus
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3ClassificationScanStatus
+   */
   public static Assetsv3ClassificationScanStatus fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3ClassificationScanStatus.class);
   }
 
- /**
-  * Convert an instance of Assetsv3ClassificationScanStatus to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3ClassificationScanStatus to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

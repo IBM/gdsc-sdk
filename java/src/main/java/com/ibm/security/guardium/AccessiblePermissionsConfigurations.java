@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,42 +39,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * AccessiblePermissionsConfigurations
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class AccessiblePermissionsConfigurations {
   public static final String SERIALIZED_NAME_ACCESSIBLE_PERMISSION_CONFIGURATIONS = "accessiblePermissionConfigurations";
   @SerializedName(SERIALIZED_NAME_ACCESSIBLE_PERMISSION_CONFIGURATIONS)
+  @javax.annotation.Nonnull
   private BigDecimal accessiblePermissionConfigurations;
 
   public AccessiblePermissionsConfigurations() {
   }
 
-  public AccessiblePermissionsConfigurations accessiblePermissionConfigurations(BigDecimal accessiblePermissionConfigurations) {
+  public AccessiblePermissionsConfigurations accessiblePermissionConfigurations(@javax.annotation.Nonnull BigDecimal accessiblePermissionConfigurations) {
     this.accessiblePermissionConfigurations = accessiblePermissionConfigurations;
     return this;
   }
 
-   /**
+  /**
    * Get accessiblePermissionConfigurations
    * @return accessiblePermissionConfigurations
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getAccessiblePermissionConfigurations() {
     return accessiblePermissionConfigurations;
   }
 
-  public void setAccessiblePermissionConfigurations(BigDecimal accessiblePermissionConfigurations) {
+  public void setAccessiblePermissionConfigurations(@javax.annotation.Nonnull BigDecimal accessiblePermissionConfigurations) {
     this.accessiblePermissionConfigurations = accessiblePermissionConfigurations;
   }
 
@@ -122,24 +124,22 @@ public class AccessiblePermissionsConfigurations {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("accessiblePermissionConfigurations");
+    openapiFields = new HashSet<String>(Arrays.asList("accessiblePermissionConfigurations"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("accessiblePermissionConfigurations");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("accessiblePermissionConfigurations"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AccessiblePermissionsConfigurations
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AccessiblePermissionsConfigurations
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AccessiblePermissionsConfigurations.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AccessiblePermissionsConfigurations is not found in the empty JSON string", AccessiblePermissionsConfigurations.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AccessiblePermissionsConfigurations is not found in the empty JSON string", AccessiblePermissionsConfigurations.openapiRequiredFields.toString()));
         }
       }
 
@@ -147,14 +147,14 @@ public class AccessiblePermissionsConfigurations {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AccessiblePermissionsConfigurations.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AccessiblePermissionsConfigurations` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AccessiblePermissionsConfigurations` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : AccessiblePermissionsConfigurations.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -189,22 +189,22 @@ public class AccessiblePermissionsConfigurations {
     }
   }
 
- /**
-  * Create an instance of AccessiblePermissionsConfigurations given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AccessiblePermissionsConfigurations
-  * @throws IOException if the JSON string is invalid with respect to AccessiblePermissionsConfigurations
-  */
+  /**
+   * Create an instance of AccessiblePermissionsConfigurations given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AccessiblePermissionsConfigurations
+   * @throws IOException if the JSON string is invalid with respect to AccessiblePermissionsConfigurations
+   */
   public static AccessiblePermissionsConfigurations fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AccessiblePermissionsConfigurations.class);
   }
 
- /**
-  * Convert an instance of AccessiblePermissionsConfigurations to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AccessiblePermissionsConfigurations to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

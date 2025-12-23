@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ContributionPointersInfoObject is the request type for the api call to get the SQls based on the constructIDs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3ContributionPointersInfoObject {
   public static final String SERIALIZED_NAME_COLUMN = "column";
   @SerializedName(SERIALIZED_NAME_COLUMN)
+  @javax.annotation.Nullable
   private String column;
 
   public static final String SERIALIZED_NAME_OPERATOR = "operator";
   @SerializedName(SERIALIZED_NAME_OPERATOR)
+  @javax.annotation.Nullable
   private String operator;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private String value;
 
   public Reportsv3ContributionPointersInfoObject() {
   }
 
-  public Reportsv3ContributionPointersInfoObject column(String column) {
+  public Reportsv3ContributionPointersInfoObject column(@javax.annotation.Nullable String column) {
     this.column = column;
     return this;
   }
 
-   /**
+  /**
    * The colmun name in the data warehouse table.
    * @return column
-  **/
+   */
   @javax.annotation.Nullable
   public String getColumn() {
     return column;
   }
 
-  public void setColumn(String column) {
+  public void setColumn(@javax.annotation.Nullable String column) {
     this.column = column;
   }
 
 
-  public Reportsv3ContributionPointersInfoObject operator(String operator) {
+  public Reportsv3ContributionPointersInfoObject operator(@javax.annotation.Nullable String operator) {
     this.operator = operator;
     return this;
   }
 
-   /**
+  /**
    * The operation to perform.
    * @return operator
-  **/
+   */
   @javax.annotation.Nullable
   public String getOperator() {
     return operator;
   }
 
-  public void setOperator(String operator) {
+  public void setOperator(@javax.annotation.Nullable String operator) {
     this.operator = operator;
   }
 
 
-  public Reportsv3ContributionPointersInfoObject value(String value) {
+  public Reportsv3ContributionPointersInfoObject value(@javax.annotation.Nullable String value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * The value to match.
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public String getValue() {
     return value;
   }
 
-  public void setValue(String value) {
+  public void setValue(@javax.annotation.Nullable String value) {
     this.value = value;
   }
 
@@ -171,25 +175,22 @@ public class Reportsv3ContributionPointersInfoObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("column");
-    openapiFields.add("operator");
-    openapiFields.add("value");
+    openapiFields = new HashSet<String>(Arrays.asList("column", "operator", "value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3ContributionPointersInfoObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3ContributionPointersInfoObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3ContributionPointersInfoObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3ContributionPointersInfoObject is not found in the empty JSON string", Reportsv3ContributionPointersInfoObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3ContributionPointersInfoObject is not found in the empty JSON string", Reportsv3ContributionPointersInfoObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Reportsv3ContributionPointersInfoObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3ContributionPointersInfoObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3ContributionPointersInfoObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3ContributionPointersInfoObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("column") != null && !jsonObj.get("column").isJsonNull()) && !jsonObj.get("column").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `column` to be a primitive type in the JSON string but got `%s`", jsonObj.get("column").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `column` to be a primitive type in the JSON string but got `%s`", jsonObj.get("column").toString()));
       }
       if ((jsonObj.get("operator") != null && !jsonObj.get("operator").isJsonNull()) && !jsonObj.get("operator").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `operator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("operator").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `operator` to be a primitive type in the JSON string but got `%s`", jsonObj.get("operator").toString()));
       }
       if ((jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) && !jsonObj.get("value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Reportsv3ContributionPointersInfoObject {
     }
   }
 
- /**
-  * Create an instance of Reportsv3ContributionPointersInfoObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3ContributionPointersInfoObject
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3ContributionPointersInfoObject
-  */
+  /**
+   * Create an instance of Reportsv3ContributionPointersInfoObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3ContributionPointersInfoObject
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3ContributionPointersInfoObject
+   */
   public static Reportsv3ContributionPointersInfoObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3ContributionPointersInfoObject.class);
   }
 
- /**
-  * Convert an instance of Reportsv3ContributionPointersInfoObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3ContributionPointersInfoObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Message format for the parameters being used in Actions.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3ActionParameter {
   public static final String SERIALIZED_NAME_PARAMETER_NAME = "parameter_name";
   @SerializedName(SERIALIZED_NAME_PARAMETER_NAME)
+  @javax.annotation.Nullable
   private String parameterName;
 
   public static final String SERIALIZED_NAME_PARAMETER_VALUE = "parameter_value";
   @SerializedName(SERIALIZED_NAME_PARAMETER_VALUE)
+  @javax.annotation.Nullable
   private String parameterValue;
 
   public Policybuilderv3ActionParameter() {
   }
 
-  public Policybuilderv3ActionParameter parameterName(String parameterName) {
+  public Policybuilderv3ActionParameter parameterName(@javax.annotation.Nullable String parameterName) {
     this.parameterName = parameterName;
     return this;
   }
 
-   /**
+  /**
    * Name of the parameter.
    * @return parameterName
-  **/
+   */
   @javax.annotation.Nullable
   public String getParameterName() {
     return parameterName;
   }
 
-  public void setParameterName(String parameterName) {
+  public void setParameterName(@javax.annotation.Nullable String parameterName) {
     this.parameterName = parameterName;
   }
 
 
-  public Policybuilderv3ActionParameter parameterValue(String parameterValue) {
+  public Policybuilderv3ActionParameter parameterValue(@javax.annotation.Nullable String parameterValue) {
     this.parameterValue = parameterValue;
     return this;
   }
 
-   /**
+  /**
    * Value of the parameter.
    * @return parameterValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getParameterValue() {
     return parameterValue;
   }
 
-  public void setParameterValue(String parameterValue) {
+  public void setParameterValue(@javax.annotation.Nullable String parameterValue) {
     this.parameterValue = parameterValue;
   }
 
@@ -146,24 +149,22 @@ public class Policybuilderv3ActionParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("parameter_name");
-    openapiFields.add("parameter_value");
+    openapiFields = new HashSet<String>(Arrays.asList("parameter_name", "parameter_value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3ActionParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3ActionParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3ActionParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3ActionParameter is not found in the empty JSON string", Policybuilderv3ActionParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3ActionParameter is not found in the empty JSON string", Policybuilderv3ActionParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Policybuilderv3ActionParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3ActionParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3ActionParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3ActionParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("parameter_name") != null && !jsonObj.get("parameter_name").isJsonNull()) && !jsonObj.get("parameter_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `parameter_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parameter_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_name").toString()));
       }
       if ((jsonObj.get("parameter_value") != null && !jsonObj.get("parameter_value").isJsonNull()) && !jsonObj.get("parameter_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `parameter_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parameter_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameter_value").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Policybuilderv3ActionParameter {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3ActionParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3ActionParameter
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3ActionParameter
-  */
+  /**
+   * Create an instance of Policybuilderv3ActionParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3ActionParameter
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3ActionParameter
+   */
   public static Policybuilderv3ActionParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3ActionParameter.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3ActionParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3ActionParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

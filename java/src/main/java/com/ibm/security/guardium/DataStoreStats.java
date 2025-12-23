@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,147 +43,154 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DataStoreStats
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class DataStoreStats {
   public static final String SERIALIZED_NAME_RESOURCES_COUNT = "resourcesCount";
   @SerializedName(SERIALIZED_NAME_RESOURCES_COUNT)
+  @javax.annotation.Nullable
   private BigDecimal resourcesCount;
 
   public static final String SERIALIZED_NAME_APP_FLOWS_COUNT = "appFlowsCount";
   @SerializedName(SERIALIZED_NAME_APP_FLOWS_COUNT)
+  @javax.annotation.Nullable
   private BigDecimal appFlowsCount;
 
   public static final String SERIALIZED_NAME_CONFIG_FLOWS_COUNT = "configFlowsCount";
   @SerializedName(SERIALIZED_NAME_CONFIG_FLOWS_COUNT)
+  @javax.annotation.Nullable
   private BigDecimal configFlowsCount;
 
   public static final String SERIALIZED_NAME_SENSITIVITIES_COUNT = "sensitivitiesCount";
   @SerializedName(SERIALIZED_NAME_SENSITIVITIES_COUNT)
+  @javax.annotation.Nullable
   private BigDecimal sensitivitiesCount;
 
   public static final String SERIALIZED_NAME_USER_ACCESS_COUNT = "userAccessCount";
   @SerializedName(SERIALIZED_NAME_USER_ACCESS_COUNT)
+  @javax.annotation.Nullable
   private BigDecimal userAccessCount;
 
   public static final String SERIALIZED_NAME_SENSITIVITIES_SUMMARY = "sensitivitiesSummary";
   @SerializedName(SERIALIZED_NAME_SENSITIVITIES_SUMMARY)
+  @javax.annotation.Nullable
   private List<SensitivitySummary> sensitivitiesSummary = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_VULNERABILITIES_SUMMARY = "vulnerabilitiesSummary";
   @SerializedName(SERIALIZED_NAME_VULNERABILITIES_SUMMARY)
+  @javax.annotation.Nullable
   private List<VulnerabilitiesCriticalityCountInner> vulnerabilitiesSummary = new ArrayList<>();
 
   public DataStoreStats() {
   }
 
-  public DataStoreStats resourcesCount(BigDecimal resourcesCount) {
+  public DataStoreStats resourcesCount(@javax.annotation.Nullable BigDecimal resourcesCount) {
     this.resourcesCount = resourcesCount;
     return this;
   }
 
-   /**
+  /**
    * Get resourcesCount
    * @return resourcesCount
-  **/
+   */
   @javax.annotation.Nullable
   public BigDecimal getResourcesCount() {
     return resourcesCount;
   }
 
-  public void setResourcesCount(BigDecimal resourcesCount) {
+  public void setResourcesCount(@javax.annotation.Nullable BigDecimal resourcesCount) {
     this.resourcesCount = resourcesCount;
   }
 
 
-  public DataStoreStats appFlowsCount(BigDecimal appFlowsCount) {
+  public DataStoreStats appFlowsCount(@javax.annotation.Nullable BigDecimal appFlowsCount) {
     this.appFlowsCount = appFlowsCount;
     return this;
   }
 
-   /**
+  /**
    * Get appFlowsCount
    * @return appFlowsCount
-  **/
+   */
   @javax.annotation.Nullable
   public BigDecimal getAppFlowsCount() {
     return appFlowsCount;
   }
 
-  public void setAppFlowsCount(BigDecimal appFlowsCount) {
+  public void setAppFlowsCount(@javax.annotation.Nullable BigDecimal appFlowsCount) {
     this.appFlowsCount = appFlowsCount;
   }
 
 
-  public DataStoreStats configFlowsCount(BigDecimal configFlowsCount) {
+  public DataStoreStats configFlowsCount(@javax.annotation.Nullable BigDecimal configFlowsCount) {
     this.configFlowsCount = configFlowsCount;
     return this;
   }
 
-   /**
+  /**
    * Get configFlowsCount
    * @return configFlowsCount
-  **/
+   */
   @javax.annotation.Nullable
   public BigDecimal getConfigFlowsCount() {
     return configFlowsCount;
   }
 
-  public void setConfigFlowsCount(BigDecimal configFlowsCount) {
+  public void setConfigFlowsCount(@javax.annotation.Nullable BigDecimal configFlowsCount) {
     this.configFlowsCount = configFlowsCount;
   }
 
 
-  public DataStoreStats sensitivitiesCount(BigDecimal sensitivitiesCount) {
+  public DataStoreStats sensitivitiesCount(@javax.annotation.Nullable BigDecimal sensitivitiesCount) {
     this.sensitivitiesCount = sensitivitiesCount;
     return this;
   }
 
-   /**
+  /**
    * Get sensitivitiesCount
    * @return sensitivitiesCount
-  **/
+   */
   @javax.annotation.Nullable
   public BigDecimal getSensitivitiesCount() {
     return sensitivitiesCount;
   }
 
-  public void setSensitivitiesCount(BigDecimal sensitivitiesCount) {
+  public void setSensitivitiesCount(@javax.annotation.Nullable BigDecimal sensitivitiesCount) {
     this.sensitivitiesCount = sensitivitiesCount;
   }
 
 
-  public DataStoreStats userAccessCount(BigDecimal userAccessCount) {
+  public DataStoreStats userAccessCount(@javax.annotation.Nullable BigDecimal userAccessCount) {
     this.userAccessCount = userAccessCount;
     return this;
   }
 
-   /**
+  /**
    * number of users entitled to access the data store
    * @return userAccessCount
-  **/
+   */
   @javax.annotation.Nullable
   public BigDecimal getUserAccessCount() {
     return userAccessCount;
   }
 
-  public void setUserAccessCount(BigDecimal userAccessCount) {
+  public void setUserAccessCount(@javax.annotation.Nullable BigDecimal userAccessCount) {
     this.userAccessCount = userAccessCount;
   }
 
 
-  public DataStoreStats sensitivitiesSummary(List<SensitivitySummary> sensitivitiesSummary) {
+  public DataStoreStats sensitivitiesSummary(@javax.annotation.Nullable List<SensitivitySummary> sensitivitiesSummary) {
     this.sensitivitiesSummary = sensitivitiesSummary;
     return this;
   }
@@ -195,21 +203,21 @@ public class DataStoreStats {
     return this;
   }
 
-   /**
+  /**
    * Get sensitivitiesSummary
    * @return sensitivitiesSummary
-  **/
+   */
   @javax.annotation.Nullable
   public List<SensitivitySummary> getSensitivitiesSummary() {
     return sensitivitiesSummary;
   }
 
-  public void setSensitivitiesSummary(List<SensitivitySummary> sensitivitiesSummary) {
+  public void setSensitivitiesSummary(@javax.annotation.Nullable List<SensitivitySummary> sensitivitiesSummary) {
     this.sensitivitiesSummary = sensitivitiesSummary;
   }
 
 
-  public DataStoreStats vulnerabilitiesSummary(List<VulnerabilitiesCriticalityCountInner> vulnerabilitiesSummary) {
+  public DataStoreStats vulnerabilitiesSummary(@javax.annotation.Nullable List<VulnerabilitiesCriticalityCountInner> vulnerabilitiesSummary) {
     this.vulnerabilitiesSummary = vulnerabilitiesSummary;
     return this;
   }
@@ -222,16 +230,16 @@ public class DataStoreStats {
     return this;
   }
 
-   /**
+  /**
    * Get vulnerabilitiesSummary
    * @return vulnerabilitiesSummary
-  **/
+   */
   @javax.annotation.Nullable
   public List<VulnerabilitiesCriticalityCountInner> getVulnerabilitiesSummary() {
     return vulnerabilitiesSummary;
   }
 
-  public void setVulnerabilitiesSummary(List<VulnerabilitiesCriticalityCountInner> vulnerabilitiesSummary) {
+  public void setVulnerabilitiesSummary(@javax.annotation.Nullable List<VulnerabilitiesCriticalityCountInner> vulnerabilitiesSummary) {
     this.vulnerabilitiesSummary = vulnerabilitiesSummary;
   }
 
@@ -292,29 +300,22 @@ public class DataStoreStats {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("resourcesCount");
-    openapiFields.add("appFlowsCount");
-    openapiFields.add("configFlowsCount");
-    openapiFields.add("sensitivitiesCount");
-    openapiFields.add("userAccessCount");
-    openapiFields.add("sensitivitiesSummary");
-    openapiFields.add("vulnerabilitiesSummary");
+    openapiFields = new HashSet<String>(Arrays.asList("resourcesCount", "appFlowsCount", "configFlowsCount", "sensitivitiesCount", "userAccessCount", "sensitivitiesSummary", "vulnerabilitiesSummary"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to DataStoreStats
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to DataStoreStats
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!DataStoreStats.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in DataStoreStats is not found in the empty JSON string", DataStoreStats.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in DataStoreStats is not found in the empty JSON string", DataStoreStats.openapiRequiredFields.toString()));
         }
       }
 
@@ -322,7 +323,7 @@ public class DataStoreStats {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!DataStoreStats.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DataStoreStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DataStoreStats` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -331,7 +332,7 @@ public class DataStoreStats {
         if (jsonArraysensitivitiesSummary != null) {
           // ensure the json data is an array
           if (!jsonObj.get("sensitivitiesSummary").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `sensitivitiesSummary` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivitiesSummary").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitivitiesSummary` to be an array in the JSON string but got `%s`", jsonObj.get("sensitivitiesSummary").toString()));
           }
 
           // validate the optional field `sensitivitiesSummary` (array)
@@ -345,7 +346,7 @@ public class DataStoreStats {
         if (jsonArrayvulnerabilitiesSummary != null) {
           // ensure the json data is an array
           if (!jsonObj.get("vulnerabilitiesSummary").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `vulnerabilitiesSummary` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerabilitiesSummary").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vulnerabilitiesSummary` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerabilitiesSummary").toString()));
           }
 
           // validate the optional field `vulnerabilitiesSummary` (array)
@@ -385,22 +386,22 @@ public class DataStoreStats {
     }
   }
 
- /**
-  * Create an instance of DataStoreStats given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of DataStoreStats
-  * @throws IOException if the JSON string is invalid with respect to DataStoreStats
-  */
+  /**
+   * Create an instance of DataStoreStats given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of DataStoreStats
+   * @throws IOException if the JSON string is invalid with respect to DataStoreStats
+   */
   public static DataStoreStats fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, DataStoreStats.class);
   }
 
- /**
-  * Convert an instance of DataStoreStats to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of DataStoreStats to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,44 +42,49 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * S-tap related information object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3StapInformationObject {
   public static final String SERIALIZED_NAME_INSPECTION_ENGINE_DETAILS = "inspection_engine_details";
   @SerializedName(SERIALIZED_NAME_INSPECTION_ENGINE_DETAILS)
+  @javax.annotation.Nullable
   private List<Healthcollectorv3InspectionEnginePresentDetails> inspectionEngineDetails = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_INSPECTION_ENGINE_DETAILS_CHANGE = "inspection_engine_details_change";
   @SerializedName(SERIALIZED_NAME_INSPECTION_ENGINE_DETAILS_CHANGE)
+  @javax.annotation.Nullable
   private Integer inspectionEngineDetailsChange;
 
   public static final String SERIALIZED_NAME_PRESENT_AT_END = "present_at_end";
   @SerializedName(SERIALIZED_NAME_PRESENT_AT_END)
+  @javax.annotation.Nullable
   private Boolean presentAtEnd;
 
   public static final String SERIALIZED_NAME_PRESENT_AT_START = "present_at_start";
   @SerializedName(SERIALIZED_NAME_PRESENT_AT_START)
+  @javax.annotation.Nullable
   private Boolean presentAtStart;
 
   public static final String SERIALIZED_NAME_STAP = "stap";
   @SerializedName(SERIALIZED_NAME_STAP)
+  @javax.annotation.Nullable
   private Healthcollectorv3StapObject stap;
 
   public Healthcollectorv3StapInformationObject() {
   }
 
-  public Healthcollectorv3StapInformationObject inspectionEngineDetails(List<Healthcollectorv3InspectionEnginePresentDetails> inspectionEngineDetails) {
+  public Healthcollectorv3StapInformationObject inspectionEngineDetails(@javax.annotation.Nullable List<Healthcollectorv3InspectionEnginePresentDetails> inspectionEngineDetails) {
     this.inspectionEngineDetails = inspectionEngineDetails;
     return this;
   }
@@ -91,92 +97,92 @@ public class Healthcollectorv3StapInformationObject {
     return this;
   }
 
-   /**
+  /**
    * Details of inspection engines present at start and end.
    * @return inspectionEngineDetails
-  **/
+   */
   @javax.annotation.Nullable
   public List<Healthcollectorv3InspectionEnginePresentDetails> getInspectionEngineDetails() {
     return inspectionEngineDetails;
   }
 
-  public void setInspectionEngineDetails(List<Healthcollectorv3InspectionEnginePresentDetails> inspectionEngineDetails) {
+  public void setInspectionEngineDetails(@javax.annotation.Nullable List<Healthcollectorv3InspectionEnginePresentDetails> inspectionEngineDetails) {
     this.inspectionEngineDetails = inspectionEngineDetails;
   }
 
 
-  public Healthcollectorv3StapInformationObject inspectionEngineDetailsChange(Integer inspectionEngineDetailsChange) {
+  public Healthcollectorv3StapInformationObject inspectionEngineDetailsChange(@javax.annotation.Nullable Integer inspectionEngineDetailsChange) {
     this.inspectionEngineDetailsChange = inspectionEngineDetailsChange;
     return this;
   }
 
-   /**
+  /**
    * Difference of inspection engines present at start and end.
    * @return inspectionEngineDetailsChange
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getInspectionEngineDetailsChange() {
     return inspectionEngineDetailsChange;
   }
 
-  public void setInspectionEngineDetailsChange(Integer inspectionEngineDetailsChange) {
+  public void setInspectionEngineDetailsChange(@javax.annotation.Nullable Integer inspectionEngineDetailsChange) {
     this.inspectionEngineDetailsChange = inspectionEngineDetailsChange;
   }
 
 
-  public Healthcollectorv3StapInformationObject presentAtEnd(Boolean presentAtEnd) {
+  public Healthcollectorv3StapInformationObject presentAtEnd(@javax.annotation.Nullable Boolean presentAtEnd) {
     this.presentAtEnd = presentAtEnd;
     return this;
   }
 
-   /**
+  /**
    * Indicates whether the s-tap was present at end.
    * @return presentAtEnd
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getPresentAtEnd() {
     return presentAtEnd;
   }
 
-  public void setPresentAtEnd(Boolean presentAtEnd) {
+  public void setPresentAtEnd(@javax.annotation.Nullable Boolean presentAtEnd) {
     this.presentAtEnd = presentAtEnd;
   }
 
 
-  public Healthcollectorv3StapInformationObject presentAtStart(Boolean presentAtStart) {
+  public Healthcollectorv3StapInformationObject presentAtStart(@javax.annotation.Nullable Boolean presentAtStart) {
     this.presentAtStart = presentAtStart;
     return this;
   }
 
-   /**
+  /**
    * Indicates whether the s-tap was present at start.
    * @return presentAtStart
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getPresentAtStart() {
     return presentAtStart;
   }
 
-  public void setPresentAtStart(Boolean presentAtStart) {
+  public void setPresentAtStart(@javax.annotation.Nullable Boolean presentAtStart) {
     this.presentAtStart = presentAtStart;
   }
 
 
-  public Healthcollectorv3StapInformationObject stap(Healthcollectorv3StapObject stap) {
+  public Healthcollectorv3StapInformationObject stap(@javax.annotation.Nullable Healthcollectorv3StapObject stap) {
     this.stap = stap;
     return this;
   }
 
-   /**
+  /**
    * Get stap
    * @return stap
-  **/
+   */
   @javax.annotation.Nullable
   public Healthcollectorv3StapObject getStap() {
     return stap;
   }
 
-  public void setStap(Healthcollectorv3StapObject stap) {
+  public void setStap(@javax.annotation.Nullable Healthcollectorv3StapObject stap) {
     this.stap = stap;
   }
 
@@ -233,27 +239,22 @@ public class Healthcollectorv3StapInformationObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("inspection_engine_details");
-    openapiFields.add("inspection_engine_details_change");
-    openapiFields.add("present_at_end");
-    openapiFields.add("present_at_start");
-    openapiFields.add("stap");
+    openapiFields = new HashSet<String>(Arrays.asList("inspection_engine_details", "inspection_engine_details_change", "present_at_end", "present_at_start", "stap"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3StapInformationObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3StapInformationObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3StapInformationObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3StapInformationObject is not found in the empty JSON string", Healthcollectorv3StapInformationObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3StapInformationObject is not found in the empty JSON string", Healthcollectorv3StapInformationObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -261,7 +262,7 @@ public class Healthcollectorv3StapInformationObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3StapInformationObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3StapInformationObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3StapInformationObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -270,7 +271,7 @@ public class Healthcollectorv3StapInformationObject {
         if (jsonArrayinspectionEngineDetails != null) {
           // ensure the json data is an array
           if (!jsonObj.get("inspection_engine_details").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `inspection_engine_details` to be an array in the JSON string but got `%s`", jsonObj.get("inspection_engine_details").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `inspection_engine_details` to be an array in the JSON string but got `%s`", jsonObj.get("inspection_engine_details").toString()));
           }
 
           // validate the optional field `inspection_engine_details` (array)
@@ -314,22 +315,22 @@ public class Healthcollectorv3StapInformationObject {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3StapInformationObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3StapInformationObject
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3StapInformationObject
-  */
+  /**
+   * Create an instance of Healthcollectorv3StapInformationObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3StapInformationObject
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3StapInformationObject
+   */
   public static Healthcollectorv3StapInformationObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3StapInformationObject.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3StapInformationObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3StapInformationObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

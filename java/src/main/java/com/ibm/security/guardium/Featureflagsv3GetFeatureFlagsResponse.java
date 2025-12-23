@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Featureflagsv3GetFeatureFlagsResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Featureflagsv3GetFeatureFlagsResponse {
   public static final String SERIALIZED_NAME_FEATURE_FLAGS = "feature_flags";
   @SerializedName(SERIALIZED_NAME_FEATURE_FLAGS)
+  @javax.annotation.Nullable
   private Map<String, Featureflagsv3FeatureFlagValue> featureFlags = new HashMap<>();
 
   public Featureflagsv3GetFeatureFlagsResponse() {
   }
 
-  public Featureflagsv3GetFeatureFlagsResponse featureFlags(Map<String, Featureflagsv3FeatureFlagValue> featureFlags) {
+  public Featureflagsv3GetFeatureFlagsResponse featureFlags(@javax.annotation.Nullable Map<String, Featureflagsv3FeatureFlagValue> featureFlags) {
     this.featureFlags = featureFlags;
     return this;
   }
@@ -74,16 +76,16 @@ public class Featureflagsv3GetFeatureFlagsResponse {
     return this;
   }
 
-   /**
+  /**
    * Get featureFlags
    * @return featureFlags
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Featureflagsv3FeatureFlagValue> getFeatureFlags() {
     return featureFlags;
   }
 
-  public void setFeatureFlags(Map<String, Featureflagsv3FeatureFlagValue> featureFlags) {
+  public void setFeatureFlags(@javax.annotation.Nullable Map<String, Featureflagsv3FeatureFlagValue> featureFlags) {
     this.featureFlags = featureFlags;
   }
 
@@ -132,23 +134,22 @@ public class Featureflagsv3GetFeatureFlagsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("feature_flags");
+    openapiFields = new HashSet<String>(Arrays.asList("feature_flags"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Featureflagsv3GetFeatureFlagsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Featureflagsv3GetFeatureFlagsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Featureflagsv3GetFeatureFlagsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Featureflagsv3GetFeatureFlagsResponse is not found in the empty JSON string", Featureflagsv3GetFeatureFlagsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Featureflagsv3GetFeatureFlagsResponse is not found in the empty JSON string", Featureflagsv3GetFeatureFlagsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Featureflagsv3GetFeatureFlagsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Featureflagsv3GetFeatureFlagsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Featureflagsv3GetFeatureFlagsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Featureflagsv3GetFeatureFlagsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,22 +192,22 @@ public class Featureflagsv3GetFeatureFlagsResponse {
     }
   }
 
- /**
-  * Create an instance of Featureflagsv3GetFeatureFlagsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Featureflagsv3GetFeatureFlagsResponse
-  * @throws IOException if the JSON string is invalid with respect to Featureflagsv3GetFeatureFlagsResponse
-  */
+  /**
+   * Create an instance of Featureflagsv3GetFeatureFlagsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Featureflagsv3GetFeatureFlagsResponse
+   * @throws IOException if the JSON string is invalid with respect to Featureflagsv3GetFeatureFlagsResponse
+   */
   public static Featureflagsv3GetFeatureFlagsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Featureflagsv3GetFeatureFlagsResponse.class);
   }
 
- /**
-  * Convert an instance of Featureflagsv3GetFeatureFlagsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Featureflagsv3GetFeatureFlagsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

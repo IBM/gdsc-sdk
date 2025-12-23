@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,63 +41,68 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * MappedEntities - Entity details.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3MappedEntities {
   public static final String SERIALIZED_NAME_ATTRIBUTES = "attributes";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
+  @javax.annotation.Nullable
   private Assetsv3Attributes attributes;
 
   public static final String SERIALIZED_NAME_CHILDREN = "children";
   @SerializedName(SERIALIZED_NAME_CHILDREN)
+  @javax.annotation.Nullable
   private List<Assetsv3MappedEntities> children = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PARENT_CHILD_COUNT = "parent_child_count";
   @SerializedName(SERIALIZED_NAME_PARENT_CHILD_COUNT)
+  @javax.annotation.Nullable
   private String parentChildCount;
 
   public static final String SERIALIZED_NAME_SEARCH_TERM = "search_term";
   @SerializedName(SERIALIZED_NAME_SEARCH_TERM)
+  @javax.annotation.Nullable
   private String searchTerm;
 
   public Assetsv3MappedEntities() {
   }
 
-  public Assetsv3MappedEntities attributes(Assetsv3Attributes attributes) {
+  public Assetsv3MappedEntities attributes(@javax.annotation.Nullable Assetsv3Attributes attributes) {
     this.attributes = attributes;
     return this;
   }
 
-   /**
+  /**
    * Get attributes
    * @return attributes
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3Attributes getAttributes() {
     return attributes;
   }
 
-  public void setAttributes(Assetsv3Attributes attributes) {
+  public void setAttributes(@javax.annotation.Nullable Assetsv3Attributes attributes) {
     this.attributes = attributes;
   }
 
 
-  public Assetsv3MappedEntities children(List<Assetsv3MappedEntities> children) {
+  public Assetsv3MappedEntities children(@javax.annotation.Nullable List<Assetsv3MappedEntities> children) {
     this.children = children;
     return this;
   }
@@ -109,73 +115,73 @@ public class Assetsv3MappedEntities {
     return this;
   }
 
-   /**
+  /**
    * Get children
    * @return children
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3MappedEntities> getChildren() {
     return children;
   }
 
-  public void setChildren(List<Assetsv3MappedEntities> children) {
+  public void setChildren(@javax.annotation.Nullable List<Assetsv3MappedEntities> children) {
     this.children = children;
   }
 
 
-  public Assetsv3MappedEntities name(String name) {
+  public Assetsv3MappedEntities name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Assetsv3MappedEntities parentChildCount(String parentChildCount) {
+  public Assetsv3MappedEntities parentChildCount(@javax.annotation.Nullable String parentChildCount) {
     this.parentChildCount = parentChildCount;
     return this;
   }
 
-   /**
+  /**
    * Get parentChildCount
    * @return parentChildCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getParentChildCount() {
     return parentChildCount;
   }
 
-  public void setParentChildCount(String parentChildCount) {
+  public void setParentChildCount(@javax.annotation.Nullable String parentChildCount) {
     this.parentChildCount = parentChildCount;
   }
 
 
-  public Assetsv3MappedEntities searchTerm(String searchTerm) {
+  public Assetsv3MappedEntities searchTerm(@javax.annotation.Nullable String searchTerm) {
     this.searchTerm = searchTerm;
     return this;
   }
 
-   /**
+  /**
    * Get searchTerm
    * @return searchTerm
-  **/
+   */
   @javax.annotation.Nullable
   public String getSearchTerm() {
     return searchTerm;
   }
 
-  public void setSearchTerm(String searchTerm) {
+  public void setSearchTerm(@javax.annotation.Nullable String searchTerm) {
     this.searchTerm = searchTerm;
   }
 
@@ -232,27 +238,22 @@ public class Assetsv3MappedEntities {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("attributes");
-    openapiFields.add("children");
-    openapiFields.add("name");
-    openapiFields.add("parent_child_count");
-    openapiFields.add("search_term");
+    openapiFields = new HashSet<String>(Arrays.asList("attributes", "children", "name", "parent_child_count", "search_term"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3MappedEntities
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3MappedEntities
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3MappedEntities.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3MappedEntities is not found in the empty JSON string", Assetsv3MappedEntities.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3MappedEntities is not found in the empty JSON string", Assetsv3MappedEntities.openapiRequiredFields.toString()));
         }
       }
 
@@ -260,7 +261,7 @@ public class Assetsv3MappedEntities {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3MappedEntities.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3MappedEntities` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3MappedEntities` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -273,7 +274,7 @@ public class Assetsv3MappedEntities {
         if (jsonArraychildren != null) {
           // ensure the json data is an array
           if (!jsonObj.get("children").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `children` to be an array in the JSON string but got `%s`", jsonObj.get("children").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `children` to be an array in the JSON string but got `%s`", jsonObj.get("children").toString()));
           }
 
           // validate the optional field `children` (array)
@@ -283,13 +284,13 @@ public class Assetsv3MappedEntities {
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("parent_child_count") != null && !jsonObj.get("parent_child_count").isJsonNull()) && !jsonObj.get("parent_child_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `parent_child_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parent_child_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parent_child_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parent_child_count").toString()));
       }
       if ((jsonObj.get("search_term") != null && !jsonObj.get("search_term").isJsonNull()) && !jsonObj.get("search_term").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `search_term` to be a primitive type in the JSON string but got `%s`", jsonObj.get("search_term").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `search_term` to be a primitive type in the JSON string but got `%s`", jsonObj.get("search_term").toString()));
       }
   }
 
@@ -322,22 +323,22 @@ public class Assetsv3MappedEntities {
     }
   }
 
- /**
-  * Create an instance of Assetsv3MappedEntities given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3MappedEntities
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3MappedEntities
-  */
+  /**
+   * Create an instance of Assetsv3MappedEntities given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3MappedEntities
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3MappedEntities
+   */
   public static Assetsv3MappedEntities fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3MappedEntities.class);
   }
 
- /**
-  * Convert an instance of Assetsv3MappedEntities to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3MappedEntities to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

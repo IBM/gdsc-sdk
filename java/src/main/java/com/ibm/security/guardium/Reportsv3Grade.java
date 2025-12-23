@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,259 +42,275 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Grade defines a given grade.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3Grade {
   public static final String SERIALIZED_NAME_CONTROL_ID = "control_id";
   @SerializedName(SERIALIZED_NAME_CONTROL_ID)
+  @javax.annotation.Nullable
   private Integer controlId;
 
   public static final String SERIALIZED_NAME_CREATE_USER_ID = "create_user_id";
   @SerializedName(SERIALIZED_NAME_CREATE_USER_ID)
+  @javax.annotation.Nullable
   private String createUserId;
 
   public static final String SERIALIZED_NAME_CREATE_USER_NAME = "create_user_name";
   @SerializedName(SERIALIZED_NAME_CREATE_USER_NAME)
+  @javax.annotation.Nullable
   private String createUserName;
 
   public static final String SERIALIZED_NAME_DATE_CREATED = "date_created";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  @javax.annotation.Nullable
   private OffsetDateTime dateCreated;
 
   public static final String SERIALIZED_NAME_DATE_UPDATED = "date_updated";
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  @javax.annotation.Nullable
   private OffsetDateTime dateUpdated;
 
   public static final String SERIALIZED_NAME_DEFAULT_SCORE = "default_score";
   @SerializedName(SERIALIZED_NAME_DEFAULT_SCORE)
+  @javax.annotation.Nullable
   private Integer defaultScore;
 
   public static final String SERIALIZED_NAME_DEFAULT_SCORE_NAME = "default_score_name";
   @SerializedName(SERIALIZED_NAME_DEFAULT_SCORE_NAME)
+  @javax.annotation.Nullable
   private String defaultScoreName;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_GRADE_ID = "grade_id";
   @SerializedName(SERIALIZED_NAME_GRADE_ID)
+  @javax.annotation.Nullable
   private Integer gradeId;
 
   public static final String SERIALIZED_NAME_GRADE_THRESHOLD = "grade_threshold";
   @SerializedName(SERIALIZED_NAME_GRADE_THRESHOLD)
+  @javax.annotation.Nullable
   private List<Reportsv3GradeThreshold> gradeThreshold = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_IS_PERCENTAGE = "is_percentage";
   @SerializedName(SERIALIZED_NAME_IS_PERCENTAGE)
+  @javax.annotation.Nullable
   private Boolean isPercentage;
 
   public static final String SERIALIZED_NAME_METRIC_ID = "metric_id";
   @SerializedName(SERIALIZED_NAME_METRIC_ID)
+  @javax.annotation.Nullable
   private Integer metricId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_RECOMMENDATION = "recommendation";
   @SerializedName(SERIALIZED_NAME_RECOMMENDATION)
+  @javax.annotation.Nullable
   private String recommendation;
 
   public static final String SERIALIZED_NAME_UPDATE_USER_ID = "update_user_id";
   @SerializedName(SERIALIZED_NAME_UPDATE_USER_ID)
+  @javax.annotation.Nullable
   private String updateUserId;
 
   public static final String SERIALIZED_NAME_UPDATE_USER_NAME = "update_user_name";
   @SerializedName(SERIALIZED_NAME_UPDATE_USER_NAME)
+  @javax.annotation.Nullable
   private String updateUserName;
 
   public Reportsv3Grade() {
   }
 
-  public Reportsv3Grade controlId(Integer controlId) {
+  public Reportsv3Grade controlId(@javax.annotation.Nullable Integer controlId) {
     this.controlId = controlId;
     return this;
   }
 
-   /**
+  /**
    * Get controlId
    * @return controlId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getControlId() {
     return controlId;
   }
 
-  public void setControlId(Integer controlId) {
+  public void setControlId(@javax.annotation.Nullable Integer controlId) {
     this.controlId = controlId;
   }
 
 
-  public Reportsv3Grade createUserId(String createUserId) {
+  public Reportsv3Grade createUserId(@javax.annotation.Nullable String createUserId) {
     this.createUserId = createUserId;
     return this;
   }
 
-   /**
+  /**
    * Get createUserId
    * @return createUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreateUserId() {
     return createUserId;
   }
 
-  public void setCreateUserId(String createUserId) {
+  public void setCreateUserId(@javax.annotation.Nullable String createUserId) {
     this.createUserId = createUserId;
   }
 
 
-  public Reportsv3Grade createUserName(String createUserName) {
+  public Reportsv3Grade createUserName(@javax.annotation.Nullable String createUserName) {
     this.createUserName = createUserName;
     return this;
   }
 
-   /**
+  /**
    * Get createUserName
    * @return createUserName
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreateUserName() {
     return createUserName;
   }
 
-  public void setCreateUserName(String createUserName) {
+  public void setCreateUserName(@javax.annotation.Nullable String createUserName) {
     this.createUserName = createUserName;
   }
 
 
-  public Reportsv3Grade dateCreated(OffsetDateTime dateCreated) {
+  public Reportsv3Grade dateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
     return this;
   }
 
-   /**
+  /**
    * Get dateCreated
    * @return dateCreated
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
-  public void setDateCreated(OffsetDateTime dateCreated) {
+  public void setDateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
-  public Reportsv3Grade dateUpdated(OffsetDateTime dateUpdated) {
+  public Reportsv3Grade dateUpdated(@javax.annotation.Nullable OffsetDateTime dateUpdated) {
     this.dateUpdated = dateUpdated;
     return this;
   }
 
-   /**
+  /**
    * Get dateUpdated
    * @return dateUpdated
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateUpdated() {
     return dateUpdated;
   }
 
-  public void setDateUpdated(OffsetDateTime dateUpdated) {
+  public void setDateUpdated(@javax.annotation.Nullable OffsetDateTime dateUpdated) {
     this.dateUpdated = dateUpdated;
   }
 
 
-  public Reportsv3Grade defaultScore(Integer defaultScore) {
+  public Reportsv3Grade defaultScore(@javax.annotation.Nullable Integer defaultScore) {
     this.defaultScore = defaultScore;
     return this;
   }
 
-   /**
+  /**
    * Get defaultScore
    * @return defaultScore
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getDefaultScore() {
     return defaultScore;
   }
 
-  public void setDefaultScore(Integer defaultScore) {
+  public void setDefaultScore(@javax.annotation.Nullable Integer defaultScore) {
     this.defaultScore = defaultScore;
   }
 
 
-  public Reportsv3Grade defaultScoreName(String defaultScoreName) {
+  public Reportsv3Grade defaultScoreName(@javax.annotation.Nullable String defaultScoreName) {
     this.defaultScoreName = defaultScoreName;
     return this;
   }
 
-   /**
+  /**
    * Get defaultScoreName
    * @return defaultScoreName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDefaultScoreName() {
     return defaultScoreName;
   }
 
-  public void setDefaultScoreName(String defaultScoreName) {
+  public void setDefaultScoreName(@javax.annotation.Nullable String defaultScoreName) {
     this.defaultScoreName = defaultScoreName;
   }
 
 
-  public Reportsv3Grade description(String description) {
+  public Reportsv3Grade description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Get description
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Reportsv3Grade gradeId(Integer gradeId) {
+  public Reportsv3Grade gradeId(@javax.annotation.Nullable Integer gradeId) {
     this.gradeId = gradeId;
     return this;
   }
 
-   /**
+  /**
    * Get gradeId
    * @return gradeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGradeId() {
     return gradeId;
   }
 
-  public void setGradeId(Integer gradeId) {
+  public void setGradeId(@javax.annotation.Nullable Integer gradeId) {
     this.gradeId = gradeId;
   }
 
 
-  public Reportsv3Grade gradeThreshold(List<Reportsv3GradeThreshold> gradeThreshold) {
+  public Reportsv3Grade gradeThreshold(@javax.annotation.Nullable List<Reportsv3GradeThreshold> gradeThreshold) {
     this.gradeThreshold = gradeThreshold;
     return this;
   }
@@ -306,130 +323,130 @@ public class Reportsv3Grade {
     return this;
   }
 
-   /**
+  /**
    * Get gradeThreshold
    * @return gradeThreshold
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3GradeThreshold> getGradeThreshold() {
     return gradeThreshold;
   }
 
-  public void setGradeThreshold(List<Reportsv3GradeThreshold> gradeThreshold) {
+  public void setGradeThreshold(@javax.annotation.Nullable List<Reportsv3GradeThreshold> gradeThreshold) {
     this.gradeThreshold = gradeThreshold;
   }
 
 
-  public Reportsv3Grade isPercentage(Boolean isPercentage) {
+  public Reportsv3Grade isPercentage(@javax.annotation.Nullable Boolean isPercentage) {
     this.isPercentage = isPercentage;
     return this;
   }
 
-   /**
+  /**
    * Get isPercentage
    * @return isPercentage
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsPercentage() {
     return isPercentage;
   }
 
-  public void setIsPercentage(Boolean isPercentage) {
+  public void setIsPercentage(@javax.annotation.Nullable Boolean isPercentage) {
     this.isPercentage = isPercentage;
   }
 
 
-  public Reportsv3Grade metricId(Integer metricId) {
+  public Reportsv3Grade metricId(@javax.annotation.Nullable Integer metricId) {
     this.metricId = metricId;
     return this;
   }
 
-   /**
+  /**
    * Get metricId
    * @return metricId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getMetricId() {
     return metricId;
   }
 
-  public void setMetricId(Integer metricId) {
+  public void setMetricId(@javax.annotation.Nullable Integer metricId) {
     this.metricId = metricId;
   }
 
 
-  public Reportsv3Grade name(String name) {
+  public Reportsv3Grade name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Reportsv3Grade recommendation(String recommendation) {
+  public Reportsv3Grade recommendation(@javax.annotation.Nullable String recommendation) {
     this.recommendation = recommendation;
     return this;
   }
 
-   /**
+  /**
    * Get recommendation
    * @return recommendation
-  **/
+   */
   @javax.annotation.Nullable
   public String getRecommendation() {
     return recommendation;
   }
 
-  public void setRecommendation(String recommendation) {
+  public void setRecommendation(@javax.annotation.Nullable String recommendation) {
     this.recommendation = recommendation;
   }
 
 
-  public Reportsv3Grade updateUserId(String updateUserId) {
+  public Reportsv3Grade updateUserId(@javax.annotation.Nullable String updateUserId) {
     this.updateUserId = updateUserId;
     return this;
   }
 
-   /**
+  /**
    * Get updateUserId
    * @return updateUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getUpdateUserId() {
     return updateUserId;
   }
 
-  public void setUpdateUserId(String updateUserId) {
+  public void setUpdateUserId(@javax.annotation.Nullable String updateUserId) {
     this.updateUserId = updateUserId;
   }
 
 
-  public Reportsv3Grade updateUserName(String updateUserName) {
+  public Reportsv3Grade updateUserName(@javax.annotation.Nullable String updateUserName) {
     this.updateUserName = updateUserName;
     return this;
   }
 
-   /**
+  /**
    * Get updateUserName
    * @return updateUserName
-  **/
+   */
   @javax.annotation.Nullable
   public String getUpdateUserName() {
     return updateUserName;
   }
 
-  public void setUpdateUserName(String updateUserName) {
+  public void setUpdateUserName(@javax.annotation.Nullable String updateUserName) {
     this.updateUserName = updateUserName;
   }
 
@@ -508,38 +525,22 @@ public class Reportsv3Grade {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("control_id");
-    openapiFields.add("create_user_id");
-    openapiFields.add("create_user_name");
-    openapiFields.add("date_created");
-    openapiFields.add("date_updated");
-    openapiFields.add("default_score");
-    openapiFields.add("default_score_name");
-    openapiFields.add("description");
-    openapiFields.add("grade_id");
-    openapiFields.add("grade_threshold");
-    openapiFields.add("is_percentage");
-    openapiFields.add("metric_id");
-    openapiFields.add("name");
-    openapiFields.add("recommendation");
-    openapiFields.add("update_user_id");
-    openapiFields.add("update_user_name");
+    openapiFields = new HashSet<String>(Arrays.asList("control_id", "create_user_id", "create_user_name", "date_created", "date_updated", "default_score", "default_score_name", "description", "grade_id", "grade_threshold", "is_percentage", "metric_id", "name", "recommendation", "update_user_id", "update_user_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3Grade
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3Grade
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3Grade.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3Grade is not found in the empty JSON string", Reportsv3Grade.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3Grade is not found in the empty JSON string", Reportsv3Grade.openapiRequiredFields.toString()));
         }
       }
 
@@ -547,28 +548,28 @@ public class Reportsv3Grade {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3Grade.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3Grade` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3Grade` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("create_user_id") != null && !jsonObj.get("create_user_id").isJsonNull()) && !jsonObj.get("create_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `create_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `create_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_id").toString()));
       }
       if ((jsonObj.get("create_user_name") != null && !jsonObj.get("create_user_name").isJsonNull()) && !jsonObj.get("create_user_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `create_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `create_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_name").toString()));
       }
       if ((jsonObj.get("default_score_name") != null && !jsonObj.get("default_score_name").isJsonNull()) && !jsonObj.get("default_score_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `default_score_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("default_score_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `default_score_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("default_score_name").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if (jsonObj.get("grade_threshold") != null && !jsonObj.get("grade_threshold").isJsonNull()) {
         JsonArray jsonArraygradeThreshold = jsonObj.getAsJsonArray("grade_threshold");
         if (jsonArraygradeThreshold != null) {
           // ensure the json data is an array
           if (!jsonObj.get("grade_threshold").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `grade_threshold` to be an array in the JSON string but got `%s`", jsonObj.get("grade_threshold").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `grade_threshold` to be an array in the JSON string but got `%s`", jsonObj.get("grade_threshold").toString()));
           }
 
           // validate the optional field `grade_threshold` (array)
@@ -578,16 +579,16 @@ public class Reportsv3Grade {
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("recommendation") != null && !jsonObj.get("recommendation").isJsonNull()) && !jsonObj.get("recommendation").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `recommendation` to be a primitive type in the JSON string but got `%s`", jsonObj.get("recommendation").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `recommendation` to be a primitive type in the JSON string but got `%s`", jsonObj.get("recommendation").toString()));
       }
       if ((jsonObj.get("update_user_id") != null && !jsonObj.get("update_user_id").isJsonNull()) && !jsonObj.get("update_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `update_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `update_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_id").toString()));
       }
       if ((jsonObj.get("update_user_name") != null && !jsonObj.get("update_user_name").isJsonNull()) && !jsonObj.get("update_user_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `update_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `update_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_name").toString()));
       }
   }
 
@@ -620,22 +621,22 @@ public class Reportsv3Grade {
     }
   }
 
- /**
-  * Create an instance of Reportsv3Grade given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3Grade
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3Grade
-  */
+  /**
+   * Create an instance of Reportsv3Grade given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3Grade
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3Grade
+   */
   public static Reportsv3Grade fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3Grade.class);
   }
 
- /**
-  * Convert an instance of Reportsv3Grade to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3Grade to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

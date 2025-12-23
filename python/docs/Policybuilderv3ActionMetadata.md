@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **label** | **str** | Ui label for the action. | [optional] 
 **parameters** | [**List[Policybuilderv3ActionParameterMetadata]**](Policybuilderv3ActionParameterMetadata.md) | Action parameters. | [optional] 
 **rule_type** | [**List[Policybuilderv3RuleType]**](Policybuilderv3RuleType.md) | Rule type for the action. | [optional] 
-**type** | [**Policybuilderv3ActionType**](Policybuilderv3ActionType.md) |  | [optional] 
+**type** | [**Policybuilderv3ActionType**](Policybuilderv3ActionType.md) |  | [optional] [default to Policybuilderv3ActionType.UNDEFINED_ACTIONTYPE]
 
 ## Example
 

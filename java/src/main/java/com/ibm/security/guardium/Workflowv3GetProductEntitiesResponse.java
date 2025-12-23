@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Workflowv3GetProductEntitiesResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3GetProductEntitiesResponse {
   public static final String SERIALIZED_NAME_ENTITIES = "entities";
   @SerializedName(SERIALIZED_NAME_ENTITIES)
+  @javax.annotation.Nullable
   private List<Workflowv3EntityDefinition> entities = new ArrayList<>();
 
   public Workflowv3GetProductEntitiesResponse() {
   }
 
-  public Workflowv3GetProductEntitiesResponse entities(List<Workflowv3EntityDefinition> entities) {
+  public Workflowv3GetProductEntitiesResponse entities(@javax.annotation.Nullable List<Workflowv3EntityDefinition> entities) {
     this.entities = entities;
     return this;
   }
@@ -74,16 +76,16 @@ public class Workflowv3GetProductEntitiesResponse {
     return this;
   }
 
-   /**
+  /**
    * Get entities
    * @return entities
-  **/
+   */
   @javax.annotation.Nullable
   public List<Workflowv3EntityDefinition> getEntities() {
     return entities;
   }
 
-  public void setEntities(List<Workflowv3EntityDefinition> entities) {
+  public void setEntities(@javax.annotation.Nullable List<Workflowv3EntityDefinition> entities) {
     this.entities = entities;
   }
 
@@ -132,23 +134,22 @@ public class Workflowv3GetProductEntitiesResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("entities");
+    openapiFields = new HashSet<String>(Arrays.asList("entities"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3GetProductEntitiesResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3GetProductEntitiesResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3GetProductEntitiesResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3GetProductEntitiesResponse is not found in the empty JSON string", Workflowv3GetProductEntitiesResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3GetProductEntitiesResponse is not found in the empty JSON string", Workflowv3GetProductEntitiesResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Workflowv3GetProductEntitiesResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3GetProductEntitiesResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3GetProductEntitiesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3GetProductEntitiesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Workflowv3GetProductEntitiesResponse {
         if (jsonArrayentities != null) {
           // ensure the json data is an array
           if (!jsonObj.get("entities").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `entities` to be an array in the JSON string but got `%s`", jsonObj.get("entities").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `entities` to be an array in the JSON string but got `%s`", jsonObj.get("entities").toString()));
           }
 
           // validate the optional field `entities` (array)
@@ -205,22 +206,22 @@ public class Workflowv3GetProductEntitiesResponse {
     }
   }
 
- /**
-  * Create an instance of Workflowv3GetProductEntitiesResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3GetProductEntitiesResponse
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3GetProductEntitiesResponse
-  */
+  /**
+   * Create an instance of Workflowv3GetProductEntitiesResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3GetProductEntitiesResponse
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3GetProductEntitiesResponse
+   */
   public static Workflowv3GetProductEntitiesResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3GetProductEntitiesResponse.class);
   }
 
- /**
-  * Convert an instance of Workflowv3GetProductEntitiesResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3GetProductEntitiesResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

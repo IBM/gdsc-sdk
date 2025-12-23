@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,226 +41,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Policybuilderv3GdpPolicySyncRes
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3GdpPolicySyncRes {
   public static final String SERIALIZED_NAME_CENTRAL_MANAGER = "central_manager";
   @SerializedName(SERIALIZED_NAME_CENTRAL_MANAGER)
+  @javax.annotation.Nullable
   private String centralManager;
 
   public static final String SERIALIZED_NAME_CREATED_POLICY_ID = "created_policy_id";
   @SerializedName(SERIALIZED_NAME_CREATED_POLICY_ID)
+  @javax.annotation.Nullable
   private String createdPolicyId;
 
   public static final String SERIALIZED_NAME_GDP_SYNCED_ID = "gdp_synced_id";
   @SerializedName(SERIALIZED_NAME_GDP_SYNCED_ID)
+  @javax.annotation.Nullable
   private String gdpSyncedId;
 
   public static final String SERIALIZED_NAME_IMPORT_NAME = "import_name";
   @SerializedName(SERIALIZED_NAME_IMPORT_NAME)
+  @javax.annotation.Nullable
   private String importName;
 
   public static final String SERIALIZED_NAME_LAST_STATE_CHANGE = "last_state_change";
   @SerializedName(SERIALIZED_NAME_LAST_STATE_CHANGE)
+  @javax.annotation.Nullable
   private String lastStateChange;
 
   public static final String SERIALIZED_NAME_POLICY_IMPORT_ISSUE = "policy_import_issue";
   @SerializedName(SERIALIZED_NAME_POLICY_IMPORT_ISSUE)
+  @javax.annotation.Nullable
   private Policybuilderv3ImportIssue policyImportIssue = Policybuilderv3ImportIssue.NO_IMPORT_ISSUE;
 
   public static final String SERIALIZED_NAME_POLICY_IMPORT_STATE = "policy_import_state";
   @SerializedName(SERIALIZED_NAME_POLICY_IMPORT_STATE)
+  @javax.annotation.Nullable
   private Policybuilderv3ImportState policyImportState = Policybuilderv3ImportState.NO_IMPORT_STATUS;
 
   public static final String SERIALIZED_NAME_POLICY_NAME = "policy_name";
   @SerializedName(SERIALIZED_NAME_POLICY_NAME)
+  @javax.annotation.Nullable
   private String policyName;
 
   public static final String SERIALIZED_NAME_SYNC_STATUS = "sync_status";
   @SerializedName(SERIALIZED_NAME_SYNC_STATUS)
+  @javax.annotation.Nullable
   private Policybuilderv3SyncStatusType syncStatus = Policybuilderv3SyncStatusType.NO_SYNC_STATUS;
 
   public Policybuilderv3GdpPolicySyncRes() {
   }
 
-  public Policybuilderv3GdpPolicySyncRes centralManager(String centralManager) {
+  public Policybuilderv3GdpPolicySyncRes centralManager(@javax.annotation.Nullable String centralManager) {
     this.centralManager = centralManager;
     return this;
   }
 
-   /**
+  /**
    * Get centralManager
    * @return centralManager
-  **/
+   */
   @javax.annotation.Nullable
   public String getCentralManager() {
     return centralManager;
   }
 
-  public void setCentralManager(String centralManager) {
+  public void setCentralManager(@javax.annotation.Nullable String centralManager) {
     this.centralManager = centralManager;
   }
 
 
-  public Policybuilderv3GdpPolicySyncRes createdPolicyId(String createdPolicyId) {
+  public Policybuilderv3GdpPolicySyncRes createdPolicyId(@javax.annotation.Nullable String createdPolicyId) {
     this.createdPolicyId = createdPolicyId;
     return this;
   }
 
-   /**
+  /**
    * Get createdPolicyId
    * @return createdPolicyId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreatedPolicyId() {
     return createdPolicyId;
   }
 
-  public void setCreatedPolicyId(String createdPolicyId) {
+  public void setCreatedPolicyId(@javax.annotation.Nullable String createdPolicyId) {
     this.createdPolicyId = createdPolicyId;
   }
 
 
-  public Policybuilderv3GdpPolicySyncRes gdpSyncedId(String gdpSyncedId) {
+  public Policybuilderv3GdpPolicySyncRes gdpSyncedId(@javax.annotation.Nullable String gdpSyncedId) {
     this.gdpSyncedId = gdpSyncedId;
     return this;
   }
 
-   /**
+  /**
    * Sync id of the created or updated sync policy.
    * @return gdpSyncedId
-  **/
+   */
   @javax.annotation.Nullable
   public String getGdpSyncedId() {
     return gdpSyncedId;
   }
 
-  public void setGdpSyncedId(String gdpSyncedId) {
+  public void setGdpSyncedId(@javax.annotation.Nullable String gdpSyncedId) {
     this.gdpSyncedId = gdpSyncedId;
   }
 
 
-  public Policybuilderv3GdpPolicySyncRes importName(String importName) {
+  public Policybuilderv3GdpPolicySyncRes importName(@javax.annotation.Nullable String importName) {
     this.importName = importName;
     return this;
   }
 
-   /**
+  /**
    * Name for imported GDP policy.
    * @return importName
-  **/
+   */
   @javax.annotation.Nullable
   public String getImportName() {
     return importName;
   }
 
-  public void setImportName(String importName) {
+  public void setImportName(@javax.annotation.Nullable String importName) {
     this.importName = importName;
   }
 
 
-  public Policybuilderv3GdpPolicySyncRes lastStateChange(String lastStateChange) {
+  public Policybuilderv3GdpPolicySyncRes lastStateChange(@javax.annotation.Nullable String lastStateChange) {
     this.lastStateChange = lastStateChange;
     return this;
   }
 
-   /**
+  /**
    * Get lastStateChange
    * @return lastStateChange
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastStateChange() {
     return lastStateChange;
   }
 
-  public void setLastStateChange(String lastStateChange) {
+  public void setLastStateChange(@javax.annotation.Nullable String lastStateChange) {
     this.lastStateChange = lastStateChange;
   }
 
 
-  public Policybuilderv3GdpPolicySyncRes policyImportIssue(Policybuilderv3ImportIssue policyImportIssue) {
+  public Policybuilderv3GdpPolicySyncRes policyImportIssue(@javax.annotation.Nullable Policybuilderv3ImportIssue policyImportIssue) {
     this.policyImportIssue = policyImportIssue;
     return this;
   }
 
-   /**
+  /**
    * Get policyImportIssue
    * @return policyImportIssue
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3ImportIssue getPolicyImportIssue() {
     return policyImportIssue;
   }
 
-  public void setPolicyImportIssue(Policybuilderv3ImportIssue policyImportIssue) {
+  public void setPolicyImportIssue(@javax.annotation.Nullable Policybuilderv3ImportIssue policyImportIssue) {
     this.policyImportIssue = policyImportIssue;
   }
 
 
-  public Policybuilderv3GdpPolicySyncRes policyImportState(Policybuilderv3ImportState policyImportState) {
+  public Policybuilderv3GdpPolicySyncRes policyImportState(@javax.annotation.Nullable Policybuilderv3ImportState policyImportState) {
     this.policyImportState = policyImportState;
     return this;
   }
 
-   /**
+  /**
    * Get policyImportState
    * @return policyImportState
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3ImportState getPolicyImportState() {
     return policyImportState;
   }
 
-  public void setPolicyImportState(Policybuilderv3ImportState policyImportState) {
+  public void setPolicyImportState(@javax.annotation.Nullable Policybuilderv3ImportState policyImportState) {
     this.policyImportState = policyImportState;
   }
 
 
-  public Policybuilderv3GdpPolicySyncRes policyName(String policyName) {
+  public Policybuilderv3GdpPolicySyncRes policyName(@javax.annotation.Nullable String policyName) {
     this.policyName = policyName;
     return this;
   }
 
-   /**
+  /**
    * Policy Name for the created or updated sync policy.
    * @return policyName
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyName() {
     return policyName;
   }
 
-  public void setPolicyName(String policyName) {
+  public void setPolicyName(@javax.annotation.Nullable String policyName) {
     this.policyName = policyName;
   }
 
 
-  public Policybuilderv3GdpPolicySyncRes syncStatus(Policybuilderv3SyncStatusType syncStatus) {
+  public Policybuilderv3GdpPolicySyncRes syncStatus(@javax.annotation.Nullable Policybuilderv3SyncStatusType syncStatus) {
     this.syncStatus = syncStatus;
     return this;
   }
 
-   /**
+  /**
    * Get syncStatus
    * @return syncStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3SyncStatusType getSyncStatus() {
     return syncStatus;
   }
 
-  public void setSyncStatus(Policybuilderv3SyncStatusType syncStatus) {
+  public void setSyncStatus(@javax.annotation.Nullable Policybuilderv3SyncStatusType syncStatus) {
     this.syncStatus = syncStatus;
   }
 
@@ -324,31 +334,22 @@ public class Policybuilderv3GdpPolicySyncRes {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("central_manager");
-    openapiFields.add("created_policy_id");
-    openapiFields.add("gdp_synced_id");
-    openapiFields.add("import_name");
-    openapiFields.add("last_state_change");
-    openapiFields.add("policy_import_issue");
-    openapiFields.add("policy_import_state");
-    openapiFields.add("policy_name");
-    openapiFields.add("sync_status");
+    openapiFields = new HashSet<String>(Arrays.asList("central_manager", "created_policy_id", "gdp_synced_id", "import_name", "last_state_change", "policy_import_issue", "policy_import_state", "policy_name", "sync_status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3GdpPolicySyncRes
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3GdpPolicySyncRes
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3GdpPolicySyncRes.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3GdpPolicySyncRes is not found in the empty JSON string", Policybuilderv3GdpPolicySyncRes.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3GdpPolicySyncRes is not found in the empty JSON string", Policybuilderv3GdpPolicySyncRes.openapiRequiredFields.toString()));
         }
       }
 
@@ -356,24 +357,24 @@ public class Policybuilderv3GdpPolicySyncRes {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3GdpPolicySyncRes.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3GdpPolicySyncRes` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3GdpPolicySyncRes` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("central_manager") != null && !jsonObj.get("central_manager").isJsonNull()) && !jsonObj.get("central_manager").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `central_manager` to be a primitive type in the JSON string but got `%s`", jsonObj.get("central_manager").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `central_manager` to be a primitive type in the JSON string but got `%s`", jsonObj.get("central_manager").toString()));
       }
       if ((jsonObj.get("created_policy_id") != null && !jsonObj.get("created_policy_id").isJsonNull()) && !jsonObj.get("created_policy_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `created_policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_policy_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `created_policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("created_policy_id").toString()));
       }
       if ((jsonObj.get("gdp_synced_id") != null && !jsonObj.get("gdp_synced_id").isJsonNull()) && !jsonObj.get("gdp_synced_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `gdp_synced_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gdp_synced_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `gdp_synced_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("gdp_synced_id").toString()));
       }
       if ((jsonObj.get("import_name") != null && !jsonObj.get("import_name").isJsonNull()) && !jsonObj.get("import_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `import_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("import_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `import_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("import_name").toString()));
       }
       if ((jsonObj.get("last_state_change") != null && !jsonObj.get("last_state_change").isJsonNull()) && !jsonObj.get("last_state_change").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_state_change` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_state_change").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_state_change` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_state_change").toString()));
       }
       // validate the optional field `policy_import_issue`
       if (jsonObj.get("policy_import_issue") != null && !jsonObj.get("policy_import_issue").isJsonNull()) {
@@ -384,7 +385,7 @@ public class Policybuilderv3GdpPolicySyncRes {
         Policybuilderv3ImportState.validateJsonElement(jsonObj.get("policy_import_state"));
       }
       if ((jsonObj.get("policy_name") != null && !jsonObj.get("policy_name").isJsonNull()) && !jsonObj.get("policy_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_name").toString()));
       }
       // validate the optional field `sync_status`
       if (jsonObj.get("sync_status") != null && !jsonObj.get("sync_status").isJsonNull()) {
@@ -421,22 +422,22 @@ public class Policybuilderv3GdpPolicySyncRes {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3GdpPolicySyncRes given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3GdpPolicySyncRes
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3GdpPolicySyncRes
-  */
+  /**
+   * Create an instance of Policybuilderv3GdpPolicySyncRes given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3GdpPolicySyncRes
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3GdpPolicySyncRes
+   */
   public static Policybuilderv3GdpPolicySyncRes fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3GdpPolicySyncRes.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3GdpPolicySyncRes to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3GdpPolicySyncRes to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,65 +40,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * VulnerabilitiesSummaryStatusTypeCountInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class VulnerabilitiesSummaryStatusTypeCountInner {
   public static final String SERIALIZED_NAME_STATUS_TYPE = "statusType";
   @SerializedName(SERIALIZED_NAME_STATUS_TYPE)
+  @javax.annotation.Nonnull
   private VulnerabilityStatusType statusType;
 
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nonnull
   private BigDecimal count;
 
   public VulnerabilitiesSummaryStatusTypeCountInner() {
   }
 
-  public VulnerabilitiesSummaryStatusTypeCountInner statusType(VulnerabilityStatusType statusType) {
+  public VulnerabilitiesSummaryStatusTypeCountInner statusType(@javax.annotation.Nonnull VulnerabilityStatusType statusType) {
     this.statusType = statusType;
     return this;
   }
 
-   /**
+  /**
    * Get statusType
    * @return statusType
-  **/
+   */
   @javax.annotation.Nonnull
   public VulnerabilityStatusType getStatusType() {
     return statusType;
   }
 
-  public void setStatusType(VulnerabilityStatusType statusType) {
+  public void setStatusType(@javax.annotation.Nonnull VulnerabilityStatusType statusType) {
     this.statusType = statusType;
   }
 
 
-  public VulnerabilitiesSummaryStatusTypeCountInner count(BigDecimal count) {
+  public VulnerabilitiesSummaryStatusTypeCountInner count(@javax.annotation.Nonnull BigDecimal count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Get count
    * @return count
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getCount() {
     return count;
   }
 
-  public void setCount(BigDecimal count) {
+  public void setCount(@javax.annotation.Nonnull BigDecimal count) {
     this.count = count;
   }
 
@@ -148,26 +151,22 @@ public class VulnerabilitiesSummaryStatusTypeCountInner {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("statusType");
-    openapiFields.add("count");
+    openapiFields = new HashSet<String>(Arrays.asList("statusType", "count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("statusType");
-    openapiRequiredFields.add("count");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("statusType", "count"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesSummaryStatusTypeCountInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesSummaryStatusTypeCountInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VulnerabilitiesSummaryStatusTypeCountInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in VulnerabilitiesSummaryStatusTypeCountInner is not found in the empty JSON string", VulnerabilitiesSummaryStatusTypeCountInner.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in VulnerabilitiesSummaryStatusTypeCountInner is not found in the empty JSON string", VulnerabilitiesSummaryStatusTypeCountInner.openapiRequiredFields.toString()));
         }
       }
 
@@ -175,14 +174,14 @@ public class VulnerabilitiesSummaryStatusTypeCountInner {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!VulnerabilitiesSummaryStatusTypeCountInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VulnerabilitiesSummaryStatusTypeCountInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `VulnerabilitiesSummaryStatusTypeCountInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : VulnerabilitiesSummaryStatusTypeCountInner.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -219,22 +218,22 @@ public class VulnerabilitiesSummaryStatusTypeCountInner {
     }
   }
 
- /**
-  * Create an instance of VulnerabilitiesSummaryStatusTypeCountInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of VulnerabilitiesSummaryStatusTypeCountInner
-  * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesSummaryStatusTypeCountInner
-  */
+  /**
+   * Create an instance of VulnerabilitiesSummaryStatusTypeCountInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of VulnerabilitiesSummaryStatusTypeCountInner
+   * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesSummaryStatusTypeCountInner
+   */
   public static VulnerabilitiesSummaryStatusTypeCountInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, VulnerabilitiesSummaryStatusTypeCountInner.class);
   }
 
- /**
-  * Convert an instance of VulnerabilitiesSummaryStatusTypeCountInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of VulnerabilitiesSummaryStatusTypeCountInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

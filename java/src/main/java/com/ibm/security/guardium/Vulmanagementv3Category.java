@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,97 +41,101 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Category - Main Category Data for Manage Vulnerabilities Filter Panel.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Vulmanagementv3Category {
   public static final String SERIALIZED_NAME_GROUP = "group";
   @SerializedName(SERIALIZED_NAME_GROUP)
+  @javax.annotation.Nullable
   private String group;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_SUB_CATEGORY = "sub_category";
   @SerializedName(SERIALIZED_NAME_SUB_CATEGORY)
+  @javax.annotation.Nullable
   private List<Vulmanagementv3SubCategory> subCategory = new ArrayList<>();
 
   public Vulmanagementv3Category() {
   }
 
-  public Vulmanagementv3Category group(String group) {
+  public Vulmanagementv3Category group(@javax.annotation.Nullable String group) {
     this.group = group;
     return this;
   }
 
-   /**
+  /**
    * Group - Tags.
    * @return group
-  **/
+   */
   @javax.annotation.Nullable
   public String getGroup() {
     return group;
   }
 
-  public void setGroup(String group) {
+  public void setGroup(@javax.annotation.Nullable String group) {
     this.group = group;
   }
 
 
-  public Vulmanagementv3Category id(String id) {
+  public Vulmanagementv3Category id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Category ID.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Vulmanagementv3Category name(String name) {
+  public Vulmanagementv3Category name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Category Name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Vulmanagementv3Category subCategory(List<Vulmanagementv3SubCategory> subCategory) {
+  public Vulmanagementv3Category subCategory(@javax.annotation.Nullable List<Vulmanagementv3SubCategory> subCategory) {
     this.subCategory = subCategory;
     return this;
   }
@@ -143,16 +148,16 @@ public class Vulmanagementv3Category {
     return this;
   }
 
-   /**
+  /**
    * List of sub categories.
    * @return subCategory
-  **/
+   */
   @javax.annotation.Nullable
   public List<Vulmanagementv3SubCategory> getSubCategory() {
     return subCategory;
   }
 
-  public void setSubCategory(List<Vulmanagementv3SubCategory> subCategory) {
+  public void setSubCategory(@javax.annotation.Nullable List<Vulmanagementv3SubCategory> subCategory) {
     this.subCategory = subCategory;
   }
 
@@ -207,26 +212,22 @@ public class Vulmanagementv3Category {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("group");
-    openapiFields.add("id");
-    openapiFields.add("name");
-    openapiFields.add("sub_category");
+    openapiFields = new HashSet<String>(Arrays.asList("group", "id", "name", "sub_category"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Vulmanagementv3Category
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Vulmanagementv3Category
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Vulmanagementv3Category.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Vulmanagementv3Category is not found in the empty JSON string", Vulmanagementv3Category.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Vulmanagementv3Category is not found in the empty JSON string", Vulmanagementv3Category.openapiRequiredFields.toString()));
         }
       }
 
@@ -234,25 +235,25 @@ public class Vulmanagementv3Category {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Vulmanagementv3Category.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Vulmanagementv3Category` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Vulmanagementv3Category` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("group") != null && !jsonObj.get("group").isJsonNull()) && !jsonObj.get("group").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `group` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `group` to be a primitive type in the JSON string but got `%s`", jsonObj.get("group").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if (jsonObj.get("sub_category") != null && !jsonObj.get("sub_category").isJsonNull()) {
         JsonArray jsonArraysubCategory = jsonObj.getAsJsonArray("sub_category");
         if (jsonArraysubCategory != null) {
           // ensure the json data is an array
           if (!jsonObj.get("sub_category").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `sub_category` to be an array in the JSON string but got `%s`", jsonObj.get("sub_category").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sub_category` to be an array in the JSON string but got `%s`", jsonObj.get("sub_category").toString()));
           }
 
           // validate the optional field `sub_category` (array)
@@ -292,22 +293,22 @@ public class Vulmanagementv3Category {
     }
   }
 
- /**
-  * Create an instance of Vulmanagementv3Category given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Vulmanagementv3Category
-  * @throws IOException if the JSON string is invalid with respect to Vulmanagementv3Category
-  */
+  /**
+   * Create an instance of Vulmanagementv3Category given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Vulmanagementv3Category
+   * @throws IOException if the JSON string is invalid with respect to Vulmanagementv3Category
+   */
   public static Vulmanagementv3Category fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Vulmanagementv3Category.class);
   }
 
- /**
-  * Convert an instance of Vulmanagementv3Category to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Vulmanagementv3Category to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

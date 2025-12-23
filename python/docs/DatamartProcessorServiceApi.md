@@ -268,8 +268,6 @@ This endpoint does not need any parameter.
 # **datamart_processor_service_send_all_complete_files_to_queue**
 > Datamartprocessorv3StatusResponseBase datamart_processor_service_send_all_complete_files_to_queue(body)
 
-
-
 ### Example
 
 * Basic Authentication (BasicAuth):

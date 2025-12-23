@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,272 +41,283 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3Header
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3Header {
   public static final String SERIALIZED_NAME_CAN_BE_USED_IN_CHART = "can_be_used_in_chart";
   @SerializedName(SERIALIZED_NAME_CAN_BE_USED_IN_CHART)
+  @javax.annotation.Nullable
   private Boolean canBeUsedInChart;
 
   public static final String SERIALIZED_NAME_FIELD_NAME = "field_name";
   @SerializedName(SERIALIZED_NAME_FIELD_NAME)
+  @javax.annotation.Nullable
   private Reportsv3FieldName fieldName;
 
   public static final String SERIALIZED_NAME_GROUP_TYPE_ID = "group_type_id";
   @SerializedName(SERIALIZED_NAME_GROUP_TYPE_ID)
+  @javax.annotation.Nullable
   private Integer groupTypeId;
 
   public static final String SERIALIZED_NAME_HEADER_CATEGORY = "header_category";
   @SerializedName(SERIALIZED_NAME_HEADER_CATEGORY)
+  @javax.annotation.Nullable
   private String headerCategory;
 
   public static final String SERIALIZED_NAME_HEADER_DESCRIPTION = "header_description";
   @SerializedName(SERIALIZED_NAME_HEADER_DESCRIPTION)
+  @javax.annotation.Nullable
   private Reportsv3HeaderDescription headerDescription;
 
   public static final String SERIALIZED_NAME_HEADER_ID = "header_id";
   @SerializedName(SERIALIZED_NAME_HEADER_ID)
+  @javax.annotation.Nullable
   private String headerId;
 
   public static final String SERIALIZED_NAME_HEADER_NAME = "header_name";
   @SerializedName(SERIALIZED_NAME_HEADER_NAME)
+  @javax.annotation.Nullable
   private String headerName;
 
   public static final String SERIALIZED_NAME_IS_RECOMMENDED = "is_recommended";
   @SerializedName(SERIALIZED_NAME_IS_RECOMMENDED)
+  @javax.annotation.Nullable
   private Boolean isRecommended;
 
   public static final String SERIALIZED_NAME_TABLE_NAME = "table_name";
   @SerializedName(SERIALIZED_NAME_TABLE_NAME)
+  @javax.annotation.Nullable
   private String tableName;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3HeaderType type = Reportsv3HeaderType.UNDEFINED_TYPE;
 
   public static final String SERIALIZED_NAME_TYPE_LENGTH = "type_length";
   @SerializedName(SERIALIZED_NAME_TYPE_LENGTH)
+  @javax.annotation.Nullable
   private Integer typeLength;
 
   public Reportsv3Header() {
   }
 
-  public Reportsv3Header canBeUsedInChart(Boolean canBeUsedInChart) {
+  public Reportsv3Header canBeUsedInChart(@javax.annotation.Nullable Boolean canBeUsedInChart) {
     this.canBeUsedInChart = canBeUsedInChart;
     return this;
   }
 
-   /**
+  /**
    * If the header can be used in charts.
    * @return canBeUsedInChart
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getCanBeUsedInChart() {
     return canBeUsedInChart;
   }
 
-  public void setCanBeUsedInChart(Boolean canBeUsedInChart) {
+  public void setCanBeUsedInChart(@javax.annotation.Nullable Boolean canBeUsedInChart) {
     this.canBeUsedInChart = canBeUsedInChart;
   }
 
 
-  public Reportsv3Header fieldName(Reportsv3FieldName fieldName) {
+  public Reportsv3Header fieldName(@javax.annotation.Nullable Reportsv3FieldName fieldName) {
     this.fieldName = fieldName;
     return this;
   }
 
-   /**
+  /**
    * Get fieldName
    * @return fieldName
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3FieldName getFieldName() {
     return fieldName;
   }
 
-  public void setFieldName(Reportsv3FieldName fieldName) {
+  public void setFieldName(@javax.annotation.Nullable Reportsv3FieldName fieldName) {
     this.fieldName = fieldName;
   }
 
 
-  public Reportsv3Header groupTypeId(Integer groupTypeId) {
+  public Reportsv3Header groupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
     return this;
   }
 
-   /**
+  /**
    * Group type id for the filter.
    * @return groupTypeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupTypeId() {
     return groupTypeId;
   }
 
-  public void setGroupTypeId(Integer groupTypeId) {
+  public void setGroupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
   }
 
 
-  public Reportsv3Header headerCategory(String headerCategory) {
+  public Reportsv3Header headerCategory(@javax.annotation.Nullable String headerCategory) {
     this.headerCategory = headerCategory;
     return this;
   }
 
-   /**
+  /**
    * The category of the header.
    * @return headerCategory
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderCategory() {
     return headerCategory;
   }
 
-  public void setHeaderCategory(String headerCategory) {
+  public void setHeaderCategory(@javax.annotation.Nullable String headerCategory) {
     this.headerCategory = headerCategory;
   }
 
 
-  public Reportsv3Header headerDescription(Reportsv3HeaderDescription headerDescription) {
+  public Reportsv3Header headerDescription(@javax.annotation.Nullable Reportsv3HeaderDescription headerDescription) {
     this.headerDescription = headerDescription;
     return this;
   }
 
-   /**
+  /**
    * Get headerDescription
    * @return headerDescription
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3HeaderDescription getHeaderDescription() {
     return headerDescription;
   }
 
-  public void setHeaderDescription(Reportsv3HeaderDescription headerDescription) {
+  public void setHeaderDescription(@javax.annotation.Nullable Reportsv3HeaderDescription headerDescription) {
     this.headerDescription = headerDescription;
   }
 
 
-  public Reportsv3Header headerId(String headerId) {
+  public Reportsv3Header headerId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
     return this;
   }
 
-   /**
+  /**
    * The header id.
    * @return headerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderId() {
     return headerId;
   }
 
-  public void setHeaderId(String headerId) {
+  public void setHeaderId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
   }
 
 
-  public Reportsv3Header headerName(String headerName) {
+  public Reportsv3Header headerName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
     return this;
   }
 
-   /**
+  /**
    * The header name.
    * @return headerName
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderName() {
     return headerName;
   }
 
-  public void setHeaderName(String headerName) {
+  public void setHeaderName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
   }
 
 
-  public Reportsv3Header isRecommended(Boolean isRecommended) {
+  public Reportsv3Header isRecommended(@javax.annotation.Nullable Boolean isRecommended) {
     this.isRecommended = isRecommended;
     return this;
   }
 
-   /**
+  /**
    * If the header is recommended.
    * @return isRecommended
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsRecommended() {
     return isRecommended;
   }
 
-  public void setIsRecommended(Boolean isRecommended) {
+  public void setIsRecommended(@javax.annotation.Nullable Boolean isRecommended) {
     this.isRecommended = isRecommended;
   }
 
 
-  public Reportsv3Header tableName(String tableName) {
+  public Reportsv3Header tableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
     return this;
   }
 
-   /**
+  /**
    * Table name.
    * @return tableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTableName() {
     return tableName;
   }
 
-  public void setTableName(String tableName) {
+  public void setTableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
   }
 
 
-  public Reportsv3Header type(Reportsv3HeaderType type) {
+  public Reportsv3Header type(@javax.annotation.Nullable Reportsv3HeaderType type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3HeaderType getType() {
     return type;
   }
 
-  public void setType(Reportsv3HeaderType type) {
+  public void setType(@javax.annotation.Nullable Reportsv3HeaderType type) {
     this.type = type;
   }
 
 
-  public Reportsv3Header typeLength(Integer typeLength) {
+  public Reportsv3Header typeLength(@javax.annotation.Nullable Integer typeLength) {
     this.typeLength = typeLength;
     return this;
   }
 
-   /**
+  /**
    * Header type length.
    * @return typeLength
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTypeLength() {
     return typeLength;
   }
 
-  public void setTypeLength(Integer typeLength) {
+  public void setTypeLength(@javax.annotation.Nullable Integer typeLength) {
     this.typeLength = typeLength;
   }
 
@@ -374,33 +386,22 @@ public class Reportsv3Header {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("can_be_used_in_chart");
-    openapiFields.add("field_name");
-    openapiFields.add("group_type_id");
-    openapiFields.add("header_category");
-    openapiFields.add("header_description");
-    openapiFields.add("header_id");
-    openapiFields.add("header_name");
-    openapiFields.add("is_recommended");
-    openapiFields.add("table_name");
-    openapiFields.add("type");
-    openapiFields.add("type_length");
+    openapiFields = new HashSet<String>(Arrays.asList("can_be_used_in_chart", "field_name", "group_type_id", "header_category", "header_description", "header_id", "header_name", "is_recommended", "table_name", "type", "type_length"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3Header
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3Header
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3Header.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3Header is not found in the empty JSON string", Reportsv3Header.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3Header is not found in the empty JSON string", Reportsv3Header.openapiRequiredFields.toString()));
         }
       }
 
@@ -408,7 +409,7 @@ public class Reportsv3Header {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3Header.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3Header` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3Header` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -417,20 +418,20 @@ public class Reportsv3Header {
         Reportsv3FieldName.validateJsonElement(jsonObj.get("field_name"));
       }
       if ((jsonObj.get("header_category") != null && !jsonObj.get("header_category").isJsonNull()) && !jsonObj.get("header_category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_category").toString()));
       }
       // validate the optional field `header_description`
       if (jsonObj.get("header_description") != null && !jsonObj.get("header_description").isJsonNull()) {
         Reportsv3HeaderDescription.validateJsonElement(jsonObj.get("header_description"));
       }
       if ((jsonObj.get("header_id") != null && !jsonObj.get("header_id").isJsonNull()) && !jsonObj.get("header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
       }
       if ((jsonObj.get("header_name") != null && !jsonObj.get("header_name").isJsonNull()) && !jsonObj.get("header_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
       }
       if ((jsonObj.get("table_name") != null && !jsonObj.get("table_name").isJsonNull()) && !jsonObj.get("table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
       }
       // validate the optional field `type`
       if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) {
@@ -467,22 +468,22 @@ public class Reportsv3Header {
     }
   }
 
- /**
-  * Create an instance of Reportsv3Header given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3Header
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3Header
-  */
+  /**
+   * Create an instance of Reportsv3Header given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3Header
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3Header
+   */
   public static Reportsv3Header fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3Header.class);
   }
 
- /**
-  * Convert an instance of Reportsv3Header to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3Header to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

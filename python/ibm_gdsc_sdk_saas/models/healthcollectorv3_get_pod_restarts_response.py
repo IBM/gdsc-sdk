@@ -72,9 +72,9 @@ class Healthcollectorv3GetPodRestartsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in pod_restarts (list)
         _items = []
         if self.pod_restarts:
-            for _item in self.pod_restarts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_pod_restarts in self.pod_restarts:
+                if _item_pod_restarts:
+                    _items.append(_item_pod_restarts.to_dict())
             _dict['pod_restarts'] = _items
         return _dict
 

@@ -88,13 +88,14 @@ public class StreamsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call streamsServiceCheckAWSCredentialsCall(Streamsv3CheckAWSCredentialsRequest streamsv3CheckAWSCredentialsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call streamsServiceCheckAWSCredentialsCall(@javax.annotation.Nonnull Streamsv3CheckAWSCredentialsRequest streamsv3CheckAWSCredentialsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -140,7 +141,7 @@ public class StreamsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call streamsServiceCheckAWSCredentialsValidateBeforeCall(Streamsv3CheckAWSCredentialsRequest streamsv3CheckAWSCredentialsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call streamsServiceCheckAWSCredentialsValidateBeforeCall(@javax.annotation.Nonnull Streamsv3CheckAWSCredentialsRequest streamsv3CheckAWSCredentialsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'streamsv3CheckAWSCredentialsRequest' is set
         if (streamsv3CheckAWSCredentialsRequest == null) {
             throw new ApiException("Missing the required parameter 'streamsv3CheckAWSCredentialsRequest' when calling streamsServiceCheckAWSCredentials(Async)");
@@ -157,13 +158,14 @@ public class StreamsServiceApi {
      * @return Streamsv3CheckAWSCredentialsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Streamsv3CheckAWSCredentialsResponse streamsServiceCheckAWSCredentials(Streamsv3CheckAWSCredentialsRequest streamsv3CheckAWSCredentialsRequest) throws ApiException {
+    public Streamsv3CheckAWSCredentialsResponse streamsServiceCheckAWSCredentials(@javax.annotation.Nonnull Streamsv3CheckAWSCredentialsRequest streamsv3CheckAWSCredentialsRequest) throws ApiException {
         ApiResponse<Streamsv3CheckAWSCredentialsResponse> localVarResp = streamsServiceCheckAWSCredentialsWithHttpInfo(streamsv3CheckAWSCredentialsRequest);
         return localVarResp.getData();
     }
@@ -175,13 +177,14 @@ public class StreamsServiceApi {
      * @return ApiResponse&lt;Streamsv3CheckAWSCredentialsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Streamsv3CheckAWSCredentialsResponse> streamsServiceCheckAWSCredentialsWithHttpInfo(Streamsv3CheckAWSCredentialsRequest streamsv3CheckAWSCredentialsRequest) throws ApiException {
+    public ApiResponse<Streamsv3CheckAWSCredentialsResponse> streamsServiceCheckAWSCredentialsWithHttpInfo(@javax.annotation.Nonnull Streamsv3CheckAWSCredentialsRequest streamsv3CheckAWSCredentialsRequest) throws ApiException {
         okhttp3.Call localVarCall = streamsServiceCheckAWSCredentialsValidateBeforeCall(streamsv3CheckAWSCredentialsRequest, null);
         Type localVarReturnType = new TypeToken<Streamsv3CheckAWSCredentialsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -195,13 +198,14 @@ public class StreamsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call streamsServiceCheckAWSCredentialsAsync(Streamsv3CheckAWSCredentialsRequest streamsv3CheckAWSCredentialsRequest, final ApiCallback<Streamsv3CheckAWSCredentialsResponse> _callback) throws ApiException {
+    public okhttp3.Call streamsServiceCheckAWSCredentialsAsync(@javax.annotation.Nonnull Streamsv3CheckAWSCredentialsRequest streamsv3CheckAWSCredentialsRequest, final ApiCallback<Streamsv3CheckAWSCredentialsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = streamsServiceCheckAWSCredentialsValidateBeforeCall(streamsv3CheckAWSCredentialsRequest, _callback);
         Type localVarReturnType = new TypeToken<Streamsv3CheckAWSCredentialsResponse>(){}.getType();
@@ -215,13 +219,14 @@ public class StreamsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call streamsServiceCheckAzureEventHubCall(Streamsv3CheckAzureEventHubRequest streamsv3CheckAzureEventHubRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call streamsServiceCheckAzureEventHubCall(@javax.annotation.Nonnull Streamsv3CheckAzureEventHubRequest streamsv3CheckAzureEventHubRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -267,7 +272,7 @@ public class StreamsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call streamsServiceCheckAzureEventHubValidateBeforeCall(Streamsv3CheckAzureEventHubRequest streamsv3CheckAzureEventHubRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call streamsServiceCheckAzureEventHubValidateBeforeCall(@javax.annotation.Nonnull Streamsv3CheckAzureEventHubRequest streamsv3CheckAzureEventHubRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'streamsv3CheckAzureEventHubRequest' is set
         if (streamsv3CheckAzureEventHubRequest == null) {
             throw new ApiException("Missing the required parameter 'streamsv3CheckAzureEventHubRequest' when calling streamsServiceCheckAzureEventHub(Async)");
@@ -284,13 +289,14 @@ public class StreamsServiceApi {
      * @return Streamsv3CheckAzureEventHubResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Streamsv3CheckAzureEventHubResponse streamsServiceCheckAzureEventHub(Streamsv3CheckAzureEventHubRequest streamsv3CheckAzureEventHubRequest) throws ApiException {
+    public Streamsv3CheckAzureEventHubResponse streamsServiceCheckAzureEventHub(@javax.annotation.Nonnull Streamsv3CheckAzureEventHubRequest streamsv3CheckAzureEventHubRequest) throws ApiException {
         ApiResponse<Streamsv3CheckAzureEventHubResponse> localVarResp = streamsServiceCheckAzureEventHubWithHttpInfo(streamsv3CheckAzureEventHubRequest);
         return localVarResp.getData();
     }
@@ -302,13 +308,14 @@ public class StreamsServiceApi {
      * @return ApiResponse&lt;Streamsv3CheckAzureEventHubResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Streamsv3CheckAzureEventHubResponse> streamsServiceCheckAzureEventHubWithHttpInfo(Streamsv3CheckAzureEventHubRequest streamsv3CheckAzureEventHubRequest) throws ApiException {
+    public ApiResponse<Streamsv3CheckAzureEventHubResponse> streamsServiceCheckAzureEventHubWithHttpInfo(@javax.annotation.Nonnull Streamsv3CheckAzureEventHubRequest streamsv3CheckAzureEventHubRequest) throws ApiException {
         okhttp3.Call localVarCall = streamsServiceCheckAzureEventHubValidateBeforeCall(streamsv3CheckAzureEventHubRequest, null);
         Type localVarReturnType = new TypeToken<Streamsv3CheckAzureEventHubResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -322,13 +329,14 @@ public class StreamsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call streamsServiceCheckAzureEventHubAsync(Streamsv3CheckAzureEventHubRequest streamsv3CheckAzureEventHubRequest, final ApiCallback<Streamsv3CheckAzureEventHubResponse> _callback) throws ApiException {
+    public okhttp3.Call streamsServiceCheckAzureEventHubAsync(@javax.annotation.Nonnull Streamsv3CheckAzureEventHubRequest streamsv3CheckAzureEventHubRequest, final ApiCallback<Streamsv3CheckAzureEventHubResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = streamsServiceCheckAzureEventHubValidateBeforeCall(streamsv3CheckAzureEventHubRequest, _callback);
         Type localVarReturnType = new TypeToken<Streamsv3CheckAzureEventHubResponse>(){}.getType();
@@ -342,13 +350,14 @@ public class StreamsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call streamsServiceCheckAzureStorageStringCall(Streamsv3CheckAzureStorageStringRequest streamsv3CheckAzureStorageStringRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call streamsServiceCheckAzureStorageStringCall(@javax.annotation.Nonnull Streamsv3CheckAzureStorageStringRequest streamsv3CheckAzureStorageStringRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -394,7 +403,7 @@ public class StreamsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call streamsServiceCheckAzureStorageStringValidateBeforeCall(Streamsv3CheckAzureStorageStringRequest streamsv3CheckAzureStorageStringRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call streamsServiceCheckAzureStorageStringValidateBeforeCall(@javax.annotation.Nonnull Streamsv3CheckAzureStorageStringRequest streamsv3CheckAzureStorageStringRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'streamsv3CheckAzureStorageStringRequest' is set
         if (streamsv3CheckAzureStorageStringRequest == null) {
             throw new ApiException("Missing the required parameter 'streamsv3CheckAzureStorageStringRequest' when calling streamsServiceCheckAzureStorageString(Async)");
@@ -411,13 +420,14 @@ public class StreamsServiceApi {
      * @return Streamsv3CheckAzureStorageStringResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Streamsv3CheckAzureStorageStringResponse streamsServiceCheckAzureStorageString(Streamsv3CheckAzureStorageStringRequest streamsv3CheckAzureStorageStringRequest) throws ApiException {
+    public Streamsv3CheckAzureStorageStringResponse streamsServiceCheckAzureStorageString(@javax.annotation.Nonnull Streamsv3CheckAzureStorageStringRequest streamsv3CheckAzureStorageStringRequest) throws ApiException {
         ApiResponse<Streamsv3CheckAzureStorageStringResponse> localVarResp = streamsServiceCheckAzureStorageStringWithHttpInfo(streamsv3CheckAzureStorageStringRequest);
         return localVarResp.getData();
     }
@@ -429,13 +439,14 @@ public class StreamsServiceApi {
      * @return ApiResponse&lt;Streamsv3CheckAzureStorageStringResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Streamsv3CheckAzureStorageStringResponse> streamsServiceCheckAzureStorageStringWithHttpInfo(Streamsv3CheckAzureStorageStringRequest streamsv3CheckAzureStorageStringRequest) throws ApiException {
+    public ApiResponse<Streamsv3CheckAzureStorageStringResponse> streamsServiceCheckAzureStorageStringWithHttpInfo(@javax.annotation.Nonnull Streamsv3CheckAzureStorageStringRequest streamsv3CheckAzureStorageStringRequest) throws ApiException {
         okhttp3.Call localVarCall = streamsServiceCheckAzureStorageStringValidateBeforeCall(streamsv3CheckAzureStorageStringRequest, null);
         Type localVarReturnType = new TypeToken<Streamsv3CheckAzureStorageStringResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -449,13 +460,14 @@ public class StreamsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call streamsServiceCheckAzureStorageStringAsync(Streamsv3CheckAzureStorageStringRequest streamsv3CheckAzureStorageStringRequest, final ApiCallback<Streamsv3CheckAzureStorageStringResponse> _callback) throws ApiException {
+    public okhttp3.Call streamsServiceCheckAzureStorageStringAsync(@javax.annotation.Nonnull Streamsv3CheckAzureStorageStringRequest streamsv3CheckAzureStorageStringRequest, final ApiCallback<Streamsv3CheckAzureStorageStringResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = streamsServiceCheckAzureStorageStringValidateBeforeCall(streamsv3CheckAzureStorageStringRequest, _callback);
         Type localVarReturnType = new TypeToken<Streamsv3CheckAzureStorageStringResponse>(){}.getType();
@@ -468,7 +480,8 @@ public class StreamsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -530,7 +543,8 @@ public class StreamsServiceApi {
      * @return Streamsv3GetAWSRegionsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -547,7 +561,8 @@ public class StreamsServiceApi {
      * @return ApiResponse&lt;Streamsv3GetAWSRegionsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -566,7 +581,8 @@ public class StreamsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -586,13 +602,14 @@ public class StreamsServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call streamsServiceListAWSStreamsCall(Streamsv3ListAWSStreamsRequest streamsv3ListAWSStreamsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call streamsServiceListAWSStreamsCall(@javax.annotation.Nonnull Streamsv3ListAWSStreamsRequest streamsv3ListAWSStreamsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -638,7 +655,7 @@ public class StreamsServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call streamsServiceListAWSStreamsValidateBeforeCall(Streamsv3ListAWSStreamsRequest streamsv3ListAWSStreamsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call streamsServiceListAWSStreamsValidateBeforeCall(@javax.annotation.Nonnull Streamsv3ListAWSStreamsRequest streamsv3ListAWSStreamsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'streamsv3ListAWSStreamsRequest' is set
         if (streamsv3ListAWSStreamsRequest == null) {
             throw new ApiException("Missing the required parameter 'streamsv3ListAWSStreamsRequest' when calling streamsServiceListAWSStreams(Async)");
@@ -655,13 +672,14 @@ public class StreamsServiceApi {
      * @return Streamsv3ListAWSStreamsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Streamsv3ListAWSStreamsResponse streamsServiceListAWSStreams(Streamsv3ListAWSStreamsRequest streamsv3ListAWSStreamsRequest) throws ApiException {
+    public Streamsv3ListAWSStreamsResponse streamsServiceListAWSStreams(@javax.annotation.Nonnull Streamsv3ListAWSStreamsRequest streamsv3ListAWSStreamsRequest) throws ApiException {
         ApiResponse<Streamsv3ListAWSStreamsResponse> localVarResp = streamsServiceListAWSStreamsWithHttpInfo(streamsv3ListAWSStreamsRequest);
         return localVarResp.getData();
     }
@@ -673,13 +691,14 @@ public class StreamsServiceApi {
      * @return ApiResponse&lt;Streamsv3ListAWSStreamsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Streamsv3ListAWSStreamsResponse> streamsServiceListAWSStreamsWithHttpInfo(Streamsv3ListAWSStreamsRequest streamsv3ListAWSStreamsRequest) throws ApiException {
+    public ApiResponse<Streamsv3ListAWSStreamsResponse> streamsServiceListAWSStreamsWithHttpInfo(@javax.annotation.Nonnull Streamsv3ListAWSStreamsRequest streamsv3ListAWSStreamsRequest) throws ApiException {
         okhttp3.Call localVarCall = streamsServiceListAWSStreamsValidateBeforeCall(streamsv3ListAWSStreamsRequest, null);
         Type localVarReturnType = new TypeToken<Streamsv3ListAWSStreamsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -693,13 +712,14 @@ public class StreamsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call streamsServiceListAWSStreamsAsync(Streamsv3ListAWSStreamsRequest streamsv3ListAWSStreamsRequest, final ApiCallback<Streamsv3ListAWSStreamsResponse> _callback) throws ApiException {
+    public okhttp3.Call streamsServiceListAWSStreamsAsync(@javax.annotation.Nonnull Streamsv3ListAWSStreamsRequest streamsv3ListAWSStreamsRequest, final ApiCallback<Streamsv3ListAWSStreamsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = streamsServiceListAWSStreamsValidateBeforeCall(streamsv3ListAWSStreamsRequest, _callback);
         Type localVarReturnType = new TypeToken<Streamsv3ListAWSStreamsResponse>(){}.getType();

@@ -32,14 +32,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserCreateAPIKeyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserCreateAPIKeyRequest = {
-  // Tenantuserv3CreateApiKeyRequest
+const request: TenantuserApiTenantuserCreateAPIKeyRequest = {
+  
   tenantuserv3CreateApiKeyRequest: {
     name: "name_example",
     roles: [
@@ -48,9 +48,8 @@ let body:.TenantuserApiTenantuserCreateAPIKeyRequest = {
   },
 };
 
-apiInstance.tenantuserCreateAPIKey(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserCreateAPIKey(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -91,20 +90,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserDeleteAPIKeyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserDeleteAPIKeyRequest = {
-  // string | Apikey id.
+const request: TenantuserApiTenantuserDeleteAPIKeyRequest = {
+    // Apikey id.
   id: "id_example",
 };
 
-apiInstance.tenantuserDeleteAPIKey(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserDeleteAPIKey(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -145,20 +143,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserDeleteRoleRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserDeleteRoleRequest = {
-  // string | ID or role deleted.
+const request: TenantuserApiTenantuserDeleteRoleRequest = {
+    // ID or role deleted.
   roleId: "role_id_example",
 };
 
-apiInstance.tenantuserDeleteRole(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserDeleteRole(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -199,17 +196,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.tenantuserGetAPIKeys(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetAPIKeys(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -247,17 +242,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.tenantuserGetCurrentUser(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetCurrentUser(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -295,22 +288,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetPrivilegeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetPrivilegeRequest = {
-  // string | Privilege ID.
+const request: TenantuserApiTenantuserGetPrivilegeRequest = {
+    // Privilege ID.
   privilegePrivilegeId: "privilege.privilege_id_example",
-  // string | Privilege Type - a report, group, and datasource may have the same ID. By passing type, the artifact can be uniquely determined. (optional)
+    // Privilege Type - a report, group, and datasource may have the same ID. By passing type, the artifact can be uniquely determined. (optional)
   privilegeType: "privilege.type_example",
 };
 
-apiInstance.tenantuserGetPrivilege(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetPrivilege(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -352,24 +344,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetPrivilegesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetPrivilegesRequest = {
-  // Array<string> | If empty, will return all privileges. (optional)
+const request: TenantuserApiTenantuserGetPrivilegesRequest = {
+    // If empty, will return all privileges. (optional)
   roles: [
     "roles_example",
   ],
-  // string | Type of privilege to return: group, page, permission, report, restapi, etc. (optional)
+    // Type of privilege to return: group, page, permission, report, restapi, etc. (optional)
   type: "type_example",
 };
 
-apiInstance.tenantuserGetPrivileges(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetPrivileges(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -411,20 +402,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetRoleRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetRoleRequest = {
-  // string | ID of role to be returned.
+const request: TenantuserApiTenantuserGetRoleRequest = {
+    // ID of role to be returned.
   roleId: "role_id_example",
 };
 
-apiInstance.tenantuserGetRole(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetRole(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -465,17 +455,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.tenantuserGetRoles(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetRoles(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -513,20 +501,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetUserRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetUserRequest = {
-  // string | User id defaults to the current user or specify \"current\" or an actual user id.
+const request: TenantuserApiTenantuserGetUserRequest = {
+    // User id defaults to the current user or specify \"current\" or an actual user id.
   userId: "user_id_example",
 };
 
-apiInstance.tenantuserGetUser(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetUser(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -567,14 +554,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetUserNamesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetUserNamesRequest = {
-  // Tenantuserv3GetUserNamesRequest
+const request: TenantuserApiTenantuserGetUserNamesRequest = {
+  
   tenantuserv3GetUserNamesRequest: {
     userIds: [
       "userIds_example",
@@ -582,9 +569,8 @@ let body:.TenantuserApiTenantuserGetUserNamesRequest = {
   },
 };
 
-apiInstance.tenantuserGetUserNames(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetUserNames(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -625,20 +611,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetUserTenantRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetUserTenantRequest = {
-  // string | User id defaults to the current user or specify \"current\" or an actual user id.
+const request: TenantuserApiTenantuserGetUserTenantRequest = {
+    // User id defaults to the current user or specify \"current\" or an actual user id.
   userId: "user_id_example",
 };
 
-apiInstance.tenantuserGetUserTenant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetUserTenant(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -679,14 +664,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserPostPrivilegesBulkRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserPostPrivilegesBulkRequest = {
-  // Tenantuserv3PostPrivilegesBulkRequest
+const request: TenantuserApiTenantuserPostPrivilegesBulkRequest = {
+  
   tenantuserv3PostPrivilegesBulkRequest: {
     privileges: [
       {
@@ -710,9 +695,8 @@ let body:.TenantuserApiTenantuserPostPrivilegesBulkRequest = {
   },
 };
 
-apiInstance.tenantuserPostPrivilegesBulk(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserPostPrivilegesBulk(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -753,14 +737,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserPostRoleRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserPostRoleRequest = {
-  // Tenantuserv3PostRoleRequest
+const request: TenantuserApiTenantuserPostRoleRequest = {
+  
   tenantuserv3PostRoleRequest: {
     role: {
       description: "description_example",
@@ -774,9 +758,8 @@ let body:.TenantuserApiTenantuserPostRoleRequest = {
   },
 };
 
-apiInstance.tenantuserPostRole(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserPostRole(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -817,16 +800,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserUpdatePrivilegeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserUpdatePrivilegeRequest = {
-  // string | Permanent id of the privilege to be updated or created.
+const request: TenantuserApiTenantuserUpdatePrivilegeRequest = {
+    // Permanent id of the privilege to be updated or created.
   privilegeId: "privilege_id_example",
-  // Tenantuserv3UpdatePrivilegeRequest
+  
   tenantuserv3UpdatePrivilegeRequest: {
     manageRoles: [
       "manageRoles_example",
@@ -841,9 +824,8 @@ let body:.TenantuserApiTenantuserUpdatePrivilegeRequest = {
   },
 };
 
-apiInstance.tenantuserUpdatePrivilege(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserUpdatePrivilege(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -885,14 +867,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest = {
-  // Tenantuserv3UpdatePrivilegesBulkRequest
+const request: TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest = {
+  
   tenantuserv3UpdatePrivilegesBulkRequest: {
     privilege: [
       {
@@ -907,9 +889,8 @@ let body:.TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest = {
   },
 };
 
-apiInstance.tenantuserUpdatePrivilegesRoleBulk(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserUpdatePrivilegesRoleBulk(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -950,16 +931,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserUpdateRoleRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserUpdateRoleRequest = {
-  // string | Permanent id of the role.
+const request: TenantuserApiTenantuserUpdateRoleRequest = {
+    // Permanent id of the role.
   roleId: "role_id_example",
-  // Tenantuserv3UpdateRoleRequest
+  
   tenantuserv3UpdateRoleRequest: {
     description: "description_example",
     icpRoles: [
@@ -971,9 +952,8 @@ let body:.TenantuserApiTenantuserUpdateRoleRequest = {
   },
 };
 
-apiInstance.tenantuserUpdateRole(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserUpdateRole(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1015,14 +995,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserUpdateUserRoleBulkRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserUpdateUserRoleBulkRequest = {
-  // Tenantuserv3UpdateUserRoleBulkRequest
+const request: TenantuserApiTenantuserUpdateUserRoleBulkRequest = {
+  
   tenantuserv3UpdateUserRoleBulkRequest: {
     assignRoleId: [
       "assignRoleId_example",
@@ -1036,9 +1016,8 @@ let body:.TenantuserApiTenantuserUpdateUserRoleBulkRequest = {
   },
 };
 
-apiInstance.tenantuserUpdateUserRoleBulk(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserUpdateUserRoleBulk(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

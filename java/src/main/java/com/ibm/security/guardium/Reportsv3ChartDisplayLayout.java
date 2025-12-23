@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,40 +41,44 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ChartDisplayLayout has Chart matadata , rows and headers.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3ChartDisplayLayout {
   public static final String SERIALIZED_NAME_CHART_HEADERS = "chart_headers";
   @SerializedName(SERIALIZED_NAME_CHART_HEADERS)
+  @javax.annotation.Nullable
   private List<Reportsv3DisplayHeader> chartHeaders = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CHART_ID = "chart_id";
   @SerializedName(SERIALIZED_NAME_CHART_ID)
+  @javax.annotation.Nullable
   private String chartId;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public static final String SERIALIZED_NAME_RESULTS_LIMIT = "results_limit";
   @SerializedName(SERIALIZED_NAME_RESULTS_LIMIT)
+  @javax.annotation.Nullable
   private Integer resultsLimit;
 
   public Reportsv3ChartDisplayLayout() {
   }
 
-  public Reportsv3ChartDisplayLayout chartHeaders(List<Reportsv3DisplayHeader> chartHeaders) {
+  public Reportsv3ChartDisplayLayout chartHeaders(@javax.annotation.Nullable List<Reportsv3DisplayHeader> chartHeaders) {
     this.chartHeaders = chartHeaders;
     return this;
   }
@@ -86,73 +91,73 @@ public class Reportsv3ChartDisplayLayout {
     return this;
   }
 
-   /**
+  /**
    * The Chart headers.
    * @return chartHeaders
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3DisplayHeader> getChartHeaders() {
     return chartHeaders;
   }
 
-  public void setChartHeaders(List<Reportsv3DisplayHeader> chartHeaders) {
+  public void setChartHeaders(@javax.annotation.Nullable List<Reportsv3DisplayHeader> chartHeaders) {
     this.chartHeaders = chartHeaders;
   }
 
 
-  public Reportsv3ChartDisplayLayout chartId(String chartId) {
+  public Reportsv3ChartDisplayLayout chartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
     return this;
   }
 
-   /**
+  /**
    * The chart ID.
    * @return chartId
-  **/
+   */
   @javax.annotation.Nullable
   public String getChartId() {
     return chartId;
   }
 
-  public void setChartId(String chartId) {
+  public void setChartId(@javax.annotation.Nullable String chartId) {
     this.chartId = chartId;
   }
 
 
-  public Reportsv3ChartDisplayLayout reportId(String reportId) {
+  public Reportsv3ChartDisplayLayout reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * The report ID.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
 
-  public Reportsv3ChartDisplayLayout resultsLimit(Integer resultsLimit) {
+  public Reportsv3ChartDisplayLayout resultsLimit(@javax.annotation.Nullable Integer resultsLimit) {
     this.resultsLimit = resultsLimit;
     return this;
   }
 
-   /**
+  /**
    * Chart data results limit.
    * @return resultsLimit
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getResultsLimit() {
     return resultsLimit;
   }
 
-  public void setResultsLimit(Integer resultsLimit) {
+  public void setResultsLimit(@javax.annotation.Nullable Integer resultsLimit) {
     this.resultsLimit = resultsLimit;
   }
 
@@ -207,26 +212,22 @@ public class Reportsv3ChartDisplayLayout {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("chart_headers");
-    openapiFields.add("chart_id");
-    openapiFields.add("report_id");
-    openapiFields.add("results_limit");
+    openapiFields = new HashSet<String>(Arrays.asList("chart_headers", "chart_id", "report_id", "results_limit"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3ChartDisplayLayout
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3ChartDisplayLayout
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3ChartDisplayLayout.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3ChartDisplayLayout is not found in the empty JSON string", Reportsv3ChartDisplayLayout.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3ChartDisplayLayout is not found in the empty JSON string", Reportsv3ChartDisplayLayout.openapiRequiredFields.toString()));
         }
       }
 
@@ -234,7 +235,7 @@ public class Reportsv3ChartDisplayLayout {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3ChartDisplayLayout.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3ChartDisplayLayout` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3ChartDisplayLayout` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -243,7 +244,7 @@ public class Reportsv3ChartDisplayLayout {
         if (jsonArraychartHeaders != null) {
           // ensure the json data is an array
           if (!jsonObj.get("chart_headers").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `chart_headers` to be an array in the JSON string but got `%s`", jsonObj.get("chart_headers").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `chart_headers` to be an array in the JSON string but got `%s`", jsonObj.get("chart_headers").toString()));
           }
 
           // validate the optional field `chart_headers` (array)
@@ -253,10 +254,10 @@ public class Reportsv3ChartDisplayLayout {
         }
       }
       if ((jsonObj.get("chart_id") != null && !jsonObj.get("chart_id").isJsonNull()) && !jsonObj.get("chart_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `chart_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("chart_id").toString()));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
   }
 
@@ -289,22 +290,22 @@ public class Reportsv3ChartDisplayLayout {
     }
   }
 
- /**
-  * Create an instance of Reportsv3ChartDisplayLayout given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3ChartDisplayLayout
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3ChartDisplayLayout
-  */
+  /**
+   * Create an instance of Reportsv3ChartDisplayLayout given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3ChartDisplayLayout
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3ChartDisplayLayout
+   */
   public static Reportsv3ChartDisplayLayout fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3ChartDisplayLayout.class);
   }
 
- /**
-  * Convert an instance of Reportsv3ChartDisplayLayout to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3ChartDisplayLayout to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

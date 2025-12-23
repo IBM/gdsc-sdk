@@ -34,7 +34,7 @@ class Schedulerv3ScheduledJobSummary(BaseModel):
     description: Optional[StrictStr] = Field(default=None, description="Optional: Description for the scheduledJob.")
     enabled: Optional[StrictBool] = Field(default=None, description="Enabled or disable the schedule.")
     expired: Optional[StrictBool] = Field(default=None, description="Optional: If this schedule is expired or continues forever.")
-    frequency: Optional[Schedulerv3Frequency] = None
+    frequency: Optional[Schedulerv3Frequency] = Schedulerv3Frequency.UNDEFINED_FREQUENCY
     last_modified_time: Optional[datetime] = Field(default=None, description="Optional: Timestamp for the last time the scheduled job was modified.")
     last_run_duration: Optional[StrictInt] = Field(default=None, description="Optional: Duration of the previous run.")
     last_run_start: Optional[datetime] = Field(default=None, description="Optional: Timestamp for the previous run.")
@@ -93,16 +93,16 @@ class Schedulerv3ScheduledJobSummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in recipients (list)
         _items = []
         if self.recipients:
-            for _item in self.recipients:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_recipients in self.recipients:
+                if _item_recipients:
+                    _items.append(_item_recipients.to_dict())
             _dict['recipients'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in tasks (list)
         _items = []
         if self.tasks:
-            for _item in self.tasks:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_tasks in self.tasks:
+                if _item_tasks:
+                    _items.append(_item_tasks.to_dict())
             _dict['tasks'] = _items
         return _dict
 
@@ -120,7 +120,7 @@ class Schedulerv3ScheduledJobSummary(BaseModel):
             "description": obj.get("description"),
             "enabled": obj.get("enabled"),
             "expired": obj.get("expired"),
-            "frequency": obj.get("frequency"),
+            "frequency": obj.get("frequency") if obj.get("frequency") is not None else Schedulerv3Frequency.UNDEFINED_FREQUENCY,
             "last_modified_time": obj.get("last_modified_time"),
             "last_run_duration": obj.get("last_run_duration"),
             "last_run_start": obj.get("last_run_start"),

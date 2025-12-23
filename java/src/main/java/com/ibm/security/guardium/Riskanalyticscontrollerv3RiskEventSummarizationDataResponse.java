@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,55 +43,58 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RiskEventSummarizationDataResponse message for the GetRiskEventDataForSummarization api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3RiskEventSummarizationDataResponse {
   public static final String SERIALIZED_NAME_FORMER_HOURS = "former_hours";
   @SerializedName(SERIALIZED_NAME_FORMER_HOURS)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3RiskEventFormerHours formerHours;
 
   public static final String SERIALIZED_NAME_HOURLY_FINDINGS = "hourly_findings";
   @SerializedName(SERIALIZED_NAME_HOURLY_FINDINGS)
+  @javax.annotation.Nullable
   private List<Riskanalyticscontrollerv3RiskEventHourlyFindings> hourlyFindings = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RISK_EVENT = "risk_event";
   @SerializedName(SERIALIZED_NAME_RISK_EVENT)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3RiskEvent riskEvent;
 
   public Riskanalyticscontrollerv3RiskEventSummarizationDataResponse() {
   }
 
-  public Riskanalyticscontrollerv3RiskEventSummarizationDataResponse formerHours(Riskanalyticscontrollerv3RiskEventFormerHours formerHours) {
+  public Riskanalyticscontrollerv3RiskEventSummarizationDataResponse formerHours(@javax.annotation.Nullable Riskanalyticscontrollerv3RiskEventFormerHours formerHours) {
     this.formerHours = formerHours;
     return this;
   }
 
-   /**
+  /**
    * Get formerHours
    * @return formerHours
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3RiskEventFormerHours getFormerHours() {
     return formerHours;
   }
 
-  public void setFormerHours(Riskanalyticscontrollerv3RiskEventFormerHours formerHours) {
+  public void setFormerHours(@javax.annotation.Nullable Riskanalyticscontrollerv3RiskEventFormerHours formerHours) {
     this.formerHours = formerHours;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEventSummarizationDataResponse hourlyFindings(List<Riskanalyticscontrollerv3RiskEventHourlyFindings> hourlyFindings) {
+  public Riskanalyticscontrollerv3RiskEventSummarizationDataResponse hourlyFindings(@javax.annotation.Nullable List<Riskanalyticscontrollerv3RiskEventHourlyFindings> hourlyFindings) {
     this.hourlyFindings = hourlyFindings;
     return this;
   }
@@ -103,35 +107,35 @@ public class Riskanalyticscontrollerv3RiskEventSummarizationDataResponse {
     return this;
   }
 
-   /**
+  /**
    * Get hourlyFindings
    * @return hourlyFindings
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticscontrollerv3RiskEventHourlyFindings> getHourlyFindings() {
     return hourlyFindings;
   }
 
-  public void setHourlyFindings(List<Riskanalyticscontrollerv3RiskEventHourlyFindings> hourlyFindings) {
+  public void setHourlyFindings(@javax.annotation.Nullable List<Riskanalyticscontrollerv3RiskEventHourlyFindings> hourlyFindings) {
     this.hourlyFindings = hourlyFindings;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEventSummarizationDataResponse riskEvent(Riskanalyticscontrollerv3RiskEvent riskEvent) {
+  public Riskanalyticscontrollerv3RiskEventSummarizationDataResponse riskEvent(@javax.annotation.Nullable Riskanalyticscontrollerv3RiskEvent riskEvent) {
     this.riskEvent = riskEvent;
     return this;
   }
 
-   /**
+  /**
    * Get riskEvent
    * @return riskEvent
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3RiskEvent getRiskEvent() {
     return riskEvent;
   }
 
-  public void setRiskEvent(Riskanalyticscontrollerv3RiskEvent riskEvent) {
+  public void setRiskEvent(@javax.annotation.Nullable Riskanalyticscontrollerv3RiskEvent riskEvent) {
     this.riskEvent = riskEvent;
   }
 
@@ -184,25 +188,22 @@ public class Riskanalyticscontrollerv3RiskEventSummarizationDataResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("former_hours");
-    openapiFields.add("hourly_findings");
-    openapiFields.add("risk_event");
+    openapiFields = new HashSet<String>(Arrays.asList("former_hours", "hourly_findings", "risk_event"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3RiskEventSummarizationDataResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3RiskEventSummarizationDataResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3RiskEventSummarizationDataResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3RiskEventSummarizationDataResponse is not found in the empty JSON string", Riskanalyticscontrollerv3RiskEventSummarizationDataResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3RiskEventSummarizationDataResponse is not found in the empty JSON string", Riskanalyticscontrollerv3RiskEventSummarizationDataResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -210,7 +211,7 @@ public class Riskanalyticscontrollerv3RiskEventSummarizationDataResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3RiskEventSummarizationDataResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3RiskEventSummarizationDataResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3RiskEventSummarizationDataResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -223,7 +224,7 @@ public class Riskanalyticscontrollerv3RiskEventSummarizationDataResponse {
         if (jsonArrayhourlyFindings != null) {
           // ensure the json data is an array
           if (!jsonObj.get("hourly_findings").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `hourly_findings` to be an array in the JSON string but got `%s`", jsonObj.get("hourly_findings").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `hourly_findings` to be an array in the JSON string but got `%s`", jsonObj.get("hourly_findings").toString()));
           }
 
           // validate the optional field `hourly_findings` (array)
@@ -267,22 +268,22 @@ public class Riskanalyticscontrollerv3RiskEventSummarizationDataResponse {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3RiskEventSummarizationDataResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3RiskEventSummarizationDataResponse
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3RiskEventSummarizationDataResponse
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3RiskEventSummarizationDataResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3RiskEventSummarizationDataResponse
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3RiskEventSummarizationDataResponse
+   */
   public static Riskanalyticscontrollerv3RiskEventSummarizationDataResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3RiskEventSummarizationDataResponse.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3RiskEventSummarizationDataResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3RiskEventSummarizationDataResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

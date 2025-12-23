@@ -2,10 +2,13 @@
 
 Action - of the process.
 
-## Properties
+## Enum
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+* `UNDEFINED_ACTION_TYPE` (value: `'UNDEFINED_ACTION_TYPE'`)
+
+* `ENABLE` (value: `'ENABLE'`)
+
+* `DISABLE` (value: `'DISABLE'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

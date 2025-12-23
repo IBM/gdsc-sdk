@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetSSODetails200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class GetSSODetails200Response {
   public static final String SERIALIZED_NAME_AUTHORIZATION_ENDPOINT = "authorizationEndpoint";
   @SerializedName(SERIALIZED_NAME_AUTHORIZATION_ENDPOINT)
+  @javax.annotation.Nullable
   private String authorizationEndpoint;
 
   public GetSSODetails200Response() {
   }
 
-  public GetSSODetails200Response authorizationEndpoint(String authorizationEndpoint) {
+  public GetSSODetails200Response authorizationEndpoint(@javax.annotation.Nullable String authorizationEndpoint) {
     this.authorizationEndpoint = authorizationEndpoint;
     return this;
   }
 
-   /**
+  /**
    * Get authorizationEndpoint
    * @return authorizationEndpoint
-  **/
+   */
   @javax.annotation.Nullable
   public String getAuthorizationEndpoint() {
     return authorizationEndpoint;
   }
 
-  public void setAuthorizationEndpoint(String authorizationEndpoint) {
+  public void setAuthorizationEndpoint(@javax.annotation.Nullable String authorizationEndpoint) {
     this.authorizationEndpoint = authorizationEndpoint;
   }
 
@@ -121,23 +123,22 @@ public class GetSSODetails200Response {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("authorizationEndpoint");
+    openapiFields = new HashSet<String>(Arrays.asList("authorizationEndpoint"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GetSSODetails200Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetSSODetails200Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!GetSSODetails200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in GetSSODetails200Response is not found in the empty JSON string", GetSSODetails200Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in GetSSODetails200Response is not found in the empty JSON string", GetSSODetails200Response.openapiRequiredFields.toString()));
         }
       }
 
@@ -145,12 +146,12 @@ public class GetSSODetails200Response {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!GetSSODetails200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetSSODetails200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `GetSSODetails200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("authorizationEndpoint") != null && !jsonObj.get("authorizationEndpoint").isJsonNull()) && !jsonObj.get("authorizationEndpoint").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `authorizationEndpoint` to be a primitive type in the JSON string but got `%s`", jsonObj.get("authorizationEndpoint").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `authorizationEndpoint` to be a primitive type in the JSON string but got `%s`", jsonObj.get("authorizationEndpoint").toString()));
       }
   }
 
@@ -183,22 +184,22 @@ public class GetSSODetails200Response {
     }
   }
 
- /**
-  * Create an instance of GetSSODetails200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetSSODetails200Response
-  * @throws IOException if the JSON string is invalid with respect to GetSSODetails200Response
-  */
+  /**
+   * Create an instance of GetSSODetails200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetSSODetails200Response
+   * @throws IOException if the JSON string is invalid with respect to GetSSODetails200Response
+   */
   public static GetSSODetails200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetSSODetails200Response.class);
   }
 
- /**
-  * Convert an instance of GetSSODetails200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetSSODetails200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

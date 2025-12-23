@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * IdpMetadataContent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class IdpMetadataContent {
   public static final String SERIALIZED_NAME_IDP_METADATA_CONTENT = "idpMetadataContent";
   @SerializedName(SERIALIZED_NAME_IDP_METADATA_CONTENT)
+  @javax.annotation.Nonnull
   private String idpMetadataContent;
 
   public IdpMetadataContent() {
   }
 
-  public IdpMetadataContent idpMetadataContent(String idpMetadataContent) {
+  public IdpMetadataContent idpMetadataContent(@javax.annotation.Nonnull String idpMetadataContent) {
     this.idpMetadataContent = idpMetadataContent;
     return this;
   }
 
-   /**
+  /**
    * Get idpMetadataContent
    * @return idpMetadataContent
-  **/
+   */
   @javax.annotation.Nonnull
   public String getIdpMetadataContent() {
     return idpMetadataContent;
   }
 
-  public void setIdpMetadataContent(String idpMetadataContent) {
+  public void setIdpMetadataContent(@javax.annotation.Nonnull String idpMetadataContent) {
     this.idpMetadataContent = idpMetadataContent;
   }
 
@@ -121,24 +123,22 @@ public class IdpMetadataContent {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("idpMetadataContent");
+    openapiFields = new HashSet<String>(Arrays.asList("idpMetadataContent"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("idpMetadataContent");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("idpMetadataContent"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to IdpMetadataContent
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to IdpMetadataContent
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!IdpMetadataContent.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in IdpMetadataContent is not found in the empty JSON string", IdpMetadataContent.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in IdpMetadataContent is not found in the empty JSON string", IdpMetadataContent.openapiRequiredFields.toString()));
         }
       }
 
@@ -146,19 +146,19 @@ public class IdpMetadataContent {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!IdpMetadataContent.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `IdpMetadataContent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `IdpMetadataContent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : IdpMetadataContent.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("idpMetadataContent").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `idpMetadataContent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("idpMetadataContent").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `idpMetadataContent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("idpMetadataContent").toString()));
       }
   }
 
@@ -191,22 +191,22 @@ public class IdpMetadataContent {
     }
   }
 
- /**
-  * Create an instance of IdpMetadataContent given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of IdpMetadataContent
-  * @throws IOException if the JSON string is invalid with respect to IdpMetadataContent
-  */
+  /**
+   * Create an instance of IdpMetadataContent given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of IdpMetadataContent
+   * @throws IOException if the JSON string is invalid with respect to IdpMetadataContent
+   */
   public static IdpMetadataContent fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, IdpMetadataContent.class);
   }
 
- /**
-  * Convert an instance of IdpMetadataContent to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of IdpMetadataContent to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

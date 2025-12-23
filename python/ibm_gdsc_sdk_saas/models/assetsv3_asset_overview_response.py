@@ -104,9 +104,9 @@ class Assetsv3AssetOverviewResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in asset_endpoints (list)
         _items = []
         if self.asset_endpoints:
-            for _item in self.asset_endpoints:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_asset_endpoints in self.asset_endpoints:
+                if _item_asset_endpoints:
+                    _items.append(_item_asset_endpoints.to_dict())
             _dict['asset_endpoints'] = _items
         # override the default output from pydantic by calling `to_dict()` of asset_information
         if self.asset_information:
@@ -120,16 +120,16 @@ class Assetsv3AssetOverviewResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in asset_subscriptions (list)
         _items = []
         if self.asset_subscriptions:
-            for _item in self.asset_subscriptions:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_asset_subscriptions in self.asset_subscriptions:
+                if _item_asset_subscriptions:
+                    _items.append(_item_asset_subscriptions.to_dict())
             _dict['asset_subscriptions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in asset_tags (list)
         _items = []
         if self.asset_tags:
-            for _item in self.asset_tags:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_asset_tags in self.asset_tags:
+                if _item_asset_tags:
+                    _items.append(_item_asset_tags.to_dict())
             _dict['asset_tags'] = _items
         # override the default output from pydantic by calling `to_dict()` of asset_va
         if self.asset_va:
@@ -137,30 +137,30 @@ class Assetsv3AssetOverviewResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in extended_properties (list)
         _items = []
         if self.extended_properties:
-            for _item in self.extended_properties:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extended_properties in self.extended_properties:
+                if _item_extended_properties:
+                    _items.append(_item_extended_properties.to_dict())
             _dict['extended_properties'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in model_application (list)
         _items = []
         if self.model_application:
-            for _item in self.model_application:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_model_application in self.model_application:
+                if _item_model_application:
+                    _items.append(_item_model_application.to_dict())
             _dict['model_application'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in model_data (list)
         _items = []
         if self.model_data:
-            for _item in self.model_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_model_data in self.model_data:
+                if _item_model_data:
+                    _items.append(_item_model_data.to_dict())
             _dict['model_data'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in overview_parameters (list)
         _items = []
         if self.overview_parameters:
-            for _item in self.overview_parameters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_overview_parameters in self.overview_parameters:
+                if _item_overview_parameters:
+                    _items.append(_item_overview_parameters.to_dict())
             _dict['overview_parameters'] = _items
         return _dict
 

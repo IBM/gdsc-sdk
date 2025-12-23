@@ -29,12 +29,12 @@ class Streamsv3ListAWSStreamsRequest(BaseModel):
     ListAWSStreamsRequest defines a request to list AWS Kinesis streams.
     """ # noqa: E501
     access_key_id: Optional[StrictStr] = Field(default=None, description="AWS access key ID.")
-    auth_type: Optional[Streamsv3AuthType] = None
+    auth_type: Optional[Streamsv3AuthType] = Streamsv3AuthType.SECURITY_CREDENTIALS
     id: Optional[StrictStr] = Field(default=None, description="Identifier.")
     region: Optional[List[StrictStr]] = Field(default=None, description="AWS region.")
     role_arn: Optional[StrictStr] = Field(default=None, description="IAM role ARN.")
     secret_key_id: Optional[StrictStr] = Field(default=None, description="AWS secret key ID.")
-    stream_type: Optional[Streamsv3StreamType] = None
+    stream_type: Optional[Streamsv3StreamType] = Streamsv3StreamType.AWS_KINESIS
     __properties: ClassVar[List[str]] = ["access_key_id", "auth_type", "id", "region", "role_arn", "secret_key_id", "stream_type"]
 
     model_config = ConfigDict(
@@ -89,12 +89,12 @@ class Streamsv3ListAWSStreamsRequest(BaseModel):
 
         _obj = cls.model_validate({
             "access_key_id": obj.get("access_key_id"),
-            "auth_type": obj.get("auth_type"),
+            "auth_type": obj.get("auth_type") if obj.get("auth_type") is not None else Streamsv3AuthType.SECURITY_CREDENTIALS,
             "id": obj.get("id"),
             "region": obj.get("region"),
             "role_arn": obj.get("role_arn"),
             "secret_key_id": obj.get("secret_key_id"),
-            "stream_type": obj.get("stream_type")
+            "stream_type": obj.get("stream_type") if obj.get("stream_type") is not None else Streamsv3StreamType.AWS_KINESIS
         })
         return _obj
 

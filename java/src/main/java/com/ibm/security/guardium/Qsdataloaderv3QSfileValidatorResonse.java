@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qsdataloaderv3QSfileValidatorResonse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qsdataloaderv3QSfileValidatorResonse {
   public static final String SERIALIZED_NAME_ALL_FILE_VALID = "all_file_valid";
   @SerializedName(SERIALIZED_NAME_ALL_FILE_VALID)
+  @javax.annotation.Nullable
   private Boolean allFileValid;
 
   public static final String SERIALIZED_NAME_APPLICATION_FILE_NAME_MESSAGE = "application_file_name_message";
   @SerializedName(SERIALIZED_NAME_APPLICATION_FILE_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String applicationFileNameMessage;
 
   public static final String SERIALIZED_NAME_EXPLORER_FILE_NAME_MESSAGE = "explorer_file_name_message";
   @SerializedName(SERIALIZED_NAME_EXPLORER_FILE_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String explorerFileNameMessage;
 
   public static final String SERIALIZED_NAME_NETWORK_FILE_NAME_MESSAGE = "network_file_name_message";
   @SerializedName(SERIALIZED_NAME_NETWORK_FILE_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String networkFileNameMessage;
 
   public static final String SERIALIZED_NAME_POLICY_FILE_NAME_MESSAGE = "policy_file_name_message";
   @SerializedName(SERIALIZED_NAME_POLICY_FILE_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String policyFileNameMessage;
 
   public Qsdataloaderv3QSfileValidatorResonse() {
   }
 
-  public Qsdataloaderv3QSfileValidatorResonse allFileValid(Boolean allFileValid) {
+  public Qsdataloaderv3QSfileValidatorResonse allFileValid(@javax.annotation.Nullable Boolean allFileValid) {
     this.allFileValid = allFileValid;
     return this;
   }
 
-   /**
+  /**
    * Get allFileValid
    * @return allFileValid
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getAllFileValid() {
     return allFileValid;
   }
 
-  public void setAllFileValid(Boolean allFileValid) {
+  public void setAllFileValid(@javax.annotation.Nullable Boolean allFileValid) {
     this.allFileValid = allFileValid;
   }
 
 
-  public Qsdataloaderv3QSfileValidatorResonse applicationFileNameMessage(String applicationFileNameMessage) {
+  public Qsdataloaderv3QSfileValidatorResonse applicationFileNameMessage(@javax.annotation.Nullable String applicationFileNameMessage) {
     this.applicationFileNameMessage = applicationFileNameMessage;
     return this;
   }
 
-   /**
+  /**
    * Get applicationFileNameMessage
    * @return applicationFileNameMessage
-  **/
+   */
   @javax.annotation.Nullable
   public String getApplicationFileNameMessage() {
     return applicationFileNameMessage;
   }
 
-  public void setApplicationFileNameMessage(String applicationFileNameMessage) {
+  public void setApplicationFileNameMessage(@javax.annotation.Nullable String applicationFileNameMessage) {
     this.applicationFileNameMessage = applicationFileNameMessage;
   }
 
 
-  public Qsdataloaderv3QSfileValidatorResonse explorerFileNameMessage(String explorerFileNameMessage) {
+  public Qsdataloaderv3QSfileValidatorResonse explorerFileNameMessage(@javax.annotation.Nullable String explorerFileNameMessage) {
     this.explorerFileNameMessage = explorerFileNameMessage;
     return this;
   }
 
-   /**
+  /**
    * Get explorerFileNameMessage
    * @return explorerFileNameMessage
-  **/
+   */
   @javax.annotation.Nullable
   public String getExplorerFileNameMessage() {
     return explorerFileNameMessage;
   }
 
-  public void setExplorerFileNameMessage(String explorerFileNameMessage) {
+  public void setExplorerFileNameMessage(@javax.annotation.Nullable String explorerFileNameMessage) {
     this.explorerFileNameMessage = explorerFileNameMessage;
   }
 
 
-  public Qsdataloaderv3QSfileValidatorResonse networkFileNameMessage(String networkFileNameMessage) {
+  public Qsdataloaderv3QSfileValidatorResonse networkFileNameMessage(@javax.annotation.Nullable String networkFileNameMessage) {
     this.networkFileNameMessage = networkFileNameMessage;
     return this;
   }
 
-   /**
+  /**
    * Get networkFileNameMessage
    * @return networkFileNameMessage
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetworkFileNameMessage() {
     return networkFileNameMessage;
   }
 
-  public void setNetworkFileNameMessage(String networkFileNameMessage) {
+  public void setNetworkFileNameMessage(@javax.annotation.Nullable String networkFileNameMessage) {
     this.networkFileNameMessage = networkFileNameMessage;
   }
 
 
-  public Qsdataloaderv3QSfileValidatorResonse policyFileNameMessage(String policyFileNameMessage) {
+  public Qsdataloaderv3QSfileValidatorResonse policyFileNameMessage(@javax.annotation.Nullable String policyFileNameMessage) {
     this.policyFileNameMessage = policyFileNameMessage;
     return this;
   }
 
-   /**
+  /**
    * Get policyFileNameMessage
    * @return policyFileNameMessage
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyFileNameMessage() {
     return policyFileNameMessage;
   }
 
-  public void setPolicyFileNameMessage(String policyFileNameMessage) {
+  public void setPolicyFileNameMessage(@javax.annotation.Nullable String policyFileNameMessage) {
     this.policyFileNameMessage = policyFileNameMessage;
   }
 
@@ -221,27 +227,22 @@ public class Qsdataloaderv3QSfileValidatorResonse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("all_file_valid");
-    openapiFields.add("application_file_name_message");
-    openapiFields.add("explorer_file_name_message");
-    openapiFields.add("network_file_name_message");
-    openapiFields.add("policy_file_name_message");
+    openapiFields = new HashSet<String>(Arrays.asList("all_file_valid", "application_file_name_message", "explorer_file_name_message", "network_file_name_message", "policy_file_name_message"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qsdataloaderv3QSfileValidatorResonse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qsdataloaderv3QSfileValidatorResonse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qsdataloaderv3QSfileValidatorResonse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qsdataloaderv3QSfileValidatorResonse is not found in the empty JSON string", Qsdataloaderv3QSfileValidatorResonse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qsdataloaderv3QSfileValidatorResonse is not found in the empty JSON string", Qsdataloaderv3QSfileValidatorResonse.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,21 +250,21 @@ public class Qsdataloaderv3QSfileValidatorResonse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qsdataloaderv3QSfileValidatorResonse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qsdataloaderv3QSfileValidatorResonse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qsdataloaderv3QSfileValidatorResonse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("application_file_name_message") != null && !jsonObj.get("application_file_name_message").isJsonNull()) && !jsonObj.get("application_file_name_message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `application_file_name_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_file_name_message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_file_name_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_file_name_message").toString()));
       }
       if ((jsonObj.get("explorer_file_name_message") != null && !jsonObj.get("explorer_file_name_message").isJsonNull()) && !jsonObj.get("explorer_file_name_message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `explorer_file_name_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("explorer_file_name_message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `explorer_file_name_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("explorer_file_name_message").toString()));
       }
       if ((jsonObj.get("network_file_name_message") != null && !jsonObj.get("network_file_name_message").isJsonNull()) && !jsonObj.get("network_file_name_message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `network_file_name_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("network_file_name_message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `network_file_name_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("network_file_name_message").toString()));
       }
       if ((jsonObj.get("policy_file_name_message") != null && !jsonObj.get("policy_file_name_message").isJsonNull()) && !jsonObj.get("policy_file_name_message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_file_name_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_file_name_message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_file_name_message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_file_name_message").toString()));
       }
   }
 
@@ -296,22 +297,22 @@ public class Qsdataloaderv3QSfileValidatorResonse {
     }
   }
 
- /**
-  * Create an instance of Qsdataloaderv3QSfileValidatorResonse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qsdataloaderv3QSfileValidatorResonse
-  * @throws IOException if the JSON string is invalid with respect to Qsdataloaderv3QSfileValidatorResonse
-  */
+  /**
+   * Create an instance of Qsdataloaderv3QSfileValidatorResonse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qsdataloaderv3QSfileValidatorResonse
+   * @throws IOException if the JSON string is invalid with respect to Qsdataloaderv3QSfileValidatorResonse
+   */
   public static Qsdataloaderv3QSfileValidatorResonse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qsdataloaderv3QSfileValidatorResonse.class);
   }
 
- /**
-  * Convert an instance of Qsdataloaderv3QSfileValidatorResonse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qsdataloaderv3QSfileValidatorResonse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

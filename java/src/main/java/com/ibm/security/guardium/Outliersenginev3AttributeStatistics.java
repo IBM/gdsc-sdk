@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Outliersenginev3AttributeStatistics
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Outliersenginev3AttributeStatistics {
   public static final String SERIALIZED_NAME_ATTRIBUTE = "attribute";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTE)
+  @javax.annotation.Nullable
   private String attribute;
 
   public static final String SERIALIZED_NAME_HOURLY_AVERAGE_ACTIVITY = "hourly_average_activity";
   @SerializedName(SERIALIZED_NAME_HOURLY_AVERAGE_ACTIVITY)
+  @javax.annotation.Nullable
   private Double hourlyAverageActivity;
 
   public static final String SERIALIZED_NAME_SEEN_SINCE = "seen_since";
   @SerializedName(SERIALIZED_NAME_SEEN_SINCE)
+  @javax.annotation.Nullable
   private OffsetDateTime seenSince;
 
   public Outliersenginev3AttributeStatistics() {
   }
 
-  public Outliersenginev3AttributeStatistics attribute(String attribute) {
+  public Outliersenginev3AttributeStatistics attribute(@javax.annotation.Nullable String attribute) {
     this.attribute = attribute;
     return this;
   }
 
-   /**
+  /**
    * attribute - the actual verb/ source program/ working hours etc.
    * @return attribute
-  **/
+   */
   @javax.annotation.Nullable
   public String getAttribute() {
     return attribute;
   }
 
-  public void setAttribute(String attribute) {
+  public void setAttribute(@javax.annotation.Nullable String attribute) {
     this.attribute = attribute;
   }
 
 
-  public Outliersenginev3AttributeStatistics hourlyAverageActivity(Double hourlyAverageActivity) {
+  public Outliersenginev3AttributeStatistics hourlyAverageActivity(@javax.annotation.Nullable Double hourlyAverageActivity) {
     this.hourlyAverageActivity = hourlyAverageActivity;
     return this;
   }
 
-   /**
+  /**
    * Get hourlyAverageActivity
    * @return hourlyAverageActivity
-  **/
+   */
   @javax.annotation.Nullable
   public Double getHourlyAverageActivity() {
     return hourlyAverageActivity;
   }
 
-  public void setHourlyAverageActivity(Double hourlyAverageActivity) {
+  public void setHourlyAverageActivity(@javax.annotation.Nullable Double hourlyAverageActivity) {
     this.hourlyAverageActivity = hourlyAverageActivity;
   }
 
 
-  public Outliersenginev3AttributeStatistics seenSince(OffsetDateTime seenSince) {
+  public Outliersenginev3AttributeStatistics seenSince(@javax.annotation.Nullable OffsetDateTime seenSince) {
     this.seenSince = seenSince;
     return this;
   }
 
-   /**
+  /**
    * Get seenSince
    * @return seenSince
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getSeenSince() {
     return seenSince;
   }
 
-  public void setSeenSince(OffsetDateTime seenSince) {
+  public void setSeenSince(@javax.annotation.Nullable OffsetDateTime seenSince) {
     this.seenSince = seenSince;
   }
 
@@ -172,25 +176,22 @@ public class Outliersenginev3AttributeStatistics {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("attribute");
-    openapiFields.add("hourly_average_activity");
-    openapiFields.add("seen_since");
+    openapiFields = new HashSet<String>(Arrays.asList("attribute", "hourly_average_activity", "seen_since"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3AttributeStatistics
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Outliersenginev3AttributeStatistics
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Outliersenginev3AttributeStatistics.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Outliersenginev3AttributeStatistics is not found in the empty JSON string", Outliersenginev3AttributeStatistics.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Outliersenginev3AttributeStatistics is not found in the empty JSON string", Outliersenginev3AttributeStatistics.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,12 +199,12 @@ public class Outliersenginev3AttributeStatistics {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Outliersenginev3AttributeStatistics.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Outliersenginev3AttributeStatistics` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Outliersenginev3AttributeStatistics` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("attribute") != null && !jsonObj.get("attribute").isJsonNull()) && !jsonObj.get("attribute").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `attribute` to be a primitive type in the JSON string but got `%s`", jsonObj.get("attribute").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `attribute` to be a primitive type in the JSON string but got `%s`", jsonObj.get("attribute").toString()));
       }
   }
 
@@ -236,22 +237,22 @@ public class Outliersenginev3AttributeStatistics {
     }
   }
 
- /**
-  * Create an instance of Outliersenginev3AttributeStatistics given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Outliersenginev3AttributeStatistics
-  * @throws IOException if the JSON string is invalid with respect to Outliersenginev3AttributeStatistics
-  */
+  /**
+   * Create an instance of Outliersenginev3AttributeStatistics given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Outliersenginev3AttributeStatistics
+   * @throws IOException if the JSON string is invalid with respect to Outliersenginev3AttributeStatistics
+   */
   public static Outliersenginev3AttributeStatistics fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Outliersenginev3AttributeStatistics.class);
   }
 
- /**
-  * Convert an instance of Outliersenginev3AttributeStatistics to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Outliersenginev3AttributeStatistics to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

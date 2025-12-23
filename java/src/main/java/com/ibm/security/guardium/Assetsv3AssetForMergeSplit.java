@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,74 +40,77 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Asset from Asset Inventory selected for merge or split.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3AssetForMergeSplit {
   public static final String SERIALIZED_NAME_ASSET_ID = "asset_id";
   @SerializedName(SERIALIZED_NAME_ASSET_ID)
+  @javax.annotation.Nullable
   private String assetId;
 
   public static final String SERIALIZED_NAME_ASSET_NAME = "asset_name";
   @SerializedName(SERIALIZED_NAME_ASSET_NAME)
+  @javax.annotation.Nullable
   private String assetName;
 
   public static final String SERIALIZED_NAME_DSDEF_KEY = "dsdef_key";
   @SerializedName(SERIALIZED_NAME_DSDEF_KEY)
+  @javax.annotation.Nullable
   private List<String> dsdefKey = new ArrayList<>();
 
   public Assetsv3AssetForMergeSplit() {
   }
 
-  public Assetsv3AssetForMergeSplit assetId(String assetId) {
+  public Assetsv3AssetForMergeSplit assetId(@javax.annotation.Nullable String assetId) {
     this.assetId = assetId;
     return this;
   }
 
-   /**
+  /**
    * Get assetId
    * @return assetId
-  **/
+   */
   @javax.annotation.Nullable
   public String getAssetId() {
     return assetId;
   }
 
-  public void setAssetId(String assetId) {
+  public void setAssetId(@javax.annotation.Nullable String assetId) {
     this.assetId = assetId;
   }
 
 
-  public Assetsv3AssetForMergeSplit assetName(String assetName) {
+  public Assetsv3AssetForMergeSplit assetName(@javax.annotation.Nullable String assetName) {
     this.assetName = assetName;
     return this;
   }
 
-   /**
+  /**
    * Get assetName
    * @return assetName
-  **/
+   */
   @javax.annotation.Nullable
   public String getAssetName() {
     return assetName;
   }
 
-  public void setAssetName(String assetName) {
+  public void setAssetName(@javax.annotation.Nullable String assetName) {
     this.assetName = assetName;
   }
 
 
-  public Assetsv3AssetForMergeSplit dsdefKey(List<String> dsdefKey) {
+  public Assetsv3AssetForMergeSplit dsdefKey(@javax.annotation.Nullable List<String> dsdefKey) {
     this.dsdefKey = dsdefKey;
     return this;
   }
@@ -119,16 +123,16 @@ public class Assetsv3AssetForMergeSplit {
     return this;
   }
 
-   /**
+  /**
    * Get dsdefKey
    * @return dsdefKey
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDsdefKey() {
     return dsdefKey;
   }
 
-  public void setDsdefKey(List<String> dsdefKey) {
+  public void setDsdefKey(@javax.annotation.Nullable List<String> dsdefKey) {
     this.dsdefKey = dsdefKey;
   }
 
@@ -181,25 +185,22 @@ public class Assetsv3AssetForMergeSplit {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("asset_id");
-    openapiFields.add("asset_name");
-    openapiFields.add("dsdef_key");
+    openapiFields = new HashSet<String>(Arrays.asList("asset_id", "asset_name", "dsdef_key"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetForMergeSplit
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3AssetForMergeSplit
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3AssetForMergeSplit.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3AssetForMergeSplit is not found in the empty JSON string", Assetsv3AssetForMergeSplit.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3AssetForMergeSplit is not found in the empty JSON string", Assetsv3AssetForMergeSplit.openapiRequiredFields.toString()));
         }
       }
 
@@ -207,19 +208,19 @@ public class Assetsv3AssetForMergeSplit {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3AssetForMergeSplit.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3AssetForMergeSplit` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3AssetForMergeSplit` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("asset_id") != null && !jsonObj.get("asset_id").isJsonNull()) && !jsonObj.get("asset_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `asset_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_id").toString()));
       }
       if ((jsonObj.get("asset_name") != null && !jsonObj.get("asset_name").isJsonNull()) && !jsonObj.get("asset_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `asset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_name").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("dsdef_key") != null && !jsonObj.get("dsdef_key").isJsonNull() && !jsonObj.get("dsdef_key").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dsdef_key` to be an array in the JSON string but got `%s`", jsonObj.get("dsdef_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dsdef_key` to be an array in the JSON string but got `%s`", jsonObj.get("dsdef_key").toString()));
       }
   }
 
@@ -252,22 +253,22 @@ public class Assetsv3AssetForMergeSplit {
     }
   }
 
- /**
-  * Create an instance of Assetsv3AssetForMergeSplit given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3AssetForMergeSplit
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetForMergeSplit
-  */
+  /**
+   * Create an instance of Assetsv3AssetForMergeSplit given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3AssetForMergeSplit
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3AssetForMergeSplit
+   */
   public static Assetsv3AssetForMergeSplit fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3AssetForMergeSplit.class);
   }
 
- /**
-  * Convert an instance of Assetsv3AssetForMergeSplit to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3AssetForMergeSplit to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

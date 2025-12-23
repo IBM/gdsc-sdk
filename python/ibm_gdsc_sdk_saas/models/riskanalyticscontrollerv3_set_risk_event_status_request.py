@@ -29,7 +29,7 @@ class Riskanalyticscontrollerv3SetRiskEventStatusRequest(BaseModel):
     """ # noqa: E501
     justification: Optional[StrictStr] = Field(default=None, description="Justification.")
     risk_ids: Optional[List[StrictInt]] = Field(default=None, description="One or more risk id. This API can be called for multiple risks.")
-    status: Optional[Riskanalyticscontrollerv3Status] = None
+    status: Optional[Riskanalyticscontrollerv3Status] = Riskanalyticscontrollerv3Status.UNDEFINED_STATUS
     __properties: ClassVar[List[str]] = ["justification", "risk_ids", "status"]
 
     model_config = ConfigDict(
@@ -85,7 +85,7 @@ class Riskanalyticscontrollerv3SetRiskEventStatusRequest(BaseModel):
         _obj = cls.model_validate({
             "justification": obj.get("justification"),
             "risk_ids": obj.get("risk_ids"),
-            "status": obj.get("status")
+            "status": obj.get("status") if obj.get("status") is not None else Riskanalyticscontrollerv3Status.UNDEFINED_STATUS
         })
         return _obj
 

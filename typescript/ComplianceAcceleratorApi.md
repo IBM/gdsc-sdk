@@ -19,14 +19,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ComplianceAcceleratorApi } from '';
+import type { ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ComplianceAcceleratorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ComplianceAcceleratorApi(configuration);
 
-let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = {
-  // Complianceacceleratorv3CreateWorkspaceRequest
+const request: ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = {
+  
   complianceacceleratorv3CreateWorkspaceRequest: {
     complianceInfo: {
       options: {
@@ -424,9 +424,8 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
   },
 };
 
-apiInstance.complianceAcceleratorCreateWorkspace(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.complianceAcceleratorCreateWorkspace(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -467,24 +466,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ComplianceAcceleratorApi } from '';
+import type { ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWorkspacesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ComplianceAcceleratorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ComplianceAcceleratorApi(configuration);
 
-let body:.ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWorkspacesRequest = {
-  // Array<string> | Id to be deleted. (optional)
+const request: ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWorkspacesRequest = {
+    // Id to be deleted. (optional)
   regulations: [
     "regulations_example",
   ],
-  // boolean | if you want to delete a whole configuration. (optional)
+    // if you want to delete a whole configuration. (optional)
   deleteAll: true,
 };
 
-apiInstance.complianceAcceleratorDeleteComplianceWorkspaces(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.complianceAcceleratorDeleteComplianceWorkspaces(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -526,20 +524,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ComplianceAcceleratorApi } from '';
+import type { ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ComplianceAcceleratorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ComplianceAcceleratorApi(configuration);
 
-let body:.ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest = {
-  // boolean | gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. (optional)
+const request: ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest = {
+    // gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. (optional)
   isBrief: true,
 };
 
-apiInstance.complianceAcceleratorGetComplianceInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.complianceAcceleratorGetComplianceInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -580,22 +577,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ComplianceAcceleratorApi } from '';
+import type { ComplianceAcceleratorApiComplianceAcceleratorHydrateWorkspaceRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ComplianceAcceleratorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ComplianceAcceleratorApi(configuration);
 
-let body:.ComplianceAcceleratorApiComplianceAcceleratorHydrateWorkspaceRequest = {
-  // Complianceacceleratorv3HydrateComplianceWorkspacesRequest
+const request: ComplianceAcceleratorApiComplianceAcceleratorHydrateWorkspaceRequest = {
+  
   complianceacceleratorv3HydrateComplianceWorkspacesRequest: {
     complianceId: "complianceId_example",
   },
 };
 
-apiInstance.complianceAcceleratorHydrateWorkspace(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.complianceAcceleratorHydrateWorkspace(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -636,14 +632,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ComplianceAcceleratorApi } from '';
+import type { ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ComplianceAcceleratorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ComplianceAcceleratorApi(configuration);
 
-let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoRequest = {
-  // Complianceacceleratorv3StoreComplianceInfoRequest
+const request: ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoRequest = {
+  
   complianceacceleratorv3StoreComplianceInfoRequest: {
     complianceInfo: {
       options: {
@@ -1041,9 +1037,8 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
   },
 };
 
-apiInstance.complianceAcceleratorStoreComplianceInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.complianceAcceleratorStoreComplianceInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

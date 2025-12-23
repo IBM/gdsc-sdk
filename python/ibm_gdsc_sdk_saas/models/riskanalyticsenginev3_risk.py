@@ -41,7 +41,7 @@ class Riskanalyticsenginev3Risk(BaseModel):
     leads: Optional[List[Riskanalyticsenginev3Lead]] = Field(default=None, description="The risk leads.")
     pivot: Optional[Riskanalyticsenginev3Pivot] = None
     score: Optional[StrictInt] = Field(default=None, description="The risk score.")
-    severity_level: Optional[Riskanalyticsenginev3SeverityLevel] = None
+    severity_level: Optional[Riskanalyticsenginev3SeverityLevel] = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL
     start_time: Optional[datetime] = Field(default=None, description="The leads start time in format YYYY-MM-DDTHH:mm:ss.sssZ.")
     __properties: ClassVar[List[str]] = ["classification_details", "creation_time", "end_time", "feature_sets", "id", "is_emerging", "leads", "pivot", "score", "severity_level", "start_time"]
 
@@ -90,16 +90,16 @@ class Riskanalyticsenginev3Risk(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in feature_sets (list)
         _items = []
         if self.feature_sets:
-            for _item in self.feature_sets:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_feature_sets in self.feature_sets:
+                if _item_feature_sets:
+                    _items.append(_item_feature_sets.to_dict())
             _dict['feature_sets'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in leads (list)
         _items = []
         if self.leads:
-            for _item in self.leads:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_leads in self.leads:
+                if _item_leads:
+                    _items.append(_item_leads.to_dict())
             _dict['leads'] = _items
         # override the default output from pydantic by calling `to_dict()` of pivot
         if self.pivot:
@@ -125,7 +125,7 @@ class Riskanalyticsenginev3Risk(BaseModel):
             "leads": [Riskanalyticsenginev3Lead.from_dict(_item) for _item in obj["leads"]] if obj.get("leads") is not None else None,
             "pivot": Riskanalyticsenginev3Pivot.from_dict(obj["pivot"]) if obj.get("pivot") is not None else None,
             "score": obj.get("score"),
-            "severity_level": obj.get("severity_level"),
+            "severity_level": obj.get("severity_level") if obj.get("severity_level") is not None else Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL,
             "start_time": obj.get("start_time")
         })
         return _obj

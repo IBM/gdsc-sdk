@@ -74,9 +74,9 @@ class Guardiumconnectorv3TaskDefinition(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in task_params (list)
         _items = []
         if self.task_params:
-            for _item in self.task_params:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_task_params in self.task_params:
+                if _item_task_params:
+                    _items.append(_item_task_params.to_dict())
             _dict['task_params'] = _items
         return _dict
 

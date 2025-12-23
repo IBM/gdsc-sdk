@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,456 +39,475 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Structure for AWS/Azure Connection.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3StreamConnection {
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "account_id";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  @javax.annotation.Nullable
   private String accountId;
 
   public static final String SERIALIZED_NAME_ACCOUNT_NAME = "account_name";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_NAME)
+  @javax.annotation.Nullable
   private String accountName;
 
   public static final String SERIALIZED_NAME_CLUSTER_RESOURCE_ID = "cluster_resource_id";
   @SerializedName(SERIALIZED_NAME_CLUSTER_RESOURCE_ID)
+  @javax.annotation.Nullable
   private String clusterResourceId;
 
   public static final String SERIALIZED_NAME_CONSUMER_GROUP_NAME = "consumer_group_name";
   @SerializedName(SERIALIZED_NAME_CONSUMER_GROUP_NAME)
+  @javax.annotation.Nullable
   private String consumerGroupName;
 
   public static final String SERIALIZED_NAME_DB_DNS_ENDPOINT = "db_dns_endpoint";
   @SerializedName(SERIALIZED_NAME_DB_DNS_ENDPOINT)
+  @javax.annotation.Nullable
   private String dbDnsEndpoint;
 
   public static final String SERIALIZED_NAME_DB_NAME = "db_name";
   @SerializedName(SERIALIZED_NAME_DB_NAME)
+  @javax.annotation.Nullable
   private String dbName;
 
   public static final String SERIALIZED_NAME_DB_TYPE = "db_type";
   @SerializedName(SERIALIZED_NAME_DB_TYPE)
+  @javax.annotation.Nullable
   private String dbType;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_NAMESPACE = "namespace";
   @SerializedName(SERIALIZED_NAME_NAMESPACE)
+  @javax.annotation.Nullable
   private String namespace;
 
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
+  @javax.annotation.Nullable
   private String password;
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
+  @javax.annotation.Nullable
   private String port;
 
   public static final String SERIALIZED_NAME_PROVIDER = "provider";
   @SerializedName(SERIALIZED_NAME_PROVIDER)
+  @javax.annotation.Nullable
   private String provider;
 
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
+  @javax.annotation.Nullable
   private String region;
 
   public static final String SERIALIZED_NAME_START_MONITOR = "start_monitor";
   @SerializedName(SERIALIZED_NAME_START_MONITOR)
+  @javax.annotation.Nullable
   private String startMonitor;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Connectionsv3Status status = Connectionsv3Status.UNDEFINED_STATUS;
 
   public static final String SERIALIZED_NAME_STATUS_TEXT = "status_text";
   @SerializedName(SERIALIZED_NAME_STATUS_TEXT)
+  @javax.annotation.Nullable
   private String statusText;
 
   public static final String SERIALIZED_NAME_STATUS_TIMESTAMP = "status_timestamp";
   @SerializedName(SERIALIZED_NAME_STATUS_TIMESTAMP)
+  @javax.annotation.Nullable
   private String statusTimestamp;
 
   public static final String SERIALIZED_NAME_STORAGE_CONNECTION_STRING = "storage_connection_string";
   @SerializedName(SERIALIZED_NAME_STORAGE_CONNECTION_STRING)
+  @javax.annotation.Nullable
   private String storageConnectionString;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
+  @javax.annotation.Nullable
   private String username;
 
   public Connectionsv3StreamConnection() {
   }
 
-  public Connectionsv3StreamConnection accountId(String accountId) {
+  public Connectionsv3StreamConnection accountId(@javax.annotation.Nullable String accountId) {
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * Account id.
    * @return accountId
-  **/
+   */
   @javax.annotation.Nullable
   public String getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(String accountId) {
+  public void setAccountId(@javax.annotation.Nullable String accountId) {
     this.accountId = accountId;
   }
 
 
-  public Connectionsv3StreamConnection accountName(String accountName) {
+  public Connectionsv3StreamConnection accountName(@javax.annotation.Nullable String accountName) {
     this.accountName = accountName;
     return this;
   }
 
-   /**
+  /**
    * Account name.
    * @return accountName
-  **/
+   */
   @javax.annotation.Nullable
   public String getAccountName() {
     return accountName;
   }
 
-  public void setAccountName(String accountName) {
+  public void setAccountName(@javax.annotation.Nullable String accountName) {
     this.accountName = accountName;
   }
 
 
-  public Connectionsv3StreamConnection clusterResourceId(String clusterResourceId) {
+  public Connectionsv3StreamConnection clusterResourceId(@javax.annotation.Nullable String clusterResourceId) {
     this.clusterResourceId = clusterResourceId;
     return this;
   }
 
-   /**
+  /**
    * Cluster resource ID.
    * @return clusterResourceId
-  **/
+   */
   @javax.annotation.Nullable
   public String getClusterResourceId() {
     return clusterResourceId;
   }
 
-  public void setClusterResourceId(String clusterResourceId) {
+  public void setClusterResourceId(@javax.annotation.Nullable String clusterResourceId) {
     this.clusterResourceId = clusterResourceId;
   }
 
 
-  public Connectionsv3StreamConnection consumerGroupName(String consumerGroupName) {
+  public Connectionsv3StreamConnection consumerGroupName(@javax.annotation.Nullable String consumerGroupName) {
     this.consumerGroupName = consumerGroupName;
     return this;
   }
 
-   /**
+  /**
    * Consumer group name.
    * @return consumerGroupName
-  **/
+   */
   @javax.annotation.Nullable
   public String getConsumerGroupName() {
     return consumerGroupName;
   }
 
-  public void setConsumerGroupName(String consumerGroupName) {
+  public void setConsumerGroupName(@javax.annotation.Nullable String consumerGroupName) {
     this.consumerGroupName = consumerGroupName;
   }
 
 
-  public Connectionsv3StreamConnection dbDnsEndpoint(String dbDnsEndpoint) {
+  public Connectionsv3StreamConnection dbDnsEndpoint(@javax.annotation.Nullable String dbDnsEndpoint) {
     this.dbDnsEndpoint = dbDnsEndpoint;
     return this;
   }
 
-   /**
+  /**
    * Database DNS endpoint OR Database host.
    * @return dbDnsEndpoint
-  **/
+   */
   @javax.annotation.Nullable
   public String getDbDnsEndpoint() {
     return dbDnsEndpoint;
   }
 
-  public void setDbDnsEndpoint(String dbDnsEndpoint) {
+  public void setDbDnsEndpoint(@javax.annotation.Nullable String dbDnsEndpoint) {
     this.dbDnsEndpoint = dbDnsEndpoint;
   }
 
 
-  public Connectionsv3StreamConnection dbName(String dbName) {
+  public Connectionsv3StreamConnection dbName(@javax.annotation.Nullable String dbName) {
     this.dbName = dbName;
     return this;
   }
 
-   /**
+  /**
    * Database name.
    * @return dbName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDbName() {
     return dbName;
   }
 
-  public void setDbName(String dbName) {
+  public void setDbName(@javax.annotation.Nullable String dbName) {
     this.dbName = dbName;
   }
 
 
-  public Connectionsv3StreamConnection dbType(String dbType) {
+  public Connectionsv3StreamConnection dbType(@javax.annotation.Nullable String dbType) {
     this.dbType = dbType;
     return this;
   }
 
-   /**
+  /**
    * Database type.
    * @return dbType
-  **/
+   */
   @javax.annotation.Nullable
   public String getDbType() {
     return dbType;
   }
 
-  public void setDbType(String dbType) {
+  public void setDbType(@javax.annotation.Nullable String dbType) {
     this.dbType = dbType;
   }
 
 
-  public Connectionsv3StreamConnection name(String name) {
+  public Connectionsv3StreamConnection name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Event Hub name || Stream name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Connectionsv3StreamConnection namespace(String namespace) {
+  public Connectionsv3StreamConnection namespace(@javax.annotation.Nullable String namespace) {
     this.namespace = namespace;
     return this;
   }
 
-   /**
+  /**
    * Optional: Namespace provided if the connection type is Azure.
    * @return namespace
-  **/
+   */
   @javax.annotation.Nullable
   public String getNamespace() {
     return namespace;
   }
 
-  public void setNamespace(String namespace) {
+  public void setNamespace(@javax.annotation.Nullable String namespace) {
     this.namespace = namespace;
   }
 
 
-  public Connectionsv3StreamConnection password(String password) {
+  public Connectionsv3StreamConnection password(@javax.annotation.Nullable String password) {
     this.password = password;
     return this;
   }
 
-   /**
+  /**
    * Database credential password.
    * @return password
-  **/
+   */
   @javax.annotation.Nullable
   public String getPassword() {
     return password;
   }
 
-  public void setPassword(String password) {
+  public void setPassword(@javax.annotation.Nullable String password) {
     this.password = password;
   }
 
 
-  public Connectionsv3StreamConnection port(String port) {
+  public Connectionsv3StreamConnection port(@javax.annotation.Nullable String port) {
     this.port = port;
     return this;
   }
 
-   /**
+  /**
    * Port.
    * @return port
-  **/
+   */
   @javax.annotation.Nullable
   public String getPort() {
     return port;
   }
 
-  public void setPort(String port) {
+  public void setPort(@javax.annotation.Nullable String port) {
     this.port = port;
   }
 
 
-  public Connectionsv3StreamConnection provider(String provider) {
+  public Connectionsv3StreamConnection provider(@javax.annotation.Nullable String provider) {
     this.provider = provider;
     return this;
   }
 
-   /**
+  /**
    * Optional: the provider provided if the connection type is Azure.
    * @return provider
-  **/
+   */
   @javax.annotation.Nullable
   public String getProvider() {
     return provider;
   }
 
-  public void setProvider(String provider) {
+  public void setProvider(@javax.annotation.Nullable String provider) {
     this.provider = provider;
   }
 
 
-  public Connectionsv3StreamConnection region(String region) {
+  public Connectionsv3StreamConnection region(@javax.annotation.Nullable String region) {
     this.region = region;
     return this;
   }
 
-   /**
+  /**
    * Optional: the region provided if the connection type is AWS.
    * @return region
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegion() {
     return region;
   }
 
-  public void setRegion(String region) {
+  public void setRegion(@javax.annotation.Nullable String region) {
     this.region = region;
   }
 
 
-  public Connectionsv3StreamConnection startMonitor(String startMonitor) {
+  public Connectionsv3StreamConnection startMonitor(@javax.annotation.Nullable String startMonitor) {
     this.startMonitor = startMonitor;
     return this;
   }
 
-   /**
+  /**
    * Connection Monitoring.
    * @return startMonitor
-  **/
+   */
   @javax.annotation.Nullable
   public String getStartMonitor() {
     return startMonitor;
   }
 
-  public void setStartMonitor(String startMonitor) {
+  public void setStartMonitor(@javax.annotation.Nullable String startMonitor) {
     this.startMonitor = startMonitor;
   }
 
 
-  public Connectionsv3StreamConnection status(Connectionsv3Status status) {
+  public Connectionsv3StreamConnection status(@javax.annotation.Nullable Connectionsv3Status status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Connectionsv3Status getStatus() {
     return status;
   }
 
-  public void setStatus(Connectionsv3Status status) {
+  public void setStatus(@javax.annotation.Nullable Connectionsv3Status status) {
     this.status = status;
   }
 
 
-  public Connectionsv3StreamConnection statusText(String statusText) {
+  public Connectionsv3StreamConnection statusText(@javax.annotation.Nullable String statusText) {
     this.statusText = statusText;
     return this;
   }
 
-   /**
+  /**
    * If status is not OK, details what&#39;s wrong (non-localized).
    * @return statusText
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatusText() {
     return statusText;
   }
 
-  public void setStatusText(String statusText) {
+  public void setStatusText(@javax.annotation.Nullable String statusText) {
     this.statusText = statusText;
   }
 
 
-  public Connectionsv3StreamConnection statusTimestamp(String statusTimestamp) {
+  public Connectionsv3StreamConnection statusTimestamp(@javax.annotation.Nullable String statusTimestamp) {
     this.statusTimestamp = statusTimestamp;
     return this;
   }
 
-   /**
+  /**
    * The time stamp of status.
    * @return statusTimestamp
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatusTimestamp() {
     return statusTimestamp;
   }
 
-  public void setStatusTimestamp(String statusTimestamp) {
+  public void setStatusTimestamp(@javax.annotation.Nullable String statusTimestamp) {
     this.statusTimestamp = statusTimestamp;
   }
 
 
-  public Connectionsv3StreamConnection storageConnectionString(String storageConnectionString) {
+  public Connectionsv3StreamConnection storageConnectionString(@javax.annotation.Nullable String storageConnectionString) {
     this.storageConnectionString = storageConnectionString;
     return this;
   }
 
-   /**
+  /**
    * Optional: Storage connection string must be provided if the connection type is Azure.
    * @return storageConnectionString
-  **/
+   */
   @javax.annotation.Nullable
   public String getStorageConnectionString() {
     return storageConnectionString;
   }
 
-  public void setStorageConnectionString(String storageConnectionString) {
+  public void setStorageConnectionString(@javax.annotation.Nullable String storageConnectionString) {
     this.storageConnectionString = storageConnectionString;
   }
 
 
-  public Connectionsv3StreamConnection username(String username) {
+  public Connectionsv3StreamConnection username(@javax.annotation.Nullable String username) {
     this.username = username;
     return this;
   }
 
-   /**
+  /**
    * Database credential username.
    * @return username
-  **/
+   */
   @javax.annotation.Nullable
   public String getUsername() {
     return username;
   }
 
-  public void setUsername(String username) {
+  public void setUsername(@javax.annotation.Nullable String username) {
     this.username = username;
   }
 
@@ -572,41 +592,22 @@ public class Connectionsv3StreamConnection {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("account_id");
-    openapiFields.add("account_name");
-    openapiFields.add("cluster_resource_id");
-    openapiFields.add("consumer_group_name");
-    openapiFields.add("db_dns_endpoint");
-    openapiFields.add("db_name");
-    openapiFields.add("db_type");
-    openapiFields.add("name");
-    openapiFields.add("namespace");
-    openapiFields.add("password");
-    openapiFields.add("port");
-    openapiFields.add("provider");
-    openapiFields.add("region");
-    openapiFields.add("start_monitor");
-    openapiFields.add("status");
-    openapiFields.add("status_text");
-    openapiFields.add("status_timestamp");
-    openapiFields.add("storage_connection_string");
-    openapiFields.add("username");
+    openapiFields = new HashSet<String>(Arrays.asList("account_id", "account_name", "cluster_resource_id", "consumer_group_name", "db_dns_endpoint", "db_name", "db_type", "name", "namespace", "password", "port", "provider", "region", "start_monitor", "status", "status_text", "status_timestamp", "storage_connection_string", "username"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3StreamConnection
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3StreamConnection
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3StreamConnection.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3StreamConnection is not found in the empty JSON string", Connectionsv3StreamConnection.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3StreamConnection is not found in the empty JSON string", Connectionsv3StreamConnection.openapiRequiredFields.toString()));
         }
       }
 
@@ -614,67 +615,67 @@ public class Connectionsv3StreamConnection {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3StreamConnection.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3StreamConnection` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3StreamConnection` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("account_id") != null && !jsonObj.get("account_id").isJsonNull()) && !jsonObj.get("account_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `account_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("account_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `account_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("account_id").toString()));
       }
       if ((jsonObj.get("account_name") != null && !jsonObj.get("account_name").isJsonNull()) && !jsonObj.get("account_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `account_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("account_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `account_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("account_name").toString()));
       }
       if ((jsonObj.get("cluster_resource_id") != null && !jsonObj.get("cluster_resource_id").isJsonNull()) && !jsonObj.get("cluster_resource_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cluster_resource_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cluster_resource_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cluster_resource_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cluster_resource_id").toString()));
       }
       if ((jsonObj.get("consumer_group_name") != null && !jsonObj.get("consumer_group_name").isJsonNull()) && !jsonObj.get("consumer_group_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `consumer_group_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("consumer_group_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `consumer_group_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("consumer_group_name").toString()));
       }
       if ((jsonObj.get("db_dns_endpoint") != null && !jsonObj.get("db_dns_endpoint").isJsonNull()) && !jsonObj.get("db_dns_endpoint").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `db_dns_endpoint` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db_dns_endpoint").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `db_dns_endpoint` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db_dns_endpoint").toString()));
       }
       if ((jsonObj.get("db_name") != null && !jsonObj.get("db_name").isJsonNull()) && !jsonObj.get("db_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `db_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `db_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db_name").toString()));
       }
       if ((jsonObj.get("db_type") != null && !jsonObj.get("db_type").isJsonNull()) && !jsonObj.get("db_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `db_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `db_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db_type").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("namespace") != null && !jsonObj.get("namespace").isJsonNull()) && !jsonObj.get("namespace").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `namespace` to be a primitive type in the JSON string but got `%s`", jsonObj.get("namespace").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `namespace` to be a primitive type in the JSON string but got `%s`", jsonObj.get("namespace").toString()));
       }
       if ((jsonObj.get("password") != null && !jsonObj.get("password").isJsonNull()) && !jsonObj.get("password").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `password` to be a primitive type in the JSON string but got `%s`", jsonObj.get("password").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `password` to be a primitive type in the JSON string but got `%s`", jsonObj.get("password").toString()));
       }
       if ((jsonObj.get("port") != null && !jsonObj.get("port").isJsonNull()) && !jsonObj.get("port").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
       }
       if ((jsonObj.get("provider") != null && !jsonObj.get("provider").isJsonNull()) && !jsonObj.get("provider").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `provider` to be a primitive type in the JSON string but got `%s`", jsonObj.get("provider").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `provider` to be a primitive type in the JSON string but got `%s`", jsonObj.get("provider").toString()));
       }
       if ((jsonObj.get("region") != null && !jsonObj.get("region").isJsonNull()) && !jsonObj.get("region").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
       }
       if ((jsonObj.get("start_monitor") != null && !jsonObj.get("start_monitor").isJsonNull()) && !jsonObj.get("start_monitor").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `start_monitor` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_monitor").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `start_monitor` to be a primitive type in the JSON string but got `%s`", jsonObj.get("start_monitor").toString()));
       }
       // validate the optional field `status`
       if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
         Connectionsv3Status.validateJsonElement(jsonObj.get("status"));
       }
       if ((jsonObj.get("status_text") != null && !jsonObj.get("status_text").isJsonNull()) && !jsonObj.get("status_text").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status_text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_text").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status_text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_text").toString()));
       }
       if ((jsonObj.get("status_timestamp") != null && !jsonObj.get("status_timestamp").isJsonNull()) && !jsonObj.get("status_timestamp").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_timestamp").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status_timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_timestamp").toString()));
       }
       if ((jsonObj.get("storage_connection_string") != null && !jsonObj.get("storage_connection_string").isJsonNull()) && !jsonObj.get("storage_connection_string").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `storage_connection_string` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_connection_string").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `storage_connection_string` to be a primitive type in the JSON string but got `%s`", jsonObj.get("storage_connection_string").toString()));
       }
       if ((jsonObj.get("username") != null && !jsonObj.get("username").isJsonNull()) && !jsonObj.get("username").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `username` to be a primitive type in the JSON string but got `%s`", jsonObj.get("username").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `username` to be a primitive type in the JSON string but got `%s`", jsonObj.get("username").toString()));
       }
   }
 
@@ -707,22 +708,22 @@ public class Connectionsv3StreamConnection {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3StreamConnection given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3StreamConnection
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3StreamConnection
-  */
+  /**
+   * Create an instance of Connectionsv3StreamConnection given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3StreamConnection
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3StreamConnection
+   */
   public static Connectionsv3StreamConnection fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3StreamConnection.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3StreamConnection to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3StreamConnection to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

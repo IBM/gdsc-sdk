@@ -81,9 +81,9 @@ class Dashboardsv3ReportGlobalFilter(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in report_operator (list)
         _items = []
         if self.report_operator:
-            for _item in self.report_operator:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_operator in self.report_operator:
+                if _item_report_operator:
+                    _items.append(_item_report_operator.to_dict())
             _dict['report_operator'] = _items
         return _dict
 

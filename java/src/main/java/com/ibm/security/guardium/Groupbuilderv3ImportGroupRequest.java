@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,63 +42,68 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetGroupsRequest requests to import specific groups from a Guardium Data Protection central manager.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3ImportGroupRequest {
   public static final String SERIALIZED_NAME_CENTRAL_MANAGER_ID = "central_manager_id";
   @SerializedName(SERIALIZED_NAME_CENTRAL_MANAGER_ID)
+  @javax.annotation.Nullable
   private String centralManagerId;
 
   public static final String SERIALIZED_NAME_GROUPS = "groups";
   @SerializedName(SERIALIZED_NAME_GROUPS)
+  @javax.annotation.Nullable
   private List<Groupbuilderv3Group> groups = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_LDAP_CONFIG = "ldap_config";
   @SerializedName(SERIALIZED_NAME_LDAP_CONFIG)
+  @javax.annotation.Nullable
   private Groupbuilderv3LdapConfig ldapConfig;
 
   public static final String SERIALIZED_NAME_ONE_TIME = "one_time";
   @SerializedName(SERIALIZED_NAME_ONE_TIME)
+  @javax.annotation.Nullable
   private Boolean oneTime;
 
   public static final String SERIALIZED_NAME_PREVIEW = "preview";
   @SerializedName(SERIALIZED_NAME_PREVIEW)
+  @javax.annotation.Nullable
   private Boolean preview;
 
   public Groupbuilderv3ImportGroupRequest() {
   }
 
-  public Groupbuilderv3ImportGroupRequest centralManagerId(String centralManagerId) {
+  public Groupbuilderv3ImportGroupRequest centralManagerId(@javax.annotation.Nullable String centralManagerId) {
     this.centralManagerId = centralManagerId;
     return this;
   }
 
-   /**
+  /**
    * Central manager host name.
    * @return centralManagerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCentralManagerId() {
     return centralManagerId;
   }
 
-  public void setCentralManagerId(String centralManagerId) {
+  public void setCentralManagerId(@javax.annotation.Nullable String centralManagerId) {
     this.centralManagerId = centralManagerId;
   }
 
 
-  public Groupbuilderv3ImportGroupRequest groups(List<Groupbuilderv3Group> groups) {
+  public Groupbuilderv3ImportGroupRequest groups(@javax.annotation.Nullable List<Groupbuilderv3Group> groups) {
     this.groups = groups;
     return this;
   }
@@ -110,73 +116,73 @@ public class Groupbuilderv3ImportGroupRequest {
     return this;
   }
 
-   /**
+  /**
    * List of groups to import from the central manager.
    * @return groups
-  **/
+   */
   @javax.annotation.Nullable
   public List<Groupbuilderv3Group> getGroups() {
     return groups;
   }
 
-  public void setGroups(List<Groupbuilderv3Group> groups) {
+  public void setGroups(@javax.annotation.Nullable List<Groupbuilderv3Group> groups) {
     this.groups = groups;
   }
 
 
-  public Groupbuilderv3ImportGroupRequest ldapConfig(Groupbuilderv3LdapConfig ldapConfig) {
+  public Groupbuilderv3ImportGroupRequest ldapConfig(@javax.annotation.Nullable Groupbuilderv3LdapConfig ldapConfig) {
     this.ldapConfig = ldapConfig;
     return this;
   }
 
-   /**
+  /**
    * Get ldapConfig
    * @return ldapConfig
-  **/
+   */
   @javax.annotation.Nullable
   public Groupbuilderv3LdapConfig getLdapConfig() {
     return ldapConfig;
   }
 
-  public void setLdapConfig(Groupbuilderv3LdapConfig ldapConfig) {
+  public void setLdapConfig(@javax.annotation.Nullable Groupbuilderv3LdapConfig ldapConfig) {
     this.ldapConfig = ldapConfig;
   }
 
 
-  public Groupbuilderv3ImportGroupRequest oneTime(Boolean oneTime) {
+  public Groupbuilderv3ImportGroupRequest oneTime(@javax.annotation.Nullable Boolean oneTime) {
     this.oneTime = oneTime;
     return this;
   }
 
-   /**
+  /**
    * Import without synchronizing.
    * @return oneTime
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getOneTime() {
     return oneTime;
   }
 
-  public void setOneTime(Boolean oneTime) {
+  public void setOneTime(@javax.annotation.Nullable Boolean oneTime) {
     this.oneTime = oneTime;
   }
 
 
-  public Groupbuilderv3ImportGroupRequest preview(Boolean preview) {
+  public Groupbuilderv3ImportGroupRequest preview(@javax.annotation.Nullable Boolean preview) {
     this.preview = preview;
     return this;
   }
 
-   /**
+  /**
    * This flag is only valid if ldap_config is specified When set, LDAP import will pull the first 10 members from LDAP based on specified  LDAP config and return to the caller without adding them to the group.
    * @return preview
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getPreview() {
     return preview;
   }
 
-  public void setPreview(Boolean preview) {
+  public void setPreview(@javax.annotation.Nullable Boolean preview) {
     this.preview = preview;
   }
 
@@ -233,27 +239,22 @@ public class Groupbuilderv3ImportGroupRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("central_manager_id");
-    openapiFields.add("groups");
-    openapiFields.add("ldap_config");
-    openapiFields.add("one_time");
-    openapiFields.add("preview");
+    openapiFields = new HashSet<String>(Arrays.asList("central_manager_id", "groups", "ldap_config", "one_time", "preview"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3ImportGroupRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3ImportGroupRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3ImportGroupRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3ImportGroupRequest is not found in the empty JSON string", Groupbuilderv3ImportGroupRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3ImportGroupRequest is not found in the empty JSON string", Groupbuilderv3ImportGroupRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -261,19 +262,19 @@ public class Groupbuilderv3ImportGroupRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3ImportGroupRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3ImportGroupRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3ImportGroupRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("central_manager_id") != null && !jsonObj.get("central_manager_id").isJsonNull()) && !jsonObj.get("central_manager_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `central_manager_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("central_manager_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `central_manager_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("central_manager_id").toString()));
       }
       if (jsonObj.get("groups") != null && !jsonObj.get("groups").isJsonNull()) {
         JsonArray jsonArraygroups = jsonObj.getAsJsonArray("groups");
         if (jsonArraygroups != null) {
           // ensure the json data is an array
           if (!jsonObj.get("groups").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `groups` to be an array in the JSON string but got `%s`", jsonObj.get("groups").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `groups` to be an array in the JSON string but got `%s`", jsonObj.get("groups").toString()));
           }
 
           // validate the optional field `groups` (array)
@@ -317,22 +318,22 @@ public class Groupbuilderv3ImportGroupRequest {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3ImportGroupRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3ImportGroupRequest
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3ImportGroupRequest
-  */
+  /**
+   * Create an instance of Groupbuilderv3ImportGroupRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3ImportGroupRequest
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3ImportGroupRequest
+   */
   public static Groupbuilderv3ImportGroupRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3ImportGroupRequest.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3ImportGroupRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3ImportGroupRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * VulnerabilitiesSummaryStatusSummary
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class VulnerabilitiesSummaryStatusSummary {
   public static final String SERIALIZED_NAME_RECENTLY_DISCOVERED = "recentlyDiscovered";
   @SerializedName(SERIALIZED_NAME_RECENTLY_DISCOVERED)
+  @javax.annotation.Nonnull
   private BigDecimal recentlyDiscovered;
 
   public static final String SERIALIZED_NAME_OPEN = "open";
   @SerializedName(SERIALIZED_NAME_OPEN)
+  @javax.annotation.Nonnull
   private BigDecimal open;
 
   public static final String SERIALIZED_NAME_FIXED = "fixed";
   @SerializedName(SERIALIZED_NAME_FIXED)
+  @javax.annotation.Nonnull
   private BigDecimal fixed;
 
   public VulnerabilitiesSummaryStatusSummary() {
   }
 
-  public VulnerabilitiesSummaryStatusSummary recentlyDiscovered(BigDecimal recentlyDiscovered) {
+  public VulnerabilitiesSummaryStatusSummary recentlyDiscovered(@javax.annotation.Nonnull BigDecimal recentlyDiscovered) {
     this.recentlyDiscovered = recentlyDiscovered;
     return this;
   }
 
-   /**
+  /**
    * Get recentlyDiscovered
    * @return recentlyDiscovered
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getRecentlyDiscovered() {
     return recentlyDiscovered;
   }
 
-  public void setRecentlyDiscovered(BigDecimal recentlyDiscovered) {
+  public void setRecentlyDiscovered(@javax.annotation.Nonnull BigDecimal recentlyDiscovered) {
     this.recentlyDiscovered = recentlyDiscovered;
   }
 
 
-  public VulnerabilitiesSummaryStatusSummary open(BigDecimal open) {
+  public VulnerabilitiesSummaryStatusSummary open(@javax.annotation.Nonnull BigDecimal open) {
     this.open = open;
     return this;
   }
 
-   /**
+  /**
    * Get open
    * @return open
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getOpen() {
     return open;
   }
 
-  public void setOpen(BigDecimal open) {
+  public void setOpen(@javax.annotation.Nonnull BigDecimal open) {
     this.open = open;
   }
 
 
-  public VulnerabilitiesSummaryStatusSummary fixed(BigDecimal fixed) {
+  public VulnerabilitiesSummaryStatusSummary fixed(@javax.annotation.Nonnull BigDecimal fixed) {
     this.fixed = fixed;
     return this;
   }
 
-   /**
+  /**
    * Get fixed
    * @return fixed
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getFixed() {
     return fixed;
   }
 
-  public void setFixed(BigDecimal fixed) {
+  public void setFixed(@javax.annotation.Nonnull BigDecimal fixed) {
     this.fixed = fixed;
   }
 
@@ -172,28 +176,22 @@ public class VulnerabilitiesSummaryStatusSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("recentlyDiscovered");
-    openapiFields.add("open");
-    openapiFields.add("fixed");
+    openapiFields = new HashSet<String>(Arrays.asList("recentlyDiscovered", "open", "fixed"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("recentlyDiscovered");
-    openapiRequiredFields.add("open");
-    openapiRequiredFields.add("fixed");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("recentlyDiscovered", "open", "fixed"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesSummaryStatusSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to VulnerabilitiesSummaryStatusSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VulnerabilitiesSummaryStatusSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in VulnerabilitiesSummaryStatusSummary is not found in the empty JSON string", VulnerabilitiesSummaryStatusSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in VulnerabilitiesSummaryStatusSummary is not found in the empty JSON string", VulnerabilitiesSummaryStatusSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -201,14 +199,14 @@ public class VulnerabilitiesSummaryStatusSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!VulnerabilitiesSummaryStatusSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VulnerabilitiesSummaryStatusSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `VulnerabilitiesSummaryStatusSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : VulnerabilitiesSummaryStatusSummary.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -243,22 +241,22 @@ public class VulnerabilitiesSummaryStatusSummary {
     }
   }
 
- /**
-  * Create an instance of VulnerabilitiesSummaryStatusSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of VulnerabilitiesSummaryStatusSummary
-  * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesSummaryStatusSummary
-  */
+  /**
+   * Create an instance of VulnerabilitiesSummaryStatusSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of VulnerabilitiesSummaryStatusSummary
+   * @throws IOException if the JSON string is invalid with respect to VulnerabilitiesSummaryStatusSummary
+   */
   public static VulnerabilitiesSummaryStatusSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, VulnerabilitiesSummaryStatusSummary.class);
   }
 
- /**
-  * Convert an instance of VulnerabilitiesSummaryStatusSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of VulnerabilitiesSummaryStatusSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

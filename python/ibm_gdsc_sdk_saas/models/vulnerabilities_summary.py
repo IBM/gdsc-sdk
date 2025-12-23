@@ -80,23 +80,23 @@ class VulnerabilitiesSummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in criticality_count (list)
         _items = []
         if self.criticality_count:
-            for _item in self.criticality_count:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_criticality_count in self.criticality_count:
+                if _item_criticality_count:
+                    _items.append(_item_criticality_count.to_dict())
             _dict['criticalityCount'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in vulnerability_type_count (list)
         _items = []
         if self.vulnerability_type_count:
-            for _item in self.vulnerability_type_count:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_vulnerability_type_count in self.vulnerability_type_count:
+                if _item_vulnerability_type_count:
+                    _items.append(_item_vulnerability_type_count.to_dict())
             _dict['vulnerabilityTypeCount'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in status_type_count (list)
         _items = []
         if self.status_type_count:
-            for _item in self.status_type_count:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_status_type_count in self.status_type_count:
+                if _item_status_type_count:
+                    _items.append(_item_status_type_count.to_dict())
             _dict['statusTypeCount'] = _items
         # override the default output from pydantic by calling `to_dict()` of status_summary
         if self.status_summary:

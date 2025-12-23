@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -44,339 +45,356 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Risk event.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3RiskEvent {
   public static final String SERIALIZED_NAME_CATEGORIZATION_CONFIDENCE = "categorization_confidence";
   @SerializedName(SERIALIZED_NAME_CATEGORIZATION_CONFIDENCE)
+  @javax.annotation.Nullable
   private Float categorizationConfidence;
 
   public static final String SERIALIZED_NAME_CATEGORIZATION_MODIFIED = "categorization_modified";
   @SerializedName(SERIALIZED_NAME_CATEGORIZATION_MODIFIED)
+  @javax.annotation.Nullable
   private Boolean categorizationModified;
 
   public static final String SERIALIZED_NAME_CATEGORY_DESCRIPTION = "category_description";
   @SerializedName(SERIALIZED_NAME_CATEGORY_DESCRIPTION)
+  @javax.annotation.Nullable
   private String categoryDescription;
 
   public static final String SERIALIZED_NAME_CLASSIFICATION = "classification";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION)
+  @javax.annotation.Nullable
   private String classification;
 
   public static final String SERIALIZED_NAME_CLASSIFICATION_NLS = "classification_nls";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION_NLS)
+  @javax.annotation.Nullable
   private String classificationNls;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_EMERGING_RISK = "emerging_risk";
   @SerializedName(SERIALIZED_NAME_EMERGING_RISK)
+  @javax.annotation.Nullable
   private Boolean emergingRisk;
 
   public static final String SERIALIZED_NAME_FROM_DATE = "from_date";
   @SerializedName(SERIALIZED_NAME_FROM_DATE)
+  @javax.annotation.Nullable
   private OffsetDateTime fromDate;
 
   public static final String SERIALIZED_NAME_JUSTIFICATION = "justification";
   @SerializedName(SERIALIZED_NAME_JUSTIFICATION)
+  @javax.annotation.Nullable
   private String justification;
 
   public static final String SERIALIZED_NAME_PIVOT = "pivot";
   @SerializedName(SERIALIZED_NAME_PIVOT)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3Pivot pivot;
 
   public static final String SERIALIZED_NAME_RISK_ID = "risk_id";
   @SerializedName(SERIALIZED_NAME_RISK_ID)
+  @javax.annotation.Nullable
   private Integer riskId;
 
   public static final String SERIALIZED_NAME_SEVERITY = "severity";
   @SerializedName(SERIALIZED_NAME_SEVERITY)
+  @javax.annotation.Nullable
   private Integer severity;
 
   public static final String SERIALIZED_NAME_SEVERITY_LEVEL = "severity_level";
   @SerializedName(SERIALIZED_NAME_SEVERITY_LEVEL)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3SeverityLevel severityLevel = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL;
 
   public static final String SERIALIZED_NAME_SHORT_OBSERVATIONS = "short_observations";
   @SerializedName(SERIALIZED_NAME_SHORT_OBSERVATIONS)
+  @javax.annotation.Nullable
   private List<Riskanalyticscontrollerv3ShortObservation> shortObservations = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3Status status = Riskanalyticscontrollerv3Status.UNDEFINED_STATUS;
 
   public static final String SERIALIZED_NAME_STATUS_CHANGED_BY_USER_NAME = "status_changed_by_user_name";
   @SerializedName(SERIALIZED_NAME_STATUS_CHANGED_BY_USER_NAME)
+  @javax.annotation.Nullable
   private String statusChangedByUserName;
 
   public static final String SERIALIZED_NAME_TO_DATE = "to_date";
   @SerializedName(SERIALIZED_NAME_TO_DATE)
+  @javax.annotation.Nullable
   private OffsetDateTime toDate;
 
   public Riskanalyticscontrollerv3RiskEvent() {
   }
 
-  public Riskanalyticscontrollerv3RiskEvent categorizationConfidence(Float categorizationConfidence) {
+  public Riskanalyticscontrollerv3RiskEvent categorizationConfidence(@javax.annotation.Nullable Float categorizationConfidence) {
     this.categorizationConfidence = categorizationConfidence;
     return this;
   }
 
-   /**
+  /**
    * Get categorizationConfidence
    * @return categorizationConfidence
-  **/
+   */
   @javax.annotation.Nullable
   public Float getCategorizationConfidence() {
     return categorizationConfidence;
   }
 
-  public void setCategorizationConfidence(Float categorizationConfidence) {
+  public void setCategorizationConfidence(@javax.annotation.Nullable Float categorizationConfidence) {
     this.categorizationConfidence = categorizationConfidence;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent categorizationModified(Boolean categorizationModified) {
+  public Riskanalyticscontrollerv3RiskEvent categorizationModified(@javax.annotation.Nullable Boolean categorizationModified) {
     this.categorizationModified = categorizationModified;
     return this;
   }
 
-   /**
+  /**
    * Get categorizationModified
    * @return categorizationModified
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getCategorizationModified() {
     return categorizationModified;
   }
 
-  public void setCategorizationModified(Boolean categorizationModified) {
+  public void setCategorizationModified(@javax.annotation.Nullable Boolean categorizationModified) {
     this.categorizationModified = categorizationModified;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent categoryDescription(String categoryDescription) {
+  public Riskanalyticscontrollerv3RiskEvent categoryDescription(@javax.annotation.Nullable String categoryDescription) {
     this.categoryDescription = categoryDescription;
     return this;
   }
 
-   /**
+  /**
    * Category description of the risk.
    * @return categoryDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategoryDescription() {
     return categoryDescription;
   }
 
-  public void setCategoryDescription(String categoryDescription) {
+  public void setCategoryDescription(@javax.annotation.Nullable String categoryDescription) {
     this.categoryDescription = categoryDescription;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent classification(String classification) {
+  public Riskanalyticscontrollerv3RiskEvent classification(@javax.annotation.Nullable String classification) {
     this.classification = classification;
     return this;
   }
 
-   /**
+  /**
    * Classification of the risk // key of the classification.
    * @return classification
-  **/
+   */
   @javax.annotation.Nullable
   public String getClassification() {
     return classification;
   }
 
-  public void setClassification(String classification) {
+  public void setClassification(@javax.annotation.Nullable String classification) {
     this.classification = classification;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent classificationNls(String classificationNls) {
+  public Riskanalyticscontrollerv3RiskEvent classificationNls(@javax.annotation.Nullable String classificationNls) {
     this.classificationNls = classificationNls;
     return this;
   }
 
-   /**
+  /**
    * Classification nls // key of nls.
    * @return classificationNls
-  **/
+   */
   @javax.annotation.Nullable
   public String getClassificationNls() {
     return classificationNls;
   }
 
-  public void setClassificationNls(String classificationNls) {
+  public void setClassificationNls(@javax.annotation.Nullable String classificationNls) {
     this.classificationNls = classificationNls;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent description(String description) {
+  public Riskanalyticscontrollerv3RiskEvent description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Description of the risk.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent emergingRisk(Boolean emergingRisk) {
+  public Riskanalyticscontrollerv3RiskEvent emergingRisk(@javax.annotation.Nullable Boolean emergingRisk) {
     this.emergingRisk = emergingRisk;
     return this;
   }
 
-   /**
+  /**
    * Flag for emerging risks.
    * @return emergingRisk
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getEmergingRisk() {
     return emergingRisk;
   }
 
-  public void setEmergingRisk(Boolean emergingRisk) {
+  public void setEmergingRisk(@javax.annotation.Nullable Boolean emergingRisk) {
     this.emergingRisk = emergingRisk;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent fromDate(OffsetDateTime fromDate) {
+  public Riskanalyticscontrollerv3RiskEvent fromDate(@javax.annotation.Nullable OffsetDateTime fromDate) {
     this.fromDate = fromDate;
     return this;
   }
 
-   /**
+  /**
    * Opened date in format YYYY-MM-DDTHH:mm:ssZ.
    * @return fromDate
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getFromDate() {
     return fromDate;
   }
 
-  public void setFromDate(OffsetDateTime fromDate) {
+  public void setFromDate(@javax.annotation.Nullable OffsetDateTime fromDate) {
     this.fromDate = fromDate;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent justification(String justification) {
+  public Riskanalyticscontrollerv3RiskEvent justification(@javax.annotation.Nullable String justification) {
     this.justification = justification;
     return this;
   }
 
-   /**
+  /**
    * Justification.
    * @return justification
-  **/
+   */
   @javax.annotation.Nullable
   public String getJustification() {
     return justification;
   }
 
-  public void setJustification(String justification) {
+  public void setJustification(@javax.annotation.Nullable String justification) {
     this.justification = justification;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent pivot(Riskanalyticsenginev3Pivot pivot) {
+  public Riskanalyticscontrollerv3RiskEvent pivot(@javax.annotation.Nullable Riskanalyticsenginev3Pivot pivot) {
     this.pivot = pivot;
     return this;
   }
 
-   /**
+  /**
    * Get pivot
    * @return pivot
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3Pivot getPivot() {
     return pivot;
   }
 
-  public void setPivot(Riskanalyticsenginev3Pivot pivot) {
+  public void setPivot(@javax.annotation.Nullable Riskanalyticsenginev3Pivot pivot) {
     this.pivot = pivot;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent riskId(Integer riskId) {
+  public Riskanalyticscontrollerv3RiskEvent riskId(@javax.annotation.Nullable Integer riskId) {
     this.riskId = riskId;
     return this;
   }
 
-   /**
+  /**
    * Risk id.
    * @return riskId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getRiskId() {
     return riskId;
   }
 
-  public void setRiskId(Integer riskId) {
+  public void setRiskId(@javax.annotation.Nullable Integer riskId) {
     this.riskId = riskId;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent severity(Integer severity) {
+  public Riskanalyticscontrollerv3RiskEvent severity(@javax.annotation.Nullable Integer severity) {
     this.severity = severity;
     return this;
   }
 
-   /**
+  /**
    * Severity of the risk.
    * @return severity
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSeverity() {
     return severity;
   }
 
-  public void setSeverity(Integer severity) {
+  public void setSeverity(@javax.annotation.Nullable Integer severity) {
     this.severity = severity;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent severityLevel(Riskanalyticsenginev3SeverityLevel severityLevel) {
+  public Riskanalyticscontrollerv3RiskEvent severityLevel(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel severityLevel) {
     this.severityLevel = severityLevel;
     return this;
   }
 
-   /**
+  /**
    * Get severityLevel
    * @return severityLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3SeverityLevel getSeverityLevel() {
     return severityLevel;
   }
 
-  public void setSeverityLevel(Riskanalyticsenginev3SeverityLevel severityLevel) {
+  public void setSeverityLevel(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel severityLevel) {
     this.severityLevel = severityLevel;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent shortObservations(List<Riskanalyticscontrollerv3ShortObservation> shortObservations) {
+  public Riskanalyticscontrollerv3RiskEvent shortObservations(@javax.annotation.Nullable List<Riskanalyticscontrollerv3ShortObservation> shortObservations) {
     this.shortObservations = shortObservations;
     return this;
   }
@@ -389,73 +407,73 @@ public class Riskanalyticscontrollerv3RiskEvent {
     return this;
   }
 
-   /**
+  /**
    * Observations of the risk.
    * @return shortObservations
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticscontrollerv3ShortObservation> getShortObservations() {
     return shortObservations;
   }
 
-  public void setShortObservations(List<Riskanalyticscontrollerv3ShortObservation> shortObservations) {
+  public void setShortObservations(@javax.annotation.Nullable List<Riskanalyticscontrollerv3ShortObservation> shortObservations) {
     this.shortObservations = shortObservations;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent status(Riskanalyticscontrollerv3Status status) {
+  public Riskanalyticscontrollerv3RiskEvent status(@javax.annotation.Nullable Riskanalyticscontrollerv3Status status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3Status getStatus() {
     return status;
   }
 
-  public void setStatus(Riskanalyticscontrollerv3Status status) {
+  public void setStatus(@javax.annotation.Nullable Riskanalyticscontrollerv3Status status) {
     this.status = status;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent statusChangedByUserName(String statusChangedByUserName) {
+  public Riskanalyticscontrollerv3RiskEvent statusChangedByUserName(@javax.annotation.Nullable String statusChangedByUserName) {
     this.statusChangedByUserName = statusChangedByUserName;
     return this;
   }
 
-   /**
+  /**
    * Status changed by the user name.
    * @return statusChangedByUserName
-  **/
+   */
   @javax.annotation.Nullable
   public String getStatusChangedByUserName() {
     return statusChangedByUserName;
   }
 
-  public void setStatusChangedByUserName(String statusChangedByUserName) {
+  public void setStatusChangedByUserName(@javax.annotation.Nullable String statusChangedByUserName) {
     this.statusChangedByUserName = statusChangedByUserName;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEvent toDate(OffsetDateTime toDate) {
+  public Riskanalyticscontrollerv3RiskEvent toDate(@javax.annotation.Nullable OffsetDateTime toDate) {
     this.toDate = toDate;
     return this;
   }
 
-   /**
+  /**
    * Last updated date in format YYYY-MM-DDTHH:mm:ssZ.
    * @return toDate
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getToDate() {
     return toDate;
   }
 
-  public void setToDate(OffsetDateTime toDate) {
+  public void setToDate(@javax.annotation.Nullable OffsetDateTime toDate) {
     this.toDate = toDate;
   }
 
@@ -536,39 +554,22 @@ public class Riskanalyticscontrollerv3RiskEvent {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("categorization_confidence");
-    openapiFields.add("categorization_modified");
-    openapiFields.add("category_description");
-    openapiFields.add("classification");
-    openapiFields.add("classification_nls");
-    openapiFields.add("description");
-    openapiFields.add("emerging_risk");
-    openapiFields.add("from_date");
-    openapiFields.add("justification");
-    openapiFields.add("pivot");
-    openapiFields.add("risk_id");
-    openapiFields.add("severity");
-    openapiFields.add("severity_level");
-    openapiFields.add("short_observations");
-    openapiFields.add("status");
-    openapiFields.add("status_changed_by_user_name");
-    openapiFields.add("to_date");
+    openapiFields = new HashSet<String>(Arrays.asList("categorization_confidence", "categorization_modified", "category_description", "classification", "classification_nls", "description", "emerging_risk", "from_date", "justification", "pivot", "risk_id", "severity", "severity_level", "short_observations", "status", "status_changed_by_user_name", "to_date"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3RiskEvent
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3RiskEvent
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3RiskEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3RiskEvent is not found in the empty JSON string", Riskanalyticscontrollerv3RiskEvent.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3RiskEvent is not found in the empty JSON string", Riskanalyticscontrollerv3RiskEvent.openapiRequiredFields.toString()));
         }
       }
 
@@ -576,24 +577,24 @@ public class Riskanalyticscontrollerv3RiskEvent {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3RiskEvent.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3RiskEvent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3RiskEvent` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("category_description") != null && !jsonObj.get("category_description").isJsonNull()) && !jsonObj.get("category_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_description").toString()));
       }
       if ((jsonObj.get("classification") != null && !jsonObj.get("classification").isJsonNull()) && !jsonObj.get("classification").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `classification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("classification").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `classification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("classification").toString()));
       }
       if ((jsonObj.get("classification_nls") != null && !jsonObj.get("classification_nls").isJsonNull()) && !jsonObj.get("classification_nls").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `classification_nls` to be a primitive type in the JSON string but got `%s`", jsonObj.get("classification_nls").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `classification_nls` to be a primitive type in the JSON string but got `%s`", jsonObj.get("classification_nls").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if ((jsonObj.get("justification") != null && !jsonObj.get("justification").isJsonNull()) && !jsonObj.get("justification").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `justification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("justification").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `justification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("justification").toString()));
       }
       // validate the optional field `pivot`
       if (jsonObj.get("pivot") != null && !jsonObj.get("pivot").isJsonNull()) {
@@ -608,7 +609,7 @@ public class Riskanalyticscontrollerv3RiskEvent {
         if (jsonArrayshortObservations != null) {
           // ensure the json data is an array
           if (!jsonObj.get("short_observations").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `short_observations` to be an array in the JSON string but got `%s`", jsonObj.get("short_observations").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `short_observations` to be an array in the JSON string but got `%s`", jsonObj.get("short_observations").toString()));
           }
 
           // validate the optional field `short_observations` (array)
@@ -622,7 +623,7 @@ public class Riskanalyticscontrollerv3RiskEvent {
         Riskanalyticscontrollerv3Status.validateJsonElement(jsonObj.get("status"));
       }
       if ((jsonObj.get("status_changed_by_user_name") != null && !jsonObj.get("status_changed_by_user_name").isJsonNull()) && !jsonObj.get("status_changed_by_user_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status_changed_by_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_changed_by_user_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status_changed_by_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status_changed_by_user_name").toString()));
       }
   }
 
@@ -655,22 +656,22 @@ public class Riskanalyticscontrollerv3RiskEvent {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3RiskEvent given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3RiskEvent
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3RiskEvent
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3RiskEvent given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3RiskEvent
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3RiskEvent
+   */
   public static Riskanalyticscontrollerv3RiskEvent fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3RiskEvent.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3RiskEvent to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3RiskEvent to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

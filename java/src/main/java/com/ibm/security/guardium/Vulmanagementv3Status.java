@@ -14,9 +14,11 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -29,15 +31,15 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(Vulmanagementv3Status.Adapter.class)
 public enum Vulmanagementv3Status {
   
-  UNKNOWN("STATUS_UNKNOWN"),
+  STATUS_UNKNOWN("STATUS_UNKNOWN"),
   
-  OPEN("STATUS_OPEN"),
+  STATUS_OPEN("STATUS_OPEN"),
   
-  IN_PROGRESS("STATUS_IN_PROGRESS"),
+  STATUS_IN_PROGRESS("STATUS_IN_PROGRESS"),
   
-  EXCEPTION("STATUS_EXCEPTION"),
+  STATUS_EXCEPTION("STATUS_EXCEPTION"),
   
-  FIXED("STATUS_FIXED");
+  STATUS_FIXED("STATUS_FIXED");
 
   private String value;
 

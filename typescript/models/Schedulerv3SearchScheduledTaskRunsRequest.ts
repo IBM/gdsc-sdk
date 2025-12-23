@@ -32,6 +32,8 @@ export class Schedulerv3SearchScheduledTaskRunsRequest {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "limit",
@@ -65,4 +67,3 @@ export class Schedulerv3SearchScheduledTaskRunsRequest {
     public constructor() {
     }
 }
-

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CheckAzureStorageStringRequest defines a request to verify Azure storage connection.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Streamsv3CheckAzureStorageStringRequest {
   public static final String SERIALIZED_NAME_CONNECTION_STRING = "connection_string";
   @SerializedName(SERIALIZED_NAME_CONNECTION_STRING)
+  @javax.annotation.Nullable
   private String connectionString;
 
   public Streamsv3CheckAzureStorageStringRequest() {
   }
 
-  public Streamsv3CheckAzureStorageStringRequest connectionString(String connectionString) {
+  public Streamsv3CheckAzureStorageStringRequest connectionString(@javax.annotation.Nullable String connectionString) {
     this.connectionString = connectionString;
     return this;
   }
 
-   /**
+  /**
    * Storage connection string.
    * @return connectionString
-  **/
+   */
   @javax.annotation.Nullable
   public String getConnectionString() {
     return connectionString;
   }
 
-  public void setConnectionString(String connectionString) {
+  public void setConnectionString(@javax.annotation.Nullable String connectionString) {
     this.connectionString = connectionString;
   }
 
@@ -121,23 +123,22 @@ public class Streamsv3CheckAzureStorageStringRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("connection_string");
+    openapiFields = new HashSet<String>(Arrays.asList("connection_string"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Streamsv3CheckAzureStorageStringRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Streamsv3CheckAzureStorageStringRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Streamsv3CheckAzureStorageStringRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Streamsv3CheckAzureStorageStringRequest is not found in the empty JSON string", Streamsv3CheckAzureStorageStringRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Streamsv3CheckAzureStorageStringRequest is not found in the empty JSON string", Streamsv3CheckAzureStorageStringRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -145,12 +146,12 @@ public class Streamsv3CheckAzureStorageStringRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Streamsv3CheckAzureStorageStringRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Streamsv3CheckAzureStorageStringRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Streamsv3CheckAzureStorageStringRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("connection_string") != null && !jsonObj.get("connection_string").isJsonNull()) && !jsonObj.get("connection_string").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `connection_string` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_string").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connection_string` to be a primitive type in the JSON string but got `%s`", jsonObj.get("connection_string").toString()));
       }
   }
 
@@ -183,22 +184,22 @@ public class Streamsv3CheckAzureStorageStringRequest {
     }
   }
 
- /**
-  * Create an instance of Streamsv3CheckAzureStorageStringRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Streamsv3CheckAzureStorageStringRequest
-  * @throws IOException if the JSON string is invalid with respect to Streamsv3CheckAzureStorageStringRequest
-  */
+  /**
+   * Create an instance of Streamsv3CheckAzureStorageStringRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Streamsv3CheckAzureStorageStringRequest
+   * @throws IOException if the JSON string is invalid with respect to Streamsv3CheckAzureStorageStringRequest
+   */
   public static Streamsv3CheckAzureStorageStringRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Streamsv3CheckAzureStorageStringRequest.class);
   }
 
- /**
-  * Convert an instance of Streamsv3CheckAzureStorageStringRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Streamsv3CheckAzureStorageStringRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

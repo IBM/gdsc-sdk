@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,94 +44,102 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RiskEventHourlyFindings message represents the hourly findings of a given risk.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3RiskEventHourlyFindings {
   public static final String SERIALIZED_NAME_DATE_FROM = "date_from";
   @SerializedName(SERIALIZED_NAME_DATE_FROM)
+  @javax.annotation.Nullable
   private OffsetDateTime dateFrom;
 
   public static final String SERIALIZED_NAME_DATE_TO = "date_to";
   @SerializedName(SERIALIZED_NAME_DATE_TO)
+  @javax.annotation.Nullable
   private OffsetDateTime dateTo;
 
   public static final String SERIALIZED_NAME_FINDINGS = "findings";
   @SerializedName(SERIALIZED_NAME_FINDINGS)
+  @javax.annotation.Nullable
   private List<Riskanalyticscontrollerv3Finding> findings = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_HOURLY_CATEGORY = "hourly_category";
   @SerializedName(SERIALIZED_NAME_HOURLY_CATEGORY)
+  @javax.annotation.Nullable
   private String hourlyCategory;
 
   public static final String SERIALIZED_NAME_HOURLY_CATEGORY_DESCRIPTION = "hourly_category_description";
   @SerializedName(SERIALIZED_NAME_HOURLY_CATEGORY_DESCRIPTION)
+  @javax.annotation.Nullable
   private String hourlyCategoryDescription;
 
   public static final String SERIALIZED_NAME_HOURLY_DESCRIPTION = "hourly_description";
   @SerializedName(SERIALIZED_NAME_HOURLY_DESCRIPTION)
+  @javax.annotation.Nullable
   private String hourlyDescription;
 
   public static final String SERIALIZED_NAME_HOURLY_SEVERITY_LEVEL = "hourly_severity_level";
   @SerializedName(SERIALIZED_NAME_HOURLY_SEVERITY_LEVEL)
+  @javax.annotation.Nullable
   private Riskanalyticsenginev3SeverityLevel hourlySeverityLevel = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL;
 
   public static final String SERIALIZED_NAME_INDICATORS = "indicators";
   @SerializedName(SERIALIZED_NAME_INDICATORS)
+  @javax.annotation.Nullable
   private List<Riskanalyticscontrollerv3Indicator> indicators = new ArrayList<>();
 
   public Riskanalyticscontrollerv3RiskEventHourlyFindings() {
   }
 
-  public Riskanalyticscontrollerv3RiskEventHourlyFindings dateFrom(OffsetDateTime dateFrom) {
+  public Riskanalyticscontrollerv3RiskEventHourlyFindings dateFrom(@javax.annotation.Nullable OffsetDateTime dateFrom) {
     this.dateFrom = dateFrom;
     return this;
   }
 
-   /**
+  /**
    * Start date of the data in format YYYY-MM-DDTHH:mm:ssZ.
    * @return dateFrom
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateFrom() {
     return dateFrom;
   }
 
-  public void setDateFrom(OffsetDateTime dateFrom) {
+  public void setDateFrom(@javax.annotation.Nullable OffsetDateTime dateFrom) {
     this.dateFrom = dateFrom;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEventHourlyFindings dateTo(OffsetDateTime dateTo) {
+  public Riskanalyticscontrollerv3RiskEventHourlyFindings dateTo(@javax.annotation.Nullable OffsetDateTime dateTo) {
     this.dateTo = dateTo;
     return this;
   }
 
-   /**
+  /**
    * End date of the data in format YYYY-MM-DDTHH:mm:ssZ.
    * @return dateTo
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateTo() {
     return dateTo;
   }
 
-  public void setDateTo(OffsetDateTime dateTo) {
+  public void setDateTo(@javax.annotation.Nullable OffsetDateTime dateTo) {
     this.dateTo = dateTo;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEventHourlyFindings findings(List<Riskanalyticscontrollerv3Finding> findings) {
+  public Riskanalyticscontrollerv3RiskEventHourlyFindings findings(@javax.annotation.Nullable List<Riskanalyticscontrollerv3Finding> findings) {
     this.findings = findings;
     return this;
   }
@@ -143,97 +152,97 @@ public class Riskanalyticscontrollerv3RiskEventHourlyFindings {
     return this;
   }
 
-   /**
+  /**
    * list of all the observations of the risk.
    * @return findings
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticscontrollerv3Finding> getFindings() {
     return findings;
   }
 
-  public void setFindings(List<Riskanalyticscontrollerv3Finding> findings) {
+  public void setFindings(@javax.annotation.Nullable List<Riskanalyticscontrollerv3Finding> findings) {
     this.findings = findings;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEventHourlyFindings hourlyCategory(String hourlyCategory) {
+  public Riskanalyticscontrollerv3RiskEventHourlyFindings hourlyCategory(@javax.annotation.Nullable String hourlyCategory) {
     this.hourlyCategory = hourlyCategory;
     return this;
   }
 
-   /**
+  /**
    * Classification of the risk in the given hour.
    * @return hourlyCategory
-  **/
+   */
   @javax.annotation.Nullable
   public String getHourlyCategory() {
     return hourlyCategory;
   }
 
-  public void setHourlyCategory(String hourlyCategory) {
+  public void setHourlyCategory(@javax.annotation.Nullable String hourlyCategory) {
     this.hourlyCategory = hourlyCategory;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEventHourlyFindings hourlyCategoryDescription(String hourlyCategoryDescription) {
+  public Riskanalyticscontrollerv3RiskEventHourlyFindings hourlyCategoryDescription(@javax.annotation.Nullable String hourlyCategoryDescription) {
     this.hourlyCategoryDescription = hourlyCategoryDescription;
     return this;
   }
 
-   /**
+  /**
    * Classification description of the risk in the given hour.
    * @return hourlyCategoryDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getHourlyCategoryDescription() {
     return hourlyCategoryDescription;
   }
 
-  public void setHourlyCategoryDescription(String hourlyCategoryDescription) {
+  public void setHourlyCategoryDescription(@javax.annotation.Nullable String hourlyCategoryDescription) {
     this.hourlyCategoryDescription = hourlyCategoryDescription;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEventHourlyFindings hourlyDescription(String hourlyDescription) {
+  public Riskanalyticscontrollerv3RiskEventHourlyFindings hourlyDescription(@javax.annotation.Nullable String hourlyDescription) {
     this.hourlyDescription = hourlyDescription;
     return this;
   }
 
-   /**
+  /**
    * Description of the risk.
    * @return hourlyDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getHourlyDescription() {
     return hourlyDescription;
   }
 
-  public void setHourlyDescription(String hourlyDescription) {
+  public void setHourlyDescription(@javax.annotation.Nullable String hourlyDescription) {
     this.hourlyDescription = hourlyDescription;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEventHourlyFindings hourlySeverityLevel(Riskanalyticsenginev3SeverityLevel hourlySeverityLevel) {
+  public Riskanalyticscontrollerv3RiskEventHourlyFindings hourlySeverityLevel(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel hourlySeverityLevel) {
     this.hourlySeverityLevel = hourlySeverityLevel;
     return this;
   }
 
-   /**
+  /**
    * Get hourlySeverityLevel
    * @return hourlySeverityLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticsenginev3SeverityLevel getHourlySeverityLevel() {
     return hourlySeverityLevel;
   }
 
-  public void setHourlySeverityLevel(Riskanalyticsenginev3SeverityLevel hourlySeverityLevel) {
+  public void setHourlySeverityLevel(@javax.annotation.Nullable Riskanalyticsenginev3SeverityLevel hourlySeverityLevel) {
     this.hourlySeverityLevel = hourlySeverityLevel;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEventHourlyFindings indicators(List<Riskanalyticscontrollerv3Indicator> indicators) {
+  public Riskanalyticscontrollerv3RiskEventHourlyFindings indicators(@javax.annotation.Nullable List<Riskanalyticscontrollerv3Indicator> indicators) {
     this.indicators = indicators;
     return this;
   }
@@ -246,16 +255,16 @@ public class Riskanalyticscontrollerv3RiskEventHourlyFindings {
     return this;
   }
 
-   /**
+  /**
    * list of all the indicators - Optional (depending on include_indicators).
    * @return indicators
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticscontrollerv3Indicator> getIndicators() {
     return indicators;
   }
 
-  public void setIndicators(List<Riskanalyticscontrollerv3Indicator> indicators) {
+  public void setIndicators(@javax.annotation.Nullable List<Riskanalyticscontrollerv3Indicator> indicators) {
     this.indicators = indicators;
   }
 
@@ -318,30 +327,22 @@ public class Riskanalyticscontrollerv3RiskEventHourlyFindings {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("date_from");
-    openapiFields.add("date_to");
-    openapiFields.add("findings");
-    openapiFields.add("hourly_category");
-    openapiFields.add("hourly_category_description");
-    openapiFields.add("hourly_description");
-    openapiFields.add("hourly_severity_level");
-    openapiFields.add("indicators");
+    openapiFields = new HashSet<String>(Arrays.asList("date_from", "date_to", "findings", "hourly_category", "hourly_category_description", "hourly_description", "hourly_severity_level", "indicators"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3RiskEventHourlyFindings
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3RiskEventHourlyFindings
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3RiskEventHourlyFindings.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3RiskEventHourlyFindings is not found in the empty JSON string", Riskanalyticscontrollerv3RiskEventHourlyFindings.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3RiskEventHourlyFindings is not found in the empty JSON string", Riskanalyticscontrollerv3RiskEventHourlyFindings.openapiRequiredFields.toString()));
         }
       }
 
@@ -349,7 +350,7 @@ public class Riskanalyticscontrollerv3RiskEventHourlyFindings {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3RiskEventHourlyFindings.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3RiskEventHourlyFindings` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3RiskEventHourlyFindings` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -358,7 +359,7 @@ public class Riskanalyticscontrollerv3RiskEventHourlyFindings {
         if (jsonArrayfindings != null) {
           // ensure the json data is an array
           if (!jsonObj.get("findings").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `findings` to be an array in the JSON string but got `%s`", jsonObj.get("findings").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `findings` to be an array in the JSON string but got `%s`", jsonObj.get("findings").toString()));
           }
 
           // validate the optional field `findings` (array)
@@ -368,13 +369,13 @@ public class Riskanalyticscontrollerv3RiskEventHourlyFindings {
         }
       }
       if ((jsonObj.get("hourly_category") != null && !jsonObj.get("hourly_category").isJsonNull()) && !jsonObj.get("hourly_category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `hourly_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hourly_category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `hourly_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hourly_category").toString()));
       }
       if ((jsonObj.get("hourly_category_description") != null && !jsonObj.get("hourly_category_description").isJsonNull()) && !jsonObj.get("hourly_category_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `hourly_category_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hourly_category_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `hourly_category_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hourly_category_description").toString()));
       }
       if ((jsonObj.get("hourly_description") != null && !jsonObj.get("hourly_description").isJsonNull()) && !jsonObj.get("hourly_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `hourly_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hourly_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `hourly_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hourly_description").toString()));
       }
       // validate the optional field `hourly_severity_level`
       if (jsonObj.get("hourly_severity_level") != null && !jsonObj.get("hourly_severity_level").isJsonNull()) {
@@ -385,7 +386,7 @@ public class Riskanalyticscontrollerv3RiskEventHourlyFindings {
         if (jsonArrayindicators != null) {
           // ensure the json data is an array
           if (!jsonObj.get("indicators").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `indicators` to be an array in the JSON string but got `%s`", jsonObj.get("indicators").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `indicators` to be an array in the JSON string but got `%s`", jsonObj.get("indicators").toString()));
           }
 
           // validate the optional field `indicators` (array)
@@ -425,22 +426,22 @@ public class Riskanalyticscontrollerv3RiskEventHourlyFindings {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3RiskEventHourlyFindings given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3RiskEventHourlyFindings
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3RiskEventHourlyFindings
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3RiskEventHourlyFindings given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3RiskEventHourlyFindings
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3RiskEventHourlyFindings
+   */
   public static Riskanalyticscontrollerv3RiskEventHourlyFindings fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3RiskEventHourlyFindings.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3RiskEventHourlyFindings to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3RiskEventHourlyFindings to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

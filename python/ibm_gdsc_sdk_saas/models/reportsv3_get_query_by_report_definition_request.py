@@ -39,10 +39,10 @@ class Reportsv3GetQueryByReportDefinitionRequest(BaseModel):
     exclude_group_id: Optional[StrictStr] = None
     facet_selected_header: Optional[Reportsv3ReportHeader] = None
     filter_for_job_id: Optional[StrictStr] = None
-    job_type: Optional[Reportsv3JobType] = None
+    job_type: Optional[Reportsv3JobType] = Reportsv3JobType.UNDEFINED_JOB_TYPE
     model_types: Optional[List[Reportsv3ModelType]] = None
     report_definition: Optional[Reportsv3ReportDefinition] = None
-    sql_type: Optional[Reportsv3SqlType] = None
+    sql_type: Optional[Reportsv3SqlType] = Reportsv3SqlType.UNDEFINED_SQL_TYPE
     table_join_optimization: Optional[StrictBool] = Field(default=None, description="Optional: disable or enable the table join optimization.")
     __properties: ClassVar[List[str]] = ["add_group_literal", "add_job_id_literal", "date_range", "default_chart_expanded", "exclude_group_id", "facet_selected_header", "filter_for_job_id", "job_type", "model_types", "report_definition", "sql_type", "table_join_optimization"]
 
@@ -113,10 +113,10 @@ class Reportsv3GetQueryByReportDefinitionRequest(BaseModel):
             "exclude_group_id": obj.get("exclude_group_id"),
             "facet_selected_header": Reportsv3ReportHeader.from_dict(obj["facet_selected_header"]) if obj.get("facet_selected_header") is not None else None,
             "filter_for_job_id": obj.get("filter_for_job_id"),
-            "job_type": obj.get("job_type"),
+            "job_type": obj.get("job_type") if obj.get("job_type") is not None else Reportsv3JobType.UNDEFINED_JOB_TYPE,
             "model_types": obj.get("model_types"),
             "report_definition": Reportsv3ReportDefinition.from_dict(obj["report_definition"]) if obj.get("report_definition") is not None else None,
-            "sql_type": obj.get("sql_type"),
+            "sql_type": obj.get("sql_type") if obj.get("sql_type") is not None else Reportsv3SqlType.UNDEFINED_SQL_TYPE,
             "table_join_optimization": obj.get("table_join_optimization")
         })
         return _obj

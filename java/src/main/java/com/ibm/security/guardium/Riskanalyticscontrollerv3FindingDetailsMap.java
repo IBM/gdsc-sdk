@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,111 +40,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Contains a list of examples, reference links, in a finding category. If outlier finding, it could be HIGH_VOLUME, ERROR, NEW, and so on.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3FindingDetailsMap {
   public static final String SERIALIZED_NAME_FINDING_DETAILS = "finding_details";
   @SerializedName(SERIALIZED_NAME_FINDING_DETAILS)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3FindingDetails findingDetails;
 
   public static final String SERIALIZED_NAME_FINDING_DETAILS_TYPE = "finding_details_type";
   @SerializedName(SERIALIZED_NAME_FINDING_DETAILS_TYPE)
+  @javax.annotation.Nullable
   private String findingDetailsType;
 
   public static final String SERIALIZED_NAME_FINDING_REFERENCE = "finding_reference";
   @SerializedName(SERIALIZED_NAME_FINDING_REFERENCE)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3FindingReferenceLink findingReference;
 
   public static final String SERIALIZED_NAME_REPORT = "report";
   @SerializedName(SERIALIZED_NAME_REPORT)
+  @javax.annotation.Nullable
   private String report;
 
   public Riskanalyticscontrollerv3FindingDetailsMap() {
   }
 
-  public Riskanalyticscontrollerv3FindingDetailsMap findingDetails(Riskanalyticscontrollerv3FindingDetails findingDetails) {
+  public Riskanalyticscontrollerv3FindingDetailsMap findingDetails(@javax.annotation.Nullable Riskanalyticscontrollerv3FindingDetails findingDetails) {
     this.findingDetails = findingDetails;
     return this;
   }
 
-   /**
+  /**
    * Get findingDetails
    * @return findingDetails
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3FindingDetails getFindingDetails() {
     return findingDetails;
   }
 
-  public void setFindingDetails(Riskanalyticscontrollerv3FindingDetails findingDetails) {
+  public void setFindingDetails(@javax.annotation.Nullable Riskanalyticscontrollerv3FindingDetails findingDetails) {
     this.findingDetails = findingDetails;
   }
 
 
-  public Riskanalyticscontrollerv3FindingDetailsMap findingDetailsType(String findingDetailsType) {
+  public Riskanalyticscontrollerv3FindingDetailsMap findingDetailsType(@javax.annotation.Nullable String findingDetailsType) {
     this.findingDetailsType = findingDetailsType;
     return this;
   }
 
-   /**
+  /**
    * Get findingDetailsType
    * @return findingDetailsType
-  **/
+   */
   @javax.annotation.Nullable
   public String getFindingDetailsType() {
     return findingDetailsType;
   }
 
-  public void setFindingDetailsType(String findingDetailsType) {
+  public void setFindingDetailsType(@javax.annotation.Nullable String findingDetailsType) {
     this.findingDetailsType = findingDetailsType;
   }
 
 
-  public Riskanalyticscontrollerv3FindingDetailsMap findingReference(Riskanalyticscontrollerv3FindingReferenceLink findingReference) {
+  public Riskanalyticscontrollerv3FindingDetailsMap findingReference(@javax.annotation.Nullable Riskanalyticscontrollerv3FindingReferenceLink findingReference) {
     this.findingReference = findingReference;
     return this;
   }
 
-   /**
+  /**
    * Get findingReference
    * @return findingReference
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3FindingReferenceLink getFindingReference() {
     return findingReference;
   }
 
-  public void setFindingReference(Riskanalyticscontrollerv3FindingReferenceLink findingReference) {
+  public void setFindingReference(@javax.annotation.Nullable Riskanalyticscontrollerv3FindingReferenceLink findingReference) {
     this.findingReference = findingReference;
   }
 
 
-  public Riskanalyticscontrollerv3FindingDetailsMap report(String report) {
+  public Riskanalyticscontrollerv3FindingDetailsMap report(@javax.annotation.Nullable String report) {
     this.report = report;
     return this;
   }
 
-   /**
+  /**
    * Get report
    * @return report
-  **/
+   */
   @javax.annotation.Nullable
   public String getReport() {
     return report;
   }
 
-  public void setReport(String report) {
+  public void setReport(@javax.annotation.Nullable String report) {
     this.report = report;
   }
 
@@ -198,26 +203,22 @@ public class Riskanalyticscontrollerv3FindingDetailsMap {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("finding_details");
-    openapiFields.add("finding_details_type");
-    openapiFields.add("finding_reference");
-    openapiFields.add("report");
+    openapiFields = new HashSet<String>(Arrays.asList("finding_details", "finding_details_type", "finding_reference", "report"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3FindingDetailsMap
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3FindingDetailsMap
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3FindingDetailsMap.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3FindingDetailsMap is not found in the empty JSON string", Riskanalyticscontrollerv3FindingDetailsMap.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3FindingDetailsMap is not found in the empty JSON string", Riskanalyticscontrollerv3FindingDetailsMap.openapiRequiredFields.toString()));
         }
       }
 
@@ -225,7 +226,7 @@ public class Riskanalyticscontrollerv3FindingDetailsMap {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3FindingDetailsMap.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3FindingDetailsMap` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3FindingDetailsMap` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -234,14 +235,14 @@ public class Riskanalyticscontrollerv3FindingDetailsMap {
         Riskanalyticscontrollerv3FindingDetails.validateJsonElement(jsonObj.get("finding_details"));
       }
       if ((jsonObj.get("finding_details_type") != null && !jsonObj.get("finding_details_type").isJsonNull()) && !jsonObj.get("finding_details_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `finding_details_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("finding_details_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `finding_details_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("finding_details_type").toString()));
       }
       // validate the optional field `finding_reference`
       if (jsonObj.get("finding_reference") != null && !jsonObj.get("finding_reference").isJsonNull()) {
         Riskanalyticscontrollerv3FindingReferenceLink.validateJsonElement(jsonObj.get("finding_reference"));
       }
       if ((jsonObj.get("report") != null && !jsonObj.get("report").isJsonNull()) && !jsonObj.get("report").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report").toString()));
       }
   }
 
@@ -274,22 +275,22 @@ public class Riskanalyticscontrollerv3FindingDetailsMap {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3FindingDetailsMap given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3FindingDetailsMap
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3FindingDetailsMap
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3FindingDetailsMap given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3FindingDetailsMap
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3FindingDetailsMap
+   */
   public static Riskanalyticscontrollerv3FindingDetailsMap fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3FindingDetailsMap.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3FindingDetailsMap to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3FindingDetailsMap to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

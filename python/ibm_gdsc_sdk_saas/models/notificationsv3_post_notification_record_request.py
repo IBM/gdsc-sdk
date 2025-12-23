@@ -28,7 +28,7 @@ class Notificationsv3PostNotificationRecordRequest(BaseModel):
     """
     Notificationsv3PostNotificationRecordRequest
     """ # noqa: E501
-    origin: Optional[Notificationsv3Origin] = None
+    origin: Optional[Notificationsv3Origin] = Notificationsv3Origin.UNDEFINED_ORIGIN
     origin_data: Optional[StrictStr] = None
     target_receivers: Optional[List[Schedulerv3Recipient]] = None
     template_data: Optional[Dict[str, StrictStr]] = None
@@ -77,9 +77,9 @@ class Notificationsv3PostNotificationRecordRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in target_receivers (list)
         _items = []
         if self.target_receivers:
-            for _item in self.target_receivers:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_target_receivers in self.target_receivers:
+                if _item_target_receivers:
+                    _items.append(_item_target_receivers.to_dict())
             _dict['target_receivers'] = _items
         return _dict
 
@@ -93,7 +93,7 @@ class Notificationsv3PostNotificationRecordRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "origin": obj.get("origin"),
+            "origin": obj.get("origin") if obj.get("origin") is not None else Notificationsv3Origin.UNDEFINED_ORIGIN,
             "origin_data": obj.get("origin_data"),
             "target_receivers": [Schedulerv3Recipient.from_dict(_item) for _item in obj["target_receivers"]] if obj.get("target_receivers") is not None else None,
             "template_data": obj.get("template_data"),

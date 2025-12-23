@@ -28,6 +28,8 @@ export class Vulmanagementv3FilterCategory {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "categoryId",
@@ -55,4 +57,3 @@ export class Vulmanagementv3FilterCategory {
     public constructor() {
     }
 }
-

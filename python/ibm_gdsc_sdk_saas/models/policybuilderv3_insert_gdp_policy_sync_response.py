@@ -74,9 +74,9 @@ class Policybuilderv3InsertGdpPolicySyncResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in gdp_policies (list)
         _items = []
         if self.gdp_policies:
-            for _item in self.gdp_policies:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_gdp_policies in self.gdp_policies:
+                if _item_gdp_policies:
+                    _items.append(_item_gdp_policies.to_dict())
             _dict['gdp_policies'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

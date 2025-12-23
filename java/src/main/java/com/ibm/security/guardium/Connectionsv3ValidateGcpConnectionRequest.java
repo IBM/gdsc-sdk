@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3ValidateGcpConnectionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3ValidateGcpConnectionRequest {
   public static final String SERIALIZED_NAME_CLIENT_EMAIL = "client_email";
   @SerializedName(SERIALIZED_NAME_CLIENT_EMAIL)
+  @javax.annotation.Nullable
   private String clientEmail;
 
   public static final String SERIALIZED_NAME_PRIVATE_KEY = "private_key";
   @SerializedName(SERIALIZED_NAME_PRIVATE_KEY)
+  @javax.annotation.Nullable
   private String privateKey;
 
   public static final String SERIALIZED_NAME_PROJECT_ID = "project_id";
   @SerializedName(SERIALIZED_NAME_PROJECT_ID)
+  @javax.annotation.Nullable
   private String projectId;
 
   public static final String SERIALIZED_NAME_SUBSCRIPTION = "subscription";
   @SerializedName(SERIALIZED_NAME_SUBSCRIPTION)
+  @javax.annotation.Nullable
   private String subscription;
 
   public static final String SERIALIZED_NAME_TOPIC = "topic";
   @SerializedName(SERIALIZED_NAME_TOPIC)
+  @javax.annotation.Nullable
   private String topic;
 
   public Connectionsv3ValidateGcpConnectionRequest() {
   }
 
-  public Connectionsv3ValidateGcpConnectionRequest clientEmail(String clientEmail) {
+  public Connectionsv3ValidateGcpConnectionRequest clientEmail(@javax.annotation.Nullable String clientEmail) {
     this.clientEmail = clientEmail;
     return this;
   }
 
-   /**
+  /**
    * Get clientEmail
    * @return clientEmail
-  **/
+   */
   @javax.annotation.Nullable
   public String getClientEmail() {
     return clientEmail;
   }
 
-  public void setClientEmail(String clientEmail) {
+  public void setClientEmail(@javax.annotation.Nullable String clientEmail) {
     this.clientEmail = clientEmail;
   }
 
 
-  public Connectionsv3ValidateGcpConnectionRequest privateKey(String privateKey) {
+  public Connectionsv3ValidateGcpConnectionRequest privateKey(@javax.annotation.Nullable String privateKey) {
     this.privateKey = privateKey;
     return this;
   }
 
-   /**
+  /**
    * Get privateKey
    * @return privateKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getPrivateKey() {
     return privateKey;
   }
 
-  public void setPrivateKey(String privateKey) {
+  public void setPrivateKey(@javax.annotation.Nullable String privateKey) {
     this.privateKey = privateKey;
   }
 
 
-  public Connectionsv3ValidateGcpConnectionRequest projectId(String projectId) {
+  public Connectionsv3ValidateGcpConnectionRequest projectId(@javax.annotation.Nullable String projectId) {
     this.projectId = projectId;
     return this;
   }
 
-   /**
+  /**
    * Get projectId
    * @return projectId
-  **/
+   */
   @javax.annotation.Nullable
   public String getProjectId() {
     return projectId;
   }
 
-  public void setProjectId(String projectId) {
+  public void setProjectId(@javax.annotation.Nullable String projectId) {
     this.projectId = projectId;
   }
 
 
-  public Connectionsv3ValidateGcpConnectionRequest subscription(String subscription) {
+  public Connectionsv3ValidateGcpConnectionRequest subscription(@javax.annotation.Nullable String subscription) {
     this.subscription = subscription;
     return this;
   }
 
-   /**
+  /**
    * Get subscription
    * @return subscription
-  **/
+   */
   @javax.annotation.Nullable
   public String getSubscription() {
     return subscription;
   }
 
-  public void setSubscription(String subscription) {
+  public void setSubscription(@javax.annotation.Nullable String subscription) {
     this.subscription = subscription;
   }
 
 
-  public Connectionsv3ValidateGcpConnectionRequest topic(String topic) {
+  public Connectionsv3ValidateGcpConnectionRequest topic(@javax.annotation.Nullable String topic) {
     this.topic = topic;
     return this;
   }
 
-   /**
+  /**
    * Get topic
    * @return topic
-  **/
+   */
   @javax.annotation.Nullable
   public String getTopic() {
     return topic;
   }
 
-  public void setTopic(String topic) {
+  public void setTopic(@javax.annotation.Nullable String topic) {
     this.topic = topic;
   }
 
@@ -221,27 +227,22 @@ public class Connectionsv3ValidateGcpConnectionRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("client_email");
-    openapiFields.add("private_key");
-    openapiFields.add("project_id");
-    openapiFields.add("subscription");
-    openapiFields.add("topic");
+    openapiFields = new HashSet<String>(Arrays.asList("client_email", "private_key", "project_id", "subscription", "topic"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ValidateGcpConnectionRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3ValidateGcpConnectionRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3ValidateGcpConnectionRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3ValidateGcpConnectionRequest is not found in the empty JSON string", Connectionsv3ValidateGcpConnectionRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3ValidateGcpConnectionRequest is not found in the empty JSON string", Connectionsv3ValidateGcpConnectionRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,24 +250,24 @@ public class Connectionsv3ValidateGcpConnectionRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3ValidateGcpConnectionRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3ValidateGcpConnectionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3ValidateGcpConnectionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("client_email") != null && !jsonObj.get("client_email").isJsonNull()) && !jsonObj.get("client_email").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `client_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("client_email").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `client_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("client_email").toString()));
       }
       if ((jsonObj.get("private_key") != null && !jsonObj.get("private_key").isJsonNull()) && !jsonObj.get("private_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `private_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("private_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `private_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("private_key").toString()));
       }
       if ((jsonObj.get("project_id") != null && !jsonObj.get("project_id").isJsonNull()) && !jsonObj.get("project_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `project_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("project_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `project_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("project_id").toString()));
       }
       if ((jsonObj.get("subscription") != null && !jsonObj.get("subscription").isJsonNull()) && !jsonObj.get("subscription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `subscription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `subscription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("subscription").toString()));
       }
       if ((jsonObj.get("topic") != null && !jsonObj.get("topic").isJsonNull()) && !jsonObj.get("topic").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `topic` to be a primitive type in the JSON string but got `%s`", jsonObj.get("topic").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `topic` to be a primitive type in the JSON string but got `%s`", jsonObj.get("topic").toString()));
       }
   }
 
@@ -299,22 +300,22 @@ public class Connectionsv3ValidateGcpConnectionRequest {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3ValidateGcpConnectionRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3ValidateGcpConnectionRequest
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3ValidateGcpConnectionRequest
-  */
+  /**
+   * Create an instance of Connectionsv3ValidateGcpConnectionRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3ValidateGcpConnectionRequest
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3ValidateGcpConnectionRequest
+   */
   public static Connectionsv3ValidateGcpConnectionRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3ValidateGcpConnectionRequest.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3ValidateGcpConnectionRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3ValidateGcpConnectionRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

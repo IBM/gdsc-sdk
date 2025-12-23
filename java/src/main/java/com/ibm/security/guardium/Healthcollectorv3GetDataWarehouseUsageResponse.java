@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Healthcollectorv3GetDataWarehouseUsageResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3GetDataWarehouseUsageResponse {
   public static final String SERIALIZED_NAME_WAREHOUSE_USAGE = "warehouse_usage";
   @SerializedName(SERIALIZED_NAME_WAREHOUSE_USAGE)
+  @javax.annotation.Nullable
   private List<Healthcollectorv3Usage> warehouseUsage = new ArrayList<>();
 
   public Healthcollectorv3GetDataWarehouseUsageResponse() {
   }
 
-  public Healthcollectorv3GetDataWarehouseUsageResponse warehouseUsage(List<Healthcollectorv3Usage> warehouseUsage) {
+  public Healthcollectorv3GetDataWarehouseUsageResponse warehouseUsage(@javax.annotation.Nullable List<Healthcollectorv3Usage> warehouseUsage) {
     this.warehouseUsage = warehouseUsage;
     return this;
   }
@@ -74,16 +76,16 @@ public class Healthcollectorv3GetDataWarehouseUsageResponse {
     return this;
   }
 
-   /**
+  /**
    * Get warehouseUsage
    * @return warehouseUsage
-  **/
+   */
   @javax.annotation.Nullable
   public List<Healthcollectorv3Usage> getWarehouseUsage() {
     return warehouseUsage;
   }
 
-  public void setWarehouseUsage(List<Healthcollectorv3Usage> warehouseUsage) {
+  public void setWarehouseUsage(@javax.annotation.Nullable List<Healthcollectorv3Usage> warehouseUsage) {
     this.warehouseUsage = warehouseUsage;
   }
 
@@ -132,23 +134,22 @@ public class Healthcollectorv3GetDataWarehouseUsageResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("warehouse_usage");
+    openapiFields = new HashSet<String>(Arrays.asList("warehouse_usage"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3GetDataWarehouseUsageResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3GetDataWarehouseUsageResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3GetDataWarehouseUsageResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3GetDataWarehouseUsageResponse is not found in the empty JSON string", Healthcollectorv3GetDataWarehouseUsageResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3GetDataWarehouseUsageResponse is not found in the empty JSON string", Healthcollectorv3GetDataWarehouseUsageResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Healthcollectorv3GetDataWarehouseUsageResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3GetDataWarehouseUsageResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3GetDataWarehouseUsageResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3GetDataWarehouseUsageResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Healthcollectorv3GetDataWarehouseUsageResponse {
         if (jsonArraywarehouseUsage != null) {
           // ensure the json data is an array
           if (!jsonObj.get("warehouse_usage").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `warehouse_usage` to be an array in the JSON string but got `%s`", jsonObj.get("warehouse_usage").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `warehouse_usage` to be an array in the JSON string but got `%s`", jsonObj.get("warehouse_usage").toString()));
           }
 
           // validate the optional field `warehouse_usage` (array)
@@ -205,22 +206,22 @@ public class Healthcollectorv3GetDataWarehouseUsageResponse {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3GetDataWarehouseUsageResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3GetDataWarehouseUsageResponse
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3GetDataWarehouseUsageResponse
-  */
+  /**
+   * Create an instance of Healthcollectorv3GetDataWarehouseUsageResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3GetDataWarehouseUsageResponse
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3GetDataWarehouseUsageResponse
+   */
   public static Healthcollectorv3GetDataWarehouseUsageResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3GetDataWarehouseUsageResponse.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3GetDataWarehouseUsageResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3GetDataWarehouseUsageResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

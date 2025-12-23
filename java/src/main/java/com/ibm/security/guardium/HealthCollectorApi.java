@@ -92,13 +92,14 @@ public class HealthCollectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetDataWarehouseUsageCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetDataWarehouseUsageCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -152,7 +153,7 @@ public class HealthCollectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call healthCollectorGetDataWarehouseUsageValidateBeforeCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call healthCollectorGetDataWarehouseUsageValidateBeforeCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'type' is set
         if (type == null) {
             throw new ApiException("Missing the required parameter 'type' when calling healthCollectorGetDataWarehouseUsage(Async)");
@@ -171,13 +172,14 @@ public class HealthCollectorApi {
      * @return Healthcollectorv3GetDataWarehouseUsageResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Healthcollectorv3GetDataWarehouseUsageResponse healthCollectorGetDataWarehouseUsage(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public Healthcollectorv3GetDataWarehouseUsageResponse healthCollectorGetDataWarehouseUsage(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         ApiResponse<Healthcollectorv3GetDataWarehouseUsageResponse> localVarResp = healthCollectorGetDataWarehouseUsageWithHttpInfo(type, startTime, endTime);
         return localVarResp.getData();
     }
@@ -191,13 +193,14 @@ public class HealthCollectorApi {
      * @return ApiResponse&lt;Healthcollectorv3GetDataWarehouseUsageResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Healthcollectorv3GetDataWarehouseUsageResponse> healthCollectorGetDataWarehouseUsageWithHttpInfo(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public ApiResponse<Healthcollectorv3GetDataWarehouseUsageResponse> healthCollectorGetDataWarehouseUsageWithHttpInfo(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         okhttp3.Call localVarCall = healthCollectorGetDataWarehouseUsageValidateBeforeCall(type, startTime, endTime, null);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetDataWarehouseUsageResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -213,13 +216,14 @@ public class HealthCollectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetDataWarehouseUsageAsync(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetDataWarehouseUsageResponse> _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetDataWarehouseUsageAsync(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetDataWarehouseUsageResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = healthCollectorGetDataWarehouseUsageValidateBeforeCall(type, startTime, endTime, _callback);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetDataWarehouseUsageResponse>(){}.getType();
@@ -232,7 +236,8 @@ public class HealthCollectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -294,7 +299,8 @@ public class HealthCollectorApi {
      * @return Healthcollectorv3GetGDPHealthInfoResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -311,7 +317,8 @@ public class HealthCollectorApi {
      * @return ApiResponse&lt;Healthcollectorv3GetGDPHealthInfoResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -330,7 +337,8 @@ public class HealthCollectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -353,13 +361,14 @@ public class HealthCollectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetHistoricalHealthInfoCall(String unit, String cmId, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetHistoricalHealthInfoCall(@javax.annotation.Nullable String unit, @javax.annotation.Nullable String cmId, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -420,7 +429,7 @@ public class HealthCollectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call healthCollectorGetHistoricalHealthInfoValidateBeforeCall(String unit, String cmId, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call healthCollectorGetHistoricalHealthInfoValidateBeforeCall(@javax.annotation.Nullable String unit, @javax.annotation.Nullable String cmId, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         return healthCollectorGetHistoricalHealthInfoCall(unit, cmId, startTime, endTime, _callback);
 
     }
@@ -435,13 +444,14 @@ public class HealthCollectorApi {
      * @return Healthcollectorv3GetHistoricalHealthInfoResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Healthcollectorv3GetHistoricalHealthInfoResponse healthCollectorGetHistoricalHealthInfo(String unit, String cmId, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public Healthcollectorv3GetHistoricalHealthInfoResponse healthCollectorGetHistoricalHealthInfo(@javax.annotation.Nullable String unit, @javax.annotation.Nullable String cmId, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         ApiResponse<Healthcollectorv3GetHistoricalHealthInfoResponse> localVarResp = healthCollectorGetHistoricalHealthInfoWithHttpInfo(unit, cmId, startTime, endTime);
         return localVarResp.getData();
     }
@@ -456,13 +466,14 @@ public class HealthCollectorApi {
      * @return ApiResponse&lt;Healthcollectorv3GetHistoricalHealthInfoResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Healthcollectorv3GetHistoricalHealthInfoResponse> healthCollectorGetHistoricalHealthInfoWithHttpInfo(String unit, String cmId, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public ApiResponse<Healthcollectorv3GetHistoricalHealthInfoResponse> healthCollectorGetHistoricalHealthInfoWithHttpInfo(@javax.annotation.Nullable String unit, @javax.annotation.Nullable String cmId, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         okhttp3.Call localVarCall = healthCollectorGetHistoricalHealthInfoValidateBeforeCall(unit, cmId, startTime, endTime, null);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetHistoricalHealthInfoResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -479,13 +490,14 @@ public class HealthCollectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetHistoricalHealthInfoAsync(String unit, String cmId, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetHistoricalHealthInfoResponse> _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetHistoricalHealthInfoAsync(@javax.annotation.Nullable String unit, @javax.annotation.Nullable String cmId, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetHistoricalHealthInfoResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = healthCollectorGetHistoricalHealthInfoValidateBeforeCall(unit, cmId, startTime, endTime, _callback);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetHistoricalHealthInfoResponse>(){}.getType();
@@ -501,13 +513,14 @@ public class HealthCollectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetObjectStorageUsageCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetObjectStorageUsageCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -561,7 +574,7 @@ public class HealthCollectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call healthCollectorGetObjectStorageUsageValidateBeforeCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call healthCollectorGetObjectStorageUsageValidateBeforeCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'type' is set
         if (type == null) {
             throw new ApiException("Missing the required parameter 'type' when calling healthCollectorGetObjectStorageUsage(Async)");
@@ -580,13 +593,14 @@ public class HealthCollectorApi {
      * @return Healthcollectorv3GetObjectStorageUsageResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Healthcollectorv3GetObjectStorageUsageResponse healthCollectorGetObjectStorageUsage(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public Healthcollectorv3GetObjectStorageUsageResponse healthCollectorGetObjectStorageUsage(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         ApiResponse<Healthcollectorv3GetObjectStorageUsageResponse> localVarResp = healthCollectorGetObjectStorageUsageWithHttpInfo(type, startTime, endTime);
         return localVarResp.getData();
     }
@@ -600,13 +614,14 @@ public class HealthCollectorApi {
      * @return ApiResponse&lt;Healthcollectorv3GetObjectStorageUsageResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Healthcollectorv3GetObjectStorageUsageResponse> healthCollectorGetObjectStorageUsageWithHttpInfo(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public ApiResponse<Healthcollectorv3GetObjectStorageUsageResponse> healthCollectorGetObjectStorageUsageWithHttpInfo(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         okhttp3.Call localVarCall = healthCollectorGetObjectStorageUsageValidateBeforeCall(type, startTime, endTime, null);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetObjectStorageUsageResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -622,13 +637,14 @@ public class HealthCollectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetObjectStorageUsageAsync(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetObjectStorageUsageResponse> _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetObjectStorageUsageAsync(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetObjectStorageUsageResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = healthCollectorGetObjectStorageUsageValidateBeforeCall(type, startTime, endTime, _callback);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetObjectStorageUsageResponse>(){}.getType();
@@ -644,13 +660,14 @@ public class HealthCollectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetPVCUsageCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetPVCUsageCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -704,7 +721,7 @@ public class HealthCollectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call healthCollectorGetPVCUsageValidateBeforeCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call healthCollectorGetPVCUsageValidateBeforeCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'type' is set
         if (type == null) {
             throw new ApiException("Missing the required parameter 'type' when calling healthCollectorGetPVCUsage(Async)");
@@ -723,13 +740,14 @@ public class HealthCollectorApi {
      * @return Healthcollectorv3GetPVCUsageResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Healthcollectorv3GetPVCUsageResponse healthCollectorGetPVCUsage(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public Healthcollectorv3GetPVCUsageResponse healthCollectorGetPVCUsage(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         ApiResponse<Healthcollectorv3GetPVCUsageResponse> localVarResp = healthCollectorGetPVCUsageWithHttpInfo(type, startTime, endTime);
         return localVarResp.getData();
     }
@@ -743,13 +761,14 @@ public class HealthCollectorApi {
      * @return ApiResponse&lt;Healthcollectorv3GetPVCUsageResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Healthcollectorv3GetPVCUsageResponse> healthCollectorGetPVCUsageWithHttpInfo(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public ApiResponse<Healthcollectorv3GetPVCUsageResponse> healthCollectorGetPVCUsageWithHttpInfo(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         okhttp3.Call localVarCall = healthCollectorGetPVCUsageValidateBeforeCall(type, startTime, endTime, null);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetPVCUsageResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -765,13 +784,14 @@ public class HealthCollectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetPVCUsageAsync(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetPVCUsageResponse> _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetPVCUsageAsync(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetPVCUsageResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = healthCollectorGetPVCUsageValidateBeforeCall(type, startTime, endTime, _callback);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetPVCUsageResponse>(){}.getType();
@@ -787,7 +807,8 @@ public class HealthCollectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -795,7 +816,7 @@ public class HealthCollectorApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call healthCollectorGetPodRestartsCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetPodRestartsCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -850,7 +871,7 @@ public class HealthCollectorApi {
 
     @Deprecated
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call healthCollectorGetPodRestartsValidateBeforeCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call healthCollectorGetPodRestartsValidateBeforeCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'type' is set
         if (type == null) {
             throw new ApiException("Missing the required parameter 'type' when calling healthCollectorGetPodRestarts(Async)");
@@ -869,7 +890,8 @@ public class HealthCollectorApi {
      * @return Healthcollectorv3GetPodRestartsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -877,7 +899,7 @@ public class HealthCollectorApi {
      * @deprecated
      */
     @Deprecated
-    public Healthcollectorv3GetPodRestartsResponse healthCollectorGetPodRestarts(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public Healthcollectorv3GetPodRestartsResponse healthCollectorGetPodRestarts(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         ApiResponse<Healthcollectorv3GetPodRestartsResponse> localVarResp = healthCollectorGetPodRestartsWithHttpInfo(type, startTime, endTime);
         return localVarResp.getData();
     }
@@ -891,7 +913,8 @@ public class HealthCollectorApi {
      * @return ApiResponse&lt;Healthcollectorv3GetPodRestartsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -899,7 +922,7 @@ public class HealthCollectorApi {
      * @deprecated
      */
     @Deprecated
-    public ApiResponse<Healthcollectorv3GetPodRestartsResponse> healthCollectorGetPodRestartsWithHttpInfo(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public ApiResponse<Healthcollectorv3GetPodRestartsResponse> healthCollectorGetPodRestartsWithHttpInfo(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         okhttp3.Call localVarCall = healthCollectorGetPodRestartsValidateBeforeCall(type, startTime, endTime, null);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetPodRestartsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -915,7 +938,8 @@ public class HealthCollectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -923,7 +947,7 @@ public class HealthCollectorApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call healthCollectorGetPodRestartsAsync(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetPodRestartsResponse> _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetPodRestartsAsync(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetPodRestartsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = healthCollectorGetPodRestartsValidateBeforeCall(type, startTime, endTime, _callback);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetPodRestartsResponse>(){}.getType();
@@ -939,13 +963,14 @@ public class HealthCollectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetStreamsIngestionCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetStreamsIngestionCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -999,7 +1024,7 @@ public class HealthCollectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call healthCollectorGetStreamsIngestionValidateBeforeCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call healthCollectorGetStreamsIngestionValidateBeforeCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'type' is set
         if (type == null) {
             throw new ApiException("Missing the required parameter 'type' when calling healthCollectorGetStreamsIngestion(Async)");
@@ -1018,13 +1043,14 @@ public class HealthCollectorApi {
      * @return Healthcollectorv3GetStreamsIngestionResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Healthcollectorv3GetStreamsIngestionResponse healthCollectorGetStreamsIngestion(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public Healthcollectorv3GetStreamsIngestionResponse healthCollectorGetStreamsIngestion(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         ApiResponse<Healthcollectorv3GetStreamsIngestionResponse> localVarResp = healthCollectorGetStreamsIngestionWithHttpInfo(type, startTime, endTime);
         return localVarResp.getData();
     }
@@ -1038,13 +1064,14 @@ public class HealthCollectorApi {
      * @return ApiResponse&lt;Healthcollectorv3GetStreamsIngestionResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Healthcollectorv3GetStreamsIngestionResponse> healthCollectorGetStreamsIngestionWithHttpInfo(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public ApiResponse<Healthcollectorv3GetStreamsIngestionResponse> healthCollectorGetStreamsIngestionWithHttpInfo(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         okhttp3.Call localVarCall = healthCollectorGetStreamsIngestionValidateBeforeCall(type, startTime, endTime, null);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetStreamsIngestionResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1060,13 +1087,14 @@ public class HealthCollectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetStreamsIngestionAsync(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetStreamsIngestionResponse> _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetStreamsIngestionAsync(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetStreamsIngestionResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = healthCollectorGetStreamsIngestionValidateBeforeCall(type, startTime, endTime, _callback);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetStreamsIngestionResponse>(){}.getType();
@@ -1082,13 +1110,14 @@ public class HealthCollectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetTopGDPCollectorsCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetTopGDPCollectorsCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1142,7 +1171,7 @@ public class HealthCollectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call healthCollectorGetTopGDPCollectorsValidateBeforeCall(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call healthCollectorGetTopGDPCollectorsValidateBeforeCall(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'type' is set
         if (type == null) {
             throw new ApiException("Missing the required parameter 'type' when calling healthCollectorGetTopGDPCollectors(Async)");
@@ -1161,13 +1190,14 @@ public class HealthCollectorApi {
      * @return Healthcollectorv3GetTopGDPCollectorsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Healthcollectorv3GetTopGDPCollectorsResponse healthCollectorGetTopGDPCollectors(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public Healthcollectorv3GetTopGDPCollectorsResponse healthCollectorGetTopGDPCollectors(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         ApiResponse<Healthcollectorv3GetTopGDPCollectorsResponse> localVarResp = healthCollectorGetTopGDPCollectorsWithHttpInfo(type, startTime, endTime);
         return localVarResp.getData();
     }
@@ -1181,13 +1211,14 @@ public class HealthCollectorApi {
      * @return ApiResponse&lt;Healthcollectorv3GetTopGDPCollectorsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Healthcollectorv3GetTopGDPCollectorsResponse> healthCollectorGetTopGDPCollectorsWithHttpInfo(String type, OffsetDateTime startTime, OffsetDateTime endTime) throws ApiException {
+    public ApiResponse<Healthcollectorv3GetTopGDPCollectorsResponse> healthCollectorGetTopGDPCollectorsWithHttpInfo(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime) throws ApiException {
         okhttp3.Call localVarCall = healthCollectorGetTopGDPCollectorsValidateBeforeCall(type, startTime, endTime, null);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetTopGDPCollectorsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1203,13 +1234,14 @@ public class HealthCollectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorGetTopGDPCollectorsAsync(String type, OffsetDateTime startTime, OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetTopGDPCollectorsResponse> _callback) throws ApiException {
+    public okhttp3.Call healthCollectorGetTopGDPCollectorsAsync(@javax.annotation.Nonnull String type, @javax.annotation.Nullable OffsetDateTime startTime, @javax.annotation.Nullable OffsetDateTime endTime, final ApiCallback<Healthcollectorv3GetTopGDPCollectorsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = healthCollectorGetTopGDPCollectorsValidateBeforeCall(type, startTime, endTime, _callback);
         Type localVarReturnType = new TypeToken<Healthcollectorv3GetTopGDPCollectorsResponse>(){}.getType();
@@ -1224,13 +1256,14 @@ public class HealthCollectorApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorStoreHealthInfoCall(String centralManagerId, Healthcollectorv3StoreHealthInfoRequest healthcollectorv3StoreHealthInfoRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call healthCollectorStoreHealthInfoCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Healthcollectorv3StoreHealthInfoRequest healthcollectorv3StoreHealthInfoRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1277,7 +1310,7 @@ public class HealthCollectorApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call healthCollectorStoreHealthInfoValidateBeforeCall(String centralManagerId, Healthcollectorv3StoreHealthInfoRequest healthcollectorv3StoreHealthInfoRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call healthCollectorStoreHealthInfoValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Healthcollectorv3StoreHealthInfoRequest healthcollectorv3StoreHealthInfoRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling healthCollectorStoreHealthInfo(Async)");
@@ -1300,13 +1333,14 @@ public class HealthCollectorApi {
      * @return Healthcollectorv3StoreHealthInfoResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Healthcollectorv3StoreHealthInfoResponse healthCollectorStoreHealthInfo(String centralManagerId, Healthcollectorv3StoreHealthInfoRequest healthcollectorv3StoreHealthInfoRequest) throws ApiException {
+    public Healthcollectorv3StoreHealthInfoResponse healthCollectorStoreHealthInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Healthcollectorv3StoreHealthInfoRequest healthcollectorv3StoreHealthInfoRequest) throws ApiException {
         ApiResponse<Healthcollectorv3StoreHealthInfoResponse> localVarResp = healthCollectorStoreHealthInfoWithHttpInfo(centralManagerId, healthcollectorv3StoreHealthInfoRequest);
         return localVarResp.getData();
     }
@@ -1319,13 +1353,14 @@ public class HealthCollectorApi {
      * @return ApiResponse&lt;Healthcollectorv3StoreHealthInfoResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Healthcollectorv3StoreHealthInfoResponse> healthCollectorStoreHealthInfoWithHttpInfo(String centralManagerId, Healthcollectorv3StoreHealthInfoRequest healthcollectorv3StoreHealthInfoRequest) throws ApiException {
+    public ApiResponse<Healthcollectorv3StoreHealthInfoResponse> healthCollectorStoreHealthInfoWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Healthcollectorv3StoreHealthInfoRequest healthcollectorv3StoreHealthInfoRequest) throws ApiException {
         okhttp3.Call localVarCall = healthCollectorStoreHealthInfoValidateBeforeCall(centralManagerId, healthcollectorv3StoreHealthInfoRequest, null);
         Type localVarReturnType = new TypeToken<Healthcollectorv3StoreHealthInfoResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1340,13 +1375,14 @@ public class HealthCollectorApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call healthCollectorStoreHealthInfoAsync(String centralManagerId, Healthcollectorv3StoreHealthInfoRequest healthcollectorv3StoreHealthInfoRequest, final ApiCallback<Healthcollectorv3StoreHealthInfoResponse> _callback) throws ApiException {
+    public okhttp3.Call healthCollectorStoreHealthInfoAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Healthcollectorv3StoreHealthInfoRequest healthcollectorv3StoreHealthInfoRequest, final ApiCallback<Healthcollectorv3StoreHealthInfoResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = healthCollectorStoreHealthInfoValidateBeforeCall(centralManagerId, healthcollectorv3StoreHealthInfoRequest, _callback);
         Type localVarReturnType = new TypeToken<Healthcollectorv3StoreHealthInfoResponse>(){}.getType();

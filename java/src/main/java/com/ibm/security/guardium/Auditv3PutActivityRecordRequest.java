@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,157 +38,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * PutActivityRecord creates an activity log record.  All fields are optional.  Specified fields will be used to included in the persisted ActivityRecord.  If no fields are specified then no activity log record is persisted.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Auditv3PutActivityRecordRequest {
   public static final String SERIALIZED_NAME_ACTION_TAKEN = "action_taken";
   @SerializedName(SERIALIZED_NAME_ACTION_TAKEN)
+  @javax.annotation.Nullable
   private String actionTaken;
 
   public static final String SERIALIZED_NAME_CHANGES_MADE = "changes_made";
   @SerializedName(SERIALIZED_NAME_CHANGES_MADE)
+  @javax.annotation.Nullable
   private String changesMade;
 
   public static final String SERIALIZED_NAME_CONTEXT = "context";
   @SerializedName(SERIALIZED_NAME_CONTEXT)
+  @javax.annotation.Nullable
   private String context;
 
   public static final String SERIALIZED_NAME_CONTEXT_DESCRIPTION = "context_description";
   @SerializedName(SERIALIZED_NAME_CONTEXT_DESCRIPTION)
+  @javax.annotation.Nullable
   private String contextDescription;
 
   public static final String SERIALIZED_NAME_PERFORMED_BY = "performed_by";
   @SerializedName(SERIALIZED_NAME_PERFORMED_BY)
+  @javax.annotation.Nullable
   private String performedBy;
 
   public static final String SERIALIZED_NAME_UID = "uid";
   @SerializedName(SERIALIZED_NAME_UID)
+  @javax.annotation.Nullable
   private String uid;
 
   public Auditv3PutActivityRecordRequest() {
   }
 
-  public Auditv3PutActivityRecordRequest actionTaken(String actionTaken) {
+  public Auditv3PutActivityRecordRequest actionTaken(@javax.annotation.Nullable String actionTaken) {
     this.actionTaken = actionTaken;
     return this;
   }
 
-   /**
+  /**
    * The operation associated with the persisted Activity record (CRUD or other).
    * @return actionTaken
-  **/
+   */
   @javax.annotation.Nullable
   public String getActionTaken() {
     return actionTaken;
   }
 
-  public void setActionTaken(String actionTaken) {
+  public void setActionTaken(@javax.annotation.Nullable String actionTaken) {
     this.actionTaken = actionTaken;
   }
 
 
-  public Auditv3PutActivityRecordRequest changesMade(String changesMade) {
+  public Auditv3PutActivityRecordRequest changesMade(@javax.annotation.Nullable String changesMade) {
     this.changesMade = changesMade;
     return this;
   }
 
-   /**
+  /**
    * The reason the operation was performed (details about the operation).
    * @return changesMade
-  **/
+   */
   @javax.annotation.Nullable
   public String getChangesMade() {
     return changesMade;
   }
 
-  public void setChangesMade(String changesMade) {
+  public void setChangesMade(@javax.annotation.Nullable String changesMade) {
     this.changesMade = changesMade;
   }
 
 
-  public Auditv3PutActivityRecordRequest context(String context) {
+  public Auditv3PutActivityRecordRequest context(@javax.annotation.Nullable String context) {
     this.context = context;
     return this;
   }
 
-   /**
+  /**
    * The service/collection on which the operation was performed.
    * @return context
-  **/
+   */
   @javax.annotation.Nullable
   public String getContext() {
     return context;
   }
 
-  public void setContext(String context) {
+  public void setContext(@javax.annotation.Nullable String context) {
     this.context = context;
   }
 
 
-  public Auditv3PutActivityRecordRequest contextDescription(String contextDescription) {
+  public Auditv3PutActivityRecordRequest contextDescription(@javax.annotation.Nullable String contextDescription) {
     this.contextDescription = contextDescription;
     return this;
   }
 
-   /**
+  /**
    * The label of the Activity record.
    * @return contextDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getContextDescription() {
     return contextDescription;
   }
 
-  public void setContextDescription(String contextDescription) {
+  public void setContextDescription(@javax.annotation.Nullable String contextDescription) {
     this.contextDescription = contextDescription;
   }
 
 
-  public Auditv3PutActivityRecordRequest performedBy(String performedBy) {
+  public Auditv3PutActivityRecordRequest performedBy(@javax.annotation.Nullable String performedBy) {
     this.performedBy = performedBy;
     return this;
   }
 
-   /**
+  /**
    * The user id of the active user at the time the action was performed.
    * @return performedBy
-  **/
+   */
   @javax.annotation.Nullable
   public String getPerformedBy() {
     return performedBy;
   }
 
-  public void setPerformedBy(String performedBy) {
+  public void setPerformedBy(@javax.annotation.Nullable String performedBy) {
     this.performedBy = performedBy;
   }
 
 
-  public Auditv3PutActivityRecordRequest uid(String uid) {
+  public Auditv3PutActivityRecordRequest uid(@javax.annotation.Nullable String uid) {
     this.uid = uid;
     return this;
   }
 
-   /**
+  /**
    * The record ID with the persisted Activity record.
    * @return uid
-  **/
+   */
   @javax.annotation.Nullable
   public String getUid() {
     return uid;
   }
 
-  public void setUid(String uid) {
+  public void setUid(@javax.annotation.Nullable String uid) {
     this.uid = uid;
   }
 
@@ -246,28 +253,22 @@ public class Auditv3PutActivityRecordRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("action_taken");
-    openapiFields.add("changes_made");
-    openapiFields.add("context");
-    openapiFields.add("context_description");
-    openapiFields.add("performed_by");
-    openapiFields.add("uid");
+    openapiFields = new HashSet<String>(Arrays.asList("action_taken", "changes_made", "context", "context_description", "performed_by", "uid"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Auditv3PutActivityRecordRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Auditv3PutActivityRecordRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Auditv3PutActivityRecordRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Auditv3PutActivityRecordRequest is not found in the empty JSON string", Auditv3PutActivityRecordRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Auditv3PutActivityRecordRequest is not found in the empty JSON string", Auditv3PutActivityRecordRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -275,27 +276,27 @@ public class Auditv3PutActivityRecordRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Auditv3PutActivityRecordRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Auditv3PutActivityRecordRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Auditv3PutActivityRecordRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("action_taken") != null && !jsonObj.get("action_taken").isJsonNull()) && !jsonObj.get("action_taken").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `action_taken` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_taken").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `action_taken` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action_taken").toString()));
       }
       if ((jsonObj.get("changes_made") != null && !jsonObj.get("changes_made").isJsonNull()) && !jsonObj.get("changes_made").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `changes_made` to be a primitive type in the JSON string but got `%s`", jsonObj.get("changes_made").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `changes_made` to be a primitive type in the JSON string but got `%s`", jsonObj.get("changes_made").toString()));
       }
       if ((jsonObj.get("context") != null && !jsonObj.get("context").isJsonNull()) && !jsonObj.get("context").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `context` to be a primitive type in the JSON string but got `%s`", jsonObj.get("context").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `context` to be a primitive type in the JSON string but got `%s`", jsonObj.get("context").toString()));
       }
       if ((jsonObj.get("context_description") != null && !jsonObj.get("context_description").isJsonNull()) && !jsonObj.get("context_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `context_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("context_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `context_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("context_description").toString()));
       }
       if ((jsonObj.get("performed_by") != null && !jsonObj.get("performed_by").isJsonNull()) && !jsonObj.get("performed_by").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `performed_by` to be a primitive type in the JSON string but got `%s`", jsonObj.get("performed_by").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `performed_by` to be a primitive type in the JSON string but got `%s`", jsonObj.get("performed_by").toString()));
       }
       if ((jsonObj.get("uid") != null && !jsonObj.get("uid").isJsonNull()) && !jsonObj.get("uid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uid").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uid").toString()));
       }
   }
 
@@ -328,22 +329,22 @@ public class Auditv3PutActivityRecordRequest {
     }
   }
 
- /**
-  * Create an instance of Auditv3PutActivityRecordRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Auditv3PutActivityRecordRequest
-  * @throws IOException if the JSON string is invalid with respect to Auditv3PutActivityRecordRequest
-  */
+  /**
+   * Create an instance of Auditv3PutActivityRecordRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Auditv3PutActivityRecordRequest
+   * @throws IOException if the JSON string is invalid with respect to Auditv3PutActivityRecordRequest
+   */
   public static Auditv3PutActivityRecordRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Auditv3PutActivityRecordRequest.class);
   }
 
- /**
-  * Convert an instance of Auditv3PutActivityRecordRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Auditv3PutActivityRecordRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -74,9 +74,9 @@ class Reportsrunnerv3GetReportColumnFacetResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in facet (list)
         _items = []
         if self.facet:
-            for _item in self.facet:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_facet in self.facet:
+                if _item_facet:
+                    _items.append(_item_facet.to_dict())
             _dict['facet'] = _items
         # override the default output from pydantic by calling `to_dict()` of facet_selected_header
         if self.facet_selected_header:

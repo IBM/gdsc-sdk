@@ -1,6 +1,6 @@
 {
   "name": "sdk-example-typescript",
-  "version": "3.0.20250703",
+  "version": "1.0.0",
   "description": "IBM Guardium Data Security Center SDK example",
   "author": "IBM GDSC Team <c3cvp8ch@ca.ibm.com>",
   "repository": {
@@ -28,7 +28,7 @@
     "prepare": "npm run build"
   },
   "dependencies": {
-    "@ibm-gdsc/ibm-gdsc-sdk-saas": "^3.0.20250220",
+    "@ibm-gdsc/ibm-gdsc-sdk-software": "^NS-INS-58764-main",
     "es6-promise": "^4.2.4",
     "url-parse": "^1.4.3",
     "whatwg-fetch": "^3.0.0"

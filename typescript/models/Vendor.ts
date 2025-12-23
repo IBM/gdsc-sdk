@@ -36,6 +36,8 @@ export class Vendor {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "vendorId",
@@ -81,4 +83,3 @@ export class Vendor {
     public constructor() {
     }
 }
-

@@ -6,7 +6,7 @@ DeliveryMethod configures who receives the report and how they receive it.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**file_format** | [**Schedulerv3FileFormat**](Schedulerv3FileFormat.md) |  | [optional] 
+**file_format** | [**Schedulerv3FileFormat**](Schedulerv3FileFormat.md) |  | [optional] [default to Schedulerv3FileFormat.UNDEFINED_FORMAT]
 **report_time_zone** | **str** | Optional: Preferred time zone to have all timestamps in. | [optional] 
 
 ## Example

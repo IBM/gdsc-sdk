@@ -9,13 +9,13 @@ Name | Type | Description | Notes
 **field_name** | **str** | Field name&#39;s NLS translation key and translated value. | [optional] 
 **group_type_id** | **int** | Group type id for the filter. | [optional] 
 **header_category** | **str** | The category of the header. | [optional] 
-**header_data_type** | [**Reportsv3HeaderDataType**](Reportsv3HeaderDataType.md) |  | [optional] 
+**header_data_type** | [**Reportsv3HeaderDataType**](Reportsv3HeaderDataType.md) |  | [optional] [default to Reportsv3HeaderDataType.UNDEFINED_REPORT_HEADER_TYPE]
 **header_description** | **str** | Header description&#39;s NLS translation key and translated value. | [optional] 
 **header_name** | **str** | The header name. | [optional] 
 **is_recommended** | **bool** | If the header is recommended. | [optional] 
 **is_visible** | **bool** |  | [optional] 
 **table_name** | **str** | Table name. | [optional] 
-**type** | [**Reportsv3HeaderType**](Reportsv3HeaderType.md) |  | [optional] 
+**type** | [**Reportsv3HeaderType**](Reportsv3HeaderType.md) |  | [optional] [default to Reportsv3HeaderType.UNDEFINED_TYPE]
 **type_length** | **int** | Header type length. | [optional] 
 
 ## Example

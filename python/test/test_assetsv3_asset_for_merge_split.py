@@ -27,7 +27,7 @@ class TestAssetsv3AssetForMergeSplit(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Assetsv3AssetForMergeSplit:
         """Test Assetsv3AssetForMergeSplit
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Assetsv3AssetForMergeSplit`

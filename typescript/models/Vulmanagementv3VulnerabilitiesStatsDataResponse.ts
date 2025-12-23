@@ -63,6 +63,8 @@ export class Vulmanagementv3VulnerabilitiesStatsDataResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "severityCriticalCount",
@@ -138,4 +140,3 @@ export class Vulmanagementv3VulnerabilitiesStatsDataResponse {
     public constructor() {
     }
 }
-

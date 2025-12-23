@@ -72,9 +72,9 @@ class Connectionsv3UpdateSettingsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in settings (list)
         _items = []
         if self.settings:
-            for _item in self.settings:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_settings in self.settings:
+                if _item_settings:
+                    _items.append(_item_settings.to_dict())
             _dict['settings'] = _items
         return _dict
 

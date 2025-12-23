@@ -89,13 +89,14 @@ public class OutliersEngineApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call outliersEngineGetSourceStatisticsCall(String sourceServerIp, String sourceDatabaseName, String sourceDbUser, Integer attributesLimit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call outliersEngineGetSourceStatisticsCall(@javax.annotation.Nullable String sourceServerIp, @javax.annotation.Nullable String sourceDatabaseName, @javax.annotation.Nullable String sourceDbUser, @javax.annotation.Nullable Integer attributesLimit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -156,7 +157,7 @@ public class OutliersEngineApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call outliersEngineGetSourceStatisticsValidateBeforeCall(String sourceServerIp, String sourceDatabaseName, String sourceDbUser, Integer attributesLimit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call outliersEngineGetSourceStatisticsValidateBeforeCall(@javax.annotation.Nullable String sourceServerIp, @javax.annotation.Nullable String sourceDatabaseName, @javax.annotation.Nullable String sourceDbUser, @javax.annotation.Nullable Integer attributesLimit, final ApiCallback _callback) throws ApiException {
         return outliersEngineGetSourceStatisticsCall(sourceServerIp, sourceDatabaseName, sourceDbUser, attributesLimit, _callback);
 
     }
@@ -171,13 +172,14 @@ public class OutliersEngineApi {
      * @return Outliersenginev3GetSourceStatisticsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Outliersenginev3GetSourceStatisticsResponse outliersEngineGetSourceStatistics(String sourceServerIp, String sourceDatabaseName, String sourceDbUser, Integer attributesLimit) throws ApiException {
+    public Outliersenginev3GetSourceStatisticsResponse outliersEngineGetSourceStatistics(@javax.annotation.Nullable String sourceServerIp, @javax.annotation.Nullable String sourceDatabaseName, @javax.annotation.Nullable String sourceDbUser, @javax.annotation.Nullable Integer attributesLimit) throws ApiException {
         ApiResponse<Outliersenginev3GetSourceStatisticsResponse> localVarResp = outliersEngineGetSourceStatisticsWithHttpInfo(sourceServerIp, sourceDatabaseName, sourceDbUser, attributesLimit);
         return localVarResp.getData();
     }
@@ -192,13 +194,14 @@ public class OutliersEngineApi {
      * @return ApiResponse&lt;Outliersenginev3GetSourceStatisticsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Outliersenginev3GetSourceStatisticsResponse> outliersEngineGetSourceStatisticsWithHttpInfo(String sourceServerIp, String sourceDatabaseName, String sourceDbUser, Integer attributesLimit) throws ApiException {
+    public ApiResponse<Outliersenginev3GetSourceStatisticsResponse> outliersEngineGetSourceStatisticsWithHttpInfo(@javax.annotation.Nullable String sourceServerIp, @javax.annotation.Nullable String sourceDatabaseName, @javax.annotation.Nullable String sourceDbUser, @javax.annotation.Nullable Integer attributesLimit) throws ApiException {
         okhttp3.Call localVarCall = outliersEngineGetSourceStatisticsValidateBeforeCall(sourceServerIp, sourceDatabaseName, sourceDbUser, attributesLimit, null);
         Type localVarReturnType = new TypeToken<Outliersenginev3GetSourceStatisticsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -215,13 +218,14 @@ public class OutliersEngineApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call outliersEngineGetSourceStatisticsAsync(String sourceServerIp, String sourceDatabaseName, String sourceDbUser, Integer attributesLimit, final ApiCallback<Outliersenginev3GetSourceStatisticsResponse> _callback) throws ApiException {
+    public okhttp3.Call outliersEngineGetSourceStatisticsAsync(@javax.annotation.Nullable String sourceServerIp, @javax.annotation.Nullable String sourceDatabaseName, @javax.annotation.Nullable String sourceDbUser, @javax.annotation.Nullable Integer attributesLimit, final ApiCallback<Outliersenginev3GetSourceStatisticsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = outliersEngineGetSourceStatisticsValidateBeforeCall(sourceServerIp, sourceDatabaseName, sourceDbUser, attributesLimit, _callback);
         Type localVarReturnType = new TypeToken<Outliersenginev3GetSourceStatisticsResponse>(){}.getType();
@@ -234,7 +238,8 @@ public class OutliersEngineApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -296,7 +301,8 @@ public class OutliersEngineApi {
      * @return Outliersenginev3StatisticsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -313,7 +319,8 @@ public class OutliersEngineApi {
      * @return ApiResponse&lt;Outliersenginev3StatisticsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -332,7 +339,8 @@ public class OutliersEngineApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -351,7 +359,8 @@ public class OutliersEngineApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -413,7 +422,8 @@ public class OutliersEngineApi {
      * @return Outliersenginev3GetWorkingHoursPeriodsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -430,7 +440,8 @@ public class OutliersEngineApi {
      * @return ApiResponse&lt;Outliersenginev3GetWorkingHoursPeriodsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -449,7 +460,8 @@ public class OutliersEngineApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -469,13 +481,14 @@ public class OutliersEngineApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call outliersEngineRunSimulatorCall(Outliersenginev3RunSimulatorRequest outliersenginev3RunSimulatorRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call outliersEngineRunSimulatorCall(@javax.annotation.Nonnull Outliersenginev3RunSimulatorRequest outliersenginev3RunSimulatorRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -521,7 +534,7 @@ public class OutliersEngineApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call outliersEngineRunSimulatorValidateBeforeCall(Outliersenginev3RunSimulatorRequest outliersenginev3RunSimulatorRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call outliersEngineRunSimulatorValidateBeforeCall(@javax.annotation.Nonnull Outliersenginev3RunSimulatorRequest outliersenginev3RunSimulatorRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'outliersenginev3RunSimulatorRequest' is set
         if (outliersenginev3RunSimulatorRequest == null) {
             throw new ApiException("Missing the required parameter 'outliersenginev3RunSimulatorRequest' when calling outliersEngineRunSimulator(Async)");
@@ -538,13 +551,14 @@ public class OutliersEngineApi {
      * @return RpcStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public RpcStatus outliersEngineRunSimulator(Outliersenginev3RunSimulatorRequest outliersenginev3RunSimulatorRequest) throws ApiException {
+    public RpcStatus outliersEngineRunSimulator(@javax.annotation.Nonnull Outliersenginev3RunSimulatorRequest outliersenginev3RunSimulatorRequest) throws ApiException {
         ApiResponse<RpcStatus> localVarResp = outliersEngineRunSimulatorWithHttpInfo(outliersenginev3RunSimulatorRequest);
         return localVarResp.getData();
     }
@@ -556,13 +570,14 @@ public class OutliersEngineApi {
      * @return ApiResponse&lt;RpcStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<RpcStatus> outliersEngineRunSimulatorWithHttpInfo(Outliersenginev3RunSimulatorRequest outliersenginev3RunSimulatorRequest) throws ApiException {
+    public ApiResponse<RpcStatus> outliersEngineRunSimulatorWithHttpInfo(@javax.annotation.Nonnull Outliersenginev3RunSimulatorRequest outliersenginev3RunSimulatorRequest) throws ApiException {
         okhttp3.Call localVarCall = outliersEngineRunSimulatorValidateBeforeCall(outliersenginev3RunSimulatorRequest, null);
         Type localVarReturnType = new TypeToken<RpcStatus>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -576,13 +591,14 @@ public class OutliersEngineApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call outliersEngineRunSimulatorAsync(Outliersenginev3RunSimulatorRequest outliersenginev3RunSimulatorRequest, final ApiCallback<RpcStatus> _callback) throws ApiException {
+    public okhttp3.Call outliersEngineRunSimulatorAsync(@javax.annotation.Nonnull Outliersenginev3RunSimulatorRequest outliersenginev3RunSimulatorRequest, final ApiCallback<RpcStatus> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = outliersEngineRunSimulatorValidateBeforeCall(outliersenginev3RunSimulatorRequest, _callback);
         Type localVarReturnType = new TypeToken<RpcStatus>(){}.getType();
@@ -596,13 +612,14 @@ public class OutliersEngineApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call outliersEngineUpdateWorkingHoursPeriodsCall(Outliersenginev3UpdateWorkingHoursPeriodsRequest outliersenginev3UpdateWorkingHoursPeriodsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call outliersEngineUpdateWorkingHoursPeriodsCall(@javax.annotation.Nonnull Outliersenginev3UpdateWorkingHoursPeriodsRequest outliersenginev3UpdateWorkingHoursPeriodsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -648,7 +665,7 @@ public class OutliersEngineApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call outliersEngineUpdateWorkingHoursPeriodsValidateBeforeCall(Outliersenginev3UpdateWorkingHoursPeriodsRequest outliersenginev3UpdateWorkingHoursPeriodsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call outliersEngineUpdateWorkingHoursPeriodsValidateBeforeCall(@javax.annotation.Nonnull Outliersenginev3UpdateWorkingHoursPeriodsRequest outliersenginev3UpdateWorkingHoursPeriodsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'outliersenginev3UpdateWorkingHoursPeriodsRequest' is set
         if (outliersenginev3UpdateWorkingHoursPeriodsRequest == null) {
             throw new ApiException("Missing the required parameter 'outliersenginev3UpdateWorkingHoursPeriodsRequest' when calling outliersEngineUpdateWorkingHoursPeriods(Async)");
@@ -665,13 +682,14 @@ public class OutliersEngineApi {
      * @return Outliersenginev3OutlierResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Outliersenginev3OutlierResponse outliersEngineUpdateWorkingHoursPeriods(Outliersenginev3UpdateWorkingHoursPeriodsRequest outliersenginev3UpdateWorkingHoursPeriodsRequest) throws ApiException {
+    public Outliersenginev3OutlierResponse outliersEngineUpdateWorkingHoursPeriods(@javax.annotation.Nonnull Outliersenginev3UpdateWorkingHoursPeriodsRequest outliersenginev3UpdateWorkingHoursPeriodsRequest) throws ApiException {
         ApiResponse<Outliersenginev3OutlierResponse> localVarResp = outliersEngineUpdateWorkingHoursPeriodsWithHttpInfo(outliersenginev3UpdateWorkingHoursPeriodsRequest);
         return localVarResp.getData();
     }
@@ -683,13 +701,14 @@ public class OutliersEngineApi {
      * @return ApiResponse&lt;Outliersenginev3OutlierResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Outliersenginev3OutlierResponse> outliersEngineUpdateWorkingHoursPeriodsWithHttpInfo(Outliersenginev3UpdateWorkingHoursPeriodsRequest outliersenginev3UpdateWorkingHoursPeriodsRequest) throws ApiException {
+    public ApiResponse<Outliersenginev3OutlierResponse> outliersEngineUpdateWorkingHoursPeriodsWithHttpInfo(@javax.annotation.Nonnull Outliersenginev3UpdateWorkingHoursPeriodsRequest outliersenginev3UpdateWorkingHoursPeriodsRequest) throws ApiException {
         okhttp3.Call localVarCall = outliersEngineUpdateWorkingHoursPeriodsValidateBeforeCall(outliersenginev3UpdateWorkingHoursPeriodsRequest, null);
         Type localVarReturnType = new TypeToken<Outliersenginev3OutlierResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -703,13 +722,14 @@ public class OutliersEngineApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call outliersEngineUpdateWorkingHoursPeriodsAsync(Outliersenginev3UpdateWorkingHoursPeriodsRequest outliersenginev3UpdateWorkingHoursPeriodsRequest, final ApiCallback<Outliersenginev3OutlierResponse> _callback) throws ApiException {
+    public okhttp3.Call outliersEngineUpdateWorkingHoursPeriodsAsync(@javax.annotation.Nonnull Outliersenginev3UpdateWorkingHoursPeriodsRequest outliersenginev3UpdateWorkingHoursPeriodsRequest, final ApiCallback<Outliersenginev3OutlierResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = outliersEngineUpdateWorkingHoursPeriodsValidateBeforeCall(outliersenginev3UpdateWorkingHoursPeriodsRequest, _callback);
         Type localVarReturnType = new TypeToken<Outliersenginev3OutlierResponse>(){}.getType();
@@ -723,13 +743,14 @@ public class OutliersEngineApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call outliersEngineUploadAndAnalyzePeriodCall(Object body, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call outliersEngineUploadAndAnalyzePeriodCall(@javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -775,7 +796,7 @@ public class OutliersEngineApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call outliersEngineUploadAndAnalyzePeriodValidateBeforeCall(Object body, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call outliersEngineUploadAndAnalyzePeriodValidateBeforeCall(@javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling outliersEngineUploadAndAnalyzePeriod(Async)");
@@ -792,13 +813,14 @@ public class OutliersEngineApi {
      * @return RpcStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public RpcStatus outliersEngineUploadAndAnalyzePeriod(Object body) throws ApiException {
+    public RpcStatus outliersEngineUploadAndAnalyzePeriod(@javax.annotation.Nonnull Object body) throws ApiException {
         ApiResponse<RpcStatus> localVarResp = outliersEngineUploadAndAnalyzePeriodWithHttpInfo(body);
         return localVarResp.getData();
     }
@@ -810,13 +832,14 @@ public class OutliersEngineApi {
      * @return ApiResponse&lt;RpcStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<RpcStatus> outliersEngineUploadAndAnalyzePeriodWithHttpInfo(Object body) throws ApiException {
+    public ApiResponse<RpcStatus> outliersEngineUploadAndAnalyzePeriodWithHttpInfo(@javax.annotation.Nonnull Object body) throws ApiException {
         okhttp3.Call localVarCall = outliersEngineUploadAndAnalyzePeriodValidateBeforeCall(body, null);
         Type localVarReturnType = new TypeToken<RpcStatus>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -830,13 +853,14 @@ public class OutliersEngineApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call outliersEngineUploadAndAnalyzePeriodAsync(Object body, final ApiCallback<RpcStatus> _callback) throws ApiException {
+    public okhttp3.Call outliersEngineUploadAndAnalyzePeriodAsync(@javax.annotation.Nonnull Object body, final ApiCallback<RpcStatus> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = outliersEngineUploadAndAnalyzePeriodValidateBeforeCall(body, _callback);
         Type localVarReturnType = new TypeToken<RpcStatus>(){}.getType();
@@ -850,13 +874,14 @@ public class OutliersEngineApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call outliersEngineUserClusteringCall(Object body, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call outliersEngineUserClusteringCall(@javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -902,7 +927,7 @@ public class OutliersEngineApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call outliersEngineUserClusteringValidateBeforeCall(Object body, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call outliersEngineUserClusteringValidateBeforeCall(@javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling outliersEngineUserClustering(Async)");
@@ -919,13 +944,14 @@ public class OutliersEngineApi {
      * @return RpcStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public RpcStatus outliersEngineUserClustering(Object body) throws ApiException {
+    public RpcStatus outliersEngineUserClustering(@javax.annotation.Nonnull Object body) throws ApiException {
         ApiResponse<RpcStatus> localVarResp = outliersEngineUserClusteringWithHttpInfo(body);
         return localVarResp.getData();
     }
@@ -937,13 +963,14 @@ public class OutliersEngineApi {
      * @return ApiResponse&lt;RpcStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<RpcStatus> outliersEngineUserClusteringWithHttpInfo(Object body) throws ApiException {
+    public ApiResponse<RpcStatus> outliersEngineUserClusteringWithHttpInfo(@javax.annotation.Nonnull Object body) throws ApiException {
         okhttp3.Call localVarCall = outliersEngineUserClusteringValidateBeforeCall(body, null);
         Type localVarReturnType = new TypeToken<RpcStatus>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -957,13 +984,14 @@ public class OutliersEngineApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call outliersEngineUserClusteringAsync(Object body, final ApiCallback<RpcStatus> _callback) throws ApiException {
+    public okhttp3.Call outliersEngineUserClusteringAsync(@javax.annotation.Nonnull Object body, final ApiCallback<RpcStatus> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = outliersEngineUserClusteringValidateBeforeCall(body, _callback);
         Type localVarReturnType = new TypeToken<RpcStatus>(){}.getType();

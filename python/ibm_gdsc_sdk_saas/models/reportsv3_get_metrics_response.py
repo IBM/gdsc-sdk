@@ -72,9 +72,9 @@ class Reportsv3GetMetricsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in metrics_list (list)
         _items = []
         if self.metrics_list:
-            for _item in self.metrics_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_metrics_list in self.metrics_list:
+                if _item_metrics_list:
+                    _items.append(_item_metrics_list.to_dict())
             _dict['metrics_list'] = _items
         return _dict
 

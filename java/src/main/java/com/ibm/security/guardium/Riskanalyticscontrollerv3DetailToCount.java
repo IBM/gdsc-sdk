@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * [deprecated] pairs with a count. Use Statistics, instead.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3DetailToCount {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nullable
   private Integer count;
 
   public static final String SERIALIZED_NAME_DESC = "desc";
   @SerializedName(SERIALIZED_NAME_DESC)
+  @javax.annotation.Nullable
   private String desc;
 
   public Riskanalyticscontrollerv3DetailToCount() {
   }
 
-  public Riskanalyticscontrollerv3DetailToCount count(Integer count) {
+  public Riskanalyticscontrollerv3DetailToCount count(@javax.annotation.Nullable Integer count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Get count
    * @return count
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getCount() {
     return count;
   }
 
-  public void setCount(Integer count) {
+  public void setCount(@javax.annotation.Nullable Integer count) {
     this.count = count;
   }
 
 
-  public Riskanalyticscontrollerv3DetailToCount desc(String desc) {
+  public Riskanalyticscontrollerv3DetailToCount desc(@javax.annotation.Nullable String desc) {
     this.desc = desc;
     return this;
   }
 
-   /**
+  /**
    * Get desc
    * @return desc
-  **/
+   */
   @javax.annotation.Nullable
   public String getDesc() {
     return desc;
   }
 
-  public void setDesc(String desc) {
+  public void setDesc(@javax.annotation.Nullable String desc) {
     this.desc = desc;
   }
 
@@ -146,24 +149,22 @@ public class Riskanalyticscontrollerv3DetailToCount {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("count");
-    openapiFields.add("desc");
+    openapiFields = new HashSet<String>(Arrays.asList("count", "desc"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3DetailToCount
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3DetailToCount
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3DetailToCount.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3DetailToCount is not found in the empty JSON string", Riskanalyticscontrollerv3DetailToCount.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3DetailToCount is not found in the empty JSON string", Riskanalyticscontrollerv3DetailToCount.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,12 +172,12 @@ public class Riskanalyticscontrollerv3DetailToCount {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3DetailToCount.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3DetailToCount` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3DetailToCount` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("desc") != null && !jsonObj.get("desc").isJsonNull()) && !jsonObj.get("desc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("desc").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("desc").toString()));
       }
   }
 
@@ -209,22 +210,22 @@ public class Riskanalyticscontrollerv3DetailToCount {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3DetailToCount given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3DetailToCount
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3DetailToCount
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3DetailToCount given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3DetailToCount
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3DetailToCount
+   */
   public static Riskanalyticscontrollerv3DetailToCount fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3DetailToCount.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3DetailToCount to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3DetailToCount to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

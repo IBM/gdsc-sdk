@@ -16,10 +16,10 @@ import { HttpFile } from '../http/http';
 * - SEVERITY_UNKNOWN: No info about risk/criticality involved.  - SEVERITY_NONE: No risk/criticality involved.  - SEVERITY_LOW: Low risk/criticality involved.  - SEVERITY_MEDIUM: Medium risk/criticality involved.  - SEVERITY_HIGH: High risk/criticality involved.  - SEVERITY_CRITICAL: Critical risk/criticality involved.
 */
 export enum Vulmanagementv3Severity {
-    Unknown = 'SEVERITY_UNKNOWN',
-    None = 'SEVERITY_NONE',
-    Low = 'SEVERITY_LOW',
-    Medium = 'SEVERITY_MEDIUM',
-    High = 'SEVERITY_HIGH',
-    Critical = 'SEVERITY_CRITICAL'
+    SeverityUnknown = 'SEVERITY_UNKNOWN',
+    SeverityNone = 'SEVERITY_NONE',
+    SeverityLow = 'SEVERITY_LOW',
+    SeverityMedium = 'SEVERITY_MEDIUM',
+    SeverityHigh = 'SEVERITY_HIGH',
+    SeverityCritical = 'SEVERITY_CRITICAL'
 }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,32 +42,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * List of account configs and streaming connection configs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3StreamingConfigs {
   public static final String SERIALIZED_NAME_ACCOUNT_CONFIGS = "account_configs";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_CONFIGS)
+  @javax.annotation.Nullable
   private List<Connectionsv3AccountConfig> accountConfigs = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_INSTANCE_CONFIGS = "instance_configs";
   @SerializedName(SERIALIZED_NAME_INSTANCE_CONFIGS)
+  @javax.annotation.Nullable
   private List<Connectionsv3StreamConnectionConfig> instanceConfigs = new ArrayList<>();
 
   public Connectionsv3StreamingConfigs() {
   }
 
-  public Connectionsv3StreamingConfigs accountConfigs(List<Connectionsv3AccountConfig> accountConfigs) {
+  public Connectionsv3StreamingConfigs accountConfigs(@javax.annotation.Nullable List<Connectionsv3AccountConfig> accountConfigs) {
     this.accountConfigs = accountConfigs;
     return this;
   }
@@ -79,21 +82,21 @@ public class Connectionsv3StreamingConfigs {
     return this;
   }
 
-   /**
+  /**
    * Accounts information.
    * @return accountConfigs
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3AccountConfig> getAccountConfigs() {
     return accountConfigs;
   }
 
-  public void setAccountConfigs(List<Connectionsv3AccountConfig> accountConfigs) {
+  public void setAccountConfigs(@javax.annotation.Nullable List<Connectionsv3AccountConfig> accountConfigs) {
     this.accountConfigs = accountConfigs;
   }
 
 
-  public Connectionsv3StreamingConfigs instanceConfigs(List<Connectionsv3StreamConnectionConfig> instanceConfigs) {
+  public Connectionsv3StreamingConfigs instanceConfigs(@javax.annotation.Nullable List<Connectionsv3StreamConnectionConfig> instanceConfigs) {
     this.instanceConfigs = instanceConfigs;
     return this;
   }
@@ -106,16 +109,16 @@ public class Connectionsv3StreamingConfigs {
     return this;
   }
 
-   /**
+  /**
    * Streaming connections information.
    * @return instanceConfigs
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3StreamConnectionConfig> getInstanceConfigs() {
     return instanceConfigs;
   }
 
-  public void setInstanceConfigs(List<Connectionsv3StreamConnectionConfig> instanceConfigs) {
+  public void setInstanceConfigs(@javax.annotation.Nullable List<Connectionsv3StreamConnectionConfig> instanceConfigs) {
     this.instanceConfigs = instanceConfigs;
   }
 
@@ -166,24 +169,22 @@ public class Connectionsv3StreamingConfigs {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("account_configs");
-    openapiFields.add("instance_configs");
+    openapiFields = new HashSet<String>(Arrays.asList("account_configs", "instance_configs"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3StreamingConfigs
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3StreamingConfigs
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3StreamingConfigs.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3StreamingConfigs is not found in the empty JSON string", Connectionsv3StreamingConfigs.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3StreamingConfigs is not found in the empty JSON string", Connectionsv3StreamingConfigs.openapiRequiredFields.toString()));
         }
       }
 
@@ -191,7 +192,7 @@ public class Connectionsv3StreamingConfigs {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3StreamingConfigs.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3StreamingConfigs` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3StreamingConfigs` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -200,7 +201,7 @@ public class Connectionsv3StreamingConfigs {
         if (jsonArrayaccountConfigs != null) {
           // ensure the json data is an array
           if (!jsonObj.get("account_configs").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `account_configs` to be an array in the JSON string but got `%s`", jsonObj.get("account_configs").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `account_configs` to be an array in the JSON string but got `%s`", jsonObj.get("account_configs").toString()));
           }
 
           // validate the optional field `account_configs` (array)
@@ -214,7 +215,7 @@ public class Connectionsv3StreamingConfigs {
         if (jsonArrayinstanceConfigs != null) {
           // ensure the json data is an array
           if (!jsonObj.get("instance_configs").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `instance_configs` to be an array in the JSON string but got `%s`", jsonObj.get("instance_configs").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `instance_configs` to be an array in the JSON string but got `%s`", jsonObj.get("instance_configs").toString()));
           }
 
           // validate the optional field `instance_configs` (array)
@@ -254,22 +255,22 @@ public class Connectionsv3StreamingConfigs {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3StreamingConfigs given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3StreamingConfigs
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3StreamingConfigs
-  */
+  /**
+   * Create an instance of Connectionsv3StreamingConfigs given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3StreamingConfigs
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3StreamingConfigs
+   */
   public static Connectionsv3StreamingConfigs fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3StreamingConfigs.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3StreamingConfigs to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3StreamingConfigs to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

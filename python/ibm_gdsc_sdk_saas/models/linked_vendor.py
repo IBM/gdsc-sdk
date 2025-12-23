@@ -79,9 +79,9 @@ class LinkedVendor(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in sensitivity_summary (list)
         _items = []
         if self.sensitivity_summary:
-            for _item in self.sensitivity_summary:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_sensitivity_summary in self.sensitivity_summary:
+                if _item_sensitivity_summary:
+                    _items.append(_item_sensitivity_summary.to_dict())
             _dict['sensitivitySummary'] = _items
         return _dict
 

@@ -73,9 +73,9 @@ class Assetsv3AssetRiskEvents(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in asset_open_risk_event_list (list)
         _items = []
         if self.asset_open_risk_event_list:
-            for _item in self.asset_open_risk_event_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_asset_open_risk_event_list in self.asset_open_risk_event_list:
+                if _item_asset_open_risk_event_list:
+                    _items.append(_item_asset_open_risk_event_list.to_dict())
             _dict['asset_open_risk_event_list'] = _items
         return _dict
 

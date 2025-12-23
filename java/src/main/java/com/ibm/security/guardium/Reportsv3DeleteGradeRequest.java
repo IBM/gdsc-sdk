@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DeleteGradeRequest is the request for deleting a grade.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3DeleteGradeRequest {
   public static final String SERIALIZED_NAME_GRADE_ID = "grade_id";
   @SerializedName(SERIALIZED_NAME_GRADE_ID)
+  @javax.annotation.Nullable
   private Integer gradeId;
 
   public Reportsv3DeleteGradeRequest() {
   }
 
-  public Reportsv3DeleteGradeRequest gradeId(Integer gradeId) {
+  public Reportsv3DeleteGradeRequest gradeId(@javax.annotation.Nullable Integer gradeId) {
     this.gradeId = gradeId;
     return this;
   }
 
-   /**
+  /**
    * The id of the grade to be deleted.
    * @return gradeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGradeId() {
     return gradeId;
   }
 
-  public void setGradeId(Integer gradeId) {
+  public void setGradeId(@javax.annotation.Nullable Integer gradeId) {
     this.gradeId = gradeId;
   }
 
@@ -121,23 +123,22 @@ public class Reportsv3DeleteGradeRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("grade_id");
+    openapiFields = new HashSet<String>(Arrays.asList("grade_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3DeleteGradeRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3DeleteGradeRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3DeleteGradeRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3DeleteGradeRequest is not found in the empty JSON string", Reportsv3DeleteGradeRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3DeleteGradeRequest is not found in the empty JSON string", Reportsv3DeleteGradeRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -145,7 +146,7 @@ public class Reportsv3DeleteGradeRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3DeleteGradeRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3DeleteGradeRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3DeleteGradeRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -180,22 +181,22 @@ public class Reportsv3DeleteGradeRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3DeleteGradeRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3DeleteGradeRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3DeleteGradeRequest
-  */
+  /**
+   * Create an instance of Reportsv3DeleteGradeRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3DeleteGradeRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3DeleteGradeRequest
+   */
   public static Reportsv3DeleteGradeRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3DeleteGradeRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3DeleteGradeRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3DeleteGradeRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

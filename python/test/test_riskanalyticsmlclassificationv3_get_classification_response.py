@@ -27,7 +27,7 @@ class TestRiskanalyticsmlclassificationv3GetClassificationResponse(unittest.Test
 
     def make_instance(self, include_optional) -> Riskanalyticsmlclassificationv3GetClassificationResponse:
         """Test Riskanalyticsmlclassificationv3GetClassificationResponse
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Riskanalyticsmlclassificationv3GetClassificationResponse`

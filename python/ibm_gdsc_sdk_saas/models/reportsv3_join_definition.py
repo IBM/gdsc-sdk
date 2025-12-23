@@ -76,9 +76,9 @@ class Reportsv3JoinDefinition(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in header_pair_list (list)
         _items = []
         if self.header_pair_list:
-            for _item in self.header_pair_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_header_pair_list in self.header_pair_list:
+                if _item_header_pair_list:
+                    _items.append(_item_header_pair_list.to_dict())
             _dict['header_pair_list'] = _items
         return _dict
 

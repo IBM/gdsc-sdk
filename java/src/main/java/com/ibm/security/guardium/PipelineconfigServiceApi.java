@@ -81,13 +81,14 @@ public class PipelineconfigServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pipelineconfigServiceDeleteTenantResourcesCall(String tenantId, String resource, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call pipelineconfigServiceDeleteTenantResourcesCall(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nonnull String resource, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -134,7 +135,7 @@ public class PipelineconfigServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call pipelineconfigServiceDeleteTenantResourcesValidateBeforeCall(String tenantId, String resource, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call pipelineconfigServiceDeleteTenantResourcesValidateBeforeCall(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nonnull String resource, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tenantId' is set
         if (tenantId == null) {
             throw new ApiException("Missing the required parameter 'tenantId' when calling pipelineconfigServiceDeleteTenantResources(Async)");
@@ -157,13 +158,14 @@ public class PipelineconfigServiceApi {
      * @return Pipelineconfigv3DeleteTenantResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Pipelineconfigv3DeleteTenantResponse pipelineconfigServiceDeleteTenantResources(String tenantId, String resource) throws ApiException {
+    public Pipelineconfigv3DeleteTenantResponse pipelineconfigServiceDeleteTenantResources(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nonnull String resource) throws ApiException {
         ApiResponse<Pipelineconfigv3DeleteTenantResponse> localVarResp = pipelineconfigServiceDeleteTenantResourcesWithHttpInfo(tenantId, resource);
         return localVarResp.getData();
     }
@@ -176,13 +178,14 @@ public class PipelineconfigServiceApi {
      * @return ApiResponse&lt;Pipelineconfigv3DeleteTenantResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Pipelineconfigv3DeleteTenantResponse> pipelineconfigServiceDeleteTenantResourcesWithHttpInfo(String tenantId, String resource) throws ApiException {
+    public ApiResponse<Pipelineconfigv3DeleteTenantResponse> pipelineconfigServiceDeleteTenantResourcesWithHttpInfo(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nonnull String resource) throws ApiException {
         okhttp3.Call localVarCall = pipelineconfigServiceDeleteTenantResourcesValidateBeforeCall(tenantId, resource, null);
         Type localVarReturnType = new TypeToken<Pipelineconfigv3DeleteTenantResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -197,13 +200,14 @@ public class PipelineconfigServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pipelineconfigServiceDeleteTenantResourcesAsync(String tenantId, String resource, final ApiCallback<Pipelineconfigv3DeleteTenantResponse> _callback) throws ApiException {
+    public okhttp3.Call pipelineconfigServiceDeleteTenantResourcesAsync(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nonnull String resource, final ApiCallback<Pipelineconfigv3DeleteTenantResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = pipelineconfigServiceDeleteTenantResourcesValidateBeforeCall(tenantId, resource, _callback);
         Type localVarReturnType = new TypeToken<Pipelineconfigv3DeleteTenantResponse>(){}.getType();

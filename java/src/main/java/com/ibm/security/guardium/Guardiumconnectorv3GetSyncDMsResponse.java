@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetSyncDMsResponse returns the array of param name/value pairs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3GetSyncDMsResponse {
   public static final String SERIALIZED_NAME_PARAMS = "params";
   @SerializedName(SERIALIZED_NAME_PARAMS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3Params> params = new ArrayList<>();
 
   public Guardiumconnectorv3GetSyncDMsResponse() {
   }
 
-  public Guardiumconnectorv3GetSyncDMsResponse params(List<Guardiumconnectorv3Params> params) {
+  public Guardiumconnectorv3GetSyncDMsResponse params(@javax.annotation.Nullable List<Guardiumconnectorv3Params> params) {
     this.params = params;
     return this;
   }
@@ -74,16 +76,16 @@ public class Guardiumconnectorv3GetSyncDMsResponse {
     return this;
   }
 
-   /**
+  /**
    * Array of key value pair parameters.
    * @return params
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3Params> getParams() {
     return params;
   }
 
-  public void setParams(List<Guardiumconnectorv3Params> params) {
+  public void setParams(@javax.annotation.Nullable List<Guardiumconnectorv3Params> params) {
     this.params = params;
   }
 
@@ -132,23 +134,22 @@ public class Guardiumconnectorv3GetSyncDMsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("params");
+    openapiFields = new HashSet<String>(Arrays.asList("params"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3GetSyncDMsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3GetSyncDMsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3GetSyncDMsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3GetSyncDMsResponse is not found in the empty JSON string", Guardiumconnectorv3GetSyncDMsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3GetSyncDMsResponse is not found in the empty JSON string", Guardiumconnectorv3GetSyncDMsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Guardiumconnectorv3GetSyncDMsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3GetSyncDMsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3GetSyncDMsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3GetSyncDMsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Guardiumconnectorv3GetSyncDMsResponse {
         if (jsonArrayparams != null) {
           // ensure the json data is an array
           if (!jsonObj.get("params").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `params` to be an array in the JSON string but got `%s`", jsonObj.get("params").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `params` to be an array in the JSON string but got `%s`", jsonObj.get("params").toString()));
           }
 
           // validate the optional field `params` (array)
@@ -205,22 +206,22 @@ public class Guardiumconnectorv3GetSyncDMsResponse {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3GetSyncDMsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3GetSyncDMsResponse
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3GetSyncDMsResponse
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3GetSyncDMsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3GetSyncDMsResponse
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3GetSyncDMsResponse
+   */
   public static Guardiumconnectorv3GetSyncDMsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3GetSyncDMsResponse.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3GetSyncDMsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3GetSyncDMsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

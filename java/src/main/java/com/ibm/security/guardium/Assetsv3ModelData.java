@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,111 +38,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3ModelData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3ModelData {
   public static final String SERIALIZED_NAME_RESOURCE_LOCATION = "resource_location";
   @SerializedName(SERIALIZED_NAME_RESOURCE_LOCATION)
+  @javax.annotation.Nullable
   private String resourceLocation;
 
   public static final String SERIALIZED_NAME_RESOURCE_NAME = "resource_name";
   @SerializedName(SERIALIZED_NAME_RESOURCE_NAME)
+  @javax.annotation.Nullable
   private String resourceName;
 
   public static final String SERIALIZED_NAME_RESOURCE_SIZE = "resource_size";
   @SerializedName(SERIALIZED_NAME_RESOURCE_SIZE)
+  @javax.annotation.Nullable
   private String resourceSize;
 
   public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resource_type";
   @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)
+  @javax.annotation.Nullable
   private String resourceType;
 
   public Assetsv3ModelData() {
   }
 
-  public Assetsv3ModelData resourceLocation(String resourceLocation) {
+  public Assetsv3ModelData resourceLocation(@javax.annotation.Nullable String resourceLocation) {
     this.resourceLocation = resourceLocation;
     return this;
   }
 
-   /**
+  /**
    * Get resourceLocation
    * @return resourceLocation
-  **/
+   */
   @javax.annotation.Nullable
   public String getResourceLocation() {
     return resourceLocation;
   }
 
-  public void setResourceLocation(String resourceLocation) {
+  public void setResourceLocation(@javax.annotation.Nullable String resourceLocation) {
     this.resourceLocation = resourceLocation;
   }
 
 
-  public Assetsv3ModelData resourceName(String resourceName) {
+  public Assetsv3ModelData resourceName(@javax.annotation.Nullable String resourceName) {
     this.resourceName = resourceName;
     return this;
   }
 
-   /**
+  /**
    * Get resourceName
    * @return resourceName
-  **/
+   */
   @javax.annotation.Nullable
   public String getResourceName() {
     return resourceName;
   }
 
-  public void setResourceName(String resourceName) {
+  public void setResourceName(@javax.annotation.Nullable String resourceName) {
     this.resourceName = resourceName;
   }
 
 
-  public Assetsv3ModelData resourceSize(String resourceSize) {
+  public Assetsv3ModelData resourceSize(@javax.annotation.Nullable String resourceSize) {
     this.resourceSize = resourceSize;
     return this;
   }
 
-   /**
+  /**
    * Get resourceSize
    * @return resourceSize
-  **/
+   */
   @javax.annotation.Nullable
   public String getResourceSize() {
     return resourceSize;
   }
 
-  public void setResourceSize(String resourceSize) {
+  public void setResourceSize(@javax.annotation.Nullable String resourceSize) {
     this.resourceSize = resourceSize;
   }
 
 
-  public Assetsv3ModelData resourceType(String resourceType) {
+  public Assetsv3ModelData resourceType(@javax.annotation.Nullable String resourceType) {
     this.resourceType = resourceType;
     return this;
   }
 
-   /**
+  /**
    * Get resourceType
    * @return resourceType
-  **/
+   */
   @javax.annotation.Nullable
   public String getResourceType() {
     return resourceType;
   }
 
-  public void setResourceType(String resourceType) {
+  public void setResourceType(@javax.annotation.Nullable String resourceType) {
     this.resourceType = resourceType;
   }
 
@@ -196,26 +201,22 @@ public class Assetsv3ModelData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("resource_location");
-    openapiFields.add("resource_name");
-    openapiFields.add("resource_size");
-    openapiFields.add("resource_type");
+    openapiFields = new HashSet<String>(Arrays.asList("resource_location", "resource_name", "resource_size", "resource_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3ModelData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3ModelData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3ModelData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3ModelData is not found in the empty JSON string", Assetsv3ModelData.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3ModelData is not found in the empty JSON string", Assetsv3ModelData.openapiRequiredFields.toString()));
         }
       }
 
@@ -223,21 +224,21 @@ public class Assetsv3ModelData {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3ModelData.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3ModelData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3ModelData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("resource_location") != null && !jsonObj.get("resource_location").isJsonNull()) && !jsonObj.get("resource_location").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resource_location` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resource_location").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resource_location` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resource_location").toString()));
       }
       if ((jsonObj.get("resource_name") != null && !jsonObj.get("resource_name").isJsonNull()) && !jsonObj.get("resource_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resource_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resource_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resource_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resource_name").toString()));
       }
       if ((jsonObj.get("resource_size") != null && !jsonObj.get("resource_size").isJsonNull()) && !jsonObj.get("resource_size").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resource_size` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resource_size").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resource_size` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resource_size").toString()));
       }
       if ((jsonObj.get("resource_type") != null && !jsonObj.get("resource_type").isJsonNull()) && !jsonObj.get("resource_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resource_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resource_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resource_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resource_type").toString()));
       }
   }
 
@@ -270,22 +271,22 @@ public class Assetsv3ModelData {
     }
   }
 
- /**
-  * Create an instance of Assetsv3ModelData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3ModelData
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3ModelData
-  */
+  /**
+   * Create an instance of Assetsv3ModelData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3ModelData
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3ModelData
+   */
   public static Assetsv3ModelData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3ModelData.class);
   }
 
- /**
-  * Convert an instance of Assetsv3ModelData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3ModelData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

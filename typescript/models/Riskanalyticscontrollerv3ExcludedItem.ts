@@ -25,6 +25,8 @@ export class Riskanalyticscontrollerv3ExcludedItem {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "excludedItemType",
@@ -46,6 +48,5 @@ export class Riskanalyticscontrollerv3ExcludedItem {
     public constructor() {
     }
 }
-
 
 

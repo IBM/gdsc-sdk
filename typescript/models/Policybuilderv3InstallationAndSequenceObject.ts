@@ -32,6 +32,8 @@ export class Policybuilderv3InstallationAndSequenceObject {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "edgeIdentifier",
@@ -65,4 +67,3 @@ export class Policybuilderv3InstallationAndSequenceObject {
     public constructor() {
     }
 }
-

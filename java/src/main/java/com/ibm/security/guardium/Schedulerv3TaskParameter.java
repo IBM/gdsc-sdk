@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,65 +40,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * TaskParameter includes all the parameters needed to run a job, add different job runtime parameters here.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3TaskParameter {
   public static final String SERIALIZED_NAME_DATA_IMPORT_PARAMETER = "data_import_parameter";
   @SerializedName(SERIALIZED_NAME_DATA_IMPORT_PARAMETER)
+  @javax.annotation.Nullable
   private Schedulerv3IntegrationParameter dataImportParameter;
 
   public static final String SERIALIZED_NAME_REPORT_PARAMETER = "report_parameter";
   @SerializedName(SERIALIZED_NAME_REPORT_PARAMETER)
+  @javax.annotation.Nullable
   private Schedulerv3ReportParameter reportParameter;
 
   public Schedulerv3TaskParameter() {
   }
 
-  public Schedulerv3TaskParameter dataImportParameter(Schedulerv3IntegrationParameter dataImportParameter) {
+  public Schedulerv3TaskParameter dataImportParameter(@javax.annotation.Nullable Schedulerv3IntegrationParameter dataImportParameter) {
     this.dataImportParameter = dataImportParameter;
     return this;
   }
 
-   /**
+  /**
    * Get dataImportParameter
    * @return dataImportParameter
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3IntegrationParameter getDataImportParameter() {
     return dataImportParameter;
   }
 
-  public void setDataImportParameter(Schedulerv3IntegrationParameter dataImportParameter) {
+  public void setDataImportParameter(@javax.annotation.Nullable Schedulerv3IntegrationParameter dataImportParameter) {
     this.dataImportParameter = dataImportParameter;
   }
 
 
-  public Schedulerv3TaskParameter reportParameter(Schedulerv3ReportParameter reportParameter) {
+  public Schedulerv3TaskParameter reportParameter(@javax.annotation.Nullable Schedulerv3ReportParameter reportParameter) {
     this.reportParameter = reportParameter;
     return this;
   }
 
-   /**
+  /**
    * Get reportParameter
    * @return reportParameter
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3ReportParameter getReportParameter() {
     return reportParameter;
   }
 
-  public void setReportParameter(Schedulerv3ReportParameter reportParameter) {
+  public void setReportParameter(@javax.annotation.Nullable Schedulerv3ReportParameter reportParameter) {
     this.reportParameter = reportParameter;
   }
 
@@ -148,24 +151,22 @@ public class Schedulerv3TaskParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("data_import_parameter");
-    openapiFields.add("report_parameter");
+    openapiFields = new HashSet<String>(Arrays.asList("data_import_parameter", "report_parameter"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3TaskParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3TaskParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3TaskParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3TaskParameter is not found in the empty JSON string", Schedulerv3TaskParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3TaskParameter is not found in the empty JSON string", Schedulerv3TaskParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -173,7 +174,7 @@ public class Schedulerv3TaskParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3TaskParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3TaskParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3TaskParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -216,22 +217,22 @@ public class Schedulerv3TaskParameter {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3TaskParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3TaskParameter
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3TaskParameter
-  */
+  /**
+   * Create an instance of Schedulerv3TaskParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3TaskParameter
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3TaskParameter
+   */
   public static Schedulerv3TaskParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3TaskParameter.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3TaskParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3TaskParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

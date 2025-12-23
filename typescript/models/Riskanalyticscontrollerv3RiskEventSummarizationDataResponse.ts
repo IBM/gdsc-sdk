@@ -25,6 +25,8 @@ export class Riskanalyticscontrollerv3RiskEventSummarizationDataResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "formerHours",
@@ -52,4 +54,3 @@ export class Riskanalyticscontrollerv3RiskEventSummarizationDataResponse {
     public constructor() {
     }
 }
-

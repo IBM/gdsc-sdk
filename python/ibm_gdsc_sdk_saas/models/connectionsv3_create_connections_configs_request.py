@@ -31,7 +31,7 @@ class Connectionsv3CreateConnectionsConfigsRequest(BaseModel):
     """ # noqa: E501
     connection_id: Optional[StrictStr] = Field(default=None, description="Optional: connection id.")
     stream_connection: Optional[Connectionsv3StreamConnection] = None
-    type: Optional[Connectionsv3ConnectorType] = None
+    type: Optional[Connectionsv3ConnectorType] = Connectionsv3ConnectorType.UNDEFINED_TYPE
     uc_connection: Optional[Connectionsv3UCConnectionSummary] = None
     __properties: ClassVar[List[str]] = ["connection_id", "stream_connection", "type", "uc_connection"]
 
@@ -94,7 +94,7 @@ class Connectionsv3CreateConnectionsConfigsRequest(BaseModel):
         _obj = cls.model_validate({
             "connection_id": obj.get("connection_id"),
             "stream_connection": Connectionsv3StreamConnection.from_dict(obj["stream_connection"]) if obj.get("stream_connection") is not None else None,
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Connectionsv3ConnectorType.UNDEFINED_TYPE,
             "uc_connection": Connectionsv3UCConnectionSummary.from_dict(obj["uc_connection"]) if obj.get("uc_connection") is not None else None
         })
         return _obj

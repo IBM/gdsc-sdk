@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,74 +41,77 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3CompareCSVResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3CompareCSVResponse {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nullable
   private String count;
 
   public static final String SERIALIZED_NAME_EXISTING_COUNT = "existing_count";
   @SerializedName(SERIALIZED_NAME_EXISTING_COUNT)
+  @javax.annotation.Nullable
   private String existingCount;
 
   public static final String SERIALIZED_NAME_ROWS = "rows";
   @SerializedName(SERIALIZED_NAME_ROWS)
+  @javax.annotation.Nullable
   private List<Assetsv3CSVRow> rows = new ArrayList<>();
 
   public Assetsv3CompareCSVResponse() {
   }
 
-  public Assetsv3CompareCSVResponse count(String count) {
+  public Assetsv3CompareCSVResponse count(@javax.annotation.Nullable String count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Get count
    * @return count
-  **/
+   */
   @javax.annotation.Nullable
   public String getCount() {
     return count;
   }
 
-  public void setCount(String count) {
+  public void setCount(@javax.annotation.Nullable String count) {
     this.count = count;
   }
 
 
-  public Assetsv3CompareCSVResponse existingCount(String existingCount) {
+  public Assetsv3CompareCSVResponse existingCount(@javax.annotation.Nullable String existingCount) {
     this.existingCount = existingCount;
     return this;
   }
 
-   /**
+  /**
    * Get existingCount
    * @return existingCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getExistingCount() {
     return existingCount;
   }
 
-  public void setExistingCount(String existingCount) {
+  public void setExistingCount(@javax.annotation.Nullable String existingCount) {
     this.existingCount = existingCount;
   }
 
 
-  public Assetsv3CompareCSVResponse rows(List<Assetsv3CSVRow> rows) {
+  public Assetsv3CompareCSVResponse rows(@javax.annotation.Nullable List<Assetsv3CSVRow> rows) {
     this.rows = rows;
     return this;
   }
@@ -120,16 +124,16 @@ public class Assetsv3CompareCSVResponse {
     return this;
   }
 
-   /**
+  /**
    * Get rows
    * @return rows
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3CSVRow> getRows() {
     return rows;
   }
 
-  public void setRows(List<Assetsv3CSVRow> rows) {
+  public void setRows(@javax.annotation.Nullable List<Assetsv3CSVRow> rows) {
     this.rows = rows;
   }
 
@@ -182,25 +186,22 @@ public class Assetsv3CompareCSVResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("count");
-    openapiFields.add("existing_count");
-    openapiFields.add("rows");
+    openapiFields = new HashSet<String>(Arrays.asList("count", "existing_count", "rows"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3CompareCSVResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3CompareCSVResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3CompareCSVResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3CompareCSVResponse is not found in the empty JSON string", Assetsv3CompareCSVResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3CompareCSVResponse is not found in the empty JSON string", Assetsv3CompareCSVResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,22 +209,22 @@ public class Assetsv3CompareCSVResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3CompareCSVResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3CompareCSVResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3CompareCSVResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("count") != null && !jsonObj.get("count").isJsonNull()) && !jsonObj.get("count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("count").toString()));
       }
       if ((jsonObj.get("existing_count") != null && !jsonObj.get("existing_count").isJsonNull()) && !jsonObj.get("existing_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `existing_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("existing_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `existing_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("existing_count").toString()));
       }
       if (jsonObj.get("rows") != null && !jsonObj.get("rows").isJsonNull()) {
         JsonArray jsonArrayrows = jsonObj.getAsJsonArray("rows");
         if (jsonArrayrows != null) {
           // ensure the json data is an array
           if (!jsonObj.get("rows").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `rows` to be an array in the JSON string but got `%s`", jsonObj.get("rows").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rows` to be an array in the JSON string but got `%s`", jsonObj.get("rows").toString()));
           }
 
           // validate the optional field `rows` (array)
@@ -263,22 +264,22 @@ public class Assetsv3CompareCSVResponse {
     }
   }
 
- /**
-  * Create an instance of Assetsv3CompareCSVResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3CompareCSVResponse
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3CompareCSVResponse
-  */
+  /**
+   * Create an instance of Assetsv3CompareCSVResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3CompareCSVResponse
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3CompareCSVResponse
+   */
   public static Assetsv3CompareCSVResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3CompareCSVResponse.class);
   }
 
- /**
-  * Convert an instance of Assetsv3CompareCSVResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3CompareCSVResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

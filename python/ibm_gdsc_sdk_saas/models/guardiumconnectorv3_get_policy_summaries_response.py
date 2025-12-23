@@ -74,9 +74,9 @@ class Guardiumconnectorv3GetPolicySummariesResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in policy_data (list)
         _items = []
         if self.policy_data:
-            for _item in self.policy_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_policy_data in self.policy_data:
+                if _item_policy_data:
+                    _items.append(_item_policy_data.to_dict())
             _dict['policy_data'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

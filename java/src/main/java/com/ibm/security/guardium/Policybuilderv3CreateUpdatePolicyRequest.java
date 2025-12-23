@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Message Object for creating or updating a policy request.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3CreateUpdatePolicyRequest {
   public static final String SERIALIZED_NAME_CAN_OVERRIDE_NAME = "can_override_name";
   @SerializedName(SERIALIZED_NAME_CAN_OVERRIDE_NAME)
+  @javax.annotation.Nullable
   private Boolean canOverrideName;
 
   public static final String SERIALIZED_NAME_POLICY_OBJECT = "policy_object";
   @SerializedName(SERIALIZED_NAME_POLICY_OBJECT)
+  @javax.annotation.Nullable
   private Policybuilderv3PolicyUpdate policyObject;
 
   public Policybuilderv3CreateUpdatePolicyRequest() {
   }
 
-  public Policybuilderv3CreateUpdatePolicyRequest canOverrideName(Boolean canOverrideName) {
+  public Policybuilderv3CreateUpdatePolicyRequest canOverrideName(@javax.annotation.Nullable Boolean canOverrideName) {
     this.canOverrideName = canOverrideName;
     return this;
   }
 
-   /**
+  /**
    * Get canOverrideName
    * @return canOverrideName
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getCanOverrideName() {
     return canOverrideName;
   }
 
-  public void setCanOverrideName(Boolean canOverrideName) {
+  public void setCanOverrideName(@javax.annotation.Nullable Boolean canOverrideName) {
     this.canOverrideName = canOverrideName;
   }
 
 
-  public Policybuilderv3CreateUpdatePolicyRequest policyObject(Policybuilderv3PolicyUpdate policyObject) {
+  public Policybuilderv3CreateUpdatePolicyRequest policyObject(@javax.annotation.Nullable Policybuilderv3PolicyUpdate policyObject) {
     this.policyObject = policyObject;
     return this;
   }
 
-   /**
+  /**
    * Get policyObject
    * @return policyObject
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3PolicyUpdate getPolicyObject() {
     return policyObject;
   }
 
-  public void setPolicyObject(Policybuilderv3PolicyUpdate policyObject) {
+  public void setPolicyObject(@javax.annotation.Nullable Policybuilderv3PolicyUpdate policyObject) {
     this.policyObject = policyObject;
   }
 
@@ -147,24 +150,22 @@ public class Policybuilderv3CreateUpdatePolicyRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("can_override_name");
-    openapiFields.add("policy_object");
+    openapiFields = new HashSet<String>(Arrays.asList("can_override_name", "policy_object"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3CreateUpdatePolicyRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3CreateUpdatePolicyRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3CreateUpdatePolicyRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3CreateUpdatePolicyRequest is not found in the empty JSON string", Policybuilderv3CreateUpdatePolicyRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3CreateUpdatePolicyRequest is not found in the empty JSON string", Policybuilderv3CreateUpdatePolicyRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,7 +173,7 @@ public class Policybuilderv3CreateUpdatePolicyRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3CreateUpdatePolicyRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3CreateUpdatePolicyRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3CreateUpdatePolicyRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -211,22 +212,22 @@ public class Policybuilderv3CreateUpdatePolicyRequest {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3CreateUpdatePolicyRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3CreateUpdatePolicyRequest
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3CreateUpdatePolicyRequest
-  */
+  /**
+   * Create an instance of Policybuilderv3CreateUpdatePolicyRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3CreateUpdatePolicyRequest
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3CreateUpdatePolicyRequest
+   */
   public static Policybuilderv3CreateUpdatePolicyRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3CreateUpdatePolicyRequest.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3CreateUpdatePolicyRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3CreateUpdatePolicyRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

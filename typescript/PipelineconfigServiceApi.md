@@ -15,22 +15,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PipelineconfigServiceApi } from '';
+import type { PipelineconfigServiceApiPipelineconfigServiceDeleteTenantResourcesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PipelineconfigServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PipelineconfigServiceApi(configuration);
 
-let body:.PipelineconfigServiceApiPipelineconfigServiceDeleteTenantResourcesRequest = {
-  // string | unique tenant ID
+const request: PipelineconfigServiceApiPipelineconfigServiceDeleteTenantResourcesRequest = {
+    // unique tenant ID
   tenantId: "tenant_id_example",
-  // string | resource specifies the specific resource to delete
+    // resource specifies the specific resource to delete
   resource: "resource_example",
 };
 
-apiInstance.pipelineconfigServiceDeleteTenantResources(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.pipelineconfigServiceDeleteTenantResources(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

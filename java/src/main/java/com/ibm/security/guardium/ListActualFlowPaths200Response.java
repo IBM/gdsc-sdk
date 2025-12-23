@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ListActualFlowPaths200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ListActualFlowPaths200Response {
   public static final String SERIALIZED_NAME_RESULTS = "results";
   @SerializedName(SERIALIZED_NAME_RESULTS)
+  @javax.annotation.Nonnull
   private List<ActualFlowPath> results = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NEXT_TOKEN = "nextToken";
   @SerializedName(SERIALIZED_NAME_NEXT_TOKEN)
+  @javax.annotation.Nullable
   private String nextToken;
 
   public ListActualFlowPaths200Response() {
   }
 
-  public ListActualFlowPaths200Response results(List<ActualFlowPath> results) {
+  public ListActualFlowPaths200Response results(@javax.annotation.Nonnull List<ActualFlowPath> results) {
     this.results = results;
     return this;
   }
@@ -78,35 +81,35 @@ public class ListActualFlowPaths200Response {
     return this;
   }
 
-   /**
+  /**
    * Get results
    * @return results
-  **/
+   */
   @javax.annotation.Nonnull
   public List<ActualFlowPath> getResults() {
     return results;
   }
 
-  public void setResults(List<ActualFlowPath> results) {
+  public void setResults(@javax.annotation.Nonnull List<ActualFlowPath> results) {
     this.results = results;
   }
 
 
-  public ListActualFlowPaths200Response nextToken(String nextToken) {
+  public ListActualFlowPaths200Response nextToken(@javax.annotation.Nullable String nextToken) {
     this.nextToken = nextToken;
     return this;
   }
 
-   /**
+  /**
    * Get nextToken
    * @return nextToken
-  **/
+   */
   @javax.annotation.Nullable
   public String getNextToken() {
     return nextToken;
   }
 
-  public void setNextToken(String nextToken) {
+  public void setNextToken(@javax.annotation.Nullable String nextToken) {
     this.nextToken = nextToken;
   }
 
@@ -157,26 +160,22 @@ public class ListActualFlowPaths200Response {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("results");
-    openapiFields.add("nextToken");
+    openapiFields = new HashSet<String>(Arrays.asList("results", "nextToken"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("results");
-    openapiRequiredFields.add("nextToken");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("results", "nextToken"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ListActualFlowPaths200Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ListActualFlowPaths200Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ListActualFlowPaths200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListActualFlowPaths200Response is not found in the empty JSON string", ListActualFlowPaths200Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ListActualFlowPaths200Response is not found in the empty JSON string", ListActualFlowPaths200Response.openapiRequiredFields.toString()));
         }
       }
 
@@ -184,20 +183,20 @@ public class ListActualFlowPaths200Response {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ListActualFlowPaths200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListActualFlowPaths200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ListActualFlowPaths200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ListActualFlowPaths200Response.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("results").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `results` to be an array in the JSON string but got `%s`", jsonObj.get("results").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `results` to be an array in the JSON string but got `%s`", jsonObj.get("results").toString()));
       }
 
       JsonArray jsonArrayresults = jsonObj.getAsJsonArray("results");
@@ -206,7 +205,7 @@ public class ListActualFlowPaths200Response {
         ActualFlowPath.validateJsonElement(jsonArrayresults.get(i));
       };
       if ((jsonObj.get("nextToken") != null && !jsonObj.get("nextToken").isJsonNull()) && !jsonObj.get("nextToken").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `nextToken` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nextToken").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nextToken` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nextToken").toString()));
       }
   }
 
@@ -239,22 +238,22 @@ public class ListActualFlowPaths200Response {
     }
   }
 
- /**
-  * Create an instance of ListActualFlowPaths200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListActualFlowPaths200Response
-  * @throws IOException if the JSON string is invalid with respect to ListActualFlowPaths200Response
-  */
+  /**
+   * Create an instance of ListActualFlowPaths200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ListActualFlowPaths200Response
+   * @throws IOException if the JSON string is invalid with respect to ListActualFlowPaths200Response
+   */
   public static ListActualFlowPaths200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ListActualFlowPaths200Response.class);
   }
 
- /**
-  * Convert an instance of ListActualFlowPaths200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ListActualFlowPaths200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **pivot** | [**Riskanalyticsenginev3Pivot**](Riskanalyticsenginev3Pivot.md) |  | [optional] 
 **score** | **float** | The lead score (normalized score between 0 and 1). | [optional] 
 **severity** | **int** | Lead severity. | [optional] 
-**type** | [**Riskanalyticsenginev3LeadType**](Riskanalyticsenginev3LeadType.md) |  | [optional] 
+**type** | [**Riskanalyticsenginev3LeadType**](Riskanalyticsenginev3LeadType.md) |  | [optional] [default to Riskanalyticsenginev3LeadType.UNDEFINED_LEAD_TYPE]
 
 ## Example
 

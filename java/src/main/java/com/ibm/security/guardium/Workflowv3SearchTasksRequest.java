@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,180 +40,187 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Request cases by filtering on specific values.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3SearchTasksRequest {
   public static final String SERIALIZED_NAME_CASE_ID = "case_id";
   @SerializedName(SERIALIZED_NAME_CASE_ID)
+  @javax.annotation.Nullable
   private String caseId;
 
   public static final String SERIALIZED_NAME_FILTER = "filter";
   @SerializedName(SERIALIZED_NAME_FILTER)
+  @javax.annotation.Nullable
   private Workflowv3Filter filter;
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
+  @javax.annotation.Nullable
   private Integer limit;
 
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
+  @javax.annotation.Nullable
   private Integer offset;
 
   public static final String SERIALIZED_NAME_SORT_FIELD = "sort_field";
   @SerializedName(SERIALIZED_NAME_SORT_FIELD)
+  @javax.annotation.Nullable
   private String sortField;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sort_order";
   @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @javax.annotation.Nullable
   private Reportsv3OrderBy sortOrder = Reportsv3OrderBy.UNDEFINED_ORDER_BY;
 
   public static final String SERIALIZED_NAME_TASK_ID = "task_id";
   @SerializedName(SERIALIZED_NAME_TASK_ID)
+  @javax.annotation.Nullable
   private String taskId;
 
   public Workflowv3SearchTasksRequest() {
   }
 
-  public Workflowv3SearchTasksRequest caseId(String caseId) {
+  public Workflowv3SearchTasksRequest caseId(@javax.annotation.Nullable String caseId) {
     this.caseId = caseId;
     return this;
   }
 
-   /**
+  /**
    * Get caseId
    * @return caseId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCaseId() {
     return caseId;
   }
 
-  public void setCaseId(String caseId) {
+  public void setCaseId(@javax.annotation.Nullable String caseId) {
     this.caseId = caseId;
   }
 
 
-  public Workflowv3SearchTasksRequest filter(Workflowv3Filter filter) {
+  public Workflowv3SearchTasksRequest filter(@javax.annotation.Nullable Workflowv3Filter filter) {
     this.filter = filter;
     return this;
   }
 
-   /**
+  /**
    * Get filter
    * @return filter
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3Filter getFilter() {
     return filter;
   }
 
-  public void setFilter(Workflowv3Filter filter) {
+  public void setFilter(@javax.annotation.Nullable Workflowv3Filter filter) {
     this.filter = filter;
   }
 
 
-  public Workflowv3SearchTasksRequest limit(Integer limit) {
+  public Workflowv3SearchTasksRequest limit(@javax.annotation.Nullable Integer limit) {
     this.limit = limit;
     return this;
   }
 
-   /**
+  /**
    * Optional: The max amount of cases to return for pagination.
    * @return limit
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getLimit() {
     return limit;
   }
 
-  public void setLimit(Integer limit) {
+  public void setLimit(@javax.annotation.Nullable Integer limit) {
     this.limit = limit;
   }
 
 
-  public Workflowv3SearchTasksRequest offset(Integer offset) {
+  public Workflowv3SearchTasksRequest offset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
     return this;
   }
 
-   /**
+  /**
    * Optional: The amount to offset the cases for pagination.
    * @return offset
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getOffset() {
     return offset;
   }
 
-  public void setOffset(Integer offset) {
+  public void setOffset(@javax.annotation.Nullable Integer offset) {
     this.offset = offset;
   }
 
 
-  public Workflowv3SearchTasksRequest sortField(String sortField) {
+  public Workflowv3SearchTasksRequest sortField(@javax.annotation.Nullable String sortField) {
     this.sortField = sortField;
     return this;
   }
 
-   /**
+  /**
    * Get sortField
    * @return sortField
-  **/
+   */
   @javax.annotation.Nullable
   public String getSortField() {
     return sortField;
   }
 
-  public void setSortField(String sortField) {
+  public void setSortField(@javax.annotation.Nullable String sortField) {
     this.sortField = sortField;
   }
 
 
-  public Workflowv3SearchTasksRequest sortOrder(Reportsv3OrderBy sortOrder) {
+  public Workflowv3SearchTasksRequest sortOrder(@javax.annotation.Nullable Reportsv3OrderBy sortOrder) {
     this.sortOrder = sortOrder;
     return this;
   }
 
-   /**
+  /**
    * Get sortOrder
    * @return sortOrder
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3OrderBy getSortOrder() {
     return sortOrder;
   }
 
-  public void setSortOrder(Reportsv3OrderBy sortOrder) {
+  public void setSortOrder(@javax.annotation.Nullable Reportsv3OrderBy sortOrder) {
     this.sortOrder = sortOrder;
   }
 
 
-  public Workflowv3SearchTasksRequest taskId(String taskId) {
+  public Workflowv3SearchTasksRequest taskId(@javax.annotation.Nullable String taskId) {
     this.taskId = taskId;
     return this;
   }
 
-   /**
+  /**
    * Get taskId
    * @return taskId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTaskId() {
     return taskId;
   }
 
-  public void setTaskId(String taskId) {
+  public void setTaskId(@javax.annotation.Nullable String taskId) {
     this.taskId = taskId;
   }
 
@@ -273,29 +281,22 @@ public class Workflowv3SearchTasksRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("case_id");
-    openapiFields.add("filter");
-    openapiFields.add("limit");
-    openapiFields.add("offset");
-    openapiFields.add("sort_field");
-    openapiFields.add("sort_order");
-    openapiFields.add("task_id");
+    openapiFields = new HashSet<String>(Arrays.asList("case_id", "filter", "limit", "offset", "sort_field", "sort_order", "task_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3SearchTasksRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3SearchTasksRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3SearchTasksRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3SearchTasksRequest is not found in the empty JSON string", Workflowv3SearchTasksRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3SearchTasksRequest is not found in the empty JSON string", Workflowv3SearchTasksRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -303,26 +304,26 @@ public class Workflowv3SearchTasksRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3SearchTasksRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3SearchTasksRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3SearchTasksRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("case_id") != null && !jsonObj.get("case_id").isJsonNull()) && !jsonObj.get("case_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `case_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("case_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `case_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("case_id").toString()));
       }
       // validate the optional field `filter`
       if (jsonObj.get("filter") != null && !jsonObj.get("filter").isJsonNull()) {
         Workflowv3Filter.validateJsonElement(jsonObj.get("filter"));
       }
       if ((jsonObj.get("sort_field") != null && !jsonObj.get("sort_field").isJsonNull()) && !jsonObj.get("sort_field").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sort_field` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sort_field").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sort_field` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sort_field").toString()));
       }
       // validate the optional field `sort_order`
       if (jsonObj.get("sort_order") != null && !jsonObj.get("sort_order").isJsonNull()) {
         Reportsv3OrderBy.validateJsonElement(jsonObj.get("sort_order"));
       }
       if ((jsonObj.get("task_id") != null && !jsonObj.get("task_id").isJsonNull()) && !jsonObj.get("task_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("task_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("task_id").toString()));
       }
   }
 
@@ -355,22 +356,22 @@ public class Workflowv3SearchTasksRequest {
     }
   }
 
- /**
-  * Create an instance of Workflowv3SearchTasksRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3SearchTasksRequest
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3SearchTasksRequest
-  */
+  /**
+   * Create an instance of Workflowv3SearchTasksRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3SearchTasksRequest
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3SearchTasksRequest
+   */
   public static Workflowv3SearchTasksRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3SearchTasksRequest.class);
   }
 
- /**
-  * Convert an instance of Workflowv3SearchTasksRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3SearchTasksRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

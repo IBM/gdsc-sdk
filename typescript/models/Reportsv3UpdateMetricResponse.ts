@@ -23,6 +23,8 @@ export class Reportsv3UpdateMetricResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "metricId",
@@ -38,4 +40,3 @@ export class Reportsv3UpdateMetricResponse {
     public constructor() {
     }
 }
-

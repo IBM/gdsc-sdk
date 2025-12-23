@@ -73,9 +73,9 @@ class Guardiumconnectorv3SetupDatamartsRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in datamarts (list)
         _items = []
         if self.datamarts:
-            for _item in self.datamarts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_datamarts in self.datamarts:
+                if _item_datamarts:
+                    _items.append(_item_datamarts.to_dict())
             _dict['datamarts'] = _items
         return _dict
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetClassificationListResponse for the GetClassificationsList api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsmlclassificationv3GetClassificationsListResponse {
   public static final String SERIALIZED_NAME_CLASSIFICATIONS = "classifications";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATIONS)
+  @javax.annotation.Nullable
   private List<Riskanalyticsmlclassificationv3ClassificationDefinition> classifications = new ArrayList<>();
 
   public Riskanalyticsmlclassificationv3GetClassificationsListResponse() {
   }
 
-  public Riskanalyticsmlclassificationv3GetClassificationsListResponse classifications(List<Riskanalyticsmlclassificationv3ClassificationDefinition> classifications) {
+  public Riskanalyticsmlclassificationv3GetClassificationsListResponse classifications(@javax.annotation.Nullable List<Riskanalyticsmlclassificationv3ClassificationDefinition> classifications) {
     this.classifications = classifications;
     return this;
   }
@@ -74,16 +76,16 @@ public class Riskanalyticsmlclassificationv3GetClassificationsListResponse {
     return this;
   }
 
-   /**
+  /**
    * Get classifications
    * @return classifications
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsmlclassificationv3ClassificationDefinition> getClassifications() {
     return classifications;
   }
 
-  public void setClassifications(List<Riskanalyticsmlclassificationv3ClassificationDefinition> classifications) {
+  public void setClassifications(@javax.annotation.Nullable List<Riskanalyticsmlclassificationv3ClassificationDefinition> classifications) {
     this.classifications = classifications;
   }
 
@@ -132,23 +134,22 @@ public class Riskanalyticsmlclassificationv3GetClassificationsListResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("classifications");
+    openapiFields = new HashSet<String>(Arrays.asList("classifications"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsmlclassificationv3GetClassificationsListResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsmlclassificationv3GetClassificationsListResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsmlclassificationv3GetClassificationsListResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsmlclassificationv3GetClassificationsListResponse is not found in the empty JSON string", Riskanalyticsmlclassificationv3GetClassificationsListResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsmlclassificationv3GetClassificationsListResponse is not found in the empty JSON string", Riskanalyticsmlclassificationv3GetClassificationsListResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Riskanalyticsmlclassificationv3GetClassificationsListResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsmlclassificationv3GetClassificationsListResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsmlclassificationv3GetClassificationsListResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsmlclassificationv3GetClassificationsListResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Riskanalyticsmlclassificationv3GetClassificationsListResponse {
         if (jsonArrayclassifications != null) {
           // ensure the json data is an array
           if (!jsonObj.get("classifications").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `classifications` to be an array in the JSON string but got `%s`", jsonObj.get("classifications").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `classifications` to be an array in the JSON string but got `%s`", jsonObj.get("classifications").toString()));
           }
 
           // validate the optional field `classifications` (array)
@@ -205,22 +206,22 @@ public class Riskanalyticsmlclassificationv3GetClassificationsListResponse {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsmlclassificationv3GetClassificationsListResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsmlclassificationv3GetClassificationsListResponse
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsmlclassificationv3GetClassificationsListResponse
-  */
+  /**
+   * Create an instance of Riskanalyticsmlclassificationv3GetClassificationsListResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsmlclassificationv3GetClassificationsListResponse
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsmlclassificationv3GetClassificationsListResponse
+   */
   public static Riskanalyticsmlclassificationv3GetClassificationsListResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsmlclassificationv3GetClassificationsListResponse.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsmlclassificationv3GetClassificationsListResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsmlclassificationv3GetClassificationsListResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -31,7 +31,7 @@ class Policybuilderv3PolicyUpdate(BaseModel):
     Create and update policy request message.
     """ # noqa: E501
     activation_status: Optional[StrictInt] = Field(default=None, description="Activation status identifier: 1001 -> install with no issues, 1002-> installed with issues, 1003 -> not installed.")
-    control_flow: Optional[Policybuilderv3ControlFlow] = None
+    control_flow: Optional[Policybuilderv3ControlFlow] = Policybuilderv3ControlFlow.STANDARD
     deleted_rule_ids: Optional[List[StrictStr]] = Field(default=None, description="The rule ids which are supposed to be deleted on a update policy request.", alias="deletedRuleIds")
     installed_flag: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether policy is installed or not.")
     installed_order: Optional[StrictInt] = Field(default=None, description="Variable to indicate the order of the installed policy.")
@@ -40,8 +40,8 @@ class Policybuilderv3PolicyUpdate(BaseModel):
     log_flat: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether the policy has log flat enabled or not.")
     policy_id: Optional[StrictStr] = Field(default=None, description="Policy Id.")
     policy_name: Optional[StrictStr] = Field(default=None, description="Policy Name.")
-    policy_type: Optional[Policybuilderv3PolicyType] = None
-    product_id: Optional[Policybuilderv3ProductType] = None
+    policy_type: Optional[Policybuilderv3PolicyType] = Policybuilderv3PolicyType.DATA_POLICY
+    product_id: Optional[Policybuilderv3ProductType] = Policybuilderv3ProductType.NO_PRODUCT
     rules: Optional[List[Policybuilderv3Rule]] = None
     rules_on_flat: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether the policy has rules on flat enabled or not.")
     template: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether the policy is a template policy or not.")
@@ -90,9 +90,9 @@ class Policybuilderv3PolicyUpdate(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in rules (list)
         _items = []
         if self.rules:
-            for _item in self.rules:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_rules in self.rules:
+                if _item_rules:
+                    _items.append(_item_rules.to_dict())
             _dict['rules'] = _items
         return _dict
 
@@ -107,7 +107,7 @@ class Policybuilderv3PolicyUpdate(BaseModel):
 
         _obj = cls.model_validate({
             "activation_status": obj.get("activation_status"),
-            "control_flow": obj.get("control_flow"),
+            "control_flow": obj.get("control_flow") if obj.get("control_flow") is not None else Policybuilderv3ControlFlow.STANDARD,
             "deletedRuleIds": obj.get("deletedRuleIds"),
             "installed_flag": obj.get("installed_flag"),
             "installed_order": obj.get("installed_order"),
@@ -116,8 +116,8 @@ class Policybuilderv3PolicyUpdate(BaseModel):
             "log_flat": obj.get("log_flat"),
             "policy_id": obj.get("policy_id"),
             "policy_name": obj.get("policy_name"),
-            "policy_type": obj.get("policy_type"),
-            "product_id": obj.get("product_id"),
+            "policy_type": obj.get("policy_type") if obj.get("policy_type") is not None else Policybuilderv3PolicyType.DATA_POLICY,
+            "product_id": obj.get("product_id") if obj.get("product_id") is not None else Policybuilderv3ProductType.NO_PRODUCT,
             "rules": [Policybuilderv3Rule.from_dict(_item) for _item in obj["rules"]] if obj.get("rules") is not None else None,
             "rules_on_flat": obj.get("rules_on_flat"),
             "template": obj.get("template"),

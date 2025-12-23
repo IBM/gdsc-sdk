@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,123 +44,143 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3ApplicationVertex
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3ApplicationVertex {
   public static final String SERIALIZED_NAME_APP_ID = "app_id";
   @SerializedName(SERIALIZED_NAME_APP_ID)
+  @javax.annotation.Nullable
   private String appId;
 
   public static final String SERIALIZED_NAME_APPLICATION_DATABASE = "application_database";
   @SerializedName(SERIALIZED_NAME_APPLICATION_DATABASE)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> applicationDatabase = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_APPLICATION_ENDPOINT = "application_endpoint";
   @SerializedName(SERIALIZED_NAME_APPLICATION_ENDPOINT)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> applicationEndpoint = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_APPLICATION_HOST = "application_host";
   @SerializedName(SERIALIZED_NAME_APPLICATION_HOST)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> applicationHost = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_APPLICATION_IP = "application_ip";
   @SerializedName(SERIALIZED_NAME_APPLICATION_IP)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> applicationIp = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_APPLICATION_NAME = "application_name";
   @SerializedName(SERIALIZED_NAME_APPLICATION_NAME)
+  @javax.annotation.Nullable
   private String applicationName;
 
   public static final String SERIALIZED_NAME_APPLICATION_STORAGE = "application_storage";
   @SerializedName(SERIALIZED_NAME_APPLICATION_STORAGE)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> applicationStorage = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_APPLICATION_SUB_TYPE = "application_sub_type";
   @SerializedName(SERIALIZED_NAME_APPLICATION_SUB_TYPE)
+  @javax.annotation.Nullable
   private String applicationSubType;
 
   public static final String SERIALIZED_NAME_APPLICATION_SUBSCRIPTION = "application_subscription";
   @SerializedName(SERIALIZED_NAME_APPLICATION_SUBSCRIPTION)
+  @javax.annotation.Nullable
   private List<Assetsv3ConnectionEdge> applicationSubscription = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_APPLICATION_TYPE = "application_type";
   @SerializedName(SERIALIZED_NAME_APPLICATION_TYPE)
+  @javax.annotation.Nullable
   private String applicationType;
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
   @SerializedName(SERIALIZED_NAME_CATEGORY)
+  @javax.annotation.Nullable
   private String category;
 
   public static final String SERIALIZED_NAME_CRITICALITY = "criticality";
   @SerializedName(SERIALIZED_NAME_CRITICALITY)
-  private Assetsv3Level criticality = Assetsv3Level.UNKNOWN;
+  @javax.annotation.Nullable
+  private Assetsv3Level criticality = Assetsv3Level.LEVEL_UNKNOWN;
 
   public static final String SERIALIZED_NAME_EXTENDED_PROPERTIES = "extended_properties";
   @SerializedName(SERIALIZED_NAME_EXTENDED_PROPERTIES)
+  @javax.annotation.Nullable
   private List<Assetsv3CustomProperty> extendedProperties = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_LAST_USED = "last_used";
   @SerializedName(SERIALIZED_NAME_LAST_USED)
+  @javax.annotation.Nullable
   private OffsetDateTime lastUsed;
 
   public static final String SERIALIZED_NAME_OWNER = "owner";
   @SerializedName(SERIALIZED_NAME_OWNER)
+  @javax.annotation.Nullable
   private List<String> owner = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PARENT_APPLICATION = "parent_application";
   @SerializedName(SERIALIZED_NAME_PARENT_APPLICATION)
+  @javax.annotation.Nullable
   private String parentApplication;
 
   public static final String SERIALIZED_NAME_RESOLUTION_KEY = "resolution_key";
   @SerializedName(SERIALIZED_NAME_RESOLUTION_KEY)
+  @javax.annotation.Nullable
   private String resolutionKey;
 
   public static final String SERIALIZED_NAME_RISK_LEVEL = "risk_level";
   @SerializedName(SERIALIZED_NAME_RISK_LEVEL)
-  private Assetsv3Level riskLevel = Assetsv3Level.UNKNOWN;
+  @javax.annotation.Nullable
+  private Assetsv3Level riskLevel = Assetsv3Level.LEVEL_UNKNOWN;
 
   public static final String SERIALIZED_NAME_SERVICE_TYPE = "service_type";
   @SerializedName(SERIALIZED_NAME_SERVICE_TYPE)
+  @javax.annotation.Nullable
   private String serviceType;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public Assetsv3ApplicationVertex() {
   }
 
-  public Assetsv3ApplicationVertex appId(String appId) {
+  public Assetsv3ApplicationVertex appId(@javax.annotation.Nullable String appId) {
     this.appId = appId;
     return this;
   }
 
-   /**
+  /**
    * Get appId
    * @return appId
-  **/
+   */
   @javax.annotation.Nullable
   public String getAppId() {
     return appId;
   }
 
-  public void setAppId(String appId) {
+  public void setAppId(@javax.annotation.Nullable String appId) {
     this.appId = appId;
   }
 
 
-  public Assetsv3ApplicationVertex applicationDatabase(List<Assetsv3ConnectionEdge> applicationDatabase) {
+  public Assetsv3ApplicationVertex applicationDatabase(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationDatabase) {
     this.applicationDatabase = applicationDatabase;
     return this;
   }
@@ -172,21 +193,21 @@ public class Assetsv3ApplicationVertex {
     return this;
   }
 
-   /**
+  /**
    * Get applicationDatabase
    * @return applicationDatabase
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getApplicationDatabase() {
     return applicationDatabase;
   }
 
-  public void setApplicationDatabase(List<Assetsv3ConnectionEdge> applicationDatabase) {
+  public void setApplicationDatabase(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationDatabase) {
     this.applicationDatabase = applicationDatabase;
   }
 
 
-  public Assetsv3ApplicationVertex applicationEndpoint(List<Assetsv3ConnectionEdge> applicationEndpoint) {
+  public Assetsv3ApplicationVertex applicationEndpoint(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationEndpoint) {
     this.applicationEndpoint = applicationEndpoint;
     return this;
   }
@@ -199,21 +220,21 @@ public class Assetsv3ApplicationVertex {
     return this;
   }
 
-   /**
+  /**
    * Get applicationEndpoint
    * @return applicationEndpoint
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getApplicationEndpoint() {
     return applicationEndpoint;
   }
 
-  public void setApplicationEndpoint(List<Assetsv3ConnectionEdge> applicationEndpoint) {
+  public void setApplicationEndpoint(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationEndpoint) {
     this.applicationEndpoint = applicationEndpoint;
   }
 
 
-  public Assetsv3ApplicationVertex applicationHost(List<Assetsv3ConnectionEdge> applicationHost) {
+  public Assetsv3ApplicationVertex applicationHost(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationHost) {
     this.applicationHost = applicationHost;
     return this;
   }
@@ -226,21 +247,21 @@ public class Assetsv3ApplicationVertex {
     return this;
   }
 
-   /**
+  /**
    * Get applicationHost
    * @return applicationHost
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getApplicationHost() {
     return applicationHost;
   }
 
-  public void setApplicationHost(List<Assetsv3ConnectionEdge> applicationHost) {
+  public void setApplicationHost(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationHost) {
     this.applicationHost = applicationHost;
   }
 
 
-  public Assetsv3ApplicationVertex applicationIp(List<Assetsv3ConnectionEdge> applicationIp) {
+  public Assetsv3ApplicationVertex applicationIp(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationIp) {
     this.applicationIp = applicationIp;
     return this;
   }
@@ -253,40 +274,40 @@ public class Assetsv3ApplicationVertex {
     return this;
   }
 
-   /**
+  /**
    * Get applicationIp
    * @return applicationIp
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getApplicationIp() {
     return applicationIp;
   }
 
-  public void setApplicationIp(List<Assetsv3ConnectionEdge> applicationIp) {
+  public void setApplicationIp(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationIp) {
     this.applicationIp = applicationIp;
   }
 
 
-  public Assetsv3ApplicationVertex applicationName(String applicationName) {
+  public Assetsv3ApplicationVertex applicationName(@javax.annotation.Nullable String applicationName) {
     this.applicationName = applicationName;
     return this;
   }
 
-   /**
+  /**
    * Get applicationName
    * @return applicationName
-  **/
+   */
   @javax.annotation.Nullable
   public String getApplicationName() {
     return applicationName;
   }
 
-  public void setApplicationName(String applicationName) {
+  public void setApplicationName(@javax.annotation.Nullable String applicationName) {
     this.applicationName = applicationName;
   }
 
 
-  public Assetsv3ApplicationVertex applicationStorage(List<Assetsv3ConnectionEdge> applicationStorage) {
+  public Assetsv3ApplicationVertex applicationStorage(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationStorage) {
     this.applicationStorage = applicationStorage;
     return this;
   }
@@ -299,40 +320,40 @@ public class Assetsv3ApplicationVertex {
     return this;
   }
 
-   /**
+  /**
    * Get applicationStorage
    * @return applicationStorage
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getApplicationStorage() {
     return applicationStorage;
   }
 
-  public void setApplicationStorage(List<Assetsv3ConnectionEdge> applicationStorage) {
+  public void setApplicationStorage(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationStorage) {
     this.applicationStorage = applicationStorage;
   }
 
 
-  public Assetsv3ApplicationVertex applicationSubType(String applicationSubType) {
+  public Assetsv3ApplicationVertex applicationSubType(@javax.annotation.Nullable String applicationSubType) {
     this.applicationSubType = applicationSubType;
     return this;
   }
 
-   /**
+  /**
    * Get applicationSubType
    * @return applicationSubType
-  **/
+   */
   @javax.annotation.Nullable
   public String getApplicationSubType() {
     return applicationSubType;
   }
 
-  public void setApplicationSubType(String applicationSubType) {
+  public void setApplicationSubType(@javax.annotation.Nullable String applicationSubType) {
     this.applicationSubType = applicationSubType;
   }
 
 
-  public Assetsv3ApplicationVertex applicationSubscription(List<Assetsv3ConnectionEdge> applicationSubscription) {
+  public Assetsv3ApplicationVertex applicationSubscription(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationSubscription) {
     this.applicationSubscription = applicationSubscription;
     return this;
   }
@@ -345,78 +366,78 @@ public class Assetsv3ApplicationVertex {
     return this;
   }
 
-   /**
+  /**
    * Get applicationSubscription
    * @return applicationSubscription
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3ConnectionEdge> getApplicationSubscription() {
     return applicationSubscription;
   }
 
-  public void setApplicationSubscription(List<Assetsv3ConnectionEdge> applicationSubscription) {
+  public void setApplicationSubscription(@javax.annotation.Nullable List<Assetsv3ConnectionEdge> applicationSubscription) {
     this.applicationSubscription = applicationSubscription;
   }
 
 
-  public Assetsv3ApplicationVertex applicationType(String applicationType) {
+  public Assetsv3ApplicationVertex applicationType(@javax.annotation.Nullable String applicationType) {
     this.applicationType = applicationType;
     return this;
   }
 
-   /**
+  /**
    * Get applicationType
    * @return applicationType
-  **/
+   */
   @javax.annotation.Nullable
   public String getApplicationType() {
     return applicationType;
   }
 
-  public void setApplicationType(String applicationType) {
+  public void setApplicationType(@javax.annotation.Nullable String applicationType) {
     this.applicationType = applicationType;
   }
 
 
-  public Assetsv3ApplicationVertex category(String category) {
+  public Assetsv3ApplicationVertex category(@javax.annotation.Nullable String category) {
     this.category = category;
     return this;
   }
 
-   /**
+  /**
    * Get category
    * @return category
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategory() {
     return category;
   }
 
-  public void setCategory(String category) {
+  public void setCategory(@javax.annotation.Nullable String category) {
     this.category = category;
   }
 
 
-  public Assetsv3ApplicationVertex criticality(Assetsv3Level criticality) {
+  public Assetsv3ApplicationVertex criticality(@javax.annotation.Nullable Assetsv3Level criticality) {
     this.criticality = criticality;
     return this;
   }
 
-   /**
+  /**
    * Get criticality
    * @return criticality
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3Level getCriticality() {
     return criticality;
   }
 
-  public void setCriticality(Assetsv3Level criticality) {
+  public void setCriticality(@javax.annotation.Nullable Assetsv3Level criticality) {
     this.criticality = criticality;
   }
 
 
-  public Assetsv3ApplicationVertex extendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public Assetsv3ApplicationVertex extendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
     return this;
   }
@@ -429,40 +450,40 @@ public class Assetsv3ApplicationVertex {
     return this;
   }
 
-   /**
+  /**
    * Get extendedProperties
    * @return extendedProperties
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3CustomProperty> getExtendedProperties() {
     return extendedProperties;
   }
 
-  public void setExtendedProperties(List<Assetsv3CustomProperty> extendedProperties) {
+  public void setExtendedProperties(@javax.annotation.Nullable List<Assetsv3CustomProperty> extendedProperties) {
     this.extendedProperties = extendedProperties;
   }
 
 
-  public Assetsv3ApplicationVertex lastUsed(OffsetDateTime lastUsed) {
+  public Assetsv3ApplicationVertex lastUsed(@javax.annotation.Nullable OffsetDateTime lastUsed) {
     this.lastUsed = lastUsed;
     return this;
   }
 
-   /**
+  /**
    * Get lastUsed
    * @return lastUsed
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getLastUsed() {
     return lastUsed;
   }
 
-  public void setLastUsed(OffsetDateTime lastUsed) {
+  public void setLastUsed(@javax.annotation.Nullable OffsetDateTime lastUsed) {
     this.lastUsed = lastUsed;
   }
 
 
-  public Assetsv3ApplicationVertex owner(List<String> owner) {
+  public Assetsv3ApplicationVertex owner(@javax.annotation.Nullable List<String> owner) {
     this.owner = owner;
     return this;
   }
@@ -475,111 +496,111 @@ public class Assetsv3ApplicationVertex {
     return this;
   }
 
-   /**
+  /**
    * Get owner
    * @return owner
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getOwner() {
     return owner;
   }
 
-  public void setOwner(List<String> owner) {
+  public void setOwner(@javax.annotation.Nullable List<String> owner) {
     this.owner = owner;
   }
 
 
-  public Assetsv3ApplicationVertex parentApplication(String parentApplication) {
+  public Assetsv3ApplicationVertex parentApplication(@javax.annotation.Nullable String parentApplication) {
     this.parentApplication = parentApplication;
     return this;
   }
 
-   /**
+  /**
    * Get parentApplication
    * @return parentApplication
-  **/
+   */
   @javax.annotation.Nullable
   public String getParentApplication() {
     return parentApplication;
   }
 
-  public void setParentApplication(String parentApplication) {
+  public void setParentApplication(@javax.annotation.Nullable String parentApplication) {
     this.parentApplication = parentApplication;
   }
 
 
-  public Assetsv3ApplicationVertex resolutionKey(String resolutionKey) {
+  public Assetsv3ApplicationVertex resolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
     return this;
   }
 
-   /**
+  /**
    * Get resolutionKey
    * @return resolutionKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getResolutionKey() {
     return resolutionKey;
   }
 
-  public void setResolutionKey(String resolutionKey) {
+  public void setResolutionKey(@javax.annotation.Nullable String resolutionKey) {
     this.resolutionKey = resolutionKey;
   }
 
 
-  public Assetsv3ApplicationVertex riskLevel(Assetsv3Level riskLevel) {
+  public Assetsv3ApplicationVertex riskLevel(@javax.annotation.Nullable Assetsv3Level riskLevel) {
     this.riskLevel = riskLevel;
     return this;
   }
 
-   /**
+  /**
    * Get riskLevel
    * @return riskLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3Level getRiskLevel() {
     return riskLevel;
   }
 
-  public void setRiskLevel(Assetsv3Level riskLevel) {
+  public void setRiskLevel(@javax.annotation.Nullable Assetsv3Level riskLevel) {
     this.riskLevel = riskLevel;
   }
 
 
-  public Assetsv3ApplicationVertex serviceType(String serviceType) {
+  public Assetsv3ApplicationVertex serviceType(@javax.annotation.Nullable String serviceType) {
     this.serviceType = serviceType;
     return this;
   }
 
-   /**
+  /**
    * Get serviceType
    * @return serviceType
-  **/
+   */
   @javax.annotation.Nullable
   public String getServiceType() {
     return serviceType;
   }
 
-  public void setServiceType(String serviceType) {
+  public void setServiceType(@javax.annotation.Nullable String serviceType) {
     this.serviceType = serviceType;
   }
 
 
-  public Assetsv3ApplicationVertex version(String version) {
+  public Assetsv3ApplicationVertex version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Get version
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
@@ -666,42 +687,22 @@ public class Assetsv3ApplicationVertex {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("app_id");
-    openapiFields.add("application_database");
-    openapiFields.add("application_endpoint");
-    openapiFields.add("application_host");
-    openapiFields.add("application_ip");
-    openapiFields.add("application_name");
-    openapiFields.add("application_storage");
-    openapiFields.add("application_sub_type");
-    openapiFields.add("application_subscription");
-    openapiFields.add("application_type");
-    openapiFields.add("category");
-    openapiFields.add("criticality");
-    openapiFields.add("extended_properties");
-    openapiFields.add("last_used");
-    openapiFields.add("owner");
-    openapiFields.add("parent_application");
-    openapiFields.add("resolution_key");
-    openapiFields.add("risk_level");
-    openapiFields.add("service_type");
-    openapiFields.add("version");
+    openapiFields = new HashSet<String>(Arrays.asList("app_id", "application_database", "application_endpoint", "application_host", "application_ip", "application_name", "application_storage", "application_sub_type", "application_subscription", "application_type", "category", "criticality", "extended_properties", "last_used", "owner", "parent_application", "resolution_key", "risk_level", "service_type", "version"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3ApplicationVertex
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3ApplicationVertex
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3ApplicationVertex.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3ApplicationVertex is not found in the empty JSON string", Assetsv3ApplicationVertex.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3ApplicationVertex is not found in the empty JSON string", Assetsv3ApplicationVertex.openapiRequiredFields.toString()));
         }
       }
 
@@ -709,19 +710,19 @@ public class Assetsv3ApplicationVertex {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3ApplicationVertex.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3ApplicationVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3ApplicationVertex` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("app_id") != null && !jsonObj.get("app_id").isJsonNull()) && !jsonObj.get("app_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `app_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `app_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("app_id").toString()));
       }
       if (jsonObj.get("application_database") != null && !jsonObj.get("application_database").isJsonNull()) {
         JsonArray jsonArrayapplicationDatabase = jsonObj.getAsJsonArray("application_database");
         if (jsonArrayapplicationDatabase != null) {
           // ensure the json data is an array
           if (!jsonObj.get("application_database").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `application_database` to be an array in the JSON string but got `%s`", jsonObj.get("application_database").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_database` to be an array in the JSON string but got `%s`", jsonObj.get("application_database").toString()));
           }
 
           // validate the optional field `application_database` (array)
@@ -735,7 +736,7 @@ public class Assetsv3ApplicationVertex {
         if (jsonArrayapplicationEndpoint != null) {
           // ensure the json data is an array
           if (!jsonObj.get("application_endpoint").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `application_endpoint` to be an array in the JSON string but got `%s`", jsonObj.get("application_endpoint").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_endpoint` to be an array in the JSON string but got `%s`", jsonObj.get("application_endpoint").toString()));
           }
 
           // validate the optional field `application_endpoint` (array)
@@ -749,7 +750,7 @@ public class Assetsv3ApplicationVertex {
         if (jsonArrayapplicationHost != null) {
           // ensure the json data is an array
           if (!jsonObj.get("application_host").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `application_host` to be an array in the JSON string but got `%s`", jsonObj.get("application_host").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_host` to be an array in the JSON string but got `%s`", jsonObj.get("application_host").toString()));
           }
 
           // validate the optional field `application_host` (array)
@@ -763,7 +764,7 @@ public class Assetsv3ApplicationVertex {
         if (jsonArrayapplicationIp != null) {
           // ensure the json data is an array
           if (!jsonObj.get("application_ip").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `application_ip` to be an array in the JSON string but got `%s`", jsonObj.get("application_ip").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_ip` to be an array in the JSON string but got `%s`", jsonObj.get("application_ip").toString()));
           }
 
           // validate the optional field `application_ip` (array)
@@ -773,14 +774,14 @@ public class Assetsv3ApplicationVertex {
         }
       }
       if ((jsonObj.get("application_name") != null && !jsonObj.get("application_name").isJsonNull()) && !jsonObj.get("application_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `application_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_name").toString()));
       }
       if (jsonObj.get("application_storage") != null && !jsonObj.get("application_storage").isJsonNull()) {
         JsonArray jsonArrayapplicationStorage = jsonObj.getAsJsonArray("application_storage");
         if (jsonArrayapplicationStorage != null) {
           // ensure the json data is an array
           if (!jsonObj.get("application_storage").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `application_storage` to be an array in the JSON string but got `%s`", jsonObj.get("application_storage").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_storage` to be an array in the JSON string but got `%s`", jsonObj.get("application_storage").toString()));
           }
 
           // validate the optional field `application_storage` (array)
@@ -790,14 +791,14 @@ public class Assetsv3ApplicationVertex {
         }
       }
       if ((jsonObj.get("application_sub_type") != null && !jsonObj.get("application_sub_type").isJsonNull()) && !jsonObj.get("application_sub_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `application_sub_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_sub_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_sub_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_sub_type").toString()));
       }
       if (jsonObj.get("application_subscription") != null && !jsonObj.get("application_subscription").isJsonNull()) {
         JsonArray jsonArrayapplicationSubscription = jsonObj.getAsJsonArray("application_subscription");
         if (jsonArrayapplicationSubscription != null) {
           // ensure the json data is an array
           if (!jsonObj.get("application_subscription").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `application_subscription` to be an array in the JSON string but got `%s`", jsonObj.get("application_subscription").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_subscription` to be an array in the JSON string but got `%s`", jsonObj.get("application_subscription").toString()));
           }
 
           // validate the optional field `application_subscription` (array)
@@ -807,10 +808,10 @@ public class Assetsv3ApplicationVertex {
         }
       }
       if ((jsonObj.get("application_type") != null && !jsonObj.get("application_type").isJsonNull()) && !jsonObj.get("application_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `application_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_type").toString()));
       }
       if ((jsonObj.get("category") != null && !jsonObj.get("category").isJsonNull()) && !jsonObj.get("category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
       }
       // validate the optional field `criticality`
       if (jsonObj.get("criticality") != null && !jsonObj.get("criticality").isJsonNull()) {
@@ -821,7 +822,7 @@ public class Assetsv3ApplicationVertex {
         if (jsonArrayextendedProperties != null) {
           // ensure the json data is an array
           if (!jsonObj.get("extended_properties").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `extended_properties` to be an array in the JSON string but got `%s`", jsonObj.get("extended_properties").toString()));
           }
 
           // validate the optional field `extended_properties` (array)
@@ -832,23 +833,23 @@ public class Assetsv3ApplicationVertex {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("owner") != null && !jsonObj.get("owner").isJsonNull() && !jsonObj.get("owner").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `owner` to be an array in the JSON string but got `%s`", jsonObj.get("owner").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `owner` to be an array in the JSON string but got `%s`", jsonObj.get("owner").toString()));
       }
       if ((jsonObj.get("parent_application") != null && !jsonObj.get("parent_application").isJsonNull()) && !jsonObj.get("parent_application").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `parent_application` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parent_application").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `parent_application` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parent_application").toString()));
       }
       if ((jsonObj.get("resolution_key") != null && !jsonObj.get("resolution_key").isJsonNull()) && !jsonObj.get("resolution_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resolution_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resolution_key").toString()));
       }
       // validate the optional field `risk_level`
       if (jsonObj.get("risk_level") != null && !jsonObj.get("risk_level").isJsonNull()) {
         Assetsv3Level.validateJsonElement(jsonObj.get("risk_level"));
       }
       if ((jsonObj.get("service_type") != null && !jsonObj.get("service_type").isJsonNull()) && !jsonObj.get("service_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `service_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("service_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `service_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("service_type").toString()));
       }
       if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
   }
 
@@ -881,22 +882,22 @@ public class Assetsv3ApplicationVertex {
     }
   }
 
- /**
-  * Create an instance of Assetsv3ApplicationVertex given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3ApplicationVertex
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3ApplicationVertex
-  */
+  /**
+   * Create an instance of Assetsv3ApplicationVertex given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3ApplicationVertex
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3ApplicationVertex
+   */
   public static Assetsv3ApplicationVertex fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3ApplicationVertex.class);
   }
 
- /**
-  * Convert an instance of Assetsv3ApplicationVertex to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3ApplicationVertex to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

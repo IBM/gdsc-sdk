@@ -32,13 +32,13 @@ class Reportsv3CategoryField(BaseModel):
     field_name: Optional[StrictStr] = Field(default=None, description="Field name's NLS translation key and translated value.")
     group_type_id: Optional[StrictInt] = Field(default=None, description="Group type id for the filter.")
     header_category: Optional[StrictStr] = Field(default=None, description="The category of the header.")
-    header_data_type: Optional[Reportsv3HeaderDataType] = None
+    header_data_type: Optional[Reportsv3HeaderDataType] = Reportsv3HeaderDataType.UNDEFINED_REPORT_HEADER_TYPE
     header_description: Optional[StrictStr] = Field(default=None, description="Header description's NLS translation key and translated value.")
     header_name: Optional[StrictStr] = Field(default=None, description="The header name.")
     is_recommended: Optional[StrictBool] = Field(default=None, description="If the header is recommended.")
     is_visible: Optional[StrictBool] = None
     table_name: Optional[StrictStr] = Field(default=None, description="Table name.")
-    type: Optional[Reportsv3HeaderType] = None
+    type: Optional[Reportsv3HeaderType] = Reportsv3HeaderType.UNDEFINED_TYPE
     type_length: Optional[StrictInt] = Field(default=None, description="Header type length.")
     __properties: ClassVar[List[str]] = ["can_be_used_in_chart", "field_name", "group_type_id", "header_category", "header_data_type", "header_description", "header_name", "is_recommended", "is_visible", "table_name", "type", "type_length"]
 
@@ -97,13 +97,13 @@ class Reportsv3CategoryField(BaseModel):
             "field_name": obj.get("field_name"),
             "group_type_id": obj.get("group_type_id"),
             "header_category": obj.get("header_category"),
-            "header_data_type": obj.get("header_data_type"),
+            "header_data_type": obj.get("header_data_type") if obj.get("header_data_type") is not None else Reportsv3HeaderDataType.UNDEFINED_REPORT_HEADER_TYPE,
             "header_description": obj.get("header_description"),
             "header_name": obj.get("header_name"),
             "is_recommended": obj.get("is_recommended"),
             "is_visible": obj.get("is_visible"),
             "table_name": obj.get("table_name"),
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Reportsv3HeaderType.UNDEFINED_TYPE,
             "type_length": obj.get("type_length")
         })
         return _obj

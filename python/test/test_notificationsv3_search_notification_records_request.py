@@ -27,7 +27,7 @@ class TestNotificationsv3SearchNotificationRecordsRequest(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Notificationsv3SearchNotificationRecordsRequest:
         """Test Notificationsv3SearchNotificationRecordsRequest
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Notificationsv3SearchNotificationRecordsRequest`

@@ -15,22 +15,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatabootstrapperServiceApi } from '';
+import type { DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatabootstrapperServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatabootstrapperServiceApi(configuration);
 
-let body:.DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest = {
-  // Databootstrapperv3LoadDataRequest
+const request: DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest = {
+  
   databootstrapperv3LoadDataRequest: {
     partNumber: "partNumber_example",
   },
 };
 
-apiInstance.databootstrapperServiceLoadData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.databootstrapperServiceLoadData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

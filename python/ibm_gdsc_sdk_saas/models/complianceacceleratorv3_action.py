@@ -27,7 +27,7 @@ class Complianceacceleratorv3Action(BaseModel):
     """
     A policy alert action.
     """ # noqa: E501
-    notification_type: Optional[Complianceacceleratorv3RecipientType] = None
+    notification_type: Optional[Complianceacceleratorv3RecipientType] = Complianceacceleratorv3RecipientType.UNDEFINED_RECTYPE
     user_ids: Optional[List[StrictStr]] = Field(default=None, description="The emails for the action.")
     __properties: ClassVar[List[str]] = ["notification_type", "user_ids"]
 
@@ -82,7 +82,7 @@ class Complianceacceleratorv3Action(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "notification_type": obj.get("notification_type"),
+            "notification_type": obj.get("notification_type") if obj.get("notification_type") is not None else Complianceacceleratorv3RecipientType.UNDEFINED_RECTYPE,
             "user_ids": obj.get("user_ids")
         })
         return _obj

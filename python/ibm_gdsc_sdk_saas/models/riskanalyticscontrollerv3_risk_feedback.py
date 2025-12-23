@@ -33,9 +33,9 @@ class Riskanalyticscontrollerv3RiskFeedback(BaseModel):
     creation_time: Optional[datetime] = Field(default=None, description="Feedback creation time.")
     features: Optional[List[Riskanalyticsenginev3Feature]] = Field(default=None, description="List of features for the risk that related to this feedback.")
     new_classification: Optional[StrictStr] = Field(default=None, description="Feedback classification.")
-    new_severity: Optional[Riskanalyticsenginev3SeverityLevel] = None
+    new_severity: Optional[Riskanalyticsenginev3SeverityLevel] = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL
     old_classification: Optional[StrictStr] = Field(default=None, description="Original classification.")
-    old_severity: Optional[Riskanalyticsenginev3SeverityLevel] = None
+    old_severity: Optional[Riskanalyticsenginev3SeverityLevel] = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL
     __properties: ClassVar[List[str]] = ["comments", "creation_time", "features", "new_classification", "new_severity", "old_classification", "old_severity"]
 
     model_config = ConfigDict(
@@ -80,9 +80,9 @@ class Riskanalyticscontrollerv3RiskFeedback(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in features (list)
         _items = []
         if self.features:
-            for _item in self.features:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_features in self.features:
+                if _item_features:
+                    _items.append(_item_features.to_dict())
             _dict['features'] = _items
         return _dict
 
@@ -100,9 +100,9 @@ class Riskanalyticscontrollerv3RiskFeedback(BaseModel):
             "creation_time": obj.get("creation_time"),
             "features": [Riskanalyticsenginev3Feature.from_dict(_item) for _item in obj["features"]] if obj.get("features") is not None else None,
             "new_classification": obj.get("new_classification"),
-            "new_severity": obj.get("new_severity"),
+            "new_severity": obj.get("new_severity") if obj.get("new_severity") is not None else Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL,
             "old_classification": obj.get("old_classification"),
-            "old_severity": obj.get("old_severity")
+            "old_severity": obj.get("old_severity") if obj.get("old_severity") is not None else Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL
         })
         return _obj
 

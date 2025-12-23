@@ -72,9 +72,9 @@ class Riskanalyticsenginev3GetLeadGeneratorConfigResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in configs (list)
         _items = []
         if self.configs:
-            for _item in self.configs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_configs in self.configs:
+                if _item_configs:
+                    _items.append(_item_configs.to_dict())
             _dict['configs'] = _items
         return _dict
 

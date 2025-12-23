@@ -278,8 +278,6 @@ Name | Type | Description  | Notes
 # **reports_runner_get_chart_datav2**
 > Reportsrunnerv3GetChartDataResponsev2 reports_runner_get_chart_datav2(reportsrunnerv3_get_chart_data_requestv2)
 
-
-
 ### Example
 
 * Basic Authentication (BasicAuth):

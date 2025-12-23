@@ -31,7 +31,7 @@ class Riskanalyticscontrollerv3Observation(BaseModel):
     lead_feature_id: Optional[StrictInt] = Field(default=None, description="Lead feature id.")
     observation_description: Optional[StrictStr] = Field(default=None, description="Observation description.")
     observation_id: Optional[StrictInt] = Field(default=None, description="Id.")
-    observation_type: Optional[Riskanalyticscontrollerv3ObservationType] = None
+    observation_type: Optional[Riskanalyticscontrollerv3ObservationType] = Riskanalyticscontrollerv3ObservationType.UNDEFINED_OBSERVATION_TYPE
     time: Optional[datetime] = Field(default=None, description="Time - date in format YYYY-MM-DDTHH:mm:ssZ.")
     __properties: ClassVar[List[str]] = ["lead_feature_id", "observation_description", "observation_id", "observation_type", "time"]
 
@@ -89,7 +89,7 @@ class Riskanalyticscontrollerv3Observation(BaseModel):
             "lead_feature_id": obj.get("lead_feature_id"),
             "observation_description": obj.get("observation_description"),
             "observation_id": obj.get("observation_id"),
-            "observation_type": obj.get("observation_type"),
+            "observation_type": obj.get("observation_type") if obj.get("observation_type") is not None else Riskanalyticscontrollerv3ObservationType.UNDEFINED_OBSERVATION_TYPE,
             "time": obj.get("time")
         })
         return _obj

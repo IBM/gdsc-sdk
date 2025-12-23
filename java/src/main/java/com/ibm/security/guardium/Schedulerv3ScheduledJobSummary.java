@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,297 +44,313 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ScheduledJobSummary returns enough details for list view.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3ScheduledJobSummary {
   public static final String SERIALIZED_NAME_CREATION_TIME = "creation_time";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime creationTime;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_ENABLED = "enabled";
   @SerializedName(SERIALIZED_NAME_ENABLED)
+  @javax.annotation.Nullable
   private Boolean enabled;
 
   public static final String SERIALIZED_NAME_EXPIRED = "expired";
   @SerializedName(SERIALIZED_NAME_EXPIRED)
+  @javax.annotation.Nullable
   private Boolean expired;
 
   public static final String SERIALIZED_NAME_FREQUENCY = "frequency";
   @SerializedName(SERIALIZED_NAME_FREQUENCY)
+  @javax.annotation.Nullable
   private Schedulerv3Frequency frequency = Schedulerv3Frequency.UNDEFINED_FREQUENCY;
 
   public static final String SERIALIZED_NAME_LAST_MODIFIED_TIME = "last_modified_time";
   @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime lastModifiedTime;
 
   public static final String SERIALIZED_NAME_LAST_RUN_DURATION = "last_run_duration";
   @SerializedName(SERIALIZED_NAME_LAST_RUN_DURATION)
+  @javax.annotation.Nullable
   private Long lastRunDuration;
 
   public static final String SERIALIZED_NAME_LAST_RUN_START = "last_run_start";
   @SerializedName(SERIALIZED_NAME_LAST_RUN_START)
+  @javax.annotation.Nullable
   private OffsetDateTime lastRunStart;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_NEXT_RUN = "next_run";
   @SerializedName(SERIALIZED_NAME_NEXT_RUN)
+  @javax.annotation.Nullable
   private OffsetDateTime nextRun;
 
   public static final String SERIALIZED_NAME_RECIPIENT = "recipient";
   @SerializedName(SERIALIZED_NAME_RECIPIENT)
+  @javax.annotation.Nullable
   private Schedulerv3Recipient recipient;
 
   public static final String SERIALIZED_NAME_RECIPIENTS = "recipients";
   @SerializedName(SERIALIZED_NAME_RECIPIENTS)
+  @javax.annotation.Nullable
   private List<Schedulerv3Recipient> recipients = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_REPORT_NAMES = "report_names";
   @SerializedName(SERIALIZED_NAME_REPORT_NAMES)
+  @javax.annotation.Nullable
   private List<String> reportNames = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SCHEDULE_ID = "schedule_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULE_ID)
+  @javax.annotation.Nullable
   private String scheduleId;
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
+  @javax.annotation.Nullable
   private List<String> tags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TASKS = "tasks";
   @SerializedName(SERIALIZED_NAME_TASKS)
+  @javax.annotation.Nullable
   private List<Schedulerv3ScheduledTaskSummary> tasks = new ArrayList<>();
 
   public Schedulerv3ScheduledJobSummary() {
   }
 
-  public Schedulerv3ScheduledJobSummary creationTime(OffsetDateTime creationTime) {
+  public Schedulerv3ScheduledJobSummary creationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
     return this;
   }
 
-   /**
+  /**
    * Optional: Timestamp when the scheduled job was created.
    * @return creationTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(OffsetDateTime creationTime) {
+  public void setCreationTime(@javax.annotation.Nullable OffsetDateTime creationTime) {
     this.creationTime = creationTime;
   }
 
 
-  public Schedulerv3ScheduledJobSummary description(String description) {
+  public Schedulerv3ScheduledJobSummary description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Optional: Description for the scheduledJob.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Schedulerv3ScheduledJobSummary enabled(Boolean enabled) {
+  public Schedulerv3ScheduledJobSummary enabled(@javax.annotation.Nullable Boolean enabled) {
     this.enabled = enabled;
     return this;
   }
 
-   /**
+  /**
    * Enabled or disable the schedule.
    * @return enabled
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getEnabled() {
     return enabled;
   }
 
-  public void setEnabled(Boolean enabled) {
+  public void setEnabled(@javax.annotation.Nullable Boolean enabled) {
     this.enabled = enabled;
   }
 
 
-  public Schedulerv3ScheduledJobSummary expired(Boolean expired) {
+  public Schedulerv3ScheduledJobSummary expired(@javax.annotation.Nullable Boolean expired) {
     this.expired = expired;
     return this;
   }
 
-   /**
+  /**
    * Optional: If this schedule is expired or continues forever.
    * @return expired
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getExpired() {
     return expired;
   }
 
-  public void setExpired(Boolean expired) {
+  public void setExpired(@javax.annotation.Nullable Boolean expired) {
     this.expired = expired;
   }
 
 
-  public Schedulerv3ScheduledJobSummary frequency(Schedulerv3Frequency frequency) {
+  public Schedulerv3ScheduledJobSummary frequency(@javax.annotation.Nullable Schedulerv3Frequency frequency) {
     this.frequency = frequency;
     return this;
   }
 
-   /**
+  /**
    * Get frequency
    * @return frequency
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3Frequency getFrequency() {
     return frequency;
   }
 
-  public void setFrequency(Schedulerv3Frequency frequency) {
+  public void setFrequency(@javax.annotation.Nullable Schedulerv3Frequency frequency) {
     this.frequency = frequency;
   }
 
 
-  public Schedulerv3ScheduledJobSummary lastModifiedTime(OffsetDateTime lastModifiedTime) {
+  public Schedulerv3ScheduledJobSummary lastModifiedTime(@javax.annotation.Nullable OffsetDateTime lastModifiedTime) {
     this.lastModifiedTime = lastModifiedTime;
     return this;
   }
 
-   /**
+  /**
    * Optional: Timestamp for the last time the scheduled job was modified.
    * @return lastModifiedTime
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getLastModifiedTime() {
     return lastModifiedTime;
   }
 
-  public void setLastModifiedTime(OffsetDateTime lastModifiedTime) {
+  public void setLastModifiedTime(@javax.annotation.Nullable OffsetDateTime lastModifiedTime) {
     this.lastModifiedTime = lastModifiedTime;
   }
 
 
-  public Schedulerv3ScheduledJobSummary lastRunDuration(Long lastRunDuration) {
+  public Schedulerv3ScheduledJobSummary lastRunDuration(@javax.annotation.Nullable Long lastRunDuration) {
     this.lastRunDuration = lastRunDuration;
     return this;
   }
 
-   /**
+  /**
    * Optional: Duration of the previous run.
    * @return lastRunDuration
-  **/
+   */
   @javax.annotation.Nullable
   public Long getLastRunDuration() {
     return lastRunDuration;
   }
 
-  public void setLastRunDuration(Long lastRunDuration) {
+  public void setLastRunDuration(@javax.annotation.Nullable Long lastRunDuration) {
     this.lastRunDuration = lastRunDuration;
   }
 
 
-  public Schedulerv3ScheduledJobSummary lastRunStart(OffsetDateTime lastRunStart) {
+  public Schedulerv3ScheduledJobSummary lastRunStart(@javax.annotation.Nullable OffsetDateTime lastRunStart) {
     this.lastRunStart = lastRunStart;
     return this;
   }
 
-   /**
+  /**
    * Optional: Timestamp for the previous run.
    * @return lastRunStart
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getLastRunStart() {
     return lastRunStart;
   }
 
-  public void setLastRunStart(OffsetDateTime lastRunStart) {
+  public void setLastRunStart(@javax.annotation.Nullable OffsetDateTime lastRunStart) {
     this.lastRunStart = lastRunStart;
   }
 
 
-  public Schedulerv3ScheduledJobSummary name(String name) {
+  public Schedulerv3ScheduledJobSummary name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Schedule name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Schedulerv3ScheduledJobSummary nextRun(OffsetDateTime nextRun) {
+  public Schedulerv3ScheduledJobSummary nextRun(@javax.annotation.Nullable OffsetDateTime nextRun) {
     this.nextRun = nextRun;
     return this;
   }
 
-   /**
+  /**
    * Optional: Timestamp for the next jobrun.
    * @return nextRun
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getNextRun() {
     return nextRun;
   }
 
-  public void setNextRun(OffsetDateTime nextRun) {
+  public void setNextRun(@javax.annotation.Nullable OffsetDateTime nextRun) {
     this.nextRun = nextRun;
   }
 
 
-  public Schedulerv3ScheduledJobSummary recipient(Schedulerv3Recipient recipient) {
+  public Schedulerv3ScheduledJobSummary recipient(@javax.annotation.Nullable Schedulerv3Recipient recipient) {
     this.recipient = recipient;
     return this;
   }
 
-   /**
+  /**
    * Get recipient
    * @return recipient
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3Recipient getRecipient() {
     return recipient;
   }
 
-  public void setRecipient(Schedulerv3Recipient recipient) {
+  public void setRecipient(@javax.annotation.Nullable Schedulerv3Recipient recipient) {
     this.recipient = recipient;
   }
 
 
-  public Schedulerv3ScheduledJobSummary recipients(List<Schedulerv3Recipient> recipients) {
+  public Schedulerv3ScheduledJobSummary recipients(@javax.annotation.Nullable List<Schedulerv3Recipient> recipients) {
     this.recipients = recipients;
     return this;
   }
@@ -346,21 +363,21 @@ public class Schedulerv3ScheduledJobSummary {
     return this;
   }
 
-   /**
+  /**
    * Get recipients
    * @return recipients
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3Recipient> getRecipients() {
     return recipients;
   }
 
-  public void setRecipients(List<Schedulerv3Recipient> recipients) {
+  public void setRecipients(@javax.annotation.Nullable List<Schedulerv3Recipient> recipients) {
     this.recipients = recipients;
   }
 
 
-  public Schedulerv3ScheduledJobSummary reportNames(List<String> reportNames) {
+  public Schedulerv3ScheduledJobSummary reportNames(@javax.annotation.Nullable List<String> reportNames) {
     this.reportNames = reportNames;
     return this;
   }
@@ -373,40 +390,40 @@ public class Schedulerv3ScheduledJobSummary {
     return this;
   }
 
-   /**
+  /**
    * Optional: Reports run by this scheduled job.
    * @return reportNames
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getReportNames() {
     return reportNames;
   }
 
-  public void setReportNames(List<String> reportNames) {
+  public void setReportNames(@javax.annotation.Nullable List<String> reportNames) {
     this.reportNames = reportNames;
   }
 
 
-  public Schedulerv3ScheduledJobSummary scheduleId(String scheduleId) {
+  public Schedulerv3ScheduledJobSummary scheduleId(@javax.annotation.Nullable String scheduleId) {
     this.scheduleId = scheduleId;
     return this;
   }
 
-   /**
+  /**
    * ID for this record. It is automatically created by the database.
    * @return scheduleId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScheduleId() {
     return scheduleId;
   }
 
-  public void setScheduleId(String scheduleId) {
+  public void setScheduleId(@javax.annotation.Nullable String scheduleId) {
     this.scheduleId = scheduleId;
   }
 
 
-  public Schedulerv3ScheduledJobSummary tags(List<String> tags) {
+  public Schedulerv3ScheduledJobSummary tags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
     return this;
   }
@@ -419,21 +436,21 @@ public class Schedulerv3ScheduledJobSummary {
     return this;
   }
 
-   /**
+  /**
    * Optional: Tags to use.
    * @return tags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
 
-  public void setTags(List<String> tags) {
+  public void setTags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
   }
 
 
-  public Schedulerv3ScheduledJobSummary tasks(List<Schedulerv3ScheduledTaskSummary> tasks) {
+  public Schedulerv3ScheduledJobSummary tasks(@javax.annotation.Nullable List<Schedulerv3ScheduledTaskSummary> tasks) {
     this.tasks = tasks;
     return this;
   }
@@ -446,16 +463,16 @@ public class Schedulerv3ScheduledJobSummary {
     return this;
   }
 
-   /**
+  /**
    * Get tasks
    * @return tasks
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3ScheduledTaskSummary> getTasks() {
     return tasks;
   }
 
-  public void setTasks(List<Schedulerv3ScheduledTaskSummary> tasks) {
+  public void setTasks(@javax.annotation.Nullable List<Schedulerv3ScheduledTaskSummary> tasks) {
     this.tasks = tasks;
   }
 
@@ -534,38 +551,22 @@ public class Schedulerv3ScheduledJobSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("creation_time");
-    openapiFields.add("description");
-    openapiFields.add("enabled");
-    openapiFields.add("expired");
-    openapiFields.add("frequency");
-    openapiFields.add("last_modified_time");
-    openapiFields.add("last_run_duration");
-    openapiFields.add("last_run_start");
-    openapiFields.add("name");
-    openapiFields.add("next_run");
-    openapiFields.add("recipient");
-    openapiFields.add("recipients");
-    openapiFields.add("report_names");
-    openapiFields.add("schedule_id");
-    openapiFields.add("tags");
-    openapiFields.add("tasks");
+    openapiFields = new HashSet<String>(Arrays.asList("creation_time", "description", "enabled", "expired", "frequency", "last_modified_time", "last_run_duration", "last_run_start", "name", "next_run", "recipient", "recipients", "report_names", "schedule_id", "tags", "tasks"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledJobSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3ScheduledJobSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3ScheduledJobSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3ScheduledJobSummary is not found in the empty JSON string", Schedulerv3ScheduledJobSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3ScheduledJobSummary is not found in the empty JSON string", Schedulerv3ScheduledJobSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -573,19 +574,19 @@ public class Schedulerv3ScheduledJobSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3ScheduledJobSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledJobSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3ScheduledJobSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       // validate the optional field `frequency`
       if (jsonObj.get("frequency") != null && !jsonObj.get("frequency").isJsonNull()) {
         Schedulerv3Frequency.validateJsonElement(jsonObj.get("frequency"));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       // validate the optional field `recipient`
       if (jsonObj.get("recipient") != null && !jsonObj.get("recipient").isJsonNull()) {
@@ -596,7 +597,7 @@ public class Schedulerv3ScheduledJobSummary {
         if (jsonArrayrecipients != null) {
           // ensure the json data is an array
           if (!jsonObj.get("recipients").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `recipients` to be an array in the JSON string but got `%s`", jsonObj.get("recipients").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `recipients` to be an array in the JSON string but got `%s`", jsonObj.get("recipients").toString()));
           }
 
           // validate the optional field `recipients` (array)
@@ -607,21 +608,21 @@ public class Schedulerv3ScheduledJobSummary {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("report_names") != null && !jsonObj.get("report_names").isJsonNull() && !jsonObj.get("report_names").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_names` to be an array in the JSON string but got `%s`", jsonObj.get("report_names").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_names` to be an array in the JSON string but got `%s`", jsonObj.get("report_names").toString()));
       }
       if ((jsonObj.get("schedule_id") != null && !jsonObj.get("schedule_id").isJsonNull()) && !jsonObj.get("schedule_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schedule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `schedule_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule_id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull() && !jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
       }
       if (jsonObj.get("tasks") != null && !jsonObj.get("tasks").isJsonNull()) {
         JsonArray jsonArraytasks = jsonObj.getAsJsonArray("tasks");
         if (jsonArraytasks != null) {
           // ensure the json data is an array
           if (!jsonObj.get("tasks").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tasks` to be an array in the JSON string but got `%s`", jsonObj.get("tasks").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tasks` to be an array in the JSON string but got `%s`", jsonObj.get("tasks").toString()));
           }
 
           // validate the optional field `tasks` (array)
@@ -661,22 +662,22 @@ public class Schedulerv3ScheduledJobSummary {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3ScheduledJobSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3ScheduledJobSummary
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledJobSummary
-  */
+  /**
+   * Create an instance of Schedulerv3ScheduledJobSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3ScheduledJobSummary
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3ScheduledJobSummary
+   */
   public static Schedulerv3ScheduledJobSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3ScheduledJobSummary.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3ScheduledJobSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3ScheduledJobSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

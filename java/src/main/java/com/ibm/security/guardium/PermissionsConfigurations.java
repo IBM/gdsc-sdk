@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,258 +43,269 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * PermissionsConfigurations
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class PermissionsConfigurations {
   public static final String SERIALIZED_NAME_PERMISSIONS_CONFIGURATIONS_ID = "permissionsConfigurationsId";
   @SerializedName(SERIALIZED_NAME_PERMISSIONS_CONFIGURATIONS_ID)
+  @javax.annotation.Nonnull
   private String permissionsConfigurationsId;
 
   public static final String SERIALIZED_NAME_PERMISSIONS_CONFIGURATIONS_NAME = "permissionsConfigurationsName";
   @SerializedName(SERIALIZED_NAME_PERMISSIONS_CONFIGURATIONS_NAME)
+  @javax.annotation.Nonnull
   private String permissionsConfigurationsName;
 
   public static final String SERIALIZED_NAME_PERMISSIONS_CONFIGURATIONS_URL = "permissionsConfigurationsUrl";
   @SerializedName(SERIALIZED_NAME_PERMISSIONS_CONFIGURATIONS_URL)
+  @javax.annotation.Nonnull
   private String permissionsConfigurationsUrl;
 
   public static final String SERIALIZED_NAME_PERMISSIONS_CONFIGURATIONS_TYPE = "permissionsConfigurationsType";
   @SerializedName(SERIALIZED_NAME_PERMISSIONS_CONFIGURATIONS_TYPE)
+  @javax.annotation.Nonnull
   private String permissionsConfigurationsType;
 
   public static final String SERIALIZED_NAME_ASSIGNED_VIA_ID = "assignedViaId";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_VIA_ID)
+  @javax.annotation.Nonnull
   private String assignedViaId;
 
   public static final String SERIALIZED_NAME_ASSIGNED_VIA_NAME = "assignedViaName";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_VIA_NAME)
+  @javax.annotation.Nonnull
   private String assignedViaName;
 
   public static final String SERIALIZED_NAME_ASSIGNED_VIA_URL = "assignedViaUrl";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_VIA_URL)
+  @javax.annotation.Nonnull
   private String assignedViaUrl;
 
   public static final String SERIALIZED_NAME_ASSIGNED_VIA_TYPE = "assignedViaType";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_VIA_TYPE)
+  @javax.annotation.Nonnull
   private String assignedViaType;
 
   public static final String SERIALIZED_NAME_ASSIGNED_TO = "assignedTo";
   @SerializedName(SERIALIZED_NAME_ASSIGNED_TO)
+  @javax.annotation.Nonnull
   private BigDecimal assignedTo;
 
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_DETAILS = "cloudAccountDetails";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_DETAILS)
+  @javax.annotation.Nonnull
   private CloudAccountDetails cloudAccountDetails;
 
   public static final String SERIALIZED_NAME_PERMISSIONS = "permissions";
   @SerializedName(SERIALIZED_NAME_PERMISSIONS)
+  @javax.annotation.Nonnull
   private List<AccessType> permissions = new ArrayList<>();
 
   public PermissionsConfigurations() {
   }
 
-  public PermissionsConfigurations permissionsConfigurationsId(String permissionsConfigurationsId) {
+  public PermissionsConfigurations permissionsConfigurationsId(@javax.annotation.Nonnull String permissionsConfigurationsId) {
     this.permissionsConfigurationsId = permissionsConfigurationsId;
     return this;
   }
 
-   /**
+  /**
    * Get permissionsConfigurationsId
    * @return permissionsConfigurationsId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getPermissionsConfigurationsId() {
     return permissionsConfigurationsId;
   }
 
-  public void setPermissionsConfigurationsId(String permissionsConfigurationsId) {
+  public void setPermissionsConfigurationsId(@javax.annotation.Nonnull String permissionsConfigurationsId) {
     this.permissionsConfigurationsId = permissionsConfigurationsId;
   }
 
 
-  public PermissionsConfigurations permissionsConfigurationsName(String permissionsConfigurationsName) {
+  public PermissionsConfigurations permissionsConfigurationsName(@javax.annotation.Nonnull String permissionsConfigurationsName) {
     this.permissionsConfigurationsName = permissionsConfigurationsName;
     return this;
   }
 
-   /**
+  /**
    * Get permissionsConfigurationsName
    * @return permissionsConfigurationsName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getPermissionsConfigurationsName() {
     return permissionsConfigurationsName;
   }
 
-  public void setPermissionsConfigurationsName(String permissionsConfigurationsName) {
+  public void setPermissionsConfigurationsName(@javax.annotation.Nonnull String permissionsConfigurationsName) {
     this.permissionsConfigurationsName = permissionsConfigurationsName;
   }
 
 
-  public PermissionsConfigurations permissionsConfigurationsUrl(String permissionsConfigurationsUrl) {
+  public PermissionsConfigurations permissionsConfigurationsUrl(@javax.annotation.Nonnull String permissionsConfigurationsUrl) {
     this.permissionsConfigurationsUrl = permissionsConfigurationsUrl;
     return this;
   }
 
-   /**
+  /**
    * Get permissionsConfigurationsUrl
    * @return permissionsConfigurationsUrl
-  **/
+   */
   @javax.annotation.Nonnull
   public String getPermissionsConfigurationsUrl() {
     return permissionsConfigurationsUrl;
   }
 
-  public void setPermissionsConfigurationsUrl(String permissionsConfigurationsUrl) {
+  public void setPermissionsConfigurationsUrl(@javax.annotation.Nonnull String permissionsConfigurationsUrl) {
     this.permissionsConfigurationsUrl = permissionsConfigurationsUrl;
   }
 
 
-  public PermissionsConfigurations permissionsConfigurationsType(String permissionsConfigurationsType) {
+  public PermissionsConfigurations permissionsConfigurationsType(@javax.annotation.Nonnull String permissionsConfigurationsType) {
     this.permissionsConfigurationsType = permissionsConfigurationsType;
     return this;
   }
 
-   /**
+  /**
    * Get permissionsConfigurationsType
    * @return permissionsConfigurationsType
-  **/
+   */
   @javax.annotation.Nonnull
   public String getPermissionsConfigurationsType() {
     return permissionsConfigurationsType;
   }
 
-  public void setPermissionsConfigurationsType(String permissionsConfigurationsType) {
+  public void setPermissionsConfigurationsType(@javax.annotation.Nonnull String permissionsConfigurationsType) {
     this.permissionsConfigurationsType = permissionsConfigurationsType;
   }
 
 
-  public PermissionsConfigurations assignedViaId(String assignedViaId) {
+  public PermissionsConfigurations assignedViaId(@javax.annotation.Nonnull String assignedViaId) {
     this.assignedViaId = assignedViaId;
     return this;
   }
 
-   /**
+  /**
    * Get assignedViaId
    * @return assignedViaId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getAssignedViaId() {
     return assignedViaId;
   }
 
-  public void setAssignedViaId(String assignedViaId) {
+  public void setAssignedViaId(@javax.annotation.Nonnull String assignedViaId) {
     this.assignedViaId = assignedViaId;
   }
 
 
-  public PermissionsConfigurations assignedViaName(String assignedViaName) {
+  public PermissionsConfigurations assignedViaName(@javax.annotation.Nonnull String assignedViaName) {
     this.assignedViaName = assignedViaName;
     return this;
   }
 
-   /**
+  /**
    * Get assignedViaName
    * @return assignedViaName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getAssignedViaName() {
     return assignedViaName;
   }
 
-  public void setAssignedViaName(String assignedViaName) {
+  public void setAssignedViaName(@javax.annotation.Nonnull String assignedViaName) {
     this.assignedViaName = assignedViaName;
   }
 
 
-  public PermissionsConfigurations assignedViaUrl(String assignedViaUrl) {
+  public PermissionsConfigurations assignedViaUrl(@javax.annotation.Nonnull String assignedViaUrl) {
     this.assignedViaUrl = assignedViaUrl;
     return this;
   }
 
-   /**
+  /**
    * Get assignedViaUrl
    * @return assignedViaUrl
-  **/
+   */
   @javax.annotation.Nonnull
   public String getAssignedViaUrl() {
     return assignedViaUrl;
   }
 
-  public void setAssignedViaUrl(String assignedViaUrl) {
+  public void setAssignedViaUrl(@javax.annotation.Nonnull String assignedViaUrl) {
     this.assignedViaUrl = assignedViaUrl;
   }
 
 
-  public PermissionsConfigurations assignedViaType(String assignedViaType) {
+  public PermissionsConfigurations assignedViaType(@javax.annotation.Nonnull String assignedViaType) {
     this.assignedViaType = assignedViaType;
     return this;
   }
 
-   /**
+  /**
    * Get assignedViaType
    * @return assignedViaType
-  **/
+   */
   @javax.annotation.Nonnull
   public String getAssignedViaType() {
     return assignedViaType;
   }
 
-  public void setAssignedViaType(String assignedViaType) {
+  public void setAssignedViaType(@javax.annotation.Nonnull String assignedViaType) {
     this.assignedViaType = assignedViaType;
   }
 
 
-  public PermissionsConfigurations assignedTo(BigDecimal assignedTo) {
+  public PermissionsConfigurations assignedTo(@javax.annotation.Nonnull BigDecimal assignedTo) {
     this.assignedTo = assignedTo;
     return this;
   }
 
-   /**
+  /**
    * Get assignedTo
    * @return assignedTo
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getAssignedTo() {
     return assignedTo;
   }
 
-  public void setAssignedTo(BigDecimal assignedTo) {
+  public void setAssignedTo(@javax.annotation.Nonnull BigDecimal assignedTo) {
     this.assignedTo = assignedTo;
   }
 
 
-  public PermissionsConfigurations cloudAccountDetails(CloudAccountDetails cloudAccountDetails) {
+  public PermissionsConfigurations cloudAccountDetails(@javax.annotation.Nonnull CloudAccountDetails cloudAccountDetails) {
     this.cloudAccountDetails = cloudAccountDetails;
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountDetails
    * @return cloudAccountDetails
-  **/
+   */
   @javax.annotation.Nonnull
   public CloudAccountDetails getCloudAccountDetails() {
     return cloudAccountDetails;
   }
 
-  public void setCloudAccountDetails(CloudAccountDetails cloudAccountDetails) {
+  public void setCloudAccountDetails(@javax.annotation.Nonnull CloudAccountDetails cloudAccountDetails) {
     this.cloudAccountDetails = cloudAccountDetails;
   }
 
 
-  public PermissionsConfigurations permissions(List<AccessType> permissions) {
+  public PermissionsConfigurations permissions(@javax.annotation.Nonnull List<AccessType> permissions) {
     this.permissions = permissions;
     return this;
   }
@@ -306,16 +318,16 @@ public class PermissionsConfigurations {
     return this;
   }
 
-   /**
+  /**
    * Get permissions
    * @return permissions
-  **/
+   */
   @javax.annotation.Nonnull
   public List<AccessType> getPermissions() {
     return permissions;
   }
 
-  public void setPermissions(List<AccessType> permissions) {
+  public void setPermissions(@javax.annotation.Nonnull List<AccessType> permissions) {
     this.permissions = permissions;
   }
 
@@ -384,44 +396,22 @@ public class PermissionsConfigurations {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("permissionsConfigurationsId");
-    openapiFields.add("permissionsConfigurationsName");
-    openapiFields.add("permissionsConfigurationsUrl");
-    openapiFields.add("permissionsConfigurationsType");
-    openapiFields.add("assignedViaId");
-    openapiFields.add("assignedViaName");
-    openapiFields.add("assignedViaUrl");
-    openapiFields.add("assignedViaType");
-    openapiFields.add("assignedTo");
-    openapiFields.add("cloudAccountDetails");
-    openapiFields.add("permissions");
+    openapiFields = new HashSet<String>(Arrays.asList("permissionsConfigurationsId", "permissionsConfigurationsName", "permissionsConfigurationsUrl", "permissionsConfigurationsType", "assignedViaId", "assignedViaName", "assignedViaUrl", "assignedViaType", "assignedTo", "cloudAccountDetails", "permissions"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("permissionsConfigurationsId");
-    openapiRequiredFields.add("permissionsConfigurationsName");
-    openapiRequiredFields.add("permissionsConfigurationsUrl");
-    openapiRequiredFields.add("permissionsConfigurationsType");
-    openapiRequiredFields.add("assignedViaId");
-    openapiRequiredFields.add("assignedViaName");
-    openapiRequiredFields.add("assignedViaUrl");
-    openapiRequiredFields.add("assignedViaType");
-    openapiRequiredFields.add("assignedTo");
-    openapiRequiredFields.add("cloudAccountDetails");
-    openapiRequiredFields.add("permissions");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("permissionsConfigurationsId", "permissionsConfigurationsName", "permissionsConfigurationsUrl", "permissionsConfigurationsType", "assignedViaId", "assignedViaName", "assignedViaUrl", "assignedViaType", "assignedTo", "cloudAccountDetails", "permissions"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PermissionsConfigurations
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PermissionsConfigurations
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!PermissionsConfigurations.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in PermissionsConfigurations is not found in the empty JSON string", PermissionsConfigurations.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in PermissionsConfigurations is not found in the empty JSON string", PermissionsConfigurations.openapiRequiredFields.toString()));
         }
       }
 
@@ -429,40 +419,40 @@ public class PermissionsConfigurations {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!PermissionsConfigurations.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PermissionsConfigurations` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `PermissionsConfigurations` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : PermissionsConfigurations.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("permissionsConfigurationsId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `permissionsConfigurationsId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("permissionsConfigurationsId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `permissionsConfigurationsId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("permissionsConfigurationsId").toString()));
       }
       if (!jsonObj.get("permissionsConfigurationsName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `permissionsConfigurationsName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("permissionsConfigurationsName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `permissionsConfigurationsName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("permissionsConfigurationsName").toString()));
       }
       if (!jsonObj.get("permissionsConfigurationsUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `permissionsConfigurationsUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("permissionsConfigurationsUrl").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `permissionsConfigurationsUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("permissionsConfigurationsUrl").toString()));
       }
       if (!jsonObj.get("permissionsConfigurationsType").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `permissionsConfigurationsType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("permissionsConfigurationsType").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `permissionsConfigurationsType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("permissionsConfigurationsType").toString()));
       }
       if (!jsonObj.get("assignedViaId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `assignedViaId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assignedViaId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assignedViaId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assignedViaId").toString()));
       }
       if (!jsonObj.get("assignedViaName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `assignedViaName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assignedViaName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assignedViaName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assignedViaName").toString()));
       }
       if (!jsonObj.get("assignedViaUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `assignedViaUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assignedViaUrl").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assignedViaUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assignedViaUrl").toString()));
       }
       if (!jsonObj.get("assignedViaType").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `assignedViaType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assignedViaType").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assignedViaType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assignedViaType").toString()));
       }
       // validate the required field `cloudAccountDetails`
       CloudAccountDetails.validateJsonElement(jsonObj.get("cloudAccountDetails"));
@@ -470,7 +460,7 @@ public class PermissionsConfigurations {
       if (jsonObj.get("permissions") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("permissions").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `permissions` to be an array in the JSON string but got `%s`", jsonObj.get("permissions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `permissions` to be an array in the JSON string but got `%s`", jsonObj.get("permissions").toString()));
       }
   }
 
@@ -503,22 +493,22 @@ public class PermissionsConfigurations {
     }
   }
 
- /**
-  * Create an instance of PermissionsConfigurations given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of PermissionsConfigurations
-  * @throws IOException if the JSON string is invalid with respect to PermissionsConfigurations
-  */
+  /**
+   * Create an instance of PermissionsConfigurations given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PermissionsConfigurations
+   * @throws IOException if the JSON string is invalid with respect to PermissionsConfigurations
+   */
   public static PermissionsConfigurations fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, PermissionsConfigurations.class);
   }
 
- /**
-  * Convert an instance of PermissionsConfigurations to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of PermissionsConfigurations to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **statistics** | [**List[Outliersenginev3AttributeStatistics]**](Outliersenginev3AttributeStatistics.md) |  | [optional] 
 **total_number_of_attributes** | **int** |  | [optional] 
-**type** | [**Outliersenginev3SourceAttributeType**](Outliersenginev3SourceAttributeType.md) |  | [optional] 
+**type** | [**Outliersenginev3SourceAttributeType**](Outliersenginev3SourceAttributeType.md) |  | [optional] [default to Outliersenginev3SourceAttributeType.UNDEFINED_SOURCE_STATISTICS_TYPE]
 
 ## Example
 

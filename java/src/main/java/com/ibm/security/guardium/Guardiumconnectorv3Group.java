@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,182 +42,193 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Return details about the groups defined on a Guardium system.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3Group {
   public static final String SERIALIZED_NAME_APPLICATION = "application";
   @SerializedName(SERIALIZED_NAME_APPLICATION)
+  @javax.annotation.Nullable
   private String application;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_GROUP_ID = "group_id";
   @SerializedName(SERIALIZED_NAME_GROUP_ID)
+  @javax.annotation.Nullable
   private Integer groupId;
 
   public static final String SERIALIZED_NAME_GROUP_TYPE_ID = "group_type_id";
   @SerializedName(SERIALIZED_NAME_GROUP_TYPE_ID)
+  @javax.annotation.Nullable
   private Integer groupTypeId;
 
   public static final String SERIALIZED_NAME_HIERARCHICAL = "hierarchical";
   @SerializedName(SERIALIZED_NAME_HIERARCHICAL)
+  @javax.annotation.Nullable
   private Boolean hierarchical;
 
   public static final String SERIALIZED_NAME_MEMBER_COUNT = "member_count";
   @SerializedName(SERIALIZED_NAME_MEMBER_COUNT)
+  @javax.annotation.Nullable
   private Integer memberCount;
 
   public static final String SERIALIZED_NAME_MEMBERS = "members";
   @SerializedName(SERIALIZED_NAME_MEMBERS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3GroupMember> members = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NESTED_GROUP_MEMBERS = "nested_group_members";
   @SerializedName(SERIALIZED_NAME_NESTED_GROUP_MEMBERS)
+  @javax.annotation.Nullable
   private List<Guardiumconnectorv3NestedGroupMember> nestedGroupMembers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TUPLE_COUNT = "tuple_count";
   @SerializedName(SERIALIZED_NAME_TUPLE_COUNT)
+  @javax.annotation.Nullable
   private Integer tupleCount;
 
   public static final String SERIALIZED_NAME_TUPLES = "tuples";
   @SerializedName(SERIALIZED_NAME_TUPLES)
+  @javax.annotation.Nullable
   private String tuples;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private Integer type;
 
   public Guardiumconnectorv3Group() {
   }
 
-  public Guardiumconnectorv3Group application(String application) {
+  public Guardiumconnectorv3Group application(@javax.annotation.Nullable String application) {
     this.application = application;
     return this;
   }
 
-   /**
+  /**
    * Application associated with the group.
    * @return application
-  **/
+   */
   @javax.annotation.Nullable
   public String getApplication() {
     return application;
   }
 
-  public void setApplication(String application) {
+  public void setApplication(@javax.annotation.Nullable String application) {
     this.application = application;
   }
 
 
-  public Guardiumconnectorv3Group description(String description) {
+  public Guardiumconnectorv3Group description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Group name.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Guardiumconnectorv3Group groupId(Integer groupId) {
+  public Guardiumconnectorv3Group groupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
+  /**
    * Group ID.
    * @return groupId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupId() {
     return groupId;
   }
 
-  public void setGroupId(Integer groupId) {
+  public void setGroupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
   }
 
 
-  public Guardiumconnectorv3Group groupTypeId(Integer groupTypeId) {
+  public Guardiumconnectorv3Group groupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
     return this;
   }
 
-   /**
+  /**
    * Group type ID.
    * @return groupTypeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupTypeId() {
     return groupTypeId;
   }
 
-  public void setGroupTypeId(Integer groupTypeId) {
+  public void setGroupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
   }
 
 
-  public Guardiumconnectorv3Group hierarchical(Boolean hierarchical) {
+  public Guardiumconnectorv3Group hierarchical(@javax.annotation.Nullable Boolean hierarchical) {
     this.hierarchical = hierarchical;
     return this;
   }
 
-   /**
+  /**
    * Group is nested (hierarchical).
    * @return hierarchical
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getHierarchical() {
     return hierarchical;
   }
 
-  public void setHierarchical(Boolean hierarchical) {
+  public void setHierarchical(@javax.annotation.Nullable Boolean hierarchical) {
     this.hierarchical = hierarchical;
   }
 
 
-  public Guardiumconnectorv3Group memberCount(Integer memberCount) {
+  public Guardiumconnectorv3Group memberCount(@javax.annotation.Nullable Integer memberCount) {
     this.memberCount = memberCount;
     return this;
   }
 
-   /**
+  /**
    * Number of members in group.
    * @return memberCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getMemberCount() {
     return memberCount;
   }
 
-  public void setMemberCount(Integer memberCount) {
+  public void setMemberCount(@javax.annotation.Nullable Integer memberCount) {
     this.memberCount = memberCount;
   }
 
 
-  public Guardiumconnectorv3Group members(List<Guardiumconnectorv3GroupMember> members) {
+  public Guardiumconnectorv3Group members(@javax.annotation.Nullable List<Guardiumconnectorv3GroupMember> members) {
     this.members = members;
     return this;
   }
@@ -229,21 +241,21 @@ public class Guardiumconnectorv3Group {
     return this;
   }
 
-   /**
+  /**
    * List of group members.
    * @return members
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3GroupMember> getMembers() {
     return members;
   }
 
-  public void setMembers(List<Guardiumconnectorv3GroupMember> members) {
+  public void setMembers(@javax.annotation.Nullable List<Guardiumconnectorv3GroupMember> members) {
     this.members = members;
   }
 
 
-  public Guardiumconnectorv3Group nestedGroupMembers(List<Guardiumconnectorv3NestedGroupMember> nestedGroupMembers) {
+  public Guardiumconnectorv3Group nestedGroupMembers(@javax.annotation.Nullable List<Guardiumconnectorv3NestedGroupMember> nestedGroupMembers) {
     this.nestedGroupMembers = nestedGroupMembers;
     return this;
   }
@@ -256,73 +268,73 @@ public class Guardiumconnectorv3Group {
     return this;
   }
 
-   /**
+  /**
    * Array of group members.
    * @return nestedGroupMembers
-  **/
+   */
   @javax.annotation.Nullable
   public List<Guardiumconnectorv3NestedGroupMember> getNestedGroupMembers() {
     return nestedGroupMembers;
   }
 
-  public void setNestedGroupMembers(List<Guardiumconnectorv3NestedGroupMember> nestedGroupMembers) {
+  public void setNestedGroupMembers(@javax.annotation.Nullable List<Guardiumconnectorv3NestedGroupMember> nestedGroupMembers) {
     this.nestedGroupMembers = nestedGroupMembers;
   }
 
 
-  public Guardiumconnectorv3Group tupleCount(Integer tupleCount) {
+  public Guardiumconnectorv3Group tupleCount(@javax.annotation.Nullable Integer tupleCount) {
     this.tupleCount = tupleCount;
     return this;
   }
 
-   /**
+  /**
    * Number of tuples in group.
    * @return tupleCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTupleCount() {
     return tupleCount;
   }
 
-  public void setTupleCount(Integer tupleCount) {
+  public void setTupleCount(@javax.annotation.Nullable Integer tupleCount) {
     this.tupleCount = tupleCount;
   }
 
 
-  public Guardiumconnectorv3Group tuples(String tuples) {
+  public Guardiumconnectorv3Group tuples(@javax.annotation.Nullable String tuples) {
     this.tuples = tuples;
     return this;
   }
 
-   /**
+  /**
    * Name of tuples in group type.
    * @return tuples
-  **/
+   */
   @javax.annotation.Nullable
   public String getTuples() {
     return tuples;
   }
 
-  public void setTuples(String tuples) {
+  public void setTuples(@javax.annotation.Nullable String tuples) {
     this.tuples = tuples;
   }
 
 
-  public Guardiumconnectorv3Group type(Integer type) {
+  public Guardiumconnectorv3Group type(@javax.annotation.Nullable Integer type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Group type.
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getType() {
     return type;
   }
 
-  public void setType(Integer type) {
+  public void setType(@javax.annotation.Nullable Integer type) {
     this.type = type;
   }
 
@@ -391,33 +403,22 @@ public class Guardiumconnectorv3Group {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("application");
-    openapiFields.add("description");
-    openapiFields.add("group_id");
-    openapiFields.add("group_type_id");
-    openapiFields.add("hierarchical");
-    openapiFields.add("member_count");
-    openapiFields.add("members");
-    openapiFields.add("nested_group_members");
-    openapiFields.add("tuple_count");
-    openapiFields.add("tuples");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("application", "description", "group_id", "group_type_id", "hierarchical", "member_count", "members", "nested_group_members", "tuple_count", "tuples", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3Group
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3Group
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3Group.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3Group is not found in the empty JSON string", Guardiumconnectorv3Group.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3Group is not found in the empty JSON string", Guardiumconnectorv3Group.openapiRequiredFields.toString()));
         }
       }
 
@@ -425,22 +426,22 @@ public class Guardiumconnectorv3Group {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3Group.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3Group` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3Group` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("application") != null && !jsonObj.get("application").isJsonNull()) && !jsonObj.get("application").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `application` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
       if (jsonObj.get("members") != null && !jsonObj.get("members").isJsonNull()) {
         JsonArray jsonArraymembers = jsonObj.getAsJsonArray("members");
         if (jsonArraymembers != null) {
           // ensure the json data is an array
           if (!jsonObj.get("members").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `members` to be an array in the JSON string but got `%s`", jsonObj.get("members").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `members` to be an array in the JSON string but got `%s`", jsonObj.get("members").toString()));
           }
 
           // validate the optional field `members` (array)
@@ -454,7 +455,7 @@ public class Guardiumconnectorv3Group {
         if (jsonArraynestedGroupMembers != null) {
           // ensure the json data is an array
           if (!jsonObj.get("nested_group_members").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `nested_group_members` to be an array in the JSON string but got `%s`", jsonObj.get("nested_group_members").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nested_group_members` to be an array in the JSON string but got `%s`", jsonObj.get("nested_group_members").toString()));
           }
 
           // validate the optional field `nested_group_members` (array)
@@ -464,7 +465,7 @@ public class Guardiumconnectorv3Group {
         }
       }
       if ((jsonObj.get("tuples") != null && !jsonObj.get("tuples").isJsonNull()) && !jsonObj.get("tuples").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tuples` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tuples").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tuples` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tuples").toString()));
       }
   }
 
@@ -497,22 +498,22 @@ public class Guardiumconnectorv3Group {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3Group given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3Group
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3Group
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3Group given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3Group
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3Group
+   */
   public static Guardiumconnectorv3Group fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3Group.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3Group to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3Group to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

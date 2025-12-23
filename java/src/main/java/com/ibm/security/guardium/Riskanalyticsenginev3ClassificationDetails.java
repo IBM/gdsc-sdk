@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,109 +42,116 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ClassificationDetails message an additional info for the classification the UI.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsenginev3ClassificationDetails {
   public static final String SERIALIZED_NAME_CLASS_DESCRIPTION_NLS = "class_description_nls";
   @SerializedName(SERIALIZED_NAME_CLASS_DESCRIPTION_NLS)
+  @javax.annotation.Nullable
   private String classDescriptionNls;
 
   public static final String SERIALIZED_NAME_CLASS_KEY = "class_key";
   @SerializedName(SERIALIZED_NAME_CLASS_KEY)
+  @javax.annotation.Nullable
   private String classKey;
 
   public static final String SERIALIZED_NAME_CLASS_NLS = "class_nls";
   @SerializedName(SERIALIZED_NAME_CLASS_NLS)
+  @javax.annotation.Nullable
   private String classNls;
 
   public static final String SERIALIZED_NAME_CLASS_OBSERVATIONS = "class_observations";
   @SerializedName(SERIALIZED_NAME_CLASS_OBSERVATIONS)
+  @javax.annotation.Nullable
   private List<Riskanalyticsenginev3ClassificationObservation> classObservations = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLASS_VALUE = "class_value";
   @SerializedName(SERIALIZED_NAME_CLASS_VALUE)
+  @javax.annotation.Nullable
   private Float classValue;
 
   public static final String SERIALIZED_NAME_CLASSIFICATION_MATCH_DETAILS = "classification_match_details";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION_MATCH_DETAILS)
+  @javax.annotation.Nullable
   private List<Riskanalyticsenginev3ClassificationMatchDetails> classificationMatchDetails = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CLASSIFICATION_MODIFIED = "classification_modified";
   @SerializedName(SERIALIZED_NAME_CLASSIFICATION_MODIFIED)
+  @javax.annotation.Nullable
   private Boolean classificationModified;
 
   public Riskanalyticsenginev3ClassificationDetails() {
   }
 
-  public Riskanalyticsenginev3ClassificationDetails classDescriptionNls(String classDescriptionNls) {
+  public Riskanalyticsenginev3ClassificationDetails classDescriptionNls(@javax.annotation.Nullable String classDescriptionNls) {
     this.classDescriptionNls = classDescriptionNls;
     return this;
   }
 
-   /**
+  /**
    * Class description for UI with translation.
    * @return classDescriptionNls
-  **/
+   */
   @javax.annotation.Nullable
   public String getClassDescriptionNls() {
     return classDescriptionNls;
   }
 
-  public void setClassDescriptionNls(String classDescriptionNls) {
+  public void setClassDescriptionNls(@javax.annotation.Nullable String classDescriptionNls) {
     this.classDescriptionNls = classDescriptionNls;
   }
 
 
-  public Riskanalyticsenginev3ClassificationDetails classKey(String classKey) {
+  public Riskanalyticsenginev3ClassificationDetails classKey(@javax.annotation.Nullable String classKey) {
     this.classKey = classKey;
     return this;
   }
 
-   /**
+  /**
    * Key of the classification found for this risk.
    * @return classKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getClassKey() {
     return classKey;
   }
 
-  public void setClassKey(String classKey) {
+  public void setClassKey(@javax.annotation.Nullable String classKey) {
     this.classKey = classKey;
   }
 
 
-  public Riskanalyticsenginev3ClassificationDetails classNls(String classNls) {
+  public Riskanalyticsenginev3ClassificationDetails classNls(@javax.annotation.Nullable String classNls) {
     this.classNls = classNls;
     return this;
   }
 
-   /**
+  /**
    * Key of the classification found for this risk.
    * @return classNls
-  **/
+   */
   @javax.annotation.Nullable
   public String getClassNls() {
     return classNls;
   }
 
-  public void setClassNls(String classNls) {
+  public void setClassNls(@javax.annotation.Nullable String classNls) {
     this.classNls = classNls;
   }
 
 
-  public Riskanalyticsenginev3ClassificationDetails classObservations(List<Riskanalyticsenginev3ClassificationObservation> classObservations) {
+  public Riskanalyticsenginev3ClassificationDetails classObservations(@javax.annotation.Nullable List<Riskanalyticsenginev3ClassificationObservation> classObservations) {
     this.classObservations = classObservations;
     return this;
   }
@@ -156,40 +164,40 @@ public class Riskanalyticsenginev3ClassificationDetails {
     return this;
   }
 
-   /**
+  /**
    * Classification Observation array of observations that were found for this classification.
    * @return classObservations
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsenginev3ClassificationObservation> getClassObservations() {
     return classObservations;
   }
 
-  public void setClassObservations(List<Riskanalyticsenginev3ClassificationObservation> classObservations) {
+  public void setClassObservations(@javax.annotation.Nullable List<Riskanalyticsenginev3ClassificationObservation> classObservations) {
     this.classObservations = classObservations;
   }
 
 
-  public Riskanalyticsenginev3ClassificationDetails classValue(Float classValue) {
+  public Riskanalyticsenginev3ClassificationDetails classValue(@javax.annotation.Nullable Float classValue) {
     this.classValue = classValue;
     return this;
   }
 
-   /**
+  /**
    * Value of the classification found for this risk.
    * @return classValue
-  **/
+   */
   @javax.annotation.Nullable
   public Float getClassValue() {
     return classValue;
   }
 
-  public void setClassValue(Float classValue) {
+  public void setClassValue(@javax.annotation.Nullable Float classValue) {
     this.classValue = classValue;
   }
 
 
-  public Riskanalyticsenginev3ClassificationDetails classificationMatchDetails(List<Riskanalyticsenginev3ClassificationMatchDetails> classificationMatchDetails) {
+  public Riskanalyticsenginev3ClassificationDetails classificationMatchDetails(@javax.annotation.Nullable List<Riskanalyticsenginev3ClassificationMatchDetails> classificationMatchDetails) {
     this.classificationMatchDetails = classificationMatchDetails;
     return this;
   }
@@ -202,35 +210,35 @@ public class Riskanalyticsenginev3ClassificationDetails {
     return this;
   }
 
-   /**
+  /**
    * Get classificationMatchDetails
    * @return classificationMatchDetails
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsenginev3ClassificationMatchDetails> getClassificationMatchDetails() {
     return classificationMatchDetails;
   }
 
-  public void setClassificationMatchDetails(List<Riskanalyticsenginev3ClassificationMatchDetails> classificationMatchDetails) {
+  public void setClassificationMatchDetails(@javax.annotation.Nullable List<Riskanalyticsenginev3ClassificationMatchDetails> classificationMatchDetails) {
     this.classificationMatchDetails = classificationMatchDetails;
   }
 
 
-  public Riskanalyticsenginev3ClassificationDetails classificationModified(Boolean classificationModified) {
+  public Riskanalyticsenginev3ClassificationDetails classificationModified(@javax.annotation.Nullable Boolean classificationModified) {
     this.classificationModified = classificationModified;
     return this;
   }
 
-   /**
+  /**
    * Get classificationModified
    * @return classificationModified
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getClassificationModified() {
     return classificationModified;
   }
 
-  public void setClassificationModified(Boolean classificationModified) {
+  public void setClassificationModified(@javax.annotation.Nullable Boolean classificationModified) {
     this.classificationModified = classificationModified;
   }
 
@@ -291,29 +299,22 @@ public class Riskanalyticsenginev3ClassificationDetails {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("class_description_nls");
-    openapiFields.add("class_key");
-    openapiFields.add("class_nls");
-    openapiFields.add("class_observations");
-    openapiFields.add("class_value");
-    openapiFields.add("classification_match_details");
-    openapiFields.add("classification_modified");
+    openapiFields = new HashSet<String>(Arrays.asList("class_description_nls", "class_key", "class_nls", "class_observations", "class_value", "classification_match_details", "classification_modified"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3ClassificationDetails
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3ClassificationDetails
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsenginev3ClassificationDetails.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsenginev3ClassificationDetails is not found in the empty JSON string", Riskanalyticsenginev3ClassificationDetails.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsenginev3ClassificationDetails is not found in the empty JSON string", Riskanalyticsenginev3ClassificationDetails.openapiRequiredFields.toString()));
         }
       }
 
@@ -321,25 +322,25 @@ public class Riskanalyticsenginev3ClassificationDetails {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsenginev3ClassificationDetails.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3ClassificationDetails` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3ClassificationDetails` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("class_description_nls") != null && !jsonObj.get("class_description_nls").isJsonNull()) && !jsonObj.get("class_description_nls").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `class_description_nls` to be a primitive type in the JSON string but got `%s`", jsonObj.get("class_description_nls").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `class_description_nls` to be a primitive type in the JSON string but got `%s`", jsonObj.get("class_description_nls").toString()));
       }
       if ((jsonObj.get("class_key") != null && !jsonObj.get("class_key").isJsonNull()) && !jsonObj.get("class_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `class_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("class_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `class_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("class_key").toString()));
       }
       if ((jsonObj.get("class_nls") != null && !jsonObj.get("class_nls").isJsonNull()) && !jsonObj.get("class_nls").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `class_nls` to be a primitive type in the JSON string but got `%s`", jsonObj.get("class_nls").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `class_nls` to be a primitive type in the JSON string but got `%s`", jsonObj.get("class_nls").toString()));
       }
       if (jsonObj.get("class_observations") != null && !jsonObj.get("class_observations").isJsonNull()) {
         JsonArray jsonArrayclassObservations = jsonObj.getAsJsonArray("class_observations");
         if (jsonArrayclassObservations != null) {
           // ensure the json data is an array
           if (!jsonObj.get("class_observations").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `class_observations` to be an array in the JSON string but got `%s`", jsonObj.get("class_observations").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `class_observations` to be an array in the JSON string but got `%s`", jsonObj.get("class_observations").toString()));
           }
 
           // validate the optional field `class_observations` (array)
@@ -353,7 +354,7 @@ public class Riskanalyticsenginev3ClassificationDetails {
         if (jsonArrayclassificationMatchDetails != null) {
           // ensure the json data is an array
           if (!jsonObj.get("classification_match_details").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `classification_match_details` to be an array in the JSON string but got `%s`", jsonObj.get("classification_match_details").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `classification_match_details` to be an array in the JSON string but got `%s`", jsonObj.get("classification_match_details").toString()));
           }
 
           // validate the optional field `classification_match_details` (array)
@@ -393,22 +394,22 @@ public class Riskanalyticsenginev3ClassificationDetails {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsenginev3ClassificationDetails given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsenginev3ClassificationDetails
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3ClassificationDetails
-  */
+  /**
+   * Create an instance of Riskanalyticsenginev3ClassificationDetails given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsenginev3ClassificationDetails
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3ClassificationDetails
+   */
   public static Riskanalyticsenginev3ClassificationDetails fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsenginev3ClassificationDetails.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsenginev3ClassificationDetails to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsenginev3ClassificationDetails to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

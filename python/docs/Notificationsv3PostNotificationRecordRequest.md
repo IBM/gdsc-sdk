@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**origin** | [**Notificationsv3Origin**](Notificationsv3Origin.md) |  | [optional] 
+**origin** | [**Notificationsv3Origin**](Notificationsv3Origin.md) |  | [optional] [default to Notificationsv3Origin.UNDEFINED_ORIGIN]
 **origin_data** | **str** |  | [optional] 
 **target_receivers** | [**List[Schedulerv3Recipient]**](Schedulerv3Recipient.md) |  | [optional] 
 **template_data** | **Dict[str, str]** |  | [optional] 

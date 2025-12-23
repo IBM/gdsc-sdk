@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,19 +38,19 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetAnalyzedRegionStatus200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class GetAnalyzedRegionStatus200Response {
   /**
    * Gets or Sets status
@@ -58,7 +59,7 @@ public class GetAnalyzedRegionStatus200Response {
   public enum StatusEnum {
     ANALYZED("Analyzed"),
     
-    NOTANALYZED("NotAnalyzed");
+    NOT_ANALYZED("NotAnalyzed");
 
     private String value;
 
@@ -105,26 +106,27 @@ public class GetAnalyzedRegionStatus200Response {
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private StatusEnum status;
 
   public GetAnalyzedRegionStatus200Response() {
   }
 
-  public GetAnalyzedRegionStatus200Response status(StatusEnum status) {
+  public GetAnalyzedRegionStatus200Response status(@javax.annotation.Nullable StatusEnum status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public StatusEnum getStatus() {
     return status;
   }
 
-  public void setStatus(StatusEnum status) {
+  public void setStatus(@javax.annotation.Nullable StatusEnum status) {
     this.status = status;
   }
 
@@ -173,23 +175,22 @@ public class GetAnalyzedRegionStatus200Response {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GetAnalyzedRegionStatus200Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetAnalyzedRegionStatus200Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!GetAnalyzedRegionStatus200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in GetAnalyzedRegionStatus200Response is not found in the empty JSON string", GetAnalyzedRegionStatus200Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in GetAnalyzedRegionStatus200Response is not found in the empty JSON string", GetAnalyzedRegionStatus200Response.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,12 +198,12 @@ public class GetAnalyzedRegionStatus200Response {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!GetAnalyzedRegionStatus200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetAnalyzedRegionStatus200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `GetAnalyzedRegionStatus200Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
       }
       // validate the optional field `status`
       if (jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) {
@@ -239,22 +240,22 @@ public class GetAnalyzedRegionStatus200Response {
     }
   }
 
- /**
-  * Create an instance of GetAnalyzedRegionStatus200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetAnalyzedRegionStatus200Response
-  * @throws IOException if the JSON string is invalid with respect to GetAnalyzedRegionStatus200Response
-  */
+  /**
+   * Create an instance of GetAnalyzedRegionStatus200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetAnalyzedRegionStatus200Response
+   * @throws IOException if the JSON string is invalid with respect to GetAnalyzedRegionStatus200Response
+   */
   public static GetAnalyzedRegionStatus200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetAnalyzedRegionStatus200Response.class);
   }
 
- /**
-  * Convert an instance of GetAnalyzedRegionStatus200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetAnalyzedRegionStatus200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

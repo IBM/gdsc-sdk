@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,511 +44,533 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ReportFilterCondition represents a report filter condition.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3ReportFilterCondition {
   public static final String SERIALIZED_NAME_CASE_INSENSITIVE = "case_insensitive";
   @SerializedName(SERIALIZED_NAME_CASE_INSENSITIVE)
+  @javax.annotation.Nullable
   private Boolean caseInsensitive;
 
   public static final String SERIALIZED_NAME_FIELD_NLS_TRANSLATION_KEY = "field_nls_translation_key";
   @SerializedName(SERIALIZED_NAME_FIELD_NLS_TRANSLATION_KEY)
+  @javax.annotation.Nullable
   private String fieldNlsTranslationKey;
 
   public static final String SERIALIZED_NAME_FILTER_ID = "filter_id";
   @SerializedName(SERIALIZED_NAME_FILTER_ID)
+  @javax.annotation.Nullable
   private Integer filterId;
 
   public static final String SERIALIZED_NAME_GROUP_TYPE_ID = "group_type_id";
   @SerializedName(SERIALIZED_NAME_GROUP_TYPE_ID)
+  @javax.annotation.Nullable
   private Integer groupTypeId;
 
   public static final String SERIALIZED_NAME_HEADER_ID = "header_id";
   @SerializedName(SERIALIZED_NAME_HEADER_ID)
+  @javax.annotation.Nullable
   private String headerId;
 
   public static final String SERIALIZED_NAME_HEADER_NAME = "header_name";
   @SerializedName(SERIALIZED_NAME_HEADER_NAME)
+  @javax.annotation.Nullable
   private String headerName;
 
   public static final String SERIALIZED_NAME_HEADER_TYPE = "header_type";
   @SerializedName(SERIALIZED_NAME_HEADER_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3HeaderType headerType = Reportsv3HeaderType.UNDEFINED_TYPE;
 
   public static final String SERIALIZED_NAME_IN_REPORT_DATE_RANGE = "in_report_date_range";
   @SerializedName(SERIALIZED_NAME_IN_REPORT_DATE_RANGE)
+  @javax.annotation.Nullable
   private Reportsv3DateRange inReportDateRange;
 
   public static final String SERIALIZED_NAME_IN_REPORT_FIELD_NLS_KEY = "in_report_field_nls_key";
   @SerializedName(SERIALIZED_NAME_IN_REPORT_FIELD_NLS_KEY)
+  @javax.annotation.Nullable
   private String inReportFieldNlsKey;
 
   public static final String SERIALIZED_NAME_IN_REPORT_HEADER_ID = "in_report_header_id";
   @SerializedName(SERIALIZED_NAME_IN_REPORT_HEADER_ID)
+  @javax.annotation.Nullable
   private String inReportHeaderId;
 
   public static final String SERIALIZED_NAME_IN_REPORT_HEADER_NAME = "in_report_header_name";
   @SerializedName(SERIALIZED_NAME_IN_REPORT_HEADER_NAME)
+  @javax.annotation.Nullable
   private String inReportHeaderName;
 
   public static final String SERIALIZED_NAME_IN_REPORT_ID = "in_report_id";
   @SerializedName(SERIALIZED_NAME_IN_REPORT_ID)
+  @javax.annotation.Nullable
   private String inReportId;
 
   public static final String SERIALIZED_NAME_IN_REPORT_NAME = "in_report_name";
   @SerializedName(SERIALIZED_NAME_IN_REPORT_NAME)
+  @javax.annotation.Nullable
   private String inReportName;
 
   public static final String SERIALIZED_NAME_IN_REPORT_TABLE_NAME = "in_report_table_name";
   @SerializedName(SERIALIZED_NAME_IN_REPORT_TABLE_NAME)
+  @javax.annotation.Nullable
   private String inReportTableName;
 
   public static final String SERIALIZED_NAME_IS_TUPLE = "is_tuple";
   @SerializedName(SERIALIZED_NAME_IS_TUPLE)
+  @javax.annotation.Nullable
   private Boolean isTuple;
 
   public static final String SERIALIZED_NAME_OPERATOR_TYPE = "operator_type";
   @SerializedName(SERIALIZED_NAME_OPERATOR_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3OperatorType operatorType = Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE;
 
   public static final String SERIALIZED_NAME_PARAMETER_TYPE = "parameter_type";
   @SerializedName(SERIALIZED_NAME_PARAMETER_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3ParameterType parameterType = Reportsv3ParameterType.UNDEFINED_PARAM_TYPE;
 
   public static final String SERIALIZED_NAME_SCHEMA_NAME = "schema_name";
   @SerializedName(SERIALIZED_NAME_SCHEMA_NAME)
+  @javax.annotation.Nullable
   private String schemaName;
 
   public static final String SERIALIZED_NAME_SEQUENCE = "sequence";
   @SerializedName(SERIALIZED_NAME_SEQUENCE)
+  @javax.annotation.Nullable
   private Integer sequence;
 
   public static final String SERIALIZED_NAME_TABLE_NAME = "table_name";
   @SerializedName(SERIALIZED_NAME_TABLE_NAME)
+  @javax.annotation.Nullable
   private String tableName;
 
   public static final String SERIALIZED_NAME_TUPLE_TYPE = "tuple_type";
   @SerializedName(SERIALIZED_NAME_TUPLE_TYPE)
+  @javax.annotation.Nullable
   private String tupleType;
 
   public static final String SERIALIZED_NAME_VALUES = "values";
   @SerializedName(SERIALIZED_NAME_VALUES)
+  @javax.annotation.Nullable
   private List<String> values = new ArrayList<>();
 
   public Reportsv3ReportFilterCondition() {
   }
 
-  public Reportsv3ReportFilterCondition caseInsensitive(Boolean caseInsensitive) {
+  public Reportsv3ReportFilterCondition caseInsensitive(@javax.annotation.Nullable Boolean caseInsensitive) {
     this.caseInsensitive = caseInsensitive;
     return this;
   }
 
-   /**
+  /**
    * Case Insensitive - Whether the condition is case insensitive or case sensitive.
    * @return caseInsensitive
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getCaseInsensitive() {
     return caseInsensitive;
   }
 
-  public void setCaseInsensitive(Boolean caseInsensitive) {
+  public void setCaseInsensitive(@javax.annotation.Nullable Boolean caseInsensitive) {
     this.caseInsensitive = caseInsensitive;
   }
 
 
-  public Reportsv3ReportFilterCondition fieldNlsTranslationKey(String fieldNlsTranslationKey) {
+  public Reportsv3ReportFilterCondition fieldNlsTranslationKey(@javax.annotation.Nullable String fieldNlsTranslationKey) {
     this.fieldNlsTranslationKey = fieldNlsTranslationKey;
     return this;
   }
 
-   /**
+  /**
    * Get fieldNlsTranslationKey
    * @return fieldNlsTranslationKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getFieldNlsTranslationKey() {
     return fieldNlsTranslationKey;
   }
 
-  public void setFieldNlsTranslationKey(String fieldNlsTranslationKey) {
+  public void setFieldNlsTranslationKey(@javax.annotation.Nullable String fieldNlsTranslationKey) {
     this.fieldNlsTranslationKey = fieldNlsTranslationKey;
   }
 
 
-  public Reportsv3ReportFilterCondition filterId(Integer filterId) {
+  public Reportsv3ReportFilterCondition filterId(@javax.annotation.Nullable Integer filterId) {
     this.filterId = filterId;
     return this;
   }
 
-   /**
+  /**
    * Get filterId
    * @return filterId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFilterId() {
     return filterId;
   }
 
-  public void setFilterId(Integer filterId) {
+  public void setFilterId(@javax.annotation.Nullable Integer filterId) {
     this.filterId = filterId;
   }
 
 
-  public Reportsv3ReportFilterCondition groupTypeId(Integer groupTypeId) {
+  public Reportsv3ReportFilterCondition groupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
     return this;
   }
 
-   /**
+  /**
    * Get groupTypeId
    * @return groupTypeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupTypeId() {
     return groupTypeId;
   }
 
-  public void setGroupTypeId(Integer groupTypeId) {
+  public void setGroupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
   }
 
 
-  public Reportsv3ReportFilterCondition headerId(String headerId) {
+  public Reportsv3ReportFilterCondition headerId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
     return this;
   }
 
-   /**
+  /**
    * Get headerId
    * @return headerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderId() {
     return headerId;
   }
 
-  public void setHeaderId(String headerId) {
+  public void setHeaderId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
   }
 
 
-  public Reportsv3ReportFilterCondition headerName(String headerName) {
+  public Reportsv3ReportFilterCondition headerName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
     return this;
   }
 
-   /**
+  /**
    * Get headerName
    * @return headerName
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderName() {
     return headerName;
   }
 
-  public void setHeaderName(String headerName) {
+  public void setHeaderName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
   }
 
 
-  public Reportsv3ReportFilterCondition headerType(Reportsv3HeaderType headerType) {
+  public Reportsv3ReportFilterCondition headerType(@javax.annotation.Nullable Reportsv3HeaderType headerType) {
     this.headerType = headerType;
     return this;
   }
 
-   /**
+  /**
    * Get headerType
    * @return headerType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3HeaderType getHeaderType() {
     return headerType;
   }
 
-  public void setHeaderType(Reportsv3HeaderType headerType) {
+  public void setHeaderType(@javax.annotation.Nullable Reportsv3HeaderType headerType) {
     this.headerType = headerType;
   }
 
 
-  public Reportsv3ReportFilterCondition inReportDateRange(Reportsv3DateRange inReportDateRange) {
+  public Reportsv3ReportFilterCondition inReportDateRange(@javax.annotation.Nullable Reportsv3DateRange inReportDateRange) {
     this.inReportDateRange = inReportDateRange;
     return this;
   }
 
-   /**
+  /**
    * Get inReportDateRange
    * @return inReportDateRange
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3DateRange getInReportDateRange() {
     return inReportDateRange;
   }
 
-  public void setInReportDateRange(Reportsv3DateRange inReportDateRange) {
+  public void setInReportDateRange(@javax.annotation.Nullable Reportsv3DateRange inReportDateRange) {
     this.inReportDateRange = inReportDateRange;
   }
 
 
-  public Reportsv3ReportFilterCondition inReportFieldNlsKey(String inReportFieldNlsKey) {
+  public Reportsv3ReportFilterCondition inReportFieldNlsKey(@javax.annotation.Nullable String inReportFieldNlsKey) {
     this.inReportFieldNlsKey = inReportFieldNlsKey;
     return this;
   }
 
-   /**
+  /**
    * Get inReportFieldNlsKey
    * @return inReportFieldNlsKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getInReportFieldNlsKey() {
     return inReportFieldNlsKey;
   }
 
-  public void setInReportFieldNlsKey(String inReportFieldNlsKey) {
+  public void setInReportFieldNlsKey(@javax.annotation.Nullable String inReportFieldNlsKey) {
     this.inReportFieldNlsKey = inReportFieldNlsKey;
   }
 
 
-  public Reportsv3ReportFilterCondition inReportHeaderId(String inReportHeaderId) {
+  public Reportsv3ReportFilterCondition inReportHeaderId(@javax.annotation.Nullable String inReportHeaderId) {
     this.inReportHeaderId = inReportHeaderId;
     return this;
   }
 
-   /**
+  /**
    * Get inReportHeaderId
    * @return inReportHeaderId
-  **/
+   */
   @javax.annotation.Nullable
   public String getInReportHeaderId() {
     return inReportHeaderId;
   }
 
-  public void setInReportHeaderId(String inReportHeaderId) {
+  public void setInReportHeaderId(@javax.annotation.Nullable String inReportHeaderId) {
     this.inReportHeaderId = inReportHeaderId;
   }
 
 
-  public Reportsv3ReportFilterCondition inReportHeaderName(String inReportHeaderName) {
+  public Reportsv3ReportFilterCondition inReportHeaderName(@javax.annotation.Nullable String inReportHeaderName) {
     this.inReportHeaderName = inReportHeaderName;
     return this;
   }
 
-   /**
+  /**
    * Get inReportHeaderName
    * @return inReportHeaderName
-  **/
+   */
   @javax.annotation.Nullable
   public String getInReportHeaderName() {
     return inReportHeaderName;
   }
 
-  public void setInReportHeaderName(String inReportHeaderName) {
+  public void setInReportHeaderName(@javax.annotation.Nullable String inReportHeaderName) {
     this.inReportHeaderName = inReportHeaderName;
   }
 
 
-  public Reportsv3ReportFilterCondition inReportId(String inReportId) {
+  public Reportsv3ReportFilterCondition inReportId(@javax.annotation.Nullable String inReportId) {
     this.inReportId = inReportId;
     return this;
   }
 
-   /**
+  /**
    * Get inReportId
    * @return inReportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getInReportId() {
     return inReportId;
   }
 
-  public void setInReportId(String inReportId) {
+  public void setInReportId(@javax.annotation.Nullable String inReportId) {
     this.inReportId = inReportId;
   }
 
 
-  public Reportsv3ReportFilterCondition inReportName(String inReportName) {
+  public Reportsv3ReportFilterCondition inReportName(@javax.annotation.Nullable String inReportName) {
     this.inReportName = inReportName;
     return this;
   }
 
-   /**
+  /**
    * Get inReportName
    * @return inReportName
-  **/
+   */
   @javax.annotation.Nullable
   public String getInReportName() {
     return inReportName;
   }
 
-  public void setInReportName(String inReportName) {
+  public void setInReportName(@javax.annotation.Nullable String inReportName) {
     this.inReportName = inReportName;
   }
 
 
-  public Reportsv3ReportFilterCondition inReportTableName(String inReportTableName) {
+  public Reportsv3ReportFilterCondition inReportTableName(@javax.annotation.Nullable String inReportTableName) {
     this.inReportTableName = inReportTableName;
     return this;
   }
 
-   /**
+  /**
    * Get inReportTableName
    * @return inReportTableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getInReportTableName() {
     return inReportTableName;
   }
 
-  public void setInReportTableName(String inReportTableName) {
+  public void setInReportTableName(@javax.annotation.Nullable String inReportTableName) {
     this.inReportTableName = inReportTableName;
   }
 
 
-  public Reportsv3ReportFilterCondition isTuple(Boolean isTuple) {
+  public Reportsv3ReportFilterCondition isTuple(@javax.annotation.Nullable Boolean isTuple) {
     this.isTuple = isTuple;
     return this;
   }
 
-   /**
+  /**
    * Get isTuple
    * @return isTuple
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsTuple() {
     return isTuple;
   }
 
-  public void setIsTuple(Boolean isTuple) {
+  public void setIsTuple(@javax.annotation.Nullable Boolean isTuple) {
     this.isTuple = isTuple;
   }
 
 
-  public Reportsv3ReportFilterCondition operatorType(Reportsv3OperatorType operatorType) {
+  public Reportsv3ReportFilterCondition operatorType(@javax.annotation.Nullable Reportsv3OperatorType operatorType) {
     this.operatorType = operatorType;
     return this;
   }
 
-   /**
+  /**
    * Get operatorType
    * @return operatorType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3OperatorType getOperatorType() {
     return operatorType;
   }
 
-  public void setOperatorType(Reportsv3OperatorType operatorType) {
+  public void setOperatorType(@javax.annotation.Nullable Reportsv3OperatorType operatorType) {
     this.operatorType = operatorType;
   }
 
 
-  public Reportsv3ReportFilterCondition parameterType(Reportsv3ParameterType parameterType) {
+  public Reportsv3ReportFilterCondition parameterType(@javax.annotation.Nullable Reportsv3ParameterType parameterType) {
     this.parameterType = parameterType;
     return this;
   }
 
-   /**
+  /**
    * Get parameterType
    * @return parameterType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ParameterType getParameterType() {
     return parameterType;
   }
 
-  public void setParameterType(Reportsv3ParameterType parameterType) {
+  public void setParameterType(@javax.annotation.Nullable Reportsv3ParameterType parameterType) {
     this.parameterType = parameterType;
   }
 
 
-  public Reportsv3ReportFilterCondition schemaName(String schemaName) {
+  public Reportsv3ReportFilterCondition schemaName(@javax.annotation.Nullable String schemaName) {
     this.schemaName = schemaName;
     return this;
   }
 
-   /**
+  /**
    * Get schemaName
    * @return schemaName
-  **/
+   */
   @javax.annotation.Nullable
   public String getSchemaName() {
     return schemaName;
   }
 
-  public void setSchemaName(String schemaName) {
+  public void setSchemaName(@javax.annotation.Nullable String schemaName) {
     this.schemaName = schemaName;
   }
 
 
-  public Reportsv3ReportFilterCondition sequence(Integer sequence) {
+  public Reportsv3ReportFilterCondition sequence(@javax.annotation.Nullable Integer sequence) {
     this.sequence = sequence;
     return this;
   }
 
-   /**
+  /**
    * Get sequence
    * @return sequence
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSequence() {
     return sequence;
   }
 
-  public void setSequence(Integer sequence) {
+  public void setSequence(@javax.annotation.Nullable Integer sequence) {
     this.sequence = sequence;
   }
 
 
-  public Reportsv3ReportFilterCondition tableName(String tableName) {
+  public Reportsv3ReportFilterCondition tableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
     return this;
   }
 
-   /**
+  /**
    * Get tableName
    * @return tableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTableName() {
     return tableName;
   }
 
-  public void setTableName(String tableName) {
+  public void setTableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
   }
 
 
-  public Reportsv3ReportFilterCondition tupleType(String tupleType) {
+  public Reportsv3ReportFilterCondition tupleType(@javax.annotation.Nullable String tupleType) {
     this.tupleType = tupleType;
     return this;
   }
 
-   /**
+  /**
    * Get tupleType
    * @return tupleType
-  **/
+   */
   @javax.annotation.Nullable
   public String getTupleType() {
     return tupleType;
   }
 
-  public void setTupleType(String tupleType) {
+  public void setTupleType(@javax.annotation.Nullable String tupleType) {
     this.tupleType = tupleType;
   }
 
 
-  public Reportsv3ReportFilterCondition values(List<String> values) {
+  public Reportsv3ReportFilterCondition values(@javax.annotation.Nullable List<String> values) {
     this.values = values;
     return this;
   }
@@ -560,16 +583,16 @@ public class Reportsv3ReportFilterCondition {
     return this;
   }
 
-   /**
+  /**
    * Get values
    * @return values
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getValues() {
     return values;
   }
 
-  public void setValues(List<String> values) {
+  public void setValues(@javax.annotation.Nullable List<String> values) {
     this.values = values;
   }
 
@@ -660,44 +683,22 @@ public class Reportsv3ReportFilterCondition {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("case_insensitive");
-    openapiFields.add("field_nls_translation_key");
-    openapiFields.add("filter_id");
-    openapiFields.add("group_type_id");
-    openapiFields.add("header_id");
-    openapiFields.add("header_name");
-    openapiFields.add("header_type");
-    openapiFields.add("in_report_date_range");
-    openapiFields.add("in_report_field_nls_key");
-    openapiFields.add("in_report_header_id");
-    openapiFields.add("in_report_header_name");
-    openapiFields.add("in_report_id");
-    openapiFields.add("in_report_name");
-    openapiFields.add("in_report_table_name");
-    openapiFields.add("is_tuple");
-    openapiFields.add("operator_type");
-    openapiFields.add("parameter_type");
-    openapiFields.add("schema_name");
-    openapiFields.add("sequence");
-    openapiFields.add("table_name");
-    openapiFields.add("tuple_type");
-    openapiFields.add("values");
+    openapiFields = new HashSet<String>(Arrays.asList("case_insensitive", "field_nls_translation_key", "filter_id", "group_type_id", "header_id", "header_name", "header_type", "in_report_date_range", "in_report_field_nls_key", "in_report_header_id", "in_report_header_name", "in_report_id", "in_report_name", "in_report_table_name", "is_tuple", "operator_type", "parameter_type", "schema_name", "sequence", "table_name", "tuple_type", "values"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportFilterCondition
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportFilterCondition
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3ReportFilterCondition.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3ReportFilterCondition is not found in the empty JSON string", Reportsv3ReportFilterCondition.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3ReportFilterCondition is not found in the empty JSON string", Reportsv3ReportFilterCondition.openapiRequiredFields.toString()));
         }
       }
 
@@ -705,18 +706,18 @@ public class Reportsv3ReportFilterCondition {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3ReportFilterCondition.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3ReportFilterCondition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3ReportFilterCondition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("field_nls_translation_key") != null && !jsonObj.get("field_nls_translation_key").isJsonNull()) && !jsonObj.get("field_nls_translation_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `field_nls_translation_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("field_nls_translation_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `field_nls_translation_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("field_nls_translation_key").toString()));
       }
       if ((jsonObj.get("header_id") != null && !jsonObj.get("header_id").isJsonNull()) && !jsonObj.get("header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
       }
       if ((jsonObj.get("header_name") != null && !jsonObj.get("header_name").isJsonNull()) && !jsonObj.get("header_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
       }
       // validate the optional field `header_type`
       if (jsonObj.get("header_type") != null && !jsonObj.get("header_type").isJsonNull()) {
@@ -727,22 +728,22 @@ public class Reportsv3ReportFilterCondition {
         Reportsv3DateRange.validateJsonElement(jsonObj.get("in_report_date_range"));
       }
       if ((jsonObj.get("in_report_field_nls_key") != null && !jsonObj.get("in_report_field_nls_key").isJsonNull()) && !jsonObj.get("in_report_field_nls_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `in_report_field_nls_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_field_nls_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `in_report_field_nls_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_field_nls_key").toString()));
       }
       if ((jsonObj.get("in_report_header_id") != null && !jsonObj.get("in_report_header_id").isJsonNull()) && !jsonObj.get("in_report_header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `in_report_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `in_report_header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_header_id").toString()));
       }
       if ((jsonObj.get("in_report_header_name") != null && !jsonObj.get("in_report_header_name").isJsonNull()) && !jsonObj.get("in_report_header_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `in_report_header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_header_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `in_report_header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_header_name").toString()));
       }
       if ((jsonObj.get("in_report_id") != null && !jsonObj.get("in_report_id").isJsonNull()) && !jsonObj.get("in_report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `in_report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `in_report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_id").toString()));
       }
       if ((jsonObj.get("in_report_name") != null && !jsonObj.get("in_report_name").isJsonNull()) && !jsonObj.get("in_report_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `in_report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `in_report_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_name").toString()));
       }
       if ((jsonObj.get("in_report_table_name") != null && !jsonObj.get("in_report_table_name").isJsonNull()) && !jsonObj.get("in_report_table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `in_report_table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `in_report_table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("in_report_table_name").toString()));
       }
       // validate the optional field `operator_type`
       if (jsonObj.get("operator_type") != null && !jsonObj.get("operator_type").isJsonNull()) {
@@ -753,17 +754,17 @@ public class Reportsv3ReportFilterCondition {
         Reportsv3ParameterType.validateJsonElement(jsonObj.get("parameter_type"));
       }
       if ((jsonObj.get("schema_name") != null && !jsonObj.get("schema_name").isJsonNull()) && !jsonObj.get("schema_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schema_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schema_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `schema_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schema_name").toString()));
       }
       if ((jsonObj.get("table_name") != null && !jsonObj.get("table_name").isJsonNull()) && !jsonObj.get("table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
       }
       if ((jsonObj.get("tuple_type") != null && !jsonObj.get("tuple_type").isJsonNull()) && !jsonObj.get("tuple_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tuple_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tuple_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tuple_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tuple_type").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("values") != null && !jsonObj.get("values").isJsonNull() && !jsonObj.get("values").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `values` to be an array in the JSON string but got `%s`", jsonObj.get("values").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `values` to be an array in the JSON string but got `%s`", jsonObj.get("values").toString()));
       }
   }
 
@@ -796,22 +797,22 @@ public class Reportsv3ReportFilterCondition {
     }
   }
 
- /**
-  * Create an instance of Reportsv3ReportFilterCondition given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3ReportFilterCondition
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportFilterCondition
-  */
+  /**
+   * Create an instance of Reportsv3ReportFilterCondition given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3ReportFilterCondition
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportFilterCondition
+   */
   public static Reportsv3ReportFilterCondition fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3ReportFilterCondition.class);
   }
 
- /**
-  * Convert an instance of Reportsv3ReportFilterCondition to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3ReportFilterCondition to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

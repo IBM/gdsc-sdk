@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -45,59 +46,63 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Complianceacceleratorv3Workspace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Complianceacceleratorv3Workspace {
   public static final String SERIALIZED_NAME_AUDIT_INFO = "audit_info";
   @SerializedName(SERIALIZED_NAME_AUDIT_INFO)
+  @javax.annotation.Nullable
   private Complianceacceleratorv3AuditConfig auditInfo;
 
   public static final String SERIALIZED_NAME_DASHBOARDS = "dashboards";
   @SerializedName(SERIALIZED_NAME_DASHBOARDS)
+  @javax.annotation.Nullable
   private List<Complianceacceleratorv3DashboardObject> dashboards = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_GROUPS = "groups";
   @SerializedName(SERIALIZED_NAME_GROUPS)
+  @javax.annotation.Nullable
   private Map<String, Complianceacceleratorv3Group> groups = new HashMap<>();
 
   public static final String SERIALIZED_NAME_REPORTS_MAP = "reports_map";
   @SerializedName(SERIALIZED_NAME_REPORTS_MAP)
+  @javax.annotation.Nullable
   private Map<String, Complianceacceleratorv3Reports> reportsMap = new HashMap<>();
 
   public Complianceacceleratorv3Workspace() {
   }
 
-  public Complianceacceleratorv3Workspace auditInfo(Complianceacceleratorv3AuditConfig auditInfo) {
+  public Complianceacceleratorv3Workspace auditInfo(@javax.annotation.Nullable Complianceacceleratorv3AuditConfig auditInfo) {
     this.auditInfo = auditInfo;
     return this;
   }
 
-   /**
+  /**
    * Get auditInfo
    * @return auditInfo
-  **/
+   */
   @javax.annotation.Nullable
   public Complianceacceleratorv3AuditConfig getAuditInfo() {
     return auditInfo;
   }
 
-  public void setAuditInfo(Complianceacceleratorv3AuditConfig auditInfo) {
+  public void setAuditInfo(@javax.annotation.Nullable Complianceacceleratorv3AuditConfig auditInfo) {
     this.auditInfo = auditInfo;
   }
 
 
-  public Complianceacceleratorv3Workspace dashboards(List<Complianceacceleratorv3DashboardObject> dashboards) {
+  public Complianceacceleratorv3Workspace dashboards(@javax.annotation.Nullable List<Complianceacceleratorv3DashboardObject> dashboards) {
     this.dashboards = dashboards;
     return this;
   }
@@ -110,21 +115,21 @@ public class Complianceacceleratorv3Workspace {
     return this;
   }
 
-   /**
+  /**
    * Get dashboards
    * @return dashboards
-  **/
+   */
   @javax.annotation.Nullable
   public List<Complianceacceleratorv3DashboardObject> getDashboards() {
     return dashboards;
   }
 
-  public void setDashboards(List<Complianceacceleratorv3DashboardObject> dashboards) {
+  public void setDashboards(@javax.annotation.Nullable List<Complianceacceleratorv3DashboardObject> dashboards) {
     this.dashboards = dashboards;
   }
 
 
-  public Complianceacceleratorv3Workspace groups(Map<String, Complianceacceleratorv3Group> groups) {
+  public Complianceacceleratorv3Workspace groups(@javax.annotation.Nullable Map<String, Complianceacceleratorv3Group> groups) {
     this.groups = groups;
     return this;
   }
@@ -137,21 +142,21 @@ public class Complianceacceleratorv3Workspace {
     return this;
   }
 
-   /**
+  /**
    * Groups for the policies and reports.
    * @return groups
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Complianceacceleratorv3Group> getGroups() {
     return groups;
   }
 
-  public void setGroups(Map<String, Complianceacceleratorv3Group> groups) {
+  public void setGroups(@javax.annotation.Nullable Map<String, Complianceacceleratorv3Group> groups) {
     this.groups = groups;
   }
 
 
-  public Complianceacceleratorv3Workspace reportsMap(Map<String, Complianceacceleratorv3Reports> reportsMap) {
+  public Complianceacceleratorv3Workspace reportsMap(@javax.annotation.Nullable Map<String, Complianceacceleratorv3Reports> reportsMap) {
     this.reportsMap = reportsMap;
     return this;
   }
@@ -164,16 +169,16 @@ public class Complianceacceleratorv3Workspace {
     return this;
   }
 
-   /**
+  /**
    * List of reports with basic info.
    * @return reportsMap
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Complianceacceleratorv3Reports> getReportsMap() {
     return reportsMap;
   }
 
-  public void setReportsMap(Map<String, Complianceacceleratorv3Reports> reportsMap) {
+  public void setReportsMap(@javax.annotation.Nullable Map<String, Complianceacceleratorv3Reports> reportsMap) {
     this.reportsMap = reportsMap;
   }
 
@@ -228,26 +233,22 @@ public class Complianceacceleratorv3Workspace {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("audit_info");
-    openapiFields.add("dashboards");
-    openapiFields.add("groups");
-    openapiFields.add("reports_map");
+    openapiFields = new HashSet<String>(Arrays.asList("audit_info", "dashboards", "groups", "reports_map"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Workspace
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Workspace
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Complianceacceleratorv3Workspace.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Complianceacceleratorv3Workspace is not found in the empty JSON string", Complianceacceleratorv3Workspace.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Complianceacceleratorv3Workspace is not found in the empty JSON string", Complianceacceleratorv3Workspace.openapiRequiredFields.toString()));
         }
       }
 
@@ -255,7 +256,7 @@ public class Complianceacceleratorv3Workspace {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Complianceacceleratorv3Workspace.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Workspace` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Workspace` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -268,7 +269,7 @@ public class Complianceacceleratorv3Workspace {
         if (jsonArraydashboards != null) {
           // ensure the json data is an array
           if (!jsonObj.get("dashboards").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `dashboards` to be an array in the JSON string but got `%s`", jsonObj.get("dashboards").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dashboards` to be an array in the JSON string but got `%s`", jsonObj.get("dashboards").toString()));
           }
 
           // validate the optional field `dashboards` (array)
@@ -308,22 +309,22 @@ public class Complianceacceleratorv3Workspace {
     }
   }
 
- /**
-  * Create an instance of Complianceacceleratorv3Workspace given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Complianceacceleratorv3Workspace
-  * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Workspace
-  */
+  /**
+   * Create an instance of Complianceacceleratorv3Workspace given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Complianceacceleratorv3Workspace
+   * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Workspace
+   */
   public static Complianceacceleratorv3Workspace fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Complianceacceleratorv3Workspace.class);
   }
 
- /**
-  * Convert an instance of Complianceacceleratorv3Workspace to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Complianceacceleratorv3Workspace to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

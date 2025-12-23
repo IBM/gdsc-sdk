@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,226 +39,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3Program
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3Program {
   public static final String SERIALIZED_NAME_CREATE_USER_ID = "create_user_id";
   @SerializedName(SERIALIZED_NAME_CREATE_USER_ID)
+  @javax.annotation.Nullable
   private String createUserId;
 
   public static final String SERIALIZED_NAME_CREATE_USER_NAME = "create_user_name";
   @SerializedName(SERIALIZED_NAME_CREATE_USER_NAME)
+  @javax.annotation.Nullable
   private String createUserName;
 
   public static final String SERIALIZED_NAME_DATE_CREATED = "date_created";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  @javax.annotation.Nullable
   private OffsetDateTime dateCreated;
 
   public static final String SERIALIZED_NAME_DATE_UPDATED = "date_updated";
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  @javax.annotation.Nullable
   private OffsetDateTime dateUpdated;
 
   public static final String SERIALIZED_NAME_PROGRAM_DESCRIPTION = "program_description";
   @SerializedName(SERIALIZED_NAME_PROGRAM_DESCRIPTION)
+  @javax.annotation.Nullable
   private String programDescription;
 
   public static final String SERIALIZED_NAME_PROGRAM_ID = "program_id";
   @SerializedName(SERIALIZED_NAME_PROGRAM_ID)
+  @javax.annotation.Nullable
   private Integer programId;
 
   public static final String SERIALIZED_NAME_PROGRAM_TITLE = "program_title";
   @SerializedName(SERIALIZED_NAME_PROGRAM_TITLE)
+  @javax.annotation.Nullable
   private String programTitle;
 
   public static final String SERIALIZED_NAME_UPDATE_USER_ID = "update_user_id";
   @SerializedName(SERIALIZED_NAME_UPDATE_USER_ID)
+  @javax.annotation.Nullable
   private String updateUserId;
 
   public static final String SERIALIZED_NAME_UPDATE_USER_NAME = "update_user_name";
   @SerializedName(SERIALIZED_NAME_UPDATE_USER_NAME)
+  @javax.annotation.Nullable
   private String updateUserName;
 
   public Reportsv3Program() {
   }
 
-  public Reportsv3Program createUserId(String createUserId) {
+  public Reportsv3Program createUserId(@javax.annotation.Nullable String createUserId) {
     this.createUserId = createUserId;
     return this;
   }
 
-   /**
+  /**
    * Get createUserId
    * @return createUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreateUserId() {
     return createUserId;
   }
 
-  public void setCreateUserId(String createUserId) {
+  public void setCreateUserId(@javax.annotation.Nullable String createUserId) {
     this.createUserId = createUserId;
   }
 
 
-  public Reportsv3Program createUserName(String createUserName) {
+  public Reportsv3Program createUserName(@javax.annotation.Nullable String createUserName) {
     this.createUserName = createUserName;
     return this;
   }
 
-   /**
+  /**
    * Get createUserName
    * @return createUserName
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreateUserName() {
     return createUserName;
   }
 
-  public void setCreateUserName(String createUserName) {
+  public void setCreateUserName(@javax.annotation.Nullable String createUserName) {
     this.createUserName = createUserName;
   }
 
 
-  public Reportsv3Program dateCreated(OffsetDateTime dateCreated) {
+  public Reportsv3Program dateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
     return this;
   }
 
-   /**
+  /**
    * Get dateCreated
    * @return dateCreated
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
-  public void setDateCreated(OffsetDateTime dateCreated) {
+  public void setDateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
-  public Reportsv3Program dateUpdated(OffsetDateTime dateUpdated) {
+  public Reportsv3Program dateUpdated(@javax.annotation.Nullable OffsetDateTime dateUpdated) {
     this.dateUpdated = dateUpdated;
     return this;
   }
 
-   /**
+  /**
    * Get dateUpdated
    * @return dateUpdated
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateUpdated() {
     return dateUpdated;
   }
 
-  public void setDateUpdated(OffsetDateTime dateUpdated) {
+  public void setDateUpdated(@javax.annotation.Nullable OffsetDateTime dateUpdated) {
     this.dateUpdated = dateUpdated;
   }
 
 
-  public Reportsv3Program programDescription(String programDescription) {
+  public Reportsv3Program programDescription(@javax.annotation.Nullable String programDescription) {
     this.programDescription = programDescription;
     return this;
   }
 
-   /**
+  /**
    * Get programDescription
    * @return programDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getProgramDescription() {
     return programDescription;
   }
 
-  public void setProgramDescription(String programDescription) {
+  public void setProgramDescription(@javax.annotation.Nullable String programDescription) {
     this.programDescription = programDescription;
   }
 
 
-  public Reportsv3Program programId(Integer programId) {
+  public Reportsv3Program programId(@javax.annotation.Nullable Integer programId) {
     this.programId = programId;
     return this;
   }
 
-   /**
+  /**
    * Get programId
    * @return programId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getProgramId() {
     return programId;
   }
 
-  public void setProgramId(Integer programId) {
+  public void setProgramId(@javax.annotation.Nullable Integer programId) {
     this.programId = programId;
   }
 
 
-  public Reportsv3Program programTitle(String programTitle) {
+  public Reportsv3Program programTitle(@javax.annotation.Nullable String programTitle) {
     this.programTitle = programTitle;
     return this;
   }
 
-   /**
+  /**
    * Get programTitle
    * @return programTitle
-  **/
+   */
   @javax.annotation.Nullable
   public String getProgramTitle() {
     return programTitle;
   }
 
-  public void setProgramTitle(String programTitle) {
+  public void setProgramTitle(@javax.annotation.Nullable String programTitle) {
     this.programTitle = programTitle;
   }
 
 
-  public Reportsv3Program updateUserId(String updateUserId) {
+  public Reportsv3Program updateUserId(@javax.annotation.Nullable String updateUserId) {
     this.updateUserId = updateUserId;
     return this;
   }
 
-   /**
+  /**
    * Get updateUserId
    * @return updateUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getUpdateUserId() {
     return updateUserId;
   }
 
-  public void setUpdateUserId(String updateUserId) {
+  public void setUpdateUserId(@javax.annotation.Nullable String updateUserId) {
     this.updateUserId = updateUserId;
   }
 
 
-  public Reportsv3Program updateUserName(String updateUserName) {
+  public Reportsv3Program updateUserName(@javax.annotation.Nullable String updateUserName) {
     this.updateUserName = updateUserName;
     return this;
   }
 
-   /**
+  /**
    * Get updateUserName
    * @return updateUserName
-  **/
+   */
   @javax.annotation.Nullable
   public String getUpdateUserName() {
     return updateUserName;
   }
 
-  public void setUpdateUserName(String updateUserName) {
+  public void setUpdateUserName(@javax.annotation.Nullable String updateUserName) {
     this.updateUserName = updateUserName;
   }
 
@@ -322,31 +332,22 @@ public class Reportsv3Program {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("create_user_id");
-    openapiFields.add("create_user_name");
-    openapiFields.add("date_created");
-    openapiFields.add("date_updated");
-    openapiFields.add("program_description");
-    openapiFields.add("program_id");
-    openapiFields.add("program_title");
-    openapiFields.add("update_user_id");
-    openapiFields.add("update_user_name");
+    openapiFields = new HashSet<String>(Arrays.asList("create_user_id", "create_user_name", "date_created", "date_updated", "program_description", "program_id", "program_title", "update_user_id", "update_user_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3Program
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3Program
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3Program.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3Program is not found in the empty JSON string", Reportsv3Program.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3Program is not found in the empty JSON string", Reportsv3Program.openapiRequiredFields.toString()));
         }
       }
 
@@ -354,27 +355,27 @@ public class Reportsv3Program {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3Program.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3Program` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3Program` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("create_user_id") != null && !jsonObj.get("create_user_id").isJsonNull()) && !jsonObj.get("create_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `create_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `create_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_id").toString()));
       }
       if ((jsonObj.get("create_user_name") != null && !jsonObj.get("create_user_name").isJsonNull()) && !jsonObj.get("create_user_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `create_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `create_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_name").toString()));
       }
       if ((jsonObj.get("program_description") != null && !jsonObj.get("program_description").isJsonNull()) && !jsonObj.get("program_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `program_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("program_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `program_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("program_description").toString()));
       }
       if ((jsonObj.get("program_title") != null && !jsonObj.get("program_title").isJsonNull()) && !jsonObj.get("program_title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `program_title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("program_title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `program_title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("program_title").toString()));
       }
       if ((jsonObj.get("update_user_id") != null && !jsonObj.get("update_user_id").isJsonNull()) && !jsonObj.get("update_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `update_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `update_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_id").toString()));
       }
       if ((jsonObj.get("update_user_name") != null && !jsonObj.get("update_user_name").isJsonNull()) && !jsonObj.get("update_user_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `update_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `update_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_name").toString()));
       }
   }
 
@@ -407,22 +408,22 @@ public class Reportsv3Program {
     }
   }
 
- /**
-  * Create an instance of Reportsv3Program given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3Program
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3Program
-  */
+  /**
+   * Create an instance of Reportsv3Program given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3Program
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3Program
+   */
   public static Reportsv3Program fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3Program.class);
   }
 
- /**
-  * Convert an instance of Reportsv3Program to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3Program to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -77,6 +77,8 @@ export class Universalconnectormanagerv3PluginDefinition {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "pluginJDBCDriverRequired",
@@ -176,4 +178,3 @@ export class Universalconnectormanagerv3PluginDefinition {
     public constructor() {
     }
 }
-

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,51 +41,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3InternalSearchConnectionResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3InternalSearchConnectionResponse {
   public static final String SERIALIZED_NAME_STATUS = "Status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Integer status;
 
   public static final String SERIALIZED_NAME_CONNECTORS = "connectors";
   @SerializedName(SERIALIZED_NAME_CONNECTORS)
+  @javax.annotation.Nullable
   private List<Connectionsv3Connector> connectors = new ArrayList<>();
 
   public Connectionsv3InternalSearchConnectionResponse() {
   }
 
-  public Connectionsv3InternalSearchConnectionResponse status(Integer status) {
+  public Connectionsv3InternalSearchConnectionResponse status(@javax.annotation.Nullable Integer status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStatus() {
     return status;
   }
 
-  public void setStatus(Integer status) {
+  public void setStatus(@javax.annotation.Nullable Integer status) {
     this.status = status;
   }
 
 
-  public Connectionsv3InternalSearchConnectionResponse connectors(List<Connectionsv3Connector> connectors) {
+  public Connectionsv3InternalSearchConnectionResponse connectors(@javax.annotation.Nullable List<Connectionsv3Connector> connectors) {
     this.connectors = connectors;
     return this;
   }
@@ -97,16 +100,16 @@ public class Connectionsv3InternalSearchConnectionResponse {
     return this;
   }
 
-   /**
+  /**
    * Get connectors
    * @return connectors
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3Connector> getConnectors() {
     return connectors;
   }
 
-  public void setConnectors(List<Connectionsv3Connector> connectors) {
+  public void setConnectors(@javax.annotation.Nullable List<Connectionsv3Connector> connectors) {
     this.connectors = connectors;
   }
 
@@ -157,24 +160,22 @@ public class Connectionsv3InternalSearchConnectionResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("Status");
-    openapiFields.add("connectors");
+    openapiFields = new HashSet<String>(Arrays.asList("Status", "connectors"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3InternalSearchConnectionResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3InternalSearchConnectionResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3InternalSearchConnectionResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3InternalSearchConnectionResponse is not found in the empty JSON string", Connectionsv3InternalSearchConnectionResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3InternalSearchConnectionResponse is not found in the empty JSON string", Connectionsv3InternalSearchConnectionResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Connectionsv3InternalSearchConnectionResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3InternalSearchConnectionResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3InternalSearchConnectionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3InternalSearchConnectionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,7 +192,7 @@ public class Connectionsv3InternalSearchConnectionResponse {
         if (jsonArrayconnectors != null) {
           // ensure the json data is an array
           if (!jsonObj.get("connectors").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `connectors` to be an array in the JSON string but got `%s`", jsonObj.get("connectors").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `connectors` to be an array in the JSON string but got `%s`", jsonObj.get("connectors").toString()));
           }
 
           // validate the optional field `connectors` (array)
@@ -231,22 +232,22 @@ public class Connectionsv3InternalSearchConnectionResponse {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3InternalSearchConnectionResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3InternalSearchConnectionResponse
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3InternalSearchConnectionResponse
-  */
+  /**
+   * Create an instance of Connectionsv3InternalSearchConnectionResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3InternalSearchConnectionResponse
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3InternalSearchConnectionResponse
+   */
   public static Connectionsv3InternalSearchConnectionResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3InternalSearchConnectionResponse.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3InternalSearchConnectionResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3InternalSearchConnectionResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

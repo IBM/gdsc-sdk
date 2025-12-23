@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,32 +40,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmpluginmanagerv3ValidationResult
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmpluginmanagerv3ValidationResult {
   public static final String SERIALIZED_NAME_ERRORS = "errors";
   @SerializedName(SERIALIZED_NAME_ERRORS)
+  @javax.annotation.Nullable
   private Map<String, String> errors = new HashMap<>();
 
   public static final String SERIALIZED_NAME_VALID = "valid";
   @SerializedName(SERIALIZED_NAME_VALID)
+  @javax.annotation.Nullable
   private Boolean valid;
 
   public Qspmpluginmanagerv3ValidationResult() {
   }
 
-  public Qspmpluginmanagerv3ValidationResult errors(Map<String, String> errors) {
+  public Qspmpluginmanagerv3ValidationResult errors(@javax.annotation.Nullable Map<String, String> errors) {
     this.errors = errors;
     return this;
   }
@@ -77,35 +80,35 @@ public class Qspmpluginmanagerv3ValidationResult {
     return this;
   }
 
-   /**
+  /**
    * Get errors
    * @return errors
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getErrors() {
     return errors;
   }
 
-  public void setErrors(Map<String, String> errors) {
+  public void setErrors(@javax.annotation.Nullable Map<String, String> errors) {
     this.errors = errors;
   }
 
 
-  public Qspmpluginmanagerv3ValidationResult valid(Boolean valid) {
+  public Qspmpluginmanagerv3ValidationResult valid(@javax.annotation.Nullable Boolean valid) {
     this.valid = valid;
     return this;
   }
 
-   /**
+  /**
    * Get valid
    * @return valid
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getValid() {
     return valid;
   }
 
-  public void setValid(Boolean valid) {
+  public void setValid(@javax.annotation.Nullable Boolean valid) {
     this.valid = valid;
   }
 
@@ -156,24 +159,22 @@ public class Qspmpluginmanagerv3ValidationResult {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("errors");
-    openapiFields.add("valid");
+    openapiFields = new HashSet<String>(Arrays.asList("errors", "valid"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmpluginmanagerv3ValidationResult
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmpluginmanagerv3ValidationResult
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmpluginmanagerv3ValidationResult.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmpluginmanagerv3ValidationResult is not found in the empty JSON string", Qspmpluginmanagerv3ValidationResult.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmpluginmanagerv3ValidationResult is not found in the empty JSON string", Qspmpluginmanagerv3ValidationResult.openapiRequiredFields.toString()));
         }
       }
 
@@ -181,7 +182,7 @@ public class Qspmpluginmanagerv3ValidationResult {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmpluginmanagerv3ValidationResult.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmpluginmanagerv3ValidationResult` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmpluginmanagerv3ValidationResult` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -216,22 +217,22 @@ public class Qspmpluginmanagerv3ValidationResult {
     }
   }
 
- /**
-  * Create an instance of Qspmpluginmanagerv3ValidationResult given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmpluginmanagerv3ValidationResult
-  * @throws IOException if the JSON string is invalid with respect to Qspmpluginmanagerv3ValidationResult
-  */
+  /**
+   * Create an instance of Qspmpluginmanagerv3ValidationResult given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmpluginmanagerv3ValidationResult
+   * @throws IOException if the JSON string is invalid with respect to Qspmpluginmanagerv3ValidationResult
+   */
   public static Qspmpluginmanagerv3ValidationResult fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmpluginmanagerv3ValidationResult.class);
   }
 
- /**
-  * Convert an instance of Qspmpluginmanagerv3ValidationResult to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmpluginmanagerv3ValidationResult to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

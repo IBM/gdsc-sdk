@@ -41,7 +41,7 @@ class Connectionsv3StreamConnection(BaseModel):
     provider: Optional[StrictStr] = Field(default=None, description="Optional: the provider provided if the connection type is Azure.")
     region: Optional[StrictStr] = Field(default=None, description="Optional: the region provided if the connection type is AWS.")
     start_monitor: Optional[StrictStr] = Field(default=None, description="Connection Monitoring.")
-    status: Optional[Connectionsv3Status] = None
+    status: Optional[Connectionsv3Status] = Connectionsv3Status.UNDEFINED_STATUS
     status_text: Optional[StrictStr] = Field(default=None, description="If status is not OK, details what's wrong (non-localized).")
     status_timestamp: Optional[StrictStr] = Field(default=None, description="The time stamp of status.")
     storage_connection_string: Optional[StrictStr] = Field(default=None, description="Optional: Storage connection string must be provided if the connection type is Azure.")
@@ -113,7 +113,7 @@ class Connectionsv3StreamConnection(BaseModel):
             "provider": obj.get("provider"),
             "region": obj.get("region"),
             "start_monitor": obj.get("start_monitor"),
-            "status": obj.get("status"),
+            "status": obj.get("status") if obj.get("status") is not None else Connectionsv3Status.UNDEFINED_STATUS,
             "status_text": obj.get("status_text"),
             "status_timestamp": obj.get("status_timestamp"),
             "storage_connection_string": obj.get("storage_connection_string"),

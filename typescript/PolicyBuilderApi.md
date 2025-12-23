@@ -35,25 +35,24 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderClonePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderClonePolicyRequest = {
-  // string | Policy id that needs to be cloned.
+const request: PolicyBuilderApiPolicyBuilderClonePolicyRequest = {
+    // Policy id that needs to be cloned.
   policyId: "policy_id_example",
-  // Policybuilderv3ClonePolicyRequest
+  
   policybuilderv3ClonePolicyRequest: {
     policyId: "policyId_example",
     policyName: "policyName_example",
   },
 };
 
-apiInstance.policyBuilderClonePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderClonePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -95,14 +94,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderCreatePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderCreatePolicyRequest = {
-  // Policybuilderv3CreateUpdatePolicyRequest
+const request: PolicyBuilderApiPolicyBuilderCreatePolicyRequest = {
+  
   policybuilderv3CreateUpdatePolicyRequest: {
     canOverrideName: true,
     policyObject: {
@@ -212,9 +211,8 @@ let body:.PolicyBuilderApiPolicyBuilderCreatePolicyRequest = {
   },
 };
 
-apiInstance.policyBuilderCreatePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderCreatePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -255,22 +253,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest = {
-  // Array<string> | Policy sync entry id to delete from sync. (optional)
+const request: PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest = {
+    // Policy sync entry id to delete from sync. (optional)
   syncIds: [
     "sync_ids_example",
   ],
 };
 
-apiInstance.policyBuilderDeleteGdpSyncEntry(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderDeleteGdpSyncEntry(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -311,22 +308,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderDeletePoliciesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderDeletePoliciesRequest = {
-  // Array<string> | Policy ids. (optional)
+const request: PolicyBuilderApiPolicyBuilderDeletePoliciesRequest = {
+    // Policy ids. (optional)
   policyIds: [
     "policy_ids_example",
   ],
 };
 
-apiInstance.policyBuilderDeletePolicies(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderDeletePolicies(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -367,17 +363,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.policyBuilderGetGdpPolicyMetaData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetGdpPolicyMetaData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -415,17 +409,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.policyBuilderGetPolicies(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicies(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -463,20 +455,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetPolicyDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetPolicyDetailsRequest = {
-  // string | Policy id.
+const request: PolicyBuilderApiPolicyBuilderGetPolicyDetailsRequest = {
+    // Policy id.
   policyId: "policy_id_example",
 };
 
-apiInstance.policyBuilderGetPolicyDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicyDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -517,14 +508,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest = {
-  // Policybuilderv3GetPolicyNamesFromRuleIDsRequest
+const request: PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest = {
+  
   policybuilderv3GetPolicyNamesFromRuleIDsRequest: {
     ruleIdsList: [
       "ruleIdsList_example",
@@ -532,9 +523,8 @@ let body:.PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest = {
   },
 };
 
-apiInstance.policyBuilderGetPolicyNamesFromRuleIDs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicyNamesFromRuleIDs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -575,17 +565,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.policyBuilderGetPolicySyncList(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicySyncList(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -623,22 +611,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest = {
-  // string | Policy id of the requested policy
+const request: PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest = {
+    // Policy id of the requested policy
   policyId: "policy_id_example",
-  // number | Requested version number of the policy
+    // Requested version number of the policy
   version: 1,
 };
 
-apiInstance.policyBuilderGetPolicyVersion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicyVersion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -680,20 +667,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest = {
-  // string | Policy id of the requested policy
+const request: PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest = {
+    // Policy id of the requested policy
   policyId: "policy_id_example",
 };
 
-apiInstance.policyBuilderGetPolicyVersionsInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicyVersionsInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -734,24 +720,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetReceiversRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetReceiversRequest = {
-  // Array<string> | Action id. (optional)
+const request: PolicyBuilderApiPolicyBuilderGetReceiversRequest = {
+    // Action id. (optional)
   actionId: [
     "action_id_example",
   ],
-  // boolean | Flag that indicates if cache needs to be validated. (optional)
+    // Flag that indicates if cache needs to be validated. (optional)
   validateCache: true,
 };
 
-apiInstance.policyBuilderGetReceivers(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetReceivers(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -793,20 +778,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetRuleMetadataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetRuleMetadataRequest = {
-  // 'ACCESS' | 'EXCEPTION' | 'RESULT_SET' | Rule type integer to indicate rule type. (optional)
+const request: PolicyBuilderApiPolicyBuilderGetRuleMetadataRequest = {
+    // Rule type integer to indicate rule type. (optional)
   ruleType: "ACCESS",
 };
 
-apiInstance.policyBuilderGetRuleMetadata(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetRuleMetadata(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -847,14 +831,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest = {
-  // Policybuilderv3InsertGdpPolicySyncRequest
+const request: PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest = {
+  
   policybuilderv3InsertGdpPolicySyncRequest: {
     gdpPolicies: [
       {
@@ -866,9 +850,8 @@ let body:.PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest = {
   },
 };
 
-apiInstance.policyBuilderInsertGdpPolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderInsertGdpPolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -909,16 +892,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest = {
-  // string | ID of central manager.
+const request: PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Policybuilderv3InsertGdpPolicyMetaDataRequest
+  
   policybuilderv3InsertGdpPolicyMetaDataRequest: {
     centralManagerId: "centralManagerId_example",
     data: [
@@ -933,9 +916,8 @@ let body:.PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest = {
   },
 };
 
-apiInstance.policyBuilderInsertGdpPolicyMetaData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderInsertGdpPolicyMetaData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -977,14 +959,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderInstallPoliciesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderInstallPoliciesRequest = {
-  // Policybuilderv3InstallPoliciesRequest
+const request: PolicyBuilderApiPolicyBuilderInstallPoliciesRequest = {
+  
   policybuilderv3InstallPoliciesRequest: {
     performInstallation: true,
     policyList: [
@@ -998,9 +980,8 @@ let body:.PolicyBuilderApiPolicyBuilderInstallPoliciesRequest = {
   },
 };
 
-apiInstance.policyBuilderInstallPolicies(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderInstallPolicies(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1041,22 +1022,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderIntegrationCheckRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderIntegrationCheckRequest = {
-  // string | Integration Id to check if it is being used in policies.
+const request: PolicyBuilderApiPolicyBuilderIntegrationCheckRequest = {
+    // Integration Id to check if it is being used in policies.
   integrationId: "integration_id_example",
-  // string | Template Id to check if it is being used in policies. (optional)
+    // Template Id to check if it is being used in policies. (optional)
   templateId: "template_id_example",
 };
 
-apiInstance.policyBuilderIntegrationCheck(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderIntegrationCheck(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1098,22 +1078,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderPoliciesGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderPoliciesGroupsRequest = {
-  // Array<string> | Group ids to check if they are being used in policies. (optional)
+const request: PolicyBuilderApiPolicyBuilderPoliciesGroupsRequest = {
+    // Group ids to check if they are being used in policies. (optional)
   groupIds: [
     "group_ids_example",
   ],
 };
 
-apiInstance.policyBuilderPoliciesGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderPoliciesGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1154,14 +1133,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderRuleValidationRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderRuleValidationRequest = {
-  // Policybuilderv3GetRuleValidationRequest
+const request: PolicyBuilderApiPolicyBuilderRuleValidationRequest = {
+  
   policybuilderv3GetRuleValidationRequest: {
     rule: {
       actions: [
@@ -1249,9 +1228,8 @@ let body:.PolicyBuilderApiPolicyBuilderRuleValidationRequest = {
   },
 };
 
-apiInstance.policyBuilderRuleValidation(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderRuleValidation(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1292,25 +1270,24 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest = {
-  // string | ID of central manager.
+const request: PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Policybuilderv3StorePolicyGdpRequest
+  
   policybuilderv3StorePolicyGdpRequest: {
     centralManagerId: "centralManagerId_example",
     data: "data_example",
   },
 };
 
-apiInstance.policyBuilderStorePoliciesGdp(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderStorePoliciesGdp(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1352,14 +1329,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderUpdatePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderUpdatePolicyRequest = {
-  // Policybuilderv3CreateUpdatePolicyRequest
+const request: PolicyBuilderApiPolicyBuilderUpdatePolicyRequest = {
+  
   policybuilderv3CreateUpdatePolicyRequest: {
     canOverrideName: true,
     policyObject: {
@@ -1469,9 +1446,8 @@ let body:.PolicyBuilderApiPolicyBuilderUpdatePolicyRequest = {
   },
 };
 
-apiInstance.policyBuilderUpdatePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderUpdatePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

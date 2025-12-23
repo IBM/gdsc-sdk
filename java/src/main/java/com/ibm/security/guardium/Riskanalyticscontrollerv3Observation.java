@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,134 +40,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Observation.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3Observation {
   public static final String SERIALIZED_NAME_LEAD_FEATURE_ID = "lead_feature_id";
   @SerializedName(SERIALIZED_NAME_LEAD_FEATURE_ID)
+  @javax.annotation.Nullable
   private Integer leadFeatureId;
 
   public static final String SERIALIZED_NAME_OBSERVATION_DESCRIPTION = "observation_description";
   @SerializedName(SERIALIZED_NAME_OBSERVATION_DESCRIPTION)
+  @javax.annotation.Nullable
   private String observationDescription;
 
   public static final String SERIALIZED_NAME_OBSERVATION_ID = "observation_id";
   @SerializedName(SERIALIZED_NAME_OBSERVATION_ID)
+  @javax.annotation.Nullable
   private Integer observationId;
 
   public static final String SERIALIZED_NAME_OBSERVATION_TYPE = "observation_type";
   @SerializedName(SERIALIZED_NAME_OBSERVATION_TYPE)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3ObservationType observationType = Riskanalyticscontrollerv3ObservationType.UNDEFINED_OBSERVATION_TYPE;
 
   public static final String SERIALIZED_NAME_TIME = "time";
   @SerializedName(SERIALIZED_NAME_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime time;
 
   public Riskanalyticscontrollerv3Observation() {
   }
 
-  public Riskanalyticscontrollerv3Observation leadFeatureId(Integer leadFeatureId) {
+  public Riskanalyticscontrollerv3Observation leadFeatureId(@javax.annotation.Nullable Integer leadFeatureId) {
     this.leadFeatureId = leadFeatureId;
     return this;
   }
 
-   /**
+  /**
    * Lead feature id.
    * @return leadFeatureId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getLeadFeatureId() {
     return leadFeatureId;
   }
 
-  public void setLeadFeatureId(Integer leadFeatureId) {
+  public void setLeadFeatureId(@javax.annotation.Nullable Integer leadFeatureId) {
     this.leadFeatureId = leadFeatureId;
   }
 
 
-  public Riskanalyticscontrollerv3Observation observationDescription(String observationDescription) {
+  public Riskanalyticscontrollerv3Observation observationDescription(@javax.annotation.Nullable String observationDescription) {
     this.observationDescription = observationDescription;
     return this;
   }
 
-   /**
+  /**
    * Observation description.
    * @return observationDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getObservationDescription() {
     return observationDescription;
   }
 
-  public void setObservationDescription(String observationDescription) {
+  public void setObservationDescription(@javax.annotation.Nullable String observationDescription) {
     this.observationDescription = observationDescription;
   }
 
 
-  public Riskanalyticscontrollerv3Observation observationId(Integer observationId) {
+  public Riskanalyticscontrollerv3Observation observationId(@javax.annotation.Nullable Integer observationId) {
     this.observationId = observationId;
     return this;
   }
 
-   /**
+  /**
    * Id.
    * @return observationId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getObservationId() {
     return observationId;
   }
 
-  public void setObservationId(Integer observationId) {
+  public void setObservationId(@javax.annotation.Nullable Integer observationId) {
     this.observationId = observationId;
   }
 
 
-  public Riskanalyticscontrollerv3Observation observationType(Riskanalyticscontrollerv3ObservationType observationType) {
+  public Riskanalyticscontrollerv3Observation observationType(@javax.annotation.Nullable Riskanalyticscontrollerv3ObservationType observationType) {
     this.observationType = observationType;
     return this;
   }
 
-   /**
+  /**
    * Get observationType
    * @return observationType
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3ObservationType getObservationType() {
     return observationType;
   }
 
-  public void setObservationType(Riskanalyticscontrollerv3ObservationType observationType) {
+  public void setObservationType(@javax.annotation.Nullable Riskanalyticscontrollerv3ObservationType observationType) {
     this.observationType = observationType;
   }
 
 
-  public Riskanalyticscontrollerv3Observation time(OffsetDateTime time) {
+  public Riskanalyticscontrollerv3Observation time(@javax.annotation.Nullable OffsetDateTime time) {
     this.time = time;
     return this;
   }
 
-   /**
+  /**
    * Time - date in format YYYY-MM-DDTHH:mm:ssZ.
    * @return time
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTime() {
     return time;
   }
 
-  public void setTime(OffsetDateTime time) {
+  public void setTime(@javax.annotation.Nullable OffsetDateTime time) {
     this.time = time;
   }
 
@@ -223,27 +229,22 @@ public class Riskanalyticscontrollerv3Observation {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("lead_feature_id");
-    openapiFields.add("observation_description");
-    openapiFields.add("observation_id");
-    openapiFields.add("observation_type");
-    openapiFields.add("time");
+    openapiFields = new HashSet<String>(Arrays.asList("lead_feature_id", "observation_description", "observation_id", "observation_type", "time"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3Observation
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3Observation
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3Observation.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3Observation is not found in the empty JSON string", Riskanalyticscontrollerv3Observation.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3Observation is not found in the empty JSON string", Riskanalyticscontrollerv3Observation.openapiRequiredFields.toString()));
         }
       }
 
@@ -251,12 +252,12 @@ public class Riskanalyticscontrollerv3Observation {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3Observation.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3Observation` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3Observation` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("observation_description") != null && !jsonObj.get("observation_description").isJsonNull()) && !jsonObj.get("observation_description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `observation_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("observation_description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `observation_description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("observation_description").toString()));
       }
       // validate the optional field `observation_type`
       if (jsonObj.get("observation_type") != null && !jsonObj.get("observation_type").isJsonNull()) {
@@ -293,22 +294,22 @@ public class Riskanalyticscontrollerv3Observation {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3Observation given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3Observation
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3Observation
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3Observation given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3Observation
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3Observation
+   */
   public static Riskanalyticscontrollerv3Observation fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3Observation.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3Observation to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3Observation to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

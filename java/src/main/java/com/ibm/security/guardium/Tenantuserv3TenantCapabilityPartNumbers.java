@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,32 +40,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Tenantuserv3TenantCapabilityPartNumbers
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3TenantCapabilityPartNumbers {
   public static final String SERIALIZED_NAME_ADDED_PART_NUMBERS = "added_part_numbers";
   @SerializedName(SERIALIZED_NAME_ADDED_PART_NUMBERS)
+  @javax.annotation.Nullable
   private List<String> addedPartNumbers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DELETED_PART_NUMBERS = "deleted_part_numbers";
   @SerializedName(SERIALIZED_NAME_DELETED_PART_NUMBERS)
+  @javax.annotation.Nullable
   private List<String> deletedPartNumbers = new ArrayList<>();
 
   public Tenantuserv3TenantCapabilityPartNumbers() {
   }
 
-  public Tenantuserv3TenantCapabilityPartNumbers addedPartNumbers(List<String> addedPartNumbers) {
+  public Tenantuserv3TenantCapabilityPartNumbers addedPartNumbers(@javax.annotation.Nullable List<String> addedPartNumbers) {
     this.addedPartNumbers = addedPartNumbers;
     return this;
   }
@@ -77,21 +80,21 @@ public class Tenantuserv3TenantCapabilityPartNumbers {
     return this;
   }
 
-   /**
+  /**
    * Get addedPartNumbers
    * @return addedPartNumbers
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getAddedPartNumbers() {
     return addedPartNumbers;
   }
 
-  public void setAddedPartNumbers(List<String> addedPartNumbers) {
+  public void setAddedPartNumbers(@javax.annotation.Nullable List<String> addedPartNumbers) {
     this.addedPartNumbers = addedPartNumbers;
   }
 
 
-  public Tenantuserv3TenantCapabilityPartNumbers deletedPartNumbers(List<String> deletedPartNumbers) {
+  public Tenantuserv3TenantCapabilityPartNumbers deletedPartNumbers(@javax.annotation.Nullable List<String> deletedPartNumbers) {
     this.deletedPartNumbers = deletedPartNumbers;
     return this;
   }
@@ -104,16 +107,16 @@ public class Tenantuserv3TenantCapabilityPartNumbers {
     return this;
   }
 
-   /**
+  /**
    * Get deletedPartNumbers
    * @return deletedPartNumbers
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getDeletedPartNumbers() {
     return deletedPartNumbers;
   }
 
-  public void setDeletedPartNumbers(List<String> deletedPartNumbers) {
+  public void setDeletedPartNumbers(@javax.annotation.Nullable List<String> deletedPartNumbers) {
     this.deletedPartNumbers = deletedPartNumbers;
   }
 
@@ -164,24 +167,22 @@ public class Tenantuserv3TenantCapabilityPartNumbers {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("added_part_numbers");
-    openapiFields.add("deleted_part_numbers");
+    openapiFields = new HashSet<String>(Arrays.asList("added_part_numbers", "deleted_part_numbers"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3TenantCapabilityPartNumbers
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3TenantCapabilityPartNumbers
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3TenantCapabilityPartNumbers.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3TenantCapabilityPartNumbers is not found in the empty JSON string", Tenantuserv3TenantCapabilityPartNumbers.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3TenantCapabilityPartNumbers is not found in the empty JSON string", Tenantuserv3TenantCapabilityPartNumbers.openapiRequiredFields.toString()));
         }
       }
 
@@ -189,17 +190,17 @@ public class Tenantuserv3TenantCapabilityPartNumbers {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3TenantCapabilityPartNumbers.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3TenantCapabilityPartNumbers` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3TenantCapabilityPartNumbers` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("added_part_numbers") != null && !jsonObj.get("added_part_numbers").isJsonNull() && !jsonObj.get("added_part_numbers").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `added_part_numbers` to be an array in the JSON string but got `%s`", jsonObj.get("added_part_numbers").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `added_part_numbers` to be an array in the JSON string but got `%s`", jsonObj.get("added_part_numbers").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("deleted_part_numbers") != null && !jsonObj.get("deleted_part_numbers").isJsonNull() && !jsonObj.get("deleted_part_numbers").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `deleted_part_numbers` to be an array in the JSON string but got `%s`", jsonObj.get("deleted_part_numbers").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `deleted_part_numbers` to be an array in the JSON string but got `%s`", jsonObj.get("deleted_part_numbers").toString()));
       }
   }
 
@@ -232,22 +233,22 @@ public class Tenantuserv3TenantCapabilityPartNumbers {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3TenantCapabilityPartNumbers given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3TenantCapabilityPartNumbers
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3TenantCapabilityPartNumbers
-  */
+  /**
+   * Create an instance of Tenantuserv3TenantCapabilityPartNumbers given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3TenantCapabilityPartNumbers
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3TenantCapabilityPartNumbers
+   */
   public static Tenantuserv3TenantCapabilityPartNumbers fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3TenantCapabilityPartNumbers.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3TenantCapabilityPartNumbers to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3TenantCapabilityPartNumbers to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

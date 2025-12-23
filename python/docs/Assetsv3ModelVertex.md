@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**criticality** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] 
+**criticality** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] [default to Assetsv3Level.LEVEL_UNKNOWN]
 **extended_properties** | [**List[Assetsv3CustomProperty]**](Assetsv3CustomProperty.md) |  | [optional] 
 **has_training_data** | **bool** |  | [optional] 
 **last_trained** | **datetime** |  | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **model_type** | **str** |  | [optional] 
 **publisher** | **str** |  | [optional] 
 **resolution_key** | **str** |  | [optional] 
-**risk_level** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] 
+**risk_level** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] [default to Assetsv3Level.LEVEL_UNKNOWN]
 **version** | **str** |  | [optional] 
 
 ## Example

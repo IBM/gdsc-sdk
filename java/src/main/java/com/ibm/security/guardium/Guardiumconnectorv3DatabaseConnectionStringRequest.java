@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connection string for database.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3DatabaseConnectionStringRequest {
   public static final String SERIALIZED_NAME_DBHOST = "dbhost";
   @SerializedName(SERIALIZED_NAME_DBHOST)
+  @javax.annotation.Nullable
   private String dbhost;
 
   public static final String SERIALIZED_NAME_DBNAME = "dbname";
   @SerializedName(SERIALIZED_NAME_DBNAME)
+  @javax.annotation.Nullable
   private String dbname;
 
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
+  @javax.annotation.Nullable
   private String password;
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
+  @javax.annotation.Nullable
   private String port;
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
+  @javax.annotation.Nullable
   private String user;
 
   public Guardiumconnectorv3DatabaseConnectionStringRequest() {
   }
 
-  public Guardiumconnectorv3DatabaseConnectionStringRequest dbhost(String dbhost) {
+  public Guardiumconnectorv3DatabaseConnectionStringRequest dbhost(@javax.annotation.Nullable String dbhost) {
     this.dbhost = dbhost;
     return this;
   }
 
-   /**
+  /**
    * Database host.
    * @return dbhost
-  **/
+   */
   @javax.annotation.Nullable
   public String getDbhost() {
     return dbhost;
   }
 
-  public void setDbhost(String dbhost) {
+  public void setDbhost(@javax.annotation.Nullable String dbhost) {
     this.dbhost = dbhost;
   }
 
 
-  public Guardiumconnectorv3DatabaseConnectionStringRequest dbname(String dbname) {
+  public Guardiumconnectorv3DatabaseConnectionStringRequest dbname(@javax.annotation.Nullable String dbname) {
     this.dbname = dbname;
     return this;
   }
 
-   /**
+  /**
    * Database name.
    * @return dbname
-  **/
+   */
   @javax.annotation.Nullable
   public String getDbname() {
     return dbname;
   }
 
-  public void setDbname(String dbname) {
+  public void setDbname(@javax.annotation.Nullable String dbname) {
     this.dbname = dbname;
   }
 
 
-  public Guardiumconnectorv3DatabaseConnectionStringRequest password(String password) {
+  public Guardiumconnectorv3DatabaseConnectionStringRequest password(@javax.annotation.Nullable String password) {
     this.password = password;
     return this;
   }
 
-   /**
+  /**
    * Database password.
    * @return password
-  **/
+   */
   @javax.annotation.Nullable
   public String getPassword() {
     return password;
   }
 
-  public void setPassword(String password) {
+  public void setPassword(@javax.annotation.Nullable String password) {
     this.password = password;
   }
 
 
-  public Guardiumconnectorv3DatabaseConnectionStringRequest port(String port) {
+  public Guardiumconnectorv3DatabaseConnectionStringRequest port(@javax.annotation.Nullable String port) {
     this.port = port;
     return this;
   }
 
-   /**
+  /**
    * Database port.
    * @return port
-  **/
+   */
   @javax.annotation.Nullable
   public String getPort() {
     return port;
   }
 
-  public void setPort(String port) {
+  public void setPort(@javax.annotation.Nullable String port) {
     this.port = port;
   }
 
 
-  public Guardiumconnectorv3DatabaseConnectionStringRequest user(String user) {
+  public Guardiumconnectorv3DatabaseConnectionStringRequest user(@javax.annotation.Nullable String user) {
     this.user = user;
     return this;
   }
 
-   /**
+  /**
    * Database user.
    * @return user
-  **/
+   */
   @javax.annotation.Nullable
   public String getUser() {
     return user;
   }
 
-  public void setUser(String user) {
+  public void setUser(@javax.annotation.Nullable String user) {
     this.user = user;
   }
 
@@ -221,27 +227,22 @@ public class Guardiumconnectorv3DatabaseConnectionStringRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dbhost");
-    openapiFields.add("dbname");
-    openapiFields.add("password");
-    openapiFields.add("port");
-    openapiFields.add("user");
+    openapiFields = new HashSet<String>(Arrays.asList("dbhost", "dbname", "password", "port", "user"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3DatabaseConnectionStringRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3DatabaseConnectionStringRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3DatabaseConnectionStringRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3DatabaseConnectionStringRequest is not found in the empty JSON string", Guardiumconnectorv3DatabaseConnectionStringRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3DatabaseConnectionStringRequest is not found in the empty JSON string", Guardiumconnectorv3DatabaseConnectionStringRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,24 +250,24 @@ public class Guardiumconnectorv3DatabaseConnectionStringRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3DatabaseConnectionStringRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3DatabaseConnectionStringRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3DatabaseConnectionStringRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("dbhost") != null && !jsonObj.get("dbhost").isJsonNull()) && !jsonObj.get("dbhost").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dbhost` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dbhost").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dbhost` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dbhost").toString()));
       }
       if ((jsonObj.get("dbname") != null && !jsonObj.get("dbname").isJsonNull()) && !jsonObj.get("dbname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dbname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dbname").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dbname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dbname").toString()));
       }
       if ((jsonObj.get("password") != null && !jsonObj.get("password").isJsonNull()) && !jsonObj.get("password").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `password` to be a primitive type in the JSON string but got `%s`", jsonObj.get("password").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `password` to be a primitive type in the JSON string but got `%s`", jsonObj.get("password").toString()));
       }
       if ((jsonObj.get("port") != null && !jsonObj.get("port").isJsonNull()) && !jsonObj.get("port").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
       }
       if ((jsonObj.get("user") != null && !jsonObj.get("user").isJsonNull()) && !jsonObj.get("user").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user").toString()));
       }
   }
 
@@ -299,22 +300,22 @@ public class Guardiumconnectorv3DatabaseConnectionStringRequest {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3DatabaseConnectionStringRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3DatabaseConnectionStringRequest
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3DatabaseConnectionStringRequest
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3DatabaseConnectionStringRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3DatabaseConnectionStringRequest
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3DatabaseConnectionStringRequest
+   */
   public static Guardiumconnectorv3DatabaseConnectionStringRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3DatabaseConnectionStringRequest.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3DatabaseConnectionStringRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3DatabaseConnectionStringRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reports object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Complianceacceleratorv3Reports {
   public static final String SERIALIZED_NAME_REPORTS = "reports";
   @SerializedName(SERIALIZED_NAME_REPORTS)
+  @javax.annotation.Nullable
   private List<Complianceacceleratorv3Report> reports = new ArrayList<>();
 
   public Complianceacceleratorv3Reports() {
   }
 
-  public Complianceacceleratorv3Reports reports(List<Complianceacceleratorv3Report> reports) {
+  public Complianceacceleratorv3Reports reports(@javax.annotation.Nullable List<Complianceacceleratorv3Report> reports) {
     this.reports = reports;
     return this;
   }
@@ -74,16 +76,16 @@ public class Complianceacceleratorv3Reports {
     return this;
   }
 
-   /**
+  /**
    * Get reports
    * @return reports
-  **/
+   */
   @javax.annotation.Nullable
   public List<Complianceacceleratorv3Report> getReports() {
     return reports;
   }
 
-  public void setReports(List<Complianceacceleratorv3Report> reports) {
+  public void setReports(@javax.annotation.Nullable List<Complianceacceleratorv3Report> reports) {
     this.reports = reports;
   }
 
@@ -132,23 +134,22 @@ public class Complianceacceleratorv3Reports {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("reports");
+    openapiFields = new HashSet<String>(Arrays.asList("reports"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Reports
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Reports
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Complianceacceleratorv3Reports.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Complianceacceleratorv3Reports is not found in the empty JSON string", Complianceacceleratorv3Reports.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Complianceacceleratorv3Reports is not found in the empty JSON string", Complianceacceleratorv3Reports.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Complianceacceleratorv3Reports {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Complianceacceleratorv3Reports.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Reports` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Reports` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Complianceacceleratorv3Reports {
         if (jsonArrayreports != null) {
           // ensure the json data is an array
           if (!jsonObj.get("reports").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `reports` to be an array in the JSON string but got `%s`", jsonObj.get("reports").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `reports` to be an array in the JSON string but got `%s`", jsonObj.get("reports").toString()));
           }
 
           // validate the optional field `reports` (array)
@@ -205,22 +206,22 @@ public class Complianceacceleratorv3Reports {
     }
   }
 
- /**
-  * Create an instance of Complianceacceleratorv3Reports given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Complianceacceleratorv3Reports
-  * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Reports
-  */
+  /**
+   * Create an instance of Complianceacceleratorv3Reports given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Complianceacceleratorv3Reports
+   * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Reports
+   */
   public static Complianceacceleratorv3Reports fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Complianceacceleratorv3Reports.class);
   }
 
- /**
-  * Convert an instance of Complianceacceleratorv3Reports to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Complianceacceleratorv3Reports to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

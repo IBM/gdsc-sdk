@@ -324,7 +324,7 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     var_field = 'var_field_example' # str | Search field. (optional)
     value = 'value_example' # str | Search value. (optional)
     sort_field = 'sort_field_example' # str | Field to sort. (optional)
-    sort_order = 'NONE' # str | Sort order. (optional) (default to 'NONE')
+    sort_order = NONE # str | Sort order. (optional) (default to NONE)
 
     try:
         # Summary: Get dataset data Description: Return data report for a given dataset.
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
  **var_field** | **str**| Search field. | [optional] 
  **value** | **str**| Search value. | [optional] 
  **sort_field** | **str**| Field to sort. | [optional] 
- **sort_order** | **str**| Sort order. | [optional] [default to &#39;NONE&#39;]
+ **sort_order** | **str**| Sort order. | [optional] [default to NONE]
 
 ### Return type
 

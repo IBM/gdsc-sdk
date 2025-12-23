@@ -23,6 +23,8 @@ export class Healthcollectorv3GetGDPHealthInfoResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "allNodes",
@@ -44,4 +46,3 @@ export class Healthcollectorv3GetGDPHealthInfoResponse {
     public constructor() {
     }
 }
-

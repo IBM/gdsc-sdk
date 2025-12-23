@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,71 +42,78 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * S-tap Historical data object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3HistoricalDataObject {
   public static final String SERIALIZED_NAME_CM_ID = "cm_id";
   @SerializedName(SERIALIZED_NAME_CM_ID)
+  @javax.annotation.Nullable
   private String cmId;
 
   public static final String SERIALIZED_NAME_INSPECTION_ENGINE_COUNTS = "inspection_engine_counts";
   @SerializedName(SERIALIZED_NAME_INSPECTION_ENGINE_COUNTS)
+  @javax.annotation.Nullable
   private List<Healthcollectorv3CountObject> inspectionEngineCounts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NODES = "nodes";
   @SerializedName(SERIALIZED_NAME_NODES)
+  @javax.annotation.Nullable
   private List<Healthcollectorv3StapInformationObject> nodes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STAP_COUNTS = "stap_counts";
   @SerializedName(SERIALIZED_NAME_STAP_COUNTS)
+  @javax.annotation.Nullable
   private List<Healthcollectorv3CountObject> stapCounts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STAPS_ADDED = "staps_added";
   @SerializedName(SERIALIZED_NAME_STAPS_ADDED)
+  @javax.annotation.Nullable
   private Integer stapsAdded;
 
   public static final String SERIALIZED_NAME_STAPS_REMOVED = "staps_removed";
   @SerializedName(SERIALIZED_NAME_STAPS_REMOVED)
+  @javax.annotation.Nullable
   private Integer stapsRemoved;
 
   public static final String SERIALIZED_NAME_STAPS_WITH_IE_CHANGES = "staps_with_ie_changes";
   @SerializedName(SERIALIZED_NAME_STAPS_WITH_IE_CHANGES)
+  @javax.annotation.Nullable
   private Integer stapsWithIeChanges;
 
   public Healthcollectorv3HistoricalDataObject() {
   }
 
-  public Healthcollectorv3HistoricalDataObject cmId(String cmId) {
+  public Healthcollectorv3HistoricalDataObject cmId(@javax.annotation.Nullable String cmId) {
     this.cmId = cmId;
     return this;
   }
 
-   /**
+  /**
    * Cm Id.
    * @return cmId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCmId() {
     return cmId;
   }
 
-  public void setCmId(String cmId) {
+  public void setCmId(@javax.annotation.Nullable String cmId) {
     this.cmId = cmId;
   }
 
 
-  public Healthcollectorv3HistoricalDataObject inspectionEngineCounts(List<Healthcollectorv3CountObject> inspectionEngineCounts) {
+  public Healthcollectorv3HistoricalDataObject inspectionEngineCounts(@javax.annotation.Nullable List<Healthcollectorv3CountObject> inspectionEngineCounts) {
     this.inspectionEngineCounts = inspectionEngineCounts;
     return this;
   }
@@ -118,21 +126,21 @@ public class Healthcollectorv3HistoricalDataObject {
     return this;
   }
 
-   /**
+  /**
    * Inspection engine counts over a period of time.
    * @return inspectionEngineCounts
-  **/
+   */
   @javax.annotation.Nullable
   public List<Healthcollectorv3CountObject> getInspectionEngineCounts() {
     return inspectionEngineCounts;
   }
 
-  public void setInspectionEngineCounts(List<Healthcollectorv3CountObject> inspectionEngineCounts) {
+  public void setInspectionEngineCounts(@javax.annotation.Nullable List<Healthcollectorv3CountObject> inspectionEngineCounts) {
     this.inspectionEngineCounts = inspectionEngineCounts;
   }
 
 
-  public Healthcollectorv3HistoricalDataObject nodes(List<Healthcollectorv3StapInformationObject> nodes) {
+  public Healthcollectorv3HistoricalDataObject nodes(@javax.annotation.Nullable List<Healthcollectorv3StapInformationObject> nodes) {
     this.nodes = nodes;
     return this;
   }
@@ -145,21 +153,21 @@ public class Healthcollectorv3HistoricalDataObject {
     return this;
   }
 
-   /**
+  /**
    * Detailed information about staps.
    * @return nodes
-  **/
+   */
   @javax.annotation.Nullable
   public List<Healthcollectorv3StapInformationObject> getNodes() {
     return nodes;
   }
 
-  public void setNodes(List<Healthcollectorv3StapInformationObject> nodes) {
+  public void setNodes(@javax.annotation.Nullable List<Healthcollectorv3StapInformationObject> nodes) {
     this.nodes = nodes;
   }
 
 
-  public Healthcollectorv3HistoricalDataObject stapCounts(List<Healthcollectorv3CountObject> stapCounts) {
+  public Healthcollectorv3HistoricalDataObject stapCounts(@javax.annotation.Nullable List<Healthcollectorv3CountObject> stapCounts) {
     this.stapCounts = stapCounts;
     return this;
   }
@@ -172,73 +180,73 @@ public class Healthcollectorv3HistoricalDataObject {
     return this;
   }
 
-   /**
+  /**
    * Stap counts over a period of time.
    * @return stapCounts
-  **/
+   */
   @javax.annotation.Nullable
   public List<Healthcollectorv3CountObject> getStapCounts() {
     return stapCounts;
   }
 
-  public void setStapCounts(List<Healthcollectorv3CountObject> stapCounts) {
+  public void setStapCounts(@javax.annotation.Nullable List<Healthcollectorv3CountObject> stapCounts) {
     this.stapCounts = stapCounts;
   }
 
 
-  public Healthcollectorv3HistoricalDataObject stapsAdded(Integer stapsAdded) {
+  public Healthcollectorv3HistoricalDataObject stapsAdded(@javax.annotation.Nullable Integer stapsAdded) {
     this.stapsAdded = stapsAdded;
     return this;
   }
 
-   /**
+  /**
    * Count of staps added.
    * @return stapsAdded
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStapsAdded() {
     return stapsAdded;
   }
 
-  public void setStapsAdded(Integer stapsAdded) {
+  public void setStapsAdded(@javax.annotation.Nullable Integer stapsAdded) {
     this.stapsAdded = stapsAdded;
   }
 
 
-  public Healthcollectorv3HistoricalDataObject stapsRemoved(Integer stapsRemoved) {
+  public Healthcollectorv3HistoricalDataObject stapsRemoved(@javax.annotation.Nullable Integer stapsRemoved) {
     this.stapsRemoved = stapsRemoved;
     return this;
   }
 
-   /**
+  /**
    * Count of staps removed.
    * @return stapsRemoved
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStapsRemoved() {
     return stapsRemoved;
   }
 
-  public void setStapsRemoved(Integer stapsRemoved) {
+  public void setStapsRemoved(@javax.annotation.Nullable Integer stapsRemoved) {
     this.stapsRemoved = stapsRemoved;
   }
 
 
-  public Healthcollectorv3HistoricalDataObject stapsWithIeChanges(Integer stapsWithIeChanges) {
+  public Healthcollectorv3HistoricalDataObject stapsWithIeChanges(@javax.annotation.Nullable Integer stapsWithIeChanges) {
     this.stapsWithIeChanges = stapsWithIeChanges;
     return this;
   }
 
-   /**
+  /**
    * Count of staps that had ie changes.
    * @return stapsWithIeChanges
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStapsWithIeChanges() {
     return stapsWithIeChanges;
   }
 
-  public void setStapsWithIeChanges(Integer stapsWithIeChanges) {
+  public void setStapsWithIeChanges(@javax.annotation.Nullable Integer stapsWithIeChanges) {
     this.stapsWithIeChanges = stapsWithIeChanges;
   }
 
@@ -299,29 +307,22 @@ public class Healthcollectorv3HistoricalDataObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cm_id");
-    openapiFields.add("inspection_engine_counts");
-    openapiFields.add("nodes");
-    openapiFields.add("stap_counts");
-    openapiFields.add("staps_added");
-    openapiFields.add("staps_removed");
-    openapiFields.add("staps_with_ie_changes");
+    openapiFields = new HashSet<String>(Arrays.asList("cm_id", "inspection_engine_counts", "nodes", "stap_counts", "staps_added", "staps_removed", "staps_with_ie_changes"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3HistoricalDataObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3HistoricalDataObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3HistoricalDataObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3HistoricalDataObject is not found in the empty JSON string", Healthcollectorv3HistoricalDataObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3HistoricalDataObject is not found in the empty JSON string", Healthcollectorv3HistoricalDataObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -329,19 +330,19 @@ public class Healthcollectorv3HistoricalDataObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3HistoricalDataObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3HistoricalDataObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3HistoricalDataObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("cm_id") != null && !jsonObj.get("cm_id").isJsonNull()) && !jsonObj.get("cm_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cm_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cm_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cm_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cm_id").toString()));
       }
       if (jsonObj.get("inspection_engine_counts") != null && !jsonObj.get("inspection_engine_counts").isJsonNull()) {
         JsonArray jsonArrayinspectionEngineCounts = jsonObj.getAsJsonArray("inspection_engine_counts");
         if (jsonArrayinspectionEngineCounts != null) {
           // ensure the json data is an array
           if (!jsonObj.get("inspection_engine_counts").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `inspection_engine_counts` to be an array in the JSON string but got `%s`", jsonObj.get("inspection_engine_counts").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `inspection_engine_counts` to be an array in the JSON string but got `%s`", jsonObj.get("inspection_engine_counts").toString()));
           }
 
           // validate the optional field `inspection_engine_counts` (array)
@@ -355,7 +356,7 @@ public class Healthcollectorv3HistoricalDataObject {
         if (jsonArraynodes != null) {
           // ensure the json data is an array
           if (!jsonObj.get("nodes").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `nodes` to be an array in the JSON string but got `%s`", jsonObj.get("nodes").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `nodes` to be an array in the JSON string but got `%s`", jsonObj.get("nodes").toString()));
           }
 
           // validate the optional field `nodes` (array)
@@ -369,7 +370,7 @@ public class Healthcollectorv3HistoricalDataObject {
         if (jsonArraystapCounts != null) {
           // ensure the json data is an array
           if (!jsonObj.get("stap_counts").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `stap_counts` to be an array in the JSON string but got `%s`", jsonObj.get("stap_counts").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `stap_counts` to be an array in the JSON string but got `%s`", jsonObj.get("stap_counts").toString()));
           }
 
           // validate the optional field `stap_counts` (array)
@@ -409,22 +410,22 @@ public class Healthcollectorv3HistoricalDataObject {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3HistoricalDataObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3HistoricalDataObject
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3HistoricalDataObject
-  */
+  /**
+   * Create an instance of Healthcollectorv3HistoricalDataObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3HistoricalDataObject
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3HistoricalDataObject
+   */
   public static Healthcollectorv3HistoricalDataObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3HistoricalDataObject.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3HistoricalDataObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3HistoricalDataObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

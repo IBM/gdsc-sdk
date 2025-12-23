@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateGradeRequest is the argument type used to update a grade.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3UpdateGradeRequest {
   public static final String SERIALIZED_NAME_GRADE = "grade";
   @SerializedName(SERIALIZED_NAME_GRADE)
+  @javax.annotation.Nullable
   private Reportsv3Grade grade;
 
   public static final String SERIALIZED_NAME_GRADE_ID = "grade_id";
   @SerializedName(SERIALIZED_NAME_GRADE_ID)
+  @javax.annotation.Nullable
   private Integer gradeId;
 
   public Reportsv3UpdateGradeRequest() {
   }
 
-  public Reportsv3UpdateGradeRequest grade(Reportsv3Grade grade) {
+  public Reportsv3UpdateGradeRequest grade(@javax.annotation.Nullable Reportsv3Grade grade) {
     this.grade = grade;
     return this;
   }
 
-   /**
+  /**
    * Get grade
    * @return grade
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3Grade getGrade() {
     return grade;
   }
 
-  public void setGrade(Reportsv3Grade grade) {
+  public void setGrade(@javax.annotation.Nullable Reportsv3Grade grade) {
     this.grade = grade;
   }
 
 
-  public Reportsv3UpdateGradeRequest gradeId(Integer gradeId) {
+  public Reportsv3UpdateGradeRequest gradeId(@javax.annotation.Nullable Integer gradeId) {
     this.gradeId = gradeId;
     return this;
   }
 
-   /**
+  /**
    * The id of the grade that was updated.
    * @return gradeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGradeId() {
     return gradeId;
   }
 
-  public void setGradeId(Integer gradeId) {
+  public void setGradeId(@javax.annotation.Nullable Integer gradeId) {
     this.gradeId = gradeId;
   }
 
@@ -147,24 +150,22 @@ public class Reportsv3UpdateGradeRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("grade");
-    openapiFields.add("grade_id");
+    openapiFields = new HashSet<String>(Arrays.asList("grade", "grade_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3UpdateGradeRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3UpdateGradeRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3UpdateGradeRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3UpdateGradeRequest is not found in the empty JSON string", Reportsv3UpdateGradeRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3UpdateGradeRequest is not found in the empty JSON string", Reportsv3UpdateGradeRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,7 +173,7 @@ public class Reportsv3UpdateGradeRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3UpdateGradeRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3UpdateGradeRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3UpdateGradeRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -211,22 +212,22 @@ public class Reportsv3UpdateGradeRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3UpdateGradeRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3UpdateGradeRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3UpdateGradeRequest
-  */
+  /**
+   * Create an instance of Reportsv3UpdateGradeRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3UpdateGradeRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3UpdateGradeRequest
+   */
   public static Reportsv3UpdateGradeRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3UpdateGradeRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3UpdateGradeRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3UpdateGradeRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

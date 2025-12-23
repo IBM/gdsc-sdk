@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **label** | **str** | Label of entity,  i.e. test@ibm.com. | [optional] 
 **template_id** | **str** | Template for sending e-mail. | [optional] 
-**type** | [**Workflowv3EntityType**](Workflowv3EntityType.md) |  | [optional] 
+**type** | [**Workflowv3EntityType**](Workflowv3EntityType.md) |  | [optional] [default to Workflowv3EntityType.UNDEFINED_ENTITY_TYPE]
 **value** | **str** | Value of entity, i.e. an e-mail address. | [optional] 
 
 ## Example

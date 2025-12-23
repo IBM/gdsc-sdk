@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UserSensitiveCategoriesSensitiveCategoriesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class UserSensitiveCategoriesSensitiveCategoriesInner {
   public static final String SERIALIZED_NAME_COUNT = "count";
   @SerializedName(SERIALIZED_NAME_COUNT)
+  @javax.annotation.Nonnull
   private BigDecimal count;
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
   @SerializedName(SERIALIZED_NAME_CATEGORY)
+  @javax.annotation.Nonnull
   private String category;
 
   public UserSensitiveCategoriesSensitiveCategoriesInner() {
   }
 
-  public UserSensitiveCategoriesSensitiveCategoriesInner count(BigDecimal count) {
+  public UserSensitiveCategoriesSensitiveCategoriesInner count(@javax.annotation.Nonnull BigDecimal count) {
     this.count = count;
     return this;
   }
 
-   /**
+  /**
    * Get count
    * @return count
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getCount() {
     return count;
   }
 
-  public void setCount(BigDecimal count) {
+  public void setCount(@javax.annotation.Nonnull BigDecimal count) {
     this.count = count;
   }
 
 
-  public UserSensitiveCategoriesSensitiveCategoriesInner category(String category) {
+  public UserSensitiveCategoriesSensitiveCategoriesInner category(@javax.annotation.Nonnull String category) {
     this.category = category;
     return this;
   }
 
-   /**
+  /**
    * Get category
    * @return category
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCategory() {
     return category;
   }
 
-  public void setCategory(String category) {
+  public void setCategory(@javax.annotation.Nonnull String category) {
     this.category = category;
   }
 
@@ -147,26 +150,22 @@ public class UserSensitiveCategoriesSensitiveCategoriesInner {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("count");
-    openapiFields.add("category");
+    openapiFields = new HashSet<String>(Arrays.asList("count", "category"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("count");
-    openapiRequiredFields.add("category");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("count", "category"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UserSensitiveCategoriesSensitiveCategoriesInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UserSensitiveCategoriesSensitiveCategoriesInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UserSensitiveCategoriesSensitiveCategoriesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in UserSensitiveCategoriesSensitiveCategoriesInner is not found in the empty JSON string", UserSensitiveCategoriesSensitiveCategoriesInner.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in UserSensitiveCategoriesSensitiveCategoriesInner is not found in the empty JSON string", UserSensitiveCategoriesSensitiveCategoriesInner.openapiRequiredFields.toString()));
         }
       }
 
@@ -174,19 +173,19 @@ public class UserSensitiveCategoriesSensitiveCategoriesInner {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!UserSensitiveCategoriesSensitiveCategoriesInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UserSensitiveCategoriesSensitiveCategoriesInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `UserSensitiveCategoriesSensitiveCategoriesInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : UserSensitiveCategoriesSensitiveCategoriesInner.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
       }
   }
 
@@ -219,22 +218,22 @@ public class UserSensitiveCategoriesSensitiveCategoriesInner {
     }
   }
 
- /**
-  * Create an instance of UserSensitiveCategoriesSensitiveCategoriesInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UserSensitiveCategoriesSensitiveCategoriesInner
-  * @throws IOException if the JSON string is invalid with respect to UserSensitiveCategoriesSensitiveCategoriesInner
-  */
+  /**
+   * Create an instance of UserSensitiveCategoriesSensitiveCategoriesInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UserSensitiveCategoriesSensitiveCategoriesInner
+   * @throws IOException if the JSON string is invalid with respect to UserSensitiveCategoriesSensitiveCategoriesInner
+   */
   public static UserSensitiveCategoriesSensitiveCategoriesInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UserSensitiveCategoriesSensitiveCategoriesInner.class);
   }
 
- /**
-  * Convert an instance of UserSensitiveCategoriesSensitiveCategoriesInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UserSensitiveCategoriesSensitiveCategoriesInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

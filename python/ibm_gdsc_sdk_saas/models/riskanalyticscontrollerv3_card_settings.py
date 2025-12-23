@@ -32,7 +32,7 @@ class Riskanalyticscontrollerv3CardSettings(BaseModel):
     headers: Optional[List[StrictStr]] = Field(default=None, description="Headers - list of headers to view the risks.")
     id: Optional[StrictStr] = Field(default=None, description="Id of the settings.")
     name: Optional[StrictStr] = Field(default=None, description="Name of the view - nls value in case its first time for user.")
-    order_by: Optional[Riskanalyticscontrollerv3OrderBy] = None
+    order_by: Optional[Riskanalyticscontrollerv3OrderBy] = Riskanalyticscontrollerv3OrderBy.UNDEFINED_ORDER_BY
     sequence_order: Optional[StrictInt] = Field(default=None, description="Sequence  order of the view(box) of the risks.")
     sorted_by: Optional[StrictStr] = Field(default=None, description="Sorted by header_id to sort the risks in the view by.")
     __properties: ClassVar[List[str]] = ["filters", "headers", "id", "name", "order_by", "sequence_order", "sorted_by"]
@@ -79,9 +79,9 @@ class Riskanalyticscontrollerv3CardSettings(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in filters (list)
         _items = []
         if self.filters:
-            for _item in self.filters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_filters in self.filters:
+                if _item_filters:
+                    _items.append(_item_filters.to_dict())
             _dict['filters'] = _items
         return _dict
 
@@ -99,7 +99,7 @@ class Riskanalyticscontrollerv3CardSettings(BaseModel):
             "headers": obj.get("headers"),
             "id": obj.get("id"),
             "name": obj.get("name"),
-            "order_by": obj.get("order_by"),
+            "order_by": obj.get("order_by") if obj.get("order_by") is not None else Riskanalyticscontrollerv3OrderBy.UNDEFINED_ORDER_BY,
             "sequence_order": obj.get("sequence_order"),
             "sorted_by": obj.get("sorted_by")
         })

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,63 +42,68 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * StapDetailsObject gets additional information about S-TAPs.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3StapDetailsObject {
   public static final String SERIALIZED_NAME_CONNECTIVITY_DETAILS = "connectivity_details";
   @SerializedName(SERIALIZED_NAME_CONNECTIVITY_DETAILS)
+  @javax.annotation.Nullable
   private Healthcollectorv3GeneralDetailsObject connectivityDetails;
 
   public static final String SERIALIZED_NAME_GENERAL_ERR_MESSAGES = "general_err_messages";
   @SerializedName(SERIALIZED_NAME_GENERAL_ERR_MESSAGES)
+  @javax.annotation.Nullable
   private List<String> generalErrMessages = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_KTAP_DETAILS = "ktap_details";
   @SerializedName(SERIALIZED_NAME_KTAP_DETAILS)
+  @javax.annotation.Nullable
   private Healthcollectorv3GeneralDetailsObject ktapDetails;
 
   public static final String SERIALIZED_NAME_STAP_LIVELINESS_INFORMATION = "stap_liveliness_information";
   @SerializedName(SERIALIZED_NAME_STAP_LIVELINESS_INFORMATION)
+  @javax.annotation.Nullable
   private Healthcollectorv3StapLiveInfoObject stapLivelinessInformation;
 
   public static final String SERIALIZED_NAME_TRAFFIC_DETAILS = "traffic_details";
   @SerializedName(SERIALIZED_NAME_TRAFFIC_DETAILS)
+  @javax.annotation.Nullable
   private Healthcollectorv3GeneralDetailsObject trafficDetails;
 
   public Healthcollectorv3StapDetailsObject() {
   }
 
-  public Healthcollectorv3StapDetailsObject connectivityDetails(Healthcollectorv3GeneralDetailsObject connectivityDetails) {
+  public Healthcollectorv3StapDetailsObject connectivityDetails(@javax.annotation.Nullable Healthcollectorv3GeneralDetailsObject connectivityDetails) {
     this.connectivityDetails = connectivityDetails;
     return this;
   }
 
-   /**
+  /**
    * Get connectivityDetails
    * @return connectivityDetails
-  **/
+   */
   @javax.annotation.Nullable
   public Healthcollectorv3GeneralDetailsObject getConnectivityDetails() {
     return connectivityDetails;
   }
 
-  public void setConnectivityDetails(Healthcollectorv3GeneralDetailsObject connectivityDetails) {
+  public void setConnectivityDetails(@javax.annotation.Nullable Healthcollectorv3GeneralDetailsObject connectivityDetails) {
     this.connectivityDetails = connectivityDetails;
   }
 
 
-  public Healthcollectorv3StapDetailsObject generalErrMessages(List<String> generalErrMessages) {
+  public Healthcollectorv3StapDetailsObject generalErrMessages(@javax.annotation.Nullable List<String> generalErrMessages) {
     this.generalErrMessages = generalErrMessages;
     return this;
   }
@@ -110,73 +116,73 @@ public class Healthcollectorv3StapDetailsObject {
     return this;
   }
 
-   /**
+  /**
    * General error messages.
    * @return generalErrMessages
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getGeneralErrMessages() {
     return generalErrMessages;
   }
 
-  public void setGeneralErrMessages(List<String> generalErrMessages) {
+  public void setGeneralErrMessages(@javax.annotation.Nullable List<String> generalErrMessages) {
     this.generalErrMessages = generalErrMessages;
   }
 
 
-  public Healthcollectorv3StapDetailsObject ktapDetails(Healthcollectorv3GeneralDetailsObject ktapDetails) {
+  public Healthcollectorv3StapDetailsObject ktapDetails(@javax.annotation.Nullable Healthcollectorv3GeneralDetailsObject ktapDetails) {
     this.ktapDetails = ktapDetails;
     return this;
   }
 
-   /**
+  /**
    * Get ktapDetails
    * @return ktapDetails
-  **/
+   */
   @javax.annotation.Nullable
   public Healthcollectorv3GeneralDetailsObject getKtapDetails() {
     return ktapDetails;
   }
 
-  public void setKtapDetails(Healthcollectorv3GeneralDetailsObject ktapDetails) {
+  public void setKtapDetails(@javax.annotation.Nullable Healthcollectorv3GeneralDetailsObject ktapDetails) {
     this.ktapDetails = ktapDetails;
   }
 
 
-  public Healthcollectorv3StapDetailsObject stapLivelinessInformation(Healthcollectorv3StapLiveInfoObject stapLivelinessInformation) {
+  public Healthcollectorv3StapDetailsObject stapLivelinessInformation(@javax.annotation.Nullable Healthcollectorv3StapLiveInfoObject stapLivelinessInformation) {
     this.stapLivelinessInformation = stapLivelinessInformation;
     return this;
   }
 
-   /**
+  /**
    * Get stapLivelinessInformation
    * @return stapLivelinessInformation
-  **/
+   */
   @javax.annotation.Nullable
   public Healthcollectorv3StapLiveInfoObject getStapLivelinessInformation() {
     return stapLivelinessInformation;
   }
 
-  public void setStapLivelinessInformation(Healthcollectorv3StapLiveInfoObject stapLivelinessInformation) {
+  public void setStapLivelinessInformation(@javax.annotation.Nullable Healthcollectorv3StapLiveInfoObject stapLivelinessInformation) {
     this.stapLivelinessInformation = stapLivelinessInformation;
   }
 
 
-  public Healthcollectorv3StapDetailsObject trafficDetails(Healthcollectorv3GeneralDetailsObject trafficDetails) {
+  public Healthcollectorv3StapDetailsObject trafficDetails(@javax.annotation.Nullable Healthcollectorv3GeneralDetailsObject trafficDetails) {
     this.trafficDetails = trafficDetails;
     return this;
   }
 
-   /**
+  /**
    * Get trafficDetails
    * @return trafficDetails
-  **/
+   */
   @javax.annotation.Nullable
   public Healthcollectorv3GeneralDetailsObject getTrafficDetails() {
     return trafficDetails;
   }
 
-  public void setTrafficDetails(Healthcollectorv3GeneralDetailsObject trafficDetails) {
+  public void setTrafficDetails(@javax.annotation.Nullable Healthcollectorv3GeneralDetailsObject trafficDetails) {
     this.trafficDetails = trafficDetails;
   }
 
@@ -233,27 +239,22 @@ public class Healthcollectorv3StapDetailsObject {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("connectivity_details");
-    openapiFields.add("general_err_messages");
-    openapiFields.add("ktap_details");
-    openapiFields.add("stap_liveliness_information");
-    openapiFields.add("traffic_details");
+    openapiFields = new HashSet<String>(Arrays.asList("connectivity_details", "general_err_messages", "ktap_details", "stap_liveliness_information", "traffic_details"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3StapDetailsObject
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3StapDetailsObject
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3StapDetailsObject.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3StapDetailsObject is not found in the empty JSON string", Healthcollectorv3StapDetailsObject.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3StapDetailsObject is not found in the empty JSON string", Healthcollectorv3StapDetailsObject.openapiRequiredFields.toString()));
         }
       }
 
@@ -261,7 +262,7 @@ public class Healthcollectorv3StapDetailsObject {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3StapDetailsObject.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3StapDetailsObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3StapDetailsObject` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -271,7 +272,7 @@ public class Healthcollectorv3StapDetailsObject {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("general_err_messages") != null && !jsonObj.get("general_err_messages").isJsonNull() && !jsonObj.get("general_err_messages").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `general_err_messages` to be an array in the JSON string but got `%s`", jsonObj.get("general_err_messages").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `general_err_messages` to be an array in the JSON string but got `%s`", jsonObj.get("general_err_messages").toString()));
       }
       // validate the optional field `ktap_details`
       if (jsonObj.get("ktap_details") != null && !jsonObj.get("ktap_details").isJsonNull()) {
@@ -316,22 +317,22 @@ public class Healthcollectorv3StapDetailsObject {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3StapDetailsObject given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3StapDetailsObject
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3StapDetailsObject
-  */
+  /**
+   * Create an instance of Healthcollectorv3StapDetailsObject given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3StapDetailsObject
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3StapDetailsObject
+   */
   public static Healthcollectorv3StapDetailsObject fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3StapDetailsObject.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3StapDetailsObject to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3StapDetailsObject to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

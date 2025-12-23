@@ -44,14 +44,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceAssetIngestionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceAssetIngestionRequest = {
-  // Assetsv3AssetIngestionRequest
+const request: AssetsServiceApiAssetsServiceAssetIngestionRequest = {
+  
   assetsv3AssetIngestionRequest: {
     accounts: [
       {
@@ -450,9 +450,8 @@ let body:.AssetsServiceApiAssetsServiceAssetIngestionRequest = {
   },
 };
 
-apiInstance.assetsServiceAssetIngestion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceAssetIngestion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -493,20 +492,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest = {
-  // any
+const request: AssetsServiceApiAssetsServiceAssetIngestionManualTriggerRequest = {
+  
   body: {},
 };
 
-apiInstance.assetsServiceAssetIngestionManualTrigger(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceAssetIngestionManualTrigger(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -547,20 +545,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceCancelCSVImportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceCancelCSVImportRequest = {
-  // string | unique id of the csv
+const request: AssetsServiceApiAssetsServiceCancelCSVImportRequest = {
+    // unique id of the csv
   csvId: "csv_id_example",
 };
 
-apiInstance.assetsServiceCancelCSVImport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceCancelCSVImport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -601,16 +598,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceClonePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceClonePolicyRequest = {
-  // string | Policy id that needs to be cloned.
+const request: AssetsServiceApiAssetsServiceClonePolicyRequest = {
+    // Policy id that needs to be cloned.
   policyId: "policy_id_example",
-  // Assetsv3ClonePolicyRequest
+  
   assetsv3ClonePolicyRequest: {
     policyId: "policyId_example",
     policyName: "policyName_example",
@@ -642,9 +639,8 @@ let body:.AssetsServiceApiAssetsServiceClonePolicyRequest = {
   },
 };
 
-apiInstance.assetsServiceClonePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceClonePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -686,28 +682,27 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest = {
-  // string | unique id of the csv
+const request: AssetsServiceApiAssetsServiceCompareCSVToExistingAssetsRequest = {
+    // unique id of the csv
   csvId: "csv_id_example",
-  // string | which rows are required, existing or new or all. (optional)
+    // which rows are required, existing or new or all. (optional)
   rowsRequired: "rows_required_example",
-  // number | page number. (optional)
+    // page number. (optional)
   pageNumber: 1,
-  // number | page size. (optional)
+    // page size. (optional)
   pageSize: 1,
-  // 'DATABASE' | Asset CSV template type.   - DATABASE: Template for database (optional)
+    // Asset CSV template type.   - DATABASE: Template for database (optional)
   templateType: "DATABASE",
 };
 
-apiInstance.assetsServiceCompareCSVToExistingAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceCompareCSVToExistingAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -752,14 +747,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest = {
-  // Assetsv3CreateUpdatePolicyRequest
+const request: AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest = {
+  
   assetsv3CreateUpdatePolicyRequest: {
     operation: 1,
     policy: {
@@ -805,9 +800,8 @@ let body:.AssetsServiceApiAssetsServiceCreateUpdatePolicyRequest = {
   },
 };
 
-apiInstance.assetsServiceCreateUpdatePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceCreateUpdatePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -848,20 +842,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest = {
-  // string | template id to be deleted
+const request: AssetsServiceApiAssetsServiceDeleteFilterTemplateForAssetsRequest = {
+    // template id to be deleted
   templateId: "template_id_example",
 };
 
-apiInstance.assetsServiceDeleteFilterTemplateForAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceDeleteFilterTemplateForAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -902,22 +895,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceDeletePoliciesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceDeletePoliciesRequest = {
-  // Array<string> | Policy ids. (optional)
+const request: AssetsServiceApiAssetsServiceDeletePoliciesRequest = {
+    // Policy ids. (optional)
   policyIds: [
     "policy_ids_example",
   ],
 };
 
-apiInstance.assetsServiceDeletePolicies(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceDeletePolicies(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -958,14 +950,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest = {
-  // Assetsv3FetchAssetChangeLogRequest
+const request: AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest = {
+  
   assetsv3FetchAssetChangeLogRequest: {
     assetId: "assetId_example",
     filter: [
@@ -1011,9 +1003,8 @@ let body:.AssetsServiceApiAssetsServiceFetchAssetChangeLogRequest = {
   },
 };
 
-apiInstance.assetsServiceFetchAssetChangeLog(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceFetchAssetChangeLog(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1054,42 +1045,41 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceFetchAssetDashboardRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceFetchAssetDashboardRequest = {
-  // string | ID of the Dashboard Widget
+const request: AssetsServiceApiAssetsServiceFetchAssetDashboardRequest = {
+    // ID of the Dashboard Widget
   widgetType: "widget_type_example",
-  // string | start of date range for ui widget. (optional)
+    // start of date range for ui widget. (optional)
   dateRangeStart: "date_range.start_example",
-  // string | end of date range for ui widget. (optional)
+    // end of date range for ui widget. (optional)
   dateRangeEnd: "date_range.end_example",
-  // string | type of date range for ui widget. (optional)
+    // type of date range for ui widget. (optional)
   dateRangeType: "date_range.type_example",
-  // string | key for ui widget. (optional)
+    // key for ui widget. (optional)
   dateRangeKey: "date_range.key_example",
-  // string | error for ui widget. (optional)
+    // error for ui widget. (optional)
   dateRangeError: "date_range.error_example",
-  // number | start_number for ui widget. (optional)
+    // start_number for ui widget. (optional)
   dateRangeStartNumber: 1,
-  // string | start of date range for ui widget. (optional)
+    // start of date range for ui widget. (optional)
   dateRangeStartUnit: "date_range.start_unit_example",
-  // number | start of date range for ui widget. (optional)
+    // start of date range for ui widget. (optional)
   dateRangeEndNumber: 1,
-  // string | start of date range for ui widget. (optional)
+    // start of date range for ui widget. (optional)
   dateRangeEndUnit: "date_range.end_unit_example",
-  // string | Name of the timeline value selected from drop down. (optional)
+    // Name of the timeline value selected from drop down. (optional)
   timelineValueSelected: "timeline_value_selected_example",
-  // string | Tag ID. (optional)
+    // Tag ID. (optional)
   tagId: "tag_id_example",
 };
 
-apiInstance.assetsServiceFetchAssetDashboard(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceFetchAssetDashboard(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1141,14 +1131,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceFetchAssetListRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceFetchAssetListRequest = {
-  // Assetsv3FetchAssetListRequest
+const request: AssetsServiceApiAssetsServiceFetchAssetListRequest = {
+  
   assetsv3FetchAssetListRequest: {
     columns: [
       "columns_example",
@@ -1198,9 +1188,8 @@ let body:.AssetsServiceApiAssetsServiceFetchAssetListRequest = {
   },
 };
 
-apiInstance.assetsServiceFetchAssetList(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceFetchAssetList(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1241,28 +1230,27 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest = {
-  // string | Asset grouper Id. (optional)
+const request: AssetsServiceApiAssetsServiceFetchAssetsForMergeSplitRequest = {
+    // Asset grouper Id. (optional)
   assetId: "asset_id_example",
-  // number | Page number. (optional)
+    // Page number. (optional)
   pageNumber: 1,
-  // number | Page size. (optional)
+    // Page size. (optional)
   pageSize: 1,
-  // string | Action : merge or split. (optional)
+    // Action : merge or split. (optional)
   action: "action_example",
-  // string | Search from the list based on asset name, database name, ip or host. (optional)
+    // Search from the list based on asset name, database name, ip or host. (optional)
   searchKey: "search_key_example",
 };
 
-apiInstance.assetsServiceFetchAssetsForMergeSplit(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceFetchAssetsForMergeSplit(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1307,20 +1295,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceFindAssetNameRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceFindAssetNameRequest = {
-  // string | Name of asset. (optional)
+const request: AssetsServiceApiAssetsServiceFindAssetNameRequest = {
+    // Name of asset. (optional)
   assetName: "asset_name_example",
 };
 
-apiInstance.assetsServiceFindAssetName(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceFindAssetName(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1361,34 +1348,33 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceGetAssetOverviewRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceGetAssetOverviewRequest = {
-  // string | Asset grouper Id. (optional)
+const request: AssetsServiceApiAssetsServiceGetAssetOverviewRequest = {
+    // Asset grouper Id. (optional)
   assetId: "asset_id_example",
-  // number | Page number. (optional)
+    // Page number. (optional)
   pageNumber: 1,
-  // number | Page size. (optional)
+    // Page size. (optional)
   size: 1,
-  // 'ALL' | 'CLASSIFICATION' | 'TAG' | 'RESOURCE' | Widget type.   - ALL: All Asset Overview Widgets.  - CLASSIFICATION: Classification Asset Overview Widgets.  - TAG: Tag Asset Overview Widgets.  - RESOURCE: Resource Asset Overview Widgets. (optional)
+    // Widget type.   - ALL: All Asset Overview Widgets.  - CLASSIFICATION: Classification Asset Overview Widgets.  - TAG: Tag Asset Overview Widgets.  - RESOURCE: Resource Asset Overview Widgets. (optional)
   widget: "ALL",
-  // string | Asset IP. (optional)
+    // Asset IP. (optional)
   ip: "ip_example",
-  // string | Asset Host. (optional)
+    // Asset Host. (optional)
   host: "host_example",
-  // string | Database Name. (optional)
+    // Database Name. (optional)
   database: "database_example",
-  // string | asset entity type. (optional)
+    // asset entity type. (optional)
   assetEntityType: "asset_entity_type_example",
 };
 
-apiInstance.assetsServiceGetAssetOverview(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceGetAssetOverview(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1436,23 +1422,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceGetAssetTopologyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceGetAssetTopologyRequest = {
-  // Assetsv3GetAssetTopologyRequest
+const request: AssetsServiceApiAssetsServiceGetAssetTopologyRequest = {
+  
   assetsv3GetAssetTopologyRequest: {
     assetId: "assetId_example",
     type: "type_example",
   },
 };
 
-apiInstance.assetsServiceGetAssetTopology(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceGetAssetTopology(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1493,20 +1478,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest = {
-  // string | template id to be deleted. (optional)
+const request: AssetsServiceApiAssetsServiceGetFilterTemplateForAssetsRequest = {
+    // template id to be deleted. (optional)
   templateId: "template_id_example",
 };
 
-apiInstance.assetsServiceGetFilterTemplateForAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceGetFilterTemplateForAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1547,17 +1531,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.assetsServiceGetFiltersForAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceGetFiltersForAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1595,16 +1577,16 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceImportCSVRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceImportCSVRequest = {
-  // string | unique id of the csv
+const request: AssetsServiceApiAssetsServiceImportCSVRequest = {
+    // unique id of the csv
   csvId: "csv_id_example",
-  // Assetsv3ImportCSVRequest
+  
   assetsv3ImportCSVRequest: {
     csvId: "csvId_example",
     importAction: "importAction_example",
@@ -1612,9 +1594,8 @@ let body:.AssetsServiceApiAssetsServiceImportCSVRequest = {
   },
 };
 
-apiInstance.assetsServiceImportCSV(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceImportCSV(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1656,17 +1637,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.assetsServiceListPolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceListPolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1704,20 +1683,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceListRuleRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceListRuleRequest = {
-  // string | Policy ID
+const request: AssetsServiceApiAssetsServiceListRuleRequest = {
+    // Policy ID
   policyId: "policy_id_example",
 };
 
-apiInstance.assetsServiceListRule(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceListRule(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1758,24 +1736,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceListTagDomainsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceListTagDomainsRequest = {
-  // string | Optional: dom_grouper required if we want to fetch domains based on the group. (optional)
+const request: AssetsServiceApiAssetsServiceListTagDomainsRequest = {
+    // Optional: dom_grouper required if we want to fetch domains based on the group. (optional)
   domGrouper: "dom_grouper_example",
-  // string | Optional: purpose required if we want to fetch domains based on the purpose. (optional)
+    // Optional: purpose required if we want to fetch domains based on the purpose. (optional)
   purpose: "purpose_example",
-  // boolean | Optional: If we need Tag  based on the Domains. (optional)
+    // Optional: If we need Tag  based on the Domains. (optional)
   needTag: true,
 };
 
-apiInstance.assetsServiceListTagDomains(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceListTagDomains(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1818,22 +1795,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceListTagsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceListTagsRequest = {
-  // Array<string> | asset id - Asset ID. (optional)
+const request: AssetsServiceApiAssetsServiceListTagsRequest = {
+    // asset id - Asset ID. (optional)
   assetId: [
     "asset_id_example",
   ],
 };
 
-apiInstance.assetsServiceListTags(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceListTags(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1874,14 +1850,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest = {
-  // Assetsv3MergeOrSplitAssetsRequest
+const request: AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest = {
+  
   assetsv3MergeOrSplitAssetsRequest: {
     action: "action_example",
     destinationAssets: [
@@ -1903,9 +1879,8 @@ let body:.AssetsServiceApiAssetsServiceMergeOrSplitAssetsRequest = {
   },
 };
 
-apiInstance.assetsServiceMergeOrSplitAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceMergeOrSplitAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1946,14 +1921,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceSaveAssignedTagsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceSaveAssignedTagsRequest = {
-  // Assetsv3SaveAssignedTagsRequest
+const request: AssetsServiceApiAssetsServiceSaveAssignedTagsRequest = {
+  
   assetsv3SaveAssignedTagsRequest: {
     tagsAssigned: [
       {
@@ -1966,9 +1941,8 @@ let body:.AssetsServiceApiAssetsServiceSaveAssignedTagsRequest = {
   },
 };
 
-apiInstance.assetsServiceSaveAssignedTags(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceSaveAssignedTags(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2009,14 +1983,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceSaveTagConceptDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceSaveTagConceptDataRequest = {
-  // Assetsv3SaveTagConceptDataRequest
+const request: AssetsServiceApiAssetsServiceSaveTagConceptDataRequest = {
+  
   assetsv3SaveTagConceptDataRequest: {
     tag: {
       creationTime: new Date('1970-01-01T00:00:00.00Z'),
@@ -2034,9 +2008,8 @@ let body:.AssetsServiceApiAssetsServiceSaveTagConceptDataRequest = {
   },
 };
 
-apiInstance.assetsServiceSaveTagConceptData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceSaveTagConceptData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2077,14 +2050,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceSaveTagDomainDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceSaveTagDomainDataRequest = {
-  // Assetsv3SaveTagDomainDataRequest
+const request: AssetsServiceApiAssetsServiceSaveTagDomainDataRequest = {
+  
   assetsv3SaveTagDomainDataRequest: {
     category: {
       creationTime: new Date('1970-01-01T00:00:00.00Z'),
@@ -2118,9 +2091,8 @@ let body:.AssetsServiceApiAssetsServiceSaveTagDomainDataRequest = {
   },
 };
 
-apiInstance.assetsServiceSaveTagDomainData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceSaveTagDomainData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2161,14 +2133,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest = {
-  // Assetsv3SaveUpdateFilterTemplateRequest
+const request: AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest = {
+  
   assetsv3SaveUpdateFilterTemplateRequest: {
     isDefault: true,
     template: {
@@ -2234,9 +2206,8 @@ let body:.AssetsServiceApiAssetsServiceSaveUpdateFilterTemplateForAssetsRequest 
   },
 };
 
-apiInstance.assetsServiceSaveUpdateFilterTemplateForAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceSaveUpdateFilterTemplateForAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2277,22 +2248,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceSetBannerStateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceSetBannerStateRequest = {
-  // Assetsv3SetBannerStateRequest
+const request: AssetsServiceApiAssetsServiceSetBannerStateRequest = {
+  
   assetsv3SetBannerStateRequest: {
     hideAssetsBanner: true,
   },
 };
 
-apiInstance.assetsServiceSetBannerState(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceSetBannerState(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2333,23 +2303,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceUpdateAssetNameRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceUpdateAssetNameRequest = {
-  // Assetsv3UpdateAssetNameRequest
+const request: AssetsServiceApiAssetsServiceUpdateAssetNameRequest = {
+  
   assetsv3UpdateAssetNameRequest: {
     grouperId: 1,
     updatedName: "updatedName_example",
   },
 };
 
-apiInstance.assetsServiceUpdateAssetName(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceUpdateAssetName(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2390,14 +2359,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AssetsServiceApi } from '';
+import type { AssetsServiceApiAssetsServiceUpdatePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AssetsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AssetsServiceApi(configuration);
 
-let body:.AssetsServiceApiAssetsServiceUpdatePolicyRequest = {
-  // Assetsv3UpdatePolicyRequest
+const request: AssetsServiceApiAssetsServiceUpdatePolicyRequest = {
+  
   assetsv3UpdatePolicyRequest: {
     policyId: [
       "policyId_example",
@@ -2406,9 +2375,8 @@ let body:.AssetsServiceApiAssetsServiceUpdatePolicyRequest = {
   },
 };
 
-apiInstance.assetsServiceUpdatePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.assetsServiceUpdatePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2463,42 +2431,41 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuditServiceApi } from '';
+import type { AuditServiceApiAuditServiceGetActivityRecordsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuditServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuditServiceApi(configuration);
 
-let body:.AuditServiceApiAuditServiceGetActivityRecordsRequest = {
-  // Date | Return records starting at this time (>=). (optional)
+const request: AuditServiceApiAuditServiceGetActivityRecordsRequest = {
+    // Return records starting at this time (>=). (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | Return records ending before this time (<). (optional)
+    // Return records ending before this time (<). (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
-  // string | Return records with this service/collection id. (optional)
+    // Return records with this service/collection id. (optional)
   uid: "uid_example",
-  // string | Return records matching this operation (CRUD or other action). (optional)
+    // Return records matching this operation (CRUD or other action). (optional)
   actionTaken: "action_taken_example",
-  // string | Return records for this service/collection. (optional)
+    // Return records for this service/collection. (optional)
   context: "context_example",
-  // string | Return records created only for this reason. (optional)
+    // Return records created only for this reason. (optional)
   changesMade: "changes_made_example",
-  // string | Return records originating with the specified user id. (optional)
+    // Return records originating with the specified user id. (optional)
   performedBy: "performed_by_example",
-  // string | Return records with this label. (optional)
+    // Return records with this label. (optional)
   contextDescription: "context_description_example",
-  // string | Return records based on the query. (optional)
+    // Return records based on the query. (optional)
   query: "query_example",
-  // number | The amount to offset the rows by for pagination. (optional)
+    // The amount to offset the rows by for pagination. (optional)
   offset: 1,
-  // number | The max amount of rows to return for pagination. (optional)
+    // The max amount of rows to return for pagination. (optional)
   limit: 1,
-  // boolean | Return eligable filters if this is true. (optional)
+    // Return eligable filters if this is true. (optional)
   filter: true,
 };
 
-apiInstance.auditServiceGetActivityRecords(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.auditServiceGetActivityRecords(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2550,14 +2517,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuditServiceApi } from '';
+import type { AuditServiceApiAuditServicePutDownloadActivityRecordRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuditServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuditServiceApi(configuration);
 
-let body:.AuditServiceApiAuditServicePutDownloadActivityRecordRequest = {
-  // Auditv3PutActivityRecordRequest
+const request: AuditServiceApiAuditServicePutDownloadActivityRecordRequest = {
+  
   auditv3PutActivityRecordRequest: {
     actionTaken: "actionTaken_example",
     changesMade: "changesMade_example",
@@ -2568,9 +2535,8 @@ let body:.AuditServiceApiAuditServicePutDownloadActivityRecordRequest = {
   },
 };
 
-apiInstance.auditServicePutDownloadActivityRecord(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.auditServicePutDownloadActivityRecord(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2629,23 +2595,22 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
+import type { AuthServerServiceApiAuthServerServiceCreateOauthClientRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:.AuthServerServiceApiAuthServerServiceCreateOauthClientRequest = {
-  // AuthserverCreateOauthClientRequest
+const request: AuthServerServiceApiAuthServerServiceCreateOauthClientRequest = {
+  
   authserverCreateOauthClientRequest: {
     description: "description_example",
     name: "name_example",
   },
 };
 
-apiInstance.authServerServiceCreateOauthClient(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceCreateOauthClient(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2686,20 +2651,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
+import type { AuthServerServiceApiAuthServerServiceDeleteOauthClientRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:.AuthServerServiceApiAuthServerServiceDeleteOauthClientRequest = {
-  // string | ClientID of registered OAuth.
+const request: AuthServerServiceApiAuthServerServiceDeleteOauthClientRequest = {
+    // ClientID of registered OAuth.
   clientId: "client_id_example",
 };
 
-apiInstance.authServerServiceDeleteOauthClient(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceDeleteOauthClient(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2740,17 +2704,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.authServerServiceGetAccessToken(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceGetAccessToken(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2788,20 +2750,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
+import type { AuthServerServiceApiAuthServerServiceGetOauthClientRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:.AuthServerServiceApiAuthServerServiceGetOauthClientRequest = {
-  // string | ClientID of registered OAuth.
+const request: AuthServerServiceApiAuthServerServiceGetOauthClientRequest = {
+    // ClientID of registered OAuth.
   clientId: "client_id_example",
 };
 
-apiInstance.authServerServiceGetOauthClient(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceGetOauthClient(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2842,17 +2803,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.authServerServiceGetUser(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceGetUser(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2890,17 +2849,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuthServerServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuthServerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuthServerServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.authServerServiceListOauthClient(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.authServerServiceListOauthClient(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2975,14 +2932,14 @@ Install a new analyzer in the specified region to enable data classification in 
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiAddAnalyzedRegionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiAddAnalyzedRegionRequest = {
-  // AddAnalyzedRegionRequest
+const request: CloudAccountsApiAddAnalyzedRegionRequest = {
+  
   addAnalyzedRegionRequest: {
     cloudProvider: "aws",
     region: "europe-west1",
@@ -2998,9 +2955,8 @@ let body:.CloudAccountsApiAddAnalyzedRegionRequest = {
   },
 };
 
-apiInstance.addAnalyzedRegion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.addAnalyzedRegion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3042,14 +2998,14 @@ You can add a single or multiple cloud account connections from the same cloud p
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiAddCloudAccountsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiAddCloudAccountsRequest = {
-  // AddCloudAccountsRequest
+const request: CloudAccountsApiAddCloudAccountsRequest = {
+  
   addCloudAccountsRequest: {
     cloudProvider: "aws",
     cloudAccounts: [
@@ -3063,9 +3019,8 @@ let body:.CloudAccountsApiAddCloudAccountsRequest = {
   },
 };
 
-apiInstance.addCloudAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.addCloudAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3107,17 +3062,15 @@ Generate an Atlassian authentication URL for Confluence integration.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.generateAtlassianConfluenceAuthUrl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.generateAtlassianConfluenceAuthUrl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3156,17 +3109,15 @@ Generate an Atlassian authentication URL for JIRA integration.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.generateAtlassianJiraAuthUrl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.generateAtlassianJiraAuthUrl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3205,20 +3156,19 @@ Generate azure authorization url.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiGenerateAzureAuthUrlRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiGenerateAzureAuthUrlRequest = {
-  // string | Tenant Id of the new Azure account, GUID format. (optional)
+const request: CloudAccountsApiGenerateAzureAuthUrlRequest = {
+    // Tenant Id of the new Azure account, GUID format. (optional)
   tenantId: "tenantId_example",
 };
 
-apiInstance.generateAzureAuthUrl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.generateAzureAuthUrl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3260,17 +3210,15 @@ Generate an administrator consent URL for Microsoft 365 integration.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.generateOffice365AuthUrl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.generateOffice365AuthUrl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3309,17 +3257,15 @@ Generate an administrator consent URL for Salesforce integration.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.generateSalesforceAuthUrl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.generateSalesforceAuthUrl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3358,17 +3304,15 @@ Generate a Slack authentication URL.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.generateSlackAuthUrl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.generateSlackAuthUrl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3407,14 +3351,14 @@ Generate an administrator consent URL for Snowflake integration.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiGenerateSnowflakeAuthUrlRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiGenerateSnowflakeAuthUrlRequest = {
-  // ClientInfo
+const request: CloudAccountsApiGenerateSnowflakeAuthUrlRequest = {
+  
   clientInfo: {
     clientId: "clientId_example",
     clientSecret: "clientSecret_example",
@@ -3422,9 +3366,8 @@ let body:.CloudAccountsApiGenerateSnowflakeAuthUrlRequest = {
   },
 };
 
-apiInstance.generateSnowflakeAuthUrl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.generateSnowflakeAuthUrl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3466,22 +3409,21 @@ Get the installation status of Guardium DSPM for a region.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiGetAnalyzedRegionStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiGetAnalyzedRegionStatusRequest = {
-  // CloudServiceProvider | The cloud provider for the cloud account
+const request: CloudAccountsApiGetAnalyzedRegionStatusRequest = {
+    // The cloud provider for the cloud account
   cloudProvider: "aws",
-  // string | The region code
+    // The region code
   region: "europe-west1",
 };
 
-apiInstance.getAnalyzedRegionStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getAnalyzedRegionStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3524,17 +3466,15 @@ Get Azure admin consent status.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.getAzureAdminConsentStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getAzureAdminConsentStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3573,22 +3513,21 @@ Get the installation status of a cloud account.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiGetCloudAccountInstallationStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiGetCloudAccountInstallationStatusRequest = {
-  // CloudServiceProvider | The cloud provider of the cloud account
+const request: CloudAccountsApiGetCloudAccountInstallationStatusRequest = {
+    // The cloud provider of the cloud account
   cloudProvider: "aws",
-  // string | The cloud account identifier
+    // The cloud account identifier
   cloudAccountId: "12345678910",
 };
 
-apiInstance.getCloudAccountInstallationStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getCloudAccountInstallationStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3631,22 +3570,21 @@ Get the metadata details of snowflake database from saas-asset-store.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiGetDatabaseMetadataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiGetDatabaseMetadataRequest = {
-  // DbInfo
+const request: CloudAccountsApiGetDatabaseMetadataRequest = {
+  
   dbInfo: {
     dataStoreId: "dataStoreId_example",
   },
 };
 
-apiInstance.getDatabaseMetadata(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getDatabaseMetadata(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3688,20 +3626,19 @@ Get Snowflake Refresh Token Expiry date.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiGetRefreshTokenExpiryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiGetRefreshTokenExpiryRequest = {
-  // string | The ID of the provider
+const request: CloudAccountsApiGetRefreshTokenExpiryRequest = {
+    // The ID of the provider
   providerId: "providerId_example",
 };
 
-apiInstance.getRefreshTokenExpiry(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getRefreshTokenExpiry(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3743,17 +3680,15 @@ Get a list of all the connected cloud accounts monitored by Guardium DSPM.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.listLinkedAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listLinkedAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3792,22 +3727,21 @@ Post cloud account ID connections to be removed from Guardium DSPM.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiRemoveAccountsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiRemoveAccountsRequest = {
-  // Array<string>
+const request: CloudAccountsApiRemoveAccountsRequest = {
+  
   accountIds: ["1234567891011"],
-  // ServiceProvider
+  
   serviceProvider: "aws",
 };
 
-apiInstance.removeAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.removeAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3853,22 +3787,21 @@ Post cloud accounts IDs and get instructions to remove the accounts from the clo
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiRemoveAccountsInstructionsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiRemoveAccountsInstructionsRequest = {
-  // Array<string>
+const request: CloudAccountsApiRemoveAccountsInstructionsRequest = {
+  
   accountIds: ["1234567891011"],
-  // ServiceProvider
+  
   serviceProvider: "aws",
 };
 
-apiInstance.removeAccountsInstructions(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.removeAccountsInstructions(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3914,17 +3847,15 @@ Retrieve a service account ID to use it for Google Workspace authentication.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.retrieveServiceAccountId(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.retrieveServiceAccountId(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -3963,17 +3894,15 @@ Generate Snowflake integration Script.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.snowflakeIntegrationScript(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.snowflakeIntegrationScript(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4012,22 +3941,21 @@ Submit admin email for service account authorization and return service-account 
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiSubmitGoogleWorkspaceAdminEmailRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiSubmitGoogleWorkspaceAdminEmailRequest = {
-  // SubmitAdminEmailParams
+const request: CloudAccountsApiSubmitGoogleWorkspaceAdminEmailRequest = {
+  
   submitAdminEmailParams: {
     adminEmail: "admin@email.com",
   },
 };
 
-apiInstance.submitGoogleWorkspaceAdminEmail(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.submitGoogleWorkspaceAdminEmail(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4069,22 +3997,21 @@ Submit customer information for Microsoft 365 integration.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiSubmitOffice365TenantInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiSubmitOffice365TenantInfoRequest = {
-  // TenantInfo
+const request: CloudAccountsApiSubmitOffice365TenantInfoRequest = {
+  
   tenantInfo: {
     tenantId: "1234",
   },
 };
 
-apiInstance.submitOffice365TenantInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.submitOffice365TenantInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4126,22 +4053,21 @@ Submit customer information for Salesforce integration.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiSubmitSalesforceAuthCodeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiSubmitSalesforceAuthCodeRequest = {
-  // AuthCode
+const request: CloudAccountsApiSubmitSalesforceAuthCodeRequest = {
+  
   authCode: {
     code: "1234",
   },
 };
 
-apiInstance.submitSalesforceAuthCode(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.submitSalesforceAuthCode(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4186,22 +4112,21 @@ Submit a Slack authentication code.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiSubmitSlackAuthCodeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiSubmitSlackAuthCodeRequest = {
-  // SubmitAuthCode
+const request: CloudAccountsApiSubmitSlackAuthCodeRequest = {
+  
   submitAuthCode: {
     code: "code_example",
   },
 };
 
-apiInstance.submitSlackAuthCode(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.submitSlackAuthCode(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4243,23 +4168,22 @@ Storing code that is returned from Snowflake oAuth.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, CloudAccountsApi } from '';
+import type { CloudAccountsApiSubmitSnowflakeAuthCodeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .CloudAccountsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new CloudAccountsApi(configuration);
 
-let body:.CloudAccountsApiSubmitSnowflakeAuthCodeRequest = {
-  // AuthInfo
+const request: CloudAccountsApiSubmitSnowflakeAuthCodeRequest = {
+  
   authInfo: {
     code: "1234",
     providerId: "1234",
   },
 };
 
-apiInstance.submitSnowflakeAuthCode(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.submitSnowflakeAuthCode(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4320,14 +4244,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ComplianceAcceleratorApi } from '';
+import type { ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ComplianceAcceleratorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ComplianceAcceleratorApi(configuration);
 
-let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = {
-  // Complianceacceleratorv3CreateWorkspaceRequest
+const request: ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = {
+  
   complianceacceleratorv3CreateWorkspaceRequest: {
     complianceInfo: {
       options: {
@@ -4725,9 +4649,8 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorCreateWorkspaceRequest = 
   },
 };
 
-apiInstance.complianceAcceleratorCreateWorkspace(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.complianceAcceleratorCreateWorkspace(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4768,24 +4691,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ComplianceAcceleratorApi } from '';
+import type { ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWorkspacesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ComplianceAcceleratorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ComplianceAcceleratorApi(configuration);
 
-let body:.ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWorkspacesRequest = {
-  // Array<string> | Id to be deleted. (optional)
+const request: ComplianceAcceleratorApiComplianceAcceleratorDeleteComplianceWorkspacesRequest = {
+    // Id to be deleted. (optional)
   regulations: [
     "regulations_example",
   ],
-  // boolean | if you want to delete a whole configuration. (optional)
+    // if you want to delete a whole configuration. (optional)
   deleteAll: true,
 };
 
-apiInstance.complianceAcceleratorDeleteComplianceWorkspaces(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.complianceAcceleratorDeleteComplianceWorkspaces(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4827,20 +4749,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ComplianceAcceleratorApi } from '';
+import type { ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ComplianceAcceleratorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ComplianceAcceleratorApi(configuration);
 
-let body:.ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest = {
-  // boolean | gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. (optional)
+const request: ComplianceAcceleratorApiComplianceAcceleratorGetComplianceInfoRequest = {
+    // gives compliance workspace data without reaching out to other services - meant to be quicker for dashboards. (optional)
   isBrief: true,
 };
 
-apiInstance.complianceAcceleratorGetComplianceInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.complianceAcceleratorGetComplianceInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4881,22 +4802,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ComplianceAcceleratorApi } from '';
+import type { ComplianceAcceleratorApiComplianceAcceleratorHydrateWorkspaceRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ComplianceAcceleratorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ComplianceAcceleratorApi(configuration);
 
-let body:.ComplianceAcceleratorApiComplianceAcceleratorHydrateWorkspaceRequest = {
-  // Complianceacceleratorv3HydrateComplianceWorkspacesRequest
+const request: ComplianceAcceleratorApiComplianceAcceleratorHydrateWorkspaceRequest = {
+  
   complianceacceleratorv3HydrateComplianceWorkspacesRequest: {
     complianceId: "complianceId_example",
   },
 };
 
-apiInstance.complianceAcceleratorHydrateWorkspace(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.complianceAcceleratorHydrateWorkspace(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -4937,14 +4857,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ComplianceAcceleratorApi } from '';
+import type { ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ComplianceAcceleratorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ComplianceAcceleratorApi(configuration);
 
-let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoRequest = {
-  // Complianceacceleratorv3StoreComplianceInfoRequest
+const request: ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoRequest = {
+  
   complianceacceleratorv3StoreComplianceInfoRequest: {
     complianceInfo: {
       options: {
@@ -5342,9 +5262,8 @@ let body:.ComplianceAcceleratorApiComplianceAcceleratorStoreComplianceInfoReques
   },
 };
 
-apiInstance.complianceAcceleratorStoreComplianceInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.complianceAcceleratorStoreComplianceInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -5427,14 +5346,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsRequest = {
-  // Connectionsv3CreateConnectionsAccountsRequest
+const request: ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsRequest = {
+  
   connectionsv3CreateConnectionsAccountsRequest: {
     account: {
       accessKey: "accessKey_example",
@@ -5448,9 +5367,8 @@ let body:.ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsReques
   },
 };
 
-apiInstance.connectionsServiceCreateConnectionsAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceCreateConnectionsAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -5491,14 +5409,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest = {
-  // Connectionsv3CreateConnectionsConfigsRequest
+const request: ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest = {
+  
   connectionsv3CreateConnectionsConfigsRequest: {
     connectionId: "connectionId_example",
     streamConnection: {
@@ -5543,9 +5461,8 @@ let body:.ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest
   },
 };
 
-apiInstance.connectionsServiceCreateConnectionsConfigs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceCreateConnectionsConfigs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -5586,14 +5503,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceCreatePluginRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceCreatePluginRequest = {
-  // Connectionsv3CreatePluginRequest
+const request: ConnectionsServiceApiConnectionsServiceCreatePluginRequest = {
+  
   connectionsv3CreatePluginRequest: {
     datasourceType: "datasourceType_example",
     developerName: "developerName_example",
@@ -5615,9 +5532,8 @@ let body:.ConnectionsServiceApiConnectionsServiceCreatePluginRequest = {
   },
 };
 
-apiInstance.connectionsServiceCreatePlugin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceCreatePlugin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -5658,14 +5574,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceCreateSettingsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceCreateSettingsRequest = {
-  // Connectionsv3CreateSettingsRequest
+const request: ConnectionsServiceApiConnectionsServiceCreateSettingsRequest = {
+  
   connectionsv3CreateSettingsRequest: {
     settings: [
       {
@@ -5690,9 +5606,8 @@ let body:.ConnectionsServiceApiConnectionsServiceCreateSettingsRequest = {
   },
 };
 
-apiInstance.connectionsServiceCreateSettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceCreateSettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -5733,20 +5648,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccountsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccountsRequest = {
-  // string | Account id.
+const request: ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccountsRequest = {
+    // Account id.
   accountId: "account_id_example",
 };
 
-apiInstance.connectionsServiceDeleteConnectionsAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceDeleteConnectionsAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -5787,20 +5701,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigsRequest = {
-  // string | Connection id.
+const request: ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigsRequest = {
+    // Connection id.
   connectionId: "connection_id_example",
 };
 
-apiInstance.connectionsServiceDeleteConnectionsConfigs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceDeleteConnectionsConfigs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -5841,20 +5754,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest = {
-  // string | The connection id
+const request: ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest = {
+    // The connection id
   connectionId: "connection_id_example",
 };
 
-apiInstance.connectionsServiceDeleteConnector(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceDeleteConnector(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -5895,20 +5807,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceDeletePluginRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceDeletePluginRequest = {
-  // string | plugin id
+const request: ConnectionsServiceApiConnectionsServiceDeletePluginRequest = {
+    // plugin id
   id: "id_example",
 };
 
-apiInstance.connectionsServiceDeletePlugin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceDeletePlugin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -5949,16 +5860,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceGeneratePackageRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceGeneratePackageRequest = {
-  // string | id
+const request: ConnectionsServiceApiConnectionsServiceGeneratePackageRequest = {
+    // id
   id: "id_example",
-  // Connectionsv3GeneratePackageRequest
+  
   connectionsv3GeneratePackageRequest: {
     datasourceType: "datasourceType_example",
     developerName: "developerName_example",
@@ -5982,9 +5893,8 @@ let body:.ConnectionsServiceApiConnectionsServiceGeneratePackageRequest = {
   },
 };
 
-apiInstance.connectionsServiceGeneratePackage(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGeneratePackage(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6026,17 +5936,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetBannerState(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetBannerState(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6074,22 +5982,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRequest = {
-  // string | Optional: account id. (optional)
+const request: ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRequest = {
+    // Optional: account id. (optional)
   accountId: "account_id_example",
-  // string | Optional: acccount access key. (optional)
+    // Optional: acccount access key. (optional)
   accessKey: "access_key_example",
 };
 
-apiInstance.connectionsServiceGetConnectionsAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetConnectionsAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6131,22 +6038,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceGetConnectionsConfigsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceGetConnectionsConfigsRequest = {
-  // 'UNDEFINED_TYPE' | 'AWS' | 'AZURE' | 'UC' | 'STAP' | The type of connector. (optional)
+const request: ConnectionsServiceApiConnectionsServiceGetConnectionsConfigsRequest = {
+    // The type of connector. (optional)
   type: "UNDEFINED_TYPE",
-  // string | Optional: if connection id did not provide then return all connections. (optional)
+    // Optional: if connection id did not provide then return all connections. (optional)
   connectionId: "connection_id_example",
 };
 
-apiInstance.connectionsServiceGetConnectionsConfigs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetConnectionsConfigs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6188,14 +6094,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersRequest = {
-  // Connectionsv3GetConnectionsWithFiltersRequest
+const request: ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersRequest = {
+  
   connectionsv3GetConnectionsWithFiltersRequest: {
     calculateFacets: true,
     calculatePresetStats: true,
@@ -6219,9 +6125,8 @@ let body:.ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersReques
   },
 };
 
-apiInstance.connectionsServiceGetConnectionsWithFilters(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetConnectionsWithFilters(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6262,17 +6167,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetConnectorsSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetConnectorsSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6310,17 +6213,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetDataSources(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetDataSources(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6358,17 +6259,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetGuardRecordFields(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetGuardRecordFields(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6406,17 +6305,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetHeaders(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetHeaders(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6454,20 +6351,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceGetPluginsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceGetPluginsRequest = {
-  // string | Optional: if no plug-in id is provided, returns list of all plug-ins. (optional)
+const request: ConnectionsServiceApiConnectionsServiceGetPluginsRequest = {
+    // Optional: if no plug-in id is provided, returns list of all plug-ins. (optional)
   id: "id_example",
 };
 
-apiInstance.connectionsServiceGetPlugins(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetPlugins(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6508,17 +6404,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetSettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetSettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6556,14 +6450,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest = {
-  // Connectionsv3PartialUpdateConnectorsRequest
+const request: ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest = {
+  
   connectionsv3PartialUpdateConnectorsRequest: {
     connectors: [
       {
@@ -6585,9 +6479,8 @@ let body:.ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest 
   },
 };
 
-apiInstance.connectionsServicePartialUpdateConnectors(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServicePartialUpdateConnectors(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6628,14 +6521,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServicePostStapCommandRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServicePostStapCommandRequest = {
-  // Connectionsv3StapCommandRequest
+const request: ConnectionsServiceApiConnectionsServicePostStapCommandRequest = {
+  
   connectionsv3StapCommandRequest: {
     command: "command_example",
     operation: "STAP_REINITIALIZE_BUFFER",
@@ -6643,9 +6536,8 @@ let body:.ConnectionsServiceApiConnectionsServicePostStapCommandRequest = {
   },
 };
 
-apiInstance.connectionsServicePostStapCommand(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServicePostStapCommand(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6686,22 +6578,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdateBannerStateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdateBannerStateRequest = {
-  // Connectionsv3UpdateBannerStateRequest
+const request: ConnectionsServiceApiConnectionsServiceUpdateBannerStateRequest = {
+  
   connectionsv3UpdateBannerStateRequest: {
     hideObjectVerbBanner: true,
   },
 };
 
-apiInstance.connectionsServiceUpdateBannerState(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdateBannerState(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6742,14 +6633,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsRequest = {
-  // Connectionsv3UpdateConnectionsAccountsRequest
+const request: ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsRequest = {
+  
   connectionsv3UpdateConnectionsAccountsRequest: {
     account: {
       accessKey: "accessKey_example",
@@ -6763,9 +6654,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsReques
   },
 };
 
-apiInstance.connectionsServiceUpdateConnectionsAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdateConnectionsAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6806,14 +6696,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest = {
-  // Connectionsv3UpdateConnectionsConfigsRequest
+const request: ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest = {
+  
   connectionsv3UpdateConnectionsConfigsRequest: {
     streamConnectionConfigs: [
       {
@@ -6867,9 +6757,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest
   },
 };
 
-apiInstance.connectionsServiceUpdateConnectionsConfigs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdateConnectionsConfigs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6910,14 +6799,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest = {
-  // Connectionsv3UpdateConnectorsRequest
+const request: ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest = {
+  
   connectionsv3UpdateConnectorsRequest: {
     connectors: [
       {
@@ -6939,9 +6828,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest = {
   },
 };
 
-apiInstance.connectionsServiceUpdateConnectors(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdateConnectors(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -6982,16 +6870,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdatePluginRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdatePluginRequest = {
-  // string | id
+const request: ConnectionsServiceApiConnectionsServiceUpdatePluginRequest = {
+    // id
   id: "id_example",
-  // Connectionsv3UpdatePluginRequest
+  
   connectionsv3UpdatePluginRequest: {
     datasourceType: "datasourceType_example",
     developerName: "developerName_example",
@@ -7015,9 +6903,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdatePluginRequest = {
   },
 };
 
-apiInstance.connectionsServiceUpdatePlugin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdatePlugin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7059,14 +6946,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest = {
-  // Connectionsv3UpdateSettingsRequest
+const request: ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest = {
+  
   connectionsv3UpdateSettingsRequest: {
     settings: [
       {
@@ -7091,9 +6978,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest = {
   },
 };
 
-apiInstance.connectionsServiceUpdateSettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdateSettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7134,14 +7020,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest = {
-  // Connectionsv3ValidateAwsConnectionRequest
+const request: ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest = {
+  
   connectionsv3ValidateAwsConnectionRequest: {
     accessKey: "accessKey_example",
     bucketName: "bucketName_example",
@@ -7153,9 +7039,8 @@ let body:.ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest = 
   },
 };
 
-apiInstance.connectionsServiceValidateAwsConnection(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceValidateAwsConnection(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7196,23 +7081,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest = {
-  // Connectionsv3ValidateAzureConnectionRequest
+const request: ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest = {
+  
   connectionsv3ValidateAzureConnectionRequest: {
     eventHubName: "eventHubName_example",
     storageConnectionString: "storageConnectionString_example",
   },
 };
 
-apiInstance.connectionsServiceValidateAzureConnection(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceValidateAzureConnection(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7253,14 +7137,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest = {
-  // Connectionsv3ValidateGcpConnectionRequest
+const request: ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest = {
+  
   connectionsv3ValidateGcpConnectionRequest: {
     clientEmail: "clientEmail_example",
     privateKey: "privateKey_example",
@@ -7270,9 +7154,8 @@ let body:.ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest = 
   },
 };
 
-apiInstance.connectionsServiceValidateGcpConnection(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceValidateGcpConnection(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7329,14 +7212,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DashboardsServiceApi } from '';
+import type { DashboardsServiceApiDashboardsServiceCreateDashboardRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DashboardsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DashboardsServiceApi(configuration);
 
-let body:.DashboardsServiceApiDashboardsServiceCreateDashboardRequest = {
-  // Dashboardsv3Dashboard | Unique dashboard.
+const request: DashboardsServiceApiDashboardsServiceCreateDashboardRequest = {
+    // Unique dashboard.
   dashboardsv3Dashboard: {
     cards: [
       {
@@ -7408,9 +7291,8 @@ let body:.DashboardsServiceApiDashboardsServiceCreateDashboardRequest = {
   },
 };
 
-apiInstance.dashboardsServiceCreateDashboard(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.dashboardsServiceCreateDashboard(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7451,24 +7333,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DashboardsServiceApi } from '';
+import type { DashboardsServiceApiDashboardsServiceDeleteDashboardRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DashboardsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DashboardsServiceApi(configuration);
 
-let body:.DashboardsServiceApiDashboardsServiceDeleteDashboardRequest = {
-  // string | The id of the dashboard to be deleted.
+const request: DashboardsServiceApiDashboardsServiceDeleteDashboardRequest = {
+    // The id of the dashboard to be deleted.
   dashboardId: "dashboard_id_example",
-  // Dashboardsv3DeleteDashboardRequest
+  
   dashboardsv3DeleteDashboardRequest: {
     dashboardId: "dashboardId_example",
   },
 };
 
-apiInstance.dashboardsServiceDeleteDashboard(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.dashboardsServiceDeleteDashboard(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7510,17 +7391,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DashboardsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DashboardsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DashboardsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.dashboardsServiceGetDashboards(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.dashboardsServiceGetDashboards(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7558,16 +7437,16 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DashboardsServiceApi } from '';
+import type { DashboardsServiceApiDashboardsServiceUpdateDashboardRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DashboardsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DashboardsServiceApi(configuration);
 
-let body:.DashboardsServiceApiDashboardsServiceUpdateDashboardRequest = {
-  // string | The id of the dashboard that was updated.
+const request: DashboardsServiceApiDashboardsServiceUpdateDashboardRequest = {
+    // The id of the dashboard that was updated.
   dashboardId: "dashboard_id_example",
-  // Dashboardsv3UpdateDashboardRequest
+  
   dashboardsv3UpdateDashboardRequest: {
     dashboard: {
       cards: [
@@ -7644,9 +7523,8 @@ let body:.DashboardsServiceApiDashboardsServiceUpdateDashboardRequest = {
   },
 };
 
-apiInstance.dashboardsServiceUpdateDashboard(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.dashboardsServiceUpdateDashboard(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7701,22 +7579,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatabootstrapperServiceApi } from '';
+import type { DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatabootstrapperServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatabootstrapperServiceApi(configuration);
 
-let body:.DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest = {
-  // Databootstrapperv3LoadDataRequest
+const request: DatabootstrapperServiceApiDatabootstrapperServiceLoadDataRequest = {
+  
   databootstrapperv3LoadDataRequest: {
     partNumber: "partNumber_example",
   },
 };
 
-apiInstance.databootstrapperServiceLoadData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.databootstrapperServiceLoadData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7775,20 +7652,19 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:.DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest = {
-  // string | Ingestion id. (optional)
+const request: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartInfoRequest = {
+    // Ingestion id. (optional)
   ingestionId: "ingestion_id_example",
 };
 
-apiInstance.datamartProcessorServiceGetDatamartInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.datamartProcessorServiceGetDatamartInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7829,22 +7705,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:.DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest = {
-  // Date | Data starting time period in UTC. (optional)
+const request: DatamartProcessorServiceApiDatamartProcessorServiceGetDatamartsRequest = {
+    // Data starting time period in UTC. (optional)
   periodStart: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | Data ending time period in UTC. (optional)
+    // Data ending time period in UTC. (optional)
   periodEnd: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.datamartProcessorServiceGetDatamarts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.datamartProcessorServiceGetDatamarts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7886,17 +7761,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.datamartProcessorServiceGetEarliestStartTime(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.datamartProcessorServiceGetEarliestStartTime(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7934,20 +7807,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:.DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest = {
-  // any
+const request: DatamartProcessorServiceApiDatamartProcessorServiceSendAllCompleteFilesToQueueRequest = {
+  
   body: {},
 };
 
-apiInstance.datamartProcessorServiceSendAllCompleteFilesToQueue(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.datamartProcessorServiceSendAllCompleteFilesToQueue(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -7988,25 +7860,24 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:.DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest = {
-  // string | Request id which co-relates to request.
+const request: DatamartProcessorServiceApiDatamartProcessorServiceStoreExtractionLogsRequest = {
+    // Request id which co-relates to request.
   requestId: "request_id_example",
-  // Datamartprocessorv3DMExtractionLogsRequest
+  
   datamartprocessorv3DMExtractionLogsRequest: {
     data: "data_example",
     requestId: "requestId_example",
   },
 };
 
-apiInstance.datamartProcessorServiceStoreExtractionLogs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.datamartProcessorServiceStoreExtractionLogs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8048,20 +7919,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DatamartProcessorServiceApi } from '';
+import type { DatamartProcessorServiceApiUploadDatamartRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DatamartProcessorServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DatamartProcessorServiceApi(configuration);
 
-let body:.DatamartProcessorServiceApiUploadDatamartRequest = {
-  // HttpFile | The file to upload.
+const request: DatamartProcessorServiceApiUploadDatamartRequest = {
+    // The file to upload.
   file: { data: Buffer.from(fs.readFileSync('/path/to/file', 'utf-8')), name: '/path/to/file' },
 };
 
-apiInstance.uploadDatamart(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.uploadDatamart(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8124,20 +7994,19 @@ Get a detailed information about an actual flow by providing its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiGetActualFlowRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiGetActualFlowRequest = {
-  // string
+const request: DataMovementsApiGetActualFlowRequest = {
+  
   id: "id_example",
 };
 
-apiInstance.getActualFlow(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getActualFlow(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8179,20 +8048,19 @@ Get a summary of all the actual flows discovered by Guardium DSPM, that is, deta
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiGetActualFlowsSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiGetActualFlowsSummaryRequest = {
-  // ListActualFlowsFilterParameter (optional)
+const request: DataMovementsApiGetActualFlowsSummaryRequest = {
+  
   filter: null,
 };
 
-apiInstance.getActualFlowsSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getActualFlowsSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8234,20 +8102,19 @@ Get a detailed information about a potential flow by providing the flow ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiGetPotentialFlowRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiGetPotentialFlowRequest = {
-  // string
+const request: DataMovementsApiGetPotentialFlowRequest = {
+  
   flowId: "ff2b4abe-89f4-62b8-061e-1232456789",
 };
 
-apiInstance.getPotentialFlow(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getPotentialFlow(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8289,20 +8156,19 @@ Get details of a specific potential flow of data by providing its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiGetPotentialFlowPathRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiGetPotentialFlowPathRequest = {
-  // string
+const request: DataMovementsApiGetPotentialFlowPathRequest = {
+  
   flowPathId: "ff2b4abe-89f4-62b8-061e-12345678910",
 };
 
-apiInstance.getPotentialFlowPath(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getPotentialFlowPath(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8344,20 +8210,19 @@ Get a summary of all the potential flows based on a filter applied.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiGetPotentialFlowsSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiGetPotentialFlowsSummaryRequest = {
-  // PotentialFlowsFilterOptions (optional)
+const request: DataMovementsApiGetPotentialFlowsSummaryRequest = {
+  
   filter: null,
 };
 
-apiInstance.getPotentialFlowsSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getPotentialFlowsSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8399,29 +8264,28 @@ Get detailed information about the actual flows according to the filter applied.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiListActualFlowPathsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiListActualFlowPathsRequest = {
-  // ListActualFlowPathsSortParameter (optional)
+const request: DataMovementsApiListActualFlowPathsRequest = {
+  
   sort: {
     sortBy: "lastSeen",
     sortOrder: 1,
   },
-  // ListActualFlowPathsFilterParameter (optional)
+  
   filter: null,
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listActualFlowPaths(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listActualFlowPaths(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8466,29 +8330,28 @@ List all the actual flows (based on logs) of users and services across your enti
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiListActualFlowsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiListActualFlowsRequest = {
-  // ListActualFlowsSortParameter (optional)
+const request: DataMovementsApiListActualFlowsRequest = {
+  
   sort: {
     sortBy: "lastSeen",
     sortOrder: 1,
   },
-  // ListActualFlowsFilterParameter (optional)
+  
   filter: null,
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listActualFlows(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listActualFlows(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8533,24 +8396,23 @@ List all the potential flows of users and services across your entire cloud acco
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiListPotentialFlowsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiListPotentialFlowsRequest = {
-  // PotentialFlowsFilterOptions (optional)
+const request: DataMovementsApiListPotentialFlowsRequest = {
+  
   filter: null,
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listPotentialFlows(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listPotentialFlows(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8594,24 +8456,23 @@ List all the potential flow paths based on an applied filter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataMovementsApi } from '';
+import type { DataMovementsApiListPotentialFlowsPathsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataMovementsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataMovementsApi(configuration);
 
-let body:.DataMovementsApiListPotentialFlowsPathsRequest = {
-  // PotentialFlowsPathsFilterOptions (optional)
+const request: DataMovementsApiListPotentialFlowsPathsRequest = {
+  
   filter: null,
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listPotentialFlowsPaths(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listPotentialFlowsPaths(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8673,20 +8534,19 @@ Get additional details on a specific data resource by providing its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiGetDataResourceRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiGetDataResourceRequest = {
-  // string | Data resource ID
+const request: DataResourcesApiGetDataResourceRequest = {
+    // Data resource ID
   dataResourceId: "arn:aws:s3::12345678910:polar-security-corplex.xlsx",
 };
 
-apiInstance.getDataResource(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getDataResource(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8728,16 +8588,16 @@ Get a summary of all the data resource, that is, number of data resources, types
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiGetDataResourcesSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiGetDataResourcesSummaryRequest = {
-  // string | Data store id (optional)
+const request: DataResourcesApiGetDataResourcesSummaryRequest = {
+    // Data store id (optional)
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
-  // ListDataResourcesFilterParameter (optional)
+  
   filter: {
     isReviewed: true,
     resourceOwners: ["Avi"],
@@ -8751,9 +8611,8 @@ let body:.DataResourcesApiGetDataResourcesSummaryRequest = {
   },
 };
 
-apiInstance.getDataResourcesSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getDataResourcesSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8796,16 +8655,16 @@ Get a list of data resources based on the filter applied. You can filter by data
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiListDataResourcesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiListDataResourcesRequest = {
-  // string (optional)
+const request: DataResourcesApiListDataResourcesRequest = {
+  
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
-  // ListDataResourcesFilterParameter (optional)
+  
   filter: {
     isReviewed: true,
     resourceOwners: ["Avi"],
@@ -8817,20 +8676,19 @@ let body:.DataResourcesApiListDataResourcesRequest = {
     ],
     resourcePartialName: "resourcePartialName_example",
   },
-  // ListDataResourcesSortParameter (optional)
+  
   sort: {
     sortBy: "creationTime",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listDataResources(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataResources(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8876,22 +8734,21 @@ List and filter data resources by their names
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiListDataResourcesNamesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiListDataResourcesNamesRequest = {
-  // string | Prefix of data resource name
+const request: DataResourcesApiListDataResourcesNamesRequest = {
+    // Prefix of data resource name
   prefix: "check",
-  // string (optional)
+  
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
 };
 
-apiInstance.listDataResourcesNames(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataResourcesNames(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8934,22 +8791,21 @@ Removes a resource, with all its sensitivities, from Guardium DSPM dashboard. Th
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiRemoveResourceRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiRemoveResourceRequest = {
-  // string | Data resource ID
+const request: DataResourcesApiRemoveResourceRequest = {
+    // Data resource ID
   dataResourceId: "arn:aws:s3::12345678910:polar-security-corplex.xlsx",
-  // string | Data store ID
+    // Data store ID
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
 };
 
-apiInstance.removeResource(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.removeResource(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -8992,24 +8848,23 @@ Set the review status of a specific data resource in a specific data store.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataResourcesApi } from '';
+import type { DataResourcesApiUpdateResourceReviewStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataResourcesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataResourcesApi(configuration);
 
-let body:.DataResourcesApiUpdateResourceReviewStatusRequest = {
-  // string | Data resource id
+const request: DataResourcesApiUpdateResourceReviewStatusRequest = {
+    // Data resource id
   dataResourceId: "dataResourceId_example",
-  // UpdateResourceReviewBody
+  
   updateResourceReviewBody: {
     isReviewed: true,
   },
 };
 
-apiInstance.updateResourceReviewStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.updateResourceReviewStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9066,14 +8921,14 @@ Get a summarised information about all sensitivities classified by Guardium DSPM
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataSensitivitiesApi } from '';
+import type { DataSensitivitiesApiGetSensitivitiesSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataSensitivitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataSensitivitiesApi(configuration);
 
-let body:.DataSensitivitiesApiGetSensitivitiesSummaryRequest = {
-  // ListSensitivitiesFilterParameter (optional)
+const request: DataSensitivitiesApiGetSensitivitiesSummaryRequest = {
+  
   filter: {
     resourceId: "arn:aws:s3::123456789101:polar-bucket_excel_sheet.xlsx",
     dataStoreId: "arn:aws:s3::123456789101:polar-bucket",
@@ -9085,9 +8940,8 @@ let body:.DataSensitivitiesApiGetSensitivitiesSummaryRequest = {
   },
 };
 
-apiInstance.getSensitivitiesSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getSensitivitiesSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9129,20 +8983,19 @@ Get details of a sensitivity by providing its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataSensitivitiesApi } from '';
+import type { DataSensitivitiesApiGetSensitivityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataSensitivitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataSensitivitiesApi(configuration);
 
-let body:.DataSensitivitiesApiGetSensitivityRequest = {
-  // string
+const request: DataSensitivitiesApiGetSensitivityRequest = {
+  
   sensitivityId: "sensitivityId_example",
 };
 
-apiInstance.getSensitivity(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getSensitivity(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9184,14 +9037,14 @@ Get a list of all the sensitivities based on an applied filter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataSensitivitiesApi } from '';
+import type { DataSensitivitiesApiListSensitivitiesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataSensitivitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataSensitivitiesApi(configuration);
 
-let body:.DataSensitivitiesApiListSensitivitiesRequest = {
-  // ListSensitivitiesFilterParameter (optional)
+const request: DataSensitivitiesApiListSensitivitiesRequest = {
+  
   filter: {
     resourceId: "arn:aws:s3::123456789101:polar-bucket_excel_sheet.xlsx",
     dataStoreId: "arn:aws:s3::123456789101:polar-bucket",
@@ -9201,20 +9054,19 @@ let body:.DataSensitivitiesApiListSensitivitiesRequest = {
     ],
     hash: "hash_example",
   },
-  // LastSeenSortSchema (optional)
+  
   sort: {
     sortBy: "lastSeen",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listSensitivities(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listSensitivities(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9281,20 +9133,19 @@ Get details of a specific data store by its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiGetDataStoreRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiGetDataStoreRequest = {
-  // string | ID of the data store
+const request: DataStoresApiGetDataStoreRequest = {
+    // ID of the data store
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
 };
 
-apiInstance.getDataStore(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getDataStore(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9336,14 +9187,14 @@ Get a summary of all the data stores, that is, name of data resources, types of 
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiGetDataStoresSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiGetDataStoresSummaryRequest = {
-  // ListDataStoresFilterParameter (optional)
+const request: DataStoresApiGetDataStoresSummaryRequest = {
+  
   filter: {
     storeTypesFamily: ["CLOUD"],
     storeNames: [
@@ -9374,9 +9225,8 @@ let body:.DataStoresApiGetDataStoresSummaryRequest = {
   },
 };
 
-apiInstance.getDataStoresSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getDataStoresSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9418,22 +9268,21 @@ Get a list of all the labels of custom data stores.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiListAllDataStoresLabelsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiListAllDataStoresLabelsRequest = {
-  // string | Prefix of data store label (optional)
+const request: DataStoresApiListAllDataStoresLabelsRequest = {
+    // Prefix of data store label (optional)
   prefix: "test",
-  // number (optional)
+  
   maxResults: 10,
 };
 
-apiInstance.listAllDataStoresLabels(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listAllDataStoresLabels(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9476,14 +9325,14 @@ List all data stores discovered by Guardium DSPM.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiListDataStoresRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiListDataStoresRequest = {
-  // ListDataStoresFilterParameter (optional)
+const request: DataStoresApiListDataStoresRequest = {
+  
   filter: {
     storeTypesFamily: ["CLOUD"],
     storeNames: [
@@ -9512,20 +9361,19 @@ let body:.DataStoresApiListDataStoresRequest = {
     ],
     storePartialName: "storePartialName_example",
   },
-  // ListDataStoresSortParameter (optional)
+  
   sort: {
     sortBy: "name",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listDataStores(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataStores(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9570,22 +9418,21 @@ Get a list of the available cloud tag keys of data stores that can be filtered o
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiListDataStoresCloudTagsKeysRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiListDataStoresCloudTagsKeysRequest = {
-  // string | Prefix of cloud tag key
+const request: DataStoresApiListDataStoresCloudTagsKeysRequest = {
+    // Prefix of cloud tag key
   prefix: "environment",
-  // number (optional)
+  
   maxResults: 10,
 };
 
-apiInstance.listDataStoresCloudTagsKeys(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataStoresCloudTagsKeys(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9628,24 +9475,23 @@ Get a list of the available cloud tag values of data stores that can be filtered
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiListDataStoresCloudTagsValuesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiListDataStoresCloudTagsValuesRequest = {
-  // string | Prefix of cloud tag value
+const request: DataStoresApiListDataStoresCloudTagsValuesRequest = {
+    // Prefix of cloud tag value
   prefix: "comp",
-  // string
+  
   tagKey: "Production",
-  // number (optional)
+  
   maxResults: 10,
 };
 
-apiInstance.listDataStoresCloudTagsValues(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataStoresCloudTagsValues(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9689,20 +9535,19 @@ Lists the data stores that can be filtered or classified.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiListDataStoresNamesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiListDataStoresNamesRequest = {
-  // string | Prefix of data store name
+const request: DataStoresApiListDataStoresNamesRequest = {
+    // Prefix of data store name
   prefix: "polar",
 };
 
-apiInstance.listDataStoresNames(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listDataStoresNames(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9744,22 +9589,21 @@ Post the request for a data store rescan.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiRescanDataStoreRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiRescanDataStoreRequest = {
-  // RescanDataStoreRequest
+const request: DataStoresApiRescanDataStoreRequest = {
+  
   rescanDataStoreRequest: {
     dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
   },
 };
 
-apiInstance.rescanDataStore(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.rescanDataStore(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9801,24 +9645,23 @@ Add or update a custom label for a data store.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiSetDataStoreLabelRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiSetDataStoreLabelRequest = {
-  // string | Data store ID
+const request: DataStoresApiSetDataStoreLabelRequest = {
+    // Data store ID
   dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
-  // SetDataStoreLabelRequest
+  
   setDataStoreLabelRequest: {
     label: "BI Team",
   },
 };
 
-apiInstance.setDataStoreLabel(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.setDataStoreLabel(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9861,23 +9704,22 @@ Add or update the name of a specific data store.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataStoresApi } from '';
+import type { DataStoresApiUpdateDatastoreCustodianRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataStoresApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataStoresApi(configuration);
 
-let body:.DataStoresApiUpdateDatastoreCustodianRequest = {
-  // UpdateCustodianBody
+const request: DataStoresApiUpdateDatastoreCustodianRequest = {
+  
   updateCustodianBody: {
     dataStoreId: "arn:aws:s3::123456789101:mys3-prod",
     custodian: "Avi",
   },
 };
 
-apiInstance.updateDatastoreCustodian(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.updateDatastoreCustodian(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -9939,26 +9781,25 @@ Add or update the status comment of a vulnerability status to keep track of the 
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest = {
-  // string
+const request: DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest = {
+  
   vulnerabilityId: "384cd426-b187-438a-affc-e12b323f5890",
-  // string
+  
   statusId: "statusId_example",
-  // AddCommentBody
+  
   addCommentBody: {
     comment: "comment_example",
   },
 };
 
-apiInstance.addVulnerabilityStatusComment(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.addVulnerabilityStatusComment(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10002,20 +9843,19 @@ Get a summary of all the vulnerabilities. You can also filter the results of the
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest = {
-  // VulnerabilitiesFilterOptions (optional)
+const request: DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest = {
+  
   filter: null,
 };
 
-apiInstance.getVulnerabilitiesSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getVulnerabilitiesSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10057,20 +9897,19 @@ Get vulnerability details by providing its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiGetVulnerabilityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiGetVulnerabilityRequest = {
-  // string
+const request: DataVulnerabilitiesApiGetVulnerabilityRequest = {
+  
   vulnerabilityId: "384cd426-b187-438a-affc-e12b323f5890",
 };
 
-apiInstance.getVulnerability(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getVulnerability(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10112,29 +9951,28 @@ Get a list of data vulnerabilities based on a filter applied. You can filter by 
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiListVulnerabilitiesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiListVulnerabilitiesRequest = {
-  // VulnerabilitiesFilterOptions (optional)
+const request: DataVulnerabilitiesApiListVulnerabilitiesRequest = {
+  
   filter: null,
-  // ListVulnerabilitiesSortParameter (optional)
+  
   sort: {
     sortBy: "criticality",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listVulnerabilities(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listVulnerabilities(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10179,29 +10017,28 @@ Get a list of all the vulnerabilities of data stores.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest = {
-  // VulnerabilitiesByDataStoreFilterOptions (optional)
+const request: DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest = {
+  
   filter: null,
-  // ListVulnerabilitiesByDataStoreSortParameter (optional)
+  
   sort: {
     sortBy: "vulnerabilitiesCount",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listVulnerabilitiesByDataStore(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listVulnerabilitiesByDataStore(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10246,24 +10083,23 @@ Delete a status comment of a vulnerability status.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest = {
-  // string
+const request: DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest = {
+  
   vulnerabilityId: "384cd426-b187-438a-affc-e12b323f5890",
-  // string
+  
   statusId: "statusId_example",
-  // string
+  
   commentId: "commentId_example",
 };
 
-apiInstance.removeVulnerabilityStatusComment(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.removeVulnerabilityStatusComment(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10307,24 +10143,23 @@ Add or update the status of a vulnerability to track its progress.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiSetVulnerabilityStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiSetVulnerabilityStatusRequest = {
-  // string
+const request: DataVulnerabilitiesApiSetVulnerabilityStatusRequest = {
+  
   vulnerabilityId: "vulnerabilityId_example",
-  // SetVulnerabilityStatusRequest
+  
   setVulnerabilityStatusRequest: {
     status: "review",
   },
 };
 
-apiInstance.setVulnerabilityStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.setVulnerabilityStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10367,28 +10202,27 @@ Set a vulnerability status of a vulnerability.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiUpdateVulnerabilityStatusCommentRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiUpdateVulnerabilityStatusCommentRequest = {
-  // string
+const request: DataVulnerabilitiesApiUpdateVulnerabilityStatusCommentRequest = {
+  
   vulnerabilityId: "384cd426-b187-438a-affc-e12b323f5890",
-  // string
+  
   statusId: "statusId_example",
-  // string
+  
   commentId: "commentId_example",
-  // UpdateCommentBody
+  
   updateCommentBody: {
     comment: "comment_example",
   },
 };
 
-apiInstance.updateVulnerabilityStatusComment(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.updateVulnerabilityStatusComment(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10453,14 +10287,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceCreateDatasetRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceCreateDatasetRequest = {
-  // Ecosystemv3CreateDatasetRequest
+const request: EcosystemServiceApiEcosystemServiceCreateDatasetRequest = {
+  
   ecosystemv3CreateDatasetRequest: {
     detail: {
       columns: [
@@ -10482,9 +10316,8 @@ let body:.EcosystemServiceApiEcosystemServiceCreateDatasetRequest = {
   },
 };
 
-apiInstance.ecosystemServiceCreateDataset(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceCreateDataset(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10525,16 +10358,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceDataInsertRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceDataInsertRequest = {
-  // string | Data set target name.
+const request: EcosystemServiceApiEcosystemServiceDataInsertRequest = {
+    // Data set target name.
   datasetName: "dataset_name_example",
-  // Ecosystemv3DataInsertRequest
+  
   ecosystemv3DataInsertRequest: {
     datasetName: "datasetName_example",
     entries: [
@@ -10547,9 +10380,8 @@ let body:.EcosystemServiceApiEcosystemServiceDataInsertRequest = {
   },
 };
 
-apiInstance.ecosystemServiceDataInsert(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceDataInsert(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10591,22 +10423,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest = {
-  // Array<string> | Name of the dataset, required field. (optional)
+const request: EcosystemServiceApiEcosystemServiceDeleteDatasetsRequest = {
+    // Name of the dataset, required field. (optional)
   datasetNames: [
     "dataset_names_example",
   ],
 };
 
-apiInstance.ecosystemServiceDeleteDatasets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceDeleteDatasets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10647,34 +10478,33 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceGetDatasetDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceGetDatasetDataRequest = {
-  // string | Name of the dataset.
+const request: EcosystemServiceApiEcosystemServiceGetDatasetDataRequest = {
+    // Name of the dataset.
   datasetName: "dataset_name_example",
-  // number | The amount to offset the rows by for pagination. (optional)
+    // The amount to offset the rows by for pagination. (optional)
   offset: 1,
-  // number | The max amount of rows to return for pagination. (optional)
+    // The max amount of rows to return for pagination. (optional)
   limit: 1,
-  // boolean | If needs to return header information. It is for pagination. The first page needs header, the rest doesn\'t need. (optional)
+    // If needs to return header information. It is for pagination. The first page needs header, the rest doesn\'t need. (optional)
   returnHeader: true,
-  // string | Search field. (optional)
+    // Search field. (optional)
   field: "field_example",
-  // string | Search value. (optional)
+    // Search value. (optional)
   value: "value_example",
-  // string | Field to sort. (optional)
+    // Field to sort. (optional)
   sortField: "sort_field_example",
-  // 'NONE' | 'ASC' | 'DESC' | Sort order. (optional)
+    // Sort order. (optional)
   sortOrder: "NONE",
 };
 
-apiInstance.ecosystemServiceGetDatasetData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceGetDatasetData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10722,20 +10552,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest = {
-  // string | Name of the dataset.
+const request: EcosystemServiceApiEcosystemServiceGetDatasetDetailRequest = {
+    // Name of the dataset.
   datasetName: "dataset_name_example",
 };
 
-apiInstance.ecosystemServiceGetDatasetDetail(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceGetDatasetDetail(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10776,32 +10605,31 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceGetDatasetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceGetDatasetsRequest = {
-  // Date | Return datasets created at this time or later (>=). (optional)
+const request: EcosystemServiceApiEcosystemServiceGetDatasetsRequest = {
+    // Return datasets created at this time or later (>=). (optional)
   filterStartTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | Return datasets created before this time (<). (optional)
+    // Return datasets created before this time (<). (optional)
   filterEndTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Array<string> | The state filter groups commonly paired states. Only returns records that include the specified names. (optional)
+    // The state filter groups commonly paired states. Only returns records that include the specified names. (optional)
   filterDatasetNames: [
     "filter.dataset_names_example",
   ],
-  // number | The amount to offset the rows by for pagination. (optional)
+    // The amount to offset the rows by for pagination. (optional)
   offset: 1,
-  // number | The max amount of rows to return for pagination. (optional)
+    // The max amount of rows to return for pagination. (optional)
   limit: 1,
-  // boolean | Computing the filter counts is relatively expensive, only compute when needed. (optional)
+    // Computing the filter counts is relatively expensive, only compute when needed. (optional)
   includeFilterCounts: true,
 };
 
-apiInstance.ecosystemServiceGetDatasets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceGetDatasets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10847,23 +10675,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceGetPurgableRowsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceGetPurgableRowsRequest = {
-  // Ecosystemv3GetPurgableRowsRequest
+const request: EcosystemServiceApiEcosystemServiceGetPurgableRowsRequest = {
+  
   ecosystemv3GetPurgableRowsRequest: {
     hotRetentionPeriod: "hotRetentionPeriod_example",
     hotRetentionPeriodUnit: "hotRetentionPeriodUnit_example",
   },
 };
 
-apiInstance.ecosystemServiceGetPurgableRows(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceGetPurgableRows(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10904,22 +10731,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServicePurgeDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServicePurgeDataRequest = {
-  // Array<string> | Name of the datasets, required field. (optional)
+const request: EcosystemServiceApiEcosystemServicePurgeDataRequest = {
+    // Name of the datasets, required field. (optional)
   datasetNames: [
     "dataset_names_example",
   ],
 };
 
-apiInstance.ecosystemServicePurgeData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServicePurgeData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -10960,14 +10786,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, EcosystemServiceApi } from '';
+import type { EcosystemServiceApiEcosystemServiceTestIntegrationRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .EcosystemServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new EcosystemServiceApi(configuration);
 
-let body:.EcosystemServiceApiEcosystemServiceTestIntegrationRequest = {
-  // Ecosystemv3TestIntegrationRequest
+const request: EcosystemServiceApiEcosystemServiceTestIntegrationRequest = {
+  
   ecosystemv3TestIntegrationRequest: {
     integrationType: "integrationType_example",
     options: {
@@ -10976,9 +10802,8 @@ let body:.EcosystemServiceApiEcosystemServiceTestIntegrationRequest = {
   },
 };
 
-apiInstance.ecosystemServiceTestIntegration(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.ecosystemServiceTestIntegration(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11035,22 +10860,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, FeatureFlagsServiceApi } from '';
+import type { FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverridesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .FeatureFlagsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new FeatureFlagsServiceApi(configuration);
 
-let body:.FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverridesRequest = {
-  // string | Flag name. (optional)
+const request: FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverridesRequest = {
+    // Flag name. (optional)
   flagName: "flag_name_example",
-  // string | Optional tenant id. (optional)
+    // Optional tenant id. (optional)
   tenantId: "tenant_id_example",
 };
 
-apiInstance.featureFlagsServiceDeleteFeatureFlagOverrides(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.featureFlagsServiceDeleteFeatureFlagOverrides(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11092,24 +10916,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, FeatureFlagsServiceApi } from '';
+import type { FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverridesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .FeatureFlagsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new FeatureFlagsServiceApi(configuration);
 
-let body:.FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverridesRequest = {
-  // string | Optional tenant id. (optional)
+const request: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverridesRequest = {
+    // Optional tenant id. (optional)
   tenantId: "tenant_id_example",
-  // Array<string> | Optional flag names; if empty then return all flag. (optional)
+    // Optional flag names; if empty then return all flag. (optional)
   flagNames: [
     "flag_names_example",
   ],
 };
 
-apiInstance.featureFlagsServiceGetFeatureFlagOverrides(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.featureFlagsServiceGetFeatureFlagOverrides(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11151,24 +10974,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, FeatureFlagsServiceApi } from '';
+import type { FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .FeatureFlagsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new FeatureFlagsServiceApi(configuration);
 
-let body:.FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagsRequest = {
-  // string | Tenant id. (optional)
+const request: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagsRequest = {
+    // Tenant id. (optional)
   tenantId: "tenant_id_example",
-  // Array<string> | Optional flag names; if empty then return all flag. (optional)
+    // Optional flag names; if empty then return all flag. (optional)
   flagNames: [
     "flag_names_example",
   ],
 };
 
-apiInstance.featureFlagsServiceGetFeatureFlags(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.featureFlagsServiceGetFeatureFlags(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11210,14 +11032,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, FeatureFlagsServiceApi } from '';
+import type { FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .FeatureFlagsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new FeatureFlagsServiceApi(configuration);
 
-let body:.FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesRequest = {
-  // Featureflagsv3UpdateFeatureFlagOverridesRequest
+const request: FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesRequest = {
+  
   featureflagsv3UpdateFeatureFlagOverridesRequest: {
     featureFlag: {
       flagName: "flagName_example",
@@ -11228,9 +11050,8 @@ let body:.FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesReq
   },
 };
 
-apiInstance.featureFlagsServiceUpdateFeatureFlagOverrides(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.featureFlagsServiceUpdateFeatureFlagOverrides(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11300,22 +11121,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderCancelImportGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderCancelImportGroupRequest = {
-  // Array<number> | Group IDs to delete. (optional)
+const request: GroupBuilderApiGroupBuilderCancelImportGroupRequest = {
+    // Group IDs to delete. (optional)
   groupIds: [
     1,
   ],
 };
 
-apiInstance.groupBuilderCancelImportGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderCancelImportGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11356,14 +11176,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderCreateGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderCreateGroupRequest = {
-  // Groupbuilderv3CreateGroupRequest
+const request: GroupBuilderApiGroupBuilderCreateGroupRequest = {
+  
   groupbuilderv3CreateGroupRequest: {
     copyGroupId: 1,
     description: "description_example",
@@ -11373,9 +11193,8 @@ let body:.GroupBuilderApiGroupBuilderCreateGroupRequest = {
   },
 };
 
-apiInstance.groupBuilderCreateGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderCreateGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11416,22 +11235,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderDeleteGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderDeleteGroupRequest = {
-  // Array<number> | Group IDs to delete. (optional)
+const request: GroupBuilderApiGroupBuilderDeleteGroupRequest = {
+    // Group IDs to delete. (optional)
   groupIds: [
     1,
   ],
 };
 
-apiInstance.groupBuilderDeleteGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderDeleteGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11472,16 +11290,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderEditGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderEditGroupRequest = {
-  // number | Group ID.
+const request: GroupBuilderApiGroupBuilderEditGroupRequest = {
+    // Group ID.
   groupId: 1,
-  // Groupbuilderv3EditGroupRequest
+  
   groupbuilderv3EditGroupRequest: {
     clearGroup: true,
     deletedMembers: [
@@ -11516,9 +11334,8 @@ let body:.GroupBuilderApiGroupBuilderEditGroupRequest = {
   },
 };
 
-apiInstance.groupBuilderEditGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderEditGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11560,23 +11377,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderExportGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderExportGroupRequest = {
-  // Groupbuilderv3GetExportGroupRequest
+const request: GroupBuilderApiGroupBuilderExportGroupRequest = {
+  
   groupbuilderv3GetExportGroupRequest: {
     exportHierarchy: true,
     groupId: 1,
   },
 };
 
-apiInstance.groupBuilderExportGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderExportGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11617,24 +11433,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderGetGroupDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderGetGroupDetailsRequest = {
-  // number | Group ID.
+const request: GroupBuilderApiGroupBuilderGetGroupDetailsRequest = {
+    // Group ID.
   groupId: 1,
-  // string | Filter by group member name. (optional)
+    // Filter by group member name. (optional)
   filter: "filter_example",
-  // string | Order by ascending (ASC) or descending (DESC). (optional)
+    // Order by ascending (ASC) or descending (DESC). (optional)
   order: "order_example",
 };
 
-apiInstance.groupBuilderGetGroupDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroupDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11677,14 +11492,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderGetGroupMembersRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderGetGroupMembersRequest = {
-  // Groupbuilderv3GetGroupMembersRequest
+const request: GroupBuilderApiGroupBuilderGetGroupMembersRequest = {
+  
   groupbuilderv3GetGroupMembersRequest: {
     groupId: [
       1,
@@ -11692,9 +11507,8 @@ let body:.GroupBuilderApiGroupBuilderGetGroupMembersRequest = {
   },
 };
 
-apiInstance.groupBuilderGetGroupMembers(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroupMembers(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11735,20 +11549,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderGetGroupSyncMappingRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderGetGroupSyncMappingRequest = {
-  // string | Central manager. (optional)
+const request: GroupBuilderApiGroupBuilderGetGroupSyncMappingRequest = {
+    // Central manager. (optional)
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.groupBuilderGetGroupSyncMapping(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroupSyncMapping(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11789,17 +11602,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.groupBuilderGetGroupTypeMapping(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroupTypeMapping(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11837,17 +11648,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.groupBuilderGetGroupTypes(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroupTypes(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11885,24 +11694,23 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderGetGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderGetGroupsRequest = {
-  // boolean | Return group names, ID\'s, type ID\'s, nested bool, and tuple count only if the flag is true. (optional)
+const request: GroupBuilderApiGroupBuilderGetGroupsRequest = {
+    // Return group names, ID\'s, type ID\'s, nested bool, and tuple count only if the flag is true. (optional)
   doNotIncludeMemberCount: true,
-  // boolean | Only return groups that user has full-access to. (optional)
+    // Only return groups that user has full-access to. (optional)
   onlyFullAccess: true,
-  // boolean | Only return non-nested groups. (optional)
+    // Only return non-nested groups. (optional)
   nonNested: true,
 };
 
-apiInstance.groupBuilderGetGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11945,20 +11753,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderGetImportGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderGetImportGroupsRequest = {
-  // string | Central manager host name. (optional)
+const request: GroupBuilderApiGroupBuilderGetImportGroupsRequest = {
+    // Central manager host name. (optional)
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.groupBuilderGetImportGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderGetImportGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -11999,14 +11806,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderImportGroupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderImportGroupRequest = {
-  // Groupbuilderv3ImportGroupRequest
+const request: GroupBuilderApiGroupBuilderImportGroupRequest = {
+  
   groupbuilderv3ImportGroupRequest: {
     centralManagerId: "centralManagerId_example",
     groups: [
@@ -12076,9 +11883,8 @@ let body:.GroupBuilderApiGroupBuilderImportGroupRequest = {
   },
 };
 
-apiInstance.groupBuilderImportGroup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderImportGroup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12119,14 +11925,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderRefreshGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderRefreshGroupsRequest = {
-  // Groupbuilderv3RefreshGroupsRequest
+const request: GroupBuilderApiGroupBuilderRefreshGroupsRequest = {
+  
   groupbuilderv3RefreshGroupsRequest: {
     groupIds: [
       1,
@@ -12134,9 +11940,8 @@ let body:.GroupBuilderApiGroupBuilderRefreshGroupsRequest = {
   },
 };
 
-apiInstance.groupBuilderRefreshGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderRefreshGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12177,14 +11982,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderResetGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderResetGroupsRequest = {
-  // Groupbuilderv3ResetGroupsRequest
+const request: GroupBuilderApiGroupBuilderResetGroupsRequest = {
+  
   groupbuilderv3ResetGroupsRequest: {
     groupIds: [
       1,
@@ -12192,9 +11997,8 @@ let body:.GroupBuilderApiGroupBuilderResetGroupsRequest = {
   },
 };
 
-apiInstance.groupBuilderResetGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderResetGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12235,25 +12039,24 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest = {
-  // string | ID of central manager.
+const request: GroupBuilderApiGroupBuilderStoreGroupMembersGdpRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Groupbuilderv3StoreGroupMembersGdpRequest
+  
   groupbuilderv3StoreGroupMembersGdpRequest: {
     centralManagerId: "centralManagerId_example",
     data: "data_example",
   },
 };
 
-apiInstance.groupBuilderStoreGroupMembersGdp(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderStoreGroupMembersGdp(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12295,16 +12098,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GroupBuilderApi } from '';
+import type { GroupBuilderApiGroupBuilderStoreGroupsGdpRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GroupBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GroupBuilderApi(configuration);
 
-let body:.GroupBuilderApiGroupBuilderStoreGroupsGdpRequest = {
-  // string | ID of central manager.
+const request: GroupBuilderApiGroupBuilderStoreGroupsGdpRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Groupbuilderv3GetGroupsRequestGdp
+  
   groupbuilderv3GetGroupsRequestGdp: {
     centralManagerId: "centralManagerId_example",
     data: [
@@ -12324,9 +12127,8 @@ let body:.GroupBuilderApiGroupBuilderStoreGroupsGdpRequest = {
   },
 };
 
-apiInstance.groupBuilderStoreGroupsGdp(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.groupBuilderStoreGroupsGdp(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12415,14 +12217,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorAddCMRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorAddCMRequest = {
-  // Guardiumconnectorv3AddCMRequest
+const request: GuardiumConnectorApiGuardiumConnectorAddCMRequest = {
+  
   guardiumconnectorv3AddCMRequest: {
     cm: {
       attributes: [
@@ -12450,9 +12252,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorAddCMRequest = {
   },
 };
 
-apiInstance.guardiumConnectorAddCM(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorAddCM(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12493,25 +12294,24 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorAddDatamartsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorAddDatamartsRequest = {
-  // string | central manager
+const request: GuardiumConnectorApiGuardiumConnectorAddDatamartsRequest = {
+    // central manager
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3AddDatamartsRequest
+  
   guardiumconnectorv3AddDatamartsRequest: {
     centralManagerId: "centralManagerId_example",
     data: "data_example",
   },
 };
 
-apiInstance.guardiumConnectorAddDatamarts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorAddDatamarts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12553,22 +12353,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorAddDmExclusionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorAddDmExclusionRequest = {
-  // Guardiumconnectorv3AddDmExclusionRequest
+const request: GuardiumConnectorApiGuardiumConnectorAddDmExclusionRequest = {
+  
   guardiumconnectorv3AddDmExclusionRequest: {
     datamart: "datamart_example",
   },
 };
 
-apiInstance.guardiumConnectorAddDmExclusion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorAddDmExclusion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12609,16 +12408,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorAddTaskRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorAddTaskRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorAddTaskRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3AddTaskRequest
+  
   guardiumconnectorv3AddTaskRequest: {
     centralManagerId: "centralManagerId_example",
     interval: "interval_example",
@@ -12633,9 +12432,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorAddTaskRequest = {
   },
 };
 
-apiInstance.guardiumConnectorAddTask(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorAddTask(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12677,14 +12475,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorBlockUserRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorBlockUserRequest = {
-  // Guardiumconnectorv3BlockUserRequest
+const request: GuardiumConnectorApiGuardiumConnectorBlockUserRequest = {
+  
   guardiumconnectorv3BlockUserRequest: {
     destination: {
       configId: "configId_example",
@@ -12699,9 +12497,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorBlockUserRequest = {
   },
 };
 
-apiInstance.guardiumConnectorBlockUser(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorBlockUser(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12742,16 +12539,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3ConfigureAggregatorExportRequest
+  
   guardiumconnectorv3ConfigureAggregatorExportRequest: {
     centralManagerId: "centralManagerId_example",
     datamartEndDateAggregator: "datamartEndDateAggregator_example",
@@ -12764,9 +12561,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest 
   },
 };
 
-apiInstance.guardiumConnectorConfigureAggregatorExport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorConfigureAggregatorExport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12808,16 +12604,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3ConfigureCollectorExportRequest
+  
   guardiumconnectorv3ConfigureCollectorExportRequest: {
     centralManagerId: "centralManagerId_example",
     collectors: [
@@ -12827,9 +12623,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest =
   },
 };
 
-apiInstance.guardiumConnectorConfigureCollectorExport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorConfigureCollectorExport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12871,16 +12666,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3ConfigureStreamingRequest
+  
   guardiumconnectorv3ConfigureStreamingRequest: {
     action: "action_example",
     centralManagerId: "centralManagerId_example",
@@ -12891,9 +12686,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest = {
   },
 };
 
-apiInstance.guardiumConnectorConfigureStreaming(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorConfigureStreaming(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12935,25 +12729,24 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckRequest = {
-  // string | Central manager
+const request: GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckRequest = {
+    // Central manager
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3DatamartVersionRequest
+  
   guardiumconnectorv3DatamartVersionRequest: {
     centralManagerId: "centralManagerId_example",
     data: "data_example",
   },
 };
 
-apiInstance.guardiumConnectorDatamartVersionCheck(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorDatamartVersionCheck(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -12995,22 +12788,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorDeleteCMRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorDeleteCMRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorDeleteCMRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // number | Flag to force delete CM and associated tasks (0=validate CM is online before deleting, 1=force delete CM). (optional)
+    // Flag to force delete CM and associated tasks (0=validate CM is online before deleting, 1=force delete CM). (optional)
   force: 1,
 };
 
-apiInstance.guardiumConnectorDeleteCM(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorDeleteCM(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13052,20 +12844,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest = {
-  // string | Datamart name. (optional)
+const request: GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest = {
+    // Datamart name. (optional)
   datamart: "datamart_example",
 };
 
-apiInstance.guardiumConnectorDeleteDmExclusion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorDeleteDmExclusion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13106,22 +12897,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // string | ID of task being deleted.
+    // ID of task being deleted.
   taskId: "task_id_example",
 };
 
-apiInstance.guardiumConnectorDeleteTask(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorDeleteTask(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13163,20 +12953,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorDeleteTasks(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorDeleteTasks(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13217,20 +13006,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetAggregatorsConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetAggregatorsConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13271,20 +13059,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetCMsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetCMsRequest = {
-  // boolean | Retrieve the streaming status for all Managed Units that are reporting to a particular Central Manager. (optional)
+const request: GuardiumConnectorApiGuardiumConnectorGetCMsRequest = {
+    // Retrieve the streaming status for all Managed Units that are reporting to a particular Central Manager. (optional)
   runAdditionalChecks: true,
 };
 
-apiInstance.guardiumConnectorGetCMs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetCMs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13325,17 +13112,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.guardiumConnectorGetCMsConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetCMsConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13373,20 +13158,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetCollectorsConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetCollectorsConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13427,20 +13211,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetDatamartsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetDatamartsRequest = {
-  // string | central manager hostname
+const request: GuardiumConnectorApiGuardiumConnectorGetDatamartsRequest = {
+    // central manager hostname
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetDatamarts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetDatamarts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13481,17 +13264,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.guardiumConnectorGetDmExclusion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetDmExclusion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13529,22 +13310,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest = {
-  // string | Central manager hostname
+const request: GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest = {
+    // Central manager hostname
   centralManagerId: "central_manager_id_example",
-  // string | Policy name. (optional)
+    // Policy name. (optional)
   policyName: "policy_name_example",
 };
 
-apiInstance.guardiumConnectorGetGdpPolicyInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetGdpPolicyInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13586,20 +13366,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesRequest = {
-  // string | Central manager hostname
+const request: GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesRequest = {
+    // Central manager hostname
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetGdpPolicySummaries(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetGdpPolicySummaries(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13640,22 +13419,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // boolean | Flag indicating if the older GDP api is to be called in case it doesn\'t support new api. (optional)
+    // Flag indicating if the older GDP api is to be called in case it doesn\'t support new api. (optional)
   useFallback: true,
 };
 
-apiInstance.guardiumConnectorGetHealthInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetHealthInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13697,20 +13475,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfileRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfileRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfileRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetLatestDMExtractionProfile(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetLatestDMExtractionProfile(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13751,20 +13528,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetStreamingStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetStreamingStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13805,20 +13581,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetSyncDMsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetSyncDMsRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorGetSyncDMsRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetSyncDMs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetSyncDMs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13859,17 +13634,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.guardiumConnectorGetTaskTypes(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetTaskTypes(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13907,26 +13680,25 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetTasksRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetTasksRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorGetTasksRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // string | ID of task. (optional)
+    // ID of task. (optional)
   taskId: "task_id_example",
-  // string | Type of task. (optional)
+    // Type of task. (optional)
   taskType: "task_type_example",
-  // string | Key object. (optional)
+    // Key object. (optional)
   keyObject: "key_object_example",
 };
 
-apiInstance.guardiumConnectorGetTasks(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetTasks(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -13970,16 +13742,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3RunGDPReportRequest
+  
   guardiumconnectorv3RunGDPReportRequest: {
     centralManagerId: "centralManagerId_example",
     maxFetchSize: 1,
@@ -13996,9 +13768,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest = {
   },
 };
 
-apiInstance.guardiumConnectorRunGDPReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorRunGDPReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14040,14 +13811,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorSetupCMRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorSetupCMRequest = {
-  // Guardiumconnectorv3SetupCMRequest
+const request: GuardiumConnectorApiGuardiumConnectorSetupCMRequest = {
+  
   guardiumconnectorv3SetupCMRequest: {
     attributes: [
       {
@@ -14062,9 +13833,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorSetupCMRequest = {
   },
 };
 
-apiInstance.guardiumConnectorSetupCM(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorSetupCM(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14105,16 +13875,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest = {
-  // string | central manager
+const request: GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest = {
+    // central manager
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3SetupDatamartsRequest
+  
   guardiumconnectorv3SetupDatamartsRequest: {
     centralManagerId: "centralManagerId_example",
     datamarts: [
@@ -14127,9 +13897,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest = {
   },
 };
 
-apiInstance.guardiumConnectorSetupDatamarts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorSetupDatamarts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14171,16 +13940,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorTaskErrorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorTaskErrorRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorTaskErrorRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3TaskErrorRequest
+  
   guardiumconnectorv3TaskErrorRequest: {
     centralManagerId: "centralManagerId_example",
     errorCode: "errorCode_example",
@@ -14198,9 +13967,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorTaskErrorRequest = {
   },
 };
 
-apiInstance.guardiumConnectorTaskError(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorTaskError(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14242,14 +14010,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest = {
-  // Guardiumconnectorv3DatabaseConnectionStringRequest
+const request: GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest = {
+  
   guardiumconnectorv3DatabaseConnectionStringRequest: {
     dbhost: "dbhost_example",
     dbname: "dbname_example",
@@ -14259,9 +14027,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest = {
   },
 };
 
-apiInstance.guardiumConnectorTestDatabaseConnection(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorTestDatabaseConnection(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14302,14 +14069,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest = {
-  // Guardiumconnectorv3UpdateDmExclusionRequest
+const request: GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest = {
+  
   guardiumconnectorv3UpdateDmExclusionRequest: {
     datamartList: [
       "datamartList_example",
@@ -14317,9 +14084,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest = {
   },
 };
 
-apiInstance.guardiumConnectorUpdateDmExclusion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorUpdateDmExclusion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14360,16 +14126,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3UpdateStreamingRequest
+  
   guardiumconnectorv3UpdateStreamingRequest: {
     centralManagerId: "centralManagerId_example",
     records: [
@@ -14390,9 +14156,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest = {
   },
 };
 
-apiInstance.guardiumConnectorUpdateStreaming(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorUpdateStreaming(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14434,18 +14199,18 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // string | ID of task being updated.
+    // ID of task being updated.
   taskId: "task_id_example",
-  // Guardiumconnectorv3UpdateTaskRequest
+  
   guardiumconnectorv3UpdateTaskRequest: {
     centralManagerId: "centralManagerId_example",
     interval: "interval_example",
@@ -14453,9 +14218,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest = {
   },
 };
 
-apiInstance.guardiumConnectorUpdateTask(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorUpdateTask(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14519,24 +14283,23 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetDataWarehouseUsageRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetDataWarehouseUsageRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetDataWarehouseUsageRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetDataWarehouseUsage(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetDataWarehouseUsage(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14579,17 +14342,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.healthCollectorGetGDPHealthInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetGDPHealthInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14627,26 +14388,25 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest = {
-  // 'UNKNOWN_UNIT' | 'STAP' | Type of unit for which data needs to be retrieved. (optional)
+const request: HealthCollectorApiHealthCollectorGetHistoricalHealthInfoRequest = {
+    // Type of unit for which data needs to be retrieved. (optional)
   unit: "UNKNOWN_UNIT",
-  // string | Optional value if the data is for a particular cm. If it is empty the data for all cms would be retrieved. (optional)
+    // Optional value if the data is for a particular cm. If it is empty the data for all cms would be retrieved. (optional)
   cmId: "cm_id_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetHistoricalHealthInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetHistoricalHealthInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14690,24 +14450,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetObjectStorageUsageRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetObjectStorageUsage(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetObjectStorageUsage(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14750,24 +14509,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetPVCUsageRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetPVCUsageRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetPVCUsageRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetPVCUsage(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetPVCUsage(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14810,24 +14568,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetPodRestartsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetPodRestartsRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetPodRestartsRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetPodRestarts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetPodRestarts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14870,24 +14627,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetStreamsIngestionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetStreamsIngestionRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetStreamsIngestionRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetStreamsIngestion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetStreamsIngestion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14930,24 +14686,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest = {
-  // string | The type of metric to retrieve
+const request: HealthCollectorApiHealthCollectorGetTopGDPCollectorsRequest = {
+    // The type of metric to retrieve
   type: "type_example",
-  // Date | The start time from which the data needs to be calculated. (optional)
+    // The start time from which the data needs to be calculated. (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The end time from which the data needs to be calculated. (optional)
+    // The end time from which the data needs to be calculated. (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
 };
 
-apiInstance.healthCollectorGetTopGDPCollectors(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorGetTopGDPCollectors(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -14990,16 +14745,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, HealthCollectorApi } from '';
+import type { HealthCollectorApiHealthCollectorStoreHealthInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .HealthCollectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new HealthCollectorApi(configuration);
 
-let body:.HealthCollectorApiHealthCollectorStoreHealthInfoRequest = {
-  // string | ID of central manager.
+const request: HealthCollectorApiHealthCollectorStoreHealthInfoRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Healthcollectorv3StoreHealthInfoRequest
+  
   healthcollectorv3StoreHealthInfoRequest: {
     centralManagerId: "centralManagerId_example",
     data: [
@@ -15118,9 +14873,8 @@ let body:.HealthCollectorApiHealthCollectorStoreHealthInfoRequest = {
   },
 };
 
-apiInstance.healthCollectorStoreHealthInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.healthCollectorStoreHealthInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15193,14 +14947,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceAuthorizeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceAuthorizeRequest = {
-  // Jumpboxv3AuthorizeRequest
+const request: JumpboxServiceApiJumpboxServiceAuthorizeRequest = {
+  
   jumpboxv3AuthorizeRequest: {
     displayName: "displayName_example",
     email: "email_example",
@@ -15214,9 +14968,8 @@ let body:.JumpboxServiceApiJumpboxServiceAuthorizeRequest = {
   },
 };
 
-apiInstance.jumpboxServiceAuthorize(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceAuthorize(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15257,20 +15010,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceDeleteAccountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceDeleteAccountRequest = {
-  // string | Account id.
+const request: JumpboxServiceApiJumpboxServiceDeleteAccountRequest = {
+    // Account id.
   accountId: "account_id_example",
 };
 
-apiInstance.jumpboxServiceDeleteAccount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceDeleteAccount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15311,24 +15063,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceDeleteTenantRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceDeleteTenantRequest = {
-  // string | Tenant id.
+const request: JumpboxServiceApiJumpboxServiceDeleteTenantRequest = {
+    // Tenant id.
   tenantId: "tenant_id_example",
-  // boolean | Delete tenant permanently if true. (optional)
+    // Delete tenant permanently if true. (optional)
   isPermanentDelete: true,
-  // boolean | Async. (optional)
+    // Async. (optional)
   async: true,
 };
 
-apiInstance.jumpboxServiceDeleteTenant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceDeleteTenant(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15371,20 +15122,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceDeleteUserRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceDeleteUserRequest = {
-  // string | The user id.
+const request: JumpboxServiceApiJumpboxServiceDeleteUserRequest = {
+    // The user id.
   userId: "user_id_example",
 };
 
-apiInstance.jumpboxServiceDeleteUser(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceDeleteUser(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15425,24 +15175,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceGetAccountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceGetAccountRequest = {
-  // string | Account id.
+const request: JumpboxServiceApiJumpboxServiceGetAccountRequest = {
+    // Account id.
   accountId: "account_id_example",
-  // boolean | Include inactive. (optional)
+    // Include inactive. (optional)
   includeInactive: true,
-  // boolean | Include tenants that are not ready(are in state of being created or deleted). (optional)
+    // Include tenants that are not ready(are in state of being created or deleted). (optional)
   includeNotReady: true,
 };
 
-apiInstance.jumpboxServiceGetAccount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceGetAccount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15485,26 +15234,25 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceGetAccountsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceGetAccountsRequest = {
-  // string | Email. (optional)
+const request: JumpboxServiceApiJumpboxServiceGetAccountsRequest = {
+    // Email. (optional)
   uid: "uid_example",
-  // string | External id. (optional)
+    // External id. (optional)
   externalId: "external_id_example",
-  // boolean | Include inactive. (optional)
+    // Include inactive. (optional)
   includeInactive: true,
-  // boolean | Include tenants that are not ready(are in state of being created or deleted). (optional)
+    // Include tenants that are not ready(are in state of being created or deleted). (optional)
   includeNotReady: true,
 };
 
-apiInstance.jumpboxServiceGetAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceGetAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15548,24 +15296,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceGetTenantRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceGetTenantRequest = {
-  // string | Tenant id.
+const request: JumpboxServiceApiJumpboxServiceGetTenantRequest = {
+    // Tenant id.
   tenantId: "tenant_id_example",
-  // boolean | Include inactive. (optional)
+    // Include inactive. (optional)
   includeInactive: true,
-  // boolean | Include tenants that are not ready(are in state of being created or deleted). (optional)
+    // Include tenants that are not ready(are in state of being created or deleted). (optional)
   includeNotReady: true,
 };
 
-apiInstance.jumpboxServiceGetTenant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceGetTenant(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15608,26 +15355,25 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceGetTenantsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceGetTenantsRequest = {
-  // string | Email. (optional)
+const request: JumpboxServiceApiJumpboxServiceGetTenantsRequest = {
+    // Email. (optional)
   uid: "uid_example",
-  // string | External id. (optional)
+    // External id. (optional)
   externalId: "external_id_example",
-  // boolean | Include inactive. (optional)
+    // Include inactive. (optional)
   includeInactive: true,
-  // boolean | Include tenants that are not ready(are in state of being created or deleted). (optional)
+    // Include tenants that are not ready(are in state of being created or deleted). (optional)
   includeNotReady: true,
 };
 
-apiInstance.jumpboxServiceGetTenants(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceGetTenants(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15671,20 +15417,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceGetUsersRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceGetUsersRequest = {
-  // string | Email. (optional)
+const request: JumpboxServiceApiJumpboxServiceGetUsersRequest = {
+    // Email. (optional)
   uid: "uid_example",
 };
 
-apiInstance.jumpboxServiceGetUsers(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceGetUsers(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15725,14 +15470,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServicePostAccountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServicePostAccountRequest = {
-  // Jumpboxv3PostAccountRequest
+const request: JumpboxServiceApiJumpboxServicePostAccountRequest = {
+  
   jumpboxv3PostAccountRequest: {
     externalId: "externalId_example",
     externalMetadata: {
@@ -15758,9 +15503,8 @@ let body:.JumpboxServiceApiJumpboxServicePostAccountRequest = {
   },
 };
 
-apiInstance.jumpboxServicePostAccount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServicePostAccount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15801,14 +15545,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServicePostTenantsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServicePostTenantsRequest = {
-  // Jumpboxv3PostTenantsRequest
+const request: JumpboxServiceApiJumpboxServicePostTenantsRequest = {
+  
   jumpboxv3PostTenantsRequest: {
     async: true,
     externalId: "externalId_example",
@@ -15835,9 +15579,8 @@ let body:.JumpboxServiceApiJumpboxServicePostTenantsRequest = {
   },
 };
 
-apiInstance.jumpboxServicePostTenants(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServicePostTenants(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15878,14 +15621,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServicePostUsersRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServicePostUsersRequest = {
-  // Jumpboxv3PostUsersBulkRequest
+const request: JumpboxServiceApiJumpboxServicePostUsersRequest = {
+  
   jumpboxv3PostUsersBulkRequest: {
     users: [
       {
@@ -15910,9 +15653,8 @@ let body:.JumpboxServiceApiJumpboxServicePostUsersRequest = {
   },
 };
 
-apiInstance.jumpboxServicePostUsers(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServicePostUsers(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -15953,20 +15695,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceResumeAccountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceResumeAccountRequest = {
-  // string | account_id represents the user\'s account ID
+const request: JumpboxServiceApiJumpboxServiceResumeAccountRequest = {
+    // account_id represents the user\'s account ID
   accountId: "account_id_example",
 };
 
-apiInstance.jumpboxServiceResumeAccount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceResumeAccount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16007,22 +15748,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceSearchUsersRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceSearchUsersRequest = {
-  // Jumpboxv3SearchUsersRequest
+const request: JumpboxServiceApiJumpboxServiceSearchUsersRequest = {
+  
   jumpboxv3SearchUsersRequest: {
     searchString: "searchString_example",
   },
 };
 
-apiInstance.jumpboxServiceSearchUsers(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceSearchUsers(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16063,20 +15803,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceSuspendAccountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceSuspendAccountRequest = {
-  // string | account_id represents the user\'s account ID
+const request: JumpboxServiceApiJumpboxServiceSuspendAccountRequest = {
+    // account_id represents the user\'s account ID
   accountId: "account_id_example",
 };
 
-apiInstance.jumpboxServiceSuspendAccount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceSuspendAccount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16117,23 +15856,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceTestUserRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceTestUserRequest = {
-  // Jumpboxv3TestUserRequest
+const request: JumpboxServiceApiJumpboxServiceTestUserRequest = {
+  
   jumpboxv3TestUserRequest: {
     ldapId: "ldapId_example",
     uid: "uid_example",
   },
 };
 
-apiInstance.jumpboxServiceTestUser(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceTestUser(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16174,16 +15912,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceUpdateAccountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceUpdateAccountRequest = {
-  // string | Account id.
+const request: JumpboxServiceApiJumpboxServiceUpdateAccountRequest = {
+    // Account id.
   accountId: "account_id_example",
-  // Jumpboxv3UpdateAccountRequest
+  
   jumpboxv3UpdateAccountRequest: {
     accountId: "accountId_example",
     externalMetadata: {
@@ -16211,9 +15949,8 @@ let body:.JumpboxServiceApiJumpboxServiceUpdateAccountRequest = {
   },
 };
 
-apiInstance.jumpboxServiceUpdateAccount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceUpdateAccount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16255,16 +15992,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceUpdateTenantRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceUpdateTenantRequest = {
-  // string | Tenant id.
+const request: JumpboxServiceApiJumpboxServiceUpdateTenantRequest = {
+    // Tenant id.
   tenantId: "tenant_id_example",
-  // Jumpboxv3UpdateTenantRequest
+  
   jumpboxv3UpdateTenantRequest: {
     externalMetadata: {
       "key": {
@@ -16292,9 +16029,8 @@ let body:.JumpboxServiceApiJumpboxServiceUpdateTenantRequest = {
   },
 };
 
-apiInstance.jumpboxServiceUpdateTenant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceUpdateTenant(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16336,14 +16072,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, JumpboxServiceApi } from '';
+import type { JumpboxServiceApiJumpboxServiceUpdateUsersRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .JumpboxServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new JumpboxServiceApi(configuration);
 
-let body:.JumpboxServiceApiJumpboxServiceUpdateUsersRequest = {
-  // Jumpboxv3UpdateUsersBulkRequest
+const request: JumpboxServiceApiJumpboxServiceUpdateUsersRequest = {
+  
   jumpboxv3UpdateUsersBulkRequest: {
     action: "action_example",
     metadataOnly: true,
@@ -16370,9 +16106,8 @@ let body:.JumpboxServiceApiJumpboxServiceUpdateUsersRequest = {
   },
 };
 
-apiInstance.jumpboxServiceUpdateUsers(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.jumpboxServiceUpdateUsers(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16435,14 +16170,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceCreateTicketRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceCreateTicketRequest = {
-  // Notificationsv3CreateTicketRequest
+const request: NotificationsServiceApiNotificationsServiceCreateTicketRequest = {
+  
   notificationsv3CreateTicketRequest: {
     additionalData: {
       "key": "key_example",
@@ -16454,9 +16189,8 @@ let body:.NotificationsServiceApiNotificationsServiceCreateTicketRequest = {
   },
 };
 
-apiInstance.notificationsServiceCreateTicket(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceCreateTicket(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16497,23 +16231,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceGetFoldersRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceGetFoldersRequest = {
-  // Notificationsv3GetFoldersRequest
+const request: NotificationsServiceApiNotificationsServiceGetFoldersRequest = {
+  
   notificationsv3GetFoldersRequest: {
     folderName: "folderName_example",
     integrationId: "integrationId_example",
   },
 };
 
-apiInstance.notificationsServiceGetFolders(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceGetFolders(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16554,20 +16287,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceGetNotificationFilenameRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceGetNotificationFilenameRequest = {
-  // string | Params are located in the requests context (tenant id, user email, notification id). (optional)
+const request: NotificationsServiceApiNotificationsServiceGetNotificationFilenameRequest = {
+    // Params are located in the requests context (tenant id, user email, notification id). (optional)
   notificationId: "notification_id_example",
 };
 
-apiInstance.notificationsServiceGetNotificationFilename(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceGetNotificationFilename(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16608,20 +16340,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceGetNotificationRecordRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceGetNotificationRecordRequest = {
-  // string | ID for the record to return.
+const request: NotificationsServiceApiNotificationsServiceGetNotificationRecordRequest = {
+    // ID for the record to return.
   notificationId: "notification_id_example",
 };
 
-apiInstance.notificationsServiceGetNotificationRecord(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceGetNotificationRecord(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16662,38 +16393,37 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceGetNotificationRecordsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceGetNotificationRecordsRequest = {
-  // Date | Return records created at this time or later (>=). (optional)
+const request: NotificationsServiceApiNotificationsServiceGetNotificationRecordsRequest = {
+    // Return records created at this time or later (>=). (optional)
   filterStartTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | Return records created before this time (<). (optional)
+    // Return records created before this time (<). (optional)
   filterEndTime: new Date('1970-01-01T00:00:00.00Z'),
-  // 'INCLUDE_ALL' | 'UNREAD_ONLY' | 'READ_ONLY' | 'COMPLETE_ONLY' | 'NOT_COMPLETE' | Only return record that include the specified state. (optional)
+    // Only return record that include the specified state. (optional)
   filterState: "INCLUDE_ALL",
-  // Array<string> | Only return record that includes the specified origins. (optional)
+    // Only return record that includes the specified origins. (optional)
   filterOrigins: [
     "filter.origins_example",
   ],
-  // string | Only return record that with the specified origin_data. (optional)
+    // Only return record that with the specified origin_data. (optional)
   filterOriginData: "filter.origin_data_example",
-  // number | The max amount of rows to return for this single query. (optional)
+    // The max amount of rows to return for this single query. (optional)
   filterLimit: 1,
-  // number | The amount to offset the rows by for pagination. (optional)
+    // The amount to offset the rows by for pagination. (optional)
   offset: 1,
-  // number | The max amount of rows to return for pagination. (optional)
+    // The max amount of rows to return for pagination. (optional)
   limit: 1,
-  // boolean | Computing the filter counts is relatively expensive, only compute when needed. (optional)
+    // Computing the filter counts is relatively expensive, only compute when needed. (optional)
   includeFilterCounts: true,
 };
 
-apiInstance.notificationsServiceGetNotificationRecords(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceGetNotificationRecords(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16742,22 +16472,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceGetTicketStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceGetTicketStatusRequest = {
-  // string | The ID of the ticket to fetch. (optional)
+const request: NotificationsServiceApiNotificationsServiceGetTicketStatusRequest = {
+    // The ID of the ticket to fetch. (optional)
   ticketId: "ticket_id_example",
-  // string | The ID of the ticketing integration. (optional)
+    // The ID of the ticketing integration. (optional)
   integrationId: "integration_id_example",
 };
 
-apiInstance.notificationsServiceGetTicketStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceGetTicketStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16799,14 +16528,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServicePostNotificationRecordRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServicePostNotificationRecordRequest = {
-  // Notificationsv3PostNotificationRecordRequest
+const request: NotificationsServiceApiNotificationsServicePostNotificationRecordRequest = {
+  
   notificationsv3PostNotificationRecordRequest: {
     origin: "UNDEFINED_ORIGIN",
     originData: "originData_example",
@@ -16826,9 +16555,8 @@ let body:.NotificationsServiceApiNotificationsServicePostNotificationRecordReque
   },
 };
 
-apiInstance.notificationsServicePostNotificationRecord(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServicePostNotificationRecord(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16869,14 +16597,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRequest = {
-  // Notificationsv3SearchNotificationRecordsRequest
+const request: NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRequest = {
+  
   notificationsv3SearchNotificationRecordsRequest: {
     filters: [
       {
@@ -16894,9 +16622,8 @@ let body:.NotificationsServiceApiNotificationsServiceSearchNotificationRecordsRe
   },
 };
 
-apiInstance.notificationsServiceSearchNotificationRecords(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceSearchNotificationRecords(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16937,14 +16664,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceTestIntegrationRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceTestIntegrationRequest = {
-  // Notificationsv3TestIntegrationRequest
+const request: NotificationsServiceApiNotificationsServiceTestIntegrationRequest = {
+  
   notificationsv3TestIntegrationRequest: {
     integrationType: "integrationType_example",
     options: {
@@ -16953,9 +16680,8 @@ let body:.NotificationsServiceApiNotificationsServiceTestIntegrationRequest = {
   },
 };
 
-apiInstance.notificationsServiceTestIntegration(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceTestIntegration(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -16996,14 +16722,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, NotificationsServiceApi } from '';
+import type { NotificationsServiceApiNotificationsServiceUpdateNotificationRecordRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .NotificationsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new NotificationsServiceApi(configuration);
 
-let body:.NotificationsServiceApiNotificationsServiceUpdateNotificationRecordRequest = {
-  // Notificationsv3UpdateNotificationRecordRequest
+const request: NotificationsServiceApiNotificationsServiceUpdateNotificationRecordRequest = {
+  
   notificationsv3UpdateNotificationRecordRequest: {
     notificationId: [
       "notificationId_example",
@@ -17019,9 +16745,8 @@ let body:.NotificationsServiceApiNotificationsServiceUpdateNotificationRecordReq
   },
 };
 
-apiInstance.notificationsServiceUpdateNotificationRecord(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.notificationsServiceUpdateNotificationRecord(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17081,26 +16806,25 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
+import type { OutliersEngineApiOutliersEngineGetSourceStatisticsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:.OutliersEngineApiOutliersEngineGetSourceStatisticsRequest = {
-  // string | server ip. (optional)
+const request: OutliersEngineApiOutliersEngineGetSourceStatisticsRequest = {
+    // server ip. (optional)
   sourceServerIp: "source.server_ip_example",
-  // string | database name. (optional)
+    // database name. (optional)
   sourceDatabaseName: "source.database_name_example",
-  // string | db user name (optional). (optional)
+    // db user name (optional). (optional)
   sourceDbUser: "source.db_user_example",
-  // number | The number of attributes to return for each SourceAttributeType - optional. (optional)
+    // The number of attributes to return for each SourceAttributeType - optional. (optional)
   attributesLimit: 1,
 };
 
-apiInstance.outliersEngineGetSourceStatistics(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineGetSourceStatistics(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17144,17 +16868,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.outliersEngineGetStatistics(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineGetStatistics(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17192,17 +16914,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.outliersEngineGetWorkingHoursPeriods(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineGetWorkingHoursPeriods(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17240,14 +16960,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
+import type { OutliersEngineApiOutliersEngineRunSimulatorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:.OutliersEngineApiOutliersEngineRunSimulatorRequest = {
-  // Outliersenginev3RunSimulatorRequest
+const request: OutliersEngineApiOutliersEngineRunSimulatorRequest = {
+  
   outliersenginev3RunSimulatorRequest: {
     configurationFilePath: "configurationFilePath_example",
     date: "date_example",
@@ -17256,9 +16976,8 @@ let body:.OutliersEngineApiOutliersEngineRunSimulatorRequest = {
   },
 };
 
-apiInstance.outliersEngineRunSimulator(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineRunSimulator(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17299,14 +17018,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
+import type { OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:.OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest = {
-  // Outliersenginev3UpdateWorkingHoursPeriodsRequest
+const request: OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest = {
+  
   outliersenginev3UpdateWorkingHoursPeriodsRequest: {
     period: {
       contiguous: true,
@@ -17320,9 +17039,8 @@ let body:.OutliersEngineApiOutliersEngineUpdateWorkingHoursPeriodsRequest = {
   },
 };
 
-apiInstance.outliersEngineUpdateWorkingHoursPeriods(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineUpdateWorkingHoursPeriods(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17363,20 +17081,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
+import type { OutliersEngineApiOutliersEngineUploadAndAnalyzePeriodRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:.OutliersEngineApiOutliersEngineUploadAndAnalyzePeriodRequest = {
-  // any
+const request: OutliersEngineApiOutliersEngineUploadAndAnalyzePeriodRequest = {
+  
   body: {},
 };
 
-apiInstance.outliersEngineUploadAndAnalyzePeriod(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineUploadAndAnalyzePeriod(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17417,20 +17134,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, OutliersEngineApi } from '';
+import type { OutliersEngineApiOutliersEngineUserClusteringRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .OutliersEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new OutliersEngineApi(configuration);
 
-let body:.OutliersEngineApiOutliersEngineUserClusteringRequest = {
-  // any
+const request: OutliersEngineApiOutliersEngineUserClusteringRequest = {
+  
   body: {},
 };
 
-apiInstance.outliersEngineUserClustering(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.outliersEngineUserClustering(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17484,22 +17200,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PipelineconfigServiceApi } from '';
+import type { PipelineconfigServiceApiPipelineconfigServiceDeleteTenantResourcesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PipelineconfigServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PipelineconfigServiceApi(configuration);
 
-let body:.PipelineconfigServiceApiPipelineconfigServiceDeleteTenantResourcesRequest = {
-  // string | unique tenant ID
+const request: PipelineconfigServiceApiPipelineconfigServiceDeleteTenantResourcesRequest = {
+    // unique tenant ID
   tenantId: "tenant_id_example",
-  // string | resource specifies the specific resource to delete
+    // resource specifies the specific resource to delete
   resource: "resource_example",
 };
 
-apiInstance.pipelineconfigServiceDeleteTenantResources(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.pipelineconfigServiceDeleteTenantResources(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17574,25 +17289,24 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderClonePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderClonePolicyRequest = {
-  // string | Policy id that needs to be cloned.
+const request: PolicyBuilderApiPolicyBuilderClonePolicyRequest = {
+    // Policy id that needs to be cloned.
   policyId: "policy_id_example",
-  // Policybuilderv3ClonePolicyRequest
+  
   policybuilderv3ClonePolicyRequest: {
     policyId: "policyId_example",
     policyName: "policyName_example",
   },
 };
 
-apiInstance.policyBuilderClonePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderClonePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17634,14 +17348,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderCreatePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderCreatePolicyRequest = {
-  // Policybuilderv3CreateUpdatePolicyRequest
+const request: PolicyBuilderApiPolicyBuilderCreatePolicyRequest = {
+  
   policybuilderv3CreateUpdatePolicyRequest: {
     canOverrideName: true,
     policyObject: {
@@ -17751,9 +17465,8 @@ let body:.PolicyBuilderApiPolicyBuilderCreatePolicyRequest = {
   },
 };
 
-apiInstance.policyBuilderCreatePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderCreatePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17794,22 +17507,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest = {
-  // Array<string> | Policy sync entry id to delete from sync. (optional)
+const request: PolicyBuilderApiPolicyBuilderDeleteGdpSyncEntryRequest = {
+    // Policy sync entry id to delete from sync. (optional)
   syncIds: [
     "sync_ids_example",
   ],
 };
 
-apiInstance.policyBuilderDeleteGdpSyncEntry(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderDeleteGdpSyncEntry(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17850,22 +17562,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderDeletePoliciesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderDeletePoliciesRequest = {
-  // Array<string> | Policy ids. (optional)
+const request: PolicyBuilderApiPolicyBuilderDeletePoliciesRequest = {
+    // Policy ids. (optional)
   policyIds: [
     "policy_ids_example",
   ],
 };
 
-apiInstance.policyBuilderDeletePolicies(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderDeletePolicies(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17906,17 +17617,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.policyBuilderGetGdpPolicyMetaData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetGdpPolicyMetaData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -17954,17 +17663,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.policyBuilderGetPolicies(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicies(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18002,20 +17709,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetPolicyDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetPolicyDetailsRequest = {
-  // string | Policy id.
+const request: PolicyBuilderApiPolicyBuilderGetPolicyDetailsRequest = {
+    // Policy id.
   policyId: "policy_id_example",
 };
 
-apiInstance.policyBuilderGetPolicyDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicyDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18056,14 +17762,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest = {
-  // Policybuilderv3GetPolicyNamesFromRuleIDsRequest
+const request: PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest = {
+  
   policybuilderv3GetPolicyNamesFromRuleIDsRequest: {
     ruleIdsList: [
       "ruleIdsList_example",
@@ -18071,9 +17777,8 @@ let body:.PolicyBuilderApiPolicyBuilderGetPolicyNamesFromRuleIDsRequest = {
   },
 };
 
-apiInstance.policyBuilderGetPolicyNamesFromRuleIDs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicyNamesFromRuleIDs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18114,17 +17819,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.policyBuilderGetPolicySyncList(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicySyncList(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18162,22 +17865,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest = {
-  // string | Policy id of the requested policy
+const request: PolicyBuilderApiPolicyBuilderGetPolicyVersionRequest = {
+    // Policy id of the requested policy
   policyId: "policy_id_example",
-  // number | Requested version number of the policy
+    // Requested version number of the policy
   version: 1,
 };
 
-apiInstance.policyBuilderGetPolicyVersion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicyVersion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18219,20 +17921,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest = {
-  // string | Policy id of the requested policy
+const request: PolicyBuilderApiPolicyBuilderGetPolicyVersionsInfoRequest = {
+    // Policy id of the requested policy
   policyId: "policy_id_example",
 };
 
-apiInstance.policyBuilderGetPolicyVersionsInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetPolicyVersionsInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18273,24 +17974,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetReceiversRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetReceiversRequest = {
-  // Array<string> | Action id. (optional)
+const request: PolicyBuilderApiPolicyBuilderGetReceiversRequest = {
+    // Action id. (optional)
   actionId: [
     "action_id_example",
   ],
-  // boolean | Flag that indicates if cache needs to be validated. (optional)
+    // Flag that indicates if cache needs to be validated. (optional)
   validateCache: true,
 };
 
-apiInstance.policyBuilderGetReceivers(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetReceivers(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18332,20 +18032,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderGetRuleMetadataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderGetRuleMetadataRequest = {
-  // 'ACCESS' | 'EXCEPTION' | 'RESULT_SET' | Rule type integer to indicate rule type. (optional)
+const request: PolicyBuilderApiPolicyBuilderGetRuleMetadataRequest = {
+    // Rule type integer to indicate rule type. (optional)
   ruleType: "ACCESS",
 };
 
-apiInstance.policyBuilderGetRuleMetadata(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderGetRuleMetadata(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18386,14 +18085,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest = {
-  // Policybuilderv3InsertGdpPolicySyncRequest
+const request: PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest = {
+  
   policybuilderv3InsertGdpPolicySyncRequest: {
     gdpPolicies: [
       {
@@ -18405,9 +18104,8 @@ let body:.PolicyBuilderApiPolicyBuilderInsertGdpPolicyRequest = {
   },
 };
 
-apiInstance.policyBuilderInsertGdpPolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderInsertGdpPolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18448,16 +18146,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest = {
-  // string | ID of central manager.
+const request: PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Policybuilderv3InsertGdpPolicyMetaDataRequest
+  
   policybuilderv3InsertGdpPolicyMetaDataRequest: {
     centralManagerId: "centralManagerId_example",
     data: [
@@ -18472,9 +18170,8 @@ let body:.PolicyBuilderApiPolicyBuilderInsertGdpPolicyMetaDataRequest = {
   },
 };
 
-apiInstance.policyBuilderInsertGdpPolicyMetaData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderInsertGdpPolicyMetaData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18516,14 +18213,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderInstallPoliciesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderInstallPoliciesRequest = {
-  // Policybuilderv3InstallPoliciesRequest
+const request: PolicyBuilderApiPolicyBuilderInstallPoliciesRequest = {
+  
   policybuilderv3InstallPoliciesRequest: {
     performInstallation: true,
     policyList: [
@@ -18537,9 +18234,8 @@ let body:.PolicyBuilderApiPolicyBuilderInstallPoliciesRequest = {
   },
 };
 
-apiInstance.policyBuilderInstallPolicies(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderInstallPolicies(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18580,22 +18276,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderIntegrationCheckRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderIntegrationCheckRequest = {
-  // string | Integration Id to check if it is being used in policies.
+const request: PolicyBuilderApiPolicyBuilderIntegrationCheckRequest = {
+    // Integration Id to check if it is being used in policies.
   integrationId: "integration_id_example",
-  // string | Template Id to check if it is being used in policies. (optional)
+    // Template Id to check if it is being used in policies. (optional)
   templateId: "template_id_example",
 };
 
-apiInstance.policyBuilderIntegrationCheck(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderIntegrationCheck(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18637,22 +18332,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderPoliciesGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderPoliciesGroupsRequest = {
-  // Array<string> | Group ids to check if they are being used in policies. (optional)
+const request: PolicyBuilderApiPolicyBuilderPoliciesGroupsRequest = {
+    // Group ids to check if they are being used in policies. (optional)
   groupIds: [
     "group_ids_example",
   ],
 };
 
-apiInstance.policyBuilderPoliciesGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderPoliciesGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18693,14 +18387,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderRuleValidationRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderRuleValidationRequest = {
-  // Policybuilderv3GetRuleValidationRequest
+const request: PolicyBuilderApiPolicyBuilderRuleValidationRequest = {
+  
   policybuilderv3GetRuleValidationRequest: {
     rule: {
       actions: [
@@ -18788,9 +18482,8 @@ let body:.PolicyBuilderApiPolicyBuilderRuleValidationRequest = {
   },
 };
 
-apiInstance.policyBuilderRuleValidation(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderRuleValidation(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18831,25 +18524,24 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest = {
-  // string | ID of central manager.
+const request: PolicyBuilderApiPolicyBuilderStorePoliciesGdpRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Policybuilderv3StorePolicyGdpRequest
+  
   policybuilderv3StorePolicyGdpRequest: {
     centralManagerId: "centralManagerId_example",
     data: "data_example",
   },
 };
 
-apiInstance.policyBuilderStorePoliciesGdp(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderStorePoliciesGdp(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -18891,14 +18583,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, PolicyBuilderApi } from '';
+import type { PolicyBuilderApiPolicyBuilderUpdatePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .PolicyBuilderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new PolicyBuilderApi(configuration);
 
-let body:.PolicyBuilderApiPolicyBuilderUpdatePolicyRequest = {
-  // Policybuilderv3CreateUpdatePolicyRequest
+const request: PolicyBuilderApiPolicyBuilderUpdatePolicyRequest = {
+  
   policybuilderv3CreateUpdatePolicyRequest: {
     canOverrideName: true,
     policyObject: {
@@ -19008,9 +18700,8 @@ let body:.PolicyBuilderApiPolicyBuilderUpdatePolicyRequest = {
   },
 };
 
-apiInstance.policyBuilderUpdatePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.policyBuilderUpdatePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19065,14 +18756,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataLoaderApi } from '';
+import type { QSDataLoaderApiQSDataLoaderQSfileValidatorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataLoaderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataLoaderApi(configuration);
 
-let body:.QSDataLoaderApiQSDataLoaderQSfileValidatorRequest = {
-  // Qsdataloaderv3QSfileValidatorRequest
+const request: QSDataLoaderApiQSDataLoaderQSfileValidatorRequest = {
+  
   qsdataloaderv3QSfileValidatorRequest: {
     externalParam: {
       applicationFileName: "applicationFileName_example",
@@ -19091,9 +18782,8 @@ let body:.QSDataLoaderApiQSDataLoaderQSfileValidatorRequest = {
   },
 };
 
-apiInstance.qSDataLoaderQSfileValidator(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataLoaderQSfileValidator(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19134,20 +18824,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataLoaderApi } from '';
+import type { QSDataLoaderApiQSDataLoaderUploadSyntheticDataLoaderRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataLoaderApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataLoaderApi(configuration);
 
-let body:.QSDataLoaderApiQSDataLoaderUploadSyntheticDataLoaderRequest = {
-  // any
+const request: QSDataLoaderApiQSDataLoaderUploadSyntheticDataLoaderRequest = {
+  
   body: {},
 };
 
-apiInstance.qSDataLoaderUploadSyntheticDataLoader(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataLoaderUploadSyntheticDataLoader(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19204,17 +18893,15 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.qSDataManagerGetMasterData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataManagerGetMasterData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19252,17 +18939,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.qSDataManagerGetPluginData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataManagerGetPluginData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19300,14 +18985,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataManagerApi } from '';
+import type { QSDataManagerApiQSDataManagerRegisterScanRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataManagerApi(configuration);
 
-let body:.QSDataManagerApiQSDataManagerRegisterScanRequest = {
-  // Qspmdatamanagerv3ScanRequest
+const request: QSDataManagerApiQSDataManagerRegisterScanRequest = {
+  
   qspmdatamanagerv3ScanRequest: {
     pluginId: "pluginId_example",
     scanCbomId: "scanCbomId_example",
@@ -19320,9 +19005,8 @@ let body:.QSDataManagerApiQSDataManagerRegisterScanRequest = {
   },
 };
 
-apiInstance.qSDataManagerRegisterScan(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataManagerRegisterScan(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19363,20 +19047,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSDataManagerApi } from '';
+import type { QSDataManagerApiQSDataManagerRetrieveScanRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSDataManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSDataManagerApi(configuration);
 
-let body:.QSDataManagerApiQSDataManagerRetrieveScanRequest = {
-  // string
+const request: QSDataManagerApiQSDataManagerRetrieveScanRequest = {
+  
   scanId: "scan_id_example",
 };
 
-apiInstance.qSDataManagerRetrieveScan(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSDataManagerRetrieveScan(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19434,16 +19117,16 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPluginManagerApi } from '';
+import type { QSPluginManagerApiQSPluginManagerInvokeAppProvRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPluginManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPluginManagerApi(configuration);
 
-let body:.QSPluginManagerApiQSPluginManagerInvokeAppProvRequest = {
-  // string | Unique identifier for the plugin
+const request: QSPluginManagerApiQSPluginManagerInvokeAppProvRequest = {
+    // Unique identifier for the plugin
   pluginId: "plugin_id_example",
-  // Qspmpluginmanagerv3PluginRQ
+  
   qspmpluginmanagerv3PluginRQ: {
     externalParam: {
       "key": "key_example",
@@ -19458,9 +19141,8 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeAppProvRequest = {
   },
 };
 
-apiInstance.qSPluginManagerInvokeAppProv(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPluginManagerInvokeAppProv(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19502,16 +19184,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPluginManagerApi } from '';
+import type { QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPluginManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPluginManagerApi(configuration);
 
-let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request = {
-  // string | Unique identifier for the plugin
+const request: QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request = {
+    // Unique identifier for the plugin
   pluginId: "plugin_id_example",
-  // Qspmpluginmanagerv3PluginRQ
+  
   qspmpluginmanagerv3PluginRQ: {
     externalParam: {
       "key": "key_example",
@@ -19526,9 +19208,8 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV1Request = {
   },
 };
 
-apiInstance.qSPluginManagerInvokeExplorerV1(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPluginManagerInvokeExplorerV1(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19570,16 +19251,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPluginManagerApi } from '';
+import type { QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPluginManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPluginManagerApi(configuration);
 
-let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request = {
-  // string | Unique identifier for the plugin
+const request: QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request = {
+    // Unique identifier for the plugin
   pluginId: "plugin_id_example",
-  // Qspmpluginmanagerv3PluginRQ
+  
   qspmpluginmanagerv3PluginRQ: {
     externalParam: {
       "key": "key_example",
@@ -19594,9 +19275,8 @@ let body:.QSPluginManagerApiQSPluginManagerInvokeExplorerV2Request = {
   },
 };
 
-apiInstance.qSPluginManagerInvokeExplorerV2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPluginManagerInvokeExplorerV2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19638,16 +19318,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPluginManagerApi } from '';
+import type { QSPluginManagerApiQSPluginManagerInvokePluginRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPluginManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPluginManagerApi(configuration);
 
-let body:.QSPluginManagerApiQSPluginManagerInvokePluginRequest = {
-  // string | Unique identifier for the plugin
+const request: QSPluginManagerApiQSPluginManagerInvokePluginRequest = {
+    // Unique identifier for the plugin
   pluginId: "plugin_id_example",
-  // Qspmpluginmanagerv3PluginRQ
+  
   qspmpluginmanagerv3PluginRQ: {
     externalParam: {
       "key": "key_example",
@@ -19662,9 +19342,8 @@ let body:.QSPluginManagerApiQSPluginManagerInvokePluginRequest = {
   },
 };
 
-apiInstance.qSPluginManagerInvokePlugin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPluginManagerInvokePlugin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19706,16 +19385,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPluginManagerApi } from '';
+import type { QSPluginManagerApiQSPluginManagerInvokePolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPluginManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPluginManagerApi(configuration);
 
-let body:.QSPluginManagerApiQSPluginManagerInvokePolicyRequest = {
-  // string | Unique identifier for the plugin
+const request: QSPluginManagerApiQSPluginManagerInvokePolicyRequest = {
+    // Unique identifier for the plugin
   pluginId: "plugin_id_example",
-  // Qspmpluginmanagerv3PolicyPluginRQ
+  
   qspmpluginmanagerv3PolicyPluginRQ: {
     externalParam: {
       "key": "key_example",
@@ -19729,9 +19408,8 @@ let body:.QSPluginManagerApiQSPluginManagerInvokePolicyRequest = {
   },
 };
 
-apiInstance.qSPluginManagerInvokePolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPluginManagerInvokePolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19791,20 +19469,19 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
+import type { QSPolicyManagerApiQSPolicyManagerBatchStatusUpdateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:.QSPolicyManagerApiQSPolicyManagerBatchStatusUpdateRequest = {
-  // any
+const request: QSPolicyManagerApiQSPolicyManagerBatchStatusUpdateRequest = {
+  
   body: {},
 };
 
-apiInstance.qSPolicyManagerBatchStatusUpdate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerBatchStatusUpdate(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19845,14 +19522,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
+import type { QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:.QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest = {
-  // Qspmpolicymanagerv3UpdateConfigsRequest
+const request: QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest = {
+  
   qspmpolicymanagerv3UpdateConfigsRequest: {
     id: "id_example",
     options: {
@@ -19861,9 +19538,8 @@ let body:.QSPolicyManagerApiQSPolicyManagerConfigUpdateRequest = {
   },
 };
 
-apiInstance.qSPolicyManagerConfigUpdate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerConfigUpdate(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19904,14 +19580,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
+import type { QSPolicyManagerApiQSPolicyManagerCreateTicketRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:.QSPolicyManagerApiQSPolicyManagerCreateTicketRequest = {
-  // Qspmpolicymanagerv3CreateTicketRequest
+const request: QSPolicyManagerApiQSPolicyManagerCreateTicketRequest = {
+  
   qspmpolicymanagerv3CreateTicketRequest: {
     policyDatasetId: "policyDatasetId_example",
     policyType: "policyType_example",
@@ -19925,9 +19601,8 @@ let body:.QSPolicyManagerApiQSPolicyManagerCreateTicketRequest = {
   },
 };
 
-apiInstance.qSPolicyManagerCreateTicket(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerCreateTicket(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -19968,17 +19643,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.qSPolicyManagerFetchFilesfromBuckets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerFetchFilesfromBuckets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -20016,14 +19689,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
+import type { QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:.QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest = {
-  // Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest
+const request: QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest = {
+  
   qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest: {
     provisonIdList: [
       "provisonIdList_example",
@@ -20034,9 +19707,8 @@ let body:.QSPolicyManagerApiQSPolicyManagerProcessPolicyDimentionRecordsRequest 
   },
 };
 
-apiInstance.qSPolicyManagerProcessPolicyDimentionRecords(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerProcessPolicyDimentionRecords(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -20077,23 +19749,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, QSPolicyManagerApi } from '';
+import type { QSPolicyManagerApiQSPolicyManagerUpdateTicketStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .QSPolicyManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new QSPolicyManagerApi(configuration);
 
-let body:.QSPolicyManagerApiQSPolicyManagerUpdateTicketStatusRequest = {
-  // Qspmpolicymanagerv3UpdateTicketStatusRequest
+const request: QSPolicyManagerApiQSPolicyManagerUpdateTicketStatusRequest = {
+  
   qspmpolicymanagerv3UpdateTicketStatusRequest: {
     policyDatasetId: "policyDatasetId_example",
     policyType: "policyType_example",
   },
 };
 
-apiInstance.qSPolicyManagerUpdateTicketStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.qSPolicyManagerUpdateTicketStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -20155,14 +19826,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetActiveQueriesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetActiveQueriesRequest = {
-  // Reportsrunnerv3GetActiveQueriesRequest
+const request: ReportsRunnerApiReportsRunnerGetActiveQueriesRequest = {
+  
   reportsrunnerv3GetActiveQueriesRequest: {
     elapsedTime: 1,
     type: [
@@ -20171,9 +19842,8 @@ let body:.ReportsRunnerApiReportsRunnerGetActiveQueriesRequest = {
   },
 };
 
-apiInstance.reportsRunnerGetActiveQueries(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetActiveQueries(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -20214,16 +19884,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetAuditDataCountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetAuditDataCountRequest = {
-  // string | Optional: the ID of the Report we wish to run (e.g. 000000000000000000000905).
+const request: ReportsRunnerApiReportsRunnerGetAuditDataCountRequest = {
+    // Optional: the ID of the Report we wish to run (e.g. 000000000000000000000905).
   reportId: "report_id_example",
-  // Reportsrunnerv3GetAuditDataCountRequest
+  
   reportsrunnerv3GetAuditDataCountRequest: {
     jobId: "jobId_example",
     reportFilters: {
@@ -20290,9 +19960,8 @@ let body:.ReportsRunnerApiReportsRunnerGetAuditDataCountRequest = {
   },
 };
 
-apiInstance.reportsRunnerGetAuditDataCount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetAuditDataCount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -20334,14 +20003,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetChartDataRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetChartDataRequest = {
-  // Reportsrunnerv3GetChartDataRequest
+const request: ReportsRunnerApiReportsRunnerGetChartDataRequest = {
+  
   reportsrunnerv3GetChartDataRequest: {
     chartId: "chartId_example",
     chartSettings: {
@@ -20509,9 +20178,8 @@ let body:.ReportsRunnerApiReportsRunnerGetChartDataRequest = {
   },
 };
 
-apiInstance.reportsRunnerGetChartData(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetChartData(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -20552,14 +20220,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetChartDatav2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetChartDatav2Request = {
-  // Reportsrunnerv3GetChartDataRequestv2
+const request: ReportsRunnerApiReportsRunnerGetChartDatav2Request = {
+  
   reportsrunnerv3GetChartDataRequestv2: {
     chartId: "chartId_example",
     chartSettings: {
@@ -20728,9 +20396,8 @@ let body:.ReportsRunnerApiReportsRunnerGetChartDatav2Request = {
   },
 };
 
-apiInstance.reportsRunnerGetChartDatav2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetChartDatav2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -20771,14 +20438,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest = {
-  // Reportsrunnerv3GetReportColumnFacetRequest
+const request: ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest = {
+  
   reportsrunnerv3GetReportColumnFacetRequest: {
     dateRange: {
       endDate: "endDate_example",
@@ -20965,9 +20632,8 @@ let body:.ReportsRunnerApiReportsRunnerGetReportColumnFacetRequest = {
   },
 };
 
-apiInstance.reportsRunnerGetReportColumnFacet(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetReportColumnFacet(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -21008,14 +20674,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerGetReportDataCountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerGetReportDataCountRequest = {
-  // Reportsrunnerv3GetReportDataCountRequest
+const request: ReportsRunnerApiReportsRunnerGetReportDataCountRequest = {
+  
   reportsrunnerv3GetReportDataCountRequest: {
     dateRange: {
       endDate: "endDate_example",
@@ -21176,9 +20842,8 @@ let body:.ReportsRunnerApiReportsRunnerGetReportDataCountRequest = {
   },
 };
 
-apiInstance.reportsRunnerGetReportDataCount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerGetReportDataCount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -21219,16 +20884,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerRunAuditReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerRunAuditReportRequest = {
-  // string | The ID of the Report we wish to run (e.g. 000000000000000000000905).
+const request: ReportsRunnerApiReportsRunnerRunAuditReportRequest = {
+    // The ID of the Report we wish to run (e.g. 000000000000000000000905).
   reportId: "report_id_example",
-  // Reportsrunnerv3RunAuditReportRequest
+  
   reportsrunnerv3RunAuditReportRequest: {
     fetchSize: 1,
     headerName: "headerName_example",
@@ -21300,9 +20965,8 @@ let body:.ReportsRunnerApiReportsRunnerRunAuditReportRequest = {
   },
 };
 
-apiInstance.reportsRunnerRunAuditReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerRunAuditReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -21344,14 +21008,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerRunReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerRunReportRequest = {
-  // Reportsrunnerv3RunReportRequest
+const request: ReportsRunnerApiReportsRunnerRunReportRequest = {
+  
   reportsrunnerv3RunReportRequest: {
     calculateFacets: true,
     dateRange: {
@@ -21519,9 +21183,8 @@ let body:.ReportsRunnerApiReportsRunnerRunReportRequest = {
   },
 };
 
-apiInstance.reportsRunnerRunReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerRunReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -21562,14 +21225,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsRunnerApi } from '';
+import type { ReportsRunnerApiReportsRunnerStopQueryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsRunnerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsRunnerApi(configuration);
 
-let body:.ReportsRunnerApiReportsRunnerStopQueryRequest = {
-  // Reportsrunnerv3StopQueryRequest
+const request: ReportsRunnerApiReportsRunnerStopQueryRequest = {
+  
   reportsrunnerv3StopQueryRequest: {
     queryIds: [
       "queryIds_example",
@@ -21577,9 +21240,8 @@ let body:.ReportsRunnerApiReportsRunnerStopQueryRequest = {
   },
 };
 
-apiInstance.reportsRunnerStopQuery(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsRunnerStopQuery(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -21700,14 +21362,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateCategoryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateCategoryRequest = {
-  // Reportsv3CreateCategoryRequest
+const request: ReportsServiceApiReportsServiceCreateCategoryRequest = {
+  
   reportsv3CreateCategoryRequest: {
     category: {
       categoryDescription: "categoryDescription_example",
@@ -21727,9 +21389,8 @@ let body:.ReportsServiceApiReportsServiceCreateCategoryRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateCategory(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateCategory(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -21770,14 +21431,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateChartRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateChartRequest = {
-  // Reportsv3CreateChartRequest
+const request: ReportsServiceApiReportsServiceCreateChartRequest = {
+  
   reportsv3CreateChartRequest: {
     chartSettings: {
       chartId: "chartId_example",
@@ -21799,9 +21460,8 @@ let body:.ReportsServiceApiReportsServiceCreateChartRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateChart(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateChart(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -21842,22 +21502,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateChartTemplatev2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateChartTemplatev2Request = {
-  // Reportsv3CreateChartTemplatev2Request
+const request: ReportsServiceApiReportsServiceCreateChartTemplatev2Request = {
+  
   reportsv3CreateChartTemplatev2Request: {
     vegaDefinition: "vegaDefinition_example",
   },
 };
 
-apiInstance.reportsServiceCreateChartTemplatev2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateChartTemplatev2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -21898,14 +21557,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateChartv2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateChartv2Request = {
-  // Reportsv3CreateChartv2Request
+const request: ReportsServiceApiReportsServiceCreateChartv2Request = {
+  
   reportsv3CreateChartv2Request: {
     chartSettingsV2: {
       categorySequenceNumbers: [
@@ -21928,9 +21587,8 @@ let body:.ReportsServiceApiReportsServiceCreateChartv2Request = {
   },
 };
 
-apiInstance.reportsServiceCreateChartv2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateChartv2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -21971,14 +21629,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateControlRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateControlRequest = {
-  // Reportsv3CreateControlRequest
+const request: ReportsServiceApiReportsServiceCreateControlRequest = {
+  
   reportsv3CreateControlRequest: {
     control: {
       artifacts: [
@@ -22014,9 +21672,8 @@ let body:.ReportsServiceApiReportsServiceCreateControlRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateControl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateControl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22057,14 +21714,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest = {
-  // Reportsv3CreateFieldsByCategoryRequest
+const request: ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest = {
+  
   reportsv3CreateFieldsByCategoryRequest: {
     fields: [
       {
@@ -22085,9 +21742,8 @@ let body:.ReportsServiceApiReportsServiceCreateFieldsByCategoryRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateFieldsByCategory(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateFieldsByCategory(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22128,14 +21784,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateGradeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateGradeRequest = {
-  // Reportsv3CreateGradeRequest
+const request: ReportsServiceApiReportsServiceCreateGradeRequest = {
+  
   reportsv3CreateGradeRequest: {
     grade: {
       controlId: 1,
@@ -22164,9 +21820,8 @@ let body:.ReportsServiceApiReportsServiceCreateGradeRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateGrade(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateGrade(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22207,14 +21862,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateJoinRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateJoinRequest = {
-  // Reportsv3CreateJoinRequest
+const request: ReportsServiceApiReportsServiceCreateJoinRequest = {
+  
   reportsv3CreateJoinRequest: {
     joinDefinition: {
       categoryId: "categoryId_example",
@@ -22233,9 +21888,8 @@ let body:.ReportsServiceApiReportsServiceCreateJoinRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateJoin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateJoin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22276,14 +21930,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateMeasureRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateMeasureRequest = {
-  // Reportsv3CreateMeasureRequest
+const request: ReportsServiceApiReportsServiceCreateMeasureRequest = {
+  
   reportsv3CreateMeasureRequest: {
     measure: {
       column: {
@@ -22296,9 +21950,8 @@ let body:.ReportsServiceApiReportsServiceCreateMeasureRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateMeasure(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateMeasure(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22339,14 +21992,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateMetricRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateMetricRequest = {
-  // Reportsv3CreateMetricRequest
+const request: ReportsServiceApiReportsServiceCreateMetricRequest = {
+  
   reportsv3CreateMetricRequest: {
     metric: {
       column: {
@@ -22362,9 +22015,8 @@ let body:.ReportsServiceApiReportsServiceCreateMetricRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateMetric(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateMetric(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22405,14 +22057,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateProgramRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateProgramRequest = {
-  // Reportsv3CreateProgramRequest
+const request: ReportsServiceApiReportsServiceCreateProgramRequest = {
+  
   reportsv3CreateProgramRequest: {
     program: {
       createUserId: "createUserId_example",
@@ -22428,9 +22080,8 @@ let body:.ReportsServiceApiReportsServiceCreateProgramRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateProgram(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateProgram(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22471,14 +22122,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateReportRequest = {
-  // Reportsv3CreateReportRequest
+const request: ReportsServiceApiReportsServiceCreateReportRequest = {
+  
   reportsv3CreateReportRequest: {
     reportDefinition: {
       categoryId: "categoryId_example",
@@ -22616,9 +22267,8 @@ let body:.ReportsServiceApiReportsServiceCreateReportRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22659,14 +22309,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateRequirementRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateRequirementRequest = {
-  // Reportsv3CreateRequirementRequest
+const request: ReportsServiceApiReportsServiceCreateRequirementRequest = {
+  
   reportsv3CreateRequirementRequest: {
     requirement: {
       controlId: 1,
@@ -22685,9 +22335,8 @@ let body:.ReportsServiceApiReportsServiceCreateRequirementRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateRequirement(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateRequirement(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22728,14 +22377,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceCreateVariantRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceCreateVariantRequest = {
-  // Reportsv3CreateVariantRequest
+const request: ReportsServiceApiReportsServiceCreateVariantRequest = {
+  
   reportsv3CreateVariantRequest: {
     headerId: "headerId_example",
     rules: [
@@ -22751,9 +22400,8 @@ let body:.ReportsServiceApiReportsServiceCreateVariantRequest = {
   },
 };
 
-apiInstance.reportsServiceCreateVariant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceCreateVariant(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22794,22 +22442,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteCategoryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteCategoryRequest = {
-  // string | category id. (optional)
+const request: ReportsServiceApiReportsServiceDeleteCategoryRequest = {
+    // category id. (optional)
   categoryId: "category_id_example",
-  // string | table name. (optional)
+    // table name. (optional)
   tableName: "table_name_example",
 };
 
-apiInstance.reportsServiceDeleteCategory(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteCategory(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22851,20 +22498,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteChartRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteChartRequest = {
-  // string | The id of the chart to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteChartRequest = {
+    // The id of the chart to be deleted.
   chartId: "chart_id_example",
 };
 
-apiInstance.reportsServiceDeleteChart(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteChart(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22905,20 +22551,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteChartTemplatev2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteChartTemplatev2Request = {
-  // string | Unique template ID.
+const request: ReportsServiceApiReportsServiceDeleteChartTemplatev2Request = {
+    // Unique template ID.
   templateId: "template_id_example",
 };
 
-apiInstance.reportsServiceDeleteChartTemplatev2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteChartTemplatev2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -22959,20 +22604,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteChartv2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteChartv2Request = {
-  // string | The ID of the chart for deletion.
+const request: ReportsServiceApiReportsServiceDeleteChartv2Request = {
+    // The ID of the chart for deletion.
   chartId: "chart_id_example",
 };
 
-apiInstance.reportsServiceDeleteChartv2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteChartv2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23013,24 +22657,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteControlRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteControlRequest = {
-  // number | The ID of the control to delete
+const request: ReportsServiceApiReportsServiceDeleteControlRequest = {
+    // The ID of the control to delete
   controlId: 1,
-  // Reportsv3DeleteControlRequest
+  
   reportsv3DeleteControlRequest: {
     controlId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteControl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteControl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23072,24 +22715,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest = {
-  // Array<string> | Header ids. (optional)
+const request: ReportsServiceApiReportsServiceDeleteFieldsByCategoryRequest = {
+    // Header ids. (optional)
   headerIds: [
     "header_ids_example",
   ],
-  // string | table name. (optional)
+    // table name. (optional)
   tableName: "table_name_example",
 };
 
-apiInstance.reportsServiceDeleteFieldsByCategory(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteFieldsByCategory(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23131,24 +22773,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteGradeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteGradeRequest = {
-  // number | The id of the grade to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteGradeRequest = {
+    // The id of the grade to be deleted.
   gradeId: 1,
-  // Reportsv3DeleteGradeRequest
+  
   reportsv3DeleteGradeRequest: {
     gradeId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteGrade(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteGrade(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23190,20 +22831,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteJoinRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteJoinRequest = {
-  // string | The id of the join to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteJoinRequest = {
+    // The id of the join to be deleted.
   joinId: "join_id_example",
 };
 
-apiInstance.reportsServiceDeleteJoin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteJoin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23244,24 +22884,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteMeasureRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteMeasureRequest = {
-  // number | The id of the measure to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteMeasureRequest = {
+    // The id of the measure to be deleted.
   measureId: 1,
-  // Reportsv3DeleteMeasureRequest
+  
   reportsv3DeleteMeasureRequest: {
     measureId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteMeasure(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteMeasure(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23303,24 +22942,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteMetricRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteMetricRequest = {
-  // number | The id of the metric to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteMetricRequest = {
+    // The id of the metric to be deleted.
   metricId: 1,
-  // Reportsv3DeleteMetricRequest
+  
   reportsv3DeleteMetricRequest: {
     metricId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteMetric(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteMetric(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23362,24 +23000,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteProgramRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteProgramRequest = {
-  // number | The ID of the program to delete
+const request: ReportsServiceApiReportsServiceDeleteProgramRequest = {
+    // The ID of the program to delete
   programId: 1,
-  // Reportsv3DeleteProgramRequest
+  
   reportsv3DeleteProgramRequest: {
     programId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteProgram(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteProgram(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23421,20 +23058,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteReportRequest = {
-  // string | The id of the Report to be deleted.
+const request: ReportsServiceApiReportsServiceDeleteReportRequest = {
+    // The id of the Report to be deleted.
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceDeleteReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23475,24 +23111,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteRequirementRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteRequirementRequest = {
-  // number | The requirement to delete\'s ID
+const request: ReportsServiceApiReportsServiceDeleteRequirementRequest = {
+    // The requirement to delete\'s ID
   requirementId: 1,
-  // Reportsv3DeleteRequirementRequest
+  
   reportsv3DeleteRequirementRequest: {
     requirementId: 1,
   },
 };
 
-apiInstance.reportsServiceDeleteRequirement(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteRequirement(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23534,20 +23169,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceDeleteVariantRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceDeleteVariantRequest = {
-  // string | The id of the variant to delete
+const request: ReportsServiceApiReportsServiceDeleteVariantRequest = {
+    // The id of the variant to delete
   variantId: "variant_id_example",
 };
 
-apiInstance.reportsServiceDeleteVariant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceDeleteVariant(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23588,20 +23222,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetCategoriesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetCategoriesRequest = {
-  // string | Report ID. (optional)
+const request: ReportsServiceApiReportsServiceGetCategoriesRequest = {
+    // Report ID. (optional)
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceGetCategories(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetCategories(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23642,22 +23275,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetChartSettingsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetChartSettingsRequest = {
-  // string | Unique Chart ID. (optional)
+const request: ReportsServiceApiReportsServiceGetChartSettingsRequest = {
+    // Unique Chart ID. (optional)
   chartId: "chart_id_example",
-  // string | Unique Report ID. (optional)
+    // Unique Report ID. (optional)
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceGetChartSettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetChartSettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23699,22 +23331,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetChartSettingsv2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetChartSettingsv2Request = {
-  // string | Unique Chart ID. (optional)
+const request: ReportsServiceApiReportsServiceGetChartSettingsv2Request = {
+    // Unique Chart ID. (optional)
   chartId: "chart_id_example",
-  // string | Unique Report ID. (optional)
+    // Unique Report ID. (optional)
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceGetChartSettingsv2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetChartSettingsv2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23756,17 +23387,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetChartTemplatesv2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetChartTemplatesv2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23804,17 +23433,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetControls(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetControls(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23852,22 +23479,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest = {
-  // Array<string> | Category IDs. (optional)
+const request: ReportsServiceApiReportsServiceGetFieldsByCategoriesRequest = {
+    // Category IDs. (optional)
   categoryIds: [
     "category_ids_example",
   ],
 };
 
-apiInstance.reportsServiceGetFieldsByCategories(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetFieldsByCategories(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23908,24 +23534,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetFieldsByCategoryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetFieldsByCategoryRequest = {
-  // string | Category ID. (optional)
+const request: ReportsServiceApiReportsServiceGetFieldsByCategoryRequest = {
+    // Category ID. (optional)
   categoryId: "category_id_example",
-  // string | Report ID. (optional)
+    // Report ID. (optional)
   reportId: "report_id_example",
-  // string | optional table name parameter. (optional)
+    // optional table name parameter. (optional)
   tableName: "table_name_example",
 };
 
-apiInstance.reportsServiceGetFieldsByCategory(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetFieldsByCategory(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -23968,17 +23593,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetGrades(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetGrades(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24016,20 +23639,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetJoinsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetJoinsRequest = {
-  // string | Category ID (Optional). (optional)
+const request: ReportsServiceApiReportsServiceGetJoinsRequest = {
+    // Category ID (Optional). (optional)
   categoryId: "category_id_example",
 };
 
-apiInstance.reportsServiceGetJoins(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetJoins(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24070,17 +23692,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetMeasures(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetMeasures(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24118,17 +23738,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetMetrics(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetMetrics(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24166,17 +23784,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetPrograms(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetPrograms(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24214,14 +23830,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest = {
-  // Reportsv3GetQueryByReportDefinitionRequest
+const request: ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest = {
+  
   reportsv3GetQueryByReportDefinitionRequest: {
     addGroupLiteral: "addGroupLiteral_example",
     addJobIdLiteral: "addJobIdLiteral_example",
@@ -24407,9 +24023,8 @@ let body:.ReportsServiceApiReportsServiceGetQueryByReportDefinitionRequest = {
   },
 };
 
-apiInstance.reportsServiceGetQueryByReportDefinition(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetQueryByReportDefinition(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24450,14 +24065,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetQueryByReportIDRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetQueryByReportIDRequest = {
-  // Reportsv3GetQueryByReportIDRequest
+const request: ReportsServiceApiReportsServiceGetQueryByReportIDRequest = {
+  
   reportsv3GetQueryByReportIDRequest: {
     addGroupLiteral: "addGroupLiteral_example",
     addJobIdLiteral: "addJobIdLiteral_example",
@@ -24511,9 +24126,8 @@ let body:.ReportsServiceApiReportsServiceGetQueryByReportIDRequest = {
   },
 };
 
-apiInstance.reportsServiceGetQueryByReportID(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetQueryByReportID(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24554,20 +24168,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportDefinitionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportDefinitionRequest = {
-  // string | Unique Report ID.
+const request: ReportsServiceApiReportsServiceGetReportDefinitionRequest = {
+    // Unique Report ID.
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceGetReportDefinition(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportDefinition(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24608,22 +24221,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportGroupsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportGroupsRequest = {
-  // Array<string> | List of group IDs that should be checked for usage in each report. (optional)
+const request: ReportsServiceApiReportsServiceGetReportGroupsRequest = {
+    // List of group IDs that should be checked for usage in each report. (optional)
   groups: [
     "groups_example",
   ],
 };
 
-apiInstance.reportsServiceGetReportGroups(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportGroups(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24664,20 +24276,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportSynopsisRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportSynopsisRequest = {
-  // string | Unique Report ID.
+const request: ReportsServiceApiReportsServiceGetReportSynopsisRequest = {
+    // Unique Report ID.
   reportId: "report_id_example",
 };
 
-apiInstance.reportsServiceGetReportSynopsis(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportSynopsis(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24718,24 +24329,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest = {
-  // string | Category ID parameter. (optional)
+const request: ReportsServiceApiReportsServiceGetReportTimestampHeaderRequest = {
+    // Category ID parameter. (optional)
   categoryId: "category_id_example",
-  // Array<string> | List of all header tables. (optional)
+    // List of all header tables. (optional)
   tableNames: [
     "table_names_example",
   ],
 };
 
-apiInstance.reportsServiceGetReportTimestampHeader(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportTimestampHeader(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24777,22 +24387,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportsRequest = {
-  // string | Optional Category ID parameter. (optional)
+const request: ReportsServiceApiReportsServiceGetReportsRequest = {
+    // Optional Category ID parameter. (optional)
   categoryId: "category_id_example",
-  // string | Optional table name parameter. (optional)
+    // Optional table name parameter. (optional)
   tableName: "table_name_example",
 };
 
-apiInstance.reportsServiceGetReports(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReports(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24834,20 +24443,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetReportsForJoinRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetReportsForJoinRequest = {
-  // string
+const request: ReportsServiceApiReportsServiceGetReportsForJoinRequest = {
+  
   joinId: "join_id_example",
 };
 
-apiInstance.reportsServiceGetReportsForJoin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportsForJoin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24888,17 +24496,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetReportsTags(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetReportsTags(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24936,17 +24542,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetRequirements(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetRequirements(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -24984,20 +24588,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceGetVariantRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceGetVariantRequest = {
-  // string | The variant id
+const request: ReportsServiceApiReportsServiceGetVariantRequest = {
+    // The variant id
   variantId: "variant_id_example",
 };
 
-apiInstance.reportsServiceGetVariant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetVariant(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25038,17 +24641,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.reportsServiceGetVariants(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceGetVariants(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25086,16 +24687,16 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServicePartialChartUpdateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServicePartialChartUpdateRequest = {
-  // string | Unique chart ID.
+const request: ReportsServiceApiReportsServicePartialChartUpdateRequest = {
+    // Unique chart ID.
   chartId: "chart_id_example",
-  // Reportsv3PartialChartUpdateRequest
+  
   reportsv3PartialChartUpdateRequest: {
     chartId: "chartId_example",
     chartTitle: "chartTitle_example",
@@ -25108,9 +24709,8 @@ let body:.ReportsServiceApiReportsServicePartialChartUpdateRequest = {
   },
 };
 
-apiInstance.reportsServicePartialChartUpdate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServicePartialChartUpdate(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25152,16 +24752,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServicePartialReportUpdateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServicePartialReportUpdateRequest = {
-  // string | Unique Report ID.
+const request: ReportsServiceApiReportsServicePartialReportUpdateRequest = {
+    // Unique Report ID.
   reportId: "report_id_example",
-  // Reportsv3PartialReportUpdateRequest
+  
   reportsv3PartialReportUpdateRequest: {
     defaultChartExpanded: true,
     isHidden: true,
@@ -25183,9 +24783,8 @@ let body:.ReportsServiceApiReportsServicePartialReportUpdateRequest = {
   },
 };
 
-apiInstance.reportsServicePartialReportUpdate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServicePartialReportUpdate(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25227,14 +24826,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceRunGradesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceRunGradesRequest = {
-  // Reportsv3RunGradesRequest
+const request: ReportsServiceApiReportsServiceRunGradesRequest = {
+  
   reportsv3RunGradesRequest: {
     fromDate: "fromDate_example",
     gradeId: 1,
@@ -25242,9 +24841,8 @@ let body:.ReportsServiceApiReportsServiceRunGradesRequest = {
   },
 };
 
-apiInstance.reportsServiceRunGrades(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceRunGrades(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25285,14 +24883,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceRunVariantOperationRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceRunVariantOperationRequest = {
-  // Reportsv3RunVariantOperationRequest
+const request: ReportsServiceApiReportsServiceRunVariantOperationRequest = {
+  
   reportsv3RunVariantOperationRequest: {
     input: "input_example",
     rules: [
@@ -25308,9 +24906,8 @@ let body:.ReportsServiceApiReportsServiceRunVariantOperationRequest = {
   },
 };
 
-apiInstance.reportsServiceRunVariantOperation(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceRunVariantOperation(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25351,14 +24948,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceTransposeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceTransposeRequest = {
-  // Reportsv3TransposeRequest
+const request: ReportsServiceApiReportsServiceTransposeRequest = {
+  
   reportsv3TransposeRequest: {
     constructIds: [
       "constructIds_example",
@@ -25377,9 +24974,8 @@ let body:.ReportsServiceApiReportsServiceTransposeRequest = {
   },
 };
 
-apiInstance.reportsServiceTranspose(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceTranspose(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25420,16 +25016,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateChartRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateChartRequest = {
-  // string | Unique chart ID.
+const request: ReportsServiceApiReportsServiceUpdateChartRequest = {
+    // Unique chart ID.
   chartId: "chart_id_example",
-  // Reportsv3UpdateChartRequest
+  
   reportsv3UpdateChartRequest: {
     chartId: "chartId_example",
     chartSettings: {
@@ -25452,9 +25048,8 @@ let body:.ReportsServiceApiReportsServiceUpdateChartRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateChart(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateChart(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25496,16 +25091,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateChartv2Request } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateChartv2Request = {
-  // string | Unique chart ID.
+const request: ReportsServiceApiReportsServiceUpdateChartv2Request = {
+    // Unique chart ID.
   chartId: "chart_id_example",
-  // Reportsv3UpdateChartv2Request
+  
   reportsv3UpdateChartv2Request: {
     chartId: "chartId_example",
     chartSettingsV2: {
@@ -25536,9 +25131,8 @@ let body:.ReportsServiceApiReportsServiceUpdateChartv2Request = {
   },
 };
 
-apiInstance.reportsServiceUpdateChartv2(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateChartv2(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25580,16 +25174,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateControlRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateControlRequest = {
-  // number | The id of the control that was updated.
+const request: ReportsServiceApiReportsServiceUpdateControlRequest = {
+    // The id of the control that was updated.
   controlId: 1,
-  // Reportsv3UpdateControlRequest
+  
   reportsv3UpdateControlRequest: {
     control: {
       artifacts: [
@@ -25626,9 +25220,8 @@ let body:.ReportsServiceApiReportsServiceUpdateControlRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateControl(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateControl(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25670,16 +25263,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateGradeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateGradeRequest = {
-  // number | The id of the grade that was updated.
+const request: ReportsServiceApiReportsServiceUpdateGradeRequest = {
+    // The id of the grade that was updated.
   gradeId: 1,
-  // Reportsv3UpdateGradeRequest
+  
   reportsv3UpdateGradeRequest: {
     grade: {
       controlId: 1,
@@ -25709,9 +25302,8 @@ let body:.ReportsServiceApiReportsServiceUpdateGradeRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateGrade(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateGrade(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25753,16 +25345,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateJoinRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateJoinRequest = {
-  // string | Unique join ID.
+const request: ReportsServiceApiReportsServiceUpdateJoinRequest = {
+    // Unique join ID.
   joinId: "join_id_example",
-  // Reportsv3UpdateJoinRequest
+  
   reportsv3UpdateJoinRequest: {
     joinDef: {
       categoryId: "categoryId_example",
@@ -25782,9 +25374,8 @@ let body:.ReportsServiceApiReportsServiceUpdateJoinRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateJoin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateJoin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25826,16 +25417,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateMeasureRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateMeasureRequest = {
-  // number | The id of the measure that was updated.
+const request: ReportsServiceApiReportsServiceUpdateMeasureRequest = {
+    // The id of the measure that was updated.
   measureId: 1,
-  // Reportsv3UpdateMeasureRequest
+  
   reportsv3UpdateMeasureRequest: {
     measure: {
       column: {
@@ -25849,9 +25440,8 @@ let body:.ReportsServiceApiReportsServiceUpdateMeasureRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateMeasure(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateMeasure(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25893,16 +25483,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateMetricRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateMetricRequest = {
-  // number | The id of the metric that was updated.
+const request: ReportsServiceApiReportsServiceUpdateMetricRequest = {
+    // The id of the metric that was updated.
   metricId: 1,
-  // Reportsv3UpdateMetricRequest
+  
   reportsv3UpdateMetricRequest: {
     metric: {
       column: {
@@ -25919,9 +25509,8 @@ let body:.ReportsServiceApiReportsServiceUpdateMetricRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateMetric(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateMetric(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -25963,16 +25552,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateProgramRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateProgramRequest = {
-  // number | The id of the programs that was updated.
+const request: ReportsServiceApiReportsServiceUpdateProgramRequest = {
+    // The id of the programs that was updated.
   programId: 1,
-  // Reportsv3UpdateProgramRequest
+  
   reportsv3UpdateProgramRequest: {
     program: {
       createUserId: "createUserId_example",
@@ -25989,9 +25578,8 @@ let body:.ReportsServiceApiReportsServiceUpdateProgramRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateProgram(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateProgram(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26033,16 +25621,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateReportRequest = {
-  // string | Unique Report ID.
+const request: ReportsServiceApiReportsServiceUpdateReportRequest = {
+    // Unique Report ID.
   reportId: "report_id_example",
-  // Reportsv3UpdateReportRequest
+  
   reportsv3UpdateReportRequest: {
     chartSettings: {
       chartId: "chartId_example",
@@ -26198,9 +25786,8 @@ let body:.ReportsServiceApiReportsServiceUpdateReportRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26242,16 +25829,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateRequirementRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateRequirementRequest = {
-  // number | The id of the requirements that was updated.
+const request: ReportsServiceApiReportsServiceUpdateRequirementRequest = {
+    // The id of the requirements that was updated.
   requirementId: 1,
-  // Reportsv3UpdateRequirementRequest
+  
   reportsv3UpdateRequirementRequest: {
     requirement: {
       controlId: 1,
@@ -26271,9 +25858,8 @@ let body:.ReportsServiceApiReportsServiceUpdateRequirementRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateRequirement(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateRequirement(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26315,16 +25901,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ReportsServiceApi } from '';
+import type { ReportsServiceApiReportsServiceUpdateVariantOverrideRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ReportsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ReportsServiceApi(configuration);
 
-let body:.ReportsServiceApiReportsServiceUpdateVariantOverrideRequest = {
-  // string | The variant id
+const request: ReportsServiceApiReportsServiceUpdateVariantOverrideRequest = {
+    // The variant id
   variantId: "variant_id_example",
-  // Reportsv3UpdateVariantOverrideRequest
+  
   reportsv3UpdateVariantOverrideRequest: {
     key: "key_example",
     values: {
@@ -26334,9 +25920,8 @@ let body:.ReportsServiceApiReportsServiceUpdateVariantOverrideRequest = {
   },
 };
 
-apiInstance.reportsServiceUpdateVariantOverride(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.reportsServiceUpdateVariantOverride(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26406,22 +25991,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventFeedbackRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventFeedbackRequest = {
-  // Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventFeedbackRequest = {
+  
   riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest: {
     action: "UNDEFINED_ACTION_TYPE",
   },
 };
 
-apiInstance.riskAnalyticsControllerEnableDisableRiskEventFeedback(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerEnableDisableRiskEventFeedback(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26462,22 +26046,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventProcessRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventProcessRequest = {
-  // Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventProcessRequest = {
+  
   riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest: {
     action: "UNDEFINED_ACTION_TYPE",
   },
 };
 
-apiInstance.riskAnalyticsControllerEnableDisableRiskEventProcess(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerEnableDisableRiskEventProcess(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26518,17 +26101,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.riskAnalyticsControllerGetAllClassificationsList(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetAllClassificationsList(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26566,20 +26147,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventClassificationsListRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventClassificationsListRequest = {
-  // number | Risk id
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventClassificationsListRequest = {
+    // Risk id
   riskId: 1,
 };
 
-apiInstance.riskAnalyticsControllerGetRiskEventClassificationsList(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventClassificationsList(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26620,24 +26200,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDataForSummarizationRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDataForSummarizationRequest = {
-  // number | Risk ID
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDataForSummarizationRequest = {
+    // Risk ID
   riskId: 1,
-  // boolean | Indicates whether to include indicators in the response or not. (optional)
+    // Indicates whether to include indicators in the response or not. (optional)
   includeIndicators: true,
-  // number | Max number of hours to get for the risk. (optional)
+    // Max number of hours to get for the risk. (optional)
   numFindingsLimit: 1,
 };
 
-apiInstance.riskAnalyticsControllerGetRiskEventDataForSummarization(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventDataForSummarization(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26680,20 +26259,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDetailsRequest = {
-  // number | Risk id.
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDetailsRequest = {
+    // Risk id.
   riskId: 1,
 };
 
-apiInstance.riskAnalyticsControllerGetRiskEventDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26734,17 +26312,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.riskAnalyticsControllerGetRiskEventProcessStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventProcessStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26782,38 +26358,37 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRowRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRowRequest = {
-  // 'UNDEFINED_STATUS' | 'OPENED' | 'CLOSED' | 'DELEGATED' | 'FOLLOWUP' | Status to retrieve only the status events, blank to retrieve all. (optional)
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRowRequest = {
+    // Status to retrieve only the status events, blank to retrieve all. (optional)
   status: "UNDEFINED_STATUS",
-  // Date | The API retrieves risk events that were open in a time range. date_from defines the start of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
+    // The API retrieves risk events that were open in a time range. date_from defines the start of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
   dateFrom: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The API retrieves risk events that were open in a time range. date_to defines the end of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
+    // The API retrieves risk events that were open in a time range. date_to defines the end of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
   dateTo: new Date('1970-01-01T00:00:00.00Z'),
-  // 'UNDEFINED_PIVOT_TYPE' | 'DATABASE' | 'DB_USER' | 'OS_USER' | 'GLOBAL' | Pivot type - enum. (optional)
+    // Pivot type - enum. (optional)
   pivotType: "UNDEFINED_PIVOT_TYPE",
-  // string | Pivot id -  all pivot fields separated by semicolon. (optional)
+    // Pivot id -  all pivot fields separated by semicolon. (optional)
   pivotId: "pivot.id_example",
-  // string | Optional db_user - if pivot is db user. (optional)
+    // Optional db_user - if pivot is db user. (optional)
   pivotDbUser: "pivot.db_user_example",
-  // string | Optional database - if pivot is db user / database. (optional)
+    // Optional database - if pivot is db user / database. (optional)
   pivotDatabase: "pivot.database_example",
-  // string | Optional server_ip - if pivot is db user / database. (optional)
+    // Optional server_ip - if pivot is db user / database. (optional)
   pivotServerIp: "pivot.server_ip_example",
-  // string | Optional os_user - if pivot is os user. (optional)
+    // Optional os_user - if pivot is os user. (optional)
   pivotOsUser: "pivot.os_user_example",
-  // 'UNDEFINED' | 'DATABASE_NAME' | 'SERVICE_NAME' | Optional database_source_field (values database name/service name depends on the server type) - if pivot is db user / database. (optional)
+    // Optional database_source_field (values database name/service name depends on the server type) - if pivot is db user / database. (optional)
   pivotDatabaseSourceField: "UNDEFINED",
 };
 
-apiInstance.riskAnalyticsControllerGetRiskEventRow(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventRow(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26863,20 +26438,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsRequest = {
-  // number | Risk ID
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsRequest = {
+    // Risk ID
   riskId: 1,
 };
 
-apiInstance.riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26917,17 +26491,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.riskAnalyticsControllerGetRiskFeedback(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskFeedback(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -26965,22 +26537,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskObservationDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskObservationDetailsRequest = {
-  // number | Lead feature id. (optional)
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskObservationDetailsRequest = {
+    // Lead feature id. (optional)
   leadFeatureId: 1,
-  // 'UNDEFINED_OBSERVATION_TYPE' | 'ACTIVITY' | 'EXCEPTION' | 'VIOLATION' | 'OUTLIER' | 'ANOMALY' | Observation type. (optional)
+    // Observation type. (optional)
   observationType: "UNDEFINED_OBSERVATION_TYPE",
 };
 
-apiInstance.riskAnalyticsControllerGetRiskObservationDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskObservationDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27022,17 +26593,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.riskAnalyticsControllerGetUserUISettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetUserUISettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27070,14 +26639,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningRequest = {
-  // Riskanalyticscontrollerv3RiskEventTuningRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningRequest = {
+  
   riskanalyticscontrollerv3RiskEventTuningRequest: {
     excludedItems: [
       {
@@ -27088,9 +26657,8 @@ let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningReques
   },
 };
 
-apiInstance.riskAnalyticsControllerRiskEventTuning(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerRiskEventTuning(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27131,14 +26699,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusRequest = {
-  // Riskanalyticscontrollerv3SetRiskEventStatusRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusRequest = {
+  
   riskanalyticscontrollerv3SetRiskEventStatusRequest: {
     justification: "justification_example",
     riskIds: [
@@ -27148,9 +26716,8 @@ let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusReq
   },
 };
 
-apiInstance.riskAnalyticsControllerSetRiskEventStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerSetRiskEventStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27191,14 +26758,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequest = {
-  // Riskanalyticscontrollerv3SetUserUISettingsRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequest = {
+  
   riskanalyticscontrollerv3SetUserUISettingsRequest: {
     userUiSettings: {
       cardSettings: [
@@ -27226,9 +26793,8 @@ let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequ
   },
 };
 
-apiInstance.riskAnalyticsControllerSetUserUISettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerSetUserUISettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27269,14 +26835,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackRequest = {
-  // Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackRequest = {
+  
   riskanalyticscontrollerv3UpdateRiskFeedbackRequest: {
     comment: "comment_example",
     feedbackClassificationKey: "feedbackClassificationKey_example",
@@ -27287,9 +26853,8 @@ let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackReq
   },
 };
 
-apiInstance.riskAnalyticsControllerUpdateRiskFeedback(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerUpdateRiskFeedback(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27344,22 +26909,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsDataProcessorApi } from '';
+import type { RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskContextRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsDataProcessorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsDataProcessorApi(configuration);
 
-let body:.RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskContextRequest = {
-  // number | Risk id.
+const request: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskContextRequest = {
+    // Risk id.
   riskId: 1,
-  // string | Timezone in IANA format. (optional)
+    // Timezone in IANA format. (optional)
   timezone: "timezone_example",
 };
 
-apiInstance.riskAnalyticsDataProcessorGetRiskContext(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsDataProcessorGetRiskContext(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27401,20 +26965,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsDataProcessorApi } from '';
+import type { RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskPredefinedQuestionsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsDataProcessorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsDataProcessorApi(configuration);
 
-let body:.RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskPredefinedQuestionsRequest = {
-  // number | Risk id.
+const request: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskPredefinedQuestionsRequest = {
+    // Risk id.
   riskId: 1,
 };
 
-apiInstance.riskAnalyticsDataProcessorGetRiskPredefinedQuestions(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsDataProcessorGetRiskPredefinedQuestions(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27469,17 +27032,15 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsEngineApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsEngineApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.riskAnalyticsEngineGetLeadGeneratorConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsEngineGetLeadGeneratorConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27517,14 +27078,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsEngineApi } from '';
+import type { RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsEngineApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsEngineApi(configuration);
 
-let body:.RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequest = {
-  // Riskanalyticsenginev3UpdateLeadGeneratorConfigRequest
+const request: RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequest = {
+  
   riskanalyticsenginev3UpdateLeadGeneratorConfigRequest: {
     config: {
       isActive: true,
@@ -27539,9 +27100,8 @@ let body:.RiskAnalyticsEngineApiRiskAnalyticsEngineUpdateLeadGeneratorConfigRequ
   },
 };
 
-apiInstance.riskAnalyticsEngineUpdateLeadGeneratorConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsEngineUpdateLeadGeneratorConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27595,17 +27155,15 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsMlClassificationApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsMlClassificationApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsMlClassificationApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.riskAnalyticsMlClassificationResetModelToDefaults(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsMlClassificationResetModelToDefaults(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27666,14 +27224,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest = {
-  // Schedulerv3CreateScheduledJobRequest
+const request: SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest = {
+  
   schedulerv3CreateScheduledJobRequest: {
     description: "description_example",
     enabled: true,
@@ -27862,9 +27420,8 @@ let body:.SchedulerServiceApiSchedulerServiceCreateScheduledJobRequest = {
   },
 };
 
-apiInstance.schedulerServiceCreateScheduledJob(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceCreateScheduledJob(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27905,20 +27462,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest = {
-  // string | Unique ID, required for delete.
+const request: SchedulerServiceApiSchedulerServiceDeleteScheduledJobRequest = {
+    // Unique ID, required for delete.
   scheduleId: "schedule_id_example",
 };
 
-apiInstance.schedulerServiceDeleteScheduledJob(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceDeleteScheduledJob(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -27959,20 +27515,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceGetDependenciesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceGetDependenciesRequest = {
-  // string | specify the configuration entry type: Distribution.Rule, workflow_investigation_link, workflow_response_template, etc. (optional)
+const request: SchedulerServiceApiSchedulerServiceGetDependenciesRequest = {
+    // specify the configuration entry type: Distribution.Rule, workflow_investigation_link, workflow_response_template, etc. (optional)
   configType: "config_type_example",
 };
 
-apiInstance.schedulerServiceGetDependencies(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetDependencies(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28013,17 +27568,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.schedulerServiceGetDistributionRules(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetDistributionRules(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28061,20 +27614,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsRequest = {
-  // string | Used to return a single scheduledjob.
+const request: SchedulerServiceApiSchedulerServiceGetScheduledJobDetailsRequest = {
+    // Used to return a single scheduledjob.
   scheduleId: "schedule_id_example",
 };
 
-apiInstance.schedulerServiceGetScheduledJobDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetScheduledJobDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28115,22 +27667,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest = {
-  // number | Optional: the amount to offset the rows by for pagination. (optional)
+const request: SchedulerServiceApiSchedulerServiceGetScheduledJobsRequest = {
+    // Optional: the amount to offset the rows by for pagination. (optional)
   offset: 1,
-  // number | Optional: the max amount of rows to return for pagination. (optional)
+    // Optional: the max amount of rows to return for pagination. (optional)
   limit: 1,
 };
 
-apiInstance.schedulerServiceGetScheduledJobs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetScheduledJobs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28172,24 +27723,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceGetSchedulesByReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceGetSchedulesByReportRequest = {
-  // string | Report ID for the scheduled report.
+const request: SchedulerServiceApiSchedulerServiceGetSchedulesByReportRequest = {
+    // Report ID for the scheduled report.
   reportId: "report_id_example",
-  // Schedulerv3GetSchedulesByReportRequest
+  
   schedulerv3GetSchedulesByReportRequest: {
     reportId: "reportId_example",
   },
 };
 
-apiInstance.schedulerServiceGetSchedulesByReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetSchedulesByReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28231,17 +27781,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.schedulerServiceGetTags(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceGetTags(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28279,14 +27827,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest = {
-  // Schedulerv3SearchScheduledJobsRequest
+const request: SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest = {
+  
   schedulerv3SearchScheduledJobsRequest: {
     limit: 1,
     offset: 1,
@@ -28306,9 +27854,8 @@ let body:.SchedulerServiceApiSchedulerServiceSearchScheduledJobsRequest = {
   },
 };
 
-apiInstance.schedulerServiceSearchScheduledJobs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceSearchScheduledJobs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28349,14 +27896,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest = {
-  // Schedulerv3SearchScheduledTaskRunsRequest
+const request: SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest = {
+  
   schedulerv3SearchScheduledTaskRunsRequest: {
     limit: 1,
     offset: 1,
@@ -28367,9 +27914,8 @@ let body:.SchedulerServiceApiSchedulerServiceSearchScheduledTaskRunsRequest = {
   },
 };
 
-apiInstance.schedulerServiceSearchScheduledTaskRuns(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceSearchScheduledTaskRuns(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28410,16 +27956,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SchedulerServiceApi } from '';
+import type { SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SchedulerServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SchedulerServiceApi(configuration);
 
-let body:.SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest = {
-  // string | Unique ID, required for update.
+const request: SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest = {
+    // Unique ID, required for update.
   scheduleId: "schedule_id_example",
-  // Schedulerv3UpdateScheduledJobRequest
+  
   schedulerv3UpdateScheduledJobRequest: {
     query: {
       "key": "key_example",
@@ -28614,9 +28160,8 @@ let body:.SchedulerServiceApiSchedulerServiceUpdateScheduledJobRequest = {
   },
 };
 
-apiInstance.schedulerServiceUpdateScheduledJob(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.schedulerServiceUpdateScheduledJob(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28654,9 +28199,6 @@ Name | Type | Description  | Notes
 
 
 
-
-
-
 # .SnifAssistServiceApi
 
 All URIs are relative to *http://localhost*
@@ -28677,28 +28219,27 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SnifAssistServiceApi } from '';
+import type { SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SnifAssistServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SnifAssistServiceApi(configuration);
 
-let body:.SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest = {
-  // string | Provide tenant_id. (optional)
+const request: SnifAssistServiceApiSnifAssistServiceGetSnifConfigRequest = {
+    // Provide tenant_id. (optional)
   tenantId: "tenant_id_example",
-  // string | Provide edge_id. (optional)
+    // Provide edge_id. (optional)
   edgeId: "edge_id_example",
-  // string | Provide configuration type. (optional)
+    // Provide configuration type. (optional)
   configType: "config_type_example",
-  // string | Specify config_id provided by configuration service. (optional)
+    // Specify config_id provided by configuration service. (optional)
   configId: "config_id_example",
-  // number | Provide CRC value of configuration parameters that sniffer is currently using. (optional)
+    // Provide CRC value of configuration parameters that sniffer is currently using. (optional)
   configurationParametersCrc: 1,
 };
 
-apiInstance.snifAssistServiceGetSnifConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.snifAssistServiceGetSnifConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28743,24 +28284,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SnifAssistServiceApi } from '';
+import type { SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SnifAssistServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SnifAssistServiceApi(configuration);
 
-let body:.SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest = {
-  // string | Specify tenant_id. (optional)
+const request: SnifAssistServiceApiSnifAssistServiceGetSnifPolicyRequest = {
+    // Specify tenant_id. (optional)
   tenantId: "tenant_id_example",
-  // string | Specify edge_id if known. (optional)
+    // Specify edge_id if known. (optional)
   edgeId: "edge_id_example",
-  // number | Provide CRC value of installed policy that sniffer is currently using. (optional)
+    // Provide CRC value of installed policy that sniffer is currently using. (optional)
   policyCrc: 1,
 };
 
-apiInstance.snifAssistServiceGetSnifPolicy(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.snifAssistServiceGetSnifPolicy(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28803,14 +28343,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SnifAssistServiceApi } from '';
+import type { SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SnifAssistServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SnifAssistServiceApi(configuration);
 
-let body:.SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest = {
-  // Snifassistv3PostSnifFeedbackRequest
+const request: SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest = {
+  
   snifassistv3PostSnifFeedbackRequest: {
     edgeId: "edgeId_example",
     snifFeedback: {
@@ -28822,9 +28362,8 @@ let body:.SnifAssistServiceApiSnifAssistServicePostSnifFeedbackRequest = {
   },
 };
 
-apiInstance.snifAssistServicePostSnifFeedback(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.snifAssistServicePostSnifFeedback(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28865,14 +28404,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, SnifAssistServiceApi } from '';
+import type { SnifAssistServiceApiSnifAssistServiceTestRegexRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .SnifAssistServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new SnifAssistServiceApi(configuration);
 
-let body:.SnifAssistServiceApiSnifAssistServiceTestRegexRequest = {
-  // Snifassistv3TestRegexRequest
+const request: SnifAssistServiceApiSnifAssistServiceTestRegexRequest = {
+  
   snifassistv3TestRegexRequest: {
     regex: "regex_example",
     tenantId: "tenantId_example",
@@ -28880,9 +28419,8 @@ let body:.SnifAssistServiceApiSnifAssistServiceTestRegexRequest = {
   },
 };
 
-apiInstance.snifAssistServiceTestRegex(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.snifAssistServiceTestRegex(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -28940,14 +28478,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, StreamsServiceApi } from '';
+import type { StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .StreamsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new StreamsServiceApi(configuration);
 
-let body:.StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest = {
-  // Streamsv3CheckAWSCredentialsRequest
+const request: StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest = {
+  
   streamsv3CheckAWSCredentialsRequest: {
     accessKeyId: "accessKeyId_example",
     authType: "SECURITY_CREDENTIALS",
@@ -28960,9 +28498,8 @@ let body:.StreamsServiceApiStreamsServiceCheckAWSCredentialsRequest = {
   },
 };
 
-apiInstance.streamsServiceCheckAWSCredentials(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.streamsServiceCheckAWSCredentials(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29003,14 +28540,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, StreamsServiceApi } from '';
+import type { StreamsServiceApiStreamsServiceCheckAzureEventHubRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .StreamsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new StreamsServiceApi(configuration);
 
-let body:.StreamsServiceApiStreamsServiceCheckAzureEventHubRequest = {
-  // Streamsv3CheckAzureEventHubRequest
+const request: StreamsServiceApiStreamsServiceCheckAzureEventHubRequest = {
+  
   streamsv3CheckAzureEventHubRequest: {
     accessKeyId: "accessKeyId_example",
     id: "id_example",
@@ -29021,9 +28558,8 @@ let body:.StreamsServiceApiStreamsServiceCheckAzureEventHubRequest = {
   },
 };
 
-apiInstance.streamsServiceCheckAzureEventHub(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.streamsServiceCheckAzureEventHub(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29064,22 +28600,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, StreamsServiceApi } from '';
+import type { StreamsServiceApiStreamsServiceCheckAzureStorageStringRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .StreamsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new StreamsServiceApi(configuration);
 
-let body:.StreamsServiceApiStreamsServiceCheckAzureStorageStringRequest = {
-  // Streamsv3CheckAzureStorageStringRequest
+const request: StreamsServiceApiStreamsServiceCheckAzureStorageStringRequest = {
+  
   streamsv3CheckAzureStorageStringRequest: {
     connectionString: "connectionString_example",
   },
 };
 
-apiInstance.streamsServiceCheckAzureStorageString(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.streamsServiceCheckAzureStorageString(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29120,17 +28655,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, StreamsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .StreamsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new StreamsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.streamsServiceGetAWSRegions(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.streamsServiceGetAWSRegions(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29168,14 +28701,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, StreamsServiceApi } from '';
+import type { StreamsServiceApiStreamsServiceListAWSStreamsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .StreamsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new StreamsServiceApi(configuration);
 
-let body:.StreamsServiceApiStreamsServiceListAWSStreamsRequest = {
-  // Streamsv3ListAWSStreamsRequest
+const request: StreamsServiceApiStreamsServiceListAWSStreamsRequest = {
+  
   streamsv3ListAWSStreamsRequest: {
     accessKeyId: "accessKeyId_example",
     authType: "SECURITY_CREDENTIALS",
@@ -29189,9 +28722,8 @@ let body:.StreamsServiceApiStreamsServiceListAWSStreamsRequest = {
   },
 };
 
-apiInstance.streamsServiceListAWSStreams(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.streamsServiceListAWSStreams(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29262,14 +28794,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserCreateAPIKeyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserCreateAPIKeyRequest = {
-  // Tenantuserv3CreateApiKeyRequest
+const request: TenantuserApiTenantuserCreateAPIKeyRequest = {
+  
   tenantuserv3CreateApiKeyRequest: {
     name: "name_example",
     roles: [
@@ -29278,9 +28810,8 @@ let body:.TenantuserApiTenantuserCreateAPIKeyRequest = {
   },
 };
 
-apiInstance.tenantuserCreateAPIKey(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserCreateAPIKey(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29321,20 +28852,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserDeleteAPIKeyRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserDeleteAPIKeyRequest = {
-  // string | Apikey id.
+const request: TenantuserApiTenantuserDeleteAPIKeyRequest = {
+    // Apikey id.
   id: "id_example",
 };
 
-apiInstance.tenantuserDeleteAPIKey(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserDeleteAPIKey(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29375,20 +28905,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserDeleteRoleRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserDeleteRoleRequest = {
-  // string | ID or role deleted.
+const request: TenantuserApiTenantuserDeleteRoleRequest = {
+    // ID or role deleted.
   roleId: "role_id_example",
 };
 
-apiInstance.tenantuserDeleteRole(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserDeleteRole(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29429,17 +28958,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.tenantuserGetAPIKeys(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetAPIKeys(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29477,17 +29004,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.tenantuserGetCurrentUser(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetCurrentUser(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29525,22 +29050,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetPrivilegeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetPrivilegeRequest = {
-  // string | Privilege ID.
+const request: TenantuserApiTenantuserGetPrivilegeRequest = {
+    // Privilege ID.
   privilegePrivilegeId: "privilege.privilege_id_example",
-  // string | Privilege Type - a report, group, and datasource may have the same ID. By passing type, the artifact can be uniquely determined. (optional)
+    // Privilege Type - a report, group, and datasource may have the same ID. By passing type, the artifact can be uniquely determined. (optional)
   privilegeType: "privilege.type_example",
 };
 
-apiInstance.tenantuserGetPrivilege(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetPrivilege(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29582,24 +29106,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetPrivilegesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetPrivilegesRequest = {
-  // Array<string> | If empty, will return all privileges. (optional)
+const request: TenantuserApiTenantuserGetPrivilegesRequest = {
+    // If empty, will return all privileges. (optional)
   roles: [
     "roles_example",
   ],
-  // string | Type of privilege to return: group, page, permission, report, restapi, etc. (optional)
+    // Type of privilege to return: group, page, permission, report, restapi, etc. (optional)
   type: "type_example",
 };
 
-apiInstance.tenantuserGetPrivileges(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetPrivileges(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29641,20 +29164,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetRoleRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetRoleRequest = {
-  // string | ID of role to be returned.
+const request: TenantuserApiTenantuserGetRoleRequest = {
+    // ID of role to be returned.
   roleId: "role_id_example",
 };
 
-apiInstance.tenantuserGetRole(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetRole(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29695,17 +29217,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.tenantuserGetRoles(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetRoles(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29743,20 +29263,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetUserRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetUserRequest = {
-  // string | User id defaults to the current user or specify \"current\" or an actual user id.
+const request: TenantuserApiTenantuserGetUserRequest = {
+    // User id defaults to the current user or specify \"current\" or an actual user id.
   userId: "user_id_example",
 };
 
-apiInstance.tenantuserGetUser(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetUser(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29797,14 +29316,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetUserNamesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetUserNamesRequest = {
-  // Tenantuserv3GetUserNamesRequest
+const request: TenantuserApiTenantuserGetUserNamesRequest = {
+  
   tenantuserv3GetUserNamesRequest: {
     userIds: [
       "userIds_example",
@@ -29812,9 +29331,8 @@ let body:.TenantuserApiTenantuserGetUserNamesRequest = {
   },
 };
 
-apiInstance.tenantuserGetUserNames(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetUserNames(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29855,20 +29373,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserGetUserTenantRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserGetUserTenantRequest = {
-  // string | User id defaults to the current user or specify \"current\" or an actual user id.
+const request: TenantuserApiTenantuserGetUserTenantRequest = {
+    // User id defaults to the current user or specify \"current\" or an actual user id.
   userId: "user_id_example",
 };
 
-apiInstance.tenantuserGetUserTenant(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserGetUserTenant(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29909,14 +29426,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserPostPrivilegesBulkRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserPostPrivilegesBulkRequest = {
-  // Tenantuserv3PostPrivilegesBulkRequest
+const request: TenantuserApiTenantuserPostPrivilegesBulkRequest = {
+  
   tenantuserv3PostPrivilegesBulkRequest: {
     privileges: [
       {
@@ -29940,9 +29457,8 @@ let body:.TenantuserApiTenantuserPostPrivilegesBulkRequest = {
   },
 };
 
-apiInstance.tenantuserPostPrivilegesBulk(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserPostPrivilegesBulk(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -29983,14 +29499,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserPostRoleRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserPostRoleRequest = {
-  // Tenantuserv3PostRoleRequest
+const request: TenantuserApiTenantuserPostRoleRequest = {
+  
   tenantuserv3PostRoleRequest: {
     role: {
       description: "description_example",
@@ -30004,9 +29520,8 @@ let body:.TenantuserApiTenantuserPostRoleRequest = {
   },
 };
 
-apiInstance.tenantuserPostRole(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserPostRole(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30047,16 +29562,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserUpdatePrivilegeRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserUpdatePrivilegeRequest = {
-  // string | Permanent id of the privilege to be updated or created.
+const request: TenantuserApiTenantuserUpdatePrivilegeRequest = {
+    // Permanent id of the privilege to be updated or created.
   privilegeId: "privilege_id_example",
-  // Tenantuserv3UpdatePrivilegeRequest
+  
   tenantuserv3UpdatePrivilegeRequest: {
     manageRoles: [
       "manageRoles_example",
@@ -30071,9 +29586,8 @@ let body:.TenantuserApiTenantuserUpdatePrivilegeRequest = {
   },
 };
 
-apiInstance.tenantuserUpdatePrivilege(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserUpdatePrivilege(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30115,14 +29629,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest = {
-  // Tenantuserv3UpdatePrivilegesBulkRequest
+const request: TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest = {
+  
   tenantuserv3UpdatePrivilegesBulkRequest: {
     privilege: [
       {
@@ -30137,9 +29651,8 @@ let body:.TenantuserApiTenantuserUpdatePrivilegesRoleBulkRequest = {
   },
 };
 
-apiInstance.tenantuserUpdatePrivilegesRoleBulk(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserUpdatePrivilegesRoleBulk(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30180,16 +29693,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserUpdateRoleRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserUpdateRoleRequest = {
-  // string | Permanent id of the role.
+const request: TenantuserApiTenantuserUpdateRoleRequest = {
+    // Permanent id of the role.
   roleId: "role_id_example",
-  // Tenantuserv3UpdateRoleRequest
+  
   tenantuserv3UpdateRoleRequest: {
     description: "description_example",
     icpRoles: [
@@ -30201,9 +29714,8 @@ let body:.TenantuserApiTenantuserUpdateRoleRequest = {
   },
 };
 
-apiInstance.tenantuserUpdateRole(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserUpdateRole(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30245,14 +29757,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, TenantuserApi } from '';
+import type { TenantuserApiTenantuserUpdateUserRoleBulkRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .TenantuserApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new TenantuserApi(configuration);
 
-let body:.TenantuserApiTenantuserUpdateUserRoleBulkRequest = {
-  // Tenantuserv3UpdateUserRoleBulkRequest
+const request: TenantuserApiTenantuserUpdateUserRoleBulkRequest = {
+  
   tenantuserv3UpdateUserRoleBulkRequest: {
     assignRoleId: [
       "assignRoleId_example",
@@ -30266,9 +29778,8 @@ let body:.TenantuserApiTenantuserUpdateUserRoleBulkRequest = {
   },
 };
 
-apiInstance.tenantuserUpdateUserRoleBulk(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.tenantuserUpdateUserRoleBulk(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30327,20 +29838,19 @@ Get additional details of a specific third party vendor, such as, customer accou
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ThirdPartyVendorsApi } from '';
+import type { ThirdPartyVendorsApiGetLinkedVendorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ThirdPartyVendorsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ThirdPartyVendorsApi(configuration);
 
-let body:.ThirdPartyVendorsApiGetLinkedVendorRequest = {
-  // string | The third party vendor\'s account ID
+const request: ThirdPartyVendorsApiGetLinkedVendorRequest = {
+    // The third party vendor\'s account ID
   vendorId: "123456789101",
 };
 
-apiInstance.getLinkedVendor(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getLinkedVendor(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30385,20 +29895,19 @@ Get details about a third party vendor.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ThirdPartyVendorsApi } from '';
+import type { ThirdPartyVendorsApiGetSingleLinkedVendorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ThirdPartyVendorsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ThirdPartyVendorsApi(configuration);
 
-let body:.ThirdPartyVendorsApiGetSingleLinkedVendorRequest = {
-  // string | vendor id
+const request: ThirdPartyVendorsApiGetSingleLinkedVendorRequest = {
+    // vendor id
   vendorId: "123456789101",
 };
 
-apiInstance.getSingleLinkedVendor(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getSingleLinkedVendor(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30440,16 +29949,16 @@ Get a list of all the data stores that a third party vendor can access. Find out
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ThirdPartyVendorsApi } from '';
+import type { ThirdPartyVendorsApiListLinkedVendorDataStoresRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ThirdPartyVendorsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ThirdPartyVendorsApi(configuration);
 
-let body:.ThirdPartyVendorsApiListLinkedVendorDataStoresRequest = {
-  // string | The third party vendor\'s account ID
+const request: ThirdPartyVendorsApiListLinkedVendorDataStoresRequest = {
+    // The third party vendor\'s account ID
   vendorId: "123456789101",
-  // ListVendorDataStoresFilterParameter (optional)
+  
   filter: {
     cloudAccountId: "cloudAccountId_example",
     dataStoreId: "dataStoreId_example",
@@ -30458,20 +29967,19 @@ let body:.ThirdPartyVendorsApiListLinkedVendorDataStoresRequest = {
     cloudRegion: "cloudRegion_example",
     cloudProvider: "aws",
   },
-  // ListLinkedVendorDataStoresSortParameter (optional)
+  
   sort: {
     sortBy: "dataStoreId",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listLinkedVendorDataStores(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listLinkedVendorDataStores(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30517,17 +30025,15 @@ Get a list of all third party vendors associated to your cloud environments (rel
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ThirdPartyVendorsApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ThirdPartyVendorsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ThirdPartyVendorsApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.listLinkedVendors(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listLinkedVendors(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30566,14 +30072,14 @@ Get a list of roles, buckets or service principles, and their entitled permissio
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ThirdPartyVendorsApi } from '';
+import type { ThirdPartyVendorsApiListTrustedAssetsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ThirdPartyVendorsApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ThirdPartyVendorsApi(configuration);
 
-let body:.ThirdPartyVendorsApiListTrustedAssetsRequest = {
-  // ListTrusteesFilterParameter (optional)
+const request: ThirdPartyVendorsApiListTrustedAssetsRequest = {
+  
   filter: {
     vendorId: "123456789101",
     dataStoreId: "123456789101",
@@ -30581,9 +30087,8 @@ let body:.ThirdPartyVendorsApiListTrustedAssetsRequest = {
   },
 };
 
-apiInstance.listTrustedAssets(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listTrustedAssets(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30642,17 +30147,15 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.universalConnectorManagerGetCertificate(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerGetCertificate(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30690,17 +30193,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.universalConnectorManagerGetConnectors(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerGetConnectors(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30738,20 +30239,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
+import type { UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:.UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest = {
-  // number | UC plugin id.
+const request: UniversalConnectorManagerApiUniversalConnectorManagerGetUCSetupRequest = {
+    // UC plugin id.
   pluginId: 1,
 };
 
-apiInstance.universalConnectorManagerGetUCSetup(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerGetUCSetup(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30792,17 +30292,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.universalConnectorManagerListConnectionsSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerListConnectionsSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30840,17 +30338,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.universalConnectorManagerPluginsList(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerPluginsList(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30888,22 +30384,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, UniversalConnectorManagerApi } from '';
+import type { UniversalConnectorManagerApiUniversalConnectorManagerUploadPluginRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .UniversalConnectorManagerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new UniversalConnectorManagerApi(configuration);
 
-let body:.UniversalConnectorManagerApiUniversalConnectorManagerUploadPluginRequest = {
-  // Universalconnectormanagerv3UploadPluginRequest
+const request: UniversalConnectorManagerApiUniversalConnectorManagerUploadPluginRequest = {
+  
   universalconnectormanagerv3UploadPluginRequest: {
     pluginId: "pluginId_example",
   },
 };
 
-apiInstance.universalConnectorManagerUploadPlugin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.universalConnectorManagerUploadPlugin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -30963,14 +30458,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, VulnerabilityManagementServiceApi } from '';
+import type { VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateVulnerabilityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new VulnerabilityManagementServiceApi(configuration);
 
-let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateVulnerabilityRequest = {
-  // Vulmanagementv3CreateVulnerabilityRequest
+const request: VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateVulnerabilityRequest = {
+  
   vulmanagementv3CreateVulnerabilityRequest: {
     description: "description_example",
     details: {},
@@ -30982,9 +30477,8 @@ let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceCreateV
   },
 };
 
-apiInstance.vulnerabilityManagementServiceCreateVulnerability(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.vulnerabilityManagementServiceCreateVulnerability(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31025,17 +30519,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, VulnerabilityManagementServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new VulnerabilityManagementServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.vulnerabilityManagementServiceGetFiltersForVulnerabilities(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.vulnerabilityManagementServiceGetFiltersForVulnerabilities(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31073,14 +30565,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, VulnerabilityManagementServiceApi } from '';
+import type { VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new VulnerabilityManagementServiceApi(configuration);
 
-let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesRequest = {
-  // Vulmanagementv3GetVulnerabilitiesRequest
+const request: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilitiesRequest = {
+  
   vulmanagementv3GetVulnerabilitiesRequest: {
     filter: [
       {
@@ -31101,9 +30593,8 @@ let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVuln
   },
 };
 
-apiInstance.vulnerabilityManagementServiceGetVulnerabilities(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.vulnerabilityManagementServiceGetVulnerabilities(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31144,17 +30635,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, VulnerabilityManagementServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new VulnerabilityManagementServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.vulnerabilityManagementServiceGetVulnerabilitiesStats(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.vulnerabilityManagementServiceGetVulnerabilitiesStats(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31192,20 +30681,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, VulnerabilityManagementServiceApi } from '';
+import type { VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new VulnerabilityManagementServiceApi(configuration);
 
-let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest = {
-  // string | ID for the record to return.
+const request: VulnerabilityManagementServiceApiVulnerabilityManagementServiceGetVulnerabilityRequest = {
+    // ID for the record to return.
   vulnerabilityId: "vulnerability_id_example",
 };
 
-apiInstance.vulnerabilityManagementServiceGetVulnerability(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.vulnerabilityManagementServiceGetVulnerability(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31246,14 +30734,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, VulnerabilityManagementServiceApi } from '';
+import type { VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateVulnerabilitiesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new VulnerabilityManagementServiceApi(configuration);
 
-let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateVulnerabilitiesRequest = {
-  // Vulmanagementv3UpdateVulnerabilitiesRequest
+const request: VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateVulnerabilitiesRequest = {
+  
   vulmanagementv3UpdateVulnerabilitiesRequest: {
     updates: [
       {
@@ -31268,9 +30756,8 @@ let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceUpdateV
   },
 };
 
-apiInstance.vulnerabilityManagementServiceUpdateVulnerabilities(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.vulnerabilityManagementServiceUpdateVulnerabilities(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31311,20 +30798,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, VulnerabilityManagementServiceApi } from '';
+import type { VulnerabilityManagementServiceApiVulnerabilityManagementServiceVulnerabilityIngestionManualTriggerRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .VulnerabilityManagementServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new VulnerabilityManagementServiceApi(configuration);
 
-let body:.VulnerabilityManagementServiceApiVulnerabilityManagementServiceVulnerabilityIngestionManualTriggerRequest = {
-  // any
+const request: VulnerabilityManagementServiceApiVulnerabilityManagementServiceVulnerabilityIngestionManualTriggerRequest = {
+  
   body: {},
 };
 
-apiInstance.vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.vulnerabilityManagementServiceVulnerabilityIngestionManualTrigger(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31397,14 +30883,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowCreateCaseRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowCreateCaseRequest = {
-  // Workflowv3CreateCaseRequest
+const request: WorkflowApiWorkflowCreateCaseRequest = {
+  
   workflowv3CreateCaseRequest: {
     _case: {
       artifacts: [
@@ -31429,9 +30915,8 @@ let body:.WorkflowApiWorkflowCreateCaseRequest = {
   },
 };
 
-apiInstance.workflowCreateCase(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowCreateCase(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31472,14 +30957,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowCreateProductEntityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowCreateProductEntityRequest = {
-  // Workflowv3ProductEntity
+const request: WorkflowApiWorkflowCreateProductEntityRequest = {
+  
   workflowv3ProductEntity: {
     entity: {
       disabled: true,
@@ -31533,9 +31018,8 @@ let body:.WorkflowApiWorkflowCreateProductEntityRequest = {
   },
 };
 
-apiInstance.workflowCreateProductEntity(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowCreateProductEntity(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31576,16 +31060,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowCreateTaskRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowCreateTaskRequest = {
-  // string | Create tasks with common parent.
+const request: WorkflowApiWorkflowCreateTaskRequest = {
+    // Create tasks with common parent.
   caseId: "case_id_example",
-  // Workflowv3CreateTaskRequest
+  
   workflowv3CreateTaskRequest: {
     caseId: "caseId_example",
     task: {
@@ -31649,9 +31133,8 @@ let body:.WorkflowApiWorkflowCreateTaskRequest = {
   },
 };
 
-apiInstance.workflowCreateTask(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowCreateTask(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31693,14 +31176,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowCreateWorkflowEventRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowCreateWorkflowEventRequest = {
-  // Workflowv3WorkflowEvent
+const request: WorkflowApiWorkflowCreateWorkflowEventRequest = {
+  
   workflowv3WorkflowEvent: {
     data: {
       "key": "key_example",
@@ -31713,9 +31196,8 @@ let body:.WorkflowApiWorkflowCreateWorkflowEventRequest = {
   },
 };
 
-apiInstance.workflowCreateWorkflowEvent(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowCreateWorkflowEvent(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31756,20 +31238,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowDeleteProductEntityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowDeleteProductEntityRequest = {
-  // string | Unique id for the product entity
+const request: WorkflowApiWorkflowDeleteProductEntityRequest = {
+    // Unique id for the product entity
   entityId: "entity_id_example",
 };
 
-apiInstance.workflowDeleteProductEntity(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowDeleteProductEntity(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31810,26 +31291,25 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetCasesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetCasesRequest = {
-  // string | Optional case_id to get a response of an array of one member. (optional)
+const request: WorkflowApiWorkflowGetCasesRequest = {
+    // Optional case_id to get a response of an array of one member. (optional)
   caseId: "case_id_example",
-  // string | Optional field to sort by | first character determines ascending (>) or descending (<). (optional)
+    // Optional field to sort by | first character determines ascending (>) or descending (<). (optional)
   sortBy: "sort_by_example",
-  // number | Optional starting point for the page of data. (optional)
+    // Optional starting point for the page of data. (optional)
   offset: 1,
-  // number | Optional page size. (optional)
+    // Optional page size. (optional)
   limit: 1,
 };
 
-apiInstance.workflowGetCases(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetCases(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31873,14 +31353,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetCasesCountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetCasesCountRequest = {
-  // Workflowv3GetCasesCountRequest
+const request: WorkflowApiWorkflowGetCasesCountRequest = {
+  
   workflowv3GetCasesCountRequest: {
     filter: {
       assignedToMe: true,
@@ -31916,9 +31396,8 @@ let body:.WorkflowApiWorkflowGetCasesCountRequest = {
   },
 };
 
-apiInstance.workflowGetCasesCount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetCasesCount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -31959,22 +31438,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetFilenameRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetFilenameRequest = {
-  // string | Can be \"*\" if JWT token contains the case_id.
+const request: WorkflowApiWorkflowGetFilenameRequest = {
+    // Can be \"*\" if JWT token contains the case_id.
   caseId: "case_id_example",
-  // string | Can be \"*\" if JWT token contains the task_id.
+    // Can be \"*\" if JWT token contains the task_id.
   taskId: "task_id_example",
 };
 
-apiInstance.workflowGetFilename(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetFilename(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32016,16 +31494,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetJobsCountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetJobsCountRequest = {
-  // string | Case ID - can be * for all
+const request: WorkflowApiWorkflowGetJobsCountRequest = {
+    // Case ID - can be * for all
   caseId: "case_id_example",
-  // Workflowv3GetJobsCountRequest
+  
   workflowv3GetJobsCountRequest: {
     caseId: "caseId_example",
     filter: {
@@ -32062,9 +31540,8 @@ let body:.WorkflowApiWorkflowGetJobsCountRequest = {
   },
 };
 
-apiInstance.workflowGetJobsCount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetJobsCount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32106,22 +31583,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetProductEntitiesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetProductEntitiesRequest = {
-  // number | Optional starting point for the page of data. (optional)
+const request: WorkflowApiWorkflowGetProductEntitiesRequest = {
+    // Optional starting point for the page of data. (optional)
   offset: 1,
-  // number | Optional page size. (optional)
+    // Optional page size. (optional)
   limit: 1,
 };
 
-apiInstance.workflowGetProductEntities(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetProductEntities(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32163,20 +31639,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetProductEntityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetProductEntityRequest = {
-  // string | Unique id for the product entity
+const request: WorkflowApiWorkflowGetProductEntityRequest = {
+    // Unique id for the product entity
   entityId: "entity_id_example",
 };
 
-apiInstance.workflowGetProductEntity(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetProductEntity(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32217,26 +31692,25 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetReportResultRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetReportResultRequest = {
-  // string | ID to get the case  (read-only).
+const request: WorkflowApiWorkflowGetReportResultRequest = {
+    // ID to get the case  (read-only).
   caseId: "case_id_example",
-  // string | ID to get the task for case(read-only).
+    // ID to get the task for case(read-only).
   taskId: "task_id_example",
-  // number | Optional starting point for the page of data. (optional)
+    // Optional starting point for the page of data. (optional)
   offset: 1,
-  // number | Optional page size. (optional)
+    // Optional page size. (optional)
   limit: 1,
 };
 
-apiInstance.workflowGetReportResult(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetReportResult(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32280,22 +31754,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetTasksRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetTasksRequest = {
-  // string | Mandaroty: The parent case which contains the tasks.
+const request: WorkflowApiWorkflowGetTasksRequest = {
+    // Mandaroty: The parent case which contains the tasks.
   caseId: "case_id_example",
-  // string | Optional: task_id to return an array of one. (optional)
+    // Optional: task_id to return an array of one. (optional)
   taskId: "task_id_example",
 };
 
-apiInstance.workflowGetTasks(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetTasks(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32337,16 +31810,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetTasksCountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetTasksCountRequest = {
-  // string | Case ID - can be * for all
+const request: WorkflowApiWorkflowGetTasksCountRequest = {
+    // Case ID - can be * for all
   caseId: "case_id_example",
-  // Workflowv3GetTasksCountRequest
+  
   workflowv3GetTasksCountRequest: {
     caseId: "caseId_example",
     filter: {
@@ -32383,9 +31856,8 @@ let body:.WorkflowApiWorkflowGetTasksCountRequest = {
   },
 };
 
-apiInstance.workflowGetTasksCount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetTasksCount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32427,14 +31899,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowSearchCasesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowSearchCasesRequest = {
-  // Workflowv3SearchCasesRequest
+const request: WorkflowApiWorkflowSearchCasesRequest = {
+  
   workflowv3SearchCasesRequest: {
     filter: {
       assignedToMe: true,
@@ -32473,9 +31945,8 @@ let body:.WorkflowApiWorkflowSearchCasesRequest = {
   },
 };
 
-apiInstance.workflowSearchCases(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowSearchCases(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32516,14 +31987,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowSearchReportsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowSearchReportsRequest = {
-  // Workflowv3SearchCasesRequest
+const request: WorkflowApiWorkflowSearchReportsRequest = {
+  
   workflowv3SearchCasesRequest: {
     filter: {
       assignedToMe: true,
@@ -32562,9 +32033,8 @@ let body:.WorkflowApiWorkflowSearchReportsRequest = {
   },
 };
 
-apiInstance.workflowSearchReports(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowSearchReports(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32605,16 +32075,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowSearchTasksRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowSearchTasksRequest = {
-  // string | Case ID - can be * for all
+const request: WorkflowApiWorkflowSearchTasksRequest = {
+    // Case ID - can be * for all
   caseId: "case_id_example",
-  // Workflowv3SearchTasksRequest
+  
   workflowv3SearchTasksRequest: {
     caseId: "caseId_example",
     filter: {
@@ -32656,9 +32126,8 @@ let body:.WorkflowApiWorkflowSearchTasksRequest = {
   },
 };
 
-apiInstance.workflowSearchTasks(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowSearchTasks(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32700,14 +32169,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowUpdateCasesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowUpdateCasesRequest = {
-  // Workflowv3UpdateCasesRequest
+const request: WorkflowApiWorkflowUpdateCasesRequest = {
+  
   workflowv3UpdateCasesRequest: {
     cases: [
       {
@@ -32737,9 +32206,8 @@ let body:.WorkflowApiWorkflowUpdateCasesRequest = {
   },
 };
 
-apiInstance.workflowUpdateCases(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowUpdateCases(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32780,16 +32248,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowUpdateProductEntityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowUpdateProductEntityRequest = {
-  // string | Unique Entity id, required for update.
+const request: WorkflowApiWorkflowUpdateProductEntityRequest = {
+    // Unique Entity id, required for update.
   entityId: "entity_id_example",
-  // Workflowv3UpdateProductEntityRequest
+  
   workflowv3UpdateProductEntityRequest: {
     entityId: "entityId_example",
     productEntity: {
@@ -32846,9 +32314,8 @@ let body:.WorkflowApiWorkflowUpdateProductEntityRequest = {
   },
 };
 
-apiInstance.workflowUpdateProductEntity(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowUpdateProductEntity(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -32890,16 +32357,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowUpdateTasksRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowUpdateTasksRequest = {
-  // string | Update tasks belonging to common parent.
+const request: WorkflowApiWorkflowUpdateTasksRequest = {
+    // Update tasks belonging to common parent.
   caseId: "case_id_example",
-  // Workflowv3UpdateTasksRequest
+  
   workflowv3UpdateTasksRequest: {
     caseId: "caseId_example",
     tasks: [
@@ -32948,9 +32415,8 @@ let body:.WorkflowApiWorkflowUpdateTasksRequest = {
   },
 };
 
-apiInstance.workflowUpdateTasks(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowUpdateTasks(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

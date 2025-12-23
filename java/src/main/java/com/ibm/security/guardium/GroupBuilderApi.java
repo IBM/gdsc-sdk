@@ -105,13 +105,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderCancelImportGroupCall(List<Integer> groupIds, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderCancelImportGroupCall(@javax.annotation.Nullable List<Integer> groupIds, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -160,7 +161,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderCancelImportGroupValidateBeforeCall(List<Integer> groupIds, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderCancelImportGroupValidateBeforeCall(@javax.annotation.Nullable List<Integer> groupIds, final ApiCallback _callback) throws ApiException {
         return groupBuilderCancelImportGroupCall(groupIds, _callback);
 
     }
@@ -172,13 +173,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3CancelGroupImportResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3CancelGroupImportResponse groupBuilderCancelImportGroup(List<Integer> groupIds) throws ApiException {
+    public Groupbuilderv3CancelGroupImportResponse groupBuilderCancelImportGroup(@javax.annotation.Nullable List<Integer> groupIds) throws ApiException {
         ApiResponse<Groupbuilderv3CancelGroupImportResponse> localVarResp = groupBuilderCancelImportGroupWithHttpInfo(groupIds);
         return localVarResp.getData();
     }
@@ -190,13 +192,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3CancelGroupImportResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3CancelGroupImportResponse> groupBuilderCancelImportGroupWithHttpInfo(List<Integer> groupIds) throws ApiException {
+    public ApiResponse<Groupbuilderv3CancelGroupImportResponse> groupBuilderCancelImportGroupWithHttpInfo(@javax.annotation.Nullable List<Integer> groupIds) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderCancelImportGroupValidateBeforeCall(groupIds, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3CancelGroupImportResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -210,13 +213,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderCancelImportGroupAsync(List<Integer> groupIds, final ApiCallback<Groupbuilderv3CancelGroupImportResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderCancelImportGroupAsync(@javax.annotation.Nullable List<Integer> groupIds, final ApiCallback<Groupbuilderv3CancelGroupImportResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderCancelImportGroupValidateBeforeCall(groupIds, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3CancelGroupImportResponse>(){}.getType();
@@ -230,13 +234,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderCreateGroupCall(Groupbuilderv3CreateGroupRequest groupbuilderv3CreateGroupRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderCreateGroupCall(@javax.annotation.Nonnull Groupbuilderv3CreateGroupRequest groupbuilderv3CreateGroupRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -282,7 +287,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderCreateGroupValidateBeforeCall(Groupbuilderv3CreateGroupRequest groupbuilderv3CreateGroupRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderCreateGroupValidateBeforeCall(@javax.annotation.Nonnull Groupbuilderv3CreateGroupRequest groupbuilderv3CreateGroupRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'groupbuilderv3CreateGroupRequest' is set
         if (groupbuilderv3CreateGroupRequest == null) {
             throw new ApiException("Missing the required parameter 'groupbuilderv3CreateGroupRequest' when calling groupBuilderCreateGroup(Async)");
@@ -299,13 +304,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3CreateGroupResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3CreateGroupResponse groupBuilderCreateGroup(Groupbuilderv3CreateGroupRequest groupbuilderv3CreateGroupRequest) throws ApiException {
+    public Groupbuilderv3CreateGroupResponse groupBuilderCreateGroup(@javax.annotation.Nonnull Groupbuilderv3CreateGroupRequest groupbuilderv3CreateGroupRequest) throws ApiException {
         ApiResponse<Groupbuilderv3CreateGroupResponse> localVarResp = groupBuilderCreateGroupWithHttpInfo(groupbuilderv3CreateGroupRequest);
         return localVarResp.getData();
     }
@@ -317,13 +323,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3CreateGroupResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3CreateGroupResponse> groupBuilderCreateGroupWithHttpInfo(Groupbuilderv3CreateGroupRequest groupbuilderv3CreateGroupRequest) throws ApiException {
+    public ApiResponse<Groupbuilderv3CreateGroupResponse> groupBuilderCreateGroupWithHttpInfo(@javax.annotation.Nonnull Groupbuilderv3CreateGroupRequest groupbuilderv3CreateGroupRequest) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderCreateGroupValidateBeforeCall(groupbuilderv3CreateGroupRequest, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3CreateGroupResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -337,13 +344,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderCreateGroupAsync(Groupbuilderv3CreateGroupRequest groupbuilderv3CreateGroupRequest, final ApiCallback<Groupbuilderv3CreateGroupResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderCreateGroupAsync(@javax.annotation.Nonnull Groupbuilderv3CreateGroupRequest groupbuilderv3CreateGroupRequest, final ApiCallback<Groupbuilderv3CreateGroupResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderCreateGroupValidateBeforeCall(groupbuilderv3CreateGroupRequest, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3CreateGroupResponse>(){}.getType();
@@ -357,13 +365,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderDeleteGroupCall(List<Integer> groupIds, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderDeleteGroupCall(@javax.annotation.Nullable List<Integer> groupIds, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -412,7 +421,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderDeleteGroupValidateBeforeCall(List<Integer> groupIds, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderDeleteGroupValidateBeforeCall(@javax.annotation.Nullable List<Integer> groupIds, final ApiCallback _callback) throws ApiException {
         return groupBuilderDeleteGroupCall(groupIds, _callback);
 
     }
@@ -424,13 +433,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3DeleteGroupResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3DeleteGroupResponse groupBuilderDeleteGroup(List<Integer> groupIds) throws ApiException {
+    public Groupbuilderv3DeleteGroupResponse groupBuilderDeleteGroup(@javax.annotation.Nullable List<Integer> groupIds) throws ApiException {
         ApiResponse<Groupbuilderv3DeleteGroupResponse> localVarResp = groupBuilderDeleteGroupWithHttpInfo(groupIds);
         return localVarResp.getData();
     }
@@ -442,13 +452,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3DeleteGroupResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3DeleteGroupResponse> groupBuilderDeleteGroupWithHttpInfo(List<Integer> groupIds) throws ApiException {
+    public ApiResponse<Groupbuilderv3DeleteGroupResponse> groupBuilderDeleteGroupWithHttpInfo(@javax.annotation.Nullable List<Integer> groupIds) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderDeleteGroupValidateBeforeCall(groupIds, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3DeleteGroupResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -462,13 +473,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderDeleteGroupAsync(List<Integer> groupIds, final ApiCallback<Groupbuilderv3DeleteGroupResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderDeleteGroupAsync(@javax.annotation.Nullable List<Integer> groupIds, final ApiCallback<Groupbuilderv3DeleteGroupResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderDeleteGroupValidateBeforeCall(groupIds, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3DeleteGroupResponse>(){}.getType();
@@ -483,13 +495,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderEditGroupCall(Integer groupId, Groupbuilderv3EditGroupRequest groupbuilderv3EditGroupRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderEditGroupCall(@javax.annotation.Nonnull Integer groupId, @javax.annotation.Nonnull Groupbuilderv3EditGroupRequest groupbuilderv3EditGroupRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -536,7 +549,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderEditGroupValidateBeforeCall(Integer groupId, Groupbuilderv3EditGroupRequest groupbuilderv3EditGroupRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderEditGroupValidateBeforeCall(@javax.annotation.Nonnull Integer groupId, @javax.annotation.Nonnull Groupbuilderv3EditGroupRequest groupbuilderv3EditGroupRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
             throw new ApiException("Missing the required parameter 'groupId' when calling groupBuilderEditGroup(Async)");
@@ -559,13 +572,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3EditGroupResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3EditGroupResponse groupBuilderEditGroup(Integer groupId, Groupbuilderv3EditGroupRequest groupbuilderv3EditGroupRequest) throws ApiException {
+    public Groupbuilderv3EditGroupResponse groupBuilderEditGroup(@javax.annotation.Nonnull Integer groupId, @javax.annotation.Nonnull Groupbuilderv3EditGroupRequest groupbuilderv3EditGroupRequest) throws ApiException {
         ApiResponse<Groupbuilderv3EditGroupResponse> localVarResp = groupBuilderEditGroupWithHttpInfo(groupId, groupbuilderv3EditGroupRequest);
         return localVarResp.getData();
     }
@@ -578,13 +592,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3EditGroupResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3EditGroupResponse> groupBuilderEditGroupWithHttpInfo(Integer groupId, Groupbuilderv3EditGroupRequest groupbuilderv3EditGroupRequest) throws ApiException {
+    public ApiResponse<Groupbuilderv3EditGroupResponse> groupBuilderEditGroupWithHttpInfo(@javax.annotation.Nonnull Integer groupId, @javax.annotation.Nonnull Groupbuilderv3EditGroupRequest groupbuilderv3EditGroupRequest) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderEditGroupValidateBeforeCall(groupId, groupbuilderv3EditGroupRequest, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3EditGroupResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -599,13 +614,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderEditGroupAsync(Integer groupId, Groupbuilderv3EditGroupRequest groupbuilderv3EditGroupRequest, final ApiCallback<Groupbuilderv3EditGroupResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderEditGroupAsync(@javax.annotation.Nonnull Integer groupId, @javax.annotation.Nonnull Groupbuilderv3EditGroupRequest groupbuilderv3EditGroupRequest, final ApiCallback<Groupbuilderv3EditGroupResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderEditGroupValidateBeforeCall(groupId, groupbuilderv3EditGroupRequest, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3EditGroupResponse>(){}.getType();
@@ -619,13 +635,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderExportGroupCall(Groupbuilderv3GetExportGroupRequest groupbuilderv3GetExportGroupRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderExportGroupCall(@javax.annotation.Nonnull Groupbuilderv3GetExportGroupRequest groupbuilderv3GetExportGroupRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -671,7 +688,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderExportGroupValidateBeforeCall(Groupbuilderv3GetExportGroupRequest groupbuilderv3GetExportGroupRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderExportGroupValidateBeforeCall(@javax.annotation.Nonnull Groupbuilderv3GetExportGroupRequest groupbuilderv3GetExportGroupRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'groupbuilderv3GetExportGroupRequest' is set
         if (groupbuilderv3GetExportGroupRequest == null) {
             throw new ApiException("Missing the required parameter 'groupbuilderv3GetExportGroupRequest' when calling groupBuilderExportGroup(Async)");
@@ -688,13 +705,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3GetExportGroupResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3GetExportGroupResponse groupBuilderExportGroup(Groupbuilderv3GetExportGroupRequest groupbuilderv3GetExportGroupRequest) throws ApiException {
+    public Groupbuilderv3GetExportGroupResponse groupBuilderExportGroup(@javax.annotation.Nonnull Groupbuilderv3GetExportGroupRequest groupbuilderv3GetExportGroupRequest) throws ApiException {
         ApiResponse<Groupbuilderv3GetExportGroupResponse> localVarResp = groupBuilderExportGroupWithHttpInfo(groupbuilderv3GetExportGroupRequest);
         return localVarResp.getData();
     }
@@ -706,13 +724,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3GetExportGroupResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3GetExportGroupResponse> groupBuilderExportGroupWithHttpInfo(Groupbuilderv3GetExportGroupRequest groupbuilderv3GetExportGroupRequest) throws ApiException {
+    public ApiResponse<Groupbuilderv3GetExportGroupResponse> groupBuilderExportGroupWithHttpInfo(@javax.annotation.Nonnull Groupbuilderv3GetExportGroupRequest groupbuilderv3GetExportGroupRequest) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderExportGroupValidateBeforeCall(groupbuilderv3GetExportGroupRequest, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetExportGroupResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -726,13 +745,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderExportGroupAsync(Groupbuilderv3GetExportGroupRequest groupbuilderv3GetExportGroupRequest, final ApiCallback<Groupbuilderv3GetExportGroupResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderExportGroupAsync(@javax.annotation.Nonnull Groupbuilderv3GetExportGroupRequest groupbuilderv3GetExportGroupRequest, final ApiCallback<Groupbuilderv3GetExportGroupResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderExportGroupValidateBeforeCall(groupbuilderv3GetExportGroupRequest, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetExportGroupResponse>(){}.getType();
@@ -748,13 +768,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderGetGroupDetailsCall(Integer groupId, String filter, String order, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderGetGroupDetailsCall(@javax.annotation.Nonnull Integer groupId, @javax.annotation.Nullable String filter, @javax.annotation.Nullable String order, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -808,7 +829,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderGetGroupDetailsValidateBeforeCall(Integer groupId, String filter, String order, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderGetGroupDetailsValidateBeforeCall(@javax.annotation.Nonnull Integer groupId, @javax.annotation.Nullable String filter, @javax.annotation.Nullable String order, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
             throw new ApiException("Missing the required parameter 'groupId' when calling groupBuilderGetGroupDetails(Async)");
@@ -827,13 +848,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3GetGroupDetailResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3GetGroupDetailResponse groupBuilderGetGroupDetails(Integer groupId, String filter, String order) throws ApiException {
+    public Groupbuilderv3GetGroupDetailResponse groupBuilderGetGroupDetails(@javax.annotation.Nonnull Integer groupId, @javax.annotation.Nullable String filter, @javax.annotation.Nullable String order) throws ApiException {
         ApiResponse<Groupbuilderv3GetGroupDetailResponse> localVarResp = groupBuilderGetGroupDetailsWithHttpInfo(groupId, filter, order);
         return localVarResp.getData();
     }
@@ -847,13 +869,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3GetGroupDetailResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3GetGroupDetailResponse> groupBuilderGetGroupDetailsWithHttpInfo(Integer groupId, String filter, String order) throws ApiException {
+    public ApiResponse<Groupbuilderv3GetGroupDetailResponse> groupBuilderGetGroupDetailsWithHttpInfo(@javax.annotation.Nonnull Integer groupId, @javax.annotation.Nullable String filter, @javax.annotation.Nullable String order) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderGetGroupDetailsValidateBeforeCall(groupId, filter, order, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetGroupDetailResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -869,13 +892,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderGetGroupDetailsAsync(Integer groupId, String filter, String order, final ApiCallback<Groupbuilderv3GetGroupDetailResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderGetGroupDetailsAsync(@javax.annotation.Nonnull Integer groupId, @javax.annotation.Nullable String filter, @javax.annotation.Nullable String order, final ApiCallback<Groupbuilderv3GetGroupDetailResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderGetGroupDetailsValidateBeforeCall(groupId, filter, order, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetGroupDetailResponse>(){}.getType();
@@ -889,13 +913,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderGetGroupMembersCall(Groupbuilderv3GetGroupMembersRequest groupbuilderv3GetGroupMembersRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderGetGroupMembersCall(@javax.annotation.Nonnull Groupbuilderv3GetGroupMembersRequest groupbuilderv3GetGroupMembersRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -941,7 +966,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderGetGroupMembersValidateBeforeCall(Groupbuilderv3GetGroupMembersRequest groupbuilderv3GetGroupMembersRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderGetGroupMembersValidateBeforeCall(@javax.annotation.Nonnull Groupbuilderv3GetGroupMembersRequest groupbuilderv3GetGroupMembersRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'groupbuilderv3GetGroupMembersRequest' is set
         if (groupbuilderv3GetGroupMembersRequest == null) {
             throw new ApiException("Missing the required parameter 'groupbuilderv3GetGroupMembersRequest' when calling groupBuilderGetGroupMembers(Async)");
@@ -958,13 +983,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3GetGroupMembersResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3GetGroupMembersResponse groupBuilderGetGroupMembers(Groupbuilderv3GetGroupMembersRequest groupbuilderv3GetGroupMembersRequest) throws ApiException {
+    public Groupbuilderv3GetGroupMembersResponse groupBuilderGetGroupMembers(@javax.annotation.Nonnull Groupbuilderv3GetGroupMembersRequest groupbuilderv3GetGroupMembersRequest) throws ApiException {
         ApiResponse<Groupbuilderv3GetGroupMembersResponse> localVarResp = groupBuilderGetGroupMembersWithHttpInfo(groupbuilderv3GetGroupMembersRequest);
         return localVarResp.getData();
     }
@@ -976,13 +1002,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3GetGroupMembersResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3GetGroupMembersResponse> groupBuilderGetGroupMembersWithHttpInfo(Groupbuilderv3GetGroupMembersRequest groupbuilderv3GetGroupMembersRequest) throws ApiException {
+    public ApiResponse<Groupbuilderv3GetGroupMembersResponse> groupBuilderGetGroupMembersWithHttpInfo(@javax.annotation.Nonnull Groupbuilderv3GetGroupMembersRequest groupbuilderv3GetGroupMembersRequest) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderGetGroupMembersValidateBeforeCall(groupbuilderv3GetGroupMembersRequest, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetGroupMembersResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -996,13 +1023,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderGetGroupMembersAsync(Groupbuilderv3GetGroupMembersRequest groupbuilderv3GetGroupMembersRequest, final ApiCallback<Groupbuilderv3GetGroupMembersResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderGetGroupMembersAsync(@javax.annotation.Nonnull Groupbuilderv3GetGroupMembersRequest groupbuilderv3GetGroupMembersRequest, final ApiCallback<Groupbuilderv3GetGroupMembersResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderGetGroupMembersValidateBeforeCall(groupbuilderv3GetGroupMembersRequest, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetGroupMembersResponse>(){}.getType();
@@ -1016,13 +1044,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderGetGroupSyncMappingCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderGetGroupSyncMappingCall(@javax.annotation.Nullable String centralManagerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1071,7 +1100,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderGetGroupSyncMappingValidateBeforeCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderGetGroupSyncMappingValidateBeforeCall(@javax.annotation.Nullable String centralManagerId, final ApiCallback _callback) throws ApiException {
         return groupBuilderGetGroupSyncMappingCall(centralManagerId, _callback);
 
     }
@@ -1083,13 +1112,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3GetGroupSyncMappingResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3GetGroupSyncMappingResponse groupBuilderGetGroupSyncMapping(String centralManagerId) throws ApiException {
+    public Groupbuilderv3GetGroupSyncMappingResponse groupBuilderGetGroupSyncMapping(@javax.annotation.Nullable String centralManagerId) throws ApiException {
         ApiResponse<Groupbuilderv3GetGroupSyncMappingResponse> localVarResp = groupBuilderGetGroupSyncMappingWithHttpInfo(centralManagerId);
         return localVarResp.getData();
     }
@@ -1101,13 +1131,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3GetGroupSyncMappingResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3GetGroupSyncMappingResponse> groupBuilderGetGroupSyncMappingWithHttpInfo(String centralManagerId) throws ApiException {
+    public ApiResponse<Groupbuilderv3GetGroupSyncMappingResponse> groupBuilderGetGroupSyncMappingWithHttpInfo(@javax.annotation.Nullable String centralManagerId) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderGetGroupSyncMappingValidateBeforeCall(centralManagerId, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetGroupSyncMappingResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1121,13 +1152,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderGetGroupSyncMappingAsync(String centralManagerId, final ApiCallback<Groupbuilderv3GetGroupSyncMappingResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderGetGroupSyncMappingAsync(@javax.annotation.Nullable String centralManagerId, final ApiCallback<Groupbuilderv3GetGroupSyncMappingResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderGetGroupSyncMappingValidateBeforeCall(centralManagerId, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetGroupSyncMappingResponse>(){}.getType();
@@ -1140,7 +1172,8 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1202,7 +1235,8 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3GetGroupTypeMappingResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1219,7 +1253,8 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3GetGroupTypeMappingResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1238,7 +1273,8 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1257,7 +1293,8 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1319,7 +1356,8 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3GetGroupTypesResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1336,7 +1374,8 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3GetGroupTypesResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1355,7 +1394,8 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -1377,13 +1417,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderGetGroupsCall(Boolean doNotIncludeMemberCount, Boolean onlyFullAccess, Boolean nonNested, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderGetGroupsCall(@javax.annotation.Nullable Boolean doNotIncludeMemberCount, @javax.annotation.Nullable Boolean onlyFullAccess, @javax.annotation.Nullable Boolean nonNested, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1440,7 +1481,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderGetGroupsValidateBeforeCall(Boolean doNotIncludeMemberCount, Boolean onlyFullAccess, Boolean nonNested, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderGetGroupsValidateBeforeCall(@javax.annotation.Nullable Boolean doNotIncludeMemberCount, @javax.annotation.Nullable Boolean onlyFullAccess, @javax.annotation.Nullable Boolean nonNested, final ApiCallback _callback) throws ApiException {
         return groupBuilderGetGroupsCall(doNotIncludeMemberCount, onlyFullAccess, nonNested, _callback);
 
     }
@@ -1454,13 +1495,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3GetGroupsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3GetGroupsResponse groupBuilderGetGroups(Boolean doNotIncludeMemberCount, Boolean onlyFullAccess, Boolean nonNested) throws ApiException {
+    public Groupbuilderv3GetGroupsResponse groupBuilderGetGroups(@javax.annotation.Nullable Boolean doNotIncludeMemberCount, @javax.annotation.Nullable Boolean onlyFullAccess, @javax.annotation.Nullable Boolean nonNested) throws ApiException {
         ApiResponse<Groupbuilderv3GetGroupsResponse> localVarResp = groupBuilderGetGroupsWithHttpInfo(doNotIncludeMemberCount, onlyFullAccess, nonNested);
         return localVarResp.getData();
     }
@@ -1474,13 +1516,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3GetGroupsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3GetGroupsResponse> groupBuilderGetGroupsWithHttpInfo(Boolean doNotIncludeMemberCount, Boolean onlyFullAccess, Boolean nonNested) throws ApiException {
+    public ApiResponse<Groupbuilderv3GetGroupsResponse> groupBuilderGetGroupsWithHttpInfo(@javax.annotation.Nullable Boolean doNotIncludeMemberCount, @javax.annotation.Nullable Boolean onlyFullAccess, @javax.annotation.Nullable Boolean nonNested) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderGetGroupsValidateBeforeCall(doNotIncludeMemberCount, onlyFullAccess, nonNested, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetGroupsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1496,13 +1539,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderGetGroupsAsync(Boolean doNotIncludeMemberCount, Boolean onlyFullAccess, Boolean nonNested, final ApiCallback<Groupbuilderv3GetGroupsResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderGetGroupsAsync(@javax.annotation.Nullable Boolean doNotIncludeMemberCount, @javax.annotation.Nullable Boolean onlyFullAccess, @javax.annotation.Nullable Boolean nonNested, final ApiCallback<Groupbuilderv3GetGroupsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderGetGroupsValidateBeforeCall(doNotIncludeMemberCount, onlyFullAccess, nonNested, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetGroupsResponse>(){}.getType();
@@ -1516,13 +1560,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderGetImportGroupsCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderGetImportGroupsCall(@javax.annotation.Nullable String centralManagerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1571,7 +1616,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderGetImportGroupsValidateBeforeCall(String centralManagerId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderGetImportGroupsValidateBeforeCall(@javax.annotation.Nullable String centralManagerId, final ApiCallback _callback) throws ApiException {
         return groupBuilderGetImportGroupsCall(centralManagerId, _callback);
 
     }
@@ -1583,13 +1628,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3GetImportGroupsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3GetImportGroupsResponse groupBuilderGetImportGroups(String centralManagerId) throws ApiException {
+    public Groupbuilderv3GetImportGroupsResponse groupBuilderGetImportGroups(@javax.annotation.Nullable String centralManagerId) throws ApiException {
         ApiResponse<Groupbuilderv3GetImportGroupsResponse> localVarResp = groupBuilderGetImportGroupsWithHttpInfo(centralManagerId);
         return localVarResp.getData();
     }
@@ -1601,13 +1647,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3GetImportGroupsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3GetImportGroupsResponse> groupBuilderGetImportGroupsWithHttpInfo(String centralManagerId) throws ApiException {
+    public ApiResponse<Groupbuilderv3GetImportGroupsResponse> groupBuilderGetImportGroupsWithHttpInfo(@javax.annotation.Nullable String centralManagerId) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderGetImportGroupsValidateBeforeCall(centralManagerId, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetImportGroupsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1621,13 +1668,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderGetImportGroupsAsync(String centralManagerId, final ApiCallback<Groupbuilderv3GetImportGroupsResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderGetImportGroupsAsync(@javax.annotation.Nullable String centralManagerId, final ApiCallback<Groupbuilderv3GetImportGroupsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderGetImportGroupsValidateBeforeCall(centralManagerId, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetImportGroupsResponse>(){}.getType();
@@ -1641,13 +1689,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderImportGroupCall(Groupbuilderv3ImportGroupRequest groupbuilderv3ImportGroupRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderImportGroupCall(@javax.annotation.Nonnull Groupbuilderv3ImportGroupRequest groupbuilderv3ImportGroupRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1693,7 +1742,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderImportGroupValidateBeforeCall(Groupbuilderv3ImportGroupRequest groupbuilderv3ImportGroupRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderImportGroupValidateBeforeCall(@javax.annotation.Nonnull Groupbuilderv3ImportGroupRequest groupbuilderv3ImportGroupRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'groupbuilderv3ImportGroupRequest' is set
         if (groupbuilderv3ImportGroupRequest == null) {
             throw new ApiException("Missing the required parameter 'groupbuilderv3ImportGroupRequest' when calling groupBuilderImportGroup(Async)");
@@ -1710,13 +1759,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3ImportGroupResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3ImportGroupResponse groupBuilderImportGroup(Groupbuilderv3ImportGroupRequest groupbuilderv3ImportGroupRequest) throws ApiException {
+    public Groupbuilderv3ImportGroupResponse groupBuilderImportGroup(@javax.annotation.Nonnull Groupbuilderv3ImportGroupRequest groupbuilderv3ImportGroupRequest) throws ApiException {
         ApiResponse<Groupbuilderv3ImportGroupResponse> localVarResp = groupBuilderImportGroupWithHttpInfo(groupbuilderv3ImportGroupRequest);
         return localVarResp.getData();
     }
@@ -1728,13 +1778,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3ImportGroupResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3ImportGroupResponse> groupBuilderImportGroupWithHttpInfo(Groupbuilderv3ImportGroupRequest groupbuilderv3ImportGroupRequest) throws ApiException {
+    public ApiResponse<Groupbuilderv3ImportGroupResponse> groupBuilderImportGroupWithHttpInfo(@javax.annotation.Nonnull Groupbuilderv3ImportGroupRequest groupbuilderv3ImportGroupRequest) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderImportGroupValidateBeforeCall(groupbuilderv3ImportGroupRequest, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3ImportGroupResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1748,13 +1799,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderImportGroupAsync(Groupbuilderv3ImportGroupRequest groupbuilderv3ImportGroupRequest, final ApiCallback<Groupbuilderv3ImportGroupResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderImportGroupAsync(@javax.annotation.Nonnull Groupbuilderv3ImportGroupRequest groupbuilderv3ImportGroupRequest, final ApiCallback<Groupbuilderv3ImportGroupResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderImportGroupValidateBeforeCall(groupbuilderv3ImportGroupRequest, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3ImportGroupResponse>(){}.getType();
@@ -1768,13 +1820,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderRefreshGroupsCall(Groupbuilderv3RefreshGroupsRequest groupbuilderv3RefreshGroupsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderRefreshGroupsCall(@javax.annotation.Nonnull Groupbuilderv3RefreshGroupsRequest groupbuilderv3RefreshGroupsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1820,7 +1873,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderRefreshGroupsValidateBeforeCall(Groupbuilderv3RefreshGroupsRequest groupbuilderv3RefreshGroupsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderRefreshGroupsValidateBeforeCall(@javax.annotation.Nonnull Groupbuilderv3RefreshGroupsRequest groupbuilderv3RefreshGroupsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'groupbuilderv3RefreshGroupsRequest' is set
         if (groupbuilderv3RefreshGroupsRequest == null) {
             throw new ApiException("Missing the required parameter 'groupbuilderv3RefreshGroupsRequest' when calling groupBuilderRefreshGroups(Async)");
@@ -1837,13 +1890,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3RefreshGroupsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3RefreshGroupsResponse groupBuilderRefreshGroups(Groupbuilderv3RefreshGroupsRequest groupbuilderv3RefreshGroupsRequest) throws ApiException {
+    public Groupbuilderv3RefreshGroupsResponse groupBuilderRefreshGroups(@javax.annotation.Nonnull Groupbuilderv3RefreshGroupsRequest groupbuilderv3RefreshGroupsRequest) throws ApiException {
         ApiResponse<Groupbuilderv3RefreshGroupsResponse> localVarResp = groupBuilderRefreshGroupsWithHttpInfo(groupbuilderv3RefreshGroupsRequest);
         return localVarResp.getData();
     }
@@ -1855,13 +1909,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3RefreshGroupsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3RefreshGroupsResponse> groupBuilderRefreshGroupsWithHttpInfo(Groupbuilderv3RefreshGroupsRequest groupbuilderv3RefreshGroupsRequest) throws ApiException {
+    public ApiResponse<Groupbuilderv3RefreshGroupsResponse> groupBuilderRefreshGroupsWithHttpInfo(@javax.annotation.Nonnull Groupbuilderv3RefreshGroupsRequest groupbuilderv3RefreshGroupsRequest) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderRefreshGroupsValidateBeforeCall(groupbuilderv3RefreshGroupsRequest, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3RefreshGroupsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1875,13 +1930,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderRefreshGroupsAsync(Groupbuilderv3RefreshGroupsRequest groupbuilderv3RefreshGroupsRequest, final ApiCallback<Groupbuilderv3RefreshGroupsResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderRefreshGroupsAsync(@javax.annotation.Nonnull Groupbuilderv3RefreshGroupsRequest groupbuilderv3RefreshGroupsRequest, final ApiCallback<Groupbuilderv3RefreshGroupsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderRefreshGroupsValidateBeforeCall(groupbuilderv3RefreshGroupsRequest, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3RefreshGroupsResponse>(){}.getType();
@@ -1895,13 +1951,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderResetGroupsCall(Groupbuilderv3ResetGroupsRequest groupbuilderv3ResetGroupsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderResetGroupsCall(@javax.annotation.Nonnull Groupbuilderv3ResetGroupsRequest groupbuilderv3ResetGroupsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1947,7 +2004,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderResetGroupsValidateBeforeCall(Groupbuilderv3ResetGroupsRequest groupbuilderv3ResetGroupsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderResetGroupsValidateBeforeCall(@javax.annotation.Nonnull Groupbuilderv3ResetGroupsRequest groupbuilderv3ResetGroupsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'groupbuilderv3ResetGroupsRequest' is set
         if (groupbuilderv3ResetGroupsRequest == null) {
             throw new ApiException("Missing the required parameter 'groupbuilderv3ResetGroupsRequest' when calling groupBuilderResetGroups(Async)");
@@ -1964,13 +2021,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3ResetGroupsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3ResetGroupsResponse groupBuilderResetGroups(Groupbuilderv3ResetGroupsRequest groupbuilderv3ResetGroupsRequest) throws ApiException {
+    public Groupbuilderv3ResetGroupsResponse groupBuilderResetGroups(@javax.annotation.Nonnull Groupbuilderv3ResetGroupsRequest groupbuilderv3ResetGroupsRequest) throws ApiException {
         ApiResponse<Groupbuilderv3ResetGroupsResponse> localVarResp = groupBuilderResetGroupsWithHttpInfo(groupbuilderv3ResetGroupsRequest);
         return localVarResp.getData();
     }
@@ -1982,13 +2040,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3ResetGroupsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3ResetGroupsResponse> groupBuilderResetGroupsWithHttpInfo(Groupbuilderv3ResetGroupsRequest groupbuilderv3ResetGroupsRequest) throws ApiException {
+    public ApiResponse<Groupbuilderv3ResetGroupsResponse> groupBuilderResetGroupsWithHttpInfo(@javax.annotation.Nonnull Groupbuilderv3ResetGroupsRequest groupbuilderv3ResetGroupsRequest) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderResetGroupsValidateBeforeCall(groupbuilderv3ResetGroupsRequest, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3ResetGroupsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2002,13 +2061,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderResetGroupsAsync(Groupbuilderv3ResetGroupsRequest groupbuilderv3ResetGroupsRequest, final ApiCallback<Groupbuilderv3ResetGroupsResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderResetGroupsAsync(@javax.annotation.Nonnull Groupbuilderv3ResetGroupsRequest groupbuilderv3ResetGroupsRequest, final ApiCallback<Groupbuilderv3ResetGroupsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderResetGroupsValidateBeforeCall(groupbuilderv3ResetGroupsRequest, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3ResetGroupsResponse>(){}.getType();
@@ -2023,13 +2083,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderStoreGroupMembersGdpCall(String centralManagerId, Groupbuilderv3StoreGroupMembersGdpRequest groupbuilderv3StoreGroupMembersGdpRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderStoreGroupMembersGdpCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Groupbuilderv3StoreGroupMembersGdpRequest groupbuilderv3StoreGroupMembersGdpRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2076,7 +2137,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderStoreGroupMembersGdpValidateBeforeCall(String centralManagerId, Groupbuilderv3StoreGroupMembersGdpRequest groupbuilderv3StoreGroupMembersGdpRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderStoreGroupMembersGdpValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Groupbuilderv3StoreGroupMembersGdpRequest groupbuilderv3StoreGroupMembersGdpRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling groupBuilderStoreGroupMembersGdp(Async)");
@@ -2099,13 +2160,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3StoreGroupMembersGdpResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3StoreGroupMembersGdpResponse groupBuilderStoreGroupMembersGdp(String centralManagerId, Groupbuilderv3StoreGroupMembersGdpRequest groupbuilderv3StoreGroupMembersGdpRequest) throws ApiException {
+    public Groupbuilderv3StoreGroupMembersGdpResponse groupBuilderStoreGroupMembersGdp(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Groupbuilderv3StoreGroupMembersGdpRequest groupbuilderv3StoreGroupMembersGdpRequest) throws ApiException {
         ApiResponse<Groupbuilderv3StoreGroupMembersGdpResponse> localVarResp = groupBuilderStoreGroupMembersGdpWithHttpInfo(centralManagerId, groupbuilderv3StoreGroupMembersGdpRequest);
         return localVarResp.getData();
     }
@@ -2118,13 +2180,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3StoreGroupMembersGdpResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3StoreGroupMembersGdpResponse> groupBuilderStoreGroupMembersGdpWithHttpInfo(String centralManagerId, Groupbuilderv3StoreGroupMembersGdpRequest groupbuilderv3StoreGroupMembersGdpRequest) throws ApiException {
+    public ApiResponse<Groupbuilderv3StoreGroupMembersGdpResponse> groupBuilderStoreGroupMembersGdpWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Groupbuilderv3StoreGroupMembersGdpRequest groupbuilderv3StoreGroupMembersGdpRequest) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderStoreGroupMembersGdpValidateBeforeCall(centralManagerId, groupbuilderv3StoreGroupMembersGdpRequest, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3StoreGroupMembersGdpResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2139,13 +2202,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderStoreGroupMembersGdpAsync(String centralManagerId, Groupbuilderv3StoreGroupMembersGdpRequest groupbuilderv3StoreGroupMembersGdpRequest, final ApiCallback<Groupbuilderv3StoreGroupMembersGdpResponse> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderStoreGroupMembersGdpAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Groupbuilderv3StoreGroupMembersGdpRequest groupbuilderv3StoreGroupMembersGdpRequest, final ApiCallback<Groupbuilderv3StoreGroupMembersGdpResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderStoreGroupMembersGdpValidateBeforeCall(centralManagerId, groupbuilderv3StoreGroupMembersGdpRequest, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3StoreGroupMembersGdpResponse>(){}.getType();
@@ -2160,13 +2224,14 @@ public class GroupBuilderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderStoreGroupsGdpCall(String centralManagerId, Groupbuilderv3GetGroupsRequestGdp groupbuilderv3GetGroupsRequestGdp, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call groupBuilderStoreGroupsGdpCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Groupbuilderv3GetGroupsRequestGdp groupbuilderv3GetGroupsRequestGdp, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2213,7 +2278,7 @@ public class GroupBuilderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call groupBuilderStoreGroupsGdpValidateBeforeCall(String centralManagerId, Groupbuilderv3GetGroupsRequestGdp groupbuilderv3GetGroupsRequestGdp, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call groupBuilderStoreGroupsGdpValidateBeforeCall(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Groupbuilderv3GetGroupsRequestGdp groupbuilderv3GetGroupsRequestGdp, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'centralManagerId' is set
         if (centralManagerId == null) {
             throw new ApiException("Missing the required parameter 'centralManagerId' when calling groupBuilderStoreGroupsGdp(Async)");
@@ -2236,13 +2301,14 @@ public class GroupBuilderApi {
      * @return Groupbuilderv3GetGroupsResponseGdp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Groupbuilderv3GetGroupsResponseGdp groupBuilderStoreGroupsGdp(String centralManagerId, Groupbuilderv3GetGroupsRequestGdp groupbuilderv3GetGroupsRequestGdp) throws ApiException {
+    public Groupbuilderv3GetGroupsResponseGdp groupBuilderStoreGroupsGdp(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Groupbuilderv3GetGroupsRequestGdp groupbuilderv3GetGroupsRequestGdp) throws ApiException {
         ApiResponse<Groupbuilderv3GetGroupsResponseGdp> localVarResp = groupBuilderStoreGroupsGdpWithHttpInfo(centralManagerId, groupbuilderv3GetGroupsRequestGdp);
         return localVarResp.getData();
     }
@@ -2255,13 +2321,14 @@ public class GroupBuilderApi {
      * @return ApiResponse&lt;Groupbuilderv3GetGroupsResponseGdp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groupbuilderv3GetGroupsResponseGdp> groupBuilderStoreGroupsGdpWithHttpInfo(String centralManagerId, Groupbuilderv3GetGroupsRequestGdp groupbuilderv3GetGroupsRequestGdp) throws ApiException {
+    public ApiResponse<Groupbuilderv3GetGroupsResponseGdp> groupBuilderStoreGroupsGdpWithHttpInfo(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Groupbuilderv3GetGroupsRequestGdp groupbuilderv3GetGroupsRequestGdp) throws ApiException {
         okhttp3.Call localVarCall = groupBuilderStoreGroupsGdpValidateBeforeCall(centralManagerId, groupbuilderv3GetGroupsRequestGdp, null);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetGroupsResponseGdp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2276,13 +2343,14 @@ public class GroupBuilderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call groupBuilderStoreGroupsGdpAsync(String centralManagerId, Groupbuilderv3GetGroupsRequestGdp groupbuilderv3GetGroupsRequestGdp, final ApiCallback<Groupbuilderv3GetGroupsResponseGdp> _callback) throws ApiException {
+    public okhttp3.Call groupBuilderStoreGroupsGdpAsync(@javax.annotation.Nonnull String centralManagerId, @javax.annotation.Nonnull Groupbuilderv3GetGroupsRequestGdp groupbuilderv3GetGroupsRequestGdp, final ApiCallback<Groupbuilderv3GetGroupsResponseGdp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = groupBuilderStoreGroupsGdpValidateBeforeCall(centralManagerId, groupbuilderv3GetGroupsRequestGdp, _callback);
         Type localVarReturnType = new TypeToken<Groupbuilderv3GetGroupsResponseGdp>(){}.getType();

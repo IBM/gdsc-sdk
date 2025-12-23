@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activation_order** | **int** |  | [optional] 
-**activation_status** | [**Policybuilderv3ActivationStatus**](Policybuilderv3ActivationStatus.md) |  | [optional] 
+**activation_status** | [**Policybuilderv3ActivationStatus**](Policybuilderv3ActivationStatus.md) |  | [optional] [default to Policybuilderv3ActivationStatus.NOT_ACTIVATED]
 **activation_timestamp** | **datetime** |  | [optional] 
 **edge_id** | **str** |  | [optional] 
 

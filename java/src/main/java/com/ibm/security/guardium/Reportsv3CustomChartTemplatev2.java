@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CustomChartTemplatev2 is a custom VEGA chart template.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3CustomChartTemplatev2 {
   public static final String SERIALIZED_NAME_TEMPLATE_ID = "template_id";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
+  @javax.annotation.Nullable
   private String templateId;
 
   public static final String SERIALIZED_NAME_USER_ID = "user_id";
   @SerializedName(SERIALIZED_NAME_USER_ID)
+  @javax.annotation.Nullable
   private String userId;
 
   public static final String SERIALIZED_NAME_VEGA_DEFINITION = "vega_definition";
   @SerializedName(SERIALIZED_NAME_VEGA_DEFINITION)
+  @javax.annotation.Nullable
   private String vegaDefinition;
 
   public Reportsv3CustomChartTemplatev2() {
   }
 
-  public Reportsv3CustomChartTemplatev2 templateId(String templateId) {
+  public Reportsv3CustomChartTemplatev2 templateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
     return this;
   }
 
-   /**
+  /**
    * Get templateId
    * @return templateId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTemplateId() {
     return templateId;
   }
 
-  public void setTemplateId(String templateId) {
+  public void setTemplateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
   }
 
 
-  public Reportsv3CustomChartTemplatev2 userId(String userId) {
+  public Reportsv3CustomChartTemplatev2 userId(@javax.annotation.Nullable String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
+  /**
    * The creator of the template.
    * @return userId
-  **/
+   */
   @javax.annotation.Nullable
   public String getUserId() {
     return userId;
   }
 
-  public void setUserId(String userId) {
+  public void setUserId(@javax.annotation.Nullable String userId) {
     this.userId = userId;
   }
 
 
-  public Reportsv3CustomChartTemplatev2 vegaDefinition(String vegaDefinition) {
+  public Reportsv3CustomChartTemplatev2 vegaDefinition(@javax.annotation.Nullable String vegaDefinition) {
     this.vegaDefinition = vegaDefinition;
     return this;
   }
 
-   /**
+  /**
    * The VEGA chart template, as a stringified JSON.
    * @return vegaDefinition
-  **/
+   */
   @javax.annotation.Nullable
   public String getVegaDefinition() {
     return vegaDefinition;
   }
 
-  public void setVegaDefinition(String vegaDefinition) {
+  public void setVegaDefinition(@javax.annotation.Nullable String vegaDefinition) {
     this.vegaDefinition = vegaDefinition;
   }
 
@@ -171,25 +175,22 @@ public class Reportsv3CustomChartTemplatev2 {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("template_id");
-    openapiFields.add("user_id");
-    openapiFields.add("vega_definition");
+    openapiFields = new HashSet<String>(Arrays.asList("template_id", "user_id", "vega_definition"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3CustomChartTemplatev2
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3CustomChartTemplatev2
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3CustomChartTemplatev2.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3CustomChartTemplatev2 is not found in the empty JSON string", Reportsv3CustomChartTemplatev2.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3CustomChartTemplatev2 is not found in the empty JSON string", Reportsv3CustomChartTemplatev2.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Reportsv3CustomChartTemplatev2 {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3CustomChartTemplatev2.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3CustomChartTemplatev2` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3CustomChartTemplatev2` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("template_id") != null && !jsonObj.get("template_id").isJsonNull()) && !jsonObj.get("template_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
       }
       if ((jsonObj.get("user_id") != null && !jsonObj.get("user_id").isJsonNull()) && !jsonObj.get("user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user_id").toString()));
       }
       if ((jsonObj.get("vega_definition") != null && !jsonObj.get("vega_definition").isJsonNull()) && !jsonObj.get("vega_definition").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vega_definition` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vega_definition").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vega_definition` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vega_definition").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Reportsv3CustomChartTemplatev2 {
     }
   }
 
- /**
-  * Create an instance of Reportsv3CustomChartTemplatev2 given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3CustomChartTemplatev2
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3CustomChartTemplatev2
-  */
+  /**
+   * Create an instance of Reportsv3CustomChartTemplatev2 given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3CustomChartTemplatev2
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3CustomChartTemplatev2
+   */
   public static Reportsv3CustomChartTemplatev2 fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3CustomChartTemplatev2.class);
   }
 
- /**
-  * Convert an instance of Reportsv3CustomChartTemplatev2 to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3CustomChartTemplatev2 to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

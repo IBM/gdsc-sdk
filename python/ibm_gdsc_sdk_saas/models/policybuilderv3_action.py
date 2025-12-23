@@ -34,7 +34,7 @@ class Policybuilderv3Action(BaseModel):
     order: Optional[StrictInt] = Field(default=None, description="Order of the action being used in the rules.")
     parameters: Optional[List[Policybuilderv3ActionParameter]] = Field(default=None, description="Action parameters.")
     qr_defintion_id: Optional[StrictInt] = Field(default=None, description="Query rewrite definition id.")
-    type: Optional[Policybuilderv3ActionType] = None
+    type: Optional[Policybuilderv3ActionType] = Policybuilderv3ActionType.UNDEFINED_ACTIONTYPE
     ui_label: Optional[StrictStr] = Field(default=None, description="Ui label for the action.")
     __properties: ClassVar[List[str]] = ["action_name", "notifications", "order", "parameters", "qr_defintion_id", "type", "ui_label"]
 
@@ -80,16 +80,16 @@ class Policybuilderv3Action(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in notifications (list)
         _items = []
         if self.notifications:
-            for _item in self.notifications:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_notifications in self.notifications:
+                if _item_notifications:
+                    _items.append(_item_notifications.to_dict())
             _dict['notifications'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in parameters (list)
         _items = []
         if self.parameters:
-            for _item in self.parameters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_parameters in self.parameters:
+                if _item_parameters:
+                    _items.append(_item_parameters.to_dict())
             _dict['parameters'] = _items
         return _dict
 
@@ -108,7 +108,7 @@ class Policybuilderv3Action(BaseModel):
             "order": obj.get("order"),
             "parameters": [Policybuilderv3ActionParameter.from_dict(_item) for _item in obj["parameters"]] if obj.get("parameters") is not None else None,
             "qr_defintion_id": obj.get("qr_defintion_id"),
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Policybuilderv3ActionType.UNDEFINED_ACTIONTYPE,
             "ui_label": obj.get("ui_label")
         })
         return _obj

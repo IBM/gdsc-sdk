@@ -7,13 +7,13 @@ CheckAWSCredentialsRequest defines a request to verify AWS credentials.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **access_key_id** | **str** | AWS access key ID. | [optional] 
-**auth_type** | [**Streamsv3AuthType**](Streamsv3AuthType.md) |  | [optional] 
+**auth_type** | [**Streamsv3AuthType**](Streamsv3AuthType.md) |  | [optional] [default to Streamsv3AuthType.SECURITY_CREDENTIALS]
 **id** | **str** | Indetifier. | [optional] 
 **region** | **str** | AWS region. | [optional] 
 **role_arn** | **str** | IAM role ARN. | [optional] 
 **secret_key_id** | **str** | AWS secret key ID. | [optional] 
 **stream_name** | **str** | Name of stream. | [optional] 
-**stream_type** | [**Streamsv3StreamType**](Streamsv3StreamType.md) |  | [optional] 
+**stream_type** | [**Streamsv3StreamType**](Streamsv3StreamType.md) |  | [optional] [default to Streamsv3StreamType.AWS_KINESIS]
 
 ## Example
 

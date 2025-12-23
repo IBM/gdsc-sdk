@@ -27,7 +27,7 @@ class TestComplianceacceleratorv3Group(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Complianceacceleratorv3Group:
         """Test Complianceacceleratorv3Group
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Complianceacceleratorv3Group`

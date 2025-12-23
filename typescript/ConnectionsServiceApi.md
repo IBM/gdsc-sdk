@@ -44,14 +44,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsRequest = {
-  // Connectionsv3CreateConnectionsAccountsRequest
+const request: ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsRequest = {
+  
   connectionsv3CreateConnectionsAccountsRequest: {
     account: {
       accessKey: "accessKey_example",
@@ -65,9 +65,8 @@ let body:.ConnectionsServiceApiConnectionsServiceCreateConnectionsAccountsReques
   },
 };
 
-apiInstance.connectionsServiceCreateConnectionsAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceCreateConnectionsAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -108,14 +107,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest = {
-  // Connectionsv3CreateConnectionsConfigsRequest
+const request: ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest = {
+  
   connectionsv3CreateConnectionsConfigsRequest: {
     connectionId: "connectionId_example",
     streamConnection: {
@@ -160,9 +159,8 @@ let body:.ConnectionsServiceApiConnectionsServiceCreateConnectionsConfigsRequest
   },
 };
 
-apiInstance.connectionsServiceCreateConnectionsConfigs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceCreateConnectionsConfigs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -203,14 +201,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceCreatePluginRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceCreatePluginRequest = {
-  // Connectionsv3CreatePluginRequest
+const request: ConnectionsServiceApiConnectionsServiceCreatePluginRequest = {
+  
   connectionsv3CreatePluginRequest: {
     datasourceType: "datasourceType_example",
     developerName: "developerName_example",
@@ -232,9 +230,8 @@ let body:.ConnectionsServiceApiConnectionsServiceCreatePluginRequest = {
   },
 };
 
-apiInstance.connectionsServiceCreatePlugin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceCreatePlugin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -275,14 +272,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceCreateSettingsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceCreateSettingsRequest = {
-  // Connectionsv3CreateSettingsRequest
+const request: ConnectionsServiceApiConnectionsServiceCreateSettingsRequest = {
+  
   connectionsv3CreateSettingsRequest: {
     settings: [
       {
@@ -307,9 +304,8 @@ let body:.ConnectionsServiceApiConnectionsServiceCreateSettingsRequest = {
   },
 };
 
-apiInstance.connectionsServiceCreateSettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceCreateSettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -350,20 +346,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccountsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccountsRequest = {
-  // string | Account id.
+const request: ConnectionsServiceApiConnectionsServiceDeleteConnectionsAccountsRequest = {
+    // Account id.
   accountId: "account_id_example",
 };
 
-apiInstance.connectionsServiceDeleteConnectionsAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceDeleteConnectionsAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -404,20 +399,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigsRequest = {
-  // string | Connection id.
+const request: ConnectionsServiceApiConnectionsServiceDeleteConnectionsConfigsRequest = {
+    // Connection id.
   connectionId: "connection_id_example",
 };
 
-apiInstance.connectionsServiceDeleteConnectionsConfigs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceDeleteConnectionsConfigs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -458,20 +452,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest = {
-  // string | The connection id
+const request: ConnectionsServiceApiConnectionsServiceDeleteConnectorRequest = {
+    // The connection id
   connectionId: "connection_id_example",
 };
 
-apiInstance.connectionsServiceDeleteConnector(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceDeleteConnector(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -512,20 +505,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceDeletePluginRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceDeletePluginRequest = {
-  // string | plugin id
+const request: ConnectionsServiceApiConnectionsServiceDeletePluginRequest = {
+    // plugin id
   id: "id_example",
 };
 
-apiInstance.connectionsServiceDeletePlugin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceDeletePlugin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -566,16 +558,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceGeneratePackageRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceGeneratePackageRequest = {
-  // string | id
+const request: ConnectionsServiceApiConnectionsServiceGeneratePackageRequest = {
+    // id
   id: "id_example",
-  // Connectionsv3GeneratePackageRequest
+  
   connectionsv3GeneratePackageRequest: {
     datasourceType: "datasourceType_example",
     developerName: "developerName_example",
@@ -599,9 +591,8 @@ let body:.ConnectionsServiceApiConnectionsServiceGeneratePackageRequest = {
   },
 };
 
-apiInstance.connectionsServiceGeneratePackage(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGeneratePackage(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -643,17 +634,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetBannerState(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetBannerState(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -691,22 +680,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRequest = {
-  // string | Optional: account id. (optional)
+const request: ConnectionsServiceApiConnectionsServiceGetConnectionsAccountsRequest = {
+    // Optional: account id. (optional)
   accountId: "account_id_example",
-  // string | Optional: acccount access key. (optional)
+    // Optional: acccount access key. (optional)
   accessKey: "access_key_example",
 };
 
-apiInstance.connectionsServiceGetConnectionsAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetConnectionsAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -748,22 +736,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceGetConnectionsConfigsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceGetConnectionsConfigsRequest = {
-  // 'UNDEFINED_TYPE' | 'AWS' | 'AZURE' | 'UC' | 'STAP' | The type of connector. (optional)
+const request: ConnectionsServiceApiConnectionsServiceGetConnectionsConfigsRequest = {
+    // The type of connector. (optional)
   type: "UNDEFINED_TYPE",
-  // string | Optional: if connection id did not provide then return all connections. (optional)
+    // Optional: if connection id did not provide then return all connections. (optional)
   connectionId: "connection_id_example",
 };
 
-apiInstance.connectionsServiceGetConnectionsConfigs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetConnectionsConfigs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -805,14 +792,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersRequest = {
-  // Connectionsv3GetConnectionsWithFiltersRequest
+const request: ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersRequest = {
+  
   connectionsv3GetConnectionsWithFiltersRequest: {
     calculateFacets: true,
     calculatePresetStats: true,
@@ -836,9 +823,8 @@ let body:.ConnectionsServiceApiConnectionsServiceGetConnectionsWithFiltersReques
   },
 };
 
-apiInstance.connectionsServiceGetConnectionsWithFilters(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetConnectionsWithFilters(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -879,17 +865,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetConnectorsSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetConnectorsSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -927,17 +911,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetDataSources(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetDataSources(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -975,17 +957,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetGuardRecordFields(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetGuardRecordFields(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1023,17 +1003,15 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetHeaders(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetHeaders(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1071,20 +1049,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceGetPluginsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceGetPluginsRequest = {
-  // string | Optional: if no plug-in id is provided, returns list of all plug-ins. (optional)
+const request: ConnectionsServiceApiConnectionsServiceGetPluginsRequest = {
+    // Optional: if no plug-in id is provided, returns list of all plug-ins. (optional)
   id: "id_example",
 };
 
-apiInstance.connectionsServiceGetPlugins(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetPlugins(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1125,17 +1102,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.connectionsServiceGetSettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceGetSettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1173,14 +1148,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest = {
-  // Connectionsv3PartialUpdateConnectorsRequest
+const request: ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest = {
+  
   connectionsv3PartialUpdateConnectorsRequest: {
     connectors: [
       {
@@ -1202,9 +1177,8 @@ let body:.ConnectionsServiceApiConnectionsServicePartialUpdateConnectorsRequest 
   },
 };
 
-apiInstance.connectionsServicePartialUpdateConnectors(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServicePartialUpdateConnectors(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1245,14 +1219,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServicePostStapCommandRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServicePostStapCommandRequest = {
-  // Connectionsv3StapCommandRequest
+const request: ConnectionsServiceApiConnectionsServicePostStapCommandRequest = {
+  
   connectionsv3StapCommandRequest: {
     command: "command_example",
     operation: "STAP_REINITIALIZE_BUFFER",
@@ -1260,9 +1234,8 @@ let body:.ConnectionsServiceApiConnectionsServicePostStapCommandRequest = {
   },
 };
 
-apiInstance.connectionsServicePostStapCommand(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServicePostStapCommand(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1303,22 +1276,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdateBannerStateRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdateBannerStateRequest = {
-  // Connectionsv3UpdateBannerStateRequest
+const request: ConnectionsServiceApiConnectionsServiceUpdateBannerStateRequest = {
+  
   connectionsv3UpdateBannerStateRequest: {
     hideObjectVerbBanner: true,
   },
 };
 
-apiInstance.connectionsServiceUpdateBannerState(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdateBannerState(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1359,14 +1331,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsRequest = {
-  // Connectionsv3UpdateConnectionsAccountsRequest
+const request: ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsRequest = {
+  
   connectionsv3UpdateConnectionsAccountsRequest: {
     account: {
       accessKey: "accessKey_example",
@@ -1380,9 +1352,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectionsAccountsReques
   },
 };
 
-apiInstance.connectionsServiceUpdateConnectionsAccounts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdateConnectionsAccounts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1423,14 +1394,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest = {
-  // Connectionsv3UpdateConnectionsConfigsRequest
+const request: ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest = {
+  
   connectionsv3UpdateConnectionsConfigsRequest: {
     streamConnectionConfigs: [
       {
@@ -1484,9 +1455,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectionsConfigsRequest
   },
 };
 
-apiInstance.connectionsServiceUpdateConnectionsConfigs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdateConnectionsConfigs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1527,14 +1497,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest = {
-  // Connectionsv3UpdateConnectorsRequest
+const request: ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest = {
+  
   connectionsv3UpdateConnectorsRequest: {
     connectors: [
       {
@@ -1556,9 +1526,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdateConnectorsRequest = {
   },
 };
 
-apiInstance.connectionsServiceUpdateConnectors(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdateConnectors(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1599,16 +1568,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdatePluginRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdatePluginRequest = {
-  // string | id
+const request: ConnectionsServiceApiConnectionsServiceUpdatePluginRequest = {
+    // id
   id: "id_example",
-  // Connectionsv3UpdatePluginRequest
+  
   connectionsv3UpdatePluginRequest: {
     datasourceType: "datasourceType_example",
     developerName: "developerName_example",
@@ -1632,9 +1601,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdatePluginRequest = {
   },
 };
 
-apiInstance.connectionsServiceUpdatePlugin(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdatePlugin(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1676,14 +1644,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest = {
-  // Connectionsv3UpdateSettingsRequest
+const request: ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest = {
+  
   connectionsv3UpdateSettingsRequest: {
     settings: [
       {
@@ -1708,9 +1676,8 @@ let body:.ConnectionsServiceApiConnectionsServiceUpdateSettingsRequest = {
   },
 };
 
-apiInstance.connectionsServiceUpdateSettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceUpdateSettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1751,14 +1718,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest = {
-  // Connectionsv3ValidateAwsConnectionRequest
+const request: ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest = {
+  
   connectionsv3ValidateAwsConnectionRequest: {
     accessKey: "accessKey_example",
     bucketName: "bucketName_example",
@@ -1770,9 +1737,8 @@ let body:.ConnectionsServiceApiConnectionsServiceValidateAwsConnectionRequest = 
   },
 };
 
-apiInstance.connectionsServiceValidateAwsConnection(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceValidateAwsConnection(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1813,23 +1779,22 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest = {
-  // Connectionsv3ValidateAzureConnectionRequest
+const request: ConnectionsServiceApiConnectionsServiceValidateAzureConnectionRequest = {
+  
   connectionsv3ValidateAzureConnectionRequest: {
     eventHubName: "eventHubName_example",
     storageConnectionString: "storageConnectionString_example",
   },
 };
 
-apiInstance.connectionsServiceValidateAzureConnection(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceValidateAzureConnection(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1870,14 +1835,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, ConnectionsServiceApi } from '';
+import type { ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .ConnectionsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new ConnectionsServiceApi(configuration);
 
-let body:.ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest = {
-  // Connectionsv3ValidateGcpConnectionRequest
+const request: ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest = {
+  
   connectionsv3ValidateGcpConnectionRequest: {
     clientEmail: "clientEmail_example",
     privateKey: "privateKey_example",
@@ -1887,9 +1852,8 @@ let body:.ConnectionsServiceApiConnectionsServiceValidateGcpConnectionRequest = 
   },
 };
 
-apiInstance.connectionsServiceValidateGcpConnection(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.connectionsServiceValidateGcpConnection(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

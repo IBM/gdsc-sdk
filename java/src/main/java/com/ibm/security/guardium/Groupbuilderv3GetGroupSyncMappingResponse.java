@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Response object for group types mapping.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3GetGroupSyncMappingResponse {
   public static final String SERIALIZED_NAME_GROUP_MAP = "group_map";
   @SerializedName(SERIALIZED_NAME_GROUP_MAP)
+  @javax.annotation.Nullable
   private Map<String, Integer> groupMap = new HashMap<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Groupbuilderv3StatusResponseBase status;
 
   public Groupbuilderv3GetGroupSyncMappingResponse() {
   }
 
-  public Groupbuilderv3GetGroupSyncMappingResponse groupMap(Map<String, Integer> groupMap) {
+  public Groupbuilderv3GetGroupSyncMappingResponse groupMap(@javax.annotation.Nullable Map<String, Integer> groupMap) {
     this.groupMap = groupMap;
     return this;
   }
@@ -78,35 +81,35 @@ public class Groupbuilderv3GetGroupSyncMappingResponse {
     return this;
   }
 
-   /**
+  /**
    * Map of GDP to gi group type mapping objects.
    * @return groupMap
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Integer> getGroupMap() {
     return groupMap;
   }
 
-  public void setGroupMap(Map<String, Integer> groupMap) {
+  public void setGroupMap(@javax.annotation.Nullable Map<String, Integer> groupMap) {
     this.groupMap = groupMap;
   }
 
 
-  public Groupbuilderv3GetGroupSyncMappingResponse status(Groupbuilderv3StatusResponseBase status) {
+  public Groupbuilderv3GetGroupSyncMappingResponse status(@javax.annotation.Nullable Groupbuilderv3StatusResponseBase status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Groupbuilderv3StatusResponseBase getStatus() {
     return status;
   }
 
-  public void setStatus(Groupbuilderv3StatusResponseBase status) {
+  public void setStatus(@javax.annotation.Nullable Groupbuilderv3StatusResponseBase status) {
     this.status = status;
   }
 
@@ -157,24 +160,22 @@ public class Groupbuilderv3GetGroupSyncMappingResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("group_map");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("group_map", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3GetGroupSyncMappingResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3GetGroupSyncMappingResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3GetGroupSyncMappingResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3GetGroupSyncMappingResponse is not found in the empty JSON string", Groupbuilderv3GetGroupSyncMappingResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3GetGroupSyncMappingResponse is not found in the empty JSON string", Groupbuilderv3GetGroupSyncMappingResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Groupbuilderv3GetGroupSyncMappingResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3GetGroupSyncMappingResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3GetGroupSyncMappingResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3GetGroupSyncMappingResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -221,22 +222,22 @@ public class Groupbuilderv3GetGroupSyncMappingResponse {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3GetGroupSyncMappingResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3GetGroupSyncMappingResponse
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3GetGroupSyncMappingResponse
-  */
+  /**
+   * Create an instance of Groupbuilderv3GetGroupSyncMappingResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3GetGroupSyncMappingResponse
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3GetGroupSyncMappingResponse
+   */
   public static Groupbuilderv3GetGroupSyncMappingResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3GetGroupSyncMappingResponse.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3GetGroupSyncMappingResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3GetGroupSyncMappingResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -72,9 +72,9 @@ class Workflowv3GetTasksCountResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in counts (list)
         _items = []
         if self.counts:
-            for _item in self.counts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_counts in self.counts:
+                if _item_counts:
+                    _items.append(_item_counts.to_dict())
             _dict['counts'] = _items
         return _dict
 

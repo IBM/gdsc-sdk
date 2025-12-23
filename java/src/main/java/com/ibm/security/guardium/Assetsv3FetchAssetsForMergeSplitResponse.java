@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Response to Fetch Assets eligible for Merge or Split.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3FetchAssetsForMergeSplitResponse {
   public static final String SERIALIZED_NAME_ASSETS = "assets";
   @SerializedName(SERIALIZED_NAME_ASSETS)
+  @javax.annotation.Nullable
   private List<Assetsv3AssetsForMergeSplitResponse> assets = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ASSETS_COUNT = "assets_count";
   @SerializedName(SERIALIZED_NAME_ASSETS_COUNT)
+  @javax.annotation.Nullable
   private String assetsCount;
 
   public Assetsv3FetchAssetsForMergeSplitResponse() {
   }
 
-  public Assetsv3FetchAssetsForMergeSplitResponse assets(List<Assetsv3AssetsForMergeSplitResponse> assets) {
+  public Assetsv3FetchAssetsForMergeSplitResponse assets(@javax.annotation.Nullable List<Assetsv3AssetsForMergeSplitResponse> assets) {
     this.assets = assets;
     return this;
   }
@@ -78,35 +81,35 @@ public class Assetsv3FetchAssetsForMergeSplitResponse {
     return this;
   }
 
-   /**
+  /**
    * Get assets
    * @return assets
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3AssetsForMergeSplitResponse> getAssets() {
     return assets;
   }
 
-  public void setAssets(List<Assetsv3AssetsForMergeSplitResponse> assets) {
+  public void setAssets(@javax.annotation.Nullable List<Assetsv3AssetsForMergeSplitResponse> assets) {
     this.assets = assets;
   }
 
 
-  public Assetsv3FetchAssetsForMergeSplitResponse assetsCount(String assetsCount) {
+  public Assetsv3FetchAssetsForMergeSplitResponse assetsCount(@javax.annotation.Nullable String assetsCount) {
     this.assetsCount = assetsCount;
     return this;
   }
 
-   /**
+  /**
    * Get assetsCount
    * @return assetsCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getAssetsCount() {
     return assetsCount;
   }
 
-  public void setAssetsCount(String assetsCount) {
+  public void setAssetsCount(@javax.annotation.Nullable String assetsCount) {
     this.assetsCount = assetsCount;
   }
 
@@ -157,24 +160,22 @@ public class Assetsv3FetchAssetsForMergeSplitResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("assets");
-    openapiFields.add("assets_count");
+    openapiFields = new HashSet<String>(Arrays.asList("assets", "assets_count"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3FetchAssetsForMergeSplitResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3FetchAssetsForMergeSplitResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3FetchAssetsForMergeSplitResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3FetchAssetsForMergeSplitResponse is not found in the empty JSON string", Assetsv3FetchAssetsForMergeSplitResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3FetchAssetsForMergeSplitResponse is not found in the empty JSON string", Assetsv3FetchAssetsForMergeSplitResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Assetsv3FetchAssetsForMergeSplitResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3FetchAssetsForMergeSplitResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3FetchAssetsForMergeSplitResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3FetchAssetsForMergeSplitResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,7 +192,7 @@ public class Assetsv3FetchAssetsForMergeSplitResponse {
         if (jsonArrayassets != null) {
           // ensure the json data is an array
           if (!jsonObj.get("assets").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `assets` to be an array in the JSON string but got `%s`", jsonObj.get("assets").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assets` to be an array in the JSON string but got `%s`", jsonObj.get("assets").toString()));
           }
 
           // validate the optional field `assets` (array)
@@ -201,7 +202,7 @@ public class Assetsv3FetchAssetsForMergeSplitResponse {
         }
       }
       if ((jsonObj.get("assets_count") != null && !jsonObj.get("assets_count").isJsonNull()) && !jsonObj.get("assets_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `assets_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assets_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `assets_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assets_count").toString()));
       }
   }
 
@@ -234,22 +235,22 @@ public class Assetsv3FetchAssetsForMergeSplitResponse {
     }
   }
 
- /**
-  * Create an instance of Assetsv3FetchAssetsForMergeSplitResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3FetchAssetsForMergeSplitResponse
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3FetchAssetsForMergeSplitResponse
-  */
+  /**
+   * Create an instance of Assetsv3FetchAssetsForMergeSplitResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3FetchAssetsForMergeSplitResponse
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3FetchAssetsForMergeSplitResponse
+   */
   public static Assetsv3FetchAssetsForMergeSplitResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3FetchAssetsForMergeSplitResponse.class);
   }
 
- /**
-  * Convert an instance of Assetsv3FetchAssetsForMergeSplitResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3FetchAssetsForMergeSplitResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

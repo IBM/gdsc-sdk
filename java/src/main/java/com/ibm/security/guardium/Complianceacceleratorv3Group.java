@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,136 +42,145 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Group info for compliance.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Complianceacceleratorv3Group {
   public static final String SERIALIZED_NAME_DESC = "desc";
   @SerializedName(SERIALIZED_NAME_DESC)
+  @javax.annotation.Nullable
   private String desc;
 
   public static final String SERIALIZED_NAME_GROUP_TYPE_ID = "group_type_id";
   @SerializedName(SERIALIZED_NAME_GROUP_TYPE_ID)
+  @javax.annotation.Nullable
   private Integer groupTypeId;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Integer id;
 
   public static final String SERIALIZED_NAME_LDAP_CONFIG = "ldap_config";
   @SerializedName(SERIALIZED_NAME_LDAP_CONFIG)
+  @javax.annotation.Nullable
   private Groupbuilderv3LdapConfig ldapConfig;
 
   public static final String SERIALIZED_NAME_MEMBERS = "members";
   @SerializedName(SERIALIZED_NAME_MEMBERS)
+  @javax.annotation.Nullable
   private List<Groupbuilderv3GroupMember> members = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MEMBERS_TO_ADD = "members_to_add";
   @SerializedName(SERIALIZED_NAME_MEMBERS_TO_ADD)
+  @javax.annotation.Nullable
   private List<String> membersToAdd = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MEMBERS_TO_DELETE = "members_to_delete";
   @SerializedName(SERIALIZED_NAME_MEMBERS_TO_DELETE)
+  @javax.annotation.Nullable
   private List<Groupbuilderv3GroupMember> membersToDelete = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PARENT = "parent";
   @SerializedName(SERIALIZED_NAME_PARENT)
+  @javax.annotation.Nullable
   private Boolean parent;
 
   public Complianceacceleratorv3Group() {
   }
 
-  public Complianceacceleratorv3Group desc(String desc) {
+  public Complianceacceleratorv3Group desc(@javax.annotation.Nullable String desc) {
     this.desc = desc;
     return this;
   }
 
-   /**
+  /**
    * Get desc
    * @return desc
-  **/
+   */
   @javax.annotation.Nullable
   public String getDesc() {
     return desc;
   }
 
-  public void setDesc(String desc) {
+  public void setDesc(@javax.annotation.Nullable String desc) {
     this.desc = desc;
   }
 
 
-  public Complianceacceleratorv3Group groupTypeId(Integer groupTypeId) {
+  public Complianceacceleratorv3Group groupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
     return this;
   }
 
-   /**
+  /**
    * Group type ID.
    * @return groupTypeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupTypeId() {
     return groupTypeId;
   }
 
-  public void setGroupTypeId(Integer groupTypeId) {
+  public void setGroupTypeId(@javax.annotation.Nullable Integer groupTypeId) {
     this.groupTypeId = groupTypeId;
   }
 
 
-  public Complianceacceleratorv3Group id(Integer id) {
+  public Complianceacceleratorv3Group id(@javax.annotation.Nullable Integer id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Id of group.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(@javax.annotation.Nullable Integer id) {
     this.id = id;
   }
 
 
-  public Complianceacceleratorv3Group ldapConfig(Groupbuilderv3LdapConfig ldapConfig) {
+  public Complianceacceleratorv3Group ldapConfig(@javax.annotation.Nullable Groupbuilderv3LdapConfig ldapConfig) {
     this.ldapConfig = ldapConfig;
     return this;
   }
 
-   /**
+  /**
    * Get ldapConfig
    * @return ldapConfig
-  **/
+   */
   @javax.annotation.Nullable
   public Groupbuilderv3LdapConfig getLdapConfig() {
     return ldapConfig;
   }
 
-  public void setLdapConfig(Groupbuilderv3LdapConfig ldapConfig) {
+  public void setLdapConfig(@javax.annotation.Nullable Groupbuilderv3LdapConfig ldapConfig) {
     this.ldapConfig = ldapConfig;
   }
 
 
-  public Complianceacceleratorv3Group members(List<Groupbuilderv3GroupMember> members) {
+  public Complianceacceleratorv3Group members(@javax.annotation.Nullable List<Groupbuilderv3GroupMember> members) {
     this.members = members;
     return this;
   }
@@ -183,21 +193,21 @@ public class Complianceacceleratorv3Group {
     return this;
   }
 
-   /**
+  /**
    * Group members.
    * @return members
-  **/
+   */
   @javax.annotation.Nullable
   public List<Groupbuilderv3GroupMember> getMembers() {
     return members;
   }
 
-  public void setMembers(List<Groupbuilderv3GroupMember> members) {
+  public void setMembers(@javax.annotation.Nullable List<Groupbuilderv3GroupMember> members) {
     this.members = members;
   }
 
 
-  public Complianceacceleratorv3Group membersToAdd(List<String> membersToAdd) {
+  public Complianceacceleratorv3Group membersToAdd(@javax.annotation.Nullable List<String> membersToAdd) {
     this.membersToAdd = membersToAdd;
     return this;
   }
@@ -210,21 +220,21 @@ public class Complianceacceleratorv3Group {
     return this;
   }
 
-   /**
+  /**
    * Members of the groups to be stored.
    * @return membersToAdd
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getMembersToAdd() {
     return membersToAdd;
   }
 
-  public void setMembersToAdd(List<String> membersToAdd) {
+  public void setMembersToAdd(@javax.annotation.Nullable List<String> membersToAdd) {
     this.membersToAdd = membersToAdd;
   }
 
 
-  public Complianceacceleratorv3Group membersToDelete(List<Groupbuilderv3GroupMember> membersToDelete) {
+  public Complianceacceleratorv3Group membersToDelete(@javax.annotation.Nullable List<Groupbuilderv3GroupMember> membersToDelete) {
     this.membersToDelete = membersToDelete;
     return this;
   }
@@ -237,54 +247,54 @@ public class Complianceacceleratorv3Group {
     return this;
   }
 
-   /**
+  /**
    * Member ids to be deleted.
    * @return membersToDelete
-  **/
+   */
   @javax.annotation.Nullable
   public List<Groupbuilderv3GroupMember> getMembersToDelete() {
     return membersToDelete;
   }
 
-  public void setMembersToDelete(List<Groupbuilderv3GroupMember> membersToDelete) {
+  public void setMembersToDelete(@javax.annotation.Nullable List<Groupbuilderv3GroupMember> membersToDelete) {
     this.membersToDelete = membersToDelete;
   }
 
 
-  public Complianceacceleratorv3Group name(String name) {
+  public Complianceacceleratorv3Group name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of group.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Complianceacceleratorv3Group parent(Boolean parent) {
+  public Complianceacceleratorv3Group parent(@javax.annotation.Nullable Boolean parent) {
     this.parent = parent;
     return this;
   }
 
-   /**
+  /**
    * Get parent
    * @return parent
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getParent() {
     return parent;
   }
 
-  public void setParent(Boolean parent) {
+  public void setParent(@javax.annotation.Nullable Boolean parent) {
     this.parent = parent;
   }
 
@@ -349,31 +359,22 @@ public class Complianceacceleratorv3Group {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("desc");
-    openapiFields.add("group_type_id");
-    openapiFields.add("id");
-    openapiFields.add("ldap_config");
-    openapiFields.add("members");
-    openapiFields.add("members_to_add");
-    openapiFields.add("members_to_delete");
-    openapiFields.add("name");
-    openapiFields.add("parent");
+    openapiFields = new HashSet<String>(Arrays.asList("desc", "group_type_id", "id", "ldap_config", "members", "members_to_add", "members_to_delete", "name", "parent"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Group
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Group
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Complianceacceleratorv3Group.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Complianceacceleratorv3Group is not found in the empty JSON string", Complianceacceleratorv3Group.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Complianceacceleratorv3Group is not found in the empty JSON string", Complianceacceleratorv3Group.openapiRequiredFields.toString()));
         }
       }
 
@@ -381,12 +382,12 @@ public class Complianceacceleratorv3Group {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Complianceacceleratorv3Group.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Group` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Group` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("desc") != null && !jsonObj.get("desc").isJsonNull()) && !jsonObj.get("desc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("desc").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("desc").toString()));
       }
       // validate the optional field `ldap_config`
       if (jsonObj.get("ldap_config") != null && !jsonObj.get("ldap_config").isJsonNull()) {
@@ -397,7 +398,7 @@ public class Complianceacceleratorv3Group {
         if (jsonArraymembers != null) {
           // ensure the json data is an array
           if (!jsonObj.get("members").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `members` to be an array in the JSON string but got `%s`", jsonObj.get("members").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `members` to be an array in the JSON string but got `%s`", jsonObj.get("members").toString()));
           }
 
           // validate the optional field `members` (array)
@@ -408,14 +409,14 @@ public class Complianceacceleratorv3Group {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("members_to_add") != null && !jsonObj.get("members_to_add").isJsonNull() && !jsonObj.get("members_to_add").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `members_to_add` to be an array in the JSON string but got `%s`", jsonObj.get("members_to_add").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `members_to_add` to be an array in the JSON string but got `%s`", jsonObj.get("members_to_add").toString()));
       }
       if (jsonObj.get("members_to_delete") != null && !jsonObj.get("members_to_delete").isJsonNull()) {
         JsonArray jsonArraymembersToDelete = jsonObj.getAsJsonArray("members_to_delete");
         if (jsonArraymembersToDelete != null) {
           // ensure the json data is an array
           if (!jsonObj.get("members_to_delete").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `members_to_delete` to be an array in the JSON string but got `%s`", jsonObj.get("members_to_delete").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `members_to_delete` to be an array in the JSON string but got `%s`", jsonObj.get("members_to_delete").toString()));
           }
 
           // validate the optional field `members_to_delete` (array)
@@ -425,7 +426,7 @@ public class Complianceacceleratorv3Group {
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
   }
 
@@ -458,22 +459,22 @@ public class Complianceacceleratorv3Group {
     }
   }
 
- /**
-  * Create an instance of Complianceacceleratorv3Group given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Complianceacceleratorv3Group
-  * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Group
-  */
+  /**
+   * Create an instance of Complianceacceleratorv3Group given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Complianceacceleratorv3Group
+   * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Group
+   */
   public static Complianceacceleratorv3Group fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Complianceacceleratorv3Group.class);
   }
 
- /**
-  * Convert an instance of Complianceacceleratorv3Group to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Complianceacceleratorv3Group to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

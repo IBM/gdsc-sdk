@@ -1087,7 +1087,7 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ibm_gdsc_sdk_saas.PolicyBuilderApi(api_client)
-    rule_type = 'ACCESS' # str | Rule type integer to indicate rule type. (optional) (default to 'ACCESS')
+    rule_type = ACCESS # str | Rule type integer to indicate rule type. (optional) (default to ACCESS)
 
     try:
         # Summary: Get rule metadata Description: Return a list of rule parameters and actions to the caller.
@@ -1105,7 +1105,7 @@ with ibm_gdsc_sdk_saas.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rule_type** | **str**| Rule type integer to indicate rule type. | [optional] [default to &#39;ACCESS&#39;]
+ **rule_type** | **str**| Rule type integer to indicate rule type. | [optional] [default to ACCESS]
 
 ### Return type
 

@@ -43,9 +43,9 @@ class Riskanalyticscontrollerv3RiskEvent(BaseModel):
     pivot: Optional[Riskanalyticsenginev3Pivot] = None
     risk_id: Optional[StrictInt] = Field(default=None, description="Risk id.")
     severity: Optional[StrictInt] = Field(default=None, description="Severity of the risk.")
-    severity_level: Optional[Riskanalyticsenginev3SeverityLevel] = None
+    severity_level: Optional[Riskanalyticsenginev3SeverityLevel] = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL
     short_observations: Optional[List[Riskanalyticscontrollerv3ShortObservation]] = Field(default=None, description="Observations of the risk.")
-    status: Optional[Riskanalyticscontrollerv3Status] = None
+    status: Optional[Riskanalyticscontrollerv3Status] = Riskanalyticscontrollerv3Status.UNDEFINED_STATUS
     status_changed_by_user_name: Optional[StrictStr] = Field(default=None, description="Status changed by the user name.")
     to_date: Optional[datetime] = Field(default=None, description="Last updated date in format YYYY-MM-DDTHH:mm:ssZ.")
     __properties: ClassVar[List[str]] = ["categorization_confidence", "categorization_modified", "category_description", "classification", "classification_nls", "description", "emerging_risk", "from_date", "justification", "pivot", "risk_id", "severity", "severity_level", "short_observations", "status", "status_changed_by_user_name", "to_date"]
@@ -95,9 +95,9 @@ class Riskanalyticscontrollerv3RiskEvent(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in short_observations (list)
         _items = []
         if self.short_observations:
-            for _item in self.short_observations:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_short_observations in self.short_observations:
+                if _item_short_observations:
+                    _items.append(_item_short_observations.to_dict())
             _dict['short_observations'] = _items
         return _dict
 
@@ -123,9 +123,9 @@ class Riskanalyticscontrollerv3RiskEvent(BaseModel):
             "pivot": Riskanalyticsenginev3Pivot.from_dict(obj["pivot"]) if obj.get("pivot") is not None else None,
             "risk_id": obj.get("risk_id"),
             "severity": obj.get("severity"),
-            "severity_level": obj.get("severity_level"),
+            "severity_level": obj.get("severity_level") if obj.get("severity_level") is not None else Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL,
             "short_observations": [Riskanalyticscontrollerv3ShortObservation.from_dict(_item) for _item in obj["short_observations"]] if obj.get("short_observations") is not None else None,
-            "status": obj.get("status"),
+            "status": obj.get("status") if obj.get("status") is not None else Riskanalyticscontrollerv3Status.UNDEFINED_STATUS,
             "status_changed_by_user_name": obj.get("status_changed_by_user_name"),
             "to_date": obj.get("to_date")
         })

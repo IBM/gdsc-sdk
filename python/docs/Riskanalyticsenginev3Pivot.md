@@ -7,12 +7,12 @@ Pivot is the subject of the lead / risk.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **database** | **str** | Optional database - if pivot is db user / database. | [optional] 
-**database_source_field** | [**Riskanalyticsenginev3DatabaseSourceField**](Riskanalyticsenginev3DatabaseSourceField.md) |  | [optional] 
+**database_source_field** | [**Riskanalyticsenginev3DatabaseSourceField**](Riskanalyticsenginev3DatabaseSourceField.md) |  | [optional] [default to Riskanalyticsenginev3DatabaseSourceField.UNDEFINED]
 **db_user** | **str** | Optional db_user - if pivot is db user. | [optional] 
 **id** | **str** | Pivot id -  all pivot fields separated by semicolon. | [optional] 
 **os_user** | **str** | Optional os_user - if pivot is os user. | [optional] 
 **server_ip** | **str** | Optional server_ip - if pivot is db user / database. | [optional] 
-**type** | [**Riskanalyticsenginev3PivotType**](Riskanalyticsenginev3PivotType.md) |  | [optional] 
+**type** | [**Riskanalyticsenginev3PivotType**](Riskanalyticsenginev3PivotType.md) |  | [optional] [default to Riskanalyticsenginev3PivotType.UNDEFINED_PIVOT_TYPE]
 
 ## Example
 

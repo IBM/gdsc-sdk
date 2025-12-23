@@ -74,9 +74,9 @@ class Guardiumconnectorv3GetDatamartsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in extraction_profile (list)
         _items = []
         if self.extraction_profile:
-            for _item in self.extraction_profile:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extraction_profile in self.extraction_profile:
+                if _item_extraction_profile:
+                    _items.append(_item_extraction_profile.to_dict())
             _dict['extraction_profile'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

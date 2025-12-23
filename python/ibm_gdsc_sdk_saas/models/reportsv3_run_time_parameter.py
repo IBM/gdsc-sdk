@@ -30,8 +30,8 @@ class Reportsv3RunTimeParameter(BaseModel):
     """ # noqa: E501
     key: Optional[StrictStr] = Field(default=None, description="The run time parameter key (ReportFilter.value).")
     label: Optional[StrictStr] = Field(default=None, description="The run time parameter label.")
-    operator_type: Optional[Reportsv3OperatorType] = None
-    runtime_parameter_type: Optional[Reportsv3HeaderType] = None
+    operator_type: Optional[Reportsv3OperatorType] = Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE
+    runtime_parameter_type: Optional[Reportsv3HeaderType] = Reportsv3HeaderType.UNDEFINED_TYPE
     runtime_parameter_type_length: Optional[StrictInt] = Field(default=None, description="Runtime parameter's field type length.")
     value: Optional[StrictStr] = Field(default=None, description="Run time parameter values.")
     __properties: ClassVar[List[str]] = ["key", "label", "operator_type", "runtime_parameter_type", "runtime_parameter_type_length", "value"]
@@ -89,8 +89,8 @@ class Reportsv3RunTimeParameter(BaseModel):
         _obj = cls.model_validate({
             "key": obj.get("key"),
             "label": obj.get("label"),
-            "operator_type": obj.get("operator_type"),
-            "runtime_parameter_type": obj.get("runtime_parameter_type"),
+            "operator_type": obj.get("operator_type") if obj.get("operator_type") is not None else Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE,
+            "runtime_parameter_type": obj.get("runtime_parameter_type") if obj.get("runtime_parameter_type") is not None else Reportsv3HeaderType.UNDEFINED_TYPE,
             "runtime_parameter_type_length": obj.get("runtime_parameter_type_length"),
             "value": obj.get("value")
         })

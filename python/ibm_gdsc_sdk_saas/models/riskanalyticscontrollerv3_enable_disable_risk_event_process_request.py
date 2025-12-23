@@ -27,7 +27,7 @@ class Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest(BaseModel):
     """
     EnableDisableRiskEventProcessRequest is the request object for EnableDisableRiskEventProcess API.
     """ # noqa: E501
-    action: Optional[Riskanalyticscontrollerv3Action] = None
+    action: Optional[Riskanalyticscontrollerv3Action] = Riskanalyticscontrollerv3Action.UNDEFINED_ACTION_TYPE
     __properties: ClassVar[List[str]] = ["action"]
 
     model_config = ConfigDict(
@@ -81,7 +81,7 @@ class Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "action": obj.get("action")
+            "action": obj.get("action") if obj.get("action") is not None else Riskanalyticscontrollerv3Action.UNDEFINED_ACTION_TYPE
         })
         return _obj
 

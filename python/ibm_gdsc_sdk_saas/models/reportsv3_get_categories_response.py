@@ -72,9 +72,9 @@ class Reportsv3GetCategoriesResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in category_list (list)
         _items = []
         if self.category_list:
-            for _item in self.category_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_category_list in self.category_list:
+                if _item_category_list:
+                    _items.append(_item_category_list.to_dict())
             _dict['category_list'] = _items
         return _dict
 

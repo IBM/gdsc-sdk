@@ -6,12 +6,12 @@ ScheduledTaskSummary returns enough details for list view.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**audit_type** | [**Schedulerv3AuditType**](Schedulerv3AuditType.md) |  | [optional] 
+**audit_type** | [**Schedulerv3AuditType**](Schedulerv3AuditType.md) |  | [optional] [default to Schedulerv3AuditType.UNDEFINED_TYPE]
 **name** | **str** | Task name (usually the same as the report name). | [optional] 
 **report_id** | **str** |  | [optional] 
 **report_name** | **str** |  | [optional] 
 **scheduled_task_id** | **str** | Id for the task. | [optional] 
-**type** | [**Schedulerv3TaskType**](Schedulerv3TaskType.md) |  | [optional] 
+**type** | [**Schedulerv3TaskType**](Schedulerv3TaskType.md) |  | [optional] [default to Schedulerv3TaskType.UNDEFINED_JOBTYPE]
 
 ## Example
 

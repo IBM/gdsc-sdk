@@ -34,7 +34,7 @@ class Reportsv3Artifact(BaseModel):
     date_created: Optional[datetime] = None
     date_updated: Optional[datetime] = None
     description: Optional[StrictStr] = None
-    type: Optional[Reportsv3ArtifactType] = None
+    type: Optional[Reportsv3ArtifactType] = Reportsv3ArtifactType.ARTIFACT_UNKNOWN
     update_user_id: Optional[StrictStr] = None
     update_user_name: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["artifact_id", "create_user_id", "create_user_name", "date_created", "date_updated", "description", "type", "update_user_id", "update_user_name"]
@@ -96,7 +96,7 @@ class Reportsv3Artifact(BaseModel):
             "date_created": obj.get("date_created"),
             "date_updated": obj.get("date_updated"),
             "description": obj.get("description"),
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Reportsv3ArtifactType.ARTIFACT_UNKNOWN,
             "update_user_id": obj.get("update_user_id"),
             "update_user_name": obj.get("update_user_name")
         })

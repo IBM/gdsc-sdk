@@ -72,9 +72,9 @@ class Reportsv3GetRequirementsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in requirement (list)
         _items = []
         if self.requirement:
-            for _item in self.requirement:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_requirement in self.requirement:
+                if _item_requirement:
+                    _items.append(_item_requirement.to_dict())
             _dict['requirement'] = _items
         return _dict
 

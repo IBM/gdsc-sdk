@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UserSensitiveCategories
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class UserSensitiveCategories {
   public static final String SERIALIZED_NAME_ACCOUNT_IDS = "accountIds";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_IDS)
+  @javax.annotation.Nonnull
   private List<String> accountIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SENSITIVE_CATEGORIES = "sensitiveCategories";
   @SerializedName(SERIALIZED_NAME_SENSITIVE_CATEGORIES)
+  @javax.annotation.Nonnull
   private List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories = new ArrayList<>();
 
   public UserSensitiveCategories() {
   }
 
-  public UserSensitiveCategories accountIds(List<String> accountIds) {
+  public UserSensitiveCategories accountIds(@javax.annotation.Nonnull List<String> accountIds) {
     this.accountIds = accountIds;
     return this;
   }
@@ -78,21 +81,21 @@ public class UserSensitiveCategories {
     return this;
   }
 
-   /**
+  /**
    * Get accountIds
    * @return accountIds
-  **/
+   */
   @javax.annotation.Nonnull
   public List<String> getAccountIds() {
     return accountIds;
   }
 
-  public void setAccountIds(List<String> accountIds) {
+  public void setAccountIds(@javax.annotation.Nonnull List<String> accountIds) {
     this.accountIds = accountIds;
   }
 
 
-  public UserSensitiveCategories sensitiveCategories(List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
+  public UserSensitiveCategories sensitiveCategories(@javax.annotation.Nonnull List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
     this.sensitiveCategories = sensitiveCategories;
     return this;
   }
@@ -105,16 +108,16 @@ public class UserSensitiveCategories {
     return this;
   }
 
-   /**
+  /**
    * Get sensitiveCategories
    * @return sensitiveCategories
-  **/
+   */
   @javax.annotation.Nonnull
   public List<UserSensitiveCategoriesSensitiveCategoriesInner> getSensitiveCategories() {
     return sensitiveCategories;
   }
 
-  public void setSensitiveCategories(List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
+  public void setSensitiveCategories(@javax.annotation.Nonnull List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
     this.sensitiveCategories = sensitiveCategories;
   }
 
@@ -165,26 +168,22 @@ public class UserSensitiveCategories {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("accountIds");
-    openapiFields.add("sensitiveCategories");
+    openapiFields = new HashSet<String>(Arrays.asList("accountIds", "sensitiveCategories"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("accountIds");
-    openapiRequiredFields.add("sensitiveCategories");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("accountIds", "sensitiveCategories"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UserSensitiveCategories
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UserSensitiveCategories
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UserSensitiveCategories.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in UserSensitiveCategories is not found in the empty JSON string", UserSensitiveCategories.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in UserSensitiveCategories is not found in the empty JSON string", UserSensitiveCategories.openapiRequiredFields.toString()));
         }
       }
 
@@ -192,14 +191,14 @@ public class UserSensitiveCategories {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!UserSensitiveCategories.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UserSensitiveCategories` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `UserSensitiveCategories` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : UserSensitiveCategories.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -207,11 +206,11 @@ public class UserSensitiveCategories {
       if (jsonObj.get("accountIds") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("accountIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `accountIds` to be an array in the JSON string but got `%s`", jsonObj.get("accountIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `accountIds` to be an array in the JSON string but got `%s`", jsonObj.get("accountIds").toString()));
       }
       // ensure the json data is an array
       if (!jsonObj.get("sensitiveCategories").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitiveCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitiveCategories").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitiveCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitiveCategories").toString()));
       }
 
       JsonArray jsonArraysensitiveCategories = jsonObj.getAsJsonArray("sensitiveCategories");
@@ -250,22 +249,22 @@ public class UserSensitiveCategories {
     }
   }
 
- /**
-  * Create an instance of UserSensitiveCategories given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UserSensitiveCategories
-  * @throws IOException if the JSON string is invalid with respect to UserSensitiveCategories
-  */
+  /**
+   * Create an instance of UserSensitiveCategories given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UserSensitiveCategories
+   * @throws IOException if the JSON string is invalid with respect to UserSensitiveCategories
+   */
   public static UserSensitiveCategories fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UserSensitiveCategories.class);
   }
 
- /**
-  * Convert an instance of UserSensitiveCategories to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UserSensitiveCategories to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

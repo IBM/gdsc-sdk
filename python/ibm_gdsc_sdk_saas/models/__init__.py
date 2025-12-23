@@ -12,7 +12,6 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
 # import models into model package
 from ibm_gdsc_sdk_saas.models.access_type import AccessType
 from ibm_gdsc_sdk_saas.models.access_type_count_inner import AccessTypeCountInner
@@ -1328,3 +1327,4 @@ from ibm_gdsc_sdk_saas.models.workflowv3_update_tasks_request import Workflowv3U
 from ibm_gdsc_sdk_saas.models.workflowv3_update_tasks_response import Workflowv3UpdateTasksResponse
 from ibm_gdsc_sdk_saas.models.workflowv3_workflow_event import Workflowv3WorkflowEvent
 from ibm_gdsc_sdk_saas.models.workflowv3_workflow_event_response import Workflowv3WorkflowEventResponse
+

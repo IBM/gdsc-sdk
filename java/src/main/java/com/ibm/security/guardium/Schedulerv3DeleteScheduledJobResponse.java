@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,42 +38,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DeleteScheduledJobResponse message for delete v3/schedules/{schedule_id}.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3DeleteScheduledJobResponse {
   public static final String SERIALIZED_NAME_RESULT = "result";
   @SerializedName(SERIALIZED_NAME_RESULT)
+  @javax.annotation.Nullable
   private String result;
 
   public Schedulerv3DeleteScheduledJobResponse() {
   }
 
-  public Schedulerv3DeleteScheduledJobResponse result(String result) {
+  public Schedulerv3DeleteScheduledJobResponse result(@javax.annotation.Nullable String result) {
     this.result = result;
     return this;
   }
 
-   /**
+  /**
    * Get result
    * @return result
-  **/
+   */
   @javax.annotation.Nullable
   public String getResult() {
     return result;
   }
 
-  public void setResult(String result) {
+  public void setResult(@javax.annotation.Nullable String result) {
     this.result = result;
   }
 
@@ -121,23 +123,22 @@ public class Schedulerv3DeleteScheduledJobResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("result");
+    openapiFields = new HashSet<String>(Arrays.asList("result"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3DeleteScheduledJobResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3DeleteScheduledJobResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3DeleteScheduledJobResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3DeleteScheduledJobResponse is not found in the empty JSON string", Schedulerv3DeleteScheduledJobResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3DeleteScheduledJobResponse is not found in the empty JSON string", Schedulerv3DeleteScheduledJobResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -145,12 +146,12 @@ public class Schedulerv3DeleteScheduledJobResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3DeleteScheduledJobResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3DeleteScheduledJobResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3DeleteScheduledJobResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("result") != null && !jsonObj.get("result").isJsonNull()) && !jsonObj.get("result").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("result").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `result` to be a primitive type in the JSON string but got `%s`", jsonObj.get("result").toString()));
       }
   }
 
@@ -183,22 +184,22 @@ public class Schedulerv3DeleteScheduledJobResponse {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3DeleteScheduledJobResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3DeleteScheduledJobResponse
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3DeleteScheduledJobResponse
-  */
+  /**
+   * Create an instance of Schedulerv3DeleteScheduledJobResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3DeleteScheduledJobResponse
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3DeleteScheduledJobResponse
+   */
   public static Schedulerv3DeleteScheduledJobResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3DeleteScheduledJobResponse.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3DeleteScheduledJobResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3DeleteScheduledJobResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -75,9 +75,9 @@ class Vulmanagementv3Category(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in sub_category (list)
         _items = []
         if self.sub_category:
-            for _item in self.sub_category:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_sub_category in self.sub_category:
+                if _item_sub_category:
+                    _items.append(_item_sub_category.to_dict())
             _dict['sub_category'] = _items
         return _dict
 

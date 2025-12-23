@@ -88,9 +88,9 @@ class Reportsv3Grade(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in grade_threshold (list)
         _items = []
         if self.grade_threshold:
-            for _item in self.grade_threshold:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_grade_threshold in self.grade_threshold:
+                if _item_grade_threshold:
+                    _items.append(_item_grade_threshold.to_dict())
             _dict['grade_threshold'] = _items
         return _dict
 

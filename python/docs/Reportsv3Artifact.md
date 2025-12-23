@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **date_created** | **datetime** |  | [optional] 
 **date_updated** | **datetime** |  | [optional] 
 **description** | **str** |  | [optional] 
-**type** | [**Reportsv3ArtifactType**](Reportsv3ArtifactType.md) |  | [optional] 
+**type** | [**Reportsv3ArtifactType**](Reportsv3ArtifactType.md) |  | [optional] [default to Reportsv3ArtifactType.ARTIFACT_UNKNOWN]
 **update_user_id** | **str** |  | [optional] 
 **update_user_name** | **str** |  | [optional] 
 

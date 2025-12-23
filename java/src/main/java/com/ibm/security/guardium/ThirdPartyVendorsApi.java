@@ -87,7 +87,8 @@ public class ThirdPartyVendorsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -96,7 +97,7 @@ public class ThirdPartyVendorsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLinkedVendorCall(String vendorId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getLinkedVendorCall(@javax.annotation.Nonnull String vendorId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -142,7 +143,7 @@ public class ThirdPartyVendorsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getLinkedVendorValidateBeforeCall(String vendorId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getLinkedVendorValidateBeforeCall(@javax.annotation.Nonnull String vendorId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'vendorId' is set
         if (vendorId == null) {
             throw new ApiException("Missing the required parameter 'vendorId' when calling getLinkedVendor(Async)");
@@ -159,7 +160,8 @@ public class ThirdPartyVendorsApi {
      * @return List&lt;VendorSummary&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -168,7 +170,7 @@ public class ThirdPartyVendorsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public List<VendorSummary> getLinkedVendor(String vendorId) throws ApiException {
+    public List<VendorSummary> getLinkedVendor(@javax.annotation.Nonnull String vendorId) throws ApiException {
         ApiResponse<List<VendorSummary>> localVarResp = getLinkedVendorWithHttpInfo(vendorId);
         return localVarResp.getData();
     }
@@ -180,7 +182,8 @@ public class ThirdPartyVendorsApi {
      * @return ApiResponse&lt;List&lt;VendorSummary&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -189,7 +192,7 @@ public class ThirdPartyVendorsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<VendorSummary>> getLinkedVendorWithHttpInfo(String vendorId) throws ApiException {
+    public ApiResponse<List<VendorSummary>> getLinkedVendorWithHttpInfo(@javax.annotation.Nonnull String vendorId) throws ApiException {
         okhttp3.Call localVarCall = getLinkedVendorValidateBeforeCall(vendorId, null);
         Type localVarReturnType = new TypeToken<List<VendorSummary>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -203,7 +206,8 @@ public class ThirdPartyVendorsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -212,7 +216,7 @@ public class ThirdPartyVendorsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLinkedVendorAsync(String vendorId, final ApiCallback<List<VendorSummary>> _callback) throws ApiException {
+    public okhttp3.Call getLinkedVendorAsync(@javax.annotation.Nonnull String vendorId, final ApiCallback<List<VendorSummary>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getLinkedVendorValidateBeforeCall(vendorId, _callback);
         Type localVarReturnType = new TypeToken<List<VendorSummary>>(){}.getType();
@@ -226,13 +230,14 @@ public class ThirdPartyVendorsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getSingleLinkedVendorCall(String vendorId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSingleLinkedVendorCall(@javax.annotation.Nonnull String vendorId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -278,7 +283,7 @@ public class ThirdPartyVendorsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSingleLinkedVendorValidateBeforeCall(String vendorId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSingleLinkedVendorValidateBeforeCall(@javax.annotation.Nonnull String vendorId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'vendorId' is set
         if (vendorId == null) {
             throw new ApiException("Missing the required parameter 'vendorId' when calling getSingleLinkedVendor(Async)");
@@ -295,13 +300,14 @@ public class ThirdPartyVendorsApi {
      * @return LinkedVendor
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public LinkedVendor getSingleLinkedVendor(String vendorId) throws ApiException {
+    public LinkedVendor getSingleLinkedVendor(@javax.annotation.Nonnull String vendorId) throws ApiException {
         ApiResponse<LinkedVendor> localVarResp = getSingleLinkedVendorWithHttpInfo(vendorId);
         return localVarResp.getData();
     }
@@ -313,13 +319,14 @@ public class ThirdPartyVendorsApi {
      * @return ApiResponse&lt;LinkedVendor&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<LinkedVendor> getSingleLinkedVendorWithHttpInfo(String vendorId) throws ApiException {
+    public ApiResponse<LinkedVendor> getSingleLinkedVendorWithHttpInfo(@javax.annotation.Nonnull String vendorId) throws ApiException {
         okhttp3.Call localVarCall = getSingleLinkedVendorValidateBeforeCall(vendorId, null);
         Type localVarReturnType = new TypeToken<LinkedVendor>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -333,13 +340,14 @@ public class ThirdPartyVendorsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getSingleLinkedVendorAsync(String vendorId, final ApiCallback<LinkedVendor> _callback) throws ApiException {
+    public okhttp3.Call getSingleLinkedVendorAsync(@javax.annotation.Nonnull String vendorId, final ApiCallback<LinkedVendor> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getSingleLinkedVendorValidateBeforeCall(vendorId, _callback);
         Type localVarReturnType = new TypeToken<LinkedVendor>(){}.getType();
@@ -357,13 +365,14 @@ public class ThirdPartyVendorsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listLinkedVendorDataStoresCall(String vendorId, ListVendorDataStoresFilterParameter filter, ListLinkedVendorDataStoresSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listLinkedVendorDataStoresCall(@javax.annotation.Nonnull String vendorId, @javax.annotation.Nullable ListVendorDataStoresFilterParameter filter, @javax.annotation.Nullable ListLinkedVendorDataStoresSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -425,7 +434,7 @@ public class ThirdPartyVendorsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listLinkedVendorDataStoresValidateBeforeCall(String vendorId, ListVendorDataStoresFilterParameter filter, ListLinkedVendorDataStoresSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listLinkedVendorDataStoresValidateBeforeCall(@javax.annotation.Nonnull String vendorId, @javax.annotation.Nullable ListVendorDataStoresFilterParameter filter, @javax.annotation.Nullable ListLinkedVendorDataStoresSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'vendorId' is set
         if (vendorId == null) {
             throw new ApiException("Missing the required parameter 'vendorId' when calling listLinkedVendorDataStores(Async)");
@@ -446,13 +455,14 @@ public class ThirdPartyVendorsApi {
      * @return ListLinkedVendorDataStores200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ListLinkedVendorDataStores200Response listLinkedVendorDataStores(String vendorId, ListVendorDataStoresFilterParameter filter, ListLinkedVendorDataStoresSortParameter sort, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ListLinkedVendorDataStores200Response listLinkedVendorDataStores(@javax.annotation.Nonnull String vendorId, @javax.annotation.Nullable ListVendorDataStoresFilterParameter filter, @javax.annotation.Nullable ListLinkedVendorDataStoresSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         ApiResponse<ListLinkedVendorDataStores200Response> localVarResp = listLinkedVendorDataStoresWithHttpInfo(vendorId, filter, sort, pageSize, nextToken);
         return localVarResp.getData();
     }
@@ -468,13 +478,14 @@ public class ThirdPartyVendorsApi {
      * @return ApiResponse&lt;ListLinkedVendorDataStores200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ListLinkedVendorDataStores200Response> listLinkedVendorDataStoresWithHttpInfo(String vendorId, ListVendorDataStoresFilterParameter filter, ListLinkedVendorDataStoresSortParameter sort, BigDecimal pageSize, String nextToken) throws ApiException {
+    public ApiResponse<ListLinkedVendorDataStores200Response> listLinkedVendorDataStoresWithHttpInfo(@javax.annotation.Nonnull String vendorId, @javax.annotation.Nullable ListVendorDataStoresFilterParameter filter, @javax.annotation.Nullable ListLinkedVendorDataStoresSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken) throws ApiException {
         okhttp3.Call localVarCall = listLinkedVendorDataStoresValidateBeforeCall(vendorId, filter, sort, pageSize, nextToken, null);
         Type localVarReturnType = new TypeToken<ListLinkedVendorDataStores200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -492,13 +503,14 @@ public class ThirdPartyVendorsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listLinkedVendorDataStoresAsync(String vendorId, ListVendorDataStoresFilterParameter filter, ListLinkedVendorDataStoresSortParameter sort, BigDecimal pageSize, String nextToken, final ApiCallback<ListLinkedVendorDataStores200Response> _callback) throws ApiException {
+    public okhttp3.Call listLinkedVendorDataStoresAsync(@javax.annotation.Nonnull String vendorId, @javax.annotation.Nullable ListVendorDataStoresFilterParameter filter, @javax.annotation.Nullable ListLinkedVendorDataStoresSortParameter sort, @javax.annotation.Nullable BigDecimal pageSize, @javax.annotation.Nullable String nextToken, final ApiCallback<ListLinkedVendorDataStores200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listLinkedVendorDataStoresValidateBeforeCall(vendorId, filter, sort, pageSize, nextToken, _callback);
         Type localVarReturnType = new TypeToken<ListLinkedVendorDataStores200Response>(){}.getType();
@@ -511,7 +523,8 @@ public class ThirdPartyVendorsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -573,7 +586,8 @@ public class ThirdPartyVendorsApi {
      * @return List&lt;LinkedVendor&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -590,7 +604,8 @@ public class ThirdPartyVendorsApi {
      * @return ApiResponse&lt;List&lt;LinkedVendor&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -609,7 +624,8 @@ public class ThirdPartyVendorsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -629,13 +645,14 @@ public class ThirdPartyVendorsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listTrustedAssetsCall(ListTrusteesFilterParameter filter, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listTrustedAssetsCall(@javax.annotation.Nullable ListTrusteesFilterParameter filter, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -684,7 +701,7 @@ public class ThirdPartyVendorsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listTrustedAssetsValidateBeforeCall(ListTrusteesFilterParameter filter, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listTrustedAssetsValidateBeforeCall(@javax.annotation.Nullable ListTrusteesFilterParameter filter, final ApiCallback _callback) throws ApiException {
         return listTrustedAssetsCall(filter, _callback);
 
     }
@@ -696,13 +713,14 @@ public class ThirdPartyVendorsApi {
      * @return List&lt;Trustee&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public List<Trustee> listTrustedAssets(ListTrusteesFilterParameter filter) throws ApiException {
+    public List<Trustee> listTrustedAssets(@javax.annotation.Nullable ListTrusteesFilterParameter filter) throws ApiException {
         ApiResponse<List<Trustee>> localVarResp = listTrustedAssetsWithHttpInfo(filter);
         return localVarResp.getData();
     }
@@ -714,13 +732,14 @@ public class ThirdPartyVendorsApi {
      * @return ApiResponse&lt;List&lt;Trustee&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<List<Trustee>> listTrustedAssetsWithHttpInfo(ListTrusteesFilterParameter filter) throws ApiException {
+    public ApiResponse<List<Trustee>> listTrustedAssetsWithHttpInfo(@javax.annotation.Nullable ListTrusteesFilterParameter filter) throws ApiException {
         okhttp3.Call localVarCall = listTrustedAssetsValidateBeforeCall(filter, null);
         Type localVarReturnType = new TypeToken<List<Trustee>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -734,13 +753,14 @@ public class ThirdPartyVendorsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call listTrustedAssetsAsync(ListTrusteesFilterParameter filter, final ApiCallback<List<Trustee>> _callback) throws ApiException {
+    public okhttp3.Call listTrustedAssetsAsync(@javax.annotation.Nullable ListTrusteesFilterParameter filter, final ApiCallback<List<Trustee>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listTrustedAssetsValidateBeforeCall(filter, _callback);
         Type localVarReturnType = new TypeToken<List<Trustee>>(){}.getType();

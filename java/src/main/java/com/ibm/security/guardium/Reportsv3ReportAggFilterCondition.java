@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,157 +40,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ReportAggFilterCondition represents a report aggregate filter condition.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3ReportAggFilterCondition {
   public static final String SERIALIZED_NAME_AGGREGATION_TYPE = "aggregation_type";
   @SerializedName(SERIALIZED_NAME_AGGREGATION_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3AggregationType aggregationType = Reportsv3AggregationType.UNDEFINED_AGG_TYPE;
 
   public static final String SERIALIZED_NAME_HEADER_ID = "header_id";
   @SerializedName(SERIALIZED_NAME_HEADER_ID)
+  @javax.annotation.Nullable
   private String headerId;
 
   public static final String SERIALIZED_NAME_HEADER_NAME = "header_name";
   @SerializedName(SERIALIZED_NAME_HEADER_NAME)
+  @javax.annotation.Nullable
   private String headerName;
 
   public static final String SERIALIZED_NAME_OPERATOR_TYPE = "operator_type";
   @SerializedName(SERIALIZED_NAME_OPERATOR_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3OperatorType operatorType = Reportsv3OperatorType.UNDEFINED_OPERATOR_TYPE;
 
   public static final String SERIALIZED_NAME_TABLE_NAME = "table_name";
   @SerializedName(SERIALIZED_NAME_TABLE_NAME)
+  @javax.annotation.Nullable
   private String tableName;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private String value;
 
   public Reportsv3ReportAggFilterCondition() {
   }
 
-  public Reportsv3ReportAggFilterCondition aggregationType(Reportsv3AggregationType aggregationType) {
+  public Reportsv3ReportAggFilterCondition aggregationType(@javax.annotation.Nullable Reportsv3AggregationType aggregationType) {
     this.aggregationType = aggregationType;
     return this;
   }
 
-   /**
+  /**
    * Get aggregationType
    * @return aggregationType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3AggregationType getAggregationType() {
     return aggregationType;
   }
 
-  public void setAggregationType(Reportsv3AggregationType aggregationType) {
+  public void setAggregationType(@javax.annotation.Nullable Reportsv3AggregationType aggregationType) {
     this.aggregationType = aggregationType;
   }
 
 
-  public Reportsv3ReportAggFilterCondition headerId(String headerId) {
+  public Reportsv3ReportAggFilterCondition headerId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
     return this;
   }
 
-   /**
+  /**
    * Get headerId
    * @return headerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderId() {
     return headerId;
   }
 
-  public void setHeaderId(String headerId) {
+  public void setHeaderId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
   }
 
 
-  public Reportsv3ReportAggFilterCondition headerName(String headerName) {
+  public Reportsv3ReportAggFilterCondition headerName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
     return this;
   }
 
-   /**
+  /**
    * Get headerName
    * @return headerName
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderName() {
     return headerName;
   }
 
-  public void setHeaderName(String headerName) {
+  public void setHeaderName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
   }
 
 
-  public Reportsv3ReportAggFilterCondition operatorType(Reportsv3OperatorType operatorType) {
+  public Reportsv3ReportAggFilterCondition operatorType(@javax.annotation.Nullable Reportsv3OperatorType operatorType) {
     this.operatorType = operatorType;
     return this;
   }
 
-   /**
+  /**
    * Get operatorType
    * @return operatorType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3OperatorType getOperatorType() {
     return operatorType;
   }
 
-  public void setOperatorType(Reportsv3OperatorType operatorType) {
+  public void setOperatorType(@javax.annotation.Nullable Reportsv3OperatorType operatorType) {
     this.operatorType = operatorType;
   }
 
 
-  public Reportsv3ReportAggFilterCondition tableName(String tableName) {
+  public Reportsv3ReportAggFilterCondition tableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
     return this;
   }
 
-   /**
+  /**
    * Get tableName
    * @return tableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTableName() {
     return tableName;
   }
 
-  public void setTableName(String tableName) {
+  public void setTableName(@javax.annotation.Nullable String tableName) {
     this.tableName = tableName;
   }
 
 
-  public Reportsv3ReportAggFilterCondition value(String value) {
+  public Reportsv3ReportAggFilterCondition value(@javax.annotation.Nullable String value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * Get value
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public String getValue() {
     return value;
   }
 
-  public void setValue(String value) {
+  public void setValue(@javax.annotation.Nullable String value) {
     this.value = value;
   }
 
@@ -248,28 +255,22 @@ public class Reportsv3ReportAggFilterCondition {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("aggregation_type");
-    openapiFields.add("header_id");
-    openapiFields.add("header_name");
-    openapiFields.add("operator_type");
-    openapiFields.add("table_name");
-    openapiFields.add("value");
+    openapiFields = new HashSet<String>(Arrays.asList("aggregation_type", "header_id", "header_name", "operator_type", "table_name", "value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportAggFilterCondition
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3ReportAggFilterCondition
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3ReportAggFilterCondition.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3ReportAggFilterCondition is not found in the empty JSON string", Reportsv3ReportAggFilterCondition.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3ReportAggFilterCondition is not found in the empty JSON string", Reportsv3ReportAggFilterCondition.openapiRequiredFields.toString()));
         }
       }
 
@@ -277,7 +278,7 @@ public class Reportsv3ReportAggFilterCondition {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3ReportAggFilterCondition.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3ReportAggFilterCondition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3ReportAggFilterCondition` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -286,20 +287,20 @@ public class Reportsv3ReportAggFilterCondition {
         Reportsv3AggregationType.validateJsonElement(jsonObj.get("aggregation_type"));
       }
       if ((jsonObj.get("header_id") != null && !jsonObj.get("header_id").isJsonNull()) && !jsonObj.get("header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
       }
       if ((jsonObj.get("header_name") != null && !jsonObj.get("header_name").isJsonNull()) && !jsonObj.get("header_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
       }
       // validate the optional field `operator_type`
       if (jsonObj.get("operator_type") != null && !jsonObj.get("operator_type").isJsonNull()) {
         Reportsv3OperatorType.validateJsonElement(jsonObj.get("operator_type"));
       }
       if ((jsonObj.get("table_name") != null && !jsonObj.get("table_name").isJsonNull()) && !jsonObj.get("table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("table_name").toString()));
       }
       if ((jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) && !jsonObj.get("value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
       }
   }
 
@@ -332,22 +333,22 @@ public class Reportsv3ReportAggFilterCondition {
     }
   }
 
- /**
-  * Create an instance of Reportsv3ReportAggFilterCondition given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3ReportAggFilterCondition
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportAggFilterCondition
-  */
+  /**
+   * Create an instance of Reportsv3ReportAggFilterCondition given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3ReportAggFilterCondition
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3ReportAggFilterCondition
+   */
   public static Reportsv3ReportAggFilterCondition fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3ReportAggFilterCondition.class);
   }
 
- /**
-  * Convert an instance of Reportsv3ReportAggFilterCondition to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3ReportAggFilterCondition to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

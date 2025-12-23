@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**criticality** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] 
+**criticality** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] [default to Assetsv3Level.LEVEL_UNKNOWN]
 **endpoint_host** | [**List[Assetsv3ConnectionEdge]**](Assetsv3ConnectionEdge.md) |  | [optional] 
 **endpoint_ip** | [**List[Assetsv3ConnectionEdge]**](Assetsv3ConnectionEdge.md) |  | [optional] 
 **endpoint_name** | **str** |  | [optional] 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **os** | **str** |  | [optional] 
 **owner** | **List[str]** |  | [optional] 
 **resolution_key** | **str** |  | [optional] 
-**risk_level** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] 
+**risk_level** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] [default to Assetsv3Level.LEVEL_UNKNOWN]
 
 ## Example
 

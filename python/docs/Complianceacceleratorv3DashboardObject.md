@@ -7,7 +7,7 @@ Dashboard object.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | ID of dashboards. | [optional] 
-**type** | [**Complianceacceleratorv3DashboardType**](Complianceacceleratorv3DashboardType.md) |  | [optional] 
+**type** | [**Complianceacceleratorv3DashboardType**](Complianceacceleratorv3DashboardType.md) |  | [optional] [default to Complianceacceleratorv3DashboardType.UNDEFINED_DASH]
 
 ## Example
 

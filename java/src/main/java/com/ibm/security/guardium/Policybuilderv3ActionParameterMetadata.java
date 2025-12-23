@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,105 +40,111 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Action parameter metadata object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3ActionParameterMetadata {
   public static final String SERIALIZED_NAME_DEFAULT_VALUE = "default_value";
   @SerializedName(SERIALIZED_NAME_DEFAULT_VALUE)
+  @javax.annotation.Nullable
   private String defaultValue;
 
   public static final String SERIALIZED_NAME_MANDATORY = "mandatory";
   @SerializedName(SERIALIZED_NAME_MANDATORY)
+  @javax.annotation.Nullable
   private Boolean mandatory;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_POSSIBLE_VALUES = "possible_values";
   @SerializedName(SERIALIZED_NAME_POSSIBLE_VALUES)
+  @javax.annotation.Nullable
   private List<String> possibleValues = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SEQUENCE = "sequence";
   @SerializedName(SERIALIZED_NAME_SEQUENCE)
+  @javax.annotation.Nullable
   private Integer sequence;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public Policybuilderv3ActionParameterMetadata() {
   }
 
-  public Policybuilderv3ActionParameterMetadata defaultValue(String defaultValue) {
+  public Policybuilderv3ActionParameterMetadata defaultValue(@javax.annotation.Nullable String defaultValue) {
     this.defaultValue = defaultValue;
     return this;
   }
 
-   /**
+  /**
    * Default value of the parameter.
    * @return defaultValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getDefaultValue() {
     return defaultValue;
   }
 
-  public void setDefaultValue(String defaultValue) {
+  public void setDefaultValue(@javax.annotation.Nullable String defaultValue) {
     this.defaultValue = defaultValue;
   }
 
 
-  public Policybuilderv3ActionParameterMetadata mandatory(Boolean mandatory) {
+  public Policybuilderv3ActionParameterMetadata mandatory(@javax.annotation.Nullable Boolean mandatory) {
     this.mandatory = mandatory;
     return this;
   }
 
-   /**
+  /**
    * Flag indicating if the parameter is manadatory or not.
    * @return mandatory
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getMandatory() {
     return mandatory;
   }
 
-  public void setMandatory(Boolean mandatory) {
+  public void setMandatory(@javax.annotation.Nullable Boolean mandatory) {
     this.mandatory = mandatory;
   }
 
 
-  public Policybuilderv3ActionParameterMetadata name(String name) {
+  public Policybuilderv3ActionParameterMetadata name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of the parameter.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Policybuilderv3ActionParameterMetadata possibleValues(List<String> possibleValues) {
+  public Policybuilderv3ActionParameterMetadata possibleValues(@javax.annotation.Nullable List<String> possibleValues) {
     this.possibleValues = possibleValues;
     return this;
   }
@@ -150,54 +157,54 @@ public class Policybuilderv3ActionParameterMetadata {
     return this;
   }
 
-   /**
+  /**
    * Possible values of the parameter.
    * @return possibleValues
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getPossibleValues() {
     return possibleValues;
   }
 
-  public void setPossibleValues(List<String> possibleValues) {
+  public void setPossibleValues(@javax.annotation.Nullable List<String> possibleValues) {
     this.possibleValues = possibleValues;
   }
 
 
-  public Policybuilderv3ActionParameterMetadata sequence(Integer sequence) {
+  public Policybuilderv3ActionParameterMetadata sequence(@javax.annotation.Nullable Integer sequence) {
     this.sequence = sequence;
     return this;
   }
 
-   /**
+  /**
    * Sequence of the parameter.
    * @return sequence
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSequence() {
     return sequence;
   }
 
-  public void setSequence(Integer sequence) {
+  public void setSequence(@javax.annotation.Nullable Integer sequence) {
     this.sequence = sequence;
   }
 
 
-  public Policybuilderv3ActionParameterMetadata type(String type) {
+  public Policybuilderv3ActionParameterMetadata type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * TYpe of the Parameter like String, Number, Reg and so on.
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
@@ -256,28 +263,22 @@ public class Policybuilderv3ActionParameterMetadata {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("default_value");
-    openapiFields.add("mandatory");
-    openapiFields.add("name");
-    openapiFields.add("possible_values");
-    openapiFields.add("sequence");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("default_value", "mandatory", "name", "possible_values", "sequence", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3ActionParameterMetadata
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3ActionParameterMetadata
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3ActionParameterMetadata.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3ActionParameterMetadata is not found in the empty JSON string", Policybuilderv3ActionParameterMetadata.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3ActionParameterMetadata is not found in the empty JSON string", Policybuilderv3ActionParameterMetadata.openapiRequiredFields.toString()));
         }
       }
 
@@ -285,22 +286,22 @@ public class Policybuilderv3ActionParameterMetadata {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3ActionParameterMetadata.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3ActionParameterMetadata` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3ActionParameterMetadata` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("default_value") != null && !jsonObj.get("default_value").isJsonNull()) && !jsonObj.get("default_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `default_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("default_value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `default_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("default_value").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("possible_values") != null && !jsonObj.get("possible_values").isJsonNull() && !jsonObj.get("possible_values").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `possible_values` to be an array in the JSON string but got `%s`", jsonObj.get("possible_values").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `possible_values` to be an array in the JSON string but got `%s`", jsonObj.get("possible_values").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }
 
@@ -333,22 +334,22 @@ public class Policybuilderv3ActionParameterMetadata {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3ActionParameterMetadata given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3ActionParameterMetadata
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3ActionParameterMetadata
-  */
+  /**
+   * Create an instance of Policybuilderv3ActionParameterMetadata given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3ActionParameterMetadata
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3ActionParameterMetadata
+   */
   public static Policybuilderv3ActionParameterMetadata fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3ActionParameterMetadata.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3ActionParameterMetadata to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3ActionParameterMetadata to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

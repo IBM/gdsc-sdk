@@ -33,17 +33,17 @@ class Reportsv3ReportHeader(BaseModel):
     """
     Report header.
     """ # noqa: E501
-    aggregation_type: Optional[Reportsv3AggregationType] = None
+    aggregation_type: Optional[Reportsv3AggregationType] = Reportsv3AggregationType.UNDEFINED_AGG_TYPE
     field_name: Optional[Reportsv3FieldName] = None
     group_type_id: Optional[StrictInt] = Field(default=None, description="Group type id for the filter.")
-    header_data_type: Optional[Reportsv3HeaderDataType] = None
+    header_data_type: Optional[Reportsv3HeaderDataType] = Reportsv3HeaderDataType.UNDEFINED_REPORT_HEADER_TYPE
     header_description: Optional[Reportsv3HeaderDescription] = None
     header_id: Optional[StrictStr] = Field(default=None, description="Header ID.")
     header_name: Optional[StrictStr] = Field(default=None, description="The header name.")
-    header_type: Optional[Reportsv3HeaderType] = None
+    header_type: Optional[Reportsv3HeaderType] = Reportsv3HeaderType.UNDEFINED_TYPE
     header_type_length: Optional[StrictInt] = Field(default=None, description="Header type length.")
     literal: Optional[Reportsv3Literal] = None
-    order_by: Optional[Reportsv3OrderBy] = None
+    order_by: Optional[Reportsv3OrderBy] = Reportsv3OrderBy.UNDEFINED_ORDER_BY
     order_by_seq: Optional[StrictInt] = Field(default=None, description="Order by sequence.")
     schema_name: Optional[StrictStr] = Field(default=None, description="Schema name.")
     sequence: Optional[StrictInt] = Field(default=None, description="Column sequence number.")
@@ -110,17 +110,17 @@ class Reportsv3ReportHeader(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "aggregation_type": obj.get("aggregation_type"),
+            "aggregation_type": obj.get("aggregation_type") if obj.get("aggregation_type") is not None else Reportsv3AggregationType.UNDEFINED_AGG_TYPE,
             "field_name": Reportsv3FieldName.from_dict(obj["field_name"]) if obj.get("field_name") is not None else None,
             "group_type_id": obj.get("group_type_id"),
-            "header_data_type": obj.get("header_data_type"),
+            "header_data_type": obj.get("header_data_type") if obj.get("header_data_type") is not None else Reportsv3HeaderDataType.UNDEFINED_REPORT_HEADER_TYPE,
             "header_description": Reportsv3HeaderDescription.from_dict(obj["header_description"]) if obj.get("header_description") is not None else None,
             "header_id": obj.get("header_id"),
             "header_name": obj.get("header_name"),
-            "header_type": obj.get("header_type"),
+            "header_type": obj.get("header_type") if obj.get("header_type") is not None else Reportsv3HeaderType.UNDEFINED_TYPE,
             "header_type_length": obj.get("header_type_length"),
             "literal": Reportsv3Literal.from_dict(obj["literal"]) if obj.get("literal") is not None else None,
-            "order_by": obj.get("order_by"),
+            "order_by": obj.get("order_by") if obj.get("order_by") is not None else Reportsv3OrderBy.UNDEFINED_ORDER_BY,
             "order_by_seq": obj.get("order_by_seq"),
             "schema_name": obj.get("schema_name"),
             "sequence": obj.get("sequence"),

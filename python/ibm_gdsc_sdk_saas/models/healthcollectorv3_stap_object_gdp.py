@@ -85,9 +85,9 @@ class Healthcollectorv3StapObjectGdp(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in children (list)
         _items = []
         if self.children:
-            for _item in self.children:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_children in self.children:
+                if _item_children:
+                    _items.append(_item_children.to_dict())
             _dict['children'] = _items
         # override the default output from pydantic by calling `to_dict()` of details
         if self.details:

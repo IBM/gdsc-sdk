@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,226 +38,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmdatamanagerv3NetlocData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmdatamanagerv3NetlocData {
   public static final String SERIALIZED_NAME_NETLOC_CITY = "netloc_city";
   @SerializedName(SERIALIZED_NAME_NETLOC_CITY)
+  @javax.annotation.Nullable
   private String netlocCity;
 
   public static final String SERIALIZED_NAME_NETLOC_COUNTRY = "netloc_country";
   @SerializedName(SERIALIZED_NAME_NETLOC_COUNTRY)
+  @javax.annotation.Nullable
   private String netlocCountry;
 
   public static final String SERIALIZED_NAME_NETLOC_DATA_CENTER = "netloc_data_center";
   @SerializedName(SERIALIZED_NAME_NETLOC_DATA_CENTER)
+  @javax.annotation.Nullable
   private String netlocDataCenter;
 
   public static final String SERIALIZED_NAME_NETLOC_DNS = "netloc_dns";
   @SerializedName(SERIALIZED_NAME_NETLOC_DNS)
+  @javax.annotation.Nullable
   private String netlocDns;
 
   public static final String SERIALIZED_NAME_NETLOC_HOST = "netloc_host";
   @SerializedName(SERIALIZED_NAME_NETLOC_HOST)
+  @javax.annotation.Nullable
   private String netlocHost;
 
   public static final String SERIALIZED_NAME_NETLOC_PORT = "netloc_port";
   @SerializedName(SERIALIZED_NAME_NETLOC_PORT)
+  @javax.annotation.Nullable
   private String netlocPort;
 
   public static final String SERIALIZED_NAME_NETLOC_REGION = "netloc_region";
   @SerializedName(SERIALIZED_NAME_NETLOC_REGION)
+  @javax.annotation.Nullable
   private String netlocRegion;
 
   public static final String SERIALIZED_NAME_NETLOC_STATE_PROV = "netloc_state_prov";
   @SerializedName(SERIALIZED_NAME_NETLOC_STATE_PROV)
+  @javax.annotation.Nullable
   private String netlocStateProv;
 
   public static final String SERIALIZED_NAME_NETLOC_UUID = "netloc_uuid";
   @SerializedName(SERIALIZED_NAME_NETLOC_UUID)
+  @javax.annotation.Nullable
   private String netlocUuid;
 
   public Qspmdatamanagerv3NetlocData() {
   }
 
-  public Qspmdatamanagerv3NetlocData netlocCity(String netlocCity) {
+  public Qspmdatamanagerv3NetlocData netlocCity(@javax.annotation.Nullable String netlocCity) {
     this.netlocCity = netlocCity;
     return this;
   }
 
-   /**
+  /**
    * Get netlocCity
    * @return netlocCity
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetlocCity() {
     return netlocCity;
   }
 
-  public void setNetlocCity(String netlocCity) {
+  public void setNetlocCity(@javax.annotation.Nullable String netlocCity) {
     this.netlocCity = netlocCity;
   }
 
 
-  public Qspmdatamanagerv3NetlocData netlocCountry(String netlocCountry) {
+  public Qspmdatamanagerv3NetlocData netlocCountry(@javax.annotation.Nullable String netlocCountry) {
     this.netlocCountry = netlocCountry;
     return this;
   }
 
-   /**
+  /**
    * Get netlocCountry
    * @return netlocCountry
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetlocCountry() {
     return netlocCountry;
   }
 
-  public void setNetlocCountry(String netlocCountry) {
+  public void setNetlocCountry(@javax.annotation.Nullable String netlocCountry) {
     this.netlocCountry = netlocCountry;
   }
 
 
-  public Qspmdatamanagerv3NetlocData netlocDataCenter(String netlocDataCenter) {
+  public Qspmdatamanagerv3NetlocData netlocDataCenter(@javax.annotation.Nullable String netlocDataCenter) {
     this.netlocDataCenter = netlocDataCenter;
     return this;
   }
 
-   /**
+  /**
    * Get netlocDataCenter
    * @return netlocDataCenter
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetlocDataCenter() {
     return netlocDataCenter;
   }
 
-  public void setNetlocDataCenter(String netlocDataCenter) {
+  public void setNetlocDataCenter(@javax.annotation.Nullable String netlocDataCenter) {
     this.netlocDataCenter = netlocDataCenter;
   }
 
 
-  public Qspmdatamanagerv3NetlocData netlocDns(String netlocDns) {
+  public Qspmdatamanagerv3NetlocData netlocDns(@javax.annotation.Nullable String netlocDns) {
     this.netlocDns = netlocDns;
     return this;
   }
 
-   /**
+  /**
    * Get netlocDns
    * @return netlocDns
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetlocDns() {
     return netlocDns;
   }
 
-  public void setNetlocDns(String netlocDns) {
+  public void setNetlocDns(@javax.annotation.Nullable String netlocDns) {
     this.netlocDns = netlocDns;
   }
 
 
-  public Qspmdatamanagerv3NetlocData netlocHost(String netlocHost) {
+  public Qspmdatamanagerv3NetlocData netlocHost(@javax.annotation.Nullable String netlocHost) {
     this.netlocHost = netlocHost;
     return this;
   }
 
-   /**
+  /**
    * Get netlocHost
    * @return netlocHost
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetlocHost() {
     return netlocHost;
   }
 
-  public void setNetlocHost(String netlocHost) {
+  public void setNetlocHost(@javax.annotation.Nullable String netlocHost) {
     this.netlocHost = netlocHost;
   }
 
 
-  public Qspmdatamanagerv3NetlocData netlocPort(String netlocPort) {
+  public Qspmdatamanagerv3NetlocData netlocPort(@javax.annotation.Nullable String netlocPort) {
     this.netlocPort = netlocPort;
     return this;
   }
 
-   /**
+  /**
    * Get netlocPort
    * @return netlocPort
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetlocPort() {
     return netlocPort;
   }
 
-  public void setNetlocPort(String netlocPort) {
+  public void setNetlocPort(@javax.annotation.Nullable String netlocPort) {
     this.netlocPort = netlocPort;
   }
 
 
-  public Qspmdatamanagerv3NetlocData netlocRegion(String netlocRegion) {
+  public Qspmdatamanagerv3NetlocData netlocRegion(@javax.annotation.Nullable String netlocRegion) {
     this.netlocRegion = netlocRegion;
     return this;
   }
 
-   /**
+  /**
    * Get netlocRegion
    * @return netlocRegion
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetlocRegion() {
     return netlocRegion;
   }
 
-  public void setNetlocRegion(String netlocRegion) {
+  public void setNetlocRegion(@javax.annotation.Nullable String netlocRegion) {
     this.netlocRegion = netlocRegion;
   }
 
 
-  public Qspmdatamanagerv3NetlocData netlocStateProv(String netlocStateProv) {
+  public Qspmdatamanagerv3NetlocData netlocStateProv(@javax.annotation.Nullable String netlocStateProv) {
     this.netlocStateProv = netlocStateProv;
     return this;
   }
 
-   /**
+  /**
    * Get netlocStateProv
    * @return netlocStateProv
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetlocStateProv() {
     return netlocStateProv;
   }
 
-  public void setNetlocStateProv(String netlocStateProv) {
+  public void setNetlocStateProv(@javax.annotation.Nullable String netlocStateProv) {
     this.netlocStateProv = netlocStateProv;
   }
 
 
-  public Qspmdatamanagerv3NetlocData netlocUuid(String netlocUuid) {
+  public Qspmdatamanagerv3NetlocData netlocUuid(@javax.annotation.Nullable String netlocUuid) {
     this.netlocUuid = netlocUuid;
     return this;
   }
 
-   /**
+  /**
    * Get netlocUuid
    * @return netlocUuid
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetlocUuid() {
     return netlocUuid;
   }
 
-  public void setNetlocUuid(String netlocUuid) {
+  public void setNetlocUuid(@javax.annotation.Nullable String netlocUuid) {
     this.netlocUuid = netlocUuid;
   }
 
@@ -321,31 +331,22 @@ public class Qspmdatamanagerv3NetlocData {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("netloc_city");
-    openapiFields.add("netloc_country");
-    openapiFields.add("netloc_data_center");
-    openapiFields.add("netloc_dns");
-    openapiFields.add("netloc_host");
-    openapiFields.add("netloc_port");
-    openapiFields.add("netloc_region");
-    openapiFields.add("netloc_state_prov");
-    openapiFields.add("netloc_uuid");
+    openapiFields = new HashSet<String>(Arrays.asList("netloc_city", "netloc_country", "netloc_data_center", "netloc_dns", "netloc_host", "netloc_port", "netloc_region", "netloc_state_prov", "netloc_uuid"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3NetlocData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3NetlocData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmdatamanagerv3NetlocData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmdatamanagerv3NetlocData is not found in the empty JSON string", Qspmdatamanagerv3NetlocData.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmdatamanagerv3NetlocData is not found in the empty JSON string", Qspmdatamanagerv3NetlocData.openapiRequiredFields.toString()));
         }
       }
 
@@ -353,36 +354,36 @@ public class Qspmdatamanagerv3NetlocData {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmdatamanagerv3NetlocData.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3NetlocData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3NetlocData` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("netloc_city") != null && !jsonObj.get("netloc_city").isJsonNull()) && !jsonObj.get("netloc_city").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `netloc_city` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_city").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `netloc_city` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_city").toString()));
       }
       if ((jsonObj.get("netloc_country") != null && !jsonObj.get("netloc_country").isJsonNull()) && !jsonObj.get("netloc_country").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `netloc_country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_country").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `netloc_country` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_country").toString()));
       }
       if ((jsonObj.get("netloc_data_center") != null && !jsonObj.get("netloc_data_center").isJsonNull()) && !jsonObj.get("netloc_data_center").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `netloc_data_center` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_data_center").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `netloc_data_center` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_data_center").toString()));
       }
       if ((jsonObj.get("netloc_dns") != null && !jsonObj.get("netloc_dns").isJsonNull()) && !jsonObj.get("netloc_dns").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `netloc_dns` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_dns").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `netloc_dns` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_dns").toString()));
       }
       if ((jsonObj.get("netloc_host") != null && !jsonObj.get("netloc_host").isJsonNull()) && !jsonObj.get("netloc_host").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `netloc_host` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_host").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `netloc_host` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_host").toString()));
       }
       if ((jsonObj.get("netloc_port") != null && !jsonObj.get("netloc_port").isJsonNull()) && !jsonObj.get("netloc_port").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `netloc_port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_port").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `netloc_port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_port").toString()));
       }
       if ((jsonObj.get("netloc_region") != null && !jsonObj.get("netloc_region").isJsonNull()) && !jsonObj.get("netloc_region").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `netloc_region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_region").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `netloc_region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_region").toString()));
       }
       if ((jsonObj.get("netloc_state_prov") != null && !jsonObj.get("netloc_state_prov").isJsonNull()) && !jsonObj.get("netloc_state_prov").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `netloc_state_prov` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_state_prov").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `netloc_state_prov` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_state_prov").toString()));
       }
       if ((jsonObj.get("netloc_uuid") != null && !jsonObj.get("netloc_uuid").isJsonNull()) && !jsonObj.get("netloc_uuid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `netloc_uuid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_uuid").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `netloc_uuid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("netloc_uuid").toString()));
       }
   }
 
@@ -415,22 +416,22 @@ public class Qspmdatamanagerv3NetlocData {
     }
   }
 
- /**
-  * Create an instance of Qspmdatamanagerv3NetlocData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmdatamanagerv3NetlocData
-  * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3NetlocData
-  */
+  /**
+   * Create an instance of Qspmdatamanagerv3NetlocData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmdatamanagerv3NetlocData
+   * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3NetlocData
+   */
   public static Qspmdatamanagerv3NetlocData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmdatamanagerv3NetlocData.class);
   }
 
- /**
-  * Convert an instance of Qspmdatamanagerv3NetlocData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmdatamanagerv3NetlocData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

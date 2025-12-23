@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,48 +43,54 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetUCSetupResponse is the response object for getting the UC parameters of a specific Universal Connector.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Universalconnectormanagerv3GetUCSetupResponse {
   public static final String SERIALIZED_NAME_BINARIES = "binaries";
   @SerializedName(SERIALIZED_NAME_BINARIES)
+  @javax.annotation.Nullable
   private List<Universalconnectormanagerv3File> binaries = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CERTIFICATES = "certificates";
   @SerializedName(SERIALIZED_NAME_CERTIFICATES)
+  @javax.annotation.Nullable
   private Map<String, String> certificates = new HashMap<>();
 
   public static final String SERIALIZED_NAME_CONFIGURATIONS = "configurations";
   @SerializedName(SERIALIZED_NAME_CONFIGURATIONS)
+  @javax.annotation.Nullable
   private List<Universalconnectormanagerv3File> configurations = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CREDENTIALS = "credentials";
   @SerializedName(SERIALIZED_NAME_CREDENTIALS)
+  @javax.annotation.Nullable
   private Map<String, String> credentials = new HashMap<>();
 
   public static final String SERIALIZED_NAME_OFFLINE_PACKAGES = "offline_packages";
   @SerializedName(SERIALIZED_NAME_OFFLINE_PACKAGES)
+  @javax.annotation.Nullable
   private List<Universalconnectormanagerv3File> offlinePackages = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PIPELINE_TYPE = "pipeline_type";
   @SerializedName(SERIALIZED_NAME_PIPELINE_TYPE)
+  @javax.annotation.Nullable
   private String pipelineType;
 
   public Universalconnectormanagerv3GetUCSetupResponse() {
   }
 
-  public Universalconnectormanagerv3GetUCSetupResponse binaries(List<Universalconnectormanagerv3File> binaries) {
+  public Universalconnectormanagerv3GetUCSetupResponse binaries(@javax.annotation.Nullable List<Universalconnectormanagerv3File> binaries) {
     this.binaries = binaries;
     return this;
   }
@@ -96,21 +103,21 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
     return this;
   }
 
-   /**
+  /**
    * Binaries files (zip,rpm,jar, base64 encoded).
    * @return binaries
-  **/
+   */
   @javax.annotation.Nullable
   public List<Universalconnectormanagerv3File> getBinaries() {
     return binaries;
   }
 
-  public void setBinaries(List<Universalconnectormanagerv3File> binaries) {
+  public void setBinaries(@javax.annotation.Nullable List<Universalconnectormanagerv3File> binaries) {
     this.binaries = binaries;
   }
 
 
-  public Universalconnectormanagerv3GetUCSetupResponse certificates(Map<String, String> certificates) {
+  public Universalconnectormanagerv3GetUCSetupResponse certificates(@javax.annotation.Nullable Map<String, String> certificates) {
     this.certificates = certificates;
     return this;
   }
@@ -123,21 +130,21 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
     return this;
   }
 
-   /**
+  /**
    * Map of certificates (key is the name, value is the value itself).
    * @return certificates
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getCertificates() {
     return certificates;
   }
 
-  public void setCertificates(Map<String, String> certificates) {
+  public void setCertificates(@javax.annotation.Nullable Map<String, String> certificates) {
     this.certificates = certificates;
   }
 
 
-  public Universalconnectormanagerv3GetUCSetupResponse configurations(List<Universalconnectormanagerv3File> configurations) {
+  public Universalconnectormanagerv3GetUCSetupResponse configurations(@javax.annotation.Nullable List<Universalconnectormanagerv3File> configurations) {
     this.configurations = configurations;
     return this;
   }
@@ -150,21 +157,21 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
     return this;
   }
 
-   /**
+  /**
    * Configuration files for pipeline.
    * @return configurations
-  **/
+   */
   @javax.annotation.Nullable
   public List<Universalconnectormanagerv3File> getConfigurations() {
     return configurations;
   }
 
-  public void setConfigurations(List<Universalconnectormanagerv3File> configurations) {
+  public void setConfigurations(@javax.annotation.Nullable List<Universalconnectormanagerv3File> configurations) {
     this.configurations = configurations;
   }
 
 
-  public Universalconnectormanagerv3GetUCSetupResponse credentials(Map<String, String> credentials) {
+  public Universalconnectormanagerv3GetUCSetupResponse credentials(@javax.annotation.Nullable Map<String, String> credentials) {
     this.credentials = credentials;
     return this;
   }
@@ -177,21 +184,21 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
     return this;
   }
 
-   /**
+  /**
    * Map of credentials (key is the name, value is the value itself).
    * @return credentials
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getCredentials() {
     return credentials;
   }
 
-  public void setCredentials(Map<String, String> credentials) {
+  public void setCredentials(@javax.annotation.Nullable Map<String, String> credentials) {
     this.credentials = credentials;
   }
 
 
-  public Universalconnectormanagerv3GetUCSetupResponse offlinePackages(List<Universalconnectormanagerv3File> offlinePackages) {
+  public Universalconnectormanagerv3GetUCSetupResponse offlinePackages(@javax.annotation.Nullable List<Universalconnectormanagerv3File> offlinePackages) {
     this.offlinePackages = offlinePackages;
     return this;
   }
@@ -204,35 +211,35 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
     return this;
   }
 
-   /**
+  /**
    * Get offlinePackages
    * @return offlinePackages
-  **/
+   */
   @javax.annotation.Nullable
   public List<Universalconnectormanagerv3File> getOfflinePackages() {
     return offlinePackages;
   }
 
-  public void setOfflinePackages(List<Universalconnectormanagerv3File> offlinePackages) {
+  public void setOfflinePackages(@javax.annotation.Nullable List<Universalconnectormanagerv3File> offlinePackages) {
     this.offlinePackages = offlinePackages;
   }
 
 
-  public Universalconnectormanagerv3GetUCSetupResponse pipelineType(String pipelineType) {
+  public Universalconnectormanagerv3GetUCSetupResponse pipelineType(@javax.annotation.Nullable String pipelineType) {
     this.pipelineType = pipelineType;
     return this;
   }
 
-   /**
+  /**
    * Type of the pipeline (pull or push).
    * @return pipelineType
-  **/
+   */
   @javax.annotation.Nullable
   public String getPipelineType() {
     return pipelineType;
   }
 
-  public void setPipelineType(String pipelineType) {
+  public void setPipelineType(@javax.annotation.Nullable String pipelineType) {
     this.pipelineType = pipelineType;
   }
 
@@ -291,28 +298,22 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("binaries");
-    openapiFields.add("certificates");
-    openapiFields.add("configurations");
-    openapiFields.add("credentials");
-    openapiFields.add("offline_packages");
-    openapiFields.add("pipeline_type");
+    openapiFields = new HashSet<String>(Arrays.asList("binaries", "certificates", "configurations", "credentials", "offline_packages", "pipeline_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3GetUCSetupResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Universalconnectormanagerv3GetUCSetupResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Universalconnectormanagerv3GetUCSetupResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Universalconnectormanagerv3GetUCSetupResponse is not found in the empty JSON string", Universalconnectormanagerv3GetUCSetupResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Universalconnectormanagerv3GetUCSetupResponse is not found in the empty JSON string", Universalconnectormanagerv3GetUCSetupResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -320,7 +321,7 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Universalconnectormanagerv3GetUCSetupResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3GetUCSetupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Universalconnectormanagerv3GetUCSetupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -329,7 +330,7 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
         if (jsonArraybinaries != null) {
           // ensure the json data is an array
           if (!jsonObj.get("binaries").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `binaries` to be an array in the JSON string but got `%s`", jsonObj.get("binaries").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `binaries` to be an array in the JSON string but got `%s`", jsonObj.get("binaries").toString()));
           }
 
           // validate the optional field `binaries` (array)
@@ -343,7 +344,7 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
         if (jsonArrayconfigurations != null) {
           // ensure the json data is an array
           if (!jsonObj.get("configurations").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `configurations` to be an array in the JSON string but got `%s`", jsonObj.get("configurations").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `configurations` to be an array in the JSON string but got `%s`", jsonObj.get("configurations").toString()));
           }
 
           // validate the optional field `configurations` (array)
@@ -357,7 +358,7 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
         if (jsonArrayofflinePackages != null) {
           // ensure the json data is an array
           if (!jsonObj.get("offline_packages").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `offline_packages` to be an array in the JSON string but got `%s`", jsonObj.get("offline_packages").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `offline_packages` to be an array in the JSON string but got `%s`", jsonObj.get("offline_packages").toString()));
           }
 
           // validate the optional field `offline_packages` (array)
@@ -367,7 +368,7 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
         }
       }
       if ((jsonObj.get("pipeline_type") != null && !jsonObj.get("pipeline_type").isJsonNull()) && !jsonObj.get("pipeline_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `pipeline_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pipeline_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `pipeline_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pipeline_type").toString()));
       }
   }
 
@@ -400,22 +401,22 @@ public class Universalconnectormanagerv3GetUCSetupResponse {
     }
   }
 
- /**
-  * Create an instance of Universalconnectormanagerv3GetUCSetupResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Universalconnectormanagerv3GetUCSetupResponse
-  * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3GetUCSetupResponse
-  */
+  /**
+   * Create an instance of Universalconnectormanagerv3GetUCSetupResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Universalconnectormanagerv3GetUCSetupResponse
+   * @throws IOException if the JSON string is invalid with respect to Universalconnectormanagerv3GetUCSetupResponse
+   */
   public static Universalconnectormanagerv3GetUCSetupResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Universalconnectormanagerv3GetUCSetupResponse.class);
   }
 
- /**
-  * Convert an instance of Universalconnectormanagerv3GetUCSetupResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Universalconnectormanagerv3GetUCSetupResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,82 +44,87 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Notificationsv3PostNotificationRecordRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Notificationsv3PostNotificationRecordRequest {
   public static final String SERIALIZED_NAME_ORIGIN = "origin";
   @SerializedName(SERIALIZED_NAME_ORIGIN)
+  @javax.annotation.Nullable
   private Notificationsv3Origin origin = Notificationsv3Origin.UNDEFINED_ORIGIN;
 
   public static final String SERIALIZED_NAME_ORIGIN_DATA = "origin_data";
   @SerializedName(SERIALIZED_NAME_ORIGIN_DATA)
+  @javax.annotation.Nullable
   private String originData;
 
   public static final String SERIALIZED_NAME_TARGET_RECEIVERS = "target_receivers";
   @SerializedName(SERIALIZED_NAME_TARGET_RECEIVERS)
+  @javax.annotation.Nullable
   private List<Schedulerv3Recipient> targetReceivers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TEMPLATE_DATA = "template_data";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_DATA)
+  @javax.annotation.Nullable
   private Map<String, String> templateData = new HashMap<>();
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
+  @javax.annotation.Nullable
   private String title;
 
   public Notificationsv3PostNotificationRecordRequest() {
   }
 
-  public Notificationsv3PostNotificationRecordRequest origin(Notificationsv3Origin origin) {
+  public Notificationsv3PostNotificationRecordRequest origin(@javax.annotation.Nullable Notificationsv3Origin origin) {
     this.origin = origin;
     return this;
   }
 
-   /**
+  /**
    * Get origin
    * @return origin
-  **/
+   */
   @javax.annotation.Nullable
   public Notificationsv3Origin getOrigin() {
     return origin;
   }
 
-  public void setOrigin(Notificationsv3Origin origin) {
+  public void setOrigin(@javax.annotation.Nullable Notificationsv3Origin origin) {
     this.origin = origin;
   }
 
 
-  public Notificationsv3PostNotificationRecordRequest originData(String originData) {
+  public Notificationsv3PostNotificationRecordRequest originData(@javax.annotation.Nullable String originData) {
     this.originData = originData;
     return this;
   }
 
-   /**
+  /**
    * Get originData
    * @return originData
-  **/
+   */
   @javax.annotation.Nullable
   public String getOriginData() {
     return originData;
   }
 
-  public void setOriginData(String originData) {
+  public void setOriginData(@javax.annotation.Nullable String originData) {
     this.originData = originData;
   }
 
 
-  public Notificationsv3PostNotificationRecordRequest targetReceivers(List<Schedulerv3Recipient> targetReceivers) {
+  public Notificationsv3PostNotificationRecordRequest targetReceivers(@javax.annotation.Nullable List<Schedulerv3Recipient> targetReceivers) {
     this.targetReceivers = targetReceivers;
     return this;
   }
@@ -131,21 +137,21 @@ public class Notificationsv3PostNotificationRecordRequest {
     return this;
   }
 
-   /**
+  /**
    * Get targetReceivers
    * @return targetReceivers
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3Recipient> getTargetReceivers() {
     return targetReceivers;
   }
 
-  public void setTargetReceivers(List<Schedulerv3Recipient> targetReceivers) {
+  public void setTargetReceivers(@javax.annotation.Nullable List<Schedulerv3Recipient> targetReceivers) {
     this.targetReceivers = targetReceivers;
   }
 
 
-  public Notificationsv3PostNotificationRecordRequest templateData(Map<String, String> templateData) {
+  public Notificationsv3PostNotificationRecordRequest templateData(@javax.annotation.Nullable Map<String, String> templateData) {
     this.templateData = templateData;
     return this;
   }
@@ -158,35 +164,35 @@ public class Notificationsv3PostNotificationRecordRequest {
     return this;
   }
 
-   /**
+  /**
    * Get templateData
    * @return templateData
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getTemplateData() {
     return templateData;
   }
 
-  public void setTemplateData(Map<String, String> templateData) {
+  public void setTemplateData(@javax.annotation.Nullable Map<String, String> templateData) {
     this.templateData = templateData;
   }
 
 
-  public Notificationsv3PostNotificationRecordRequest title(String title) {
+  public Notificationsv3PostNotificationRecordRequest title(@javax.annotation.Nullable String title) {
     this.title = title;
     return this;
   }
 
-   /**
+  /**
    * Optional:Brief title used to quickly describe the notification.
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
   public String getTitle() {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(@javax.annotation.Nullable String title) {
     this.title = title;
   }
 
@@ -243,27 +249,22 @@ public class Notificationsv3PostNotificationRecordRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("origin");
-    openapiFields.add("origin_data");
-    openapiFields.add("target_receivers");
-    openapiFields.add("template_data");
-    openapiFields.add("title");
+    openapiFields = new HashSet<String>(Arrays.asList("origin", "origin_data", "target_receivers", "template_data", "title"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Notificationsv3PostNotificationRecordRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Notificationsv3PostNotificationRecordRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Notificationsv3PostNotificationRecordRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Notificationsv3PostNotificationRecordRequest is not found in the empty JSON string", Notificationsv3PostNotificationRecordRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Notificationsv3PostNotificationRecordRequest is not found in the empty JSON string", Notificationsv3PostNotificationRecordRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -271,7 +272,7 @@ public class Notificationsv3PostNotificationRecordRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Notificationsv3PostNotificationRecordRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Notificationsv3PostNotificationRecordRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Notificationsv3PostNotificationRecordRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -280,14 +281,14 @@ public class Notificationsv3PostNotificationRecordRequest {
         Notificationsv3Origin.validateJsonElement(jsonObj.get("origin"));
       }
       if ((jsonObj.get("origin_data") != null && !jsonObj.get("origin_data").isJsonNull()) && !jsonObj.get("origin_data").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `origin_data` to be a primitive type in the JSON string but got `%s`", jsonObj.get("origin_data").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `origin_data` to be a primitive type in the JSON string but got `%s`", jsonObj.get("origin_data").toString()));
       }
       if (jsonObj.get("target_receivers") != null && !jsonObj.get("target_receivers").isJsonNull()) {
         JsonArray jsonArraytargetReceivers = jsonObj.getAsJsonArray("target_receivers");
         if (jsonArraytargetReceivers != null) {
           // ensure the json data is an array
           if (!jsonObj.get("target_receivers").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `target_receivers` to be an array in the JSON string but got `%s`", jsonObj.get("target_receivers").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `target_receivers` to be an array in the JSON string but got `%s`", jsonObj.get("target_receivers").toString()));
           }
 
           // validate the optional field `target_receivers` (array)
@@ -297,7 +298,7 @@ public class Notificationsv3PostNotificationRecordRequest {
         }
       }
       if ((jsonObj.get("title") != null && !jsonObj.get("title").isJsonNull()) && !jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
       }
   }
 
@@ -330,22 +331,22 @@ public class Notificationsv3PostNotificationRecordRequest {
     }
   }
 
- /**
-  * Create an instance of Notificationsv3PostNotificationRecordRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Notificationsv3PostNotificationRecordRequest
-  * @throws IOException if the JSON string is invalid with respect to Notificationsv3PostNotificationRecordRequest
-  */
+  /**
+   * Create an instance of Notificationsv3PostNotificationRecordRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Notificationsv3PostNotificationRecordRequest
+   * @throws IOException if the JSON string is invalid with respect to Notificationsv3PostNotificationRecordRequest
+   */
   public static Notificationsv3PostNotificationRecordRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Notificationsv3PostNotificationRecordRequest.class);
   }
 
- /**
-  * Convert an instance of Notificationsv3PostNotificationRecordRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Notificationsv3PostNotificationRecordRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

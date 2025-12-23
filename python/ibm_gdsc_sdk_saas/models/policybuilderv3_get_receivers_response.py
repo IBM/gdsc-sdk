@@ -74,9 +74,9 @@ class Policybuilderv3GetReceiversResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in action_notification_object (list)
         _items = []
         if self.action_notification_object:
-            for _item in self.action_notification_object:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_action_notification_object in self.action_notification_object:
+                if _item_action_notification_object:
+                    _items.append(_item_action_notification_object.to_dict())
             _dict['action_notification_object'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:

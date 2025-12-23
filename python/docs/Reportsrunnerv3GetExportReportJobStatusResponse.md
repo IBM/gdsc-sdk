@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **job_duration** | **int** | Duration of the export job in minutes. | [optional] 
 **job_id** | **str** | Token that identifies the export job. | [optional] 
 **job_start_time** | **str** | The start time of the export job. | [optional] 
-**job_status** | [**Reportsrunnerv3ExportJobStatus**](Reportsrunnerv3ExportJobStatus.md) |  | [optional] 
+**job_status** | [**Reportsrunnerv3ExportJobStatus**](Reportsrunnerv3ExportJobStatus.md) |  | [optional] [default to Reportsrunnerv3ExportJobStatus.UNDEFINED_JOB_STATUS]
 **message** | **str** | An error message in case of failure while retriving the export job status. | [optional] 
 **result_size** | **int** | The size of the exported file in MB. | [optional] 
 **tenant_id** | **str** | The unique tenant ID that the executing job is running against. | [optional] 

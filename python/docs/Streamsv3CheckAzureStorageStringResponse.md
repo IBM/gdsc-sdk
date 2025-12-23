@@ -6,7 +6,7 @@ CheckAzureStorageStringResponse defines response of CheckAzureStorageStringReque
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**Streamsv3AzureCheckStatus**](Streamsv3AzureCheckStatus.md) |  | [optional] 
+**status** | [**Streamsv3AzureCheckStatus**](Streamsv3AzureCheckStatus.md) |  | [optional] [default to Streamsv3AzureCheckStatus.OK]
 
 ## Example
 

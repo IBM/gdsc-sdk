@@ -16,9 +16,9 @@ import { HttpFile } from '../http/http';
 * - STATUS_UNKNOWN: No info.  - STATUS_OPEN: Open status for vulnerability.  - STATUS_IN_PROGRESS: In-progress status for vulnerability.  - STATUS_EXCEPTION: Exception status for vulnerability.  - STATUS_FIXED: Fixed status for vulnerability.
 */
 export enum Vulmanagementv3Status {
-    Unknown = 'STATUS_UNKNOWN',
-    Open = 'STATUS_OPEN',
-    InProgress = 'STATUS_IN_PROGRESS',
-    Exception = 'STATUS_EXCEPTION',
-    Fixed = 'STATUS_FIXED'
+    StatusUnknown = 'STATUS_UNKNOWN',
+    StatusOpen = 'STATUS_OPEN',
+    StatusInProgress = 'STATUS_IN_PROGRESS',
+    StatusException = 'STATUS_EXCEPTION',
+    StatusFixed = 'STATUS_FIXED'
 }

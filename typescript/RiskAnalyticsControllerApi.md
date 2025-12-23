@@ -30,22 +30,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventFeedbackRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventFeedbackRequest = {
-  // Riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventFeedbackRequest = {
+  
   riskanalyticscontrollerv3EnableDisableRiskEventFeedbackRequest: {
     action: "UNDEFINED_ACTION_TYPE",
   },
 };
 
-apiInstance.riskAnalyticsControllerEnableDisableRiskEventFeedback(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerEnableDisableRiskEventFeedback(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -86,22 +85,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventProcessRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventProcessRequest = {
-  // Riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerEnableDisableRiskEventProcessRequest = {
+  
   riskanalyticscontrollerv3EnableDisableRiskEventProcessRequest: {
     action: "UNDEFINED_ACTION_TYPE",
   },
 };
 
-apiInstance.riskAnalyticsControllerEnableDisableRiskEventProcess(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerEnableDisableRiskEventProcess(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -142,17 +140,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.riskAnalyticsControllerGetAllClassificationsList(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetAllClassificationsList(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -190,20 +186,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventClassificationsListRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventClassificationsListRequest = {
-  // number | Risk id
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventClassificationsListRequest = {
+    // Risk id
   riskId: 1,
 };
 
-apiInstance.riskAnalyticsControllerGetRiskEventClassificationsList(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventClassificationsList(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -244,24 +239,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDataForSummarizationRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDataForSummarizationRequest = {
-  // number | Risk ID
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDataForSummarizationRequest = {
+    // Risk ID
   riskId: 1,
-  // boolean | Indicates whether to include indicators in the response or not. (optional)
+    // Indicates whether to include indicators in the response or not. (optional)
   includeIndicators: true,
-  // number | Max number of hours to get for the risk. (optional)
+    // Max number of hours to get for the risk. (optional)
   numFindingsLimit: 1,
 };
 
-apiInstance.riskAnalyticsControllerGetRiskEventDataForSummarization(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventDataForSummarization(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -304,20 +298,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDetailsRequest = {
-  // number | Risk id.
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventDetailsRequest = {
+    // Risk id.
   riskId: 1,
 };
 
-apiInstance.riskAnalyticsControllerGetRiskEventDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -358,17 +351,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.riskAnalyticsControllerGetRiskEventProcessStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventProcessStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -406,38 +397,37 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRowRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRowRequest = {
-  // 'UNDEFINED_STATUS' | 'OPENED' | 'CLOSED' | 'DELEGATED' | 'FOLLOWUP' | Status to retrieve only the status events, blank to retrieve all. (optional)
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventRowRequest = {
+    // Status to retrieve only the status events, blank to retrieve all. (optional)
   status: "UNDEFINED_STATUS",
-  // Date | The API retrieves risk events that were open in a time range. date_from defines the start of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
+    // The API retrieves risk events that were open in a time range. date_from defines the start of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
   dateFrom: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | The API retrieves risk events that were open in a time range. date_to defines the end of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
+    // The API retrieves risk events that were open in a time range. date_to defines the end of this time range. format YYYY-MM-DDTHH:mm:ssZ. (optional)
   dateTo: new Date('1970-01-01T00:00:00.00Z'),
-  // 'UNDEFINED_PIVOT_TYPE' | 'DATABASE' | 'DB_USER' | 'OS_USER' | 'GLOBAL' | Pivot type - enum. (optional)
+    // Pivot type - enum. (optional)
   pivotType: "UNDEFINED_PIVOT_TYPE",
-  // string | Pivot id -  all pivot fields separated by semicolon. (optional)
+    // Pivot id -  all pivot fields separated by semicolon. (optional)
   pivotId: "pivot.id_example",
-  // string | Optional db_user - if pivot is db user. (optional)
+    // Optional db_user - if pivot is db user. (optional)
   pivotDbUser: "pivot.db_user_example",
-  // string | Optional database - if pivot is db user / database. (optional)
+    // Optional database - if pivot is db user / database. (optional)
   pivotDatabase: "pivot.database_example",
-  // string | Optional server_ip - if pivot is db user / database. (optional)
+    // Optional server_ip - if pivot is db user / database. (optional)
   pivotServerIp: "pivot.server_ip_example",
-  // string | Optional os_user - if pivot is os user. (optional)
+    // Optional os_user - if pivot is os user. (optional)
   pivotOsUser: "pivot.os_user_example",
-  // 'UNDEFINED' | 'DATABASE_NAME' | 'SERVICE_NAME' | Optional database_source_field (values database name/service name depends on the server type) - if pivot is db user / database. (optional)
+    // Optional database_source_field (values database name/service name depends on the server type) - if pivot is db user / database. (optional)
   pivotDatabaseSourceField: "UNDEFINED",
 };
 
-apiInstance.riskAnalyticsControllerGetRiskEventRow(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventRow(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -487,20 +477,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsRequest = {
-  // number | Risk ID
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetailsRequest = {
+    // Risk ID
   riskId: 1,
 };
 
-apiInstance.riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskEventVulnerabilityAssessmentDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -541,17 +530,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.riskAnalyticsControllerGetRiskFeedback(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskFeedback(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -589,22 +576,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskObservationDetailsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskObservationDetailsRequest = {
-  // number | Lead feature id. (optional)
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerGetRiskObservationDetailsRequest = {
+    // Lead feature id. (optional)
   leadFeatureId: 1,
-  // 'UNDEFINED_OBSERVATION_TYPE' | 'ACTIVITY' | 'EXCEPTION' | 'VIOLATION' | 'OUTLIER' | 'ANOMALY' | Observation type. (optional)
+    // Observation type. (optional)
   observationType: "UNDEFINED_OBSERVATION_TYPE",
 };
 
-apiInstance.riskAnalyticsControllerGetRiskObservationDetails(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetRiskObservationDetails(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -646,17 +632,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.riskAnalyticsControllerGetUserUISettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerGetUserUISettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -694,14 +678,14 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningRequest = {
-  // Riskanalyticscontrollerv3RiskEventTuningRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningRequest = {
+  
   riskanalyticscontrollerv3RiskEventTuningRequest: {
     excludedItems: [
       {
@@ -712,9 +696,8 @@ let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerRiskEventTuningReques
   },
 };
 
-apiInstance.riskAnalyticsControllerRiskEventTuning(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerRiskEventTuning(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -755,14 +738,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusRequest = {
-  // Riskanalyticscontrollerv3SetRiskEventStatusRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusRequest = {
+  
   riskanalyticscontrollerv3SetRiskEventStatusRequest: {
     justification: "justification_example",
     riskIds: [
@@ -772,9 +755,8 @@ let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerSetRiskEventStatusReq
   },
 };
 
-apiInstance.riskAnalyticsControllerSetRiskEventStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerSetRiskEventStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -815,14 +797,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequest = {
-  // Riskanalyticscontrollerv3SetUserUISettingsRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequest = {
+  
   riskanalyticscontrollerv3SetUserUISettingsRequest: {
     userUiSettings: {
       cardSettings: [
@@ -850,9 +832,8 @@ let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerSetUserUISettingsRequ
   },
 };
 
-apiInstance.riskAnalyticsControllerSetUserUISettings(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerSetUserUISettings(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -893,14 +874,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsControllerApi } from '';
+import type { RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsControllerApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsControllerApi(configuration);
 
-let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackRequest = {
-  // Riskanalyticscontrollerv3UpdateRiskFeedbackRequest
+const request: RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackRequest = {
+  
   riskanalyticscontrollerv3UpdateRiskFeedbackRequest: {
     comment: "comment_example",
     feedbackClassificationKey: "feedbackClassificationKey_example",
@@ -911,9 +892,8 @@ let body:.RiskAnalyticsControllerApiRiskAnalyticsControllerUpdateRiskFeedbackReq
   },
 };
 
-apiInstance.riskAnalyticsControllerUpdateRiskFeedback(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsControllerUpdateRiskFeedback(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

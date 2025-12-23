@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Guardiumconnectorv3DatamartExecutionMode
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3DatamartExecutionMode {
   public static final String SERIALIZED_NAME_DM_EXEC_DEFAULT_MODE = "dm_exec_default_mode";
   @SerializedName(SERIALIZED_NAME_DM_EXEC_DEFAULT_MODE)
+  @javax.annotation.Nullable
   private String dmExecDefaultMode;
 
   public static final String SERIALIZED_NAME_DM_EXEC_MODE = "dm_exec_mode";
   @SerializedName(SERIALIZED_NAME_DM_EXEC_MODE)
+  @javax.annotation.Nullable
   private String dmExecMode;
 
   public static final String SERIALIZED_NAME_DM_NAME = "dm_name";
   @SerializedName(SERIALIZED_NAME_DM_NAME)
+  @javax.annotation.Nullable
   private String dmName;
 
   public Guardiumconnectorv3DatamartExecutionMode() {
   }
 
-  public Guardiumconnectorv3DatamartExecutionMode dmExecDefaultMode(String dmExecDefaultMode) {
+  public Guardiumconnectorv3DatamartExecutionMode dmExecDefaultMode(@javax.annotation.Nullable String dmExecDefaultMode) {
     this.dmExecDefaultMode = dmExecDefaultMode;
     return this;
   }
 
-   /**
+  /**
    * Get dmExecDefaultMode
    * @return dmExecDefaultMode
-  **/
+   */
   @javax.annotation.Nullable
   public String getDmExecDefaultMode() {
     return dmExecDefaultMode;
   }
 
-  public void setDmExecDefaultMode(String dmExecDefaultMode) {
+  public void setDmExecDefaultMode(@javax.annotation.Nullable String dmExecDefaultMode) {
     this.dmExecDefaultMode = dmExecDefaultMode;
   }
 
 
-  public Guardiumconnectorv3DatamartExecutionMode dmExecMode(String dmExecMode) {
+  public Guardiumconnectorv3DatamartExecutionMode dmExecMode(@javax.annotation.Nullable String dmExecMode) {
     this.dmExecMode = dmExecMode;
     return this;
   }
 
-   /**
+  /**
    * Get dmExecMode
    * @return dmExecMode
-  **/
+   */
   @javax.annotation.Nullable
   public String getDmExecMode() {
     return dmExecMode;
   }
 
-  public void setDmExecMode(String dmExecMode) {
+  public void setDmExecMode(@javax.annotation.Nullable String dmExecMode) {
     this.dmExecMode = dmExecMode;
   }
 
 
-  public Guardiumconnectorv3DatamartExecutionMode dmName(String dmName) {
+  public Guardiumconnectorv3DatamartExecutionMode dmName(@javax.annotation.Nullable String dmName) {
     this.dmName = dmName;
     return this;
   }
 
-   /**
+  /**
    * Get dmName
    * @return dmName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDmName() {
     return dmName;
   }
 
-  public void setDmName(String dmName) {
+  public void setDmName(@javax.annotation.Nullable String dmName) {
     this.dmName = dmName;
   }
 
@@ -171,25 +175,22 @@ public class Guardiumconnectorv3DatamartExecutionMode {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dm_exec_default_mode");
-    openapiFields.add("dm_exec_mode");
-    openapiFields.add("dm_name");
+    openapiFields = new HashSet<String>(Arrays.asList("dm_exec_default_mode", "dm_exec_mode", "dm_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3DatamartExecutionMode
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3DatamartExecutionMode
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3DatamartExecutionMode.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3DatamartExecutionMode is not found in the empty JSON string", Guardiumconnectorv3DatamartExecutionMode.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3DatamartExecutionMode is not found in the empty JSON string", Guardiumconnectorv3DatamartExecutionMode.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Guardiumconnectorv3DatamartExecutionMode {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3DatamartExecutionMode.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3DatamartExecutionMode` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3DatamartExecutionMode` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("dm_exec_default_mode") != null && !jsonObj.get("dm_exec_default_mode").isJsonNull()) && !jsonObj.get("dm_exec_default_mode").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dm_exec_default_mode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm_exec_default_mode").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dm_exec_default_mode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm_exec_default_mode").toString()));
       }
       if ((jsonObj.get("dm_exec_mode") != null && !jsonObj.get("dm_exec_mode").isJsonNull()) && !jsonObj.get("dm_exec_mode").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dm_exec_mode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm_exec_mode").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dm_exec_mode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm_exec_mode").toString()));
       }
       if ((jsonObj.get("dm_name") != null && !jsonObj.get("dm_name").isJsonNull()) && !jsonObj.get("dm_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dm_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dm_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dm_name").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Guardiumconnectorv3DatamartExecutionMode {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3DatamartExecutionMode given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3DatamartExecutionMode
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3DatamartExecutionMode
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3DatamartExecutionMode given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3DatamartExecutionMode
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3DatamartExecutionMode
+   */
   public static Guardiumconnectorv3DatamartExecutionMode fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3DatamartExecutionMode.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3DatamartExecutionMode to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3DatamartExecutionMode to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

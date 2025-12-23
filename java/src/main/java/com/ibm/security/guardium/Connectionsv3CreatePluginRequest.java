@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,178 +41,188 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3CreatePluginRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3CreatePluginRequest {
   public static final String SERIALIZED_NAME_DATASOURCE_TYPE = "datasource_type";
   @SerializedName(SERIALIZED_NAME_DATASOURCE_TYPE)
+  @javax.annotation.Nullable
   private String datasourceType;
 
   public static final String SERIALIZED_NAME_DEVELOPER_NAME = "developer_name";
   @SerializedName(SERIALIZED_NAME_DEVELOPER_NAME)
+  @javax.annotation.Nullable
   private String developerName;
 
   public static final String SERIALIZED_NAME_DOCUMENT_LINK = "document_link";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_LINK)
+  @javax.annotation.Nullable
   private String documentLink;
 
   public static final String SERIALIZED_NAME_LOGFILE = "logfile";
   @SerializedName(SERIALIZED_NAME_LOGFILE)
+  @javax.annotation.Nullable
   private String logfile;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_README = "readme";
   @SerializedName(SERIALIZED_NAME_README)
+  @javax.annotation.Nullable
   private String readme;
 
   public static final String SERIALIZED_NAME_RECORDS = "records";
   @SerializedName(SERIALIZED_NAME_RECORDS)
+  @javax.annotation.Nullable
   private List<Connectionsv3PluginRecord> records = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SUPPORTED_INPUTS = "supported_inputs";
   @SerializedName(SERIALIZED_NAME_SUPPORTED_INPUTS)
+  @javax.annotation.Nullable
   private List<String> supportedInputs = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public static final String SERIALIZED_NAME_VERSION_TESTED = "version_tested";
   @SerializedName(SERIALIZED_NAME_VERSION_TESTED)
+  @javax.annotation.Nullable
   private String versionTested;
 
   public Connectionsv3CreatePluginRequest() {
   }
 
-  public Connectionsv3CreatePluginRequest datasourceType(String datasourceType) {
+  public Connectionsv3CreatePluginRequest datasourceType(@javax.annotation.Nullable String datasourceType) {
     this.datasourceType = datasourceType;
     return this;
   }
 
-   /**
+  /**
    * Get datasourceType
    * @return datasourceType
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasourceType() {
     return datasourceType;
   }
 
-  public void setDatasourceType(String datasourceType) {
+  public void setDatasourceType(@javax.annotation.Nullable String datasourceType) {
     this.datasourceType = datasourceType;
   }
 
 
-  public Connectionsv3CreatePluginRequest developerName(String developerName) {
+  public Connectionsv3CreatePluginRequest developerName(@javax.annotation.Nullable String developerName) {
     this.developerName = developerName;
     return this;
   }
 
-   /**
+  /**
    * Get developerName
    * @return developerName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDeveloperName() {
     return developerName;
   }
 
-  public void setDeveloperName(String developerName) {
+  public void setDeveloperName(@javax.annotation.Nullable String developerName) {
     this.developerName = developerName;
   }
 
 
-  public Connectionsv3CreatePluginRequest documentLink(String documentLink) {
+  public Connectionsv3CreatePluginRequest documentLink(@javax.annotation.Nullable String documentLink) {
     this.documentLink = documentLink;
     return this;
   }
 
-   /**
+  /**
    * Get documentLink
    * @return documentLink
-  **/
+   */
   @javax.annotation.Nullable
   public String getDocumentLink() {
     return documentLink;
   }
 
-  public void setDocumentLink(String documentLink) {
+  public void setDocumentLink(@javax.annotation.Nullable String documentLink) {
     this.documentLink = documentLink;
   }
 
 
-  public Connectionsv3CreatePluginRequest logfile(String logfile) {
+  public Connectionsv3CreatePluginRequest logfile(@javax.annotation.Nullable String logfile) {
     this.logfile = logfile;
     return this;
   }
 
-   /**
+  /**
    * Get logfile
    * @return logfile
-  **/
+   */
   @javax.annotation.Nullable
   public String getLogfile() {
     return logfile;
   }
 
-  public void setLogfile(String logfile) {
+  public void setLogfile(@javax.annotation.Nullable String logfile) {
     this.logfile = logfile;
   }
 
 
-  public Connectionsv3CreatePluginRequest name(String name) {
+  public Connectionsv3CreatePluginRequest name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Connectionsv3CreatePluginRequest readme(String readme) {
+  public Connectionsv3CreatePluginRequest readme(@javax.annotation.Nullable String readme) {
     this.readme = readme;
     return this;
   }
 
-   /**
+  /**
    * Get readme
    * @return readme
-  **/
+   */
   @javax.annotation.Nullable
   public String getReadme() {
     return readme;
   }
 
-  public void setReadme(String readme) {
+  public void setReadme(@javax.annotation.Nullable String readme) {
     this.readme = readme;
   }
 
 
-  public Connectionsv3CreatePluginRequest records(List<Connectionsv3PluginRecord> records) {
+  public Connectionsv3CreatePluginRequest records(@javax.annotation.Nullable List<Connectionsv3PluginRecord> records) {
     this.records = records;
     return this;
   }
@@ -224,21 +235,21 @@ public class Connectionsv3CreatePluginRequest {
     return this;
   }
 
-   /**
+  /**
    * Get records
    * @return records
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3PluginRecord> getRecords() {
     return records;
   }
 
-  public void setRecords(List<Connectionsv3PluginRecord> records) {
+  public void setRecords(@javax.annotation.Nullable List<Connectionsv3PluginRecord> records) {
     this.records = records;
   }
 
 
-  public Connectionsv3CreatePluginRequest supportedInputs(List<String> supportedInputs) {
+  public Connectionsv3CreatePluginRequest supportedInputs(@javax.annotation.Nullable List<String> supportedInputs) {
     this.supportedInputs = supportedInputs;
     return this;
   }
@@ -251,54 +262,54 @@ public class Connectionsv3CreatePluginRequest {
     return this;
   }
 
-   /**
+  /**
    * Get supportedInputs
    * @return supportedInputs
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSupportedInputs() {
     return supportedInputs;
   }
 
-  public void setSupportedInputs(List<String> supportedInputs) {
+  public void setSupportedInputs(@javax.annotation.Nullable List<String> supportedInputs) {
     this.supportedInputs = supportedInputs;
   }
 
 
-  public Connectionsv3CreatePluginRequest version(String version) {
+  public Connectionsv3CreatePluginRequest version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Get version
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
 
-  public Connectionsv3CreatePluginRequest versionTested(String versionTested) {
+  public Connectionsv3CreatePluginRequest versionTested(@javax.annotation.Nullable String versionTested) {
     this.versionTested = versionTested;
     return this;
   }
 
-   /**
+  /**
    * Get versionTested
    * @return versionTested
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersionTested() {
     return versionTested;
   }
 
-  public void setVersionTested(String versionTested) {
+  public void setVersionTested(@javax.annotation.Nullable String versionTested) {
     this.versionTested = versionTested;
   }
 
@@ -365,32 +376,22 @@ public class Connectionsv3CreatePluginRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("datasource_type");
-    openapiFields.add("developer_name");
-    openapiFields.add("document_link");
-    openapiFields.add("logfile");
-    openapiFields.add("name");
-    openapiFields.add("readme");
-    openapiFields.add("records");
-    openapiFields.add("supported_inputs");
-    openapiFields.add("version");
-    openapiFields.add("version_tested");
+    openapiFields = new HashSet<String>(Arrays.asList("datasource_type", "developer_name", "document_link", "logfile", "name", "readme", "records", "supported_inputs", "version", "version_tested"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3CreatePluginRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3CreatePluginRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3CreatePluginRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3CreatePluginRequest is not found in the empty JSON string", Connectionsv3CreatePluginRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3CreatePluginRequest is not found in the empty JSON string", Connectionsv3CreatePluginRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -398,34 +399,34 @@ public class Connectionsv3CreatePluginRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3CreatePluginRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3CreatePluginRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3CreatePluginRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("datasource_type") != null && !jsonObj.get("datasource_type").isJsonNull()) && !jsonObj.get("datasource_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `datasource_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `datasource_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasource_type").toString()));
       }
       if ((jsonObj.get("developer_name") != null && !jsonObj.get("developer_name").isJsonNull()) && !jsonObj.get("developer_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `developer_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("developer_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `developer_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("developer_name").toString()));
       }
       if ((jsonObj.get("document_link") != null && !jsonObj.get("document_link").isJsonNull()) && !jsonObj.get("document_link").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `document_link` to be a primitive type in the JSON string but got `%s`", jsonObj.get("document_link").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `document_link` to be a primitive type in the JSON string but got `%s`", jsonObj.get("document_link").toString()));
       }
       if ((jsonObj.get("logfile") != null && !jsonObj.get("logfile").isJsonNull()) && !jsonObj.get("logfile").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `logfile` to be a primitive type in the JSON string but got `%s`", jsonObj.get("logfile").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `logfile` to be a primitive type in the JSON string but got `%s`", jsonObj.get("logfile").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("readme") != null && !jsonObj.get("readme").isJsonNull()) && !jsonObj.get("readme").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `readme` to be a primitive type in the JSON string but got `%s`", jsonObj.get("readme").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `readme` to be a primitive type in the JSON string but got `%s`", jsonObj.get("readme").toString()));
       }
       if (jsonObj.get("records") != null && !jsonObj.get("records").isJsonNull()) {
         JsonArray jsonArrayrecords = jsonObj.getAsJsonArray("records");
         if (jsonArrayrecords != null) {
           // ensure the json data is an array
           if (!jsonObj.get("records").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `records` to be an array in the JSON string but got `%s`", jsonObj.get("records").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `records` to be an array in the JSON string but got `%s`", jsonObj.get("records").toString()));
           }
 
           // validate the optional field `records` (array)
@@ -436,13 +437,13 @@ public class Connectionsv3CreatePluginRequest {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("supported_inputs") != null && !jsonObj.get("supported_inputs").isJsonNull() && !jsonObj.get("supported_inputs").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `supported_inputs` to be an array in the JSON string but got `%s`", jsonObj.get("supported_inputs").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `supported_inputs` to be an array in the JSON string but got `%s`", jsonObj.get("supported_inputs").toString()));
       }
       if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
       if ((jsonObj.get("version_tested") != null && !jsonObj.get("version_tested").isJsonNull()) && !jsonObj.get("version_tested").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version_tested` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version_tested").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `version_tested` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version_tested").toString()));
       }
   }
 
@@ -475,22 +476,22 @@ public class Connectionsv3CreatePluginRequest {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3CreatePluginRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3CreatePluginRequest
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3CreatePluginRequest
-  */
+  /**
+   * Create an instance of Connectionsv3CreatePluginRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3CreatePluginRequest
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3CreatePluginRequest
+   */
   public static Connectionsv3CreatePluginRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3CreatePluginRequest.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3CreatePluginRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3CreatePluginRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

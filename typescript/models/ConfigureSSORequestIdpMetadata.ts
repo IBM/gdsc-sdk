@@ -14,31 +14,20 @@ import { IdpMetadataContent } from '../models/IdpMetadataContent';
 import { IdpMetadataUrl } from '../models/IdpMetadataUrl';
 import { HttpFile } from '../http/http';
 
-export class ConfigureSSORequestIdpMetadata {
-    'idpMetadataUrl': string;
-    'idpMetadataContent': string;
+/**
+ * @type ConfigureSSORequestIdpMetadata
+ * Type
+ * @export
+ */
+export type ConfigureSSORequestIdpMetadata = IdpMetadataContent | IdpMetadataUrl;
 
+/**
+* @type ConfigureSSORequestIdpMetadataClass
+* @export
+*/
+export class ConfigureSSORequestIdpMetadataClass {
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "idpMetadataUrl",
-            "baseName": "idpMetadataUrl",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "idpMetadataContent",
-            "baseName": "idpMetadataContent",
-            "type": "string",
-            "format": ""
-        }    ];
-
-    static getAttributeTypeMap() {
-        return ConfigureSSORequestIdpMetadata.attributeTypeMap;
-    }
-
-    public constructor() {
-    }
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
 }
 

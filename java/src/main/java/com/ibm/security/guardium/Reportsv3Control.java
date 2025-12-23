@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,84 +42,99 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3Control
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3Control {
   public static final String SERIALIZED_NAME_ARTIFACTS = "artifacts";
   @SerializedName(SERIALIZED_NAME_ARTIFACTS)
+  @javax.annotation.Nullable
   private List<Reportsv3Artifact> artifacts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CONTROL_CODE = "control_code";
   @SerializedName(SERIALIZED_NAME_CONTROL_CODE)
+  @javax.annotation.Nullable
   private String controlCode;
 
   public static final String SERIALIZED_NAME_CONTROL_ID = "control_id";
   @SerializedName(SERIALIZED_NAME_CONTROL_ID)
+  @javax.annotation.Nullable
   private Integer controlId;
 
   public static final String SERIALIZED_NAME_CREATE_USER_ID = "create_user_id";
   @SerializedName(SERIALIZED_NAME_CREATE_USER_ID)
+  @javax.annotation.Nullable
   private String createUserId;
 
   public static final String SERIALIZED_NAME_CREATE_USER_NAME = "create_user_name";
   @SerializedName(SERIALIZED_NAME_CREATE_USER_NAME)
+  @javax.annotation.Nullable
   private String createUserName;
 
   public static final String SERIALIZED_NAME_CREATED_BY_TEMPLATE = "created_by_template";
   @SerializedName(SERIALIZED_NAME_CREATED_BY_TEMPLATE)
+  @javax.annotation.Nullable
   private Boolean createdByTemplate;
 
   public static final String SERIALIZED_NAME_DATE_CREATED = "date_created";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  @javax.annotation.Nullable
   private OffsetDateTime dateCreated;
 
   public static final String SERIALIZED_NAME_DATE_UPDATED = "date_updated";
   @SerializedName(SERIALIZED_NAME_DATE_UPDATED)
+  @javax.annotation.Nullable
   private OffsetDateTime dateUpdated;
 
   public static final String SERIALIZED_NAME_PROGRAM_ID = "program_id";
   @SerializedName(SERIALIZED_NAME_PROGRAM_ID)
+  @javax.annotation.Nullable
   private Integer programId;
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
+  @javax.annotation.Nullable
   private List<String> tags = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TEMPLATE_ID = "template_id";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
+  @javax.annotation.Nullable
   private String templateId;
 
   public static final String SERIALIZED_NAME_THEME = "theme";
   @SerializedName(SERIALIZED_NAME_THEME)
+  @javax.annotation.Nullable
   private String theme;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
+  @javax.annotation.Nullable
   private String title;
 
   public static final String SERIALIZED_NAME_UPDATE_USER_ID = "update_user_id";
   @SerializedName(SERIALIZED_NAME_UPDATE_USER_ID)
+  @javax.annotation.Nullable
   private String updateUserId;
 
   public static final String SERIALIZED_NAME_UPDATE_USER_NAME = "update_user_name";
   @SerializedName(SERIALIZED_NAME_UPDATE_USER_NAME)
+  @javax.annotation.Nullable
   private String updateUserName;
 
   public Reportsv3Control() {
   }
 
-  public Reportsv3Control artifacts(List<Reportsv3Artifact> artifacts) {
+  public Reportsv3Control artifacts(@javax.annotation.Nullable List<Reportsv3Artifact> artifacts) {
     this.artifacts = artifacts;
     return this;
   }
@@ -131,173 +147,173 @@ public class Reportsv3Control {
     return this;
   }
 
-   /**
+  /**
    * Get artifacts
    * @return artifacts
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3Artifact> getArtifacts() {
     return artifacts;
   }
 
-  public void setArtifacts(List<Reportsv3Artifact> artifacts) {
+  public void setArtifacts(@javax.annotation.Nullable List<Reportsv3Artifact> artifacts) {
     this.artifacts = artifacts;
   }
 
 
-  public Reportsv3Control controlCode(String controlCode) {
+  public Reportsv3Control controlCode(@javax.annotation.Nullable String controlCode) {
     this.controlCode = controlCode;
     return this;
   }
 
-   /**
+  /**
    * Get controlCode
    * @return controlCode
-  **/
+   */
   @javax.annotation.Nullable
   public String getControlCode() {
     return controlCode;
   }
 
-  public void setControlCode(String controlCode) {
+  public void setControlCode(@javax.annotation.Nullable String controlCode) {
     this.controlCode = controlCode;
   }
 
 
-  public Reportsv3Control controlId(Integer controlId) {
+  public Reportsv3Control controlId(@javax.annotation.Nullable Integer controlId) {
     this.controlId = controlId;
     return this;
   }
 
-   /**
+  /**
    * Get controlId
    * @return controlId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getControlId() {
     return controlId;
   }
 
-  public void setControlId(Integer controlId) {
+  public void setControlId(@javax.annotation.Nullable Integer controlId) {
     this.controlId = controlId;
   }
 
 
-  public Reportsv3Control createUserId(String createUserId) {
+  public Reportsv3Control createUserId(@javax.annotation.Nullable String createUserId) {
     this.createUserId = createUserId;
     return this;
   }
 
-   /**
+  /**
    * Get createUserId
    * @return createUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreateUserId() {
     return createUserId;
   }
 
-  public void setCreateUserId(String createUserId) {
+  public void setCreateUserId(@javax.annotation.Nullable String createUserId) {
     this.createUserId = createUserId;
   }
 
 
-  public Reportsv3Control createUserName(String createUserName) {
+  public Reportsv3Control createUserName(@javax.annotation.Nullable String createUserName) {
     this.createUserName = createUserName;
     return this;
   }
 
-   /**
+  /**
    * Get createUserName
    * @return createUserName
-  **/
+   */
   @javax.annotation.Nullable
   public String getCreateUserName() {
     return createUserName;
   }
 
-  public void setCreateUserName(String createUserName) {
+  public void setCreateUserName(@javax.annotation.Nullable String createUserName) {
     this.createUserName = createUserName;
   }
 
 
-  public Reportsv3Control createdByTemplate(Boolean createdByTemplate) {
+  public Reportsv3Control createdByTemplate(@javax.annotation.Nullable Boolean createdByTemplate) {
     this.createdByTemplate = createdByTemplate;
     return this;
   }
 
-   /**
+  /**
    * Get createdByTemplate
    * @return createdByTemplate
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getCreatedByTemplate() {
     return createdByTemplate;
   }
 
-  public void setCreatedByTemplate(Boolean createdByTemplate) {
+  public void setCreatedByTemplate(@javax.annotation.Nullable Boolean createdByTemplate) {
     this.createdByTemplate = createdByTemplate;
   }
 
 
-  public Reportsv3Control dateCreated(OffsetDateTime dateCreated) {
+  public Reportsv3Control dateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
     return this;
   }
 
-   /**
+  /**
    * Get dateCreated
    * @return dateCreated
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
-  public void setDateCreated(OffsetDateTime dateCreated) {
+  public void setDateCreated(@javax.annotation.Nullable OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
-  public Reportsv3Control dateUpdated(OffsetDateTime dateUpdated) {
+  public Reportsv3Control dateUpdated(@javax.annotation.Nullable OffsetDateTime dateUpdated) {
     this.dateUpdated = dateUpdated;
     return this;
   }
 
-   /**
+  /**
    * Get dateUpdated
    * @return dateUpdated
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateUpdated() {
     return dateUpdated;
   }
 
-  public void setDateUpdated(OffsetDateTime dateUpdated) {
+  public void setDateUpdated(@javax.annotation.Nullable OffsetDateTime dateUpdated) {
     this.dateUpdated = dateUpdated;
   }
 
 
-  public Reportsv3Control programId(Integer programId) {
+  public Reportsv3Control programId(@javax.annotation.Nullable Integer programId) {
     this.programId = programId;
     return this;
   }
 
-   /**
+  /**
    * Get programId
    * @return programId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getProgramId() {
     return programId;
   }
 
-  public void setProgramId(Integer programId) {
+  public void setProgramId(@javax.annotation.Nullable Integer programId) {
     this.programId = programId;
   }
 
 
-  public Reportsv3Control tags(List<String> tags) {
+  public Reportsv3Control tags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
     return this;
   }
@@ -310,111 +326,111 @@ public class Reportsv3Control {
     return this;
   }
 
-   /**
+  /**
    * Get tags
    * @return tags
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
 
-  public void setTags(List<String> tags) {
+  public void setTags(@javax.annotation.Nullable List<String> tags) {
     this.tags = tags;
   }
 
 
-  public Reportsv3Control templateId(String templateId) {
+  public Reportsv3Control templateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
     return this;
   }
 
-   /**
+  /**
    * Get templateId
    * @return templateId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTemplateId() {
     return templateId;
   }
 
-  public void setTemplateId(String templateId) {
+  public void setTemplateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
   }
 
 
-  public Reportsv3Control theme(String theme) {
+  public Reportsv3Control theme(@javax.annotation.Nullable String theme) {
     this.theme = theme;
     return this;
   }
 
-   /**
+  /**
    * Get theme
    * @return theme
-  **/
+   */
   @javax.annotation.Nullable
   public String getTheme() {
     return theme;
   }
 
-  public void setTheme(String theme) {
+  public void setTheme(@javax.annotation.Nullable String theme) {
     this.theme = theme;
   }
 
 
-  public Reportsv3Control title(String title) {
+  public Reportsv3Control title(@javax.annotation.Nullable String title) {
     this.title = title;
     return this;
   }
 
-   /**
+  /**
    * Get title
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
   public String getTitle() {
     return title;
   }
 
-  public void setTitle(String title) {
+  public void setTitle(@javax.annotation.Nullable String title) {
     this.title = title;
   }
 
 
-  public Reportsv3Control updateUserId(String updateUserId) {
+  public Reportsv3Control updateUserId(@javax.annotation.Nullable String updateUserId) {
     this.updateUserId = updateUserId;
     return this;
   }
 
-   /**
+  /**
    * Get updateUserId
    * @return updateUserId
-  **/
+   */
   @javax.annotation.Nullable
   public String getUpdateUserId() {
     return updateUserId;
   }
 
-  public void setUpdateUserId(String updateUserId) {
+  public void setUpdateUserId(@javax.annotation.Nullable String updateUserId) {
     this.updateUserId = updateUserId;
   }
 
 
-  public Reportsv3Control updateUserName(String updateUserName) {
+  public Reportsv3Control updateUserName(@javax.annotation.Nullable String updateUserName) {
     this.updateUserName = updateUserName;
     return this;
   }
 
-   /**
+  /**
    * Get updateUserName
    * @return updateUserName
-  **/
+   */
   @javax.annotation.Nullable
   public String getUpdateUserName() {
     return updateUserName;
   }
 
-  public void setUpdateUserName(String updateUserName) {
+  public void setUpdateUserName(@javax.annotation.Nullable String updateUserName) {
     this.updateUserName = updateUserName;
   }
 
@@ -491,37 +507,22 @@ public class Reportsv3Control {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("artifacts");
-    openapiFields.add("control_code");
-    openapiFields.add("control_id");
-    openapiFields.add("create_user_id");
-    openapiFields.add("create_user_name");
-    openapiFields.add("created_by_template");
-    openapiFields.add("date_created");
-    openapiFields.add("date_updated");
-    openapiFields.add("program_id");
-    openapiFields.add("tags");
-    openapiFields.add("template_id");
-    openapiFields.add("theme");
-    openapiFields.add("title");
-    openapiFields.add("update_user_id");
-    openapiFields.add("update_user_name");
+    openapiFields = new HashSet<String>(Arrays.asList("artifacts", "control_code", "control_id", "create_user_id", "create_user_name", "created_by_template", "date_created", "date_updated", "program_id", "tags", "template_id", "theme", "title", "update_user_id", "update_user_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3Control
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3Control
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3Control.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3Control is not found in the empty JSON string", Reportsv3Control.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3Control is not found in the empty JSON string", Reportsv3Control.openapiRequiredFields.toString()));
         }
       }
 
@@ -529,7 +530,7 @@ public class Reportsv3Control {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3Control.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3Control` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3Control` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -538,7 +539,7 @@ public class Reportsv3Control {
         if (jsonArrayartifacts != null) {
           // ensure the json data is an array
           if (!jsonObj.get("artifacts").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `artifacts` to be an array in the JSON string but got `%s`", jsonObj.get("artifacts").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `artifacts` to be an array in the JSON string but got `%s`", jsonObj.get("artifacts").toString()));
           }
 
           // validate the optional field `artifacts` (array)
@@ -548,32 +549,32 @@ public class Reportsv3Control {
         }
       }
       if ((jsonObj.get("control_code") != null && !jsonObj.get("control_code").isJsonNull()) && !jsonObj.get("control_code").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `control_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("control_code").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `control_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("control_code").toString()));
       }
       if ((jsonObj.get("create_user_id") != null && !jsonObj.get("create_user_id").isJsonNull()) && !jsonObj.get("create_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `create_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `create_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_id").toString()));
       }
       if ((jsonObj.get("create_user_name") != null && !jsonObj.get("create_user_name").isJsonNull()) && !jsonObj.get("create_user_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `create_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `create_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("create_user_name").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("tags") != null && !jsonObj.get("tags").isJsonNull() && !jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
       }
       if ((jsonObj.get("template_id") != null && !jsonObj.get("template_id").isJsonNull()) && !jsonObj.get("template_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
       }
       if ((jsonObj.get("theme") != null && !jsonObj.get("theme").isJsonNull()) && !jsonObj.get("theme").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `theme` to be a primitive type in the JSON string but got `%s`", jsonObj.get("theme").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `theme` to be a primitive type in the JSON string but got `%s`", jsonObj.get("theme").toString()));
       }
       if ((jsonObj.get("title") != null && !jsonObj.get("title").isJsonNull()) && !jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
       }
       if ((jsonObj.get("update_user_id") != null && !jsonObj.get("update_user_id").isJsonNull()) && !jsonObj.get("update_user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `update_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `update_user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_id").toString()));
       }
       if ((jsonObj.get("update_user_name") != null && !jsonObj.get("update_user_name").isJsonNull()) && !jsonObj.get("update_user_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `update_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `update_user_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("update_user_name").toString()));
       }
   }
 
@@ -606,22 +607,22 @@ public class Reportsv3Control {
     }
   }
 
- /**
-  * Create an instance of Reportsv3Control given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3Control
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3Control
-  */
+  /**
+   * Create an instance of Reportsv3Control given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3Control
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3Control
+   */
   public static Reportsv3Control fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3Control.class);
   }
 
- /**
-  * Convert an instance of Reportsv3Control to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3Control to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

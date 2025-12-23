@@ -37,10 +37,10 @@ class Complianceacceleratorv3AuditScheduler(BaseModel):
     by_day_of_month: Optional[StrictBool] = Field(default=None, description="Either by day of month or date of the week of month.")
     day_of_month: Optional[StrictStr] = Field(default=None, description="The day of the month, combined with frequency = 4 because there last day of the month the data type is string.")
     day_of_week: Optional[List[Schedulerv3DayOfWeek]] = Field(default=None, description="What day do you want to run , combined with frequency= 3, such as Monday, Tuesday.")
-    day_order: Optional[Schedulerv3DayOrder] = None
-    day_order_day_of_week: Optional[Schedulerv3DayOfWeek] = None
+    day_order: Optional[Schedulerv3DayOrder] = Schedulerv3DayOrder.UNDEFINED_ORDER
+    day_order_day_of_week: Optional[Schedulerv3DayOfWeek] = Schedulerv3DayOfWeek.UNDEFINED_DAY
     end_schedule: Optional[datetime] = Field(default=None, description="End the schedule on , if it is null means never ends.")
-    frequency: Optional[Schedulerv3Frequency] = None
+    frequency: Optional[Schedulerv3Frequency] = Schedulerv3Frequency.UNDEFINED_FREQUENCY
     months: Optional[List[Schedulerv3Month]] = Field(default=None, description="Month value.")
     never_end: Optional[StrictBool] = Field(default=None, description="Never end schedule or not.")
     repeat: Optional[StrictInt] = Field(default=None, description="Combined with frequency to define how often to run the job. ie, if frequncy =1 and repeat =3 means run the job every 3 hours.")
@@ -109,10 +109,10 @@ class Complianceacceleratorv3AuditScheduler(BaseModel):
             "by_day_of_month": obj.get("by_day_of_month"),
             "day_of_month": obj.get("day_of_month"),
             "day_of_week": obj.get("day_of_week"),
-            "day_order": obj.get("day_order"),
-            "day_order_day_of_week": obj.get("day_order_day_of_week"),
+            "day_order": obj.get("day_order") if obj.get("day_order") is not None else Schedulerv3DayOrder.UNDEFINED_ORDER,
+            "day_order_day_of_week": obj.get("day_order_day_of_week") if obj.get("day_order_day_of_week") is not None else Schedulerv3DayOfWeek.UNDEFINED_DAY,
             "end_schedule": obj.get("end_schedule"),
-            "frequency": obj.get("frequency"),
+            "frequency": obj.get("frequency") if obj.get("frequency") is not None else Schedulerv3Frequency.UNDEFINED_FREQUENCY,
             "months": obj.get("months"),
             "never_end": obj.get("never_end"),
             "repeat": obj.get("repeat"),

@@ -73,9 +73,9 @@ class Vulmanagementv3GetVulnerabilitiesResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in vulnerabilities (list)
         _items = []
         if self.vulnerabilities:
-            for _item in self.vulnerabilities:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_vulnerabilities in self.vulnerabilities:
+                if _item_vulnerabilities:
+                    _items.append(_item_vulnerabilities.to_dict())
             _dict['vulnerabilities'] = _items
         return _dict
 

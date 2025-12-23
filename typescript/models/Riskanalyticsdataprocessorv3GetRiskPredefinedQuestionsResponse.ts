@@ -21,6 +21,8 @@ export class Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "questions",
@@ -36,4 +38,3 @@ export class Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse {
     public constructor() {
     }
 }
-

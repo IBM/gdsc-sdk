@@ -79,16 +79,16 @@ class Riskanalyticsenginev3ClassificationDetails(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in class_observations (list)
         _items = []
         if self.class_observations:
-            for _item in self.class_observations:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_class_observations in self.class_observations:
+                if _item_class_observations:
+                    _items.append(_item_class_observations.to_dict())
             _dict['class_observations'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in classification_match_details (list)
         _items = []
         if self.classification_match_details:
-            for _item in self.classification_match_details:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_classification_match_details in self.classification_match_details:
+                if _item_classification_match_details:
+                    _items.append(_item_classification_match_details.to_dict())
             _dict['classification_match_details'] = _items
         return _dict
 

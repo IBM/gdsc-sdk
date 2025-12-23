@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,178 +41,188 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ApiKey message includes information of a single apikey.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Tenantuserv3Apikey {
   public static final String SERIALIZED_NAME_ACTIVATION_DATE = "activation_date";
   @SerializedName(SERIALIZED_NAME_ACTIVATION_DATE)
+  @javax.annotation.Nullable
   private OffsetDateTime activationDate;
 
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)
+  @javax.annotation.Nullable
   private Boolean active;
 
   public static final String SERIALIZED_NAME_APIKEY = "apikey";
   @SerializedName(SERIALIZED_NAME_APIKEY)
+  @javax.annotation.Nullable
   private String apikey;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_LAST_USED = "last_used";
   @SerializedName(SERIALIZED_NAME_LAST_USED)
+  @javax.annotation.Nullable
   private OffsetDateTime lastUsed;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_ROLES = "roles";
   @SerializedName(SERIALIZED_NAME_ROLES)
+  @javax.annotation.Nullable
   private List<String> roles = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SECRET = "secret";
   @SerializedName(SERIALIZED_NAME_SECRET)
+  @javax.annotation.Nullable
   private String secret;
 
   public static final String SERIALIZED_NAME_TENANT_ID = "tenant_id";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
+  @javax.annotation.Nullable
   private String tenantId;
 
   public static final String SERIALIZED_NAME_USER_ID = "user_id";
   @SerializedName(SERIALIZED_NAME_USER_ID)
+  @javax.annotation.Nullable
   private String userId;
 
   public Tenantuserv3Apikey() {
   }
 
-  public Tenantuserv3Apikey activationDate(OffsetDateTime activationDate) {
+  public Tenantuserv3Apikey activationDate(@javax.annotation.Nullable OffsetDateTime activationDate) {
     this.activationDate = activationDate;
     return this;
   }
 
-   /**
+  /**
    * Date activated.
    * @return activationDate
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getActivationDate() {
     return activationDate;
   }
 
-  public void setActivationDate(OffsetDateTime activationDate) {
+  public void setActivationDate(@javax.annotation.Nullable OffsetDateTime activationDate) {
     this.activationDate = activationDate;
   }
 
 
-  public Tenantuserv3Apikey active(Boolean active) {
+  public Tenantuserv3Apikey active(@javax.annotation.Nullable Boolean active) {
     this.active = active;
     return this;
   }
 
-   /**
+  /**
    * Is Active.
    * @return active
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getActive() {
     return active;
   }
 
-  public void setActive(Boolean active) {
+  public void setActive(@javax.annotation.Nullable Boolean active) {
     this.active = active;
   }
 
 
-  public Tenantuserv3Apikey apikey(String apikey) {
+  public Tenantuserv3Apikey apikey(@javax.annotation.Nullable String apikey) {
     this.apikey = apikey;
     return this;
   }
 
-   /**
+  /**
    * Apikey.
    * @return apikey
-  **/
+   */
   @javax.annotation.Nullable
   public String getApikey() {
     return apikey;
   }
 
-  public void setApikey(String apikey) {
+  public void setApikey(@javax.annotation.Nullable String apikey) {
     this.apikey = apikey;
   }
 
 
-  public Tenantuserv3Apikey id(String id) {
+  public Tenantuserv3Apikey id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Apikey id.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Tenantuserv3Apikey lastUsed(OffsetDateTime lastUsed) {
+  public Tenantuserv3Apikey lastUsed(@javax.annotation.Nullable OffsetDateTime lastUsed) {
     this.lastUsed = lastUsed;
     return this;
   }
 
-   /**
+  /**
    * Date last used.
    * @return lastUsed
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getLastUsed() {
     return lastUsed;
   }
 
-  public void setLastUsed(OffsetDateTime lastUsed) {
+  public void setLastUsed(@javax.annotation.Nullable OffsetDateTime lastUsed) {
     this.lastUsed = lastUsed;
   }
 
 
-  public Tenantuserv3Apikey name(String name) {
+  public Tenantuserv3Apikey name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * ApiKey name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Tenantuserv3Apikey roles(List<String> roles) {
+  public Tenantuserv3Apikey roles(@javax.annotation.Nullable List<String> roles) {
     this.roles = roles;
     return this;
   }
@@ -224,73 +235,73 @@ public class Tenantuserv3Apikey {
     return this;
   }
 
-   /**
+  /**
    * Roles.
    * @return roles
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getRoles() {
     return roles;
   }
 
-  public void setRoles(List<String> roles) {
+  public void setRoles(@javax.annotation.Nullable List<String> roles) {
     this.roles = roles;
   }
 
 
-  public Tenantuserv3Apikey secret(String secret) {
+  public Tenantuserv3Apikey secret(@javax.annotation.Nullable String secret) {
     this.secret = secret;
     return this;
   }
 
-   /**
+  /**
    * Secret.
    * @return secret
-  **/
+   */
   @javax.annotation.Nullable
   public String getSecret() {
     return secret;
   }
 
-  public void setSecret(String secret) {
+  public void setSecret(@javax.annotation.Nullable String secret) {
     this.secret = secret;
   }
 
 
-  public Tenantuserv3Apikey tenantId(String tenantId) {
+  public Tenantuserv3Apikey tenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
     return this;
   }
 
-   /**
+  /**
    * Tenant id.
    * @return tenantId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTenantId() {
     return tenantId;
   }
 
-  public void setTenantId(String tenantId) {
+  public void setTenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
   }
 
 
-  public Tenantuserv3Apikey userId(String userId) {
+  public Tenantuserv3Apikey userId(@javax.annotation.Nullable String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
+  /**
    * Email.
    * @return userId
-  **/
+   */
   @javax.annotation.Nullable
   public String getUserId() {
     return userId;
   }
 
-  public void setUserId(String userId) {
+  public void setUserId(@javax.annotation.Nullable String userId) {
     this.userId = userId;
   }
 
@@ -357,32 +368,22 @@ public class Tenantuserv3Apikey {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("activation_date");
-    openapiFields.add("active");
-    openapiFields.add("apikey");
-    openapiFields.add("id");
-    openapiFields.add("last_used");
-    openapiFields.add("name");
-    openapiFields.add("roles");
-    openapiFields.add("secret");
-    openapiFields.add("tenant_id");
-    openapiFields.add("user_id");
+    openapiFields = new HashSet<String>(Arrays.asList("activation_date", "active", "apikey", "id", "last_used", "name", "roles", "secret", "tenant_id", "user_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3Apikey
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Tenantuserv3Apikey
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Tenantuserv3Apikey.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Tenantuserv3Apikey is not found in the empty JSON string", Tenantuserv3Apikey.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Tenantuserv3Apikey is not found in the empty JSON string", Tenantuserv3Apikey.openapiRequiredFields.toString()));
         }
       }
 
@@ -390,31 +391,31 @@ public class Tenantuserv3Apikey {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Tenantuserv3Apikey.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tenantuserv3Apikey` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Tenantuserv3Apikey` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("apikey") != null && !jsonObj.get("apikey").isJsonNull()) && !jsonObj.get("apikey").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `apikey` to be a primitive type in the JSON string but got `%s`", jsonObj.get("apikey").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `apikey` to be a primitive type in the JSON string but got `%s`", jsonObj.get("apikey").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("roles") != null && !jsonObj.get("roles").isJsonNull() && !jsonObj.get("roles").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `roles` to be an array in the JSON string but got `%s`", jsonObj.get("roles").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `roles` to be an array in the JSON string but got `%s`", jsonObj.get("roles").toString()));
       }
       if ((jsonObj.get("secret") != null && !jsonObj.get("secret").isJsonNull()) && !jsonObj.get("secret").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `secret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `secret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret").toString()));
       }
       if ((jsonObj.get("tenant_id") != null && !jsonObj.get("tenant_id").isJsonNull()) && !jsonObj.get("tenant_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
       }
       if ((jsonObj.get("user_id") != null && !jsonObj.get("user_id").isJsonNull()) && !jsonObj.get("user_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `user_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user_id").toString()));
       }
   }
 
@@ -447,22 +448,22 @@ public class Tenantuserv3Apikey {
     }
   }
 
- /**
-  * Create an instance of Tenantuserv3Apikey given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Tenantuserv3Apikey
-  * @throws IOException if the JSON string is invalid with respect to Tenantuserv3Apikey
-  */
+  /**
+   * Create an instance of Tenantuserv3Apikey given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Tenantuserv3Apikey
+   * @throws IOException if the JSON string is invalid with respect to Tenantuserv3Apikey
+   */
   public static Tenantuserv3Apikey fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Tenantuserv3Apikey.class);
   }
 
- /**
-  * Convert an instance of Tenantuserv3Apikey to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Tenantuserv3Apikey to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

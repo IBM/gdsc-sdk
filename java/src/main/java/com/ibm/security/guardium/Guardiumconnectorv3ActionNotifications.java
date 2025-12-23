@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,111 +38,115 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Guardiumconnectorv3ActionNotifications
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Guardiumconnectorv3ActionNotifications {
   public static final String SERIALIZED_NAME_INTEGRATION_ID = "integration_id";
   @SerializedName(SERIALIZED_NAME_INTEGRATION_ID)
+  @javax.annotation.Nullable
   private String integrationId;
 
   public static final String SERIALIZED_NAME_RECEIVERS = "receivers";
   @SerializedName(SERIALIZED_NAME_RECEIVERS)
+  @javax.annotation.Nullable
   private String receivers;
 
   public static final String SERIALIZED_NAME_TEMPLATE_ID = "template_id";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
+  @javax.annotation.Nullable
   private String templateId;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public Guardiumconnectorv3ActionNotifications() {
   }
 
-  public Guardiumconnectorv3ActionNotifications integrationId(String integrationId) {
+  public Guardiumconnectorv3ActionNotifications integrationId(@javax.annotation.Nullable String integrationId) {
     this.integrationId = integrationId;
     return this;
   }
 
-   /**
+  /**
    * Get integrationId
    * @return integrationId
-  **/
+   */
   @javax.annotation.Nullable
   public String getIntegrationId() {
     return integrationId;
   }
 
-  public void setIntegrationId(String integrationId) {
+  public void setIntegrationId(@javax.annotation.Nullable String integrationId) {
     this.integrationId = integrationId;
   }
 
 
-  public Guardiumconnectorv3ActionNotifications receivers(String receivers) {
+  public Guardiumconnectorv3ActionNotifications receivers(@javax.annotation.Nullable String receivers) {
     this.receivers = receivers;
     return this;
   }
 
-   /**
+  /**
    * Get receivers
    * @return receivers
-  **/
+   */
   @javax.annotation.Nullable
   public String getReceivers() {
     return receivers;
   }
 
-  public void setReceivers(String receivers) {
+  public void setReceivers(@javax.annotation.Nullable String receivers) {
     this.receivers = receivers;
   }
 
 
-  public Guardiumconnectorv3ActionNotifications templateId(String templateId) {
+  public Guardiumconnectorv3ActionNotifications templateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
     return this;
   }
 
-   /**
+  /**
    * Get templateId
    * @return templateId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTemplateId() {
     return templateId;
   }
 
-  public void setTemplateId(String templateId) {
+  public void setTemplateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
   }
 
 
-  public Guardiumconnectorv3ActionNotifications type(String type) {
+  public Guardiumconnectorv3ActionNotifications type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
@@ -196,26 +201,22 @@ public class Guardiumconnectorv3ActionNotifications {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("integration_id");
-    openapiFields.add("receivers");
-    openapiFields.add("template_id");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("integration_id", "receivers", "template_id", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3ActionNotifications
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Guardiumconnectorv3ActionNotifications
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Guardiumconnectorv3ActionNotifications.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Guardiumconnectorv3ActionNotifications is not found in the empty JSON string", Guardiumconnectorv3ActionNotifications.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Guardiumconnectorv3ActionNotifications is not found in the empty JSON string", Guardiumconnectorv3ActionNotifications.openapiRequiredFields.toString()));
         }
       }
 
@@ -223,21 +224,21 @@ public class Guardiumconnectorv3ActionNotifications {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Guardiumconnectorv3ActionNotifications.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3ActionNotifications` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Guardiumconnectorv3ActionNotifications` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("integration_id") != null && !jsonObj.get("integration_id").isJsonNull()) && !jsonObj.get("integration_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `integration_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("integration_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `integration_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("integration_id").toString()));
       }
       if ((jsonObj.get("receivers") != null && !jsonObj.get("receivers").isJsonNull()) && !jsonObj.get("receivers").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `receivers` to be a primitive type in the JSON string but got `%s`", jsonObj.get("receivers").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `receivers` to be a primitive type in the JSON string but got `%s`", jsonObj.get("receivers").toString()));
       }
       if ((jsonObj.get("template_id") != null && !jsonObj.get("template_id").isJsonNull()) && !jsonObj.get("template_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }
 
@@ -270,22 +271,22 @@ public class Guardiumconnectorv3ActionNotifications {
     }
   }
 
- /**
-  * Create an instance of Guardiumconnectorv3ActionNotifications given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Guardiumconnectorv3ActionNotifications
-  * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3ActionNotifications
-  */
+  /**
+   * Create an instance of Guardiumconnectorv3ActionNotifications given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Guardiumconnectorv3ActionNotifications
+   * @throws IOException if the JSON string is invalid with respect to Guardiumconnectorv3ActionNotifications
+   */
   public static Guardiumconnectorv3ActionNotifications fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Guardiumconnectorv3ActionNotifications.class);
   }
 
- /**
-  * Convert an instance of Guardiumconnectorv3ActionNotifications to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Guardiumconnectorv3ActionNotifications to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

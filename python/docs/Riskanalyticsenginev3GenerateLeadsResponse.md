@@ -7,7 +7,7 @@ GenerateLeadsResponse is the response object for GenerateLeads API.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **end_time** | **datetime** | The end time of the risks in format YYYY-MM-ddTHH:mm:ssZ. | [optional] 
-**pivot_type** | [**Riskanalyticsenginev3PivotType**](Riskanalyticsenginev3PivotType.md) |  | [optional] 
+**pivot_type** | [**Riskanalyticsenginev3PivotType**](Riskanalyticsenginev3PivotType.md) |  | [optional] [default to Riskanalyticsenginev3PivotType.UNDEFINED_PIVOT_TYPE]
 **risks** | [**List[Riskanalyticsenginev3Risk]**](Riskanalyticsenginev3Risk.md) | Returns an array with risks with pivot and leads. | [optional] 
 **start_time** | **datetime** | The start time of the risks in format YYYY-MM-ddTHH:mm:ssZ. | [optional] 
 

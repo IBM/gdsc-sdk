@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,36 +43,39 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Returns just cases with associated tasks.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3CaseListResponse {
   public static final String SERIALIZED_NAME_CASES = "cases";
   @SerializedName(SERIALIZED_NAME_CASES)
+  @javax.annotation.Nullable
   private List<Workflowv3Case> cases = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_FILTER = "filter";
   @SerializedName(SERIALIZED_NAME_FILTER)
+  @javax.annotation.Nullable
   private Workflowv3Filter filter;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private GooglerpcStatus status;
 
   public Workflowv3CaseListResponse() {
   }
 
-  public Workflowv3CaseListResponse cases(List<Workflowv3Case> cases) {
+  public Workflowv3CaseListResponse cases(@javax.annotation.Nullable List<Workflowv3Case> cases) {
     this.cases = cases;
     return this;
   }
@@ -84,54 +88,54 @@ public class Workflowv3CaseListResponse {
     return this;
   }
 
-   /**
+  /**
    * Filtered list of cases.
    * @return cases
-  **/
+   */
   @javax.annotation.Nullable
   public List<Workflowv3Case> getCases() {
     return cases;
   }
 
-  public void setCases(List<Workflowv3Case> cases) {
+  public void setCases(@javax.annotation.Nullable List<Workflowv3Case> cases) {
     this.cases = cases;
   }
 
 
-  public Workflowv3CaseListResponse filter(Workflowv3Filter filter) {
+  public Workflowv3CaseListResponse filter(@javax.annotation.Nullable Workflowv3Filter filter) {
     this.filter = filter;
     return this;
   }
 
-   /**
+  /**
    * Get filter
    * @return filter
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3Filter getFilter() {
     return filter;
   }
 
-  public void setFilter(Workflowv3Filter filter) {
+  public void setFilter(@javax.annotation.Nullable Workflowv3Filter filter) {
     this.filter = filter;
   }
 
 
-  public Workflowv3CaseListResponse status(GooglerpcStatus status) {
+  public Workflowv3CaseListResponse status(@javax.annotation.Nullable GooglerpcStatus status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public GooglerpcStatus getStatus() {
     return status;
   }
 
-  public void setStatus(GooglerpcStatus status) {
+  public void setStatus(@javax.annotation.Nullable GooglerpcStatus status) {
     this.status = status;
   }
 
@@ -184,25 +188,22 @@ public class Workflowv3CaseListResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cases");
-    openapiFields.add("filter");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("cases", "filter", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3CaseListResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3CaseListResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3CaseListResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3CaseListResponse is not found in the empty JSON string", Workflowv3CaseListResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3CaseListResponse is not found in the empty JSON string", Workflowv3CaseListResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -210,7 +211,7 @@ public class Workflowv3CaseListResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3CaseListResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3CaseListResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3CaseListResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -219,7 +220,7 @@ public class Workflowv3CaseListResponse {
         if (jsonArraycases != null) {
           // ensure the json data is an array
           if (!jsonObj.get("cases").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `cases` to be an array in the JSON string but got `%s`", jsonObj.get("cases").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cases` to be an array in the JSON string but got `%s`", jsonObj.get("cases").toString()));
           }
 
           // validate the optional field `cases` (array)
@@ -267,22 +268,22 @@ public class Workflowv3CaseListResponse {
     }
   }
 
- /**
-  * Create an instance of Workflowv3CaseListResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3CaseListResponse
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3CaseListResponse
-  */
+  /**
+   * Create an instance of Workflowv3CaseListResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3CaseListResponse
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3CaseListResponse
+   */
   public static Workflowv3CaseListResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3CaseListResponse.class);
   }
 
- /**
-  * Convert an instance of Workflowv3CaseListResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3CaseListResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,42 +39,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetReportSynopsisResponse containes a brief report and is the return type of GetReportSynopsis() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3GetReportSynopsisResponse {
   public static final String SERIALIZED_NAME_REPORT = "report";
   @SerializedName(SERIALIZED_NAME_REPORT)
+  @javax.annotation.Nullable
   private Reportsv3BriefReport report;
 
   public Reportsv3GetReportSynopsisResponse() {
   }
 
-  public Reportsv3GetReportSynopsisResponse report(Reportsv3BriefReport report) {
+  public Reportsv3GetReportSynopsisResponse report(@javax.annotation.Nullable Reportsv3BriefReport report) {
     this.report = report;
     return this;
   }
 
-   /**
+  /**
    * Get report
    * @return report
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3BriefReport getReport() {
     return report;
   }
 
-  public void setReport(Reportsv3BriefReport report) {
+  public void setReport(@javax.annotation.Nullable Reportsv3BriefReport report) {
     this.report = report;
   }
 
@@ -122,23 +124,22 @@ public class Reportsv3GetReportSynopsisResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("report");
+    openapiFields = new HashSet<String>(Arrays.asList("report"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetReportSynopsisResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetReportSynopsisResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3GetReportSynopsisResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3GetReportSynopsisResponse is not found in the empty JSON string", Reportsv3GetReportSynopsisResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3GetReportSynopsisResponse is not found in the empty JSON string", Reportsv3GetReportSynopsisResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -146,7 +147,7 @@ public class Reportsv3GetReportSynopsisResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3GetReportSynopsisResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3GetReportSynopsisResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3GetReportSynopsisResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -185,22 +186,22 @@ public class Reportsv3GetReportSynopsisResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsv3GetReportSynopsisResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3GetReportSynopsisResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3GetReportSynopsisResponse
-  */
+  /**
+   * Create an instance of Reportsv3GetReportSynopsisResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3GetReportSynopsisResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3GetReportSynopsisResponse
+   */
   public static Reportsv3GetReportSynopsisResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3GetReportSynopsisResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsv3GetReportSynopsisResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3GetReportSynopsisResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

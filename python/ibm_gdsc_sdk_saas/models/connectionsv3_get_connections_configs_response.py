@@ -74,16 +74,16 @@ class Connectionsv3GetConnectionsConfigsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in stream_connection_configs (list)
         _items = []
         if self.stream_connection_configs:
-            for _item in self.stream_connection_configs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_stream_connection_configs in self.stream_connection_configs:
+                if _item_stream_connection_configs:
+                    _items.append(_item_stream_connection_configs.to_dict())
             _dict['stream_connection_configs'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in uc_connection_configs (list)
         _items = []
         if self.uc_connection_configs:
-            for _item in self.uc_connection_configs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_uc_connection_configs in self.uc_connection_configs:
+                if _item_uc_connection_configs:
+                    _items.append(_item_uc_connection_configs.to_dict())
             _dict['uc_connection_configs'] = _items
         return _dict
 

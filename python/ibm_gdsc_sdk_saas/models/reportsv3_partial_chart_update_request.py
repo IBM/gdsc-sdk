@@ -30,7 +30,7 @@ class Reportsv3PartialChartUpdateRequest(BaseModel):
     """ # noqa: E501
     chart_id: Optional[StrictStr] = Field(default=None, description="Unique chart ID.")
     chart_title: Optional[StrictStr] = Field(default=None, description="The chart title.")
-    chart_type: Optional[Reportsv3ChartType] = None
+    chart_type: Optional[Reportsv3ChartType] = Reportsv3ChartType.UNDEFINED_CHART_TYPE
     update_mask: Optional[ProtobufFieldMask] = None
     __properties: ClassVar[List[str]] = ["chart_id", "chart_title", "chart_type", "update_mask"]
 
@@ -90,7 +90,7 @@ class Reportsv3PartialChartUpdateRequest(BaseModel):
         _obj = cls.model_validate({
             "chart_id": obj.get("chart_id"),
             "chart_title": obj.get("chart_title"),
-            "chart_type": obj.get("chart_type"),
+            "chart_type": obj.get("chart_type") if obj.get("chart_type") is not None else Reportsv3ChartType.UNDEFINED_CHART_TYPE,
             "update_mask": ProtobufFieldMask.from_dict(obj["update_mask"]) if obj.get("update_mask") is not None else None
         })
         return _obj

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,64 +40,74 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * LdapConfig contains information about configuration for importing group members from LDAP.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3LdapConfig {
   public static final String SERIALIZED_NAME_ATTRIBUTES = "attributes";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
+  @javax.annotation.Nullable
   private List<String> attributes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_BIND_GROUP_ID = "bind_group_id";
   @SerializedName(SERIALIZED_NAME_BIND_GROUP_ID)
+  @javax.annotation.Nullable
   private Integer bindGroupId;
 
   public static final String SERIALIZED_NAME_BIND_PASSWORD = "bind_password";
   @SerializedName(SERIALIZED_NAME_BIND_PASSWORD)
+  @javax.annotation.Nullable
   private String bindPassword;
 
   public static final String SERIALIZED_NAME_CLEAR_GROUP = "clear_group";
   @SerializedName(SERIALIZED_NAME_CLEAR_GROUP)
+  @javax.annotation.Nullable
   private Boolean clearGroup;
 
   public static final String SERIALIZED_NAME_FILTER = "filter";
   @SerializedName(SERIALIZED_NAME_FILTER)
+  @javax.annotation.Nullable
   private String filter;
 
   public static final String SERIALIZED_NAME_FILTER_SCOPE = "filter_scope";
   @SerializedName(SERIALIZED_NAME_FILTER_SCOPE)
+  @javax.annotation.Nullable
   private Integer filterScope;
 
   public static final String SERIALIZED_NAME_IMPORT_LIMIT = "import_limit";
   @SerializedName(SERIALIZED_NAME_IMPORT_LIMIT)
+  @javax.annotation.Nullable
   private Integer importLimit;
 
   public static final String SERIALIZED_NAME_LDAP_GROUP_NAME = "ldap_group_name";
   @SerializedName(SERIALIZED_NAME_LDAP_GROUP_NAME)
+  @javax.annotation.Nullable
   private String ldapGroupName;
 
   public static final String SERIALIZED_NAME_LDAP_ID = "ldap_id";
   @SerializedName(SERIALIZED_NAME_LDAP_ID)
+  @javax.annotation.Nullable
   private String ldapId;
 
   public static final String SERIALIZED_NAME_MEMBER_PREFIX = "member_prefix";
   @SerializedName(SERIALIZED_NAME_MEMBER_PREFIX)
+  @javax.annotation.Nullable
   private String memberPrefix;
 
   public Groupbuilderv3LdapConfig() {
   }
 
-  public Groupbuilderv3LdapConfig attributes(List<String> attributes) {
+  public Groupbuilderv3LdapConfig attributes(@javax.annotation.Nullable List<String> attributes) {
     this.attributes = attributes;
     return this;
   }
@@ -109,187 +120,187 @@ public class Groupbuilderv3LdapConfig {
     return this;
   }
 
-   /**
+  /**
    * LDAP object attribute used to convert to member data.
    * @return attributes
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getAttributes() {
     return attributes;
   }
 
-  public void setAttributes(List<String> attributes) {
+  public void setAttributes(@javax.annotation.Nullable List<String> attributes) {
     this.attributes = attributes;
   }
 
 
-  public Groupbuilderv3LdapConfig bindGroupId(Integer bindGroupId) {
+  public Groupbuilderv3LdapConfig bindGroupId(@javax.annotation.Nullable Integer bindGroupId) {
     this.bindGroupId = bindGroupId;
     return this;
   }
 
-   /**
+  /**
    * ID of the group whose members are used as bind values for parameterize filter.
    * @return bindGroupId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getBindGroupId() {
     return bindGroupId;
   }
 
-  public void setBindGroupId(Integer bindGroupId) {
+  public void setBindGroupId(@javax.annotation.Nullable Integer bindGroupId) {
     this.bindGroupId = bindGroupId;
   }
 
 
-  public Groupbuilderv3LdapConfig bindPassword(String bindPassword) {
+  public Groupbuilderv3LdapConfig bindPassword(@javax.annotation.Nullable String bindPassword) {
     this.bindPassword = bindPassword;
     return this;
   }
 
-   /**
+  /**
    * Password for binding to LDAP if bind ID is set for ICP LDAP definition.
    * @return bindPassword
-  **/
+   */
   @javax.annotation.Nullable
   public String getBindPassword() {
     return bindPassword;
   }
 
-  public void setBindPassword(String bindPassword) {
+  public void setBindPassword(@javax.annotation.Nullable String bindPassword) {
     this.bindPassword = bindPassword;
   }
 
 
-  public Groupbuilderv3LdapConfig clearGroup(Boolean clearGroup) {
+  public Groupbuilderv3LdapConfig clearGroup(@javax.annotation.Nullable Boolean clearGroup) {
     this.clearGroup = clearGroup;
     return this;
   }
 
-   /**
+  /**
    * Flag indicating whether new data is replacing old data or is appended to it.
    * @return clearGroup
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getClearGroup() {
     return clearGroup;
   }
 
-  public void setClearGroup(Boolean clearGroup) {
+  public void setClearGroup(@javax.annotation.Nullable Boolean clearGroup) {
     this.clearGroup = clearGroup;
   }
 
 
-  public Groupbuilderv3LdapConfig filter(String filter) {
+  public Groupbuilderv3LdapConfig filter(@javax.annotation.Nullable String filter) {
     this.filter = filter;
     return this;
   }
 
-   /**
+  /**
    * LDAP search query to use to find objects.
    * @return filter
-  **/
+   */
   @javax.annotation.Nullable
   public String getFilter() {
     return filter;
   }
 
-  public void setFilter(String filter) {
+  public void setFilter(@javax.annotation.Nullable String filter) {
     this.filter = filter;
   }
 
 
-  public Groupbuilderv3LdapConfig filterScope(Integer filterScope) {
+  public Groupbuilderv3LdapConfig filterScope(@javax.annotation.Nullable Integer filterScope) {
     this.filterScope = filterScope;
     return this;
   }
 
-   /**
+  /**
    * Scope of LDAP search:  sub-tree vs immediate base DN children.
    * @return filterScope
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFilterScope() {
     return filterScope;
   }
 
-  public void setFilterScope(Integer filterScope) {
+  public void setFilterScope(@javax.annotation.Nullable Integer filterScope) {
     this.filterScope = filterScope;
   }
 
 
-  public Groupbuilderv3LdapConfig importLimit(Integer importLimit) {
+  public Groupbuilderv3LdapConfig importLimit(@javax.annotation.Nullable Integer importLimit) {
     this.importLimit = importLimit;
     return this;
   }
 
-   /**
+  /**
    * Maximum number of objects to import.
    * @return importLimit
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getImportLimit() {
     return importLimit;
   }
 
-  public void setImportLimit(Integer importLimit) {
+  public void setImportLimit(@javax.annotation.Nullable Integer importLimit) {
     this.importLimit = importLimit;
   }
 
 
-  public Groupbuilderv3LdapConfig ldapGroupName(String ldapGroupName) {
+  public Groupbuilderv3LdapConfig ldapGroupName(@javax.annotation.Nullable String ldapGroupName) {
     this.ldapGroupName = ldapGroupName;
     return this;
   }
 
-   /**
+  /**
    * DN name of the LDAP group to get members from.  Alternative to explicit filter.
    * @return ldapGroupName
-  **/
+   */
   @javax.annotation.Nullable
   public String getLdapGroupName() {
     return ldapGroupName;
   }
 
-  public void setLdapGroupName(String ldapGroupName) {
+  public void setLdapGroupName(@javax.annotation.Nullable String ldapGroupName) {
     this.ldapGroupName = ldapGroupName;
   }
 
 
-  public Groupbuilderv3LdapConfig ldapId(String ldapId) {
+  public Groupbuilderv3LdapConfig ldapId(@javax.annotation.Nullable String ldapId) {
     this.ldapId = ldapId;
     return this;
   }
 
-   /**
+  /**
    * ID of the ICP LDAP definition from which to import.
    * @return ldapId
-  **/
+   */
   @javax.annotation.Nullable
   public String getLdapId() {
     return ldapId;
   }
 
-  public void setLdapId(String ldapId) {
+  public void setLdapId(@javax.annotation.Nullable String ldapId) {
     this.ldapId = ldapId;
   }
 
 
-  public Groupbuilderv3LdapConfig memberPrefix(String memberPrefix) {
+  public Groupbuilderv3LdapConfig memberPrefix(@javax.annotation.Nullable String memberPrefix) {
     this.memberPrefix = memberPrefix;
     return this;
   }
 
-   /**
+  /**
    * Prefix that will be added to each imported member.
    * @return memberPrefix
-  **/
+   */
   @javax.annotation.Nullable
   public String getMemberPrefix() {
     return memberPrefix;
   }
 
-  public void setMemberPrefix(String memberPrefix) {
+  public void setMemberPrefix(@javax.annotation.Nullable String memberPrefix) {
     this.memberPrefix = memberPrefix;
   }
 
@@ -356,32 +367,22 @@ public class Groupbuilderv3LdapConfig {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("attributes");
-    openapiFields.add("bind_group_id");
-    openapiFields.add("bind_password");
-    openapiFields.add("clear_group");
-    openapiFields.add("filter");
-    openapiFields.add("filter_scope");
-    openapiFields.add("import_limit");
-    openapiFields.add("ldap_group_name");
-    openapiFields.add("ldap_id");
-    openapiFields.add("member_prefix");
+    openapiFields = new HashSet<String>(Arrays.asList("attributes", "bind_group_id", "bind_password", "clear_group", "filter", "filter_scope", "import_limit", "ldap_group_name", "ldap_id", "member_prefix"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3LdapConfig
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3LdapConfig
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3LdapConfig.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3LdapConfig is not found in the empty JSON string", Groupbuilderv3LdapConfig.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3LdapConfig is not found in the empty JSON string", Groupbuilderv3LdapConfig.openapiRequiredFields.toString()));
         }
       }
 
@@ -389,28 +390,28 @@ public class Groupbuilderv3LdapConfig {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3LdapConfig.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3LdapConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3LdapConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("attributes") != null && !jsonObj.get("attributes").isJsonNull() && !jsonObj.get("attributes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `attributes` to be an array in the JSON string but got `%s`", jsonObj.get("attributes").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `attributes` to be an array in the JSON string but got `%s`", jsonObj.get("attributes").toString()));
       }
       if ((jsonObj.get("bind_password") != null && !jsonObj.get("bind_password").isJsonNull()) && !jsonObj.get("bind_password").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `bind_password` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bind_password").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `bind_password` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bind_password").toString()));
       }
       if ((jsonObj.get("filter") != null && !jsonObj.get("filter").isJsonNull()) && !jsonObj.get("filter").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `filter` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filter` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filter").toString()));
       }
       if ((jsonObj.get("ldap_group_name") != null && !jsonObj.get("ldap_group_name").isJsonNull()) && !jsonObj.get("ldap_group_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ldap_group_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ldap_group_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ldap_group_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ldap_group_name").toString()));
       }
       if ((jsonObj.get("ldap_id") != null && !jsonObj.get("ldap_id").isJsonNull()) && !jsonObj.get("ldap_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ldap_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ldap_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ldap_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ldap_id").toString()));
       }
       if ((jsonObj.get("member_prefix") != null && !jsonObj.get("member_prefix").isJsonNull()) && !jsonObj.get("member_prefix").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `member_prefix` to be a primitive type in the JSON string but got `%s`", jsonObj.get("member_prefix").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `member_prefix` to be a primitive type in the JSON string but got `%s`", jsonObj.get("member_prefix").toString()));
       }
   }
 
@@ -443,22 +444,22 @@ public class Groupbuilderv3LdapConfig {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3LdapConfig given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3LdapConfig
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3LdapConfig
-  */
+  /**
+   * Create an instance of Groupbuilderv3LdapConfig given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3LdapConfig
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3LdapConfig
+   */
   public static Groupbuilderv3LdapConfig fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3LdapConfig.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3LdapConfig to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3LdapConfig to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -80,16 +80,16 @@ class Qspmpluginmanagerv3PluginRS(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in dims (list)
         _items = []
         if self.dims:
-            for _item in self.dims:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_dims in self.dims:
+                if _item_dims:
+                    _items.append(_item_dims.to_dict())
             _dict['dims'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in facts (list)
         _items = []
         if self.facts:
-            for _item in self.facts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_facts in self.facts:
+                if _item_facts:
+                    _items.append(_item_facts.to_dict())
             _dict['facts'] = _items
         # override the default output from pydantic by calling `to_dict()` of validation_result
         if self.validation_result:

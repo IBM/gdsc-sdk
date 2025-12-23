@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateReportResponse containes the report id and a schedule flag of the updated report from the UpdateReport() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3PartialReportUpdateResponse {
   public static final String SERIALIZED_NAME_IS_SCHEDULED = "is_scheduled";
   @SerializedName(SERIALIZED_NAME_IS_SCHEDULED)
+  @javax.annotation.Nullable
   private Boolean isScheduled;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public Reportsv3PartialReportUpdateResponse() {
   }
 
-  public Reportsv3PartialReportUpdateResponse isScheduled(Boolean isScheduled) {
+  public Reportsv3PartialReportUpdateResponse isScheduled(@javax.annotation.Nullable Boolean isScheduled) {
     this.isScheduled = isScheduled;
     return this;
   }
 
-   /**
+  /**
    * The is_scheduled is a flag says is report scheduled.
    * @return isScheduled
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsScheduled() {
     return isScheduled;
   }
 
-  public void setIsScheduled(Boolean isScheduled) {
+  public void setIsScheduled(@javax.annotation.Nullable Boolean isScheduled) {
     this.isScheduled = isScheduled;
   }
 
 
-  public Reportsv3PartialReportUpdateResponse reportId(String reportId) {
+  public Reportsv3PartialReportUpdateResponse reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Unique Report ID.
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
@@ -146,24 +149,22 @@ public class Reportsv3PartialReportUpdateResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("is_scheduled");
-    openapiFields.add("report_id");
+    openapiFields = new HashSet<String>(Arrays.asList("is_scheduled", "report_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3PartialReportUpdateResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3PartialReportUpdateResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3PartialReportUpdateResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3PartialReportUpdateResponse is not found in the empty JSON string", Reportsv3PartialReportUpdateResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3PartialReportUpdateResponse is not found in the empty JSON string", Reportsv3PartialReportUpdateResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,12 +172,12 @@ public class Reportsv3PartialReportUpdateResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3PartialReportUpdateResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3PartialReportUpdateResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3PartialReportUpdateResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
   }
 
@@ -209,22 +210,22 @@ public class Reportsv3PartialReportUpdateResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsv3PartialReportUpdateResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3PartialReportUpdateResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3PartialReportUpdateResponse
-  */
+  /**
+   * Create an instance of Reportsv3PartialReportUpdateResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3PartialReportUpdateResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3PartialReportUpdateResponse
+   */
   public static Reportsv3PartialReportUpdateResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3PartialReportUpdateResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsv3PartialReportUpdateResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3PartialReportUpdateResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,78 +40,82 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Schedulerv3SearchScheduledTaskRunsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3SearchScheduledTaskRunsRequest {
   public static final String SERIALIZED_NAME_LIMIT = "limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
+  @javax.annotation.Nullable
   private Long limit;
 
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
+  @javax.annotation.Nullable
   private Long offset;
 
   public static final String SERIALIZED_NAME_SCHEDULED_JOB_ID = "scheduled_job_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_JOB_ID)
+  @javax.annotation.Nullable
   private List<String> scheduledJobId = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_WITH_LATEST = "with_latest";
   @SerializedName(SERIALIZED_NAME_WITH_LATEST)
+  @javax.annotation.Nullable
   private Boolean withLatest;
 
   public Schedulerv3SearchScheduledTaskRunsRequest() {
   }
 
-  public Schedulerv3SearchScheduledTaskRunsRequest limit(Long limit) {
+  public Schedulerv3SearchScheduledTaskRunsRequest limit(@javax.annotation.Nullable Long limit) {
     this.limit = limit;
     return this;
   }
 
-   /**
+  /**
    * Optional: the max amount of rows to return for pagination.
    * @return limit
-  **/
+   */
   @javax.annotation.Nullable
   public Long getLimit() {
     return limit;
   }
 
-  public void setLimit(Long limit) {
+  public void setLimit(@javax.annotation.Nullable Long limit) {
     this.limit = limit;
   }
 
 
-  public Schedulerv3SearchScheduledTaskRunsRequest offset(Long offset) {
+  public Schedulerv3SearchScheduledTaskRunsRequest offset(@javax.annotation.Nullable Long offset) {
     this.offset = offset;
     return this;
   }
 
-   /**
+  /**
    * Optional: the amount to offset the rows by for pagination.
    * @return offset
-  **/
+   */
   @javax.annotation.Nullable
   public Long getOffset() {
     return offset;
   }
 
-  public void setOffset(Long offset) {
+  public void setOffset(@javax.annotation.Nullable Long offset) {
     this.offset = offset;
   }
 
 
-  public Schedulerv3SearchScheduledTaskRunsRequest scheduledJobId(List<String> scheduledJobId) {
+  public Schedulerv3SearchScheduledTaskRunsRequest scheduledJobId(@javax.annotation.Nullable List<String> scheduledJobId) {
     this.scheduledJobId = scheduledJobId;
     return this;
   }
@@ -123,35 +128,35 @@ public class Schedulerv3SearchScheduledTaskRunsRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: specicified ScheduledJobs.
    * @return scheduledJobId
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getScheduledJobId() {
     return scheduledJobId;
   }
 
-  public void setScheduledJobId(List<String> scheduledJobId) {
+  public void setScheduledJobId(@javax.annotation.Nullable List<String> scheduledJobId) {
     this.scheduledJobId = scheduledJobId;
   }
 
 
-  public Schedulerv3SearchScheduledTaskRunsRequest withLatest(Boolean withLatest) {
+  public Schedulerv3SearchScheduledTaskRunsRequest withLatest(@javax.annotation.Nullable Boolean withLatest) {
     this.withLatest = withLatest;
     return this;
   }
 
-   /**
+  /**
    * Optional: whether return latest runs for ScheduledJobs.
    * @return withLatest
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getWithLatest() {
     return withLatest;
   }
 
-  public void setWithLatest(Boolean withLatest) {
+  public void setWithLatest(@javax.annotation.Nullable Boolean withLatest) {
     this.withLatest = withLatest;
   }
 
@@ -206,26 +211,22 @@ public class Schedulerv3SearchScheduledTaskRunsRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("limit");
-    openapiFields.add("offset");
-    openapiFields.add("scheduled_job_id");
-    openapiFields.add("with_latest");
+    openapiFields = new HashSet<String>(Arrays.asList("limit", "offset", "scheduled_job_id", "with_latest"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3SearchScheduledTaskRunsRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3SearchScheduledTaskRunsRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3SearchScheduledTaskRunsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3SearchScheduledTaskRunsRequest is not found in the empty JSON string", Schedulerv3SearchScheduledTaskRunsRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3SearchScheduledTaskRunsRequest is not found in the empty JSON string", Schedulerv3SearchScheduledTaskRunsRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -233,13 +234,13 @@ public class Schedulerv3SearchScheduledTaskRunsRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3SearchScheduledTaskRunsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3SearchScheduledTaskRunsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3SearchScheduledTaskRunsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("scheduled_job_id") != null && !jsonObj.get("scheduled_job_id").isJsonNull() && !jsonObj.get("scheduled_job_id").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scheduled_job_id` to be an array in the JSON string but got `%s`", jsonObj.get("scheduled_job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scheduled_job_id` to be an array in the JSON string but got `%s`", jsonObj.get("scheduled_job_id").toString()));
       }
   }
 
@@ -272,22 +273,22 @@ public class Schedulerv3SearchScheduledTaskRunsRequest {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3SearchScheduledTaskRunsRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3SearchScheduledTaskRunsRequest
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3SearchScheduledTaskRunsRequest
-  */
+  /**
+   * Create an instance of Schedulerv3SearchScheduledTaskRunsRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3SearchScheduledTaskRunsRequest
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3SearchScheduledTaskRunsRequest
+   */
   public static Schedulerv3SearchScheduledTaskRunsRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3SearchScheduledTaskRunsRequest.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3SearchScheduledTaskRunsRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3SearchScheduledTaskRunsRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

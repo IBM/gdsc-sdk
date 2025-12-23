@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,203 +40,211 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * FlowNode
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class FlowNode {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nonnull
   private String id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nonnull
   private String type;
 
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_ID = "cloudAccountId";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_ID)
+  @javax.annotation.Nonnull
   private String cloudAccountId;
 
   public static final String SERIALIZED_NAME_CLOUD_REGION = "cloudRegion";
   @SerializedName(SERIALIZED_NAME_CLOUD_REGION)
+  @javax.annotation.Nullable
   private String cloudRegion;
 
   public static final String SERIALIZED_NAME_CLOUD_PROVIDER = "cloudProvider";
   @SerializedName(SERIALIZED_NAME_CLOUD_PROVIDER)
+  @javax.annotation.Nonnull
   private CloudServiceProvider cloudProvider;
 
   public static final String SERIALIZED_NAME_RESOURCE = "resource";
   @SerializedName(SERIALIZED_NAME_RESOURCE)
+  @javax.annotation.Nullable
   private FlowNodeResource resource;
 
   public static final String SERIALIZED_NAME_VENDOR_ID = "vendorId";
   @SerializedName(SERIALIZED_NAME_VENDOR_ID)
+  @javax.annotation.Nullable
   private String vendorId;
 
   public FlowNode() {
   }
 
-  public FlowNode id(String id) {
+  public FlowNode id(@javax.annotation.Nonnull String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nonnull String id) {
     this.id = id;
   }
 
 
-  public FlowNode name(String name) {
+  public FlowNode name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public FlowNode type(String type) {
+  public FlowNode type(@javax.annotation.Nonnull String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nonnull
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nonnull String type) {
     this.type = type;
   }
 
 
-  public FlowNode cloudAccountId(String cloudAccountId) {
+  public FlowNode cloudAccountId(@javax.annotation.Nonnull String cloudAccountId) {
     this.cloudAccountId = cloudAccountId;
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountId
    * @return cloudAccountId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCloudAccountId() {
     return cloudAccountId;
   }
 
-  public void setCloudAccountId(String cloudAccountId) {
+  public void setCloudAccountId(@javax.annotation.Nonnull String cloudAccountId) {
     this.cloudAccountId = cloudAccountId;
   }
 
 
-  public FlowNode cloudRegion(String cloudRegion) {
+  public FlowNode cloudRegion(@javax.annotation.Nullable String cloudRegion) {
     this.cloudRegion = cloudRegion;
     return this;
   }
 
-   /**
+  /**
    * Get cloudRegion
    * @return cloudRegion
-  **/
+   */
   @javax.annotation.Nullable
   public String getCloudRegion() {
     return cloudRegion;
   }
 
-  public void setCloudRegion(String cloudRegion) {
+  public void setCloudRegion(@javax.annotation.Nullable String cloudRegion) {
     this.cloudRegion = cloudRegion;
   }
 
 
-  public FlowNode cloudProvider(CloudServiceProvider cloudProvider) {
+  public FlowNode cloudProvider(@javax.annotation.Nonnull CloudServiceProvider cloudProvider) {
     this.cloudProvider = cloudProvider;
     return this;
   }
 
-   /**
+  /**
    * Get cloudProvider
    * @return cloudProvider
-  **/
+   */
   @javax.annotation.Nonnull
   public CloudServiceProvider getCloudProvider() {
     return cloudProvider;
   }
 
-  public void setCloudProvider(CloudServiceProvider cloudProvider) {
+  public void setCloudProvider(@javax.annotation.Nonnull CloudServiceProvider cloudProvider) {
     this.cloudProvider = cloudProvider;
   }
 
 
-  public FlowNode resource(FlowNodeResource resource) {
+  public FlowNode resource(@javax.annotation.Nullable FlowNodeResource resource) {
     this.resource = resource;
     return this;
   }
 
-   /**
+  /**
    * Get resource
    * @return resource
-  **/
+   */
   @javax.annotation.Nullable
   public FlowNodeResource getResource() {
     return resource;
   }
 
-  public void setResource(FlowNodeResource resource) {
+  public void setResource(@javax.annotation.Nullable FlowNodeResource resource) {
     this.resource = resource;
   }
 
 
-  public FlowNode vendorId(String vendorId) {
+  public FlowNode vendorId(@javax.annotation.Nullable String vendorId) {
     this.vendorId = vendorId;
     return this;
   }
 
-   /**
+  /**
    * Get vendorId
    * @return vendorId
-  **/
+   */
   @javax.annotation.Nullable
   public String getVendorId() {
     return vendorId;
   }
 
-  public void setVendorId(String vendorId) {
+  public void setVendorId(@javax.annotation.Nullable String vendorId) {
     this.vendorId = vendorId;
   }
 
@@ -298,34 +307,22 @@ public class FlowNode {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("id");
-    openapiFields.add("name");
-    openapiFields.add("type");
-    openapiFields.add("cloudAccountId");
-    openapiFields.add("cloudRegion");
-    openapiFields.add("cloudProvider");
-    openapiFields.add("resource");
-    openapiFields.add("vendorId");
+    openapiFields = new HashSet<String>(Arrays.asList("id", "name", "type", "cloudAccountId", "cloudRegion", "cloudProvider", "resource", "vendorId"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("type");
-    openapiRequiredFields.add("cloudAccountId");
-    openapiRequiredFields.add("cloudProvider");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("id", "type", "cloudAccountId", "cloudProvider"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to FlowNode
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to FlowNode
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!FlowNode.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in FlowNode is not found in the empty JSON string", FlowNode.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in FlowNode is not found in the empty JSON string", FlowNode.openapiRequiredFields.toString()));
         }
       }
 
@@ -333,31 +330,31 @@ public class FlowNode {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FlowNode.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FlowNode` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `FlowNode` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : FlowNode.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
       if (!jsonObj.get("cloudAccountId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountId").toString()));
       }
       if ((jsonObj.get("cloudRegion") != null && !jsonObj.get("cloudRegion").isJsonNull()) && !jsonObj.get("cloudRegion").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudRegion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudRegion").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudRegion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudRegion").toString()));
       }
       // validate the required field `cloudProvider`
       CloudServiceProvider.validateJsonElement(jsonObj.get("cloudProvider"));
@@ -366,7 +363,7 @@ public class FlowNode {
         FlowNodeResource.validateJsonElement(jsonObj.get("resource"));
       }
       if ((jsonObj.get("vendorId") != null && !jsonObj.get("vendorId").isJsonNull()) && !jsonObj.get("vendorId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `vendorId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vendorId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("vendorId").toString()));
       }
   }
 
@@ -399,22 +396,22 @@ public class FlowNode {
     }
   }
 
- /**
-  * Create an instance of FlowNode given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of FlowNode
-  * @throws IOException if the JSON string is invalid with respect to FlowNode
-  */
+  /**
+   * Create an instance of FlowNode given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of FlowNode
+   * @throws IOException if the JSON string is invalid with respect to FlowNode
+   */
   public static FlowNode fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, FlowNode.class);
   }
 
- /**
-  * Convert an instance of FlowNode to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of FlowNode to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

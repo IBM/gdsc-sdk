@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,74 +41,77 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * FilterColumn represents a column field filter.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3FilterColumn {
   public static final String SERIALIZED_NAME_HEADER_NAME = "header_name";
   @SerializedName(SERIALIZED_NAME_HEADER_NAME)
+  @javax.annotation.Nullable
   private String headerName;
 
   public static final String SERIALIZED_NAME_OPERATOR_TYPE = "operator_type";
   @SerializedName(SERIALIZED_NAME_OPERATOR_TYPE)
+  @javax.annotation.Nullable
   private Workflowv3OperatorType operatorType = Workflowv3OperatorType.UNDEFINED_OPERATOR_TYPE;
 
   public static final String SERIALIZED_NAME_VALUES = "values";
   @SerializedName(SERIALIZED_NAME_VALUES)
+  @javax.annotation.Nullable
   private List<String> values = new ArrayList<>();
 
   public Workflowv3FilterColumn() {
   }
 
-  public Workflowv3FilterColumn headerName(String headerName) {
+  public Workflowv3FilterColumn headerName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
     return this;
   }
 
-   /**
+  /**
    * Get headerName
    * @return headerName
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderName() {
     return headerName;
   }
 
-  public void setHeaderName(String headerName) {
+  public void setHeaderName(@javax.annotation.Nullable String headerName) {
     this.headerName = headerName;
   }
 
 
-  public Workflowv3FilterColumn operatorType(Workflowv3OperatorType operatorType) {
+  public Workflowv3FilterColumn operatorType(@javax.annotation.Nullable Workflowv3OperatorType operatorType) {
     this.operatorType = operatorType;
     return this;
   }
 
-   /**
+  /**
    * Get operatorType
    * @return operatorType
-  **/
+   */
   @javax.annotation.Nullable
   public Workflowv3OperatorType getOperatorType() {
     return operatorType;
   }
 
-  public void setOperatorType(Workflowv3OperatorType operatorType) {
+  public void setOperatorType(@javax.annotation.Nullable Workflowv3OperatorType operatorType) {
     this.operatorType = operatorType;
   }
 
 
-  public Workflowv3FilterColumn values(List<String> values) {
+  public Workflowv3FilterColumn values(@javax.annotation.Nullable List<String> values) {
     this.values = values;
     return this;
   }
@@ -120,16 +124,16 @@ public class Workflowv3FilterColumn {
     return this;
   }
 
-   /**
+  /**
    * Get values
    * @return values
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getValues() {
     return values;
   }
 
-  public void setValues(List<String> values) {
+  public void setValues(@javax.annotation.Nullable List<String> values) {
     this.values = values;
   }
 
@@ -182,25 +186,22 @@ public class Workflowv3FilterColumn {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("header_name");
-    openapiFields.add("operator_type");
-    openapiFields.add("values");
+    openapiFields = new HashSet<String>(Arrays.asList("header_name", "operator_type", "values"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3FilterColumn
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3FilterColumn
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3FilterColumn.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3FilterColumn is not found in the empty JSON string", Workflowv3FilterColumn.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3FilterColumn is not found in the empty JSON string", Workflowv3FilterColumn.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,12 +209,12 @@ public class Workflowv3FilterColumn {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3FilterColumn.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3FilterColumn` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3FilterColumn` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("header_name") != null && !jsonObj.get("header_name").isJsonNull()) && !jsonObj.get("header_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_name").toString()));
       }
       // validate the optional field `operator_type`
       if (jsonObj.get("operator_type") != null && !jsonObj.get("operator_type").isJsonNull()) {
@@ -221,7 +222,7 @@ public class Workflowv3FilterColumn {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("values") != null && !jsonObj.get("values").isJsonNull() && !jsonObj.get("values").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `values` to be an array in the JSON string but got `%s`", jsonObj.get("values").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `values` to be an array in the JSON string but got `%s`", jsonObj.get("values").toString()));
       }
   }
 
@@ -254,22 +255,22 @@ public class Workflowv3FilterColumn {
     }
   }
 
- /**
-  * Create an instance of Workflowv3FilterColumn given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3FilterColumn
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3FilterColumn
-  */
+  /**
+   * Create an instance of Workflowv3FilterColumn given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3FilterColumn
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3FilterColumn
+   */
   public static Workflowv3FilterColumn fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3FilterColumn.class);
   }
 
- /**
-  * Convert an instance of Workflowv3FilterColumn to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3FilterColumn to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -11,7 +11,7 @@
 
 * `SLACK` (value: `"Slack"`)
 
-* `PAGERDUTY` (value: `"PagerDuty"`)
+* `PAGER_DUTY` (value: `"PagerDuty"`)
 
 
 

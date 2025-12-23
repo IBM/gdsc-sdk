@@ -72,9 +72,9 @@ class Riskanalyticsmlclassificationv3RuleSetList(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in rule_set_list (list)
         _items = []
         if self.rule_set_list:
-            for _item in self.rule_set_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_rule_set_list in self.rule_set_list:
+                if _item_rule_set_list:
+                    _items.append(_item_rule_set_list.to_dict())
             _dict['rule_set_list'] = _items
         return _dict
 

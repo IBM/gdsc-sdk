@@ -87,13 +87,14 @@ public class DatamartProcessorServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datamartProcessorServiceGetDatamartInfoCall(String ingestionId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datamartProcessorServiceGetDatamartInfoCall(@javax.annotation.Nullable String ingestionId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -142,7 +143,7 @@ public class DatamartProcessorServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datamartProcessorServiceGetDatamartInfoValidateBeforeCall(String ingestionId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datamartProcessorServiceGetDatamartInfoValidateBeforeCall(@javax.annotation.Nullable String ingestionId, final ApiCallback _callback) throws ApiException {
         return datamartProcessorServiceGetDatamartInfoCall(ingestionId, _callback);
 
     }
@@ -154,13 +155,14 @@ public class DatamartProcessorServiceApi {
      * @return Datamartprocessorv3GetDatamartInfoResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Datamartprocessorv3GetDatamartInfoResponse datamartProcessorServiceGetDatamartInfo(String ingestionId) throws ApiException {
+    public Datamartprocessorv3GetDatamartInfoResponse datamartProcessorServiceGetDatamartInfo(@javax.annotation.Nullable String ingestionId) throws ApiException {
         ApiResponse<Datamartprocessorv3GetDatamartInfoResponse> localVarResp = datamartProcessorServiceGetDatamartInfoWithHttpInfo(ingestionId);
         return localVarResp.getData();
     }
@@ -172,13 +174,14 @@ public class DatamartProcessorServiceApi {
      * @return ApiResponse&lt;Datamartprocessorv3GetDatamartInfoResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Datamartprocessorv3GetDatamartInfoResponse> datamartProcessorServiceGetDatamartInfoWithHttpInfo(String ingestionId) throws ApiException {
+    public ApiResponse<Datamartprocessorv3GetDatamartInfoResponse> datamartProcessorServiceGetDatamartInfoWithHttpInfo(@javax.annotation.Nullable String ingestionId) throws ApiException {
         okhttp3.Call localVarCall = datamartProcessorServiceGetDatamartInfoValidateBeforeCall(ingestionId, null);
         Type localVarReturnType = new TypeToken<Datamartprocessorv3GetDatamartInfoResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -192,13 +195,14 @@ public class DatamartProcessorServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datamartProcessorServiceGetDatamartInfoAsync(String ingestionId, final ApiCallback<Datamartprocessorv3GetDatamartInfoResponse> _callback) throws ApiException {
+    public okhttp3.Call datamartProcessorServiceGetDatamartInfoAsync(@javax.annotation.Nullable String ingestionId, final ApiCallback<Datamartprocessorv3GetDatamartInfoResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = datamartProcessorServiceGetDatamartInfoValidateBeforeCall(ingestionId, _callback);
         Type localVarReturnType = new TypeToken<Datamartprocessorv3GetDatamartInfoResponse>(){}.getType();
@@ -213,13 +217,14 @@ public class DatamartProcessorServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datamartProcessorServiceGetDatamartsCall(OffsetDateTime periodStart, OffsetDateTime periodEnd, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datamartProcessorServiceGetDatamartsCall(@javax.annotation.Nullable OffsetDateTime periodStart, @javax.annotation.Nullable OffsetDateTime periodEnd, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -272,7 +277,7 @@ public class DatamartProcessorServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datamartProcessorServiceGetDatamartsValidateBeforeCall(OffsetDateTime periodStart, OffsetDateTime periodEnd, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datamartProcessorServiceGetDatamartsValidateBeforeCall(@javax.annotation.Nullable OffsetDateTime periodStart, @javax.annotation.Nullable OffsetDateTime periodEnd, final ApiCallback _callback) throws ApiException {
         return datamartProcessorServiceGetDatamartsCall(periodStart, periodEnd, _callback);
 
     }
@@ -285,13 +290,14 @@ public class DatamartProcessorServiceApi {
      * @return Datamartprocessorv3GetDatamartResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Datamartprocessorv3GetDatamartResponse datamartProcessorServiceGetDatamarts(OffsetDateTime periodStart, OffsetDateTime periodEnd) throws ApiException {
+    public Datamartprocessorv3GetDatamartResponse datamartProcessorServiceGetDatamarts(@javax.annotation.Nullable OffsetDateTime periodStart, @javax.annotation.Nullable OffsetDateTime periodEnd) throws ApiException {
         ApiResponse<Datamartprocessorv3GetDatamartResponse> localVarResp = datamartProcessorServiceGetDatamartsWithHttpInfo(periodStart, periodEnd);
         return localVarResp.getData();
     }
@@ -304,13 +310,14 @@ public class DatamartProcessorServiceApi {
      * @return ApiResponse&lt;Datamartprocessorv3GetDatamartResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Datamartprocessorv3GetDatamartResponse> datamartProcessorServiceGetDatamartsWithHttpInfo(OffsetDateTime periodStart, OffsetDateTime periodEnd) throws ApiException {
+    public ApiResponse<Datamartprocessorv3GetDatamartResponse> datamartProcessorServiceGetDatamartsWithHttpInfo(@javax.annotation.Nullable OffsetDateTime periodStart, @javax.annotation.Nullable OffsetDateTime periodEnd) throws ApiException {
         okhttp3.Call localVarCall = datamartProcessorServiceGetDatamartsValidateBeforeCall(periodStart, periodEnd, null);
         Type localVarReturnType = new TypeToken<Datamartprocessorv3GetDatamartResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -325,13 +332,14 @@ public class DatamartProcessorServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datamartProcessorServiceGetDatamartsAsync(OffsetDateTime periodStart, OffsetDateTime periodEnd, final ApiCallback<Datamartprocessorv3GetDatamartResponse> _callback) throws ApiException {
+    public okhttp3.Call datamartProcessorServiceGetDatamartsAsync(@javax.annotation.Nullable OffsetDateTime periodStart, @javax.annotation.Nullable OffsetDateTime periodEnd, final ApiCallback<Datamartprocessorv3GetDatamartResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = datamartProcessorServiceGetDatamartsValidateBeforeCall(periodStart, periodEnd, _callback);
         Type localVarReturnType = new TypeToken<Datamartprocessorv3GetDatamartResponse>(){}.getType();
@@ -344,7 +352,8 @@ public class DatamartProcessorServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -406,7 +415,8 @@ public class DatamartProcessorServiceApi {
      * @return Datamartprocessorv3GetEarliestStartTimeResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -423,7 +433,8 @@ public class DatamartProcessorServiceApi {
      * @return ApiResponse&lt;Datamartprocessorv3GetEarliestStartTimeResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -442,7 +453,8 @@ public class DatamartProcessorServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
@@ -462,13 +474,14 @@ public class DatamartProcessorServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datamartProcessorServiceSendAllCompleteFilesToQueueCall(Object body, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datamartProcessorServiceSendAllCompleteFilesToQueueCall(@javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -514,7 +527,7 @@ public class DatamartProcessorServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datamartProcessorServiceSendAllCompleteFilesToQueueValidateBeforeCall(Object body, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datamartProcessorServiceSendAllCompleteFilesToQueueValidateBeforeCall(@javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling datamartProcessorServiceSendAllCompleteFilesToQueue(Async)");
@@ -531,13 +544,14 @@ public class DatamartProcessorServiceApi {
      * @return Datamartprocessorv3StatusResponseBase
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Datamartprocessorv3StatusResponseBase datamartProcessorServiceSendAllCompleteFilesToQueue(Object body) throws ApiException {
+    public Datamartprocessorv3StatusResponseBase datamartProcessorServiceSendAllCompleteFilesToQueue(@javax.annotation.Nonnull Object body) throws ApiException {
         ApiResponse<Datamartprocessorv3StatusResponseBase> localVarResp = datamartProcessorServiceSendAllCompleteFilesToQueueWithHttpInfo(body);
         return localVarResp.getData();
     }
@@ -549,13 +563,14 @@ public class DatamartProcessorServiceApi {
      * @return ApiResponse&lt;Datamartprocessorv3StatusResponseBase&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Datamartprocessorv3StatusResponseBase> datamartProcessorServiceSendAllCompleteFilesToQueueWithHttpInfo(Object body) throws ApiException {
+    public ApiResponse<Datamartprocessorv3StatusResponseBase> datamartProcessorServiceSendAllCompleteFilesToQueueWithHttpInfo(@javax.annotation.Nonnull Object body) throws ApiException {
         okhttp3.Call localVarCall = datamartProcessorServiceSendAllCompleteFilesToQueueValidateBeforeCall(body, null);
         Type localVarReturnType = new TypeToken<Datamartprocessorv3StatusResponseBase>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -569,13 +584,14 @@ public class DatamartProcessorServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datamartProcessorServiceSendAllCompleteFilesToQueueAsync(Object body, final ApiCallback<Datamartprocessorv3StatusResponseBase> _callback) throws ApiException {
+    public okhttp3.Call datamartProcessorServiceSendAllCompleteFilesToQueueAsync(@javax.annotation.Nonnull Object body, final ApiCallback<Datamartprocessorv3StatusResponseBase> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = datamartProcessorServiceSendAllCompleteFilesToQueueValidateBeforeCall(body, _callback);
         Type localVarReturnType = new TypeToken<Datamartprocessorv3StatusResponseBase>(){}.getType();
@@ -590,13 +606,14 @@ public class DatamartProcessorServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datamartProcessorServiceStoreExtractionLogsCall(String requestId, Datamartprocessorv3DMExtractionLogsRequest datamartprocessorv3DMExtractionLogsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datamartProcessorServiceStoreExtractionLogsCall(@javax.annotation.Nonnull String requestId, @javax.annotation.Nonnull Datamartprocessorv3DMExtractionLogsRequest datamartprocessorv3DMExtractionLogsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -643,7 +660,7 @@ public class DatamartProcessorServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datamartProcessorServiceStoreExtractionLogsValidateBeforeCall(String requestId, Datamartprocessorv3DMExtractionLogsRequest datamartprocessorv3DMExtractionLogsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datamartProcessorServiceStoreExtractionLogsValidateBeforeCall(@javax.annotation.Nonnull String requestId, @javax.annotation.Nonnull Datamartprocessorv3DMExtractionLogsRequest datamartprocessorv3DMExtractionLogsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'requestId' is set
         if (requestId == null) {
             throw new ApiException("Missing the required parameter 'requestId' when calling datamartProcessorServiceStoreExtractionLogs(Async)");
@@ -666,13 +683,14 @@ public class DatamartProcessorServiceApi {
      * @return Datamartprocessorv3DMExtractionLogsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Datamartprocessorv3DMExtractionLogsResponse datamartProcessorServiceStoreExtractionLogs(String requestId, Datamartprocessorv3DMExtractionLogsRequest datamartprocessorv3DMExtractionLogsRequest) throws ApiException {
+    public Datamartprocessorv3DMExtractionLogsResponse datamartProcessorServiceStoreExtractionLogs(@javax.annotation.Nonnull String requestId, @javax.annotation.Nonnull Datamartprocessorv3DMExtractionLogsRequest datamartprocessorv3DMExtractionLogsRequest) throws ApiException {
         ApiResponse<Datamartprocessorv3DMExtractionLogsResponse> localVarResp = datamartProcessorServiceStoreExtractionLogsWithHttpInfo(requestId, datamartprocessorv3DMExtractionLogsRequest);
         return localVarResp.getData();
     }
@@ -685,13 +703,14 @@ public class DatamartProcessorServiceApi {
      * @return ApiResponse&lt;Datamartprocessorv3DMExtractionLogsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Datamartprocessorv3DMExtractionLogsResponse> datamartProcessorServiceStoreExtractionLogsWithHttpInfo(String requestId, Datamartprocessorv3DMExtractionLogsRequest datamartprocessorv3DMExtractionLogsRequest) throws ApiException {
+    public ApiResponse<Datamartprocessorv3DMExtractionLogsResponse> datamartProcessorServiceStoreExtractionLogsWithHttpInfo(@javax.annotation.Nonnull String requestId, @javax.annotation.Nonnull Datamartprocessorv3DMExtractionLogsRequest datamartprocessorv3DMExtractionLogsRequest) throws ApiException {
         okhttp3.Call localVarCall = datamartProcessorServiceStoreExtractionLogsValidateBeforeCall(requestId, datamartprocessorv3DMExtractionLogsRequest, null);
         Type localVarReturnType = new TypeToken<Datamartprocessorv3DMExtractionLogsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -706,13 +725,14 @@ public class DatamartProcessorServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datamartProcessorServiceStoreExtractionLogsAsync(String requestId, Datamartprocessorv3DMExtractionLogsRequest datamartprocessorv3DMExtractionLogsRequest, final ApiCallback<Datamartprocessorv3DMExtractionLogsResponse> _callback) throws ApiException {
+    public okhttp3.Call datamartProcessorServiceStoreExtractionLogsAsync(@javax.annotation.Nonnull String requestId, @javax.annotation.Nonnull Datamartprocessorv3DMExtractionLogsRequest datamartprocessorv3DMExtractionLogsRequest, final ApiCallback<Datamartprocessorv3DMExtractionLogsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = datamartProcessorServiceStoreExtractionLogsValidateBeforeCall(requestId, datamartprocessorv3DMExtractionLogsRequest, _callback);
         Type localVarReturnType = new TypeToken<Datamartprocessorv3DMExtractionLogsResponse>(){}.getType();
@@ -726,13 +746,14 @@ public class DatamartProcessorServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uploadDatamartCall(File _file, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uploadDatamartCall(@javax.annotation.Nonnull File _file, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -782,7 +803,7 @@ public class DatamartProcessorServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uploadDatamartValidateBeforeCall(File _file, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call uploadDatamartValidateBeforeCall(@javax.annotation.Nonnull File _file, final ApiCallback _callback) throws ApiException {
         // verify the required parameter '_file' is set
         if (_file == null) {
             throw new ApiException("Missing the required parameter '_file' when calling uploadDatamart(Async)");
@@ -798,13 +819,14 @@ public class DatamartProcessorServiceApi {
      * @param _file The file to upload. (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public void uploadDatamart(File _file) throws ApiException {
+    public void uploadDatamart(@javax.annotation.Nonnull File _file) throws ApiException {
         uploadDatamartWithHttpInfo(_file);
     }
 
@@ -815,13 +837,14 @@ public class DatamartProcessorServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> uploadDatamartWithHttpInfo(File _file) throws ApiException {
+    public ApiResponse<Void> uploadDatamartWithHttpInfo(@javax.annotation.Nonnull File _file) throws ApiException {
         okhttp3.Call localVarCall = uploadDatamartValidateBeforeCall(_file, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -834,13 +857,14 @@ public class DatamartProcessorServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uploadDatamartAsync(File _file, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call uploadDatamartAsync(@javax.annotation.Nonnull File _file, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = uploadDatamartValidateBeforeCall(_file, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);

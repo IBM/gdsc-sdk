@@ -82,13 +82,14 @@ public class QsDataLoaderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSDataLoaderQSfileValidatorCall(Qsdataloaderv3QSfileValidatorRequest qsdataloaderv3QSfileValidatorRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call qSDataLoaderQSfileValidatorCall(@javax.annotation.Nonnull Qsdataloaderv3QSfileValidatorRequest qsdataloaderv3QSfileValidatorRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -134,7 +135,7 @@ public class QsDataLoaderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call qSDataLoaderQSfileValidatorValidateBeforeCall(Qsdataloaderv3QSfileValidatorRequest qsdataloaderv3QSfileValidatorRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call qSDataLoaderQSfileValidatorValidateBeforeCall(@javax.annotation.Nonnull Qsdataloaderv3QSfileValidatorRequest qsdataloaderv3QSfileValidatorRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'qsdataloaderv3QSfileValidatorRequest' is set
         if (qsdataloaderv3QSfileValidatorRequest == null) {
             throw new ApiException("Missing the required parameter 'qsdataloaderv3QSfileValidatorRequest' when calling qSDataLoaderQSfileValidator(Async)");
@@ -151,13 +152,14 @@ public class QsDataLoaderApi {
      * @return Qsdataloaderv3QSfileValidatorResonse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Qsdataloaderv3QSfileValidatorResonse qSDataLoaderQSfileValidator(Qsdataloaderv3QSfileValidatorRequest qsdataloaderv3QSfileValidatorRequest) throws ApiException {
+    public Qsdataloaderv3QSfileValidatorResonse qSDataLoaderQSfileValidator(@javax.annotation.Nonnull Qsdataloaderv3QSfileValidatorRequest qsdataloaderv3QSfileValidatorRequest) throws ApiException {
         ApiResponse<Qsdataloaderv3QSfileValidatorResonse> localVarResp = qSDataLoaderQSfileValidatorWithHttpInfo(qsdataloaderv3QSfileValidatorRequest);
         return localVarResp.getData();
     }
@@ -169,13 +171,14 @@ public class QsDataLoaderApi {
      * @return ApiResponse&lt;Qsdataloaderv3QSfileValidatorResonse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Qsdataloaderv3QSfileValidatorResonse> qSDataLoaderQSfileValidatorWithHttpInfo(Qsdataloaderv3QSfileValidatorRequest qsdataloaderv3QSfileValidatorRequest) throws ApiException {
+    public ApiResponse<Qsdataloaderv3QSfileValidatorResonse> qSDataLoaderQSfileValidatorWithHttpInfo(@javax.annotation.Nonnull Qsdataloaderv3QSfileValidatorRequest qsdataloaderv3QSfileValidatorRequest) throws ApiException {
         okhttp3.Call localVarCall = qSDataLoaderQSfileValidatorValidateBeforeCall(qsdataloaderv3QSfileValidatorRequest, null);
         Type localVarReturnType = new TypeToken<Qsdataloaderv3QSfileValidatorResonse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -189,13 +192,14 @@ public class QsDataLoaderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSDataLoaderQSfileValidatorAsync(Qsdataloaderv3QSfileValidatorRequest qsdataloaderv3QSfileValidatorRequest, final ApiCallback<Qsdataloaderv3QSfileValidatorResonse> _callback) throws ApiException {
+    public okhttp3.Call qSDataLoaderQSfileValidatorAsync(@javax.annotation.Nonnull Qsdataloaderv3QSfileValidatorRequest qsdataloaderv3QSfileValidatorRequest, final ApiCallback<Qsdataloaderv3QSfileValidatorResonse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = qSDataLoaderQSfileValidatorValidateBeforeCall(qsdataloaderv3QSfileValidatorRequest, _callback);
         Type localVarReturnType = new TypeToken<Qsdataloaderv3QSfileValidatorResonse>(){}.getType();
@@ -209,13 +213,14 @@ public class QsDataLoaderApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSDataLoaderUploadSyntheticDataLoaderCall(Object body, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call qSDataLoaderUploadSyntheticDataLoaderCall(@javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -261,7 +266,7 @@ public class QsDataLoaderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call qSDataLoaderUploadSyntheticDataLoaderValidateBeforeCall(Object body, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call qSDataLoaderUploadSyntheticDataLoaderValidateBeforeCall(@javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling qSDataLoaderUploadSyntheticDataLoader(Async)");
@@ -278,13 +283,14 @@ public class QsDataLoaderApi {
      * @return Qsdataloaderv3QSyntheticDataLoaderResonse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Qsdataloaderv3QSyntheticDataLoaderResonse qSDataLoaderUploadSyntheticDataLoader(Object body) throws ApiException {
+    public Qsdataloaderv3QSyntheticDataLoaderResonse qSDataLoaderUploadSyntheticDataLoader(@javax.annotation.Nonnull Object body) throws ApiException {
         ApiResponse<Qsdataloaderv3QSyntheticDataLoaderResonse> localVarResp = qSDataLoaderUploadSyntheticDataLoaderWithHttpInfo(body);
         return localVarResp.getData();
     }
@@ -296,13 +302,14 @@ public class QsDataLoaderApi {
      * @return ApiResponse&lt;Qsdataloaderv3QSyntheticDataLoaderResonse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Qsdataloaderv3QSyntheticDataLoaderResonse> qSDataLoaderUploadSyntheticDataLoaderWithHttpInfo(Object body) throws ApiException {
+    public ApiResponse<Qsdataloaderv3QSyntheticDataLoaderResonse> qSDataLoaderUploadSyntheticDataLoaderWithHttpInfo(@javax.annotation.Nonnull Object body) throws ApiException {
         okhttp3.Call localVarCall = qSDataLoaderUploadSyntheticDataLoaderValidateBeforeCall(body, null);
         Type localVarReturnType = new TypeToken<Qsdataloaderv3QSyntheticDataLoaderResonse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -316,13 +323,14 @@ public class QsDataLoaderApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call qSDataLoaderUploadSyntheticDataLoaderAsync(Object body, final ApiCallback<Qsdataloaderv3QSyntheticDataLoaderResonse> _callback) throws ApiException {
+    public okhttp3.Call qSDataLoaderUploadSyntheticDataLoaderAsync(@javax.annotation.Nonnull Object body, final ApiCallback<Qsdataloaderv3QSyntheticDataLoaderResonse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = qSDataLoaderUploadSyntheticDataLoaderValidateBeforeCall(body, _callback);
         Type localVarReturnType = new TypeToken<Qsdataloaderv3QSyntheticDataLoaderResonse>(){}.getType();

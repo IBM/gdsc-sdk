@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsrunnerv3GetActiveQueriesResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3GetActiveQueriesResponse {
   public static final String SERIALIZED_NAME_QUERIES = "queries";
   @SerializedName(SERIALIZED_NAME_QUERIES)
+  @javax.annotation.Nullable
   private List<Reportsrunnerv3ActiveQuery> queries = new ArrayList<>();
 
   public Reportsrunnerv3GetActiveQueriesResponse() {
   }
 
-  public Reportsrunnerv3GetActiveQueriesResponse queries(List<Reportsrunnerv3ActiveQuery> queries) {
+  public Reportsrunnerv3GetActiveQueriesResponse queries(@javax.annotation.Nullable List<Reportsrunnerv3ActiveQuery> queries) {
     this.queries = queries;
     return this;
   }
@@ -74,16 +76,16 @@ public class Reportsrunnerv3GetActiveQueriesResponse {
     return this;
   }
 
-   /**
+  /**
    * Get queries
    * @return queries
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsrunnerv3ActiveQuery> getQueries() {
     return queries;
   }
 
-  public void setQueries(List<Reportsrunnerv3ActiveQuery> queries) {
+  public void setQueries(@javax.annotation.Nullable List<Reportsrunnerv3ActiveQuery> queries) {
     this.queries = queries;
   }
 
@@ -132,23 +134,22 @@ public class Reportsrunnerv3GetActiveQueriesResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("queries");
+    openapiFields = new HashSet<String>(Arrays.asList("queries"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetActiveQueriesResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetActiveQueriesResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3GetActiveQueriesResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3GetActiveQueriesResponse is not found in the empty JSON string", Reportsrunnerv3GetActiveQueriesResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3GetActiveQueriesResponse is not found in the empty JSON string", Reportsrunnerv3GetActiveQueriesResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Reportsrunnerv3GetActiveQueriesResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3GetActiveQueriesResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetActiveQueriesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetActiveQueriesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Reportsrunnerv3GetActiveQueriesResponse {
         if (jsonArrayqueries != null) {
           // ensure the json data is an array
           if (!jsonObj.get("queries").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `queries` to be an array in the JSON string but got `%s`", jsonObj.get("queries").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `queries` to be an array in the JSON string but got `%s`", jsonObj.get("queries").toString()));
           }
 
           // validate the optional field `queries` (array)
@@ -205,22 +206,22 @@ public class Reportsrunnerv3GetActiveQueriesResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3GetActiveQueriesResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3GetActiveQueriesResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetActiveQueriesResponse
-  */
+  /**
+   * Create an instance of Reportsrunnerv3GetActiveQueriesResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3GetActiveQueriesResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetActiveQueriesResponse
+   */
   public static Reportsrunnerv3GetActiveQueriesResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3GetActiveQueriesResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3GetActiveQueriesResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3GetActiveQueriesResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,226 +39,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Attributes - Entity data.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3Attributes {
   public static final String SERIALIZED_NAME_CRITICAL_VULNERABILITY_COUNT = "critical_vulnerability_count";
   @SerializedName(SERIALIZED_NAME_CRITICAL_VULNERABILITY_COUNT)
+  @javax.annotation.Nullable
   private String criticalVulnerabilityCount;
 
   public static final String SERIALIZED_NAME_ENTITY_ID = "entity_id";
   @SerializedName(SERIALIZED_NAME_ENTITY_ID)
+  @javax.annotation.Nullable
   private String entityId;
 
   public static final String SERIALIZED_NAME_ENTITY_NAME = "entity_name";
   @SerializedName(SERIALIZED_NAME_ENTITY_NAME)
+  @javax.annotation.Nullable
   private String entityName;
 
   public static final String SERIALIZED_NAME_GROUPER_ID = "grouper_id";
   @SerializedName(SERIALIZED_NAME_GROUPER_ID)
+  @javax.annotation.Nullable
   private String grouperId;
 
   public static final String SERIALIZED_NAME_HAS_TRAINING_DATA = "has_training_data";
   @SerializedName(SERIALIZED_NAME_HAS_TRAINING_DATA)
+  @javax.annotation.Nullable
   private Boolean hasTrainingData;
 
   public static final String SERIALIZED_NAME_MAJOR_VULNERABILITY_COUNT = "major_vulnerability_count";
   @SerializedName(SERIALIZED_NAME_MAJOR_VULNERABILITY_COUNT)
+  @javax.annotation.Nullable
   private String majorVulnerabilityCount;
 
   public static final String SERIALIZED_NAME_SENSITIVE_DATA_COUNT = "sensitive_data_count";
   @SerializedName(SERIALIZED_NAME_SENSITIVE_DATA_COUNT)
+  @javax.annotation.Nullable
   private String sensitiveDataCount;
 
   public static final String SERIALIZED_NAME_STATUS_TYPE = "statusType";
   @SerializedName(SERIALIZED_NAME_STATUS_TYPE)
+  @javax.annotation.Nullable
   private Assetsv3StatusType statusType = Assetsv3StatusType.NA;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public Assetsv3Attributes() {
   }
 
-  public Assetsv3Attributes criticalVulnerabilityCount(String criticalVulnerabilityCount) {
+  public Assetsv3Attributes criticalVulnerabilityCount(@javax.annotation.Nullable String criticalVulnerabilityCount) {
     this.criticalVulnerabilityCount = criticalVulnerabilityCount;
     return this;
   }
 
-   /**
+  /**
    * Get criticalVulnerabilityCount
    * @return criticalVulnerabilityCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getCriticalVulnerabilityCount() {
     return criticalVulnerabilityCount;
   }
 
-  public void setCriticalVulnerabilityCount(String criticalVulnerabilityCount) {
+  public void setCriticalVulnerabilityCount(@javax.annotation.Nullable String criticalVulnerabilityCount) {
     this.criticalVulnerabilityCount = criticalVulnerabilityCount;
   }
 
 
-  public Assetsv3Attributes entityId(String entityId) {
+  public Assetsv3Attributes entityId(@javax.annotation.Nullable String entityId) {
     this.entityId = entityId;
     return this;
   }
 
-   /**
+  /**
    * Get entityId
    * @return entityId
-  **/
+   */
   @javax.annotation.Nullable
   public String getEntityId() {
     return entityId;
   }
 
-  public void setEntityId(String entityId) {
+  public void setEntityId(@javax.annotation.Nullable String entityId) {
     this.entityId = entityId;
   }
 
 
-  public Assetsv3Attributes entityName(String entityName) {
+  public Assetsv3Attributes entityName(@javax.annotation.Nullable String entityName) {
     this.entityName = entityName;
     return this;
   }
 
-   /**
+  /**
    * Get entityName
    * @return entityName
-  **/
+   */
   @javax.annotation.Nullable
   public String getEntityName() {
     return entityName;
   }
 
-  public void setEntityName(String entityName) {
+  public void setEntityName(@javax.annotation.Nullable String entityName) {
     this.entityName = entityName;
   }
 
 
-  public Assetsv3Attributes grouperId(String grouperId) {
+  public Assetsv3Attributes grouperId(@javax.annotation.Nullable String grouperId) {
     this.grouperId = grouperId;
     return this;
   }
 
-   /**
+  /**
    * Get grouperId
    * @return grouperId
-  **/
+   */
   @javax.annotation.Nullable
   public String getGrouperId() {
     return grouperId;
   }
 
-  public void setGrouperId(String grouperId) {
+  public void setGrouperId(@javax.annotation.Nullable String grouperId) {
     this.grouperId = grouperId;
   }
 
 
-  public Assetsv3Attributes hasTrainingData(Boolean hasTrainingData) {
+  public Assetsv3Attributes hasTrainingData(@javax.annotation.Nullable Boolean hasTrainingData) {
     this.hasTrainingData = hasTrainingData;
     return this;
   }
 
-   /**
+  /**
    * Get hasTrainingData
    * @return hasTrainingData
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getHasTrainingData() {
     return hasTrainingData;
   }
 
-  public void setHasTrainingData(Boolean hasTrainingData) {
+  public void setHasTrainingData(@javax.annotation.Nullable Boolean hasTrainingData) {
     this.hasTrainingData = hasTrainingData;
   }
 
 
-  public Assetsv3Attributes majorVulnerabilityCount(String majorVulnerabilityCount) {
+  public Assetsv3Attributes majorVulnerabilityCount(@javax.annotation.Nullable String majorVulnerabilityCount) {
     this.majorVulnerabilityCount = majorVulnerabilityCount;
     return this;
   }
 
-   /**
+  /**
    * Get majorVulnerabilityCount
    * @return majorVulnerabilityCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getMajorVulnerabilityCount() {
     return majorVulnerabilityCount;
   }
 
-  public void setMajorVulnerabilityCount(String majorVulnerabilityCount) {
+  public void setMajorVulnerabilityCount(@javax.annotation.Nullable String majorVulnerabilityCount) {
     this.majorVulnerabilityCount = majorVulnerabilityCount;
   }
 
 
-  public Assetsv3Attributes sensitiveDataCount(String sensitiveDataCount) {
+  public Assetsv3Attributes sensitiveDataCount(@javax.annotation.Nullable String sensitiveDataCount) {
     this.sensitiveDataCount = sensitiveDataCount;
     return this;
   }
 
-   /**
+  /**
    * Get sensitiveDataCount
    * @return sensitiveDataCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getSensitiveDataCount() {
     return sensitiveDataCount;
   }
 
-  public void setSensitiveDataCount(String sensitiveDataCount) {
+  public void setSensitiveDataCount(@javax.annotation.Nullable String sensitiveDataCount) {
     this.sensitiveDataCount = sensitiveDataCount;
   }
 
 
-  public Assetsv3Attributes statusType(Assetsv3StatusType statusType) {
+  public Assetsv3Attributes statusType(@javax.annotation.Nullable Assetsv3StatusType statusType) {
     this.statusType = statusType;
     return this;
   }
 
-   /**
+  /**
    * Get statusType
    * @return statusType
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3StatusType getStatusType() {
     return statusType;
   }
 
-  public void setStatusType(Assetsv3StatusType statusType) {
+  public void setStatusType(@javax.annotation.Nullable Assetsv3StatusType statusType) {
     this.statusType = statusType;
   }
 
 
-  public Assetsv3Attributes type(String type) {
+  public Assetsv3Attributes type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
@@ -322,31 +332,22 @@ public class Assetsv3Attributes {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("critical_vulnerability_count");
-    openapiFields.add("entity_id");
-    openapiFields.add("entity_name");
-    openapiFields.add("grouper_id");
-    openapiFields.add("has_training_data");
-    openapiFields.add("major_vulnerability_count");
-    openapiFields.add("sensitive_data_count");
-    openapiFields.add("statusType");
-    openapiFields.add("type");
+    openapiFields = new HashSet<String>(Arrays.asList("critical_vulnerability_count", "entity_id", "entity_name", "grouper_id", "has_training_data", "major_vulnerability_count", "sensitive_data_count", "statusType", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3Attributes
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3Attributes
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3Attributes.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3Attributes is not found in the empty JSON string", Assetsv3Attributes.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3Attributes is not found in the empty JSON string", Assetsv3Attributes.openapiRequiredFields.toString()));
         }
       }
 
@@ -354,34 +355,34 @@ public class Assetsv3Attributes {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3Attributes.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3Attributes` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3Attributes` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("critical_vulnerability_count") != null && !jsonObj.get("critical_vulnerability_count").isJsonNull()) && !jsonObj.get("critical_vulnerability_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `critical_vulnerability_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("critical_vulnerability_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `critical_vulnerability_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("critical_vulnerability_count").toString()));
       }
       if ((jsonObj.get("entity_id") != null && !jsonObj.get("entity_id").isJsonNull()) && !jsonObj.get("entity_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entity_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `entity_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_id").toString()));
       }
       if ((jsonObj.get("entity_name") != null && !jsonObj.get("entity_name").isJsonNull()) && !jsonObj.get("entity_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entity_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `entity_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("entity_name").toString()));
       }
       if ((jsonObj.get("grouper_id") != null && !jsonObj.get("grouper_id").isJsonNull()) && !jsonObj.get("grouper_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `grouper_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("grouper_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `grouper_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("grouper_id").toString()));
       }
       if ((jsonObj.get("major_vulnerability_count") != null && !jsonObj.get("major_vulnerability_count").isJsonNull()) && !jsonObj.get("major_vulnerability_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `major_vulnerability_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("major_vulnerability_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `major_vulnerability_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("major_vulnerability_count").toString()));
       }
       if ((jsonObj.get("sensitive_data_count") != null && !jsonObj.get("sensitive_data_count").isJsonNull()) && !jsonObj.get("sensitive_data_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitive_data_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sensitive_data_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitive_data_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sensitive_data_count").toString()));
       }
       // validate the optional field `statusType`
       if (jsonObj.get("statusType") != null && !jsonObj.get("statusType").isJsonNull()) {
         Assetsv3StatusType.validateJsonElement(jsonObj.get("statusType"));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }
 
@@ -414,22 +415,22 @@ public class Assetsv3Attributes {
     }
   }
 
- /**
-  * Create an instance of Assetsv3Attributes given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3Attributes
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3Attributes
-  */
+  /**
+   * Create an instance of Assetsv3Attributes given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3Attributes
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3Attributes
+   */
   public static Assetsv3Attributes fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3Attributes.class);
   }
 
- /**
-  * Convert an instance of Assetsv3Attributes to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3Attributes to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

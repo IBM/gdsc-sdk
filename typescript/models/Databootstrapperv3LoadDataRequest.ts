@@ -23,6 +23,8 @@ export class Databootstrapperv3LoadDataRequest {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "partNumber",
@@ -38,4 +40,3 @@ export class Databootstrapperv3LoadDataRequest {
     public constructor() {
     }
 }
-

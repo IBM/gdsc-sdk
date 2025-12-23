@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**audit_type** | [**Schedulerv3AuditType**](Schedulerv3AuditType.md) |  | [optional] 
+**audit_type** | [**Schedulerv3AuditType**](Schedulerv3AuditType.md) |  | [optional] [default to Schedulerv3AuditType.UNDEFINED_TYPE]
 **config_types** | **List[str]** |  | [optional] 
 **workflow_investigation_links** | [**List[Schedulerv3ConfigurationItem]**](Schedulerv3ConfigurationItem.md) |  | [optional] 
 **workflow_response_template** | [**Schedulerv3ConfigurationItem**](Schedulerv3ConfigurationItem.md) |  | [optional] 

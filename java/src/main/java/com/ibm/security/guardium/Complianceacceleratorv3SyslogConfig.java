@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,203 +38,211 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Syslog alerts configuration.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Complianceacceleratorv3SyslogConfig {
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
+  @javax.annotation.Nullable
   private String host;
 
   public static final String SERIALIZED_NAME_INCLUDE_Q_RADAR = "include_q_radar";
   @SerializedName(SERIALIZED_NAME_INCLUDE_Q_RADAR)
+  @javax.annotation.Nullable
   private Boolean includeQRadar;
 
   public static final String SERIALIZED_NAME_IS_DELETION = "is_deletion";
   @SerializedName(SERIALIZED_NAME_IS_DELETION)
+  @javax.annotation.Nullable
   private Boolean isDeletion;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
+  @javax.annotation.Nullable
   private String port;
 
   public static final String SERIALIZED_NAME_PROTOCOL = "protocol";
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
+  @javax.annotation.Nullable
   private String protocol;
 
   public static final String SERIALIZED_NAME_SYSLOG_ID = "syslog_id";
   @SerializedName(SERIALIZED_NAME_SYSLOG_ID)
+  @javax.annotation.Nullable
   private String syslogId;
 
   public static final String SERIALIZED_NAME_TEMPLATE_ID = "template_id";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
+  @javax.annotation.Nullable
   private String templateId;
 
   public Complianceacceleratorv3SyslogConfig() {
   }
 
-  public Complianceacceleratorv3SyslogConfig host(String host) {
+  public Complianceacceleratorv3SyslogConfig host(@javax.annotation.Nullable String host) {
     this.host = host;
     return this;
   }
 
-   /**
+  /**
    * Syslog post.
    * @return host
-  **/
+   */
   @javax.annotation.Nullable
   public String getHost() {
     return host;
   }
 
-  public void setHost(String host) {
+  public void setHost(@javax.annotation.Nullable String host) {
     this.host = host;
   }
 
 
-  public Complianceacceleratorv3SyslogConfig includeQRadar(Boolean includeQRadar) {
+  public Complianceacceleratorv3SyslogConfig includeQRadar(@javax.annotation.Nullable Boolean includeQRadar) {
     this.includeQRadar = includeQRadar;
     return this;
   }
 
-   /**
+  /**
    * Is q radar being used.
    * @return includeQRadar
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIncludeQRadar() {
     return includeQRadar;
   }
 
-  public void setIncludeQRadar(Boolean includeQRadar) {
+  public void setIncludeQRadar(@javax.annotation.Nullable Boolean includeQRadar) {
     this.includeQRadar = includeQRadar;
   }
 
 
-  public Complianceacceleratorv3SyslogConfig isDeletion(Boolean isDeletion) {
+  public Complianceacceleratorv3SyslogConfig isDeletion(@javax.annotation.Nullable Boolean isDeletion) {
     this.isDeletion = isDeletion;
     return this;
   }
 
-   /**
+  /**
    * The syslog config is being deleted.
    * @return isDeletion
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsDeletion() {
     return isDeletion;
   }
 
-  public void setIsDeletion(Boolean isDeletion) {
+  public void setIsDeletion(@javax.annotation.Nullable Boolean isDeletion) {
     this.isDeletion = isDeletion;
   }
 
 
-  public Complianceacceleratorv3SyslogConfig name(String name) {
+  public Complianceacceleratorv3SyslogConfig name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Syslog name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Complianceacceleratorv3SyslogConfig port(String port) {
+  public Complianceacceleratorv3SyslogConfig port(@javax.annotation.Nullable String port) {
     this.port = port;
     return this;
   }
 
-   /**
+  /**
    * Syslog port.
    * @return port
-  **/
+   */
   @javax.annotation.Nullable
   public String getPort() {
     return port;
   }
 
-  public void setPort(String port) {
+  public void setPort(@javax.annotation.Nullable String port) {
     this.port = port;
   }
 
 
-  public Complianceacceleratorv3SyslogConfig protocol(String protocol) {
+  public Complianceacceleratorv3SyslogConfig protocol(@javax.annotation.Nullable String protocol) {
     this.protocol = protocol;
     return this;
   }
 
-   /**
+  /**
    * Syslog protocol UDP || TCP.
    * @return protocol
-  **/
+   */
   @javax.annotation.Nullable
   public String getProtocol() {
     return protocol;
   }
 
-  public void setProtocol(String protocol) {
+  public void setProtocol(@javax.annotation.Nullable String protocol) {
     this.protocol = protocol;
   }
 
 
-  public Complianceacceleratorv3SyslogConfig syslogId(String syslogId) {
+  public Complianceacceleratorv3SyslogConfig syslogId(@javax.annotation.Nullable String syslogId) {
     this.syslogId = syslogId;
     return this;
   }
 
-   /**
+  /**
    * Syslog id.
    * @return syslogId
-  **/
+   */
   @javax.annotation.Nullable
   public String getSyslogId() {
     return syslogId;
   }
 
-  public void setSyslogId(String syslogId) {
+  public void setSyslogId(@javax.annotation.Nullable String syslogId) {
     this.syslogId = syslogId;
   }
 
 
-  public Complianceacceleratorv3SyslogConfig templateId(String templateId) {
+  public Complianceacceleratorv3SyslogConfig templateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
     return this;
   }
 
-   /**
+  /**
    * Syslog template.
    * @return templateId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTemplateId() {
     return templateId;
   }
 
-  public void setTemplateId(String templateId) {
+  public void setTemplateId(@javax.annotation.Nullable String templateId) {
     this.templateId = templateId;
   }
 
@@ -296,30 +305,22 @@ public class Complianceacceleratorv3SyslogConfig {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("host");
-    openapiFields.add("include_q_radar");
-    openapiFields.add("is_deletion");
-    openapiFields.add("name");
-    openapiFields.add("port");
-    openapiFields.add("protocol");
-    openapiFields.add("syslog_id");
-    openapiFields.add("template_id");
+    openapiFields = new HashSet<String>(Arrays.asList("host", "include_q_radar", "is_deletion", "name", "port", "protocol", "syslog_id", "template_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3SyslogConfig
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3SyslogConfig
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Complianceacceleratorv3SyslogConfig.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Complianceacceleratorv3SyslogConfig is not found in the empty JSON string", Complianceacceleratorv3SyslogConfig.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Complianceacceleratorv3SyslogConfig is not found in the empty JSON string", Complianceacceleratorv3SyslogConfig.openapiRequiredFields.toString()));
         }
       }
 
@@ -327,27 +328,27 @@ public class Complianceacceleratorv3SyslogConfig {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Complianceacceleratorv3SyslogConfig.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3SyslogConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3SyslogConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("host") != null && !jsonObj.get("host").isJsonNull()) && !jsonObj.get("host").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `host` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `host` to be a primitive type in the JSON string but got `%s`", jsonObj.get("host").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("port") != null && !jsonObj.get("port").isJsonNull()) && !jsonObj.get("port").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `port` to be a primitive type in the JSON string but got `%s`", jsonObj.get("port").toString()));
       }
       if ((jsonObj.get("protocol") != null && !jsonObj.get("protocol").isJsonNull()) && !jsonObj.get("protocol").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `protocol` to be a primitive type in the JSON string but got `%s`", jsonObj.get("protocol").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `protocol` to be a primitive type in the JSON string but got `%s`", jsonObj.get("protocol").toString()));
       }
       if ((jsonObj.get("syslog_id") != null && !jsonObj.get("syslog_id").isJsonNull()) && !jsonObj.get("syslog_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `syslog_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("syslog_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `syslog_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("syslog_id").toString()));
       }
       if ((jsonObj.get("template_id") != null && !jsonObj.get("template_id").isJsonNull()) && !jsonObj.get("template_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `template_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("template_id").toString()));
       }
   }
 
@@ -380,22 +381,22 @@ public class Complianceacceleratorv3SyslogConfig {
     }
   }
 
- /**
-  * Create an instance of Complianceacceleratorv3SyslogConfig given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Complianceacceleratorv3SyslogConfig
-  * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3SyslogConfig
-  */
+  /**
+   * Create an instance of Complianceacceleratorv3SyslogConfig given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Complianceacceleratorv3SyslogConfig
+   * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3SyslogConfig
+   */
   public static Complianceacceleratorv3SyslogConfig fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Complianceacceleratorv3SyslogConfig.class);
   }
 
- /**
-  * Convert an instance of Complianceacceleratorv3SyslogConfig to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Complianceacceleratorv3SyslogConfig to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

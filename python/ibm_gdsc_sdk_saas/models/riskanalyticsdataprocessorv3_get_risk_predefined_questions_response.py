@@ -72,9 +72,9 @@ class Riskanalyticsdataprocessorv3GetRiskPredefinedQuestionsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in questions (list)
         _items = []
         if self.questions:
-            for _item in self.questions:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_questions in self.questions:
+                if _item_questions:
+                    _items.append(_item_questions.to_dict())
             _dict['questions'] = _items
         return _dict
 

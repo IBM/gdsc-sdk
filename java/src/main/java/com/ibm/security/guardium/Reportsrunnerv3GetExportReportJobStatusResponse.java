@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,226 +40,235 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetExportReportJobStatusResponse is the return type of GetExportReportStatus API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3GetExportReportJobStatusResponse {
   public static final String SERIALIZED_NAME_CALL_STATUS = "call_status";
   @SerializedName(SERIALIZED_NAME_CALL_STATUS)
+  @javax.annotation.Nullable
   private RpcStatus callStatus;
 
   public static final String SERIALIZED_NAME_FILE_NAME = "file_name";
   @SerializedName(SERIALIZED_NAME_FILE_NAME)
+  @javax.annotation.Nullable
   private String fileName;
 
   public static final String SERIALIZED_NAME_JOB_DURATION = "job_duration";
   @SerializedName(SERIALIZED_NAME_JOB_DURATION)
+  @javax.annotation.Nullable
   private Integer jobDuration;
 
   public static final String SERIALIZED_NAME_JOB_ID = "job_id";
   @SerializedName(SERIALIZED_NAME_JOB_ID)
+  @javax.annotation.Nullable
   private String jobId;
 
   public static final String SERIALIZED_NAME_JOB_START_TIME = "job_start_time";
   @SerializedName(SERIALIZED_NAME_JOB_START_TIME)
+  @javax.annotation.Nullable
   private String jobStartTime;
 
   public static final String SERIALIZED_NAME_JOB_STATUS = "job_status";
   @SerializedName(SERIALIZED_NAME_JOB_STATUS)
+  @javax.annotation.Nullable
   private Reportsrunnerv3ExportJobStatus jobStatus = Reportsrunnerv3ExportJobStatus.UNDEFINED_JOB_STATUS;
 
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @javax.annotation.Nullable
   private String message;
 
   public static final String SERIALIZED_NAME_RESULT_SIZE = "result_size";
   @SerializedName(SERIALIZED_NAME_RESULT_SIZE)
+  @javax.annotation.Nullable
   private Integer resultSize;
 
   public static final String SERIALIZED_NAME_TENANT_ID = "tenant_id";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
+  @javax.annotation.Nullable
   private String tenantId;
 
   public Reportsrunnerv3GetExportReportJobStatusResponse() {
   }
 
-  public Reportsrunnerv3GetExportReportJobStatusResponse callStatus(RpcStatus callStatus) {
+  public Reportsrunnerv3GetExportReportJobStatusResponse callStatus(@javax.annotation.Nullable RpcStatus callStatus) {
     this.callStatus = callStatus;
     return this;
   }
 
-   /**
+  /**
    * Get callStatus
    * @return callStatus
-  **/
+   */
   @javax.annotation.Nullable
   public RpcStatus getCallStatus() {
     return callStatus;
   }
 
-  public void setCallStatus(RpcStatus callStatus) {
+  public void setCallStatus(@javax.annotation.Nullable RpcStatus callStatus) {
     this.callStatus = callStatus;
   }
 
 
-  public Reportsrunnerv3GetExportReportJobStatusResponse fileName(String fileName) {
+  public Reportsrunnerv3GetExportReportJobStatusResponse fileName(@javax.annotation.Nullable String fileName) {
     this.fileName = fileName;
     return this;
   }
 
-   /**
+  /**
    * File name.
    * @return fileName
-  **/
+   */
   @javax.annotation.Nullable
   public String getFileName() {
     return fileName;
   }
 
-  public void setFileName(String fileName) {
+  public void setFileName(@javax.annotation.Nullable String fileName) {
     this.fileName = fileName;
   }
 
 
-  public Reportsrunnerv3GetExportReportJobStatusResponse jobDuration(Integer jobDuration) {
+  public Reportsrunnerv3GetExportReportJobStatusResponse jobDuration(@javax.annotation.Nullable Integer jobDuration) {
     this.jobDuration = jobDuration;
     return this;
   }
 
-   /**
+  /**
    * Duration of the export job in minutes.
    * @return jobDuration
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getJobDuration() {
     return jobDuration;
   }
 
-  public void setJobDuration(Integer jobDuration) {
+  public void setJobDuration(@javax.annotation.Nullable Integer jobDuration) {
     this.jobDuration = jobDuration;
   }
 
 
-  public Reportsrunnerv3GetExportReportJobStatusResponse jobId(String jobId) {
+  public Reportsrunnerv3GetExportReportJobStatusResponse jobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
     return this;
   }
 
-   /**
+  /**
    * Token that identifies the export job.
    * @return jobId
-  **/
+   */
   @javax.annotation.Nullable
   public String getJobId() {
     return jobId;
   }
 
-  public void setJobId(String jobId) {
+  public void setJobId(@javax.annotation.Nullable String jobId) {
     this.jobId = jobId;
   }
 
 
-  public Reportsrunnerv3GetExportReportJobStatusResponse jobStartTime(String jobStartTime) {
+  public Reportsrunnerv3GetExportReportJobStatusResponse jobStartTime(@javax.annotation.Nullable String jobStartTime) {
     this.jobStartTime = jobStartTime;
     return this;
   }
 
-   /**
+  /**
    * The start time of the export job.
    * @return jobStartTime
-  **/
+   */
   @javax.annotation.Nullable
   public String getJobStartTime() {
     return jobStartTime;
   }
 
-  public void setJobStartTime(String jobStartTime) {
+  public void setJobStartTime(@javax.annotation.Nullable String jobStartTime) {
     this.jobStartTime = jobStartTime;
   }
 
 
-  public Reportsrunnerv3GetExportReportJobStatusResponse jobStatus(Reportsrunnerv3ExportJobStatus jobStatus) {
+  public Reportsrunnerv3GetExportReportJobStatusResponse jobStatus(@javax.annotation.Nullable Reportsrunnerv3ExportJobStatus jobStatus) {
     this.jobStatus = jobStatus;
     return this;
   }
 
-   /**
+  /**
    * Get jobStatus
    * @return jobStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsrunnerv3ExportJobStatus getJobStatus() {
     return jobStatus;
   }
 
-  public void setJobStatus(Reportsrunnerv3ExportJobStatus jobStatus) {
+  public void setJobStatus(@javax.annotation.Nullable Reportsrunnerv3ExportJobStatus jobStatus) {
     this.jobStatus = jobStatus;
   }
 
 
-  public Reportsrunnerv3GetExportReportJobStatusResponse message(String message) {
+  public Reportsrunnerv3GetExportReportJobStatusResponse message(@javax.annotation.Nullable String message) {
     this.message = message;
     return this;
   }
 
-   /**
+  /**
    * An error message in case of failure while retriving the export job status.
    * @return message
-  **/
+   */
   @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setMessage(@javax.annotation.Nullable String message) {
     this.message = message;
   }
 
 
-  public Reportsrunnerv3GetExportReportJobStatusResponse resultSize(Integer resultSize) {
+  public Reportsrunnerv3GetExportReportJobStatusResponse resultSize(@javax.annotation.Nullable Integer resultSize) {
     this.resultSize = resultSize;
     return this;
   }
 
-   /**
+  /**
    * The size of the exported file in MB.
    * @return resultSize
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getResultSize() {
     return resultSize;
   }
 
-  public void setResultSize(Integer resultSize) {
+  public void setResultSize(@javax.annotation.Nullable Integer resultSize) {
     this.resultSize = resultSize;
   }
 
 
-  public Reportsrunnerv3GetExportReportJobStatusResponse tenantId(String tenantId) {
+  public Reportsrunnerv3GetExportReportJobStatusResponse tenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
     return this;
   }
 
-   /**
+  /**
    * The unique tenant ID that the executing job is running against.
    * @return tenantId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTenantId() {
     return tenantId;
   }
 
-  public void setTenantId(String tenantId) {
+  public void setTenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
   }
 
@@ -323,31 +333,22 @@ public class Reportsrunnerv3GetExportReportJobStatusResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("call_status");
-    openapiFields.add("file_name");
-    openapiFields.add("job_duration");
-    openapiFields.add("job_id");
-    openapiFields.add("job_start_time");
-    openapiFields.add("job_status");
-    openapiFields.add("message");
-    openapiFields.add("result_size");
-    openapiFields.add("tenant_id");
+    openapiFields = new HashSet<String>(Arrays.asList("call_status", "file_name", "job_duration", "job_id", "job_start_time", "job_status", "message", "result_size", "tenant_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetExportReportJobStatusResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3GetExportReportJobStatusResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3GetExportReportJobStatusResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3GetExportReportJobStatusResponse is not found in the empty JSON string", Reportsrunnerv3GetExportReportJobStatusResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3GetExportReportJobStatusResponse is not found in the empty JSON string", Reportsrunnerv3GetExportReportJobStatusResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -355,7 +356,7 @@ public class Reportsrunnerv3GetExportReportJobStatusResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3GetExportReportJobStatusResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetExportReportJobStatusResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3GetExportReportJobStatusResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -364,23 +365,23 @@ public class Reportsrunnerv3GetExportReportJobStatusResponse {
         RpcStatus.validateJsonElement(jsonObj.get("call_status"));
       }
       if ((jsonObj.get("file_name") != null && !jsonObj.get("file_name").isJsonNull()) && !jsonObj.get("file_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("file_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `file_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("file_name").toString()));
       }
       if ((jsonObj.get("job_id") != null && !jsonObj.get("job_id").isJsonNull()) && !jsonObj.get("job_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `job_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_id").toString()));
       }
       if ((jsonObj.get("job_start_time") != null && !jsonObj.get("job_start_time").isJsonNull()) && !jsonObj.get("job_start_time").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `job_start_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_start_time").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `job_start_time` to be a primitive type in the JSON string but got `%s`", jsonObj.get("job_start_time").toString()));
       }
       // validate the optional field `job_status`
       if (jsonObj.get("job_status") != null && !jsonObj.get("job_status").isJsonNull()) {
         Reportsrunnerv3ExportJobStatus.validateJsonElement(jsonObj.get("job_status"));
       }
       if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
       }
       if ((jsonObj.get("tenant_id") != null && !jsonObj.get("tenant_id").isJsonNull()) && !jsonObj.get("tenant_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
       }
   }
 
@@ -413,22 +414,22 @@ public class Reportsrunnerv3GetExportReportJobStatusResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3GetExportReportJobStatusResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3GetExportReportJobStatusResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetExportReportJobStatusResponse
-  */
+  /**
+   * Create an instance of Reportsrunnerv3GetExportReportJobStatusResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3GetExportReportJobStatusResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3GetExportReportJobStatusResponse
+   */
   public static Reportsrunnerv3GetExportReportJobStatusResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3GetExportReportJobStatusResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3GetExportReportJobStatusResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3GetExportReportJobStatusResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

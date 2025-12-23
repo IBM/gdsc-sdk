@@ -14,9 +14,11 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -29,17 +31,17 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(Vulmanagementv3Severity.Adapter.class)
 public enum Vulmanagementv3Severity {
   
-  UNKNOWN("SEVERITY_UNKNOWN"),
+  SEVERITY_UNKNOWN("SEVERITY_UNKNOWN"),
   
-  NONE("SEVERITY_NONE"),
+  SEVERITY_NONE("SEVERITY_NONE"),
   
-  LOW("SEVERITY_LOW"),
+  SEVERITY_LOW("SEVERITY_LOW"),
   
-  MEDIUM("SEVERITY_MEDIUM"),
+  SEVERITY_MEDIUM("SEVERITY_MEDIUM"),
   
-  HIGH("SEVERITY_HIGH"),
+  SEVERITY_HIGH("SEVERITY_HIGH"),
   
-  CRITICAL("SEVERITY_CRITICAL");
+  SEVERITY_CRITICAL("SEVERITY_CRITICAL");
 
   private String value;
 

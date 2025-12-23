@@ -72,9 +72,9 @@ class Reportsv3GetControlsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in controls (list)
         _items = []
         if self.controls:
-            for _item in self.controls:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_controls in self.controls:
+                if _item_controls:
+                    _items.append(_item_controls.to_dict())
             _dict['controls'] = _items
         return _dict
 

@@ -29,7 +29,7 @@ class Assetsv3ImportCSVRequest(BaseModel):
     """ # noqa: E501
     csv_id: Optional[StrictStr] = None
     import_action: Optional[StrictStr] = None
-    template_type: Optional[Assetsv3TemplateType] = None
+    template_type: Optional[Assetsv3TemplateType] = Assetsv3TemplateType.DATABASE
     __properties: ClassVar[List[str]] = ["csv_id", "import_action", "template_type"]
 
     model_config = ConfigDict(
@@ -85,7 +85,7 @@ class Assetsv3ImportCSVRequest(BaseModel):
         _obj = cls.model_validate({
             "csv_id": obj.get("csv_id"),
             "import_action": obj.get("import_action"),
-            "template_type": obj.get("template_type")
+            "template_type": obj.get("template_type") if obj.get("template_type") is not None else Assetsv3TemplateType.DATABASE
         })
         return _obj
 

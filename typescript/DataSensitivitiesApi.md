@@ -18,14 +18,14 @@ Get a summarised information about all sensitivities classified by Guardium DSPM
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataSensitivitiesApi } from '';
+import type { DataSensitivitiesApiGetSensitivitiesSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataSensitivitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataSensitivitiesApi(configuration);
 
-let body:.DataSensitivitiesApiGetSensitivitiesSummaryRequest = {
-  // ListSensitivitiesFilterParameter (optional)
+const request: DataSensitivitiesApiGetSensitivitiesSummaryRequest = {
+  
   filter: {
     resourceId: "arn:aws:s3::123456789101:polar-bucket_excel_sheet.xlsx",
     dataStoreId: "arn:aws:s3::123456789101:polar-bucket",
@@ -37,9 +37,8 @@ let body:.DataSensitivitiesApiGetSensitivitiesSummaryRequest = {
   },
 };
 
-apiInstance.getSensitivitiesSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getSensitivitiesSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -81,20 +80,19 @@ Get details of a sensitivity by providing its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataSensitivitiesApi } from '';
+import type { DataSensitivitiesApiGetSensitivityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataSensitivitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataSensitivitiesApi(configuration);
 
-let body:.DataSensitivitiesApiGetSensitivityRequest = {
-  // string
+const request: DataSensitivitiesApiGetSensitivityRequest = {
+  
   sensitivityId: "sensitivityId_example",
 };
 
-apiInstance.getSensitivity(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getSensitivity(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -136,14 +134,14 @@ Get a list of all the sensitivities based on an applied filter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataSensitivitiesApi } from '';
+import type { DataSensitivitiesApiListSensitivitiesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataSensitivitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataSensitivitiesApi(configuration);
 
-let body:.DataSensitivitiesApiListSensitivitiesRequest = {
-  // ListSensitivitiesFilterParameter (optional)
+const request: DataSensitivitiesApiListSensitivitiesRequest = {
+  
   filter: {
     resourceId: "arn:aws:s3::123456789101:polar-bucket_excel_sheet.xlsx",
     dataStoreId: "arn:aws:s3::123456789101:polar-bucket",
@@ -153,20 +151,19 @@ let body:.DataSensitivitiesApiListSensitivitiesRequest = {
     ],
     hash: "hash_example",
   },
-  // LastSeenSortSchema (optional)
+  
   sort: {
     sortBy: "lastSeen",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listSensitivities(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listSensitivities(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

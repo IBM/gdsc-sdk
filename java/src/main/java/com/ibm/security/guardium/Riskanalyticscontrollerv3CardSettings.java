@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,52 +42,59 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CardSettings a object to display each card of risks.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3CardSettings {
   public static final String SERIALIZED_NAME_FILTERS = "filters";
   @SerializedName(SERIALIZED_NAME_FILTERS)
+  @javax.annotation.Nullable
   private List<Riskanalyticscontrollerv3Filter> filters = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_HEADERS = "headers";
   @SerializedName(SERIALIZED_NAME_HEADERS)
+  @javax.annotation.Nullable
   private List<String> headers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_ORDER_BY = "order_by";
   @SerializedName(SERIALIZED_NAME_ORDER_BY)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3OrderBy orderBy = Riskanalyticscontrollerv3OrderBy.UNDEFINED_ORDER_BY;
 
   public static final String SERIALIZED_NAME_SEQUENCE_ORDER = "sequence_order";
   @SerializedName(SERIALIZED_NAME_SEQUENCE_ORDER)
+  @javax.annotation.Nullable
   private Integer sequenceOrder;
 
   public static final String SERIALIZED_NAME_SORTED_BY = "sorted_by";
   @SerializedName(SERIALIZED_NAME_SORTED_BY)
+  @javax.annotation.Nullable
   private String sortedBy;
 
   public Riskanalyticscontrollerv3CardSettings() {
   }
 
-  public Riskanalyticscontrollerv3CardSettings filters(List<Riskanalyticscontrollerv3Filter> filters) {
+  public Riskanalyticscontrollerv3CardSettings filters(@javax.annotation.Nullable List<Riskanalyticscontrollerv3Filter> filters) {
     this.filters = filters;
     return this;
   }
@@ -99,21 +107,21 @@ public class Riskanalyticscontrollerv3CardSettings {
     return this;
   }
 
-   /**
+  /**
    * Filters - list if filters to view the risk.
    * @return filters
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticscontrollerv3Filter> getFilters() {
     return filters;
   }
 
-  public void setFilters(List<Riskanalyticscontrollerv3Filter> filters) {
+  public void setFilters(@javax.annotation.Nullable List<Riskanalyticscontrollerv3Filter> filters) {
     this.filters = filters;
   }
 
 
-  public Riskanalyticscontrollerv3CardSettings headers(List<String> headers) {
+  public Riskanalyticscontrollerv3CardSettings headers(@javax.annotation.Nullable List<String> headers) {
     this.headers = headers;
     return this;
   }
@@ -126,111 +134,111 @@ public class Riskanalyticscontrollerv3CardSettings {
     return this;
   }
 
-   /**
+  /**
    * Headers - list of headers to view the risks.
    * @return headers
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getHeaders() {
     return headers;
   }
 
-  public void setHeaders(List<String> headers) {
+  public void setHeaders(@javax.annotation.Nullable List<String> headers) {
     this.headers = headers;
   }
 
 
-  public Riskanalyticscontrollerv3CardSettings id(String id) {
+  public Riskanalyticscontrollerv3CardSettings id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Id of the settings.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
 
-  public Riskanalyticscontrollerv3CardSettings name(String name) {
+  public Riskanalyticscontrollerv3CardSettings name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of the view - nls value in case its first time for user.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Riskanalyticscontrollerv3CardSettings orderBy(Riskanalyticscontrollerv3OrderBy orderBy) {
+  public Riskanalyticscontrollerv3CardSettings orderBy(@javax.annotation.Nullable Riskanalyticscontrollerv3OrderBy orderBy) {
     this.orderBy = orderBy;
     return this;
   }
 
-   /**
+  /**
    * Get orderBy
    * @return orderBy
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3OrderBy getOrderBy() {
     return orderBy;
   }
 
-  public void setOrderBy(Riskanalyticscontrollerv3OrderBy orderBy) {
+  public void setOrderBy(@javax.annotation.Nullable Riskanalyticscontrollerv3OrderBy orderBy) {
     this.orderBy = orderBy;
   }
 
 
-  public Riskanalyticscontrollerv3CardSettings sequenceOrder(Integer sequenceOrder) {
+  public Riskanalyticscontrollerv3CardSettings sequenceOrder(@javax.annotation.Nullable Integer sequenceOrder) {
     this.sequenceOrder = sequenceOrder;
     return this;
   }
 
-   /**
+  /**
    * Sequence  order of the view(box) of the risks.
    * @return sequenceOrder
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getSequenceOrder() {
     return sequenceOrder;
   }
 
-  public void setSequenceOrder(Integer sequenceOrder) {
+  public void setSequenceOrder(@javax.annotation.Nullable Integer sequenceOrder) {
     this.sequenceOrder = sequenceOrder;
   }
 
 
-  public Riskanalyticscontrollerv3CardSettings sortedBy(String sortedBy) {
+  public Riskanalyticscontrollerv3CardSettings sortedBy(@javax.annotation.Nullable String sortedBy) {
     this.sortedBy = sortedBy;
     return this;
   }
 
-   /**
+  /**
    * Sorted by header_id to sort the risks in the view by.
    * @return sortedBy
-  **/
+   */
   @javax.annotation.Nullable
   public String getSortedBy() {
     return sortedBy;
   }
 
-  public void setSortedBy(String sortedBy) {
+  public void setSortedBy(@javax.annotation.Nullable String sortedBy) {
     this.sortedBy = sortedBy;
   }
 
@@ -291,29 +299,22 @@ public class Riskanalyticscontrollerv3CardSettings {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("filters");
-    openapiFields.add("headers");
-    openapiFields.add("id");
-    openapiFields.add("name");
-    openapiFields.add("order_by");
-    openapiFields.add("sequence_order");
-    openapiFields.add("sorted_by");
+    openapiFields = new HashSet<String>(Arrays.asList("filters", "headers", "id", "name", "order_by", "sequence_order", "sorted_by"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3CardSettings
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3CardSettings
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3CardSettings.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3CardSettings is not found in the empty JSON string", Riskanalyticscontrollerv3CardSettings.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3CardSettings is not found in the empty JSON string", Riskanalyticscontrollerv3CardSettings.openapiRequiredFields.toString()));
         }
       }
 
@@ -321,7 +322,7 @@ public class Riskanalyticscontrollerv3CardSettings {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3CardSettings.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3CardSettings` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3CardSettings` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -330,7 +331,7 @@ public class Riskanalyticscontrollerv3CardSettings {
         if (jsonArrayfilters != null) {
           // ensure the json data is an array
           if (!jsonObj.get("filters").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filters` to be an array in the JSON string but got `%s`", jsonObj.get("filters").toString()));
           }
 
           // validate the optional field `filters` (array)
@@ -341,20 +342,20 @@ public class Riskanalyticscontrollerv3CardSettings {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("headers") != null && !jsonObj.get("headers").isJsonNull() && !jsonObj.get("headers").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `headers` to be an array in the JSON string but got `%s`", jsonObj.get("headers").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `headers` to be an array in the JSON string but got `%s`", jsonObj.get("headers").toString()));
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       // validate the optional field `order_by`
       if (jsonObj.get("order_by") != null && !jsonObj.get("order_by").isJsonNull()) {
         Riskanalyticscontrollerv3OrderBy.validateJsonElement(jsonObj.get("order_by"));
       }
       if ((jsonObj.get("sorted_by") != null && !jsonObj.get("sorted_by").isJsonNull()) && !jsonObj.get("sorted_by").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sorted_by` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sorted_by").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sorted_by` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sorted_by").toString()));
       }
   }
 
@@ -387,22 +388,22 @@ public class Riskanalyticscontrollerv3CardSettings {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3CardSettings given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3CardSettings
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3CardSettings
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3CardSettings given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3CardSettings
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3CardSettings
+   */
   public static Riskanalyticscontrollerv3CardSettings fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3CardSettings.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3CardSettings to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3CardSettings to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

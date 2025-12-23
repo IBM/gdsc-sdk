@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,65 +38,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DMExtractionLogsRequest request object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Datamartprocessorv3DMExtractionLogsRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
+  @javax.annotation.Nullable
   private String data;
 
   public static final String SERIALIZED_NAME_REQUEST_ID = "request_id";
   @SerializedName(SERIALIZED_NAME_REQUEST_ID)
+  @javax.annotation.Nullable
   private String requestId;
 
   public Datamartprocessorv3DMExtractionLogsRequest() {
   }
 
-  public Datamartprocessorv3DMExtractionLogsRequest data(String data) {
+  public Datamartprocessorv3DMExtractionLogsRequest data(@javax.annotation.Nullable String data) {
     this.data = data;
     return this;
   }
 
-   /**
+  /**
    * Report data.
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public String getData() {
     return data;
   }
 
-  public void setData(String data) {
+  public void setData(@javax.annotation.Nullable String data) {
     this.data = data;
   }
 
 
-  public Datamartprocessorv3DMExtractionLogsRequest requestId(String requestId) {
+  public Datamartprocessorv3DMExtractionLogsRequest requestId(@javax.annotation.Nullable String requestId) {
     this.requestId = requestId;
     return this;
   }
 
-   /**
+  /**
    * Request id which co-relates to request.
    * @return requestId
-  **/
+   */
   @javax.annotation.Nullable
   public String getRequestId() {
     return requestId;
   }
 
-  public void setRequestId(String requestId) {
+  public void setRequestId(@javax.annotation.Nullable String requestId) {
     this.requestId = requestId;
   }
 
@@ -146,24 +149,22 @@ public class Datamartprocessorv3DMExtractionLogsRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("data");
-    openapiFields.add("request_id");
+    openapiFields = new HashSet<String>(Arrays.asList("data", "request_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Datamartprocessorv3DMExtractionLogsRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Datamartprocessorv3DMExtractionLogsRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Datamartprocessorv3DMExtractionLogsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Datamartprocessorv3DMExtractionLogsRequest is not found in the empty JSON string", Datamartprocessorv3DMExtractionLogsRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Datamartprocessorv3DMExtractionLogsRequest is not found in the empty JSON string", Datamartprocessorv3DMExtractionLogsRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -171,15 +172,15 @@ public class Datamartprocessorv3DMExtractionLogsRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Datamartprocessorv3DMExtractionLogsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Datamartprocessorv3DMExtractionLogsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Datamartprocessorv3DMExtractionLogsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) && !jsonObj.get("data").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `data` to be a primitive type in the JSON string but got `%s`", jsonObj.get("data").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `data` to be a primitive type in the JSON string but got `%s`", jsonObj.get("data").toString()));
       }
       if ((jsonObj.get("request_id") != null && !jsonObj.get("request_id").isJsonNull()) && !jsonObj.get("request_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `request_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("request_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `request_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("request_id").toString()));
       }
   }
 
@@ -212,22 +213,22 @@ public class Datamartprocessorv3DMExtractionLogsRequest {
     }
   }
 
- /**
-  * Create an instance of Datamartprocessorv3DMExtractionLogsRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Datamartprocessorv3DMExtractionLogsRequest
-  * @throws IOException if the JSON string is invalid with respect to Datamartprocessorv3DMExtractionLogsRequest
-  */
+  /**
+   * Create an instance of Datamartprocessorv3DMExtractionLogsRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Datamartprocessorv3DMExtractionLogsRequest
+   * @throws IOException if the JSON string is invalid with respect to Datamartprocessorv3DMExtractionLogsRequest
+   */
   public static Datamartprocessorv3DMExtractionLogsRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Datamartprocessorv3DMExtractionLogsRequest.class);
   }
 
- /**
-  * Convert an instance of Datamartprocessorv3DMExtractionLogsRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Datamartprocessorv3DMExtractionLogsRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

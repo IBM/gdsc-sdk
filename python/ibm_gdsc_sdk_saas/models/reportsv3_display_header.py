@@ -29,7 +29,7 @@ class Reportsv3DisplayHeader(BaseModel):
     """
     DisplayHeader that have the header name and the translated value.
     """ # noqa: E501
-    aggregation_type: Optional[Reportsv3AggregationType] = None
+    aggregation_type: Optional[Reportsv3AggregationType] = Reportsv3AggregationType.UNDEFINED_AGG_TYPE
     field_name: Optional[Reportsv3FieldName] = None
     header_description: Optional[Reportsv3HeaderDescription] = None
     header_id: Optional[StrictStr] = Field(default=None, description="The header ID.")
@@ -95,7 +95,7 @@ class Reportsv3DisplayHeader(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "aggregation_type": obj.get("aggregation_type"),
+            "aggregation_type": obj.get("aggregation_type") if obj.get("aggregation_type") is not None else Reportsv3AggregationType.UNDEFINED_AGG_TYPE,
             "field_name": Reportsv3FieldName.from_dict(obj["field_name"]) if obj.get("field_name") is not None else None,
             "header_description": Reportsv3HeaderDescription.from_dict(obj["header_description"]) if obj.get("header_description") is not None else None,
             "header_id": obj.get("header_id"),

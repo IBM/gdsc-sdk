@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,67 +41,73 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Includes join definition properties and join id.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3JoinDefinitionWithID {
   public static final String SERIALIZED_NAME_CATEGORY_ID = "category_id";
   @SerializedName(SERIALIZED_NAME_CATEGORY_ID)
+  @javax.annotation.Nullable
   private String categoryId;
 
   public static final String SERIALIZED_NAME_HEADER_PAIR_LIST = "header_pair_list";
   @SerializedName(SERIALIZED_NAME_HEADER_PAIR_LIST)
+  @javax.annotation.Nullable
   private List<Reportsv3HeaderPair> headerPairList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_JOIN_ID = "join_id";
   @SerializedName(SERIALIZED_NAME_JOIN_ID)
+  @javax.annotation.Nullable
   private String joinId;
 
   public static final String SERIALIZED_NAME_SOURCE_TABLE_NAME = "source_table_name";
   @SerializedName(SERIALIZED_NAME_SOURCE_TABLE_NAME)
+  @javax.annotation.Nullable
   private String sourceTableName;
 
   public static final String SERIALIZED_NAME_TARGET_HEADERS_SELECTED_IDS = "target_headers_selected_ids";
   @SerializedName(SERIALIZED_NAME_TARGET_HEADERS_SELECTED_IDS)
+  @javax.annotation.Nullable
   private List<String> targetHeadersSelectedIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_TARGET_TABLE_NAME = "target_table_name";
   @SerializedName(SERIALIZED_NAME_TARGET_TABLE_NAME)
+  @javax.annotation.Nullable
   private String targetTableName;
 
   public Reportsv3JoinDefinitionWithID() {
   }
 
-  public Reportsv3JoinDefinitionWithID categoryId(String categoryId) {
+  public Reportsv3JoinDefinitionWithID categoryId(@javax.annotation.Nullable String categoryId) {
     this.categoryId = categoryId;
     return this;
   }
 
-   /**
+  /**
    * Get categoryId
    * @return categoryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategoryId() {
     return categoryId;
   }
 
-  public void setCategoryId(String categoryId) {
+  public void setCategoryId(@javax.annotation.Nullable String categoryId) {
     this.categoryId = categoryId;
   }
 
 
-  public Reportsv3JoinDefinitionWithID headerPairList(List<Reportsv3HeaderPair> headerPairList) {
+  public Reportsv3JoinDefinitionWithID headerPairList(@javax.annotation.Nullable List<Reportsv3HeaderPair> headerPairList) {
     this.headerPairList = headerPairList;
     return this;
   }
@@ -113,59 +120,59 @@ public class Reportsv3JoinDefinitionWithID {
     return this;
   }
 
-   /**
+  /**
    * Get headerPairList
    * @return headerPairList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3HeaderPair> getHeaderPairList() {
     return headerPairList;
   }
 
-  public void setHeaderPairList(List<Reportsv3HeaderPair> headerPairList) {
+  public void setHeaderPairList(@javax.annotation.Nullable List<Reportsv3HeaderPair> headerPairList) {
     this.headerPairList = headerPairList;
   }
 
 
-  public Reportsv3JoinDefinitionWithID joinId(String joinId) {
+  public Reportsv3JoinDefinitionWithID joinId(@javax.annotation.Nullable String joinId) {
     this.joinId = joinId;
     return this;
   }
 
-   /**
+  /**
    * Unique join ID.
    * @return joinId
-  **/
+   */
   @javax.annotation.Nullable
   public String getJoinId() {
     return joinId;
   }
 
-  public void setJoinId(String joinId) {
+  public void setJoinId(@javax.annotation.Nullable String joinId) {
     this.joinId = joinId;
   }
 
 
-  public Reportsv3JoinDefinitionWithID sourceTableName(String sourceTableName) {
+  public Reportsv3JoinDefinitionWithID sourceTableName(@javax.annotation.Nullable String sourceTableName) {
     this.sourceTableName = sourceTableName;
     return this;
   }
 
-   /**
+  /**
    * Get sourceTableName
    * @return sourceTableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getSourceTableName() {
     return sourceTableName;
   }
 
-  public void setSourceTableName(String sourceTableName) {
+  public void setSourceTableName(@javax.annotation.Nullable String sourceTableName) {
     this.sourceTableName = sourceTableName;
   }
 
 
-  public Reportsv3JoinDefinitionWithID targetHeadersSelectedIds(List<String> targetHeadersSelectedIds) {
+  public Reportsv3JoinDefinitionWithID targetHeadersSelectedIds(@javax.annotation.Nullable List<String> targetHeadersSelectedIds) {
     this.targetHeadersSelectedIds = targetHeadersSelectedIds;
     return this;
   }
@@ -178,35 +185,35 @@ public class Reportsv3JoinDefinitionWithID {
     return this;
   }
 
-   /**
+  /**
    * Get targetHeadersSelectedIds
    * @return targetHeadersSelectedIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getTargetHeadersSelectedIds() {
     return targetHeadersSelectedIds;
   }
 
-  public void setTargetHeadersSelectedIds(List<String> targetHeadersSelectedIds) {
+  public void setTargetHeadersSelectedIds(@javax.annotation.Nullable List<String> targetHeadersSelectedIds) {
     this.targetHeadersSelectedIds = targetHeadersSelectedIds;
   }
 
 
-  public Reportsv3JoinDefinitionWithID targetTableName(String targetTableName) {
+  public Reportsv3JoinDefinitionWithID targetTableName(@javax.annotation.Nullable String targetTableName) {
     this.targetTableName = targetTableName;
     return this;
   }
 
-   /**
+  /**
    * Get targetTableName
    * @return targetTableName
-  **/
+   */
   @javax.annotation.Nullable
   public String getTargetTableName() {
     return targetTableName;
   }
 
-  public void setTargetTableName(String targetTableName) {
+  public void setTargetTableName(@javax.annotation.Nullable String targetTableName) {
     this.targetTableName = targetTableName;
   }
 
@@ -265,28 +272,22 @@ public class Reportsv3JoinDefinitionWithID {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("category_id");
-    openapiFields.add("header_pair_list");
-    openapiFields.add("join_id");
-    openapiFields.add("source_table_name");
-    openapiFields.add("target_headers_selected_ids");
-    openapiFields.add("target_table_name");
+    openapiFields = new HashSet<String>(Arrays.asList("category_id", "header_pair_list", "join_id", "source_table_name", "target_headers_selected_ids", "target_table_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3JoinDefinitionWithID
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3JoinDefinitionWithID
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3JoinDefinitionWithID.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3JoinDefinitionWithID is not found in the empty JSON string", Reportsv3JoinDefinitionWithID.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3JoinDefinitionWithID is not found in the empty JSON string", Reportsv3JoinDefinitionWithID.openapiRequiredFields.toString()));
         }
       }
 
@@ -294,19 +295,19 @@ public class Reportsv3JoinDefinitionWithID {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3JoinDefinitionWithID.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3JoinDefinitionWithID` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3JoinDefinitionWithID` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("category_id") != null && !jsonObj.get("category_id").isJsonNull()) && !jsonObj.get("category_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_id").toString()));
       }
       if (jsonObj.get("header_pair_list") != null && !jsonObj.get("header_pair_list").isJsonNull()) {
         JsonArray jsonArrayheaderPairList = jsonObj.getAsJsonArray("header_pair_list");
         if (jsonArrayheaderPairList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("header_pair_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `header_pair_list` to be an array in the JSON string but got `%s`", jsonObj.get("header_pair_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_pair_list` to be an array in the JSON string but got `%s`", jsonObj.get("header_pair_list").toString()));
           }
 
           // validate the optional field `header_pair_list` (array)
@@ -316,17 +317,17 @@ public class Reportsv3JoinDefinitionWithID {
         }
       }
       if ((jsonObj.get("join_id") != null && !jsonObj.get("join_id").isJsonNull()) && !jsonObj.get("join_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `join_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("join_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `join_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("join_id").toString()));
       }
       if ((jsonObj.get("source_table_name") != null && !jsonObj.get("source_table_name").isJsonNull()) && !jsonObj.get("source_table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `source_table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("source_table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `source_table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("source_table_name").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("target_headers_selected_ids") != null && !jsonObj.get("target_headers_selected_ids").isJsonNull() && !jsonObj.get("target_headers_selected_ids").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `target_headers_selected_ids` to be an array in the JSON string but got `%s`", jsonObj.get("target_headers_selected_ids").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `target_headers_selected_ids` to be an array in the JSON string but got `%s`", jsonObj.get("target_headers_selected_ids").toString()));
       }
       if ((jsonObj.get("target_table_name") != null && !jsonObj.get("target_table_name").isJsonNull()) && !jsonObj.get("target_table_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `target_table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("target_table_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `target_table_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("target_table_name").toString()));
       }
   }
 
@@ -359,22 +360,22 @@ public class Reportsv3JoinDefinitionWithID {
     }
   }
 
- /**
-  * Create an instance of Reportsv3JoinDefinitionWithID given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3JoinDefinitionWithID
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3JoinDefinitionWithID
-  */
+  /**
+   * Create an instance of Reportsv3JoinDefinitionWithID given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3JoinDefinitionWithID
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3JoinDefinitionWithID
+   */
   public static Reportsv3JoinDefinitionWithID fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3JoinDefinitionWithID.class);
   }
 
- /**
-  * Convert an instance of Reportsv3JoinDefinitionWithID to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3JoinDefinitionWithID to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

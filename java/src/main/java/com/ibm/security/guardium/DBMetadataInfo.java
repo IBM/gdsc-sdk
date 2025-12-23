@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,88 +39,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DBMetadataInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class DBMetadataInfo {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public static final String SERIALIZED_NAME_IS_TRANSIENT = "isTransient";
   @SerializedName(SERIALIZED_NAME_IS_TRANSIENT)
+  @javax.annotation.Nullable
   private String isTransient;
 
   public static final String SERIALIZED_NAME_CREATION_TIME = "creationTime";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @javax.annotation.Nullable
   private BigDecimal creationTime;
 
   public DBMetadataInfo() {
   }
 
-  public DBMetadataInfo type(String type) {
+  public DBMetadataInfo type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
 
-  public DBMetadataInfo isTransient(String isTransient) {
+  public DBMetadataInfo isTransient(@javax.annotation.Nullable String isTransient) {
     this.isTransient = isTransient;
     return this;
   }
 
-   /**
+  /**
    * Get isTransient
    * @return isTransient
-  **/
+   */
   @javax.annotation.Nullable
   public String getIsTransient() {
     return isTransient;
   }
 
-  public void setIsTransient(String isTransient) {
+  public void setIsTransient(@javax.annotation.Nullable String isTransient) {
     this.isTransient = isTransient;
   }
 
 
-  public DBMetadataInfo creationTime(BigDecimal creationTime) {
+  public DBMetadataInfo creationTime(@javax.annotation.Nullable BigDecimal creationTime) {
     this.creationTime = creationTime;
     return this;
   }
 
-   /**
+  /**
    * Get creationTime
    * @return creationTime
-  **/
+   */
   @javax.annotation.Nullable
   public BigDecimal getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(BigDecimal creationTime) {
+  public void setCreationTime(@javax.annotation.Nullable BigDecimal creationTime) {
     this.creationTime = creationTime;
   }
 
@@ -172,25 +176,22 @@ public class DBMetadataInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("type");
-    openapiFields.add("isTransient");
-    openapiFields.add("creationTime");
+    openapiFields = new HashSet<String>(Arrays.asList("type", "isTransient", "creationTime"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to DBMetadataInfo
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to DBMetadataInfo
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!DBMetadataInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in DBMetadataInfo is not found in the empty JSON string", DBMetadataInfo.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in DBMetadataInfo is not found in the empty JSON string", DBMetadataInfo.openapiRequiredFields.toString()));
         }
       }
 
@@ -198,15 +199,15 @@ public class DBMetadataInfo {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!DBMetadataInfo.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DBMetadataInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DBMetadataInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
       if ((jsonObj.get("isTransient") != null && !jsonObj.get("isTransient").isJsonNull()) && !jsonObj.get("isTransient").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `isTransient` to be a primitive type in the JSON string but got `%s`", jsonObj.get("isTransient").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `isTransient` to be a primitive type in the JSON string but got `%s`", jsonObj.get("isTransient").toString()));
       }
   }
 
@@ -239,22 +240,22 @@ public class DBMetadataInfo {
     }
   }
 
- /**
-  * Create an instance of DBMetadataInfo given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of DBMetadataInfo
-  * @throws IOException if the JSON string is invalid with respect to DBMetadataInfo
-  */
+  /**
+   * Create an instance of DBMetadataInfo given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of DBMetadataInfo
+   * @throws IOException if the JSON string is invalid with respect to DBMetadataInfo
+   */
   public static DBMetadataInfo fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, DBMetadataInfo.class);
   }
 
- /**
-  * Convert an instance of DBMetadataInfo to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of DBMetadataInfo to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

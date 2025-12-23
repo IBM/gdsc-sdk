@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,74 +41,77 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ClassModelExplained message for the response of GetClassificationModel api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsmlclassificationv3ClassModelExplained {
   public static final String SERIALIZED_NAME_CLASS_CONFIDENCE = "class_confidence";
   @SerializedName(SERIALIZED_NAME_CLASS_CONFIDENCE)
+  @javax.annotation.Nullable
   private Float classConfidence;
 
   public static final String SERIALIZED_NAME_CLASS_KEY = "class_key";
   @SerializedName(SERIALIZED_NAME_CLASS_KEY)
+  @javax.annotation.Nullable
   private String classKey;
 
   public static final String SERIALIZED_NAME_RULE_SETS = "rule_sets";
   @SerializedName(SERIALIZED_NAME_RULE_SETS)
+  @javax.annotation.Nullable
   private List<Riskanalyticsmlclassificationv3RuleSetList> ruleSets = new ArrayList<>();
 
   public Riskanalyticsmlclassificationv3ClassModelExplained() {
   }
 
-  public Riskanalyticsmlclassificationv3ClassModelExplained classConfidence(Float classConfidence) {
+  public Riskanalyticsmlclassificationv3ClassModelExplained classConfidence(@javax.annotation.Nullable Float classConfidence) {
     this.classConfidence = classConfidence;
     return this;
   }
 
-   /**
+  /**
    * Get classConfidence
    * @return classConfidence
-  **/
+   */
   @javax.annotation.Nullable
   public Float getClassConfidence() {
     return classConfidence;
   }
 
-  public void setClassConfidence(Float classConfidence) {
+  public void setClassConfidence(@javax.annotation.Nullable Float classConfidence) {
     this.classConfidence = classConfidence;
   }
 
 
-  public Riskanalyticsmlclassificationv3ClassModelExplained classKey(String classKey) {
+  public Riskanalyticsmlclassificationv3ClassModelExplained classKey(@javax.annotation.Nullable String classKey) {
     this.classKey = classKey;
     return this;
   }
 
-   /**
+  /**
    * Get classKey
    * @return classKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getClassKey() {
     return classKey;
   }
 
-  public void setClassKey(String classKey) {
+  public void setClassKey(@javax.annotation.Nullable String classKey) {
     this.classKey = classKey;
   }
 
 
-  public Riskanalyticsmlclassificationv3ClassModelExplained ruleSets(List<Riskanalyticsmlclassificationv3RuleSetList> ruleSets) {
+  public Riskanalyticsmlclassificationv3ClassModelExplained ruleSets(@javax.annotation.Nullable List<Riskanalyticsmlclassificationv3RuleSetList> ruleSets) {
     this.ruleSets = ruleSets;
     return this;
   }
@@ -120,16 +124,16 @@ public class Riskanalyticsmlclassificationv3ClassModelExplained {
     return this;
   }
 
-   /**
+  /**
    * Get ruleSets
    * @return ruleSets
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsmlclassificationv3RuleSetList> getRuleSets() {
     return ruleSets;
   }
 
-  public void setRuleSets(List<Riskanalyticsmlclassificationv3RuleSetList> ruleSets) {
+  public void setRuleSets(@javax.annotation.Nullable List<Riskanalyticsmlclassificationv3RuleSetList> ruleSets) {
     this.ruleSets = ruleSets;
   }
 
@@ -182,25 +186,22 @@ public class Riskanalyticsmlclassificationv3ClassModelExplained {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("class_confidence");
-    openapiFields.add("class_key");
-    openapiFields.add("rule_sets");
+    openapiFields = new HashSet<String>(Arrays.asList("class_confidence", "class_key", "rule_sets"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsmlclassificationv3ClassModelExplained
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsmlclassificationv3ClassModelExplained
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsmlclassificationv3ClassModelExplained.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsmlclassificationv3ClassModelExplained is not found in the empty JSON string", Riskanalyticsmlclassificationv3ClassModelExplained.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsmlclassificationv3ClassModelExplained is not found in the empty JSON string", Riskanalyticsmlclassificationv3ClassModelExplained.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,19 +209,19 @@ public class Riskanalyticsmlclassificationv3ClassModelExplained {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsmlclassificationv3ClassModelExplained.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsmlclassificationv3ClassModelExplained` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsmlclassificationv3ClassModelExplained` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("class_key") != null && !jsonObj.get("class_key").isJsonNull()) && !jsonObj.get("class_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `class_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("class_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `class_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("class_key").toString()));
       }
       if (jsonObj.get("rule_sets") != null && !jsonObj.get("rule_sets").isJsonNull()) {
         JsonArray jsonArrayruleSets = jsonObj.getAsJsonArray("rule_sets");
         if (jsonArrayruleSets != null) {
           // ensure the json data is an array
           if (!jsonObj.get("rule_sets").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `rule_sets` to be an array in the JSON string but got `%s`", jsonObj.get("rule_sets").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rule_sets` to be an array in the JSON string but got `%s`", jsonObj.get("rule_sets").toString()));
           }
 
           // validate the optional field `rule_sets` (array)
@@ -260,22 +261,22 @@ public class Riskanalyticsmlclassificationv3ClassModelExplained {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsmlclassificationv3ClassModelExplained given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsmlclassificationv3ClassModelExplained
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsmlclassificationv3ClassModelExplained
-  */
+  /**
+   * Create an instance of Riskanalyticsmlclassificationv3ClassModelExplained given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsmlclassificationv3ClassModelExplained
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsmlclassificationv3ClassModelExplained
+   */
   public static Riskanalyticsmlclassificationv3ClassModelExplained fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsmlclassificationv3ClassModelExplained.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsmlclassificationv3ClassModelExplained to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsmlclassificationv3ClassModelExplained to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

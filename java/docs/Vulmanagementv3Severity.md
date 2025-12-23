@@ -5,17 +5,17 @@
 ## Enum
 
 
-* `UNKNOWN` (value: `"SEVERITY_UNKNOWN"`)
+* `SEVERITY_UNKNOWN` (value: `"SEVERITY_UNKNOWN"`)
 
-* `NONE` (value: `"SEVERITY_NONE"`)
+* `SEVERITY_NONE` (value: `"SEVERITY_NONE"`)
 
-* `LOW` (value: `"SEVERITY_LOW"`)
+* `SEVERITY_LOW` (value: `"SEVERITY_LOW"`)
 
-* `MEDIUM` (value: `"SEVERITY_MEDIUM"`)
+* `SEVERITY_MEDIUM` (value: `"SEVERITY_MEDIUM"`)
 
-* `HIGH` (value: `"SEVERITY_HIGH"`)
+* `SEVERITY_HIGH` (value: `"SEVERITY_HIGH"`)
 
-* `CRITICAL` (value: `"SEVERITY_CRITICAL"`)
+* `SEVERITY_CRITICAL` (value: `"SEVERITY_CRITICAL"`)
 
 
 

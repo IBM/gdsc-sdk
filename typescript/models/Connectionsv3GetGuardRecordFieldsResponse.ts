@@ -20,6 +20,8 @@ export class Connectionsv3GetGuardRecordFieldsResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "fields",
@@ -41,4 +43,3 @@ export class Connectionsv3GetGuardRecordFieldsResponse {
     public constructor() {
     }
 }
-

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GradeThreshold defines the threshold for a given grade.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3GradeThreshold {
   public static final String SERIALIZED_NAME_THRESHOLD_SCORE = "threshold_score";
   @SerializedName(SERIALIZED_NAME_THRESHOLD_SCORE)
+  @javax.annotation.Nullable
   private Integer thresholdScore;
 
   public static final String SERIALIZED_NAME_THRESHOLD_SCORE_NAME = "threshold_score_name";
   @SerializedName(SERIALIZED_NAME_THRESHOLD_SCORE_NAME)
+  @javax.annotation.Nullable
   private String thresholdScoreName;
 
   public static final String SERIALIZED_NAME_THRESHOLD_VALUE = "threshold_value";
   @SerializedName(SERIALIZED_NAME_THRESHOLD_VALUE)
+  @javax.annotation.Nullable
   private Float thresholdValue;
 
   public Reportsv3GradeThreshold() {
   }
 
-  public Reportsv3GradeThreshold thresholdScore(Integer thresholdScore) {
+  public Reportsv3GradeThreshold thresholdScore(@javax.annotation.Nullable Integer thresholdScore) {
     this.thresholdScore = thresholdScore;
     return this;
   }
 
-   /**
+  /**
    * Get thresholdScore
    * @return thresholdScore
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getThresholdScore() {
     return thresholdScore;
   }
 
-  public void setThresholdScore(Integer thresholdScore) {
+  public void setThresholdScore(@javax.annotation.Nullable Integer thresholdScore) {
     this.thresholdScore = thresholdScore;
   }
 
 
-  public Reportsv3GradeThreshold thresholdScoreName(String thresholdScoreName) {
+  public Reportsv3GradeThreshold thresholdScoreName(@javax.annotation.Nullable String thresholdScoreName) {
     this.thresholdScoreName = thresholdScoreName;
     return this;
   }
 
-   /**
+  /**
    * Get thresholdScoreName
    * @return thresholdScoreName
-  **/
+   */
   @javax.annotation.Nullable
   public String getThresholdScoreName() {
     return thresholdScoreName;
   }
 
-  public void setThresholdScoreName(String thresholdScoreName) {
+  public void setThresholdScoreName(@javax.annotation.Nullable String thresholdScoreName) {
     this.thresholdScoreName = thresholdScoreName;
   }
 
 
-  public Reportsv3GradeThreshold thresholdValue(Float thresholdValue) {
+  public Reportsv3GradeThreshold thresholdValue(@javax.annotation.Nullable Float thresholdValue) {
     this.thresholdValue = thresholdValue;
     return this;
   }
 
-   /**
+  /**
    * Get thresholdValue
    * @return thresholdValue
-  **/
+   */
   @javax.annotation.Nullable
   public Float getThresholdValue() {
     return thresholdValue;
   }
 
-  public void setThresholdValue(Float thresholdValue) {
+  public void setThresholdValue(@javax.annotation.Nullable Float thresholdValue) {
     this.thresholdValue = thresholdValue;
   }
 
@@ -171,25 +175,22 @@ public class Reportsv3GradeThreshold {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("threshold_score");
-    openapiFields.add("threshold_score_name");
-    openapiFields.add("threshold_value");
+    openapiFields = new HashSet<String>(Arrays.asList("threshold_score", "threshold_score_name", "threshold_value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3GradeThreshold
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3GradeThreshold
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3GradeThreshold.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3GradeThreshold is not found in the empty JSON string", Reportsv3GradeThreshold.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3GradeThreshold is not found in the empty JSON string", Reportsv3GradeThreshold.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,12 +198,12 @@ public class Reportsv3GradeThreshold {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3GradeThreshold.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3GradeThreshold` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3GradeThreshold` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("threshold_score_name") != null && !jsonObj.get("threshold_score_name").isJsonNull()) && !jsonObj.get("threshold_score_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `threshold_score_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("threshold_score_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `threshold_score_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("threshold_score_name").toString()));
       }
   }
 
@@ -235,22 +236,22 @@ public class Reportsv3GradeThreshold {
     }
   }
 
- /**
-  * Create an instance of Reportsv3GradeThreshold given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3GradeThreshold
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3GradeThreshold
-  */
+  /**
+   * Create an instance of Reportsv3GradeThreshold given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3GradeThreshold
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3GradeThreshold
+   */
   public static Reportsv3GradeThreshold fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3GradeThreshold.class);
   }
 
- /**
-  * Convert an instance of Reportsv3GradeThreshold to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3GradeThreshold to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

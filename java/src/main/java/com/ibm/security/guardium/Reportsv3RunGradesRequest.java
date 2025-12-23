@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RunGradesRequest is the request to refresh metrics via grades.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3RunGradesRequest {
   public static final String SERIALIZED_NAME_FROM_DATE = "from_date";
   @SerializedName(SERIALIZED_NAME_FROM_DATE)
+  @javax.annotation.Nullable
   private String fromDate;
 
   public static final String SERIALIZED_NAME_GRADE_ID = "grade_id";
   @SerializedName(SERIALIZED_NAME_GRADE_ID)
+  @javax.annotation.Nullable
   private Integer gradeId;
 
   public static final String SERIALIZED_NAME_TO_DATE = "to_date";
   @SerializedName(SERIALIZED_NAME_TO_DATE)
+  @javax.annotation.Nullable
   private String toDate;
 
   public Reportsv3RunGradesRequest() {
   }
 
-  public Reportsv3RunGradesRequest fromDate(String fromDate) {
+  public Reportsv3RunGradesRequest fromDate(@javax.annotation.Nullable String fromDate) {
     this.fromDate = fromDate;
     return this;
   }
 
-   /**
+  /**
    * Get fromDate
    * @return fromDate
-  **/
+   */
   @javax.annotation.Nullable
   public String getFromDate() {
     return fromDate;
   }
 
-  public void setFromDate(String fromDate) {
+  public void setFromDate(@javax.annotation.Nullable String fromDate) {
     this.fromDate = fromDate;
   }
 
 
-  public Reportsv3RunGradesRequest gradeId(Integer gradeId) {
+  public Reportsv3RunGradesRequest gradeId(@javax.annotation.Nullable Integer gradeId) {
     this.gradeId = gradeId;
     return this;
   }
 
-   /**
+  /**
    * Get gradeId
    * @return gradeId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGradeId() {
     return gradeId;
   }
 
-  public void setGradeId(Integer gradeId) {
+  public void setGradeId(@javax.annotation.Nullable Integer gradeId) {
     this.gradeId = gradeId;
   }
 
 
-  public Reportsv3RunGradesRequest toDate(String toDate) {
+  public Reportsv3RunGradesRequest toDate(@javax.annotation.Nullable String toDate) {
     this.toDate = toDate;
     return this;
   }
 
-   /**
+  /**
    * Get toDate
    * @return toDate
-  **/
+   */
   @javax.annotation.Nullable
   public String getToDate() {
     return toDate;
   }
 
-  public void setToDate(String toDate) {
+  public void setToDate(@javax.annotation.Nullable String toDate) {
     this.toDate = toDate;
   }
 
@@ -171,25 +175,22 @@ public class Reportsv3RunGradesRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("from_date");
-    openapiFields.add("grade_id");
-    openapiFields.add("to_date");
+    openapiFields = new HashSet<String>(Arrays.asList("from_date", "grade_id", "to_date"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3RunGradesRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3RunGradesRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3RunGradesRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3RunGradesRequest is not found in the empty JSON string", Reportsv3RunGradesRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3RunGradesRequest is not found in the empty JSON string", Reportsv3RunGradesRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,15 +198,15 @@ public class Reportsv3RunGradesRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3RunGradesRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3RunGradesRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3RunGradesRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("from_date") != null && !jsonObj.get("from_date").isJsonNull()) && !jsonObj.get("from_date").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `from_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("from_date").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `from_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("from_date").toString()));
       }
       if ((jsonObj.get("to_date") != null && !jsonObj.get("to_date").isJsonNull()) && !jsonObj.get("to_date").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `to_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("to_date").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `to_date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("to_date").toString()));
       }
   }
 
@@ -238,22 +239,22 @@ public class Reportsv3RunGradesRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3RunGradesRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3RunGradesRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3RunGradesRequest
-  */
+  /**
+   * Create an instance of Reportsv3RunGradesRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3RunGradesRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3RunGradesRequest
+   */
   public static Reportsv3RunGradesRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3RunGradesRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3RunGradesRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3RunGradesRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

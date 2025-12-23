@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmdatamanagerv3PluginDataModel
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmdatamanagerv3PluginDataModel {
   public static final String SERIALIZED_NAME_PLUGIN_DESC = "plugin_desc";
   @SerializedName(SERIALIZED_NAME_PLUGIN_DESC)
+  @javax.annotation.Nullable
   private String pluginDesc;
 
   public static final String SERIALIZED_NAME_PLUGIN_ID = "plugin_id";
   @SerializedName(SERIALIZED_NAME_PLUGIN_ID)
+  @javax.annotation.Nullable
   private String pluginId;
 
   public static final String SERIALIZED_NAME_PLUGIN_NAME = "plugin_name";
   @SerializedName(SERIALIZED_NAME_PLUGIN_NAME)
+  @javax.annotation.Nullable
   private String pluginName;
 
   public static final String SERIALIZED_NAME_PLUGIN_STATUS = "plugin_status";
   @SerializedName(SERIALIZED_NAME_PLUGIN_STATUS)
+  @javax.annotation.Nullable
   private String pluginStatus;
 
   public static final String SERIALIZED_NAME_PLUGIN_TYPE = "plugin_type";
   @SerializedName(SERIALIZED_NAME_PLUGIN_TYPE)
+  @javax.annotation.Nullable
   private String pluginType;
 
   public Qspmdatamanagerv3PluginDataModel() {
   }
 
-  public Qspmdatamanagerv3PluginDataModel pluginDesc(String pluginDesc) {
+  public Qspmdatamanagerv3PluginDataModel pluginDesc(@javax.annotation.Nullable String pluginDesc) {
     this.pluginDesc = pluginDesc;
     return this;
   }
 
-   /**
+  /**
    * Get pluginDesc
    * @return pluginDesc
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginDesc() {
     return pluginDesc;
   }
 
-  public void setPluginDesc(String pluginDesc) {
+  public void setPluginDesc(@javax.annotation.Nullable String pluginDesc) {
     this.pluginDesc = pluginDesc;
   }
 
 
-  public Qspmdatamanagerv3PluginDataModel pluginId(String pluginId) {
+  public Qspmdatamanagerv3PluginDataModel pluginId(@javax.annotation.Nullable String pluginId) {
     this.pluginId = pluginId;
     return this;
   }
 
-   /**
+  /**
    * Get pluginId
    * @return pluginId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginId() {
     return pluginId;
   }
 
-  public void setPluginId(String pluginId) {
+  public void setPluginId(@javax.annotation.Nullable String pluginId) {
     this.pluginId = pluginId;
   }
 
 
-  public Qspmdatamanagerv3PluginDataModel pluginName(String pluginName) {
+  public Qspmdatamanagerv3PluginDataModel pluginName(@javax.annotation.Nullable String pluginName) {
     this.pluginName = pluginName;
     return this;
   }
 
-   /**
+  /**
    * Get pluginName
    * @return pluginName
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginName() {
     return pluginName;
   }
 
-  public void setPluginName(String pluginName) {
+  public void setPluginName(@javax.annotation.Nullable String pluginName) {
     this.pluginName = pluginName;
   }
 
 
-  public Qspmdatamanagerv3PluginDataModel pluginStatus(String pluginStatus) {
+  public Qspmdatamanagerv3PluginDataModel pluginStatus(@javax.annotation.Nullable String pluginStatus) {
     this.pluginStatus = pluginStatus;
     return this;
   }
 
-   /**
+  /**
    * Get pluginStatus
    * @return pluginStatus
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginStatus() {
     return pluginStatus;
   }
 
-  public void setPluginStatus(String pluginStatus) {
+  public void setPluginStatus(@javax.annotation.Nullable String pluginStatus) {
     this.pluginStatus = pluginStatus;
   }
 
 
-  public Qspmdatamanagerv3PluginDataModel pluginType(String pluginType) {
+  public Qspmdatamanagerv3PluginDataModel pluginType(@javax.annotation.Nullable String pluginType) {
     this.pluginType = pluginType;
     return this;
   }
 
-   /**
+  /**
    * Get pluginType
    * @return pluginType
-  **/
+   */
   @javax.annotation.Nullable
   public String getPluginType() {
     return pluginType;
   }
 
-  public void setPluginType(String pluginType) {
+  public void setPluginType(@javax.annotation.Nullable String pluginType) {
     this.pluginType = pluginType;
   }
 
@@ -221,27 +227,22 @@ public class Qspmdatamanagerv3PluginDataModel {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("plugin_desc");
-    openapiFields.add("plugin_id");
-    openapiFields.add("plugin_name");
-    openapiFields.add("plugin_status");
-    openapiFields.add("plugin_type");
+    openapiFields = new HashSet<String>(Arrays.asList("plugin_desc", "plugin_id", "plugin_name", "plugin_status", "plugin_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3PluginDataModel
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmdatamanagerv3PluginDataModel
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmdatamanagerv3PluginDataModel.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmdatamanagerv3PluginDataModel is not found in the empty JSON string", Qspmdatamanagerv3PluginDataModel.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmdatamanagerv3PluginDataModel is not found in the empty JSON string", Qspmdatamanagerv3PluginDataModel.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,24 +250,24 @@ public class Qspmdatamanagerv3PluginDataModel {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmdatamanagerv3PluginDataModel.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3PluginDataModel` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmdatamanagerv3PluginDataModel` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("plugin_desc") != null && !jsonObj.get("plugin_desc").isJsonNull()) && !jsonObj.get("plugin_desc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_desc").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_desc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_desc").toString()));
       }
       if ((jsonObj.get("plugin_id") != null && !jsonObj.get("plugin_id").isJsonNull()) && !jsonObj.get("plugin_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_id").toString()));
       }
       if ((jsonObj.get("plugin_name") != null && !jsonObj.get("plugin_name").isJsonNull()) && !jsonObj.get("plugin_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_name").toString()));
       }
       if ((jsonObj.get("plugin_status") != null && !jsonObj.get("plugin_status").isJsonNull()) && !jsonObj.get("plugin_status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_status").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_status").toString()));
       }
       if ((jsonObj.get("plugin_type") != null && !jsonObj.get("plugin_type").isJsonNull()) && !jsonObj.get("plugin_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `plugin_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `plugin_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("plugin_type").toString()));
       }
   }
 
@@ -299,22 +300,22 @@ public class Qspmdatamanagerv3PluginDataModel {
     }
   }
 
- /**
-  * Create an instance of Qspmdatamanagerv3PluginDataModel given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmdatamanagerv3PluginDataModel
-  * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3PluginDataModel
-  */
+  /**
+   * Create an instance of Qspmdatamanagerv3PluginDataModel given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmdatamanagerv3PluginDataModel
+   * @throws IOException if the JSON string is invalid with respect to Qspmdatamanagerv3PluginDataModel
+   */
   public static Qspmdatamanagerv3PluginDataModel fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmdatamanagerv3PluginDataModel.class);
   }
 
- /**
-  * Convert an instance of Qspmdatamanagerv3PluginDataModel to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmdatamanagerv3PluginDataModel to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

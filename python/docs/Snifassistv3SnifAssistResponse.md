@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **data** | **bytearray** | Data field if any. | [optional] 
 **data_crc** | **int** | Provide CRC value of Response Data. | [optional] 
 **stap_id** | **str** | Provide STAP identifer. | [optional] 
-**stap_operation** | [**Snifassistv3StapOperation**](Snifassistv3StapOperation.md) |  | [optional] 
+**stap_operation** | [**Snifassistv3StapOperation**](Snifassistv3StapOperation.md) |  | [optional] [default to Snifassistv3StapOperation.STAP_REINITIALIZE_BUFFER]
 **status_code** | **int** | Status code: 0 &#x3D; success; 1 &#x3D; failure. | [optional] 
-**type** | [**Snifassistv3SnifAssistType**](Snifassistv3SnifAssistType.md) |  | [optional] 
+**type** | [**Snifassistv3SnifAssistType**](Snifassistv3SnifAssistType.md) |  | [optional] [default to Snifassistv3SnifAssistType.VERSION_NOT_SUPPORTED]
 
 ## Example
 

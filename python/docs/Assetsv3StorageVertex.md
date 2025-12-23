@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **city** | **str** |  | [optional] 
 **country** | **str** |  | [optional] 
-**criticality** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] 
+**criticality** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] [default to Assetsv3Level.LEVEL_UNKNOWN]
 **data_center** | **str** |  | [optional] 
 **dns** | **str** |  | [optional] 
 **extended_properties** | [**List[Assetsv3CustomProperty]**](Assetsv3CustomProperty.md) |  | [optional] 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **owner** | **List[str]** |  | [optional] 
 **region** | **str** |  | [optional] 
 **resolution_key** | **str** |  | [optional] 
-**risk_level** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] 
+**risk_level** | [**Assetsv3Level**](Assetsv3Level.md) |  | [optional] [default to Assetsv3Level.LEVEL_UNKNOWN]
 **size** | **str** |  | [optional] 
 **state** | **str** |  | [optional] 
 **storage_account** | [**List[Assetsv3ConnectionEdge]**](Assetsv3ConnectionEdge.md) |  | [optional] 

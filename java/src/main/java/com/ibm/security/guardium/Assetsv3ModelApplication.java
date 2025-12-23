@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3ModelApplication
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3ModelApplication {
   public static final String SERIALIZED_NAME_APPLICATION_NAME = "application_name";
   @SerializedName(SERIALIZED_NAME_APPLICATION_NAME)
+  @javax.annotation.Nullable
   private String applicationName;
 
   public static final String SERIALIZED_NAME_LAST_USED = "last_used";
   @SerializedName(SERIALIZED_NAME_LAST_USED)
+  @javax.annotation.Nullable
   private String lastUsed;
 
   public static final String SERIALIZED_NAME_SERVICE_TYPE = "service_type";
   @SerializedName(SERIALIZED_NAME_SERVICE_TYPE)
+  @javax.annotation.Nullable
   private String serviceType;
 
   public Assetsv3ModelApplication() {
   }
 
-  public Assetsv3ModelApplication applicationName(String applicationName) {
+  public Assetsv3ModelApplication applicationName(@javax.annotation.Nullable String applicationName) {
     this.applicationName = applicationName;
     return this;
   }
 
-   /**
+  /**
    * Get applicationName
    * @return applicationName
-  **/
+   */
   @javax.annotation.Nullable
   public String getApplicationName() {
     return applicationName;
   }
 
-  public void setApplicationName(String applicationName) {
+  public void setApplicationName(@javax.annotation.Nullable String applicationName) {
     this.applicationName = applicationName;
   }
 
 
-  public Assetsv3ModelApplication lastUsed(String lastUsed) {
+  public Assetsv3ModelApplication lastUsed(@javax.annotation.Nullable String lastUsed) {
     this.lastUsed = lastUsed;
     return this;
   }
 
-   /**
+  /**
    * Get lastUsed
    * @return lastUsed
-  **/
+   */
   @javax.annotation.Nullable
   public String getLastUsed() {
     return lastUsed;
   }
 
-  public void setLastUsed(String lastUsed) {
+  public void setLastUsed(@javax.annotation.Nullable String lastUsed) {
     this.lastUsed = lastUsed;
   }
 
 
-  public Assetsv3ModelApplication serviceType(String serviceType) {
+  public Assetsv3ModelApplication serviceType(@javax.annotation.Nullable String serviceType) {
     this.serviceType = serviceType;
     return this;
   }
 
-   /**
+  /**
    * Get serviceType
    * @return serviceType
-  **/
+   */
   @javax.annotation.Nullable
   public String getServiceType() {
     return serviceType;
   }
 
-  public void setServiceType(String serviceType) {
+  public void setServiceType(@javax.annotation.Nullable String serviceType) {
     this.serviceType = serviceType;
   }
 
@@ -171,25 +175,22 @@ public class Assetsv3ModelApplication {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("application_name");
-    openapiFields.add("last_used");
-    openapiFields.add("service_type");
+    openapiFields = new HashSet<String>(Arrays.asList("application_name", "last_used", "service_type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3ModelApplication
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3ModelApplication
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3ModelApplication.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3ModelApplication is not found in the empty JSON string", Assetsv3ModelApplication.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3ModelApplication is not found in the empty JSON string", Assetsv3ModelApplication.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Assetsv3ModelApplication {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3ModelApplication.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3ModelApplication` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3ModelApplication` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("application_name") != null && !jsonObj.get("application_name").isJsonNull()) && !jsonObj.get("application_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `application_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `application_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("application_name").toString()));
       }
       if ((jsonObj.get("last_used") != null && !jsonObj.get("last_used").isJsonNull()) && !jsonObj.get("last_used").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_used` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_used").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `last_used` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_used").toString()));
       }
       if ((jsonObj.get("service_type") != null && !jsonObj.get("service_type").isJsonNull()) && !jsonObj.get("service_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `service_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("service_type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `service_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("service_type").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Assetsv3ModelApplication {
     }
   }
 
- /**
-  * Create an instance of Assetsv3ModelApplication given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3ModelApplication
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3ModelApplication
-  */
+  /**
+   * Create an instance of Assetsv3ModelApplication given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3ModelApplication
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3ModelApplication
+   */
   public static Assetsv3ModelApplication fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3ModelApplication.class);
   }
 
- /**
-  * Convert an instance of Assetsv3ModelApplication to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3ModelApplication to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

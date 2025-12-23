@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,55 +43,58 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Policybuilderv3GetPolicyVersionResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Policybuilderv3GetPolicyVersionResponse {
   public static final String SERIALIZED_NAME_POLICY = "policy";
   @SerializedName(SERIALIZED_NAME_POLICY)
+  @javax.annotation.Nullable
   private Policybuilderv3Policy policy;
 
   public static final String SERIALIZED_NAME_RULES = "rules";
   @SerializedName(SERIALIZED_NAME_RULES)
+  @javax.annotation.Nullable
   private List<Policybuilderv3Rule> rules = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Policybuilderv3StatusResponseBase status;
 
   public Policybuilderv3GetPolicyVersionResponse() {
   }
 
-  public Policybuilderv3GetPolicyVersionResponse policy(Policybuilderv3Policy policy) {
+  public Policybuilderv3GetPolicyVersionResponse policy(@javax.annotation.Nullable Policybuilderv3Policy policy) {
     this.policy = policy;
     return this;
   }
 
-   /**
+  /**
    * Get policy
    * @return policy
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3Policy getPolicy() {
     return policy;
   }
 
-  public void setPolicy(Policybuilderv3Policy policy) {
+  public void setPolicy(@javax.annotation.Nullable Policybuilderv3Policy policy) {
     this.policy = policy;
   }
 
 
-  public Policybuilderv3GetPolicyVersionResponse rules(List<Policybuilderv3Rule> rules) {
+  public Policybuilderv3GetPolicyVersionResponse rules(@javax.annotation.Nullable List<Policybuilderv3Rule> rules) {
     this.rules = rules;
     return this;
   }
@@ -103,35 +107,35 @@ public class Policybuilderv3GetPolicyVersionResponse {
     return this;
   }
 
-   /**
+  /**
    * Get rules
    * @return rules
-  **/
+   */
   @javax.annotation.Nullable
   public List<Policybuilderv3Rule> getRules() {
     return rules;
   }
 
-  public void setRules(List<Policybuilderv3Rule> rules) {
+  public void setRules(@javax.annotation.Nullable List<Policybuilderv3Rule> rules) {
     this.rules = rules;
   }
 
 
-  public Policybuilderv3GetPolicyVersionResponse status(Policybuilderv3StatusResponseBase status) {
+  public Policybuilderv3GetPolicyVersionResponse status(@javax.annotation.Nullable Policybuilderv3StatusResponseBase status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Policybuilderv3StatusResponseBase getStatus() {
     return status;
   }
 
-  public void setStatus(Policybuilderv3StatusResponseBase status) {
+  public void setStatus(@javax.annotation.Nullable Policybuilderv3StatusResponseBase status) {
     this.status = status;
   }
 
@@ -184,25 +188,22 @@ public class Policybuilderv3GetPolicyVersionResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("policy");
-    openapiFields.add("rules");
-    openapiFields.add("status");
+    openapiFields = new HashSet<String>(Arrays.asList("policy", "rules", "status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3GetPolicyVersionResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Policybuilderv3GetPolicyVersionResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Policybuilderv3GetPolicyVersionResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Policybuilderv3GetPolicyVersionResponse is not found in the empty JSON string", Policybuilderv3GetPolicyVersionResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Policybuilderv3GetPolicyVersionResponse is not found in the empty JSON string", Policybuilderv3GetPolicyVersionResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -210,7 +211,7 @@ public class Policybuilderv3GetPolicyVersionResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Policybuilderv3GetPolicyVersionResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Policybuilderv3GetPolicyVersionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Policybuilderv3GetPolicyVersionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -223,7 +224,7 @@ public class Policybuilderv3GetPolicyVersionResponse {
         if (jsonArrayrules != null) {
           // ensure the json data is an array
           if (!jsonObj.get("rules").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `rules` to be an array in the JSON string but got `%s`", jsonObj.get("rules").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rules` to be an array in the JSON string but got `%s`", jsonObj.get("rules").toString()));
           }
 
           // validate the optional field `rules` (array)
@@ -267,22 +268,22 @@ public class Policybuilderv3GetPolicyVersionResponse {
     }
   }
 
- /**
-  * Create an instance of Policybuilderv3GetPolicyVersionResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Policybuilderv3GetPolicyVersionResponse
-  * @throws IOException if the JSON string is invalid with respect to Policybuilderv3GetPolicyVersionResponse
-  */
+  /**
+   * Create an instance of Policybuilderv3GetPolicyVersionResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Policybuilderv3GetPolicyVersionResponse
+   * @throws IOException if the JSON string is invalid with respect to Policybuilderv3GetPolicyVersionResponse
+   */
   public static Policybuilderv3GetPolicyVersionResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Policybuilderv3GetPolicyVersionResponse.class);
   }
 
- /**
-  * Convert an instance of Policybuilderv3GetPolicyVersionResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Policybuilderv3GetPolicyVersionResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

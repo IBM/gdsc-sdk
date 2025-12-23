@@ -41,8 +41,8 @@ class Policybuilderv3Rule(BaseModel):
     rule_key: Optional[StrictStr] = None
     rule_name: Optional[StrictStr] = Field(default=None, description="Rule name.")
     rule_order: Optional[StrictInt] = Field(default=None, description="Integer to indicate the order of the rule in the policy.")
-    rule_type: Optional[Policybuilderv3RuleType] = None
-    severity: Optional[Policybuilderv3RuleSeverity] = None
+    rule_type: Optional[Policybuilderv3RuleType] = Policybuilderv3RuleType.ACCESS
+    severity: Optional[Policybuilderv3RuleSeverity] = Policybuilderv3RuleSeverity.INFO
     tags: Optional[List[StrictStr]] = Field(default=None, description="Variable that contains tags assosicated with the rule.")
     template: Optional[StrictBool] = Field(default=None, description="Flag to indicate if the rule is a template rule.")
     __properties: ClassVar[List[str]] = ["actions", "continue_to_next_rule", "empty_groups", "invalid_actions", "invalid_parameters", "parameters", "policy_id", "rule_id", "rule_key", "rule_name", "rule_order", "rule_type", "severity", "tags", "template"]
@@ -89,30 +89,30 @@ class Policybuilderv3Rule(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in actions (list)
         _items = []
         if self.actions:
-            for _item in self.actions:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_actions in self.actions:
+                if _item_actions:
+                    _items.append(_item_actions.to_dict())
             _dict['actions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in invalid_actions (list)
         _items = []
         if self.invalid_actions:
-            for _item in self.invalid_actions:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_invalid_actions in self.invalid_actions:
+                if _item_invalid_actions:
+                    _items.append(_item_invalid_actions.to_dict())
             _dict['invalid_actions'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in invalid_parameters (list)
         _items = []
         if self.invalid_parameters:
-            for _item in self.invalid_parameters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_invalid_parameters in self.invalid_parameters:
+                if _item_invalid_parameters:
+                    _items.append(_item_invalid_parameters.to_dict())
             _dict['invalid_parameters'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in parameters (list)
         _items = []
         if self.parameters:
-            for _item in self.parameters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_parameters in self.parameters:
+                if _item_parameters:
+                    _items.append(_item_parameters.to_dict())
             _dict['parameters'] = _items
         return _dict
 
@@ -137,8 +137,8 @@ class Policybuilderv3Rule(BaseModel):
             "rule_key": obj.get("rule_key"),
             "rule_name": obj.get("rule_name"),
             "rule_order": obj.get("rule_order"),
-            "rule_type": obj.get("rule_type"),
-            "severity": obj.get("severity"),
+            "rule_type": obj.get("rule_type") if obj.get("rule_type") is not None else Policybuilderv3RuleType.ACCESS,
+            "severity": obj.get("severity") if obj.get("severity") is not None else Policybuilderv3RuleSeverity.INFO,
             "tags": obj.get("tags"),
             "template": obj.get("template")
         })

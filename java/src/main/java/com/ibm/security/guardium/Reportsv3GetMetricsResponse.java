@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetMetricsResponse is the return type which encapsulates a list of metrics from the GetMetrics() api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3GetMetricsResponse {
   public static final String SERIALIZED_NAME_METRICS_LIST = "metrics_list";
   @SerializedName(SERIALIZED_NAME_METRICS_LIST)
+  @javax.annotation.Nullable
   private List<Reportsv3Metric> metricsList = new ArrayList<>();
 
   public Reportsv3GetMetricsResponse() {
   }
 
-  public Reportsv3GetMetricsResponse metricsList(List<Reportsv3Metric> metricsList) {
+  public Reportsv3GetMetricsResponse metricsList(@javax.annotation.Nullable List<Reportsv3Metric> metricsList) {
     this.metricsList = metricsList;
     return this;
   }
@@ -74,16 +76,16 @@ public class Reportsv3GetMetricsResponse {
     return this;
   }
 
-   /**
+  /**
    * List of Metrics.
    * @return metricsList
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3Metric> getMetricsList() {
     return metricsList;
   }
 
-  public void setMetricsList(List<Reportsv3Metric> metricsList) {
+  public void setMetricsList(@javax.annotation.Nullable List<Reportsv3Metric> metricsList) {
     this.metricsList = metricsList;
   }
 
@@ -132,23 +134,22 @@ public class Reportsv3GetMetricsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("metrics_list");
+    openapiFields = new HashSet<String>(Arrays.asList("metrics_list"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetMetricsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3GetMetricsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3GetMetricsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3GetMetricsResponse is not found in the empty JSON string", Reportsv3GetMetricsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3GetMetricsResponse is not found in the empty JSON string", Reportsv3GetMetricsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Reportsv3GetMetricsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3GetMetricsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3GetMetricsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3GetMetricsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Reportsv3GetMetricsResponse {
         if (jsonArraymetricsList != null) {
           // ensure the json data is an array
           if (!jsonObj.get("metrics_list").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `metrics_list` to be an array in the JSON string but got `%s`", jsonObj.get("metrics_list").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `metrics_list` to be an array in the JSON string but got `%s`", jsonObj.get("metrics_list").toString()));
           }
 
           // validate the optional field `metrics_list` (array)
@@ -205,22 +206,22 @@ public class Reportsv3GetMetricsResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsv3GetMetricsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3GetMetricsResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3GetMetricsResponse
-  */
+  /**
+   * Create an instance of Reportsv3GetMetricsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3GetMetricsResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3GetMetricsResponse
+   */
   public static Reportsv3GetMetricsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3GetMetricsResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsv3GetMetricsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3GetMetricsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

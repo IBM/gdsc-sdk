@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **report_name** | **str** | Name of the report. | [optional] 
 **report_parameters** | [**List[Guardiumconnectorv3GDPReportParameter]**](Guardiumconnectorv3GDPReportParameter.md) | Report parameters. | [optional] 
 **sort_column** | **str** | Column to sort on if not specified returns rows in default sort order of the report. | [optional] 
-**sort_order** | [**RunGDPReportRequestSortOrder**](RunGDPReportRequestSortOrder.md) |  | [optional] 
+**sort_order** | [**RunGDPReportRequestSortOrder**](RunGDPReportRequestSortOrder.md) |  | [optional] [default to RunGDPReportRequestSortOrder.ACS]
 **start_from** | **int** | Result row index to retrieve from if not specified returns results from the beginning. | [optional] 
 
 ## Example

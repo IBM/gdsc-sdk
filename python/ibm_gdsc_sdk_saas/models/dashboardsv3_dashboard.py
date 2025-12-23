@@ -79,9 +79,9 @@ class Dashboardsv3Dashboard(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in cards (list)
         _items = []
         if self.cards:
-            for _item in self.cards:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cards in self.cards:
+                if _item_cards:
+                    _items.append(_item_cards.to_dict())
             _dict['cards'] = _items
         # override the default output from pydantic by calling `to_dict()` of global_time_filter
         if self.global_time_filter:
@@ -89,9 +89,9 @@ class Dashboardsv3Dashboard(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in report_global_filter_list (list)
         _items = []
         if self.report_global_filter_list:
-            for _item in self.report_global_filter_list:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_global_filter_list in self.report_global_filter_list:
+                if _item_report_global_filter_list:
+                    _items.append(_item_report_global_filter_list.to_dict())
             _dict['report_global_filter_list'] = _items
         return _dict
 

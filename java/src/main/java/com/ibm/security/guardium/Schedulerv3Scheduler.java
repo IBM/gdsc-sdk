@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -46,141 +47,156 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Scheduler includes all fields used to schedule a report.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Schedulerv3Scheduler {
   public static final String SERIALIZED_NAME_BEGIN_SCHEDULE = "begin_schedule";
   @SerializedName(SERIALIZED_NAME_BEGIN_SCHEDULE)
+  @javax.annotation.Nullable
   private OffsetDateTime beginSchedule;
 
   public static final String SERIALIZED_NAME_BY_DAY_OF_MONTH = "by_day_of_month";
   @SerializedName(SERIALIZED_NAME_BY_DAY_OF_MONTH)
+  @javax.annotation.Nullable
   private Boolean byDayOfMonth;
 
   public static final String SERIALIZED_NAME_DAY_OF_MONTH = "day_of_month";
   @SerializedName(SERIALIZED_NAME_DAY_OF_MONTH)
+  @javax.annotation.Nullable
   private String dayOfMonth;
 
   public static final String SERIALIZED_NAME_DAY_OF_WEEK = "day_of_week";
   @SerializedName(SERIALIZED_NAME_DAY_OF_WEEK)
+  @javax.annotation.Nullable
   private List<Schedulerv3DayOfWeek> dayOfWeek = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DAY_ORDER = "day_order";
   @SerializedName(SERIALIZED_NAME_DAY_ORDER)
+  @javax.annotation.Nullable
   private Schedulerv3DayOrder dayOrder = Schedulerv3DayOrder.UNDEFINED_ORDER;
 
   public static final String SERIALIZED_NAME_DAY_ORDER_DAY_OF_WEEK = "day_order_day_of_week";
   @SerializedName(SERIALIZED_NAME_DAY_ORDER_DAY_OF_WEEK)
+  @javax.annotation.Nullable
   private Schedulerv3DayOfWeek dayOrderDayOfWeek = Schedulerv3DayOfWeek.UNDEFINED_DAY;
 
   public static final String SERIALIZED_NAME_END_SCHEDULE = "end_schedule";
   @SerializedName(SERIALIZED_NAME_END_SCHEDULE)
+  @javax.annotation.Nullable
   private OffsetDateTime endSchedule;
 
   public static final String SERIALIZED_NAME_FREQUENCY = "frequency";
   @SerializedName(SERIALIZED_NAME_FREQUENCY)
+  @javax.annotation.Nullable
   private Schedulerv3Frequency frequency = Schedulerv3Frequency.UNDEFINED_FREQUENCY;
 
   public static final String SERIALIZED_NAME_MONTHS = "months";
   @SerializedName(SERIALIZED_NAME_MONTHS)
+  @javax.annotation.Nullable
   private List<Schedulerv3Month> months = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NEVER_END = "never_end";
   @SerializedName(SERIALIZED_NAME_NEVER_END)
+  @javax.annotation.Nullable
   private Boolean neverEnd;
 
   public static final String SERIALIZED_NAME_REPEAT = "repeat";
   @SerializedName(SERIALIZED_NAME_REPEAT)
+  @javax.annotation.Nullable
   private Integer repeat;
 
   public static final String SERIALIZED_NAME_REPEAT_BEGIN = "repeat_begin";
   @SerializedName(SERIALIZED_NAME_REPEAT_BEGIN)
+  @javax.annotation.Nullable
   private Schedulerv3RepeatBegin repeatBegin;
 
   public static final String SERIALIZED_NAME_REPEAT_END = "repeat_end";
   @SerializedName(SERIALIZED_NAME_REPEAT_END)
+  @javax.annotation.Nullable
   private Schedulerv3RepeatEnd repeatEnd;
 
   public static final String SERIALIZED_NAME_REPEAT_MINUTES = "repeat_minutes";
   @SerializedName(SERIALIZED_NAME_REPEAT_MINUTES)
+  @javax.annotation.Nullable
   private Integer repeatMinutes;
 
   public static final String SERIALIZED_NAME_RUN_ONCE_NOW = "run_once_now";
   @SerializedName(SERIALIZED_NAME_RUN_ONCE_NOW)
+  @javax.annotation.Nullable
   private Boolean runOnceNow;
 
   public Schedulerv3Scheduler() {
   }
 
-  public Schedulerv3Scheduler beginSchedule(OffsetDateTime beginSchedule) {
+  public Schedulerv3Scheduler beginSchedule(@javax.annotation.Nullable OffsetDateTime beginSchedule) {
     this.beginSchedule = beginSchedule;
     return this;
   }
 
-   /**
+  /**
    * Begin the schedule on.
    * @return beginSchedule
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getBeginSchedule() {
     return beginSchedule;
   }
 
-  public void setBeginSchedule(OffsetDateTime beginSchedule) {
+  public void setBeginSchedule(@javax.annotation.Nullable OffsetDateTime beginSchedule) {
     this.beginSchedule = beginSchedule;
   }
 
 
-  public Schedulerv3Scheduler byDayOfMonth(Boolean byDayOfMonth) {
+  public Schedulerv3Scheduler byDayOfMonth(@javax.annotation.Nullable Boolean byDayOfMonth) {
     this.byDayOfMonth = byDayOfMonth;
     return this;
   }
 
-   /**
+  /**
    * Either by day of month or date of the week of month.
    * @return byDayOfMonth
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getByDayOfMonth() {
     return byDayOfMonth;
   }
 
-  public void setByDayOfMonth(Boolean byDayOfMonth) {
+  public void setByDayOfMonth(@javax.annotation.Nullable Boolean byDayOfMonth) {
     this.byDayOfMonth = byDayOfMonth;
   }
 
 
-  public Schedulerv3Scheduler dayOfMonth(String dayOfMonth) {
+  public Schedulerv3Scheduler dayOfMonth(@javax.annotation.Nullable String dayOfMonth) {
     this.dayOfMonth = dayOfMonth;
     return this;
   }
 
-   /**
+  /**
    * The day of the month, combined with frequency &#x3D; 4 because there last day of the month the data type is string.
    * @return dayOfMonth
-  **/
+   */
   @javax.annotation.Nullable
   public String getDayOfMonth() {
     return dayOfMonth;
   }
 
-  public void setDayOfMonth(String dayOfMonth) {
+  public void setDayOfMonth(@javax.annotation.Nullable String dayOfMonth) {
     this.dayOfMonth = dayOfMonth;
   }
 
 
-  public Schedulerv3Scheduler dayOfWeek(List<Schedulerv3DayOfWeek> dayOfWeek) {
+  public Schedulerv3Scheduler dayOfWeek(@javax.annotation.Nullable List<Schedulerv3DayOfWeek> dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
     return this;
   }
@@ -193,97 +209,97 @@ public class Schedulerv3Scheduler {
     return this;
   }
 
-   /**
+  /**
    * What day do you want to run, combined with frequency&#x3D; 3, such as Monday, Tuesday.
    * @return dayOfWeek
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3DayOfWeek> getDayOfWeek() {
     return dayOfWeek;
   }
 
-  public void setDayOfWeek(List<Schedulerv3DayOfWeek> dayOfWeek) {
+  public void setDayOfWeek(@javax.annotation.Nullable List<Schedulerv3DayOfWeek> dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
 
 
-  public Schedulerv3Scheduler dayOrder(Schedulerv3DayOrder dayOrder) {
+  public Schedulerv3Scheduler dayOrder(@javax.annotation.Nullable Schedulerv3DayOrder dayOrder) {
     this.dayOrder = dayOrder;
     return this;
   }
 
-   /**
+  /**
    * Get dayOrder
    * @return dayOrder
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3DayOrder getDayOrder() {
     return dayOrder;
   }
 
-  public void setDayOrder(Schedulerv3DayOrder dayOrder) {
+  public void setDayOrder(@javax.annotation.Nullable Schedulerv3DayOrder dayOrder) {
     this.dayOrder = dayOrder;
   }
 
 
-  public Schedulerv3Scheduler dayOrderDayOfWeek(Schedulerv3DayOfWeek dayOrderDayOfWeek) {
+  public Schedulerv3Scheduler dayOrderDayOfWeek(@javax.annotation.Nullable Schedulerv3DayOfWeek dayOrderDayOfWeek) {
     this.dayOrderDayOfWeek = dayOrderDayOfWeek;
     return this;
   }
 
-   /**
+  /**
    * Get dayOrderDayOfWeek
    * @return dayOrderDayOfWeek
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3DayOfWeek getDayOrderDayOfWeek() {
     return dayOrderDayOfWeek;
   }
 
-  public void setDayOrderDayOfWeek(Schedulerv3DayOfWeek dayOrderDayOfWeek) {
+  public void setDayOrderDayOfWeek(@javax.annotation.Nullable Schedulerv3DayOfWeek dayOrderDayOfWeek) {
     this.dayOrderDayOfWeek = dayOrderDayOfWeek;
   }
 
 
-  public Schedulerv3Scheduler endSchedule(OffsetDateTime endSchedule) {
+  public Schedulerv3Scheduler endSchedule(@javax.annotation.Nullable OffsetDateTime endSchedule) {
     this.endSchedule = endSchedule;
     return this;
   }
 
-   /**
+  /**
    * End the schedule on, if it is null means never ends.
    * @return endSchedule
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getEndSchedule() {
     return endSchedule;
   }
 
-  public void setEndSchedule(OffsetDateTime endSchedule) {
+  public void setEndSchedule(@javax.annotation.Nullable OffsetDateTime endSchedule) {
     this.endSchedule = endSchedule;
   }
 
 
-  public Schedulerv3Scheduler frequency(Schedulerv3Frequency frequency) {
+  public Schedulerv3Scheduler frequency(@javax.annotation.Nullable Schedulerv3Frequency frequency) {
     this.frequency = frequency;
     return this;
   }
 
-   /**
+  /**
    * Get frequency
    * @return frequency
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3Frequency getFrequency() {
     return frequency;
   }
 
-  public void setFrequency(Schedulerv3Frequency frequency) {
+  public void setFrequency(@javax.annotation.Nullable Schedulerv3Frequency frequency) {
     this.frequency = frequency;
   }
 
 
-  public Schedulerv3Scheduler months(List<Schedulerv3Month> months) {
+  public Schedulerv3Scheduler months(@javax.annotation.Nullable List<Schedulerv3Month> months) {
     this.months = months;
     return this;
   }
@@ -296,130 +312,130 @@ public class Schedulerv3Scheduler {
     return this;
   }
 
-   /**
+  /**
    * Month value.
    * @return months
-  **/
+   */
   @javax.annotation.Nullable
   public List<Schedulerv3Month> getMonths() {
     return months;
   }
 
-  public void setMonths(List<Schedulerv3Month> months) {
+  public void setMonths(@javax.annotation.Nullable List<Schedulerv3Month> months) {
     this.months = months;
   }
 
 
-  public Schedulerv3Scheduler neverEnd(Boolean neverEnd) {
+  public Schedulerv3Scheduler neverEnd(@javax.annotation.Nullable Boolean neverEnd) {
     this.neverEnd = neverEnd;
     return this;
   }
 
-   /**
+  /**
    * Never end schedule or not.
    * @return neverEnd
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getNeverEnd() {
     return neverEnd;
   }
 
-  public void setNeverEnd(Boolean neverEnd) {
+  public void setNeverEnd(@javax.annotation.Nullable Boolean neverEnd) {
     this.neverEnd = neverEnd;
   }
 
 
-  public Schedulerv3Scheduler repeat(Integer repeat) {
+  public Schedulerv3Scheduler repeat(@javax.annotation.Nullable Integer repeat) {
     this.repeat = repeat;
     return this;
   }
 
-   /**
+  /**
    * Combined with frequency to define how often to run the job. ie, if frequncy &#x3D;1 and repeat &#x3D;3 means run the job every 3 hours.
    * @return repeat
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getRepeat() {
     return repeat;
   }
 
-  public void setRepeat(Integer repeat) {
+  public void setRepeat(@javax.annotation.Nullable Integer repeat) {
     this.repeat = repeat;
   }
 
 
-  public Schedulerv3Scheduler repeatBegin(Schedulerv3RepeatBegin repeatBegin) {
+  public Schedulerv3Scheduler repeatBegin(@javax.annotation.Nullable Schedulerv3RepeatBegin repeatBegin) {
     this.repeatBegin = repeatBegin;
     return this;
   }
 
-   /**
+  /**
    * Get repeatBegin
    * @return repeatBegin
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3RepeatBegin getRepeatBegin() {
     return repeatBegin;
   }
 
-  public void setRepeatBegin(Schedulerv3RepeatBegin repeatBegin) {
+  public void setRepeatBegin(@javax.annotation.Nullable Schedulerv3RepeatBegin repeatBegin) {
     this.repeatBegin = repeatBegin;
   }
 
 
-  public Schedulerv3Scheduler repeatEnd(Schedulerv3RepeatEnd repeatEnd) {
+  public Schedulerv3Scheduler repeatEnd(@javax.annotation.Nullable Schedulerv3RepeatEnd repeatEnd) {
     this.repeatEnd = repeatEnd;
     return this;
   }
 
-   /**
+  /**
    * Get repeatEnd
    * @return repeatEnd
-  **/
+   */
   @javax.annotation.Nullable
   public Schedulerv3RepeatEnd getRepeatEnd() {
     return repeatEnd;
   }
 
-  public void setRepeatEnd(Schedulerv3RepeatEnd repeatEnd) {
+  public void setRepeatEnd(@javax.annotation.Nullable Schedulerv3RepeatEnd repeatEnd) {
     this.repeatEnd = repeatEnd;
   }
 
 
-  public Schedulerv3Scheduler repeatMinutes(Integer repeatMinutes) {
+  public Schedulerv3Scheduler repeatMinutes(@javax.annotation.Nullable Integer repeatMinutes) {
     this.repeatMinutes = repeatMinutes;
     return this;
   }
 
-   /**
+  /**
    * Combined with frequency to define how often to run the job. ie, if frequncy &#x3D;1 and repeat &#x3D;3 and repeat_minutes &#x3D; 4 means run the job every 3 hours within each hour, run every 4 minutes.
    * @return repeatMinutes
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getRepeatMinutes() {
     return repeatMinutes;
   }
 
-  public void setRepeatMinutes(Integer repeatMinutes) {
+  public void setRepeatMinutes(@javax.annotation.Nullable Integer repeatMinutes) {
     this.repeatMinutes = repeatMinutes;
   }
 
 
-  public Schedulerv3Scheduler runOnceNow(Boolean runOnceNow) {
+  public Schedulerv3Scheduler runOnceNow(@javax.annotation.Nullable Boolean runOnceNow) {
     this.runOnceNow = runOnceNow;
     return this;
   }
 
-   /**
+  /**
    * Optional: Flag if run once right away.
    * @return runOnceNow
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getRunOnceNow() {
     return runOnceNow;
   }
 
-  public void setRunOnceNow(Boolean runOnceNow) {
+  public void setRunOnceNow(@javax.annotation.Nullable Boolean runOnceNow) {
     this.runOnceNow = runOnceNow;
   }
 
@@ -496,37 +512,22 @@ public class Schedulerv3Scheduler {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("begin_schedule");
-    openapiFields.add("by_day_of_month");
-    openapiFields.add("day_of_month");
-    openapiFields.add("day_of_week");
-    openapiFields.add("day_order");
-    openapiFields.add("day_order_day_of_week");
-    openapiFields.add("end_schedule");
-    openapiFields.add("frequency");
-    openapiFields.add("months");
-    openapiFields.add("never_end");
-    openapiFields.add("repeat");
-    openapiFields.add("repeat_begin");
-    openapiFields.add("repeat_end");
-    openapiFields.add("repeat_minutes");
-    openapiFields.add("run_once_now");
+    openapiFields = new HashSet<String>(Arrays.asList("begin_schedule", "by_day_of_month", "day_of_month", "day_of_week", "day_order", "day_order_day_of_week", "end_schedule", "frequency", "months", "never_end", "repeat", "repeat_begin", "repeat_end", "repeat_minutes", "run_once_now"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Schedulerv3Scheduler
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Schedulerv3Scheduler
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Schedulerv3Scheduler.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Schedulerv3Scheduler is not found in the empty JSON string", Schedulerv3Scheduler.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Schedulerv3Scheduler is not found in the empty JSON string", Schedulerv3Scheduler.openapiRequiredFields.toString()));
         }
       }
 
@@ -534,16 +535,16 @@ public class Schedulerv3Scheduler {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Schedulerv3Scheduler.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Schedulerv3Scheduler` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Schedulerv3Scheduler` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("day_of_month") != null && !jsonObj.get("day_of_month").isJsonNull()) && !jsonObj.get("day_of_month").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `day_of_month` to be a primitive type in the JSON string but got `%s`", jsonObj.get("day_of_month").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `day_of_month` to be a primitive type in the JSON string but got `%s`", jsonObj.get("day_of_month").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("day_of_week") != null && !jsonObj.get("day_of_week").isJsonNull() && !jsonObj.get("day_of_week").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `day_of_week` to be an array in the JSON string but got `%s`", jsonObj.get("day_of_week").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `day_of_week` to be an array in the JSON string but got `%s`", jsonObj.get("day_of_week").toString()));
       }
       // validate the optional field `day_order`
       if (jsonObj.get("day_order") != null && !jsonObj.get("day_order").isJsonNull()) {
@@ -559,7 +560,7 @@ public class Schedulerv3Scheduler {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("months") != null && !jsonObj.get("months").isJsonNull() && !jsonObj.get("months").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `months` to be an array in the JSON string but got `%s`", jsonObj.get("months").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `months` to be an array in the JSON string but got `%s`", jsonObj.get("months").toString()));
       }
       // validate the optional field `repeat_begin`
       if (jsonObj.get("repeat_begin") != null && !jsonObj.get("repeat_begin").isJsonNull()) {
@@ -600,22 +601,22 @@ public class Schedulerv3Scheduler {
     }
   }
 
- /**
-  * Create an instance of Schedulerv3Scheduler given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Schedulerv3Scheduler
-  * @throws IOException if the JSON string is invalid with respect to Schedulerv3Scheduler
-  */
+  /**
+   * Create an instance of Schedulerv3Scheduler given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Schedulerv3Scheduler
+   * @throws IOException if the JSON string is invalid with respect to Schedulerv3Scheduler
+   */
   public static Schedulerv3Scheduler fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Schedulerv3Scheduler.class);
   }
 
- /**
-  * Convert an instance of Schedulerv3Scheduler to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Schedulerv3Scheduler to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -73,9 +73,9 @@ class Schedulerv3SearchScheduledTaskRunsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in runs (list)
         _items = []
         if self.runs:
-            for _item in self.runs:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_runs in self.runs:
+                if _item_runs:
+                    _items.append(_item_runs.to_dict())
             _dict['runs'] = _items
         return _dict
 

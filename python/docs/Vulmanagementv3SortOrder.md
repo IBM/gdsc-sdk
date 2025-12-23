@@ -2,10 +2,11 @@
 
 - ASC: Sort in ascending order.  - DESC: Sort in descending order.
 
-## Properties
+## Enum
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+* `ASC` (value: `'ASC'`)
+
+* `DESC` (value: `'DESC'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

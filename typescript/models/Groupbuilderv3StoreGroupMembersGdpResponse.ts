@@ -24,6 +24,8 @@ export class Groupbuilderv3StoreGroupMembersGdpResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "response",
@@ -45,4 +47,3 @@ export class Groupbuilderv3StoreGroupMembersGdpResponse {
     public constructor() {
     }
 }
-

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3SaveAssignedTagsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3SaveAssignedTagsRequest {
   public static final String SERIALIZED_NAME_TAGS_ASSIGNED = "tags_assigned";
   @SerializedName(SERIALIZED_NAME_TAGS_ASSIGNED)
+  @javax.annotation.Nullable
   private List<Assetsv3TagsAssigned> tagsAssigned = new ArrayList<>();
 
   public Assetsv3SaveAssignedTagsRequest() {
   }
 
-  public Assetsv3SaveAssignedTagsRequest tagsAssigned(List<Assetsv3TagsAssigned> tagsAssigned) {
+  public Assetsv3SaveAssignedTagsRequest tagsAssigned(@javax.annotation.Nullable List<Assetsv3TagsAssigned> tagsAssigned) {
     this.tagsAssigned = tagsAssigned;
     return this;
   }
@@ -74,16 +76,16 @@ public class Assetsv3SaveAssignedTagsRequest {
     return this;
   }
 
-   /**
+  /**
    * Get tagsAssigned
    * @return tagsAssigned
-  **/
+   */
   @javax.annotation.Nullable
   public List<Assetsv3TagsAssigned> getTagsAssigned() {
     return tagsAssigned;
   }
 
-  public void setTagsAssigned(List<Assetsv3TagsAssigned> tagsAssigned) {
+  public void setTagsAssigned(@javax.annotation.Nullable List<Assetsv3TagsAssigned> tagsAssigned) {
     this.tagsAssigned = tagsAssigned;
   }
 
@@ -132,23 +134,22 @@ public class Assetsv3SaveAssignedTagsRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("tags_assigned");
+    openapiFields = new HashSet<String>(Arrays.asList("tags_assigned"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3SaveAssignedTagsRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3SaveAssignedTagsRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3SaveAssignedTagsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3SaveAssignedTagsRequest is not found in the empty JSON string", Assetsv3SaveAssignedTagsRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3SaveAssignedTagsRequest is not found in the empty JSON string", Assetsv3SaveAssignedTagsRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Assetsv3SaveAssignedTagsRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3SaveAssignedTagsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3SaveAssignedTagsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3SaveAssignedTagsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Assetsv3SaveAssignedTagsRequest {
         if (jsonArraytagsAssigned != null) {
           // ensure the json data is an array
           if (!jsonObj.get("tags_assigned").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `tags_assigned` to be an array in the JSON string but got `%s`", jsonObj.get("tags_assigned").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tags_assigned` to be an array in the JSON string but got `%s`", jsonObj.get("tags_assigned").toString()));
           }
 
           // validate the optional field `tags_assigned` (array)
@@ -205,22 +206,22 @@ public class Assetsv3SaveAssignedTagsRequest {
     }
   }
 
- /**
-  * Create an instance of Assetsv3SaveAssignedTagsRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3SaveAssignedTagsRequest
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3SaveAssignedTagsRequest
-  */
+  /**
+   * Create an instance of Assetsv3SaveAssignedTagsRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3SaveAssignedTagsRequest
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3SaveAssignedTagsRequest
+   */
   public static Assetsv3SaveAssignedTagsRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3SaveAssignedTagsRequest.class);
   }
 
- /**
-  * Convert an instance of Assetsv3SaveAssignedTagsRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3SaveAssignedTagsRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

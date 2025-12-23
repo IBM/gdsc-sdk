@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,55 +41,58 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3CreateVariantRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3CreateVariantRequest {
   public static final String SERIALIZED_NAME_HEADER_ID = "header_id";
   @SerializedName(SERIALIZED_NAME_HEADER_ID)
+  @javax.annotation.Nullable
   private String headerId;
 
   public static final String SERIALIZED_NAME_RULES = "rules";
   @SerializedName(SERIALIZED_NAME_RULES)
+  @javax.annotation.Nullable
   private List<Reportsv3VariantRule> rules = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_VARIANT_NAME = "variant_name";
   @SerializedName(SERIALIZED_NAME_VARIANT_NAME)
+  @javax.annotation.Nullable
   private String variantName;
 
   public Reportsv3CreateVariantRequest() {
   }
 
-  public Reportsv3CreateVariantRequest headerId(String headerId) {
+  public Reportsv3CreateVariantRequest headerId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
     return this;
   }
 
-   /**
+  /**
    * Get headerId
    * @return headerId
-  **/
+   */
   @javax.annotation.Nullable
   public String getHeaderId() {
     return headerId;
   }
 
-  public void setHeaderId(String headerId) {
+  public void setHeaderId(@javax.annotation.Nullable String headerId) {
     this.headerId = headerId;
   }
 
 
-  public Reportsv3CreateVariantRequest rules(List<Reportsv3VariantRule> rules) {
+  public Reportsv3CreateVariantRequest rules(@javax.annotation.Nullable List<Reportsv3VariantRule> rules) {
     this.rules = rules;
     return this;
   }
@@ -101,35 +105,35 @@ public class Reportsv3CreateVariantRequest {
     return this;
   }
 
-   /**
+  /**
    * Get rules
    * @return rules
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsv3VariantRule> getRules() {
     return rules;
   }
 
-  public void setRules(List<Reportsv3VariantRule> rules) {
+  public void setRules(@javax.annotation.Nullable List<Reportsv3VariantRule> rules) {
     this.rules = rules;
   }
 
 
-  public Reportsv3CreateVariantRequest variantName(String variantName) {
+  public Reportsv3CreateVariantRequest variantName(@javax.annotation.Nullable String variantName) {
     this.variantName = variantName;
     return this;
   }
 
-   /**
+  /**
    * Get variantName
    * @return variantName
-  **/
+   */
   @javax.annotation.Nullable
   public String getVariantName() {
     return variantName;
   }
 
-  public void setVariantName(String variantName) {
+  public void setVariantName(@javax.annotation.Nullable String variantName) {
     this.variantName = variantName;
   }
 
@@ -182,25 +186,22 @@ public class Reportsv3CreateVariantRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("header_id");
-    openapiFields.add("rules");
-    openapiFields.add("variant_name");
+    openapiFields = new HashSet<String>(Arrays.asList("header_id", "rules", "variant_name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3CreateVariantRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3CreateVariantRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3CreateVariantRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3CreateVariantRequest is not found in the empty JSON string", Reportsv3CreateVariantRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3CreateVariantRequest is not found in the empty JSON string", Reportsv3CreateVariantRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,19 +209,19 @@ public class Reportsv3CreateVariantRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3CreateVariantRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3CreateVariantRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3CreateVariantRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("header_id") != null && !jsonObj.get("header_id").isJsonNull()) && !jsonObj.get("header_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `header_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("header_id").toString()));
       }
       if (jsonObj.get("rules") != null && !jsonObj.get("rules").isJsonNull()) {
         JsonArray jsonArrayrules = jsonObj.getAsJsonArray("rules");
         if (jsonArrayrules != null) {
           // ensure the json data is an array
           if (!jsonObj.get("rules").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `rules` to be an array in the JSON string but got `%s`", jsonObj.get("rules").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `rules` to be an array in the JSON string but got `%s`", jsonObj.get("rules").toString()));
           }
 
           // validate the optional field `rules` (array)
@@ -230,7 +231,7 @@ public class Reportsv3CreateVariantRequest {
         }
       }
       if ((jsonObj.get("variant_name") != null && !jsonObj.get("variant_name").isJsonNull()) && !jsonObj.get("variant_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `variant_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("variant_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `variant_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("variant_name").toString()));
       }
   }
 
@@ -263,22 +264,22 @@ public class Reportsv3CreateVariantRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3CreateVariantRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3CreateVariantRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3CreateVariantRequest
-  */
+  /**
+   * Create an instance of Reportsv3CreateVariantRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3CreateVariantRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3CreateVariantRequest
+   */
   public static Reportsv3CreateVariantRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3CreateVariantRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3CreateVariantRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3CreateVariantRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

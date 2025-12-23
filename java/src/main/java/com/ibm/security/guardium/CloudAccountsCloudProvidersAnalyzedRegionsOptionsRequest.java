@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest {
   public static final String SERIALIZED_NAME_CLOUD_PROVIDER = "cloudProvider";
   @SerializedName(SERIALIZED_NAME_CLOUD_PROVIDER)
+  @javax.annotation.Nonnull
   private CloudServiceProvider cloudProvider;
 
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
+  @javax.annotation.Nonnull
   private String region;
 
   public CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest() {
   }
 
-  public CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest cloudProvider(CloudServiceProvider cloudProvider) {
+  public CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest cloudProvider(@javax.annotation.Nonnull CloudServiceProvider cloudProvider) {
     this.cloudProvider = cloudProvider;
     return this;
   }
 
-   /**
+  /**
    * Get cloudProvider
    * @return cloudProvider
-  **/
+   */
   @javax.annotation.Nonnull
   public CloudServiceProvider getCloudProvider() {
     return cloudProvider;
   }
 
-  public void setCloudProvider(CloudServiceProvider cloudProvider) {
+  public void setCloudProvider(@javax.annotation.Nonnull CloudServiceProvider cloudProvider) {
     this.cloudProvider = cloudProvider;
   }
 
 
-  public CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest region(String region) {
+  public CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest region(@javax.annotation.Nonnull String region) {
     this.region = region;
     return this;
   }
 
-   /**
+  /**
    * Get region
    * @return region
-  **/
+   */
   @javax.annotation.Nonnull
   public String getRegion() {
     return region;
   }
 
-  public void setRegion(String region) {
+  public void setRegion(@javax.annotation.Nonnull String region) {
     this.region = region;
   }
 
@@ -147,26 +150,22 @@ public class CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cloudProvider");
-    openapiFields.add("region");
+    openapiFields = new HashSet<String>(Arrays.asList("cloudProvider", "region"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("cloudProvider");
-    openapiRequiredFields.add("region");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("cloudProvider", "region"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest is not found in the empty JSON string", CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest is not found in the empty JSON string", CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -174,21 +173,21 @@ public class CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `cloudProvider`
       CloudServiceProvider.validateJsonElement(jsonObj.get("cloudProvider"));
       if (!jsonObj.get("region").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
       }
   }
 
@@ -221,22 +220,22 @@ public class CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest {
     }
   }
 
- /**
-  * Create an instance of CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest
-  * @throws IOException if the JSON string is invalid with respect to CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest
-  */
+  /**
+   * Create an instance of CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest
+   * @throws IOException if the JSON string is invalid with respect to CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest
+   */
   public static CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest.class);
   }
 
- /**
-  * Convert an instance of CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CloudAccountsCloudProvidersAnalyzedRegionsOptionsRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **lead_feature_id** | **int** | Lead feature id. | [optional] 
 **observation_description** | **str** | Observation description. | [optional] 
 **observation_id** | **int** | Id. | [optional] 
-**observation_type** | [**Riskanalyticscontrollerv3ObservationType**](Riskanalyticscontrollerv3ObservationType.md) |  | [optional] 
+**observation_type** | [**Riskanalyticscontrollerv3ObservationType**](Riskanalyticscontrollerv3ObservationType.md) |  | [optional] [default to Riskanalyticscontrollerv3ObservationType.UNDEFINED_OBSERVATION_TYPE]
 **time** | **datetime** | Time - date in format YYYY-MM-DDTHH:mm:ssZ. | [optional] 
 
 ## Example

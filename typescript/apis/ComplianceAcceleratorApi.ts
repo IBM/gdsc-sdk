@@ -67,7 +67,7 @@ export class ComplianceAcceleratorApiRequestFactory extends BaseAPIRequestFactor
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -94,7 +94,10 @@ export class ComplianceAcceleratorApiRequestFactory extends BaseAPIRequestFactor
 
         // Query Params
         if (regulations !== undefined) {
-            requestContext.setQueryParam("regulations", ObjectSerializer.serialize(regulations, "Array<string>", ""));
+            const serializedParams = ObjectSerializer.serialize(regulations, "Array<string>", "");
+            for (const serializedParam of serializedParams) {
+                requestContext.appendQueryParam("regulations", serializedParam);
+            }
         }
 
         // Query Params
@@ -115,7 +118,7 @@ export class ComplianceAcceleratorApiRequestFactory extends BaseAPIRequestFactor
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -156,7 +159,7 @@ export class ComplianceAcceleratorApiRequestFactory extends BaseAPIRequestFactor
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -165,6 +168,8 @@ export class ComplianceAcceleratorApiRequestFactory extends BaseAPIRequestFactor
     }
 
     /**
+     * @deprecated
+     *
      * HydrateWorkspace - Hydrates specified objects within a workspace
      * @param complianceacceleratorv3HydrateComplianceWorkspacesRequest 
      */
@@ -208,7 +213,7 @@ export class ComplianceAcceleratorApiRequestFactory extends BaseAPIRequestFactor
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }
@@ -260,7 +265,7 @@ export class ComplianceAcceleratorApiRequestFactory extends BaseAPIRequestFactor
             await authMethod?.applySecurityAuthentication(requestContext);
         }
         
-        const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
+        const defaultAuth: SecurityAuthentication | undefined = _config?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
         }

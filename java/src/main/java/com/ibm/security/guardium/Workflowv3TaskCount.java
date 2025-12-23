@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Workflowv3TaskCount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3TaskCount {
   public static final String SERIALIZED_NAME_COUNTS = "counts";
   @SerializedName(SERIALIZED_NAME_COUNTS)
+  @javax.annotation.Nullable
   private List<Workflowv3StatusCount> counts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SCHEDULED_TASK_ID = "scheduled_task_id";
   @SerializedName(SERIALIZED_NAME_SCHEDULED_TASK_ID)
+  @javax.annotation.Nullable
   private String scheduledTaskId;
 
   public Workflowv3TaskCount() {
   }
 
-  public Workflowv3TaskCount counts(List<Workflowv3StatusCount> counts) {
+  public Workflowv3TaskCount counts(@javax.annotation.Nullable List<Workflowv3StatusCount> counts) {
     this.counts = counts;
     return this;
   }
@@ -78,35 +81,35 @@ public class Workflowv3TaskCount {
     return this;
   }
 
-   /**
+  /**
    * Get counts
    * @return counts
-  **/
+   */
   @javax.annotation.Nullable
   public List<Workflowv3StatusCount> getCounts() {
     return counts;
   }
 
-  public void setCounts(List<Workflowv3StatusCount> counts) {
+  public void setCounts(@javax.annotation.Nullable List<Workflowv3StatusCount> counts) {
     this.counts = counts;
   }
 
 
-  public Workflowv3TaskCount scheduledTaskId(String scheduledTaskId) {
+  public Workflowv3TaskCount scheduledTaskId(@javax.annotation.Nullable String scheduledTaskId) {
     this.scheduledTaskId = scheduledTaskId;
     return this;
   }
 
-   /**
+  /**
    * The task within the ScheduledJob.
    * @return scheduledTaskId
-  **/
+   */
   @javax.annotation.Nullable
   public String getScheduledTaskId() {
     return scheduledTaskId;
   }
 
-  public void setScheduledTaskId(String scheduledTaskId) {
+  public void setScheduledTaskId(@javax.annotation.Nullable String scheduledTaskId) {
     this.scheduledTaskId = scheduledTaskId;
   }
 
@@ -157,24 +160,22 @@ public class Workflowv3TaskCount {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("counts");
-    openapiFields.add("scheduled_task_id");
+    openapiFields = new HashSet<String>(Arrays.asList("counts", "scheduled_task_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3TaskCount
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3TaskCount
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3TaskCount.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3TaskCount is not found in the empty JSON string", Workflowv3TaskCount.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3TaskCount is not found in the empty JSON string", Workflowv3TaskCount.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Workflowv3TaskCount {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3TaskCount.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3TaskCount` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3TaskCount` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,7 +192,7 @@ public class Workflowv3TaskCount {
         if (jsonArraycounts != null) {
           // ensure the json data is an array
           if (!jsonObj.get("counts").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `counts` to be an array in the JSON string but got `%s`", jsonObj.get("counts").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `counts` to be an array in the JSON string but got `%s`", jsonObj.get("counts").toString()));
           }
 
           // validate the optional field `counts` (array)
@@ -201,7 +202,7 @@ public class Workflowv3TaskCount {
         }
       }
       if ((jsonObj.get("scheduled_task_id") != null && !jsonObj.get("scheduled_task_id").isJsonNull()) && !jsonObj.get("scheduled_task_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scheduled_task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_task_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `scheduled_task_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheduled_task_id").toString()));
       }
   }
 
@@ -234,22 +235,22 @@ public class Workflowv3TaskCount {
     }
   }
 
- /**
-  * Create an instance of Workflowv3TaskCount given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3TaskCount
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3TaskCount
-  */
+  /**
+   * Create an instance of Workflowv3TaskCount given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3TaskCount
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3TaskCount
+   */
   public static Workflowv3TaskCount fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3TaskCount.class);
   }
 
- /**
-  * Convert an instance of Workflowv3TaskCount to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3TaskCount to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

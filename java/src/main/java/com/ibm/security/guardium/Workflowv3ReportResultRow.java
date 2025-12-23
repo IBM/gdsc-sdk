@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,28 +40,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ReportResultRow - contains one row of data mapped to header key.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Workflowv3ReportResultRow {
   public static final String SERIALIZED_NAME_ROW = "row";
   @SerializedName(SERIALIZED_NAME_ROW)
+  @javax.annotation.Nullable
   private Map<String, String> row = new HashMap<>();
 
   public Workflowv3ReportResultRow() {
   }
 
-  public Workflowv3ReportResultRow row(Map<String, String> row) {
+  public Workflowv3ReportResultRow row(@javax.annotation.Nullable Map<String, String> row) {
     this.row = row;
     return this;
   }
@@ -73,16 +75,16 @@ public class Workflowv3ReportResultRow {
     return this;
   }
 
-   /**
+  /**
    * One row data from exported report csv file.
    * @return row
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getRow() {
     return row;
   }
 
-  public void setRow(Map<String, String> row) {
+  public void setRow(@javax.annotation.Nullable Map<String, String> row) {
     this.row = row;
   }
 
@@ -131,23 +133,22 @@ public class Workflowv3ReportResultRow {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("row");
+    openapiFields = new HashSet<String>(Arrays.asList("row"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Workflowv3ReportResultRow
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Workflowv3ReportResultRow
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Workflowv3ReportResultRow.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Workflowv3ReportResultRow is not found in the empty JSON string", Workflowv3ReportResultRow.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Workflowv3ReportResultRow is not found in the empty JSON string", Workflowv3ReportResultRow.openapiRequiredFields.toString()));
         }
       }
 
@@ -155,7 +156,7 @@ public class Workflowv3ReportResultRow {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Workflowv3ReportResultRow.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Workflowv3ReportResultRow` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Workflowv3ReportResultRow` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -190,22 +191,22 @@ public class Workflowv3ReportResultRow {
     }
   }
 
- /**
-  * Create an instance of Workflowv3ReportResultRow given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Workflowv3ReportResultRow
-  * @throws IOException if the JSON string is invalid with respect to Workflowv3ReportResultRow
-  */
+  /**
+   * Create an instance of Workflowv3ReportResultRow given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Workflowv3ReportResultRow
+   * @throws IOException if the JSON string is invalid with respect to Workflowv3ReportResultRow
+   */
   public static Workflowv3ReportResultRow fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Workflowv3ReportResultRow.class);
   }
 
- /**
-  * Convert an instance of Workflowv3ReportResultRow to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Workflowv3ReportResultRow to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

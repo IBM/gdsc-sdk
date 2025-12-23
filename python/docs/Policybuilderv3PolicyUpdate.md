@@ -7,7 +7,7 @@ Create and update policy request message.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activation_status** | **int** | Activation status identifier: 1001 -&gt; install with no issues, 1002-&gt; installed with issues, 1003 -&gt; not installed. | [optional] 
-**control_flow** | [**Policybuilderv3ControlFlow**](Policybuilderv3ControlFlow.md) |  | [optional] 
+**control_flow** | [**Policybuilderv3ControlFlow**](Policybuilderv3ControlFlow.md) |  | [optional] [default to Policybuilderv3ControlFlow.STANDARD]
 **deleted_rule_ids** | **List[str]** | The rule ids which are supposed to be deleted on a update policy request. | [optional] 
 **installed_flag** | **bool** | Flag to indicate whether policy is installed or not. | [optional] 
 **installed_order** | **int** | Variable to indicate the order of the installed policy. | [optional] 
@@ -16,8 +16,8 @@ Name | Type | Description | Notes
 **log_flat** | **bool** | Flag to indicate whether the policy has log flat enabled or not. | [optional] 
 **policy_id** | **str** | Policy Id. | [optional] 
 **policy_name** | **str** | Policy Name. | [optional] 
-**policy_type** | [**Policybuilderv3PolicyType**](Policybuilderv3PolicyType.md) |  | [optional] 
-**product_id** | [**Policybuilderv3ProductType**](Policybuilderv3ProductType.md) |  | [optional] 
+**policy_type** | [**Policybuilderv3PolicyType**](Policybuilderv3PolicyType.md) |  | [optional] [default to Policybuilderv3PolicyType.DATA_POLICY]
+**product_id** | [**Policybuilderv3ProductType**](Policybuilderv3ProductType.md) |  | [optional] [default to Policybuilderv3ProductType.NO_PRODUCT]
 **rules** | [**List[Policybuilderv3Rule]**](Policybuilderv3Rule.md) |  | [optional] 
 **rules_on_flat** | **bool** | Flag to indicate whether the policy has rules on flat enabled or not. | [optional] 
 **template** | **bool** | Flag to indicate whether the policy is a template policy or not. | [optional] 

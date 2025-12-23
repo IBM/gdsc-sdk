@@ -22,6 +22,8 @@ export class Qsdataloaderv3QSfileValidatorExternalParamRequest {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "applicationFileName",
@@ -67,4 +69,3 @@ export class Qsdataloaderv3QSfileValidatorExternalParamRequest {
     public constructor() {
     }
 }
-

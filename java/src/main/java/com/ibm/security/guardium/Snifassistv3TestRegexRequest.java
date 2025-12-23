@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * TestRegexRequest defines the message structure for regex test request.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Snifassistv3TestRegexRequest {
   public static final String SERIALIZED_NAME_REGEX = "regex";
   @SerializedName(SERIALIZED_NAME_REGEX)
+  @javax.annotation.Nullable
   private String regex;
 
   public static final String SERIALIZED_NAME_TENANT_ID = "tenant_id";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
+  @javax.annotation.Nullable
   private String tenantId;
 
   public static final String SERIALIZED_NAME_TEXT = "text";
   @SerializedName(SERIALIZED_NAME_TEXT)
+  @javax.annotation.Nullable
   private String text;
 
   public Snifassistv3TestRegexRequest() {
   }
 
-  public Snifassistv3TestRegexRequest regex(String regex) {
+  public Snifassistv3TestRegexRequest regex(@javax.annotation.Nullable String regex) {
     this.regex = regex;
     return this;
   }
 
-   /**
+  /**
    * Provide a regex pattern.
    * @return regex
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegex() {
     return regex;
   }
 
-  public void setRegex(String regex) {
+  public void setRegex(@javax.annotation.Nullable String regex) {
     this.regex = regex;
   }
 
 
-  public Snifassistv3TestRegexRequest tenantId(String tenantId) {
+  public Snifassistv3TestRegexRequest tenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
     return this;
   }
 
-   /**
+  /**
    * Provide tenant_id.
    * @return tenantId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTenantId() {
     return tenantId;
   }
 
-  public void setTenantId(String tenantId) {
+  public void setTenantId(@javax.annotation.Nullable String tenantId) {
     this.tenantId = tenantId;
   }
 
 
-  public Snifassistv3TestRegexRequest text(String text) {
+  public Snifassistv3TestRegexRequest text(@javax.annotation.Nullable String text) {
     this.text = text;
     return this;
   }
 
-   /**
+  /**
    * Provide a text string for matching the regex pattern.
    * @return text
-  **/
+   */
   @javax.annotation.Nullable
   public String getText() {
     return text;
   }
 
-  public void setText(String text) {
+  public void setText(@javax.annotation.Nullable String text) {
     this.text = text;
   }
 
@@ -171,25 +175,22 @@ public class Snifassistv3TestRegexRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("regex");
-    openapiFields.add("tenant_id");
-    openapiFields.add("text");
+    openapiFields = new HashSet<String>(Arrays.asList("regex", "tenant_id", "text"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Snifassistv3TestRegexRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Snifassistv3TestRegexRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Snifassistv3TestRegexRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Snifassistv3TestRegexRequest is not found in the empty JSON string", Snifassistv3TestRegexRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Snifassistv3TestRegexRequest is not found in the empty JSON string", Snifassistv3TestRegexRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,18 +198,18 @@ public class Snifassistv3TestRegexRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Snifassistv3TestRegexRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Snifassistv3TestRegexRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Snifassistv3TestRegexRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("regex") != null && !jsonObj.get("regex").isJsonNull()) && !jsonObj.get("regex").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `regex` to be a primitive type in the JSON string but got `%s`", jsonObj.get("regex").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `regex` to be a primitive type in the JSON string but got `%s`", jsonObj.get("regex").toString()));
       }
       if ((jsonObj.get("tenant_id") != null && !jsonObj.get("tenant_id").isJsonNull()) && !jsonObj.get("tenant_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tenant_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenant_id").toString()));
       }
       if ((jsonObj.get("text") != null && !jsonObj.get("text").isJsonNull()) && !jsonObj.get("text").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("text").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("text").toString()));
       }
   }
 
@@ -241,22 +242,22 @@ public class Snifassistv3TestRegexRequest {
     }
   }
 
- /**
-  * Create an instance of Snifassistv3TestRegexRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Snifassistv3TestRegexRequest
-  * @throws IOException if the JSON string is invalid with respect to Snifassistv3TestRegexRequest
-  */
+  /**
+   * Create an instance of Snifassistv3TestRegexRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Snifassistv3TestRegexRequest
+   * @throws IOException if the JSON string is invalid with respect to Snifassistv3TestRegexRequest
+   */
   public static Snifassistv3TestRegexRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Snifassistv3TestRegexRequest.class);
   }
 
- /**
-  * Convert an instance of Snifassistv3TestRegexRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Snifassistv3TestRegexRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

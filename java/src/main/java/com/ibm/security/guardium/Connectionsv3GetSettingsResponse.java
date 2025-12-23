@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Connectionsv3GetSettingsResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Connectionsv3GetSettingsResponse {
   public static final String SERIALIZED_NAME_SETTINGS = "settings";
   @SerializedName(SERIALIZED_NAME_SETTINGS)
+  @javax.annotation.Nullable
   private List<Connectionsv3ConnectorSetting> settings = new ArrayList<>();
 
   public Connectionsv3GetSettingsResponse() {
   }
 
-  public Connectionsv3GetSettingsResponse settings(List<Connectionsv3ConnectorSetting> settings) {
+  public Connectionsv3GetSettingsResponse settings(@javax.annotation.Nullable List<Connectionsv3ConnectorSetting> settings) {
     this.settings = settings;
     return this;
   }
@@ -74,16 +76,16 @@ public class Connectionsv3GetSettingsResponse {
     return this;
   }
 
-   /**
+  /**
    * Get settings
    * @return settings
-  **/
+   */
   @javax.annotation.Nullable
   public List<Connectionsv3ConnectorSetting> getSettings() {
     return settings;
   }
 
-  public void setSettings(List<Connectionsv3ConnectorSetting> settings) {
+  public void setSettings(@javax.annotation.Nullable List<Connectionsv3ConnectorSetting> settings) {
     this.settings = settings;
   }
 
@@ -132,23 +134,22 @@ public class Connectionsv3GetSettingsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("settings");
+    openapiFields = new HashSet<String>(Arrays.asList("settings"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Connectionsv3GetSettingsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Connectionsv3GetSettingsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Connectionsv3GetSettingsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Connectionsv3GetSettingsResponse is not found in the empty JSON string", Connectionsv3GetSettingsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Connectionsv3GetSettingsResponse is not found in the empty JSON string", Connectionsv3GetSettingsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Connectionsv3GetSettingsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Connectionsv3GetSettingsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Connectionsv3GetSettingsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Connectionsv3GetSettingsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Connectionsv3GetSettingsResponse {
         if (jsonArraysettings != null) {
           // ensure the json data is an array
           if (!jsonObj.get("settings").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `settings` to be an array in the JSON string but got `%s`", jsonObj.get("settings").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `settings` to be an array in the JSON string but got `%s`", jsonObj.get("settings").toString()));
           }
 
           // validate the optional field `settings` (array)
@@ -205,22 +206,22 @@ public class Connectionsv3GetSettingsResponse {
     }
   }
 
- /**
-  * Create an instance of Connectionsv3GetSettingsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Connectionsv3GetSettingsResponse
-  * @throws IOException if the JSON string is invalid with respect to Connectionsv3GetSettingsResponse
-  */
+  /**
+   * Create an instance of Connectionsv3GetSettingsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Connectionsv3GetSettingsResponse
+   * @throws IOException if the JSON string is invalid with respect to Connectionsv3GetSettingsResponse
+   */
   public static Connectionsv3GetSettingsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Connectionsv3GetSettingsResponse.class);
   }
 
- /**
-  * Convert an instance of Connectionsv3GetSettingsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Connectionsv3GetSettingsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

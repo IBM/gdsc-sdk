@@ -6,7 +6,7 @@ Excluded item.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**excluded_item_type** | [**Riskanalyticscontrollerv3ExcludedItemType**](Riskanalyticscontrollerv3ExcludedItemType.md) |  | [optional] 
+**excluded_item_type** | [**Riskanalyticscontrollerv3ExcludedItemType**](Riskanalyticscontrollerv3ExcludedItemType.md) |  | [optional] [default to Riskanalyticscontrollerv3ExcludedItemType.UNDEFINED_EXCLUDED_ITEM_TYPE]
 **key** | **str** | Excluded key. | [optional] 
 
 ## Example

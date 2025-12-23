@@ -32,11 +32,11 @@ class Riskanalyticsenginev3Feature(BaseModel):
     is_observation: Optional[StrictBool] = Field(default=None, description="Is observation flag to let the score service update it if need it.")
     is_zero: Optional[StrictBool] = Field(default=None, description="If value is zero - there is no value or original value so this flag will be true.")
     key: Optional[StrictStr] = Field(default=None, description="Feature key.")
-    method_type: Optional[Riskanalyticsenginev3MethodType] = None
+    method_type: Optional[Riskanalyticsenginev3MethodType] = Riskanalyticsenginev3MethodType.UNDEFINED_METHOD_TYPE
     original_value: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Feature value before normalization.")
     score: Optional[StrictInt] = Field(default=None, description="The feature score that was defined by riskApp.")
     sequence: Optional[StrictInt] = Field(default=None, description="Sequence.")
-    severity_level: Optional[Riskanalyticsenginev3SeverityLevel] = None
+    severity_level: Optional[Riskanalyticsenginev3SeverityLevel] = Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL
     value: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Feature value.")
     __properties: ClassVar[List[str]] = ["feature_nls", "is_observation", "is_zero", "key", "method_type", "original_value", "score", "sequence", "severity_level", "value"]
 
@@ -95,11 +95,11 @@ class Riskanalyticsenginev3Feature(BaseModel):
             "is_observation": obj.get("is_observation"),
             "is_zero": obj.get("is_zero"),
             "key": obj.get("key"),
-            "method_type": obj.get("method_type"),
+            "method_type": obj.get("method_type") if obj.get("method_type") is not None else Riskanalyticsenginev3MethodType.UNDEFINED_METHOD_TYPE,
             "original_value": obj.get("original_value"),
             "score": obj.get("score"),
             "sequence": obj.get("sequence"),
-            "severity_level": obj.get("severity_level"),
+            "severity_level": obj.get("severity_level") if obj.get("severity_level") is not None else Riskanalyticsenginev3SeverityLevel.UNDEFINED_SEVERITY_LEVEL,
             "value": obj.get("value")
         })
         return _obj

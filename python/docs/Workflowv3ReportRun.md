@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **scheduled_job_id** | **str** | The ScheduledJob identifier. | [optional] 
 **scheduled_job_name** | **str** | The ScheduledJob name identifier. | [optional] 
 **scheduled_task_id** | **str** | The task within the ScheduledJob. | [optional] 
-**scheduled_task_type** | [**Schedulerv3TaskType**](Schedulerv3TaskType.md) |  | [optional] 
+**scheduled_task_type** | [**Schedulerv3TaskType**](Schedulerv3TaskType.md) |  | [optional] [default to Schedulerv3TaskType.UNDEFINED_JOBTYPE]
 **status** | **int** | Job status. | [optional] 
 
 ## Example

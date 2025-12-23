@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,51 +42,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Compliance data.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Complianceacceleratorv3ComplianceInfo {
   public static final String SERIALIZED_NAME_OPTIONS = "options";
   @SerializedName(SERIALIZED_NAME_OPTIONS)
+  @javax.annotation.Nullable
   private Complianceacceleratorv3Options options;
 
   public static final String SERIALIZED_NAME_WORKSPACES = "workspaces";
   @SerializedName(SERIALIZED_NAME_WORKSPACES)
+  @javax.annotation.Nullable
   private Map<String, Complianceacceleratorv3Workspace> workspaces = new HashMap<>();
 
   public Complianceacceleratorv3ComplianceInfo() {
   }
 
-  public Complianceacceleratorv3ComplianceInfo options(Complianceacceleratorv3Options options) {
+  public Complianceacceleratorv3ComplianceInfo options(@javax.annotation.Nullable Complianceacceleratorv3Options options) {
     this.options = options;
     return this;
   }
 
-   /**
+  /**
    * Get options
    * @return options
-  **/
+   */
   @javax.annotation.Nullable
   public Complianceacceleratorv3Options getOptions() {
     return options;
   }
 
-  public void setOptions(Complianceacceleratorv3Options options) {
+  public void setOptions(@javax.annotation.Nullable Complianceacceleratorv3Options options) {
     this.options = options;
   }
 
 
-  public Complianceacceleratorv3ComplianceInfo workspaces(Map<String, Complianceacceleratorv3Workspace> workspaces) {
+  public Complianceacceleratorv3ComplianceInfo workspaces(@javax.annotation.Nullable Map<String, Complianceacceleratorv3Workspace> workspaces) {
     this.workspaces = workspaces;
     return this;
   }
@@ -98,16 +101,16 @@ public class Complianceacceleratorv3ComplianceInfo {
     return this;
   }
 
-   /**
+  /**
    * Get workspaces
    * @return workspaces
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Complianceacceleratorv3Workspace> getWorkspaces() {
     return workspaces;
   }
 
-  public void setWorkspaces(Map<String, Complianceacceleratorv3Workspace> workspaces) {
+  public void setWorkspaces(@javax.annotation.Nullable Map<String, Complianceacceleratorv3Workspace> workspaces) {
     this.workspaces = workspaces;
   }
 
@@ -158,24 +161,22 @@ public class Complianceacceleratorv3ComplianceInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("options");
-    openapiFields.add("workspaces");
+    openapiFields = new HashSet<String>(Arrays.asList("options", "workspaces"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3ComplianceInfo
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3ComplianceInfo
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Complianceacceleratorv3ComplianceInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Complianceacceleratorv3ComplianceInfo is not found in the empty JSON string", Complianceacceleratorv3ComplianceInfo.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Complianceacceleratorv3ComplianceInfo is not found in the empty JSON string", Complianceacceleratorv3ComplianceInfo.openapiRequiredFields.toString()));
         }
       }
 
@@ -183,7 +184,7 @@ public class Complianceacceleratorv3ComplianceInfo {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Complianceacceleratorv3ComplianceInfo.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3ComplianceInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3ComplianceInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -222,22 +223,22 @@ public class Complianceacceleratorv3ComplianceInfo {
     }
   }
 
- /**
-  * Create an instance of Complianceacceleratorv3ComplianceInfo given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Complianceacceleratorv3ComplianceInfo
-  * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3ComplianceInfo
-  */
+  /**
+   * Create an instance of Complianceacceleratorv3ComplianceInfo given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Complianceacceleratorv3ComplianceInfo
+   * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3ComplianceInfo
+   */
   public static Complianceacceleratorv3ComplianceInfo fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Complianceacceleratorv3ComplianceInfo.class);
   }
 
- /**
-  * Convert an instance of Complianceacceleratorv3ComplianceInfo to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Complianceacceleratorv3ComplianceInfo to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

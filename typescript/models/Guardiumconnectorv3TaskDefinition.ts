@@ -32,6 +32,8 @@ export class Guardiumconnectorv3TaskDefinition {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "taskId",
@@ -59,4 +61,3 @@ export class Guardiumconnectorv3TaskDefinition {
     public constructor() {
     }
 }
-

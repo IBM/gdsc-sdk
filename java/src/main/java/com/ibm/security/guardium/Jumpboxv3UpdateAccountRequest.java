@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,71 +41,78 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * UpdateAccountRequest message for PUT v3/accounts/{account_id} api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Jumpboxv3UpdateAccountRequest {
   public static final String SERIALIZED_NAME_ACCOUNT_ID = "account_id";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_ID)
+  @javax.annotation.Nullable
   private String accountId;
 
   public static final String SERIALIZED_NAME_EXTERNAL_METADATA = "external_metadata";
   @SerializedName(SERIALIZED_NAME_EXTERNAL_METADATA)
+  @javax.annotation.Nullable
   private Map<String, Tenantuserv3ExternalMetadata> externalMetadata = new HashMap<>();
 
   public static final String SERIALIZED_NAME_IS_INACTIVE = "is_inactive";
   @SerializedName(SERIALIZED_NAME_IS_INACTIVE)
+  @javax.annotation.Nullable
   private Boolean isInactive;
 
   public static final String SERIALIZED_NAME_IS_READY = "is_ready";
   @SerializedName(SERIALIZED_NAME_IS_READY)
+  @javax.annotation.Nullable
   private Boolean isReady;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PART_NUMBER = "part_number";
   @SerializedName(SERIALIZED_NAME_PART_NUMBER)
+  @javax.annotation.Nullable
   private String partNumber;
 
   public static final String SERIALIZED_NAME_UID = "uid";
   @SerializedName(SERIALIZED_NAME_UID)
+  @javax.annotation.Nullable
   private String uid;
 
   public Jumpboxv3UpdateAccountRequest() {
   }
 
-  public Jumpboxv3UpdateAccountRequest accountId(String accountId) {
+  public Jumpboxv3UpdateAccountRequest accountId(@javax.annotation.Nullable String accountId) {
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * Account id.
    * @return accountId
-  **/
+   */
   @javax.annotation.Nullable
   public String getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(String accountId) {
+  public void setAccountId(@javax.annotation.Nullable String accountId) {
     this.accountId = accountId;
   }
 
 
-  public Jumpboxv3UpdateAccountRequest externalMetadata(Map<String, Tenantuserv3ExternalMetadata> externalMetadata) {
+  public Jumpboxv3UpdateAccountRequest externalMetadata(@javax.annotation.Nullable Map<String, Tenantuserv3ExternalMetadata> externalMetadata) {
     this.externalMetadata = externalMetadata;
     return this;
   }
@@ -117,111 +125,111 @@ public class Jumpboxv3UpdateAccountRequest {
     return this;
   }
 
-   /**
+  /**
    * External metadata.
    * @return externalMetadata
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Tenantuserv3ExternalMetadata> getExternalMetadata() {
     return externalMetadata;
   }
 
-  public void setExternalMetadata(Map<String, Tenantuserv3ExternalMetadata> externalMetadata) {
+  public void setExternalMetadata(@javax.annotation.Nullable Map<String, Tenantuserv3ExternalMetadata> externalMetadata) {
     this.externalMetadata = externalMetadata;
   }
 
 
-  public Jumpboxv3UpdateAccountRequest isInactive(Boolean isInactive) {
+  public Jumpboxv3UpdateAccountRequest isInactive(@javax.annotation.Nullable Boolean isInactive) {
     this.isInactive = isInactive;
     return this;
   }
 
-   /**
+  /**
    * Is inactive.
    * @return isInactive
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsInactive() {
     return isInactive;
   }
 
-  public void setIsInactive(Boolean isInactive) {
+  public void setIsInactive(@javax.annotation.Nullable Boolean isInactive) {
     this.isInactive = isInactive;
   }
 
 
-  public Jumpboxv3UpdateAccountRequest isReady(Boolean isReady) {
+  public Jumpboxv3UpdateAccountRequest isReady(@javax.annotation.Nullable Boolean isReady) {
     this.isReady = isReady;
     return this;
   }
 
-   /**
+  /**
    * Is ready.
    * @return isReady
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsReady() {
     return isReady;
   }
 
-  public void setIsReady(Boolean isReady) {
+  public void setIsReady(@javax.annotation.Nullable Boolean isReady) {
     this.isReady = isReady;
   }
 
 
-  public Jumpboxv3UpdateAccountRequest name(String name) {
+  public Jumpboxv3UpdateAccountRequest name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Jumpboxv3UpdateAccountRequest partNumber(String partNumber) {
+  public Jumpboxv3UpdateAccountRequest partNumber(@javax.annotation.Nullable String partNumber) {
     this.partNumber = partNumber;
     return this;
   }
 
-   /**
+  /**
    * Part number.
    * @return partNumber
-  **/
+   */
   @javax.annotation.Nullable
   public String getPartNumber() {
     return partNumber;
   }
 
-  public void setPartNumber(String partNumber) {
+  public void setPartNumber(@javax.annotation.Nullable String partNumber) {
     this.partNumber = partNumber;
   }
 
 
-  public Jumpboxv3UpdateAccountRequest uid(String uid) {
+  public Jumpboxv3UpdateAccountRequest uid(@javax.annotation.Nullable String uid) {
     this.uid = uid;
     return this;
   }
 
-   /**
+  /**
    * Email.
    * @return uid
-  **/
+   */
   @javax.annotation.Nullable
   public String getUid() {
     return uid;
   }
 
-  public void setUid(String uid) {
+  public void setUid(@javax.annotation.Nullable String uid) {
     this.uid = uid;
   }
 
@@ -282,29 +290,22 @@ public class Jumpboxv3UpdateAccountRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("account_id");
-    openapiFields.add("external_metadata");
-    openapiFields.add("is_inactive");
-    openapiFields.add("is_ready");
-    openapiFields.add("name");
-    openapiFields.add("part_number");
-    openapiFields.add("uid");
+    openapiFields = new HashSet<String>(Arrays.asList("account_id", "external_metadata", "is_inactive", "is_ready", "name", "part_number", "uid"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3UpdateAccountRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3UpdateAccountRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Jumpboxv3UpdateAccountRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Jumpboxv3UpdateAccountRequest is not found in the empty JSON string", Jumpboxv3UpdateAccountRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Jumpboxv3UpdateAccountRequest is not found in the empty JSON string", Jumpboxv3UpdateAccountRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -312,21 +313,21 @@ public class Jumpboxv3UpdateAccountRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Jumpboxv3UpdateAccountRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Jumpboxv3UpdateAccountRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Jumpboxv3UpdateAccountRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("account_id") != null && !jsonObj.get("account_id").isJsonNull()) && !jsonObj.get("account_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `account_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("account_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `account_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("account_id").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("part_number") != null && !jsonObj.get("part_number").isJsonNull()) && !jsonObj.get("part_number").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `part_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("part_number").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `part_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("part_number").toString()));
       }
       if ((jsonObj.get("uid") != null && !jsonObj.get("uid").isJsonNull()) && !jsonObj.get("uid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uid").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `uid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uid").toString()));
       }
   }
 
@@ -359,22 +360,22 @@ public class Jumpboxv3UpdateAccountRequest {
     }
   }
 
- /**
-  * Create an instance of Jumpboxv3UpdateAccountRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Jumpboxv3UpdateAccountRequest
-  * @throws IOException if the JSON string is invalid with respect to Jumpboxv3UpdateAccountRequest
-  */
+  /**
+   * Create an instance of Jumpboxv3UpdateAccountRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Jumpboxv3UpdateAccountRequest
+   * @throws IOException if the JSON string is invalid with respect to Jumpboxv3UpdateAccountRequest
+   */
   public static Jumpboxv3UpdateAccountRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Jumpboxv3UpdateAccountRequest.class);
   }
 
- /**
-  * Convert an instance of Jumpboxv3UpdateAccountRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Jumpboxv3UpdateAccountRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

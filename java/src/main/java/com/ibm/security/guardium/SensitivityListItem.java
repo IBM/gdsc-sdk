@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,203 +38,211 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * SensitivityListItem
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class SensitivityListItem {
   public static final String SERIALIZED_NAME_SENSITIVITY_ID = "sensitivityId";
   @SerializedName(SERIALIZED_NAME_SENSITIVITY_ID)
+  @javax.annotation.Nonnull
   private String sensitivityId;
 
   public static final String SERIALIZED_NAME_TAG = "tag";
   @SerializedName(SERIALIZED_NAME_TAG)
+  @javax.annotation.Nonnull
   private String tag;
 
   public static final String SERIALIZED_NAME_QUERY = "query";
   @SerializedName(SERIALIZED_NAME_QUERY)
+  @javax.annotation.Nonnull
   private String query;
 
   public static final String SERIALIZED_NAME_RESOURCE_ID = "resourceId";
   @SerializedName(SERIALIZED_NAME_RESOURCE_ID)
+  @javax.annotation.Nonnull
   private String resourceId;
 
   public static final String SERIALIZED_NAME_QUARANTINE_BUCKET_LINK = "quarantineBucketLink";
   @SerializedName(SERIALIZED_NAME_QUARANTINE_BUCKET_LINK)
+  @javax.annotation.Nonnull
   private String quarantineBucketLink;
 
   public static final String SERIALIZED_NAME_DATA_STORE_ID = "dataStoreId";
   @SerializedName(SERIALIZED_NAME_DATA_STORE_ID)
+  @javax.annotation.Nonnull
   private String dataStoreId;
 
   public static final String SERIALIZED_NAME_LAST_SEEN = "lastSeen";
   @SerializedName(SERIALIZED_NAME_LAST_SEEN)
+  @javax.annotation.Nonnull
   private String lastSeen;
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
   @SerializedName(SERIALIZED_NAME_CATEGORY)
+  @javax.annotation.Nonnull
   private String category;
 
   public SensitivityListItem() {
   }
 
-  public SensitivityListItem sensitivityId(String sensitivityId) {
+  public SensitivityListItem sensitivityId(@javax.annotation.Nonnull String sensitivityId) {
     this.sensitivityId = sensitivityId;
     return this;
   }
 
-   /**
+  /**
    * Get sensitivityId
    * @return sensitivityId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getSensitivityId() {
     return sensitivityId;
   }
 
-  public void setSensitivityId(String sensitivityId) {
+  public void setSensitivityId(@javax.annotation.Nonnull String sensitivityId) {
     this.sensitivityId = sensitivityId;
   }
 
 
-  public SensitivityListItem tag(String tag) {
+  public SensitivityListItem tag(@javax.annotation.Nonnull String tag) {
     this.tag = tag;
     return this;
   }
 
-   /**
+  /**
    * Get tag
    * @return tag
-  **/
+   */
   @javax.annotation.Nonnull
   public String getTag() {
     return tag;
   }
 
-  public void setTag(String tag) {
+  public void setTag(@javax.annotation.Nonnull String tag) {
     this.tag = tag;
   }
 
 
-  public SensitivityListItem query(String query) {
+  public SensitivityListItem query(@javax.annotation.Nonnull String query) {
     this.query = query;
     return this;
   }
 
-   /**
+  /**
    * Get query
    * @return query
-  **/
+   */
   @javax.annotation.Nonnull
   public String getQuery() {
     return query;
   }
 
-  public void setQuery(String query) {
+  public void setQuery(@javax.annotation.Nonnull String query) {
     this.query = query;
   }
 
 
-  public SensitivityListItem resourceId(String resourceId) {
+  public SensitivityListItem resourceId(@javax.annotation.Nonnull String resourceId) {
     this.resourceId = resourceId;
     return this;
   }
 
-   /**
+  /**
    * Get resourceId
    * @return resourceId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getResourceId() {
     return resourceId;
   }
 
-  public void setResourceId(String resourceId) {
+  public void setResourceId(@javax.annotation.Nonnull String resourceId) {
     this.resourceId = resourceId;
   }
 
 
-  public SensitivityListItem quarantineBucketLink(String quarantineBucketLink) {
+  public SensitivityListItem quarantineBucketLink(@javax.annotation.Nonnull String quarantineBucketLink) {
     this.quarantineBucketLink = quarantineBucketLink;
     return this;
   }
 
-   /**
+  /**
    * Get quarantineBucketLink
    * @return quarantineBucketLink
-  **/
+   */
   @javax.annotation.Nonnull
   public String getQuarantineBucketLink() {
     return quarantineBucketLink;
   }
 
-  public void setQuarantineBucketLink(String quarantineBucketLink) {
+  public void setQuarantineBucketLink(@javax.annotation.Nonnull String quarantineBucketLink) {
     this.quarantineBucketLink = quarantineBucketLink;
   }
 
 
-  public SensitivityListItem dataStoreId(String dataStoreId) {
+  public SensitivityListItem dataStoreId(@javax.annotation.Nonnull String dataStoreId) {
     this.dataStoreId = dataStoreId;
     return this;
   }
 
-   /**
+  /**
    * Get dataStoreId
    * @return dataStoreId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDataStoreId() {
     return dataStoreId;
   }
 
-  public void setDataStoreId(String dataStoreId) {
+  public void setDataStoreId(@javax.annotation.Nonnull String dataStoreId) {
     this.dataStoreId = dataStoreId;
   }
 
 
-  public SensitivityListItem lastSeen(String lastSeen) {
+  public SensitivityListItem lastSeen(@javax.annotation.Nonnull String lastSeen) {
     this.lastSeen = lastSeen;
     return this;
   }
 
-   /**
+  /**
    * Get lastSeen
    * @return lastSeen
-  **/
+   */
   @javax.annotation.Nonnull
   public String getLastSeen() {
     return lastSeen;
   }
 
-  public void setLastSeen(String lastSeen) {
+  public void setLastSeen(@javax.annotation.Nonnull String lastSeen) {
     this.lastSeen = lastSeen;
   }
 
 
-  public SensitivityListItem category(String category) {
+  public SensitivityListItem category(@javax.annotation.Nonnull String category) {
     this.category = category;
     return this;
   }
 
-   /**
+  /**
    * Get category
    * @return category
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCategory() {
     return category;
   }
 
-  public void setCategory(String category) {
+  public void setCategory(@javax.annotation.Nonnull String category) {
     this.category = category;
   }
 
@@ -296,38 +305,22 @@ public class SensitivityListItem {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("sensitivityId");
-    openapiFields.add("tag");
-    openapiFields.add("query");
-    openapiFields.add("resourceId");
-    openapiFields.add("quarantineBucketLink");
-    openapiFields.add("dataStoreId");
-    openapiFields.add("lastSeen");
-    openapiFields.add("category");
+    openapiFields = new HashSet<String>(Arrays.asList("sensitivityId", "tag", "query", "resourceId", "quarantineBucketLink", "dataStoreId", "lastSeen", "category"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("sensitivityId");
-    openapiRequiredFields.add("tag");
-    openapiRequiredFields.add("query");
-    openapiRequiredFields.add("resourceId");
-    openapiRequiredFields.add("quarantineBucketLink");
-    openapiRequiredFields.add("dataStoreId");
-    openapiRequiredFields.add("lastSeen");
-    openapiRequiredFields.add("category");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("sensitivityId", "tag", "query", "resourceId", "quarantineBucketLink", "dataStoreId", "lastSeen", "category"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to SensitivityListItem
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to SensitivityListItem
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!SensitivityListItem.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in SensitivityListItem is not found in the empty JSON string", SensitivityListItem.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in SensitivityListItem is not found in the empty JSON string", SensitivityListItem.openapiRequiredFields.toString()));
         }
       }
 
@@ -335,40 +328,40 @@ public class SensitivityListItem {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!SensitivityListItem.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SensitivityListItem` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `SensitivityListItem` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : SensitivityListItem.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sensitivityId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitivityId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sensitivityId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitivityId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sensitivityId").toString()));
       }
       if (!jsonObj.get("tag").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tag` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tag` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tag").toString()));
       }
       if (!jsonObj.get("query").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `query` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `query` to be a primitive type in the JSON string but got `%s`", jsonObj.get("query").toString()));
       }
       if (!jsonObj.get("resourceId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `resourceId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resourceId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `resourceId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resourceId").toString()));
       }
       if (!jsonObj.get("quarantineBucketLink").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `quarantineBucketLink` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quarantineBucketLink").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `quarantineBucketLink` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quarantineBucketLink").toString()));
       }
       if (!jsonObj.get("dataStoreId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataStoreId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataStoreId").toString()));
       }
       if (!jsonObj.get("lastSeen").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `lastSeen` to be a primitive type in the JSON string but got `%s`", jsonObj.get("lastSeen").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `lastSeen` to be a primitive type in the JSON string but got `%s`", jsonObj.get("lastSeen").toString()));
       }
       if (!jsonObj.get("category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
       }
   }
 
@@ -401,22 +394,22 @@ public class SensitivityListItem {
     }
   }
 
- /**
-  * Create an instance of SensitivityListItem given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of SensitivityListItem
-  * @throws IOException if the JSON string is invalid with respect to SensitivityListItem
-  */
+  /**
+   * Create an instance of SensitivityListItem given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of SensitivityListItem
+   * @throws IOException if the JSON string is invalid with respect to SensitivityListItem
+   */
   public static SensitivityListItem fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, SensitivityListItem.class);
   }
 
- /**
-  * Convert an instance of SensitivityListItem to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of SensitivityListItem to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

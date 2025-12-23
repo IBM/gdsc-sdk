@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **columns** | [**List[Connectionsv3ConnectorColumn]**](Connectionsv3ConnectorColumn.md) | The columns. | [optional] 
 **id** | **str** | The id of the connector. | [optional] 
 **tags** | **List[str]** | The tags that this connector has. | [optional] 
-**type** | [**Connectionsv3ConnectorType**](Connectionsv3ConnectorType.md) |  | [optional] 
+**type** | [**Connectionsv3ConnectorType**](Connectionsv3ConnectorType.md) |  | [optional] [default to Connectionsv3ConnectorType.UNDEFINED_TYPE]
 
 ## Example
 

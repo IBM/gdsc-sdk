@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,88 +40,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetRiskEventProcessStatusResponse is the request object for GetRiskEventProcessStatus API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse {
   public static final String SERIALIZED_NAME_FEEDBACK_STATUS = "feedback_status";
   @SerializedName(SERIALIZED_NAME_FEEDBACK_STATUS)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3ProcessStatus feedbackStatus = Riskanalyticscontrollerv3ProcessStatus.UNDEFINED_PROCESS_STATUS_TYPE;
 
   public static final String SERIALIZED_NAME_LAST_RUN_DATE = "last_run_date";
   @SerializedName(SERIALIZED_NAME_LAST_RUN_DATE)
+  @javax.annotation.Nullable
   private OffsetDateTime lastRunDate;
 
   public static final String SERIALIZED_NAME_PROCESS_STATUS = "process_status";
   @SerializedName(SERIALIZED_NAME_PROCESS_STATUS)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3ProcessStatus processStatus = Riskanalyticscontrollerv3ProcessStatus.UNDEFINED_PROCESS_STATUS_TYPE;
 
   public Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse() {
   }
 
-  public Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse feedbackStatus(Riskanalyticscontrollerv3ProcessStatus feedbackStatus) {
+  public Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse feedbackStatus(@javax.annotation.Nullable Riskanalyticscontrollerv3ProcessStatus feedbackStatus) {
     this.feedbackStatus = feedbackStatus;
     return this;
   }
 
-   /**
+  /**
    * Get feedbackStatus
    * @return feedbackStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3ProcessStatus getFeedbackStatus() {
     return feedbackStatus;
   }
 
-  public void setFeedbackStatus(Riskanalyticscontrollerv3ProcessStatus feedbackStatus) {
+  public void setFeedbackStatus(@javax.annotation.Nullable Riskanalyticscontrollerv3ProcessStatus feedbackStatus) {
     this.feedbackStatus = feedbackStatus;
   }
 
 
-  public Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse lastRunDate(OffsetDateTime lastRunDate) {
+  public Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse lastRunDate(@javax.annotation.Nullable OffsetDateTime lastRunDate) {
     this.lastRunDate = lastRunDate;
     return this;
   }
 
-   /**
+  /**
    * Last run date in format YYYY-MM-DDTHH:mm:ssZ.
    * @return lastRunDate
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getLastRunDate() {
     return lastRunDate;
   }
 
-  public void setLastRunDate(OffsetDateTime lastRunDate) {
+  public void setLastRunDate(@javax.annotation.Nullable OffsetDateTime lastRunDate) {
     this.lastRunDate = lastRunDate;
   }
 
 
-  public Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse processStatus(Riskanalyticscontrollerv3ProcessStatus processStatus) {
+  public Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse processStatus(@javax.annotation.Nullable Riskanalyticscontrollerv3ProcessStatus processStatus) {
     this.processStatus = processStatus;
     return this;
   }
 
-   /**
+  /**
    * Get processStatus
    * @return processStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3ProcessStatus getProcessStatus() {
     return processStatus;
   }
 
-  public void setProcessStatus(Riskanalyticscontrollerv3ProcessStatus processStatus) {
+  public void setProcessStatus(@javax.annotation.Nullable Riskanalyticscontrollerv3ProcessStatus processStatus) {
     this.processStatus = processStatus;
   }
 
@@ -173,25 +177,22 @@ public class Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("feedback_status");
-    openapiFields.add("last_run_date");
-    openapiFields.add("process_status");
+    openapiFields = new HashSet<String>(Arrays.asList("feedback_status", "last_run_date", "process_status"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse is not found in the empty JSON string", Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse is not found in the empty JSON string", Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -199,7 +200,7 @@ public class Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -242,22 +243,22 @@ public class Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse
+   */
   public static Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3GetRiskEventProcessStatusResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

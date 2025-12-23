@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,32 +40,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest {
   public static final String SERIALIZED_NAME_PROVISON_ID_LIST = "ProvisonIdList";
   @SerializedName(SERIALIZED_NAME_PROVISON_ID_LIST)
+  @javax.annotation.Nullable
   private List<String> provisonIdList = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SCAN_ID_LIST = "ScanIdList";
   @SerializedName(SERIALIZED_NAME_SCAN_ID_LIST)
+  @javax.annotation.Nullable
   private List<String> scanIdList = new ArrayList<>();
 
   public Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest() {
   }
 
-  public Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest provisonIdList(List<String> provisonIdList) {
+  public Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest provisonIdList(@javax.annotation.Nullable List<String> provisonIdList) {
     this.provisonIdList = provisonIdList;
     return this;
   }
@@ -77,21 +80,21 @@ public class Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest {
     return this;
   }
 
-   /**
+  /**
    * Get provisonIdList
    * @return provisonIdList
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getProvisonIdList() {
     return provisonIdList;
   }
 
-  public void setProvisonIdList(List<String> provisonIdList) {
+  public void setProvisonIdList(@javax.annotation.Nullable List<String> provisonIdList) {
     this.provisonIdList = provisonIdList;
   }
 
 
-  public Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest scanIdList(List<String> scanIdList) {
+  public Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest scanIdList(@javax.annotation.Nullable List<String> scanIdList) {
     this.scanIdList = scanIdList;
     return this;
   }
@@ -104,16 +107,16 @@ public class Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest {
     return this;
   }
 
-   /**
+  /**
    * Get scanIdList
    * @return scanIdList
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getScanIdList() {
     return scanIdList;
   }
 
-  public void setScanIdList(List<String> scanIdList) {
+  public void setScanIdList(@javax.annotation.Nullable List<String> scanIdList) {
     this.scanIdList = scanIdList;
   }
 
@@ -164,24 +167,22 @@ public class Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("ProvisonIdList");
-    openapiFields.add("ScanIdList");
+    openapiFields = new HashSet<String>(Arrays.asList("ProvisonIdList", "ScanIdList"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest is not found in the empty JSON string", Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest is not found in the empty JSON string", Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -189,17 +190,17 @@ public class Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
       if (jsonObj.get("ProvisonIdList") != null && !jsonObj.get("ProvisonIdList").isJsonNull() && !jsonObj.get("ProvisonIdList").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ProvisonIdList` to be an array in the JSON string but got `%s`", jsonObj.get("ProvisonIdList").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ProvisonIdList` to be an array in the JSON string but got `%s`", jsonObj.get("ProvisonIdList").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("ScanIdList") != null && !jsonObj.get("ScanIdList").isJsonNull() && !jsonObj.get("ScanIdList").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ScanIdList` to be an array in the JSON string but got `%s`", jsonObj.get("ScanIdList").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `ScanIdList` to be an array in the JSON string but got `%s`", jsonObj.get("ScanIdList").toString()));
       }
   }
 
@@ -232,22 +233,22 @@ public class Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest {
     }
   }
 
- /**
-  * Create an instance of Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest
-  * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest
-  */
+  /**
+   * Create an instance of Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest
+   * @throws IOException if the JSON string is invalid with respect to Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest
+   */
   public static Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest.class);
   }
 
- /**
-  * Convert an instance of Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Qspmpolicymanagerv3ProcessPolicyDimentionRecordsRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

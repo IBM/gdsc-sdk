@@ -34,7 +34,7 @@ class Assetsv3Attributes(BaseModel):
     has_training_data: Optional[StrictBool] = None
     major_vulnerability_count: Optional[StrictStr] = None
     sensitive_data_count: Optional[StrictStr] = None
-    status_type: Optional[Assetsv3StatusType] = Field(default=None, alias="statusType")
+    status_type: Optional[Assetsv3StatusType] = Field(default=Assetsv3StatusType.NA, alias="statusType")
     type: Optional[StrictStr] = None
     __properties: ClassVar[List[str]] = ["critical_vulnerability_count", "entity_id", "entity_name", "grouper_id", "has_training_data", "major_vulnerability_count", "sensitive_data_count", "statusType", "type"]
 
@@ -96,7 +96,7 @@ class Assetsv3Attributes(BaseModel):
             "has_training_data": obj.get("has_training_data"),
             "major_vulnerability_count": obj.get("major_vulnerability_count"),
             "sensitive_data_count": obj.get("sensitive_data_count"),
-            "statusType": obj.get("statusType"),
+            "statusType": obj.get("statusType") if obj.get("statusType") is not None else Assetsv3StatusType.NA,
             "type": obj.get("type")
         })
         return _obj

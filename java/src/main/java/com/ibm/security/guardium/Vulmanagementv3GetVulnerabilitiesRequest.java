@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,48 +42,54 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Vulmanagementv3GetVulnerabilitiesRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Vulmanagementv3GetVulnerabilitiesRequest {
   public static final String SERIALIZED_NAME_FILTER = "filter";
   @SerializedName(SERIALIZED_NAME_FILTER)
+  @javax.annotation.Nullable
   private List<Vulmanagementv3FilterCategory> filter = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
+  @javax.annotation.Nullable
   private Long limit;
 
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
+  @javax.annotation.Nullable
   private Long offset;
 
   public static final String SERIALIZED_NAME_SEARCH_KEY = "search_key";
   @SerializedName(SERIALIZED_NAME_SEARCH_KEY)
+  @javax.annotation.Nullable
   private String searchKey;
 
   public static final String SERIALIZED_NAME_SORT_COLUMN = "sort_column";
   @SerializedName(SERIALIZED_NAME_SORT_COLUMN)
+  @javax.annotation.Nullable
   private String sortColumn;
 
   public static final String SERIALIZED_NAME_SORT_ORDER = "sort_order";
   @SerializedName(SERIALIZED_NAME_SORT_ORDER)
+  @javax.annotation.Nullable
   private Vulmanagementv3SortOrder sortOrder = Vulmanagementv3SortOrder.ASC;
 
   public Vulmanagementv3GetVulnerabilitiesRequest() {
   }
 
-  public Vulmanagementv3GetVulnerabilitiesRequest filter(List<Vulmanagementv3FilterCategory> filter) {
+  public Vulmanagementv3GetVulnerabilitiesRequest filter(@javax.annotation.Nullable List<Vulmanagementv3FilterCategory> filter) {
     this.filter = filter;
     return this;
   }
@@ -95,111 +102,111 @@ public class Vulmanagementv3GetVulnerabilitiesRequest {
     return this;
   }
 
-   /**
+  /**
    * Applied filter list for vulnerability list.
    * @return filter
-  **/
+   */
   @javax.annotation.Nullable
   public List<Vulmanagementv3FilterCategory> getFilter() {
     return filter;
   }
 
-  public void setFilter(List<Vulmanagementv3FilterCategory> filter) {
+  public void setFilter(@javax.annotation.Nullable List<Vulmanagementv3FilterCategory> filter) {
     this.filter = filter;
   }
 
 
-  public Vulmanagementv3GetVulnerabilitiesRequest limit(Long limit) {
+  public Vulmanagementv3GetVulnerabilitiesRequest limit(@javax.annotation.Nullable Long limit) {
     this.limit = limit;
     return this;
   }
 
-   /**
+  /**
    * The max amount of rows to return for pagination.
    * @return limit
-  **/
+   */
   @javax.annotation.Nullable
   public Long getLimit() {
     return limit;
   }
 
-  public void setLimit(Long limit) {
+  public void setLimit(@javax.annotation.Nullable Long limit) {
     this.limit = limit;
   }
 
 
-  public Vulmanagementv3GetVulnerabilitiesRequest offset(Long offset) {
+  public Vulmanagementv3GetVulnerabilitiesRequest offset(@javax.annotation.Nullable Long offset) {
     this.offset = offset;
     return this;
   }
 
-   /**
+  /**
    * The amount to offset the rows by for pagination.
    * @return offset
-  **/
+   */
   @javax.annotation.Nullable
   public Long getOffset() {
     return offset;
   }
 
-  public void setOffset(Long offset) {
+  public void setOffset(@javax.annotation.Nullable Long offset) {
     this.offset = offset;
   }
 
 
-  public Vulmanagementv3GetVulnerabilitiesRequest searchKey(String searchKey) {
+  public Vulmanagementv3GetVulnerabilitiesRequest searchKey(@javax.annotation.Nullable String searchKey) {
     this.searchKey = searchKey;
     return this;
   }
 
-   /**
+  /**
    * Search key for vulnerability list.
    * @return searchKey
-  **/
+   */
   @javax.annotation.Nullable
   public String getSearchKey() {
     return searchKey;
   }
 
-  public void setSearchKey(String searchKey) {
+  public void setSearchKey(@javax.annotation.Nullable String searchKey) {
     this.searchKey = searchKey;
   }
 
 
-  public Vulmanagementv3GetVulnerabilitiesRequest sortColumn(String sortColumn) {
+  public Vulmanagementv3GetVulnerabilitiesRequest sortColumn(@javax.annotation.Nullable String sortColumn) {
     this.sortColumn = sortColumn;
     return this;
   }
 
-   /**
+  /**
    * Get sortColumn
    * @return sortColumn
-  **/
+   */
   @javax.annotation.Nullable
   public String getSortColumn() {
     return sortColumn;
   }
 
-  public void setSortColumn(String sortColumn) {
+  public void setSortColumn(@javax.annotation.Nullable String sortColumn) {
     this.sortColumn = sortColumn;
   }
 
 
-  public Vulmanagementv3GetVulnerabilitiesRequest sortOrder(Vulmanagementv3SortOrder sortOrder) {
+  public Vulmanagementv3GetVulnerabilitiesRequest sortOrder(@javax.annotation.Nullable Vulmanagementv3SortOrder sortOrder) {
     this.sortOrder = sortOrder;
     return this;
   }
 
-   /**
+  /**
    * Get sortOrder
    * @return sortOrder
-  **/
+   */
   @javax.annotation.Nullable
   public Vulmanagementv3SortOrder getSortOrder() {
     return sortOrder;
   }
 
-  public void setSortOrder(Vulmanagementv3SortOrder sortOrder) {
+  public void setSortOrder(@javax.annotation.Nullable Vulmanagementv3SortOrder sortOrder) {
     this.sortOrder = sortOrder;
   }
 
@@ -258,28 +265,22 @@ public class Vulmanagementv3GetVulnerabilitiesRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("filter");
-    openapiFields.add("limit");
-    openapiFields.add("offset");
-    openapiFields.add("search_key");
-    openapiFields.add("sort_column");
-    openapiFields.add("sort_order");
+    openapiFields = new HashSet<String>(Arrays.asList("filter", "limit", "offset", "search_key", "sort_column", "sort_order"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Vulmanagementv3GetVulnerabilitiesRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Vulmanagementv3GetVulnerabilitiesRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Vulmanagementv3GetVulnerabilitiesRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Vulmanagementv3GetVulnerabilitiesRequest is not found in the empty JSON string", Vulmanagementv3GetVulnerabilitiesRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Vulmanagementv3GetVulnerabilitiesRequest is not found in the empty JSON string", Vulmanagementv3GetVulnerabilitiesRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -287,7 +288,7 @@ public class Vulmanagementv3GetVulnerabilitiesRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Vulmanagementv3GetVulnerabilitiesRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Vulmanagementv3GetVulnerabilitiesRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Vulmanagementv3GetVulnerabilitiesRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -296,7 +297,7 @@ public class Vulmanagementv3GetVulnerabilitiesRequest {
         if (jsonArrayfilter != null) {
           // ensure the json data is an array
           if (!jsonObj.get("filter").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `filter` to be an array in the JSON string but got `%s`", jsonObj.get("filter").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `filter` to be an array in the JSON string but got `%s`", jsonObj.get("filter").toString()));
           }
 
           // validate the optional field `filter` (array)
@@ -306,10 +307,10 @@ public class Vulmanagementv3GetVulnerabilitiesRequest {
         }
       }
       if ((jsonObj.get("search_key") != null && !jsonObj.get("search_key").isJsonNull()) && !jsonObj.get("search_key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `search_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("search_key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `search_key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("search_key").toString()));
       }
       if ((jsonObj.get("sort_column") != null && !jsonObj.get("sort_column").isJsonNull()) && !jsonObj.get("sort_column").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sort_column` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sort_column").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sort_column` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sort_column").toString()));
       }
       // validate the optional field `sort_order`
       if (jsonObj.get("sort_order") != null && !jsonObj.get("sort_order").isJsonNull()) {
@@ -346,22 +347,22 @@ public class Vulmanagementv3GetVulnerabilitiesRequest {
     }
   }
 
- /**
-  * Create an instance of Vulmanagementv3GetVulnerabilitiesRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Vulmanagementv3GetVulnerabilitiesRequest
-  * @throws IOException if the JSON string is invalid with respect to Vulmanagementv3GetVulnerabilitiesRequest
-  */
+  /**
+   * Create an instance of Vulmanagementv3GetVulnerabilitiesRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Vulmanagementv3GetVulnerabilitiesRequest
+   * @throws IOException if the JSON string is invalid with respect to Vulmanagementv3GetVulnerabilitiesRequest
+   */
   public static Vulmanagementv3GetVulnerabilitiesRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Vulmanagementv3GetVulnerabilitiesRequest.class);
   }
 
- /**
-  * Convert an instance of Vulmanagementv3GetVulnerabilitiesRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Vulmanagementv3GetVulnerabilitiesRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

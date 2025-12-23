@@ -27,7 +27,7 @@ class TestQspmdatamanagerv3MasterDataModel(unittest.TestCase):
 
     def make_instance(self, include_optional) -> Qspmdatamanagerv3MasterDataModel:
         """Test Qspmdatamanagerv3MasterDataModel
-            include_option is a boolean, when False only required
+            include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
         # uncomment below to create an instance of `Qspmdatamanagerv3MasterDataModel`

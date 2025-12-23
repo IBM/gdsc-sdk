@@ -33,7 +33,7 @@ class Guardiumconnectorv3RunGDPReportRequest(BaseModel):
     report_name: Optional[StrictStr] = Field(default=None, description="Name of the report.")
     report_parameters: Optional[List[Guardiumconnectorv3GDPReportParameter]] = Field(default=None, description="Report parameters.")
     sort_column: Optional[StrictStr] = Field(default=None, description="Column to sort on if not specified returns rows in default sort order of the report.")
-    sort_order: Optional[RunGDPReportRequestSortOrder] = None
+    sort_order: Optional[RunGDPReportRequestSortOrder] = RunGDPReportRequestSortOrder.ACS
     start_from: Optional[StrictInt] = Field(default=None, description="Result row index to retrieve from if not specified returns results from the beginning.")
     __properties: ClassVar[List[str]] = ["central_manager_id", "max_fetch_size", "report_name", "report_parameters", "sort_column", "sort_order", "start_from"]
 
@@ -79,9 +79,9 @@ class Guardiumconnectorv3RunGDPReportRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in report_parameters (list)
         _items = []
         if self.report_parameters:
-            for _item in self.report_parameters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_report_parameters in self.report_parameters:
+                if _item_report_parameters:
+                    _items.append(_item_report_parameters.to_dict())
             _dict['report_parameters'] = _items
         return _dict
 
@@ -100,7 +100,7 @@ class Guardiumconnectorv3RunGDPReportRequest(BaseModel):
             "report_name": obj.get("report_name"),
             "report_parameters": [Guardiumconnectorv3GDPReportParameter.from_dict(_item) for _item in obj["report_parameters"]] if obj.get("report_parameters") is not None else None,
             "sort_column": obj.get("sort_column"),
-            "sort_order": obj.get("sort_order"),
+            "sort_order": obj.get("sort_order") if obj.get("sort_order") is not None else RunGDPReportRequestSortOrder.ACS,
             "start_from": obj.get("start_from")
         })
         return _obj

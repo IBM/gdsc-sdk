@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,55 +43,58 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * GetRiskEventDetailsResponse is the response object for GetRiskEventDetails API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3GetRiskEventDetailsResponse {
   public static final String SERIALIZED_NAME_EMERGING_RISK_DETAILS = "emerging_risk_details";
   @SerializedName(SERIALIZED_NAME_EMERGING_RISK_DETAILS)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3EmergingRiskDetails emergingRiskDetails;
 
   public static final String SERIALIZED_NAME_OBSERVATIONS = "observations";
   @SerializedName(SERIALIZED_NAME_OBSERVATIONS)
+  @javax.annotation.Nullable
   private List<Riskanalyticscontrollerv3Observation> observations = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RISK_EVENT = "risk_event";
   @SerializedName(SERIALIZED_NAME_RISK_EVENT)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3RiskEvent riskEvent;
 
   public Riskanalyticscontrollerv3GetRiskEventDetailsResponse() {
   }
 
-  public Riskanalyticscontrollerv3GetRiskEventDetailsResponse emergingRiskDetails(Riskanalyticscontrollerv3EmergingRiskDetails emergingRiskDetails) {
+  public Riskanalyticscontrollerv3GetRiskEventDetailsResponse emergingRiskDetails(@javax.annotation.Nullable Riskanalyticscontrollerv3EmergingRiskDetails emergingRiskDetails) {
     this.emergingRiskDetails = emergingRiskDetails;
     return this;
   }
 
-   /**
+  /**
    * Get emergingRiskDetails
    * @return emergingRiskDetails
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3EmergingRiskDetails getEmergingRiskDetails() {
     return emergingRiskDetails;
   }
 
-  public void setEmergingRiskDetails(Riskanalyticscontrollerv3EmergingRiskDetails emergingRiskDetails) {
+  public void setEmergingRiskDetails(@javax.annotation.Nullable Riskanalyticscontrollerv3EmergingRiskDetails emergingRiskDetails) {
     this.emergingRiskDetails = emergingRiskDetails;
   }
 
 
-  public Riskanalyticscontrollerv3GetRiskEventDetailsResponse observations(List<Riskanalyticscontrollerv3Observation> observations) {
+  public Riskanalyticscontrollerv3GetRiskEventDetailsResponse observations(@javax.annotation.Nullable List<Riskanalyticscontrollerv3Observation> observations) {
     this.observations = observations;
     return this;
   }
@@ -103,35 +107,35 @@ public class Riskanalyticscontrollerv3GetRiskEventDetailsResponse {
     return this;
   }
 
-   /**
+  /**
    * Observations list.
    * @return observations
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticscontrollerv3Observation> getObservations() {
     return observations;
   }
 
-  public void setObservations(List<Riskanalyticscontrollerv3Observation> observations) {
+  public void setObservations(@javax.annotation.Nullable List<Riskanalyticscontrollerv3Observation> observations) {
     this.observations = observations;
   }
 
 
-  public Riskanalyticscontrollerv3GetRiskEventDetailsResponse riskEvent(Riskanalyticscontrollerv3RiskEvent riskEvent) {
+  public Riskanalyticscontrollerv3GetRiskEventDetailsResponse riskEvent(@javax.annotation.Nullable Riskanalyticscontrollerv3RiskEvent riskEvent) {
     this.riskEvent = riskEvent;
     return this;
   }
 
-   /**
+  /**
    * Get riskEvent
    * @return riskEvent
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3RiskEvent getRiskEvent() {
     return riskEvent;
   }
 
-  public void setRiskEvent(Riskanalyticscontrollerv3RiskEvent riskEvent) {
+  public void setRiskEvent(@javax.annotation.Nullable Riskanalyticscontrollerv3RiskEvent riskEvent) {
     this.riskEvent = riskEvent;
   }
 
@@ -184,25 +188,22 @@ public class Riskanalyticscontrollerv3GetRiskEventDetailsResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("emerging_risk_details");
-    openapiFields.add("observations");
-    openapiFields.add("risk_event");
+    openapiFields = new HashSet<String>(Arrays.asList("emerging_risk_details", "observations", "risk_event"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3GetRiskEventDetailsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3GetRiskEventDetailsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3GetRiskEventDetailsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3GetRiskEventDetailsResponse is not found in the empty JSON string", Riskanalyticscontrollerv3GetRiskEventDetailsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3GetRiskEventDetailsResponse is not found in the empty JSON string", Riskanalyticscontrollerv3GetRiskEventDetailsResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -210,7 +211,7 @@ public class Riskanalyticscontrollerv3GetRiskEventDetailsResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3GetRiskEventDetailsResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3GetRiskEventDetailsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3GetRiskEventDetailsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -223,7 +224,7 @@ public class Riskanalyticscontrollerv3GetRiskEventDetailsResponse {
         if (jsonArrayobservations != null) {
           // ensure the json data is an array
           if (!jsonObj.get("observations").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `observations` to be an array in the JSON string but got `%s`", jsonObj.get("observations").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `observations` to be an array in the JSON string but got `%s`", jsonObj.get("observations").toString()));
           }
 
           // validate the optional field `observations` (array)
@@ -267,22 +268,22 @@ public class Riskanalyticscontrollerv3GetRiskEventDetailsResponse {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3GetRiskEventDetailsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3GetRiskEventDetailsResponse
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3GetRiskEventDetailsResponse
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3GetRiskEventDetailsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3GetRiskEventDetailsResponse
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3GetRiskEventDetailsResponse
+   */
   public static Riskanalyticscontrollerv3GetRiskEventDetailsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3GetRiskEventDetailsResponse.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3GetRiskEventDetailsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3GetRiskEventDetailsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

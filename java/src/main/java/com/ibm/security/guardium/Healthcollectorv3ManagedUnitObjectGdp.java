@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,141 +41,156 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Guardium Data Protection systems.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Healthcollectorv3ManagedUnitObjectGdp {
   public static final String SERIALIZED_NAME_AGG_HEALTH_STATUS = "agg_health_status";
   @SerializedName(SERIALIZED_NAME_AGG_HEALTH_STATUS)
+  @javax.annotation.Nullable
   private Integer aggHealthStatus;
 
   public static final String SERIALIZED_NAME_CONNECTIVITY = "connectivity";
   @SerializedName(SERIALIZED_NAME_CONNECTIVITY)
+  @javax.annotation.Nullable
   private Integer connectivity;
 
   public static final String SERIALIZED_NAME_DETAILS = "details";
   @SerializedName(SERIALIZED_NAME_DETAILS)
+  @javax.annotation.Nullable
   private Healthcollectorv3MUDetailsObjGdp details;
 
   public static final String SERIALIZED_NAME_EXPORTS_TO = "exports_to";
   @SerializedName(SERIALIZED_NAME_EXPORTS_TO)
+  @javax.annotation.Nullable
   private List<String> exportsTo = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Integer id;
 
   public static final String SERIALIZED_NAME_IMPORTS_FROM = "imports_from";
   @SerializedName(SERIALIZED_NAME_IMPORTS_FROM)
+  @javax.annotation.Nullable
   private List<String> importsFrom = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_MUS_STAPS_HEALTH_STATUS = "mus_staps_health_status";
   @SerializedName(SERIALIZED_NAME_MUS_STAPS_HEALTH_STATUS)
+  @javax.annotation.Nullable
   private Integer musStapsHealthStatus;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_OS_VERSION = "os_version";
   @SerializedName(SERIALIZED_NAME_OS_VERSION)
+  @javax.annotation.Nullable
   private String osVersion;
 
   public static final String SERIALIZED_NAME_PATCH = "patch";
   @SerializedName(SERIALIZED_NAME_PATCH)
+  @javax.annotation.Nullable
   private String patch;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Integer status;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public static final String SERIALIZED_NAME_UNIT_HOST_IP = "unit_host_ip";
   @SerializedName(SERIALIZED_NAME_UNIT_HOST_IP)
+  @javax.annotation.Nullable
   private String unitHostIp;
 
   public static final String SERIALIZED_NAME_UNIT_UTILIZATION_HEALTH_STATUS = "unit_utilization_health_status";
   @SerializedName(SERIALIZED_NAME_UNIT_UTILIZATION_HEALTH_STATUS)
+  @javax.annotation.Nullable
   private Integer unitUtilizationHealthStatus;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public Healthcollectorv3ManagedUnitObjectGdp() {
   }
 
-  public Healthcollectorv3ManagedUnitObjectGdp aggHealthStatus(Integer aggHealthStatus) {
+  public Healthcollectorv3ManagedUnitObjectGdp aggHealthStatus(@javax.annotation.Nullable Integer aggHealthStatus) {
     this.aggHealthStatus = aggHealthStatus;
     return this;
   }
 
-   /**
+  /**
    * Aggregation health status.
    * @return aggHealthStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getAggHealthStatus() {
     return aggHealthStatus;
   }
 
-  public void setAggHealthStatus(Integer aggHealthStatus) {
+  public void setAggHealthStatus(@javax.annotation.Nullable Integer aggHealthStatus) {
     this.aggHealthStatus = aggHealthStatus;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp connectivity(Integer connectivity) {
+  public Healthcollectorv3ManagedUnitObjectGdp connectivity(@javax.annotation.Nullable Integer connectivity) {
     this.connectivity = connectivity;
     return this;
   }
 
-   /**
+  /**
    * Connectivity status.
    * @return connectivity
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getConnectivity() {
     return connectivity;
   }
 
-  public void setConnectivity(Integer connectivity) {
+  public void setConnectivity(@javax.annotation.Nullable Integer connectivity) {
     this.connectivity = connectivity;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp details(Healthcollectorv3MUDetailsObjGdp details) {
+  public Healthcollectorv3ManagedUnitObjectGdp details(@javax.annotation.Nullable Healthcollectorv3MUDetailsObjGdp details) {
     this.details = details;
     return this;
   }
 
-   /**
+  /**
    * Get details
    * @return details
-  **/
+   */
   @javax.annotation.Nullable
   public Healthcollectorv3MUDetailsObjGdp getDetails() {
     return details;
   }
 
-  public void setDetails(Healthcollectorv3MUDetailsObjGdp details) {
+  public void setDetails(@javax.annotation.Nullable Healthcollectorv3MUDetailsObjGdp details) {
     this.details = details;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp exportsTo(List<String> exportsTo) {
+  public Healthcollectorv3ManagedUnitObjectGdp exportsTo(@javax.annotation.Nullable List<String> exportsTo) {
     this.exportsTo = exportsTo;
     return this;
   }
@@ -187,40 +203,40 @@ public class Healthcollectorv3ManagedUnitObjectGdp {
     return this;
   }
 
-   /**
+  /**
    * Aggregator the collector exports data to.
    * @return exportsTo
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getExportsTo() {
     return exportsTo;
   }
 
-  public void setExportsTo(List<String> exportsTo) {
+  public void setExportsTo(@javax.annotation.Nullable List<String> exportsTo) {
     this.exportsTo = exportsTo;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp id(Integer id) {
+  public Healthcollectorv3ManagedUnitObjectGdp id(@javax.annotation.Nullable Integer id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Id of the managed unit.
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(@javax.annotation.Nullable Integer id) {
     this.id = id;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp importsFrom(List<String> importsFrom) {
+  public Healthcollectorv3ManagedUnitObjectGdp importsFrom(@javax.annotation.Nullable List<String> importsFrom) {
     this.importsFrom = importsFrom;
     return this;
   }
@@ -233,187 +249,187 @@ public class Healthcollectorv3ManagedUnitObjectGdp {
     return this;
   }
 
-   /**
+  /**
    * Collectors the aggregator imports data from.
    * @return importsFrom
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getImportsFrom() {
     return importsFrom;
   }
 
-  public void setImportsFrom(List<String> importsFrom) {
+  public void setImportsFrom(@javax.annotation.Nullable List<String> importsFrom) {
     this.importsFrom = importsFrom;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp musStapsHealthStatus(Integer musStapsHealthStatus) {
+  public Healthcollectorv3ManagedUnitObjectGdp musStapsHealthStatus(@javax.annotation.Nullable Integer musStapsHealthStatus) {
     this.musStapsHealthStatus = musStapsHealthStatus;
     return this;
   }
 
-   /**
+  /**
    * Overall status of S-TAPs for the system.
    * @return musStapsHealthStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getMusStapsHealthStatus() {
     return musStapsHealthStatus;
   }
 
-  public void setMusStapsHealthStatus(Integer musStapsHealthStatus) {
+  public void setMusStapsHealthStatus(@javax.annotation.Nullable Integer musStapsHealthStatus) {
     this.musStapsHealthStatus = musStapsHealthStatus;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp name(String name) {
+  public Healthcollectorv3ManagedUnitObjectGdp name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of the Guardium Data Protection system.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp osVersion(String osVersion) {
+  public Healthcollectorv3ManagedUnitObjectGdp osVersion(@javax.annotation.Nullable String osVersion) {
     this.osVersion = osVersion;
     return this;
   }
 
-   /**
+  /**
    * Operating system version.
    * @return osVersion
-  **/
+   */
   @javax.annotation.Nullable
   public String getOsVersion() {
     return osVersion;
   }
 
-  public void setOsVersion(String osVersion) {
+  public void setOsVersion(@javax.annotation.Nullable String osVersion) {
     this.osVersion = osVersion;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp patch(String patch) {
+  public Healthcollectorv3ManagedUnitObjectGdp patch(@javax.annotation.Nullable String patch) {
     this.patch = patch;
     return this;
   }
 
-   /**
+  /**
    * Patch number.
    * @return patch
-  **/
+   */
   @javax.annotation.Nullable
   public String getPatch() {
     return patch;
   }
 
-  public void setPatch(String patch) {
+  public void setPatch(@javax.annotation.Nullable String patch) {
     this.patch = patch;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp status(Integer status) {
+  public Healthcollectorv3ManagedUnitObjectGdp status(@javax.annotation.Nullable Integer status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Overall system status.
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getStatus() {
     return status;
   }
 
-  public void setStatus(Integer status) {
+  public void setStatus(@javax.annotation.Nullable Integer status) {
     this.status = status;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp type(String type) {
+  public Healthcollectorv3ManagedUnitObjectGdp type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Unit type.
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp unitHostIp(String unitHostIp) {
+  public Healthcollectorv3ManagedUnitObjectGdp unitHostIp(@javax.annotation.Nullable String unitHostIp) {
     this.unitHostIp = unitHostIp;
     return this;
   }
 
-   /**
+  /**
    * IP address.
    * @return unitHostIp
-  **/
+   */
   @javax.annotation.Nullable
   public String getUnitHostIp() {
     return unitHostIp;
   }
 
-  public void setUnitHostIp(String unitHostIp) {
+  public void setUnitHostIp(@javax.annotation.Nullable String unitHostIp) {
     this.unitHostIp = unitHostIp;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp unitUtilizationHealthStatus(Integer unitUtilizationHealthStatus) {
+  public Healthcollectorv3ManagedUnitObjectGdp unitUtilizationHealthStatus(@javax.annotation.Nullable Integer unitUtilizationHealthStatus) {
     this.unitUtilizationHealthStatus = unitUtilizationHealthStatus;
     return this;
   }
 
-   /**
+  /**
    * Unit utilization status.
    * @return unitUtilizationHealthStatus
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getUnitUtilizationHealthStatus() {
     return unitUtilizationHealthStatus;
   }
 
-  public void setUnitUtilizationHealthStatus(Integer unitUtilizationHealthStatus) {
+  public void setUnitUtilizationHealthStatus(@javax.annotation.Nullable Integer unitUtilizationHealthStatus) {
     this.unitUtilizationHealthStatus = unitUtilizationHealthStatus;
   }
 
 
-  public Healthcollectorv3ManagedUnitObjectGdp version(String version) {
+  public Healthcollectorv3ManagedUnitObjectGdp version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Guardium Data Protection version.
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
@@ -490,37 +506,22 @@ public class Healthcollectorv3ManagedUnitObjectGdp {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("agg_health_status");
-    openapiFields.add("connectivity");
-    openapiFields.add("details");
-    openapiFields.add("exports_to");
-    openapiFields.add("id");
-    openapiFields.add("imports_from");
-    openapiFields.add("mus_staps_health_status");
-    openapiFields.add("name");
-    openapiFields.add("os_version");
-    openapiFields.add("patch");
-    openapiFields.add("status");
-    openapiFields.add("type");
-    openapiFields.add("unit_host_ip");
-    openapiFields.add("unit_utilization_health_status");
-    openapiFields.add("version");
+    openapiFields = new HashSet<String>(Arrays.asList("agg_health_status", "connectivity", "details", "exports_to", "id", "imports_from", "mus_staps_health_status", "name", "os_version", "patch", "status", "type", "unit_host_ip", "unit_utilization_health_status", "version"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3ManagedUnitObjectGdp
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Healthcollectorv3ManagedUnitObjectGdp
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Healthcollectorv3ManagedUnitObjectGdp.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Healthcollectorv3ManagedUnitObjectGdp is not found in the empty JSON string", Healthcollectorv3ManagedUnitObjectGdp.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Healthcollectorv3ManagedUnitObjectGdp is not found in the empty JSON string", Healthcollectorv3ManagedUnitObjectGdp.openapiRequiredFields.toString()));
         }
       }
 
@@ -528,7 +529,7 @@ public class Healthcollectorv3ManagedUnitObjectGdp {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Healthcollectorv3ManagedUnitObjectGdp.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Healthcollectorv3ManagedUnitObjectGdp` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Healthcollectorv3ManagedUnitObjectGdp` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -538,29 +539,29 @@ public class Healthcollectorv3ManagedUnitObjectGdp {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("exports_to") != null && !jsonObj.get("exports_to").isJsonNull() && !jsonObj.get("exports_to").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `exports_to` to be an array in the JSON string but got `%s`", jsonObj.get("exports_to").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `exports_to` to be an array in the JSON string but got `%s`", jsonObj.get("exports_to").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("imports_from") != null && !jsonObj.get("imports_from").isJsonNull() && !jsonObj.get("imports_from").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `imports_from` to be an array in the JSON string but got `%s`", jsonObj.get("imports_from").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `imports_from` to be an array in the JSON string but got `%s`", jsonObj.get("imports_from").toString()));
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("os_version") != null && !jsonObj.get("os_version").isJsonNull()) && !jsonObj.get("os_version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `os_version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("os_version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `os_version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("os_version").toString()));
       }
       if ((jsonObj.get("patch") != null && !jsonObj.get("patch").isJsonNull()) && !jsonObj.get("patch").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `patch` to be a primitive type in the JSON string but got `%s`", jsonObj.get("patch").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `patch` to be a primitive type in the JSON string but got `%s`", jsonObj.get("patch").toString()));
       }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
       if ((jsonObj.get("unit_host_ip") != null && !jsonObj.get("unit_host_ip").isJsonNull()) && !jsonObj.get("unit_host_ip").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `unit_host_ip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit_host_ip").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `unit_host_ip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("unit_host_ip").toString()));
       }
       if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
   }
 
@@ -593,22 +594,22 @@ public class Healthcollectorv3ManagedUnitObjectGdp {
     }
   }
 
- /**
-  * Create an instance of Healthcollectorv3ManagedUnitObjectGdp given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Healthcollectorv3ManagedUnitObjectGdp
-  * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3ManagedUnitObjectGdp
-  */
+  /**
+   * Create an instance of Healthcollectorv3ManagedUnitObjectGdp given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Healthcollectorv3ManagedUnitObjectGdp
+   * @throws IOException if the JSON string is invalid with respect to Healthcollectorv3ManagedUnitObjectGdp
+   */
   public static Healthcollectorv3ManagedUnitObjectGdp fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Healthcollectorv3ManagedUnitObjectGdp.class);
   }
 
- /**
-  * Convert an instance of Healthcollectorv3ManagedUnitObjectGdp to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Healthcollectorv3ManagedUnitObjectGdp to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

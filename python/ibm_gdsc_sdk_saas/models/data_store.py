@@ -100,16 +100,16 @@ class DataStore(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in custom_data (list)
         _items = []
         if self.custom_data:
-            for _item in self.custom_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_custom_data in self.custom_data:
+                if _item_custom_data:
+                    _items.append(_item_custom_data.to_dict())
             _dict['customData'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in cloud_tags (list)
         _items = []
         if self.cloud_tags:
-            for _item in self.cloud_tags:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cloud_tags in self.cloud_tags:
+                if _item_cloud_tags:
+                    _items.append(_item_cloud_tags.to_dict())
             _dict['cloudTags'] = _items
         # override the default output from pydantic by calling `to_dict()` of stats
         if self.stats:

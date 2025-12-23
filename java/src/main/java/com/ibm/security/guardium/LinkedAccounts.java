@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -46,155 +47,164 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * LinkedAccounts
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class LinkedAccounts {
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_ID = "cloudAccountId";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_ID)
+  @javax.annotation.Nonnull
   private String cloudAccountId;
 
   public static final String SERIALIZED_NAME_CLOUD_ACCOUNT_NAME = "cloudAccountName";
   @SerializedName(SERIALIZED_NAME_CLOUD_ACCOUNT_NAME)
+  @javax.annotation.Nonnull
   private String cloudAccountName;
 
   public static final String SERIALIZED_NAME_IS_MAIN_CLOUD_ACCOUNT = "isMainCloudAccount";
   @SerializedName(SERIALIZED_NAME_IS_MAIN_CLOUD_ACCOUNT)
+  @javax.annotation.Nonnull
   private Boolean isMainCloudAccount;
 
   public static final String SERIALIZED_NAME_INSTALLATION_STATUS = "installationStatus";
   @SerializedName(SERIALIZED_NAME_INSTALLATION_STATUS)
+  @javax.annotation.Nonnull
   private InstallationStatus installationStatus;
 
   public static final String SERIALIZED_NAME_SERVICE_PROVIDER = "serviceProvider";
   @SerializedName(SERIALIZED_NAME_SERVICE_PROVIDER)
+  @javax.annotation.Nonnull
   private ServiceProvider serviceProvider;
 
   public static final String SERIALIZED_NAME_REGION_AVAILABILITY = "regionAvailability";
   @SerializedName(SERIALIZED_NAME_REGION_AVAILABILITY)
+  @javax.annotation.Nullable
   private Map<String, Boolean> regionAvailability = new HashMap<>();
 
   public static final String SERIALIZED_NAME_REGIONS = "regions";
   @SerializedName(SERIALIZED_NAME_REGIONS)
+  @javax.annotation.Nonnull
   private List<AnalyzedRegion> regions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CREATION_TIME = "creationTime";
   @SerializedName(SERIALIZED_NAME_CREATION_TIME)
+  @javax.annotation.Nullable
   private BigDecimal creationTime;
 
   public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
   @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
+  @javax.annotation.Nullable
   private Environment environment;
 
   public LinkedAccounts() {
   }
 
-  public LinkedAccounts cloudAccountId(String cloudAccountId) {
+  public LinkedAccounts cloudAccountId(@javax.annotation.Nonnull String cloudAccountId) {
     this.cloudAccountId = cloudAccountId;
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountId
    * @return cloudAccountId
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCloudAccountId() {
     return cloudAccountId;
   }
 
-  public void setCloudAccountId(String cloudAccountId) {
+  public void setCloudAccountId(@javax.annotation.Nonnull String cloudAccountId) {
     this.cloudAccountId = cloudAccountId;
   }
 
 
-  public LinkedAccounts cloudAccountName(String cloudAccountName) {
+  public LinkedAccounts cloudAccountName(@javax.annotation.Nonnull String cloudAccountName) {
     this.cloudAccountName = cloudAccountName;
     return this;
   }
 
-   /**
+  /**
    * Get cloudAccountName
    * @return cloudAccountName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCloudAccountName() {
     return cloudAccountName;
   }
 
-  public void setCloudAccountName(String cloudAccountName) {
+  public void setCloudAccountName(@javax.annotation.Nonnull String cloudAccountName) {
     this.cloudAccountName = cloudAccountName;
   }
 
 
-  public LinkedAccounts isMainCloudAccount(Boolean isMainCloudAccount) {
+  public LinkedAccounts isMainCloudAccount(@javax.annotation.Nonnull Boolean isMainCloudAccount) {
     this.isMainCloudAccount = isMainCloudAccount;
     return this;
   }
 
-   /**
+  /**
    * Get isMainCloudAccount
    * @return isMainCloudAccount
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getIsMainCloudAccount() {
     return isMainCloudAccount;
   }
 
-  public void setIsMainCloudAccount(Boolean isMainCloudAccount) {
+  public void setIsMainCloudAccount(@javax.annotation.Nonnull Boolean isMainCloudAccount) {
     this.isMainCloudAccount = isMainCloudAccount;
   }
 
 
-  public LinkedAccounts installationStatus(InstallationStatus installationStatus) {
+  public LinkedAccounts installationStatus(@javax.annotation.Nonnull InstallationStatus installationStatus) {
     this.installationStatus = installationStatus;
     return this;
   }
 
-   /**
+  /**
    * Get installationStatus
    * @return installationStatus
-  **/
+   */
   @javax.annotation.Nonnull
   public InstallationStatus getInstallationStatus() {
     return installationStatus;
   }
 
-  public void setInstallationStatus(InstallationStatus installationStatus) {
+  public void setInstallationStatus(@javax.annotation.Nonnull InstallationStatus installationStatus) {
     this.installationStatus = installationStatus;
   }
 
 
-  public LinkedAccounts serviceProvider(ServiceProvider serviceProvider) {
+  public LinkedAccounts serviceProvider(@javax.annotation.Nonnull ServiceProvider serviceProvider) {
     this.serviceProvider = serviceProvider;
     return this;
   }
 
-   /**
+  /**
    * Get serviceProvider
    * @return serviceProvider
-  **/
+   */
   @javax.annotation.Nonnull
   public ServiceProvider getServiceProvider() {
     return serviceProvider;
   }
 
-  public void setServiceProvider(ServiceProvider serviceProvider) {
+  public void setServiceProvider(@javax.annotation.Nonnull ServiceProvider serviceProvider) {
     this.serviceProvider = serviceProvider;
   }
 
 
-  public LinkedAccounts regionAvailability(Map<String, Boolean> regionAvailability) {
+  public LinkedAccounts regionAvailability(@javax.annotation.Nullable Map<String, Boolean> regionAvailability) {
     this.regionAvailability = regionAvailability;
     return this;
   }
@@ -207,21 +217,21 @@ public class LinkedAccounts {
     return this;
   }
 
-   /**
+  /**
    * Get regionAvailability
    * @return regionAvailability
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Boolean> getRegionAvailability() {
     return regionAvailability;
   }
 
-  public void setRegionAvailability(Map<String, Boolean> regionAvailability) {
+  public void setRegionAvailability(@javax.annotation.Nullable Map<String, Boolean> regionAvailability) {
     this.regionAvailability = regionAvailability;
   }
 
 
-  public LinkedAccounts regions(List<AnalyzedRegion> regions) {
+  public LinkedAccounts regions(@javax.annotation.Nonnull List<AnalyzedRegion> regions) {
     this.regions = regions;
     return this;
   }
@@ -234,54 +244,54 @@ public class LinkedAccounts {
     return this;
   }
 
-   /**
+  /**
    * Get regions
    * @return regions
-  **/
+   */
   @javax.annotation.Nonnull
   public List<AnalyzedRegion> getRegions() {
     return regions;
   }
 
-  public void setRegions(List<AnalyzedRegion> regions) {
+  public void setRegions(@javax.annotation.Nonnull List<AnalyzedRegion> regions) {
     this.regions = regions;
   }
 
 
-  public LinkedAccounts creationTime(BigDecimal creationTime) {
+  public LinkedAccounts creationTime(@javax.annotation.Nullable BigDecimal creationTime) {
     this.creationTime = creationTime;
     return this;
   }
 
-   /**
+  /**
    * Get creationTime
    * @return creationTime
-  **/
+   */
   @javax.annotation.Nullable
   public BigDecimal getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(BigDecimal creationTime) {
+  public void setCreationTime(@javax.annotation.Nullable BigDecimal creationTime) {
     this.creationTime = creationTime;
   }
 
 
-  public LinkedAccounts environment(Environment environment) {
+  public LinkedAccounts environment(@javax.annotation.Nullable Environment environment) {
     this.environment = environment;
     return this;
   }
 
-   /**
+  /**
    * Get environment
    * @return environment
-  **/
+   */
   @javax.annotation.Nullable
   public Environment getEnvironment() {
     return environment;
   }
 
-  public void setEnvironment(Environment environment) {
+  public void setEnvironment(@javax.annotation.Nullable Environment environment) {
     this.environment = environment;
   }
 
@@ -346,37 +356,22 @@ public class LinkedAccounts {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cloudAccountId");
-    openapiFields.add("cloudAccountName");
-    openapiFields.add("isMainCloudAccount");
-    openapiFields.add("installationStatus");
-    openapiFields.add("serviceProvider");
-    openapiFields.add("regionAvailability");
-    openapiFields.add("regions");
-    openapiFields.add("creationTime");
-    openapiFields.add("environment");
+    openapiFields = new HashSet<String>(Arrays.asList("cloudAccountId", "cloudAccountName", "isMainCloudAccount", "installationStatus", "serviceProvider", "regionAvailability", "regions", "creationTime", "environment"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("cloudAccountId");
-    openapiRequiredFields.add("cloudAccountName");
-    openapiRequiredFields.add("isMainCloudAccount");
-    openapiRequiredFields.add("installationStatus");
-    openapiRequiredFields.add("serviceProvider");
-    openapiRequiredFields.add("regions");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("cloudAccountId", "cloudAccountName", "isMainCloudAccount", "installationStatus", "serviceProvider", "regions"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to LinkedAccounts
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to LinkedAccounts
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!LinkedAccounts.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in LinkedAccounts is not found in the empty JSON string", LinkedAccounts.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in LinkedAccounts is not found in the empty JSON string", LinkedAccounts.openapiRequiredFields.toString()));
         }
       }
 
@@ -384,22 +379,22 @@ public class LinkedAccounts {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!LinkedAccounts.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `LinkedAccounts` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `LinkedAccounts` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : LinkedAccounts.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("cloudAccountId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountId").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccountId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountId").toString()));
       }
       if (!jsonObj.get("cloudAccountName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cloudAccountName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountName").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `cloudAccountName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cloudAccountName").toString()));
       }
       // validate the required field `installationStatus`
       InstallationStatus.validateJsonElement(jsonObj.get("installationStatus"));
@@ -407,7 +402,7 @@ public class LinkedAccounts {
       ServiceProvider.validateJsonElement(jsonObj.get("serviceProvider"));
       // ensure the json data is an array
       if (!jsonObj.get("regions").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `regions` to be an array in the JSON string but got `%s`", jsonObj.get("regions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `regions` to be an array in the JSON string but got `%s`", jsonObj.get("regions").toString()));
       }
 
       JsonArray jsonArrayregions = jsonObj.getAsJsonArray("regions");
@@ -450,22 +445,22 @@ public class LinkedAccounts {
     }
   }
 
- /**
-  * Create an instance of LinkedAccounts given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of LinkedAccounts
-  * @throws IOException if the JSON string is invalid with respect to LinkedAccounts
-  */
+  /**
+   * Create an instance of LinkedAccounts given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of LinkedAccounts
+   * @throws IOException if the JSON string is invalid with respect to LinkedAccounts
+   */
   public static LinkedAccounts fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, LinkedAccounts.class);
   }
 
- /**
-  * Convert an instance of LinkedAccounts to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of LinkedAccounts to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,32 +41,34 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * FeatureSet is a group of features.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticsenginev3FeatureSet {
   public static final String SERIALIZED_NAME_FEATURES = "features";
   @SerializedName(SERIALIZED_NAME_FEATURES)
+  @javax.annotation.Nullable
   private List<Riskanalyticsenginev3Feature> features = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public Riskanalyticsenginev3FeatureSet() {
   }
 
-  public Riskanalyticsenginev3FeatureSet features(List<Riskanalyticsenginev3Feature> features) {
+  public Riskanalyticsenginev3FeatureSet features(@javax.annotation.Nullable List<Riskanalyticsenginev3Feature> features) {
     this.features = features;
     return this;
   }
@@ -78,35 +81,35 @@ public class Riskanalyticsenginev3FeatureSet {
     return this;
   }
 
-   /**
+  /**
    * Feature set list of features.
    * @return features
-  **/
+   */
   @javax.annotation.Nullable
   public List<Riskanalyticsenginev3Feature> getFeatures() {
     return features;
   }
 
-  public void setFeatures(List<Riskanalyticsenginev3Feature> features) {
+  public void setFeatures(@javax.annotation.Nullable List<Riskanalyticsenginev3Feature> features) {
     this.features = features;
   }
 
 
-  public Riskanalyticsenginev3FeatureSet name(String name) {
+  public Riskanalyticsenginev3FeatureSet name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Feature set name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
@@ -157,24 +160,22 @@ public class Riskanalyticsenginev3FeatureSet {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("features");
-    openapiFields.add("name");
+    openapiFields = new HashSet<String>(Arrays.asList("features", "name"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3FeatureSet
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticsenginev3FeatureSet
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticsenginev3FeatureSet.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticsenginev3FeatureSet is not found in the empty JSON string", Riskanalyticsenginev3FeatureSet.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticsenginev3FeatureSet is not found in the empty JSON string", Riskanalyticsenginev3FeatureSet.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,7 +183,7 @@ public class Riskanalyticsenginev3FeatureSet {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticsenginev3FeatureSet.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3FeatureSet` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticsenginev3FeatureSet` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -191,7 +192,7 @@ public class Riskanalyticsenginev3FeatureSet {
         if (jsonArrayfeatures != null) {
           // ensure the json data is an array
           if (!jsonObj.get("features").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `features` to be an array in the JSON string but got `%s`", jsonObj.get("features").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `features` to be an array in the JSON string but got `%s`", jsonObj.get("features").toString()));
           }
 
           // validate the optional field `features` (array)
@@ -201,7 +202,7 @@ public class Riskanalyticsenginev3FeatureSet {
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
   }
 
@@ -234,22 +235,22 @@ public class Riskanalyticsenginev3FeatureSet {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticsenginev3FeatureSet given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticsenginev3FeatureSet
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3FeatureSet
-  */
+  /**
+   * Create an instance of Riskanalyticsenginev3FeatureSet given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticsenginev3FeatureSet
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticsenginev3FeatureSet
+   */
   public static Riskanalyticsenginev3FeatureSet fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticsenginev3FeatureSet.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticsenginev3FeatureSet to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticsenginev3FeatureSet to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

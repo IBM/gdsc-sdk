@@ -16,42 +16,41 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuditServiceApi } from '';
+import type { AuditServiceApiAuditServiceGetActivityRecordsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuditServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuditServiceApi(configuration);
 
-let body:.AuditServiceApiAuditServiceGetActivityRecordsRequest = {
-  // Date | Return records starting at this time (>=). (optional)
+const request: AuditServiceApiAuditServiceGetActivityRecordsRequest = {
+    // Return records starting at this time (>=). (optional)
   startTime: new Date('1970-01-01T00:00:00.00Z'),
-  // Date | Return records ending before this time (<). (optional)
+    // Return records ending before this time (<). (optional)
   endTime: new Date('1970-01-01T00:00:00.00Z'),
-  // string | Return records with this service/collection id. (optional)
+    // Return records with this service/collection id. (optional)
   uid: "uid_example",
-  // string | Return records matching this operation (CRUD or other action). (optional)
+    // Return records matching this operation (CRUD or other action). (optional)
   actionTaken: "action_taken_example",
-  // string | Return records for this service/collection. (optional)
+    // Return records for this service/collection. (optional)
   context: "context_example",
-  // string | Return records created only for this reason. (optional)
+    // Return records created only for this reason. (optional)
   changesMade: "changes_made_example",
-  // string | Return records originating with the specified user id. (optional)
+    // Return records originating with the specified user id. (optional)
   performedBy: "performed_by_example",
-  // string | Return records with this label. (optional)
+    // Return records with this label. (optional)
   contextDescription: "context_description_example",
-  // string | Return records based on the query. (optional)
+    // Return records based on the query. (optional)
   query: "query_example",
-  // number | The amount to offset the rows by for pagination. (optional)
+    // The amount to offset the rows by for pagination. (optional)
   offset: 1,
-  // number | The max amount of rows to return for pagination. (optional)
+    // The max amount of rows to return for pagination. (optional)
   limit: 1,
-  // boolean | Return eligable filters if this is true. (optional)
+    // Return eligable filters if this is true. (optional)
   filter: true,
 };
 
-apiInstance.auditServiceGetActivityRecords(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.auditServiceGetActivityRecords(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -103,14 +102,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, AuditServiceApi } from '';
+import type { AuditServiceApiAuditServicePutDownloadActivityRecordRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .AuditServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new AuditServiceApi(configuration);
 
-let body:.AuditServiceApiAuditServicePutDownloadActivityRecordRequest = {
-  // Auditv3PutActivityRecordRequest
+const request: AuditServiceApiAuditServicePutDownloadActivityRecordRequest = {
+  
   auditv3PutActivityRecordRequest: {
     actionTaken: "actionTaken_example",
     changesMade: "changesMade_example",
@@ -121,9 +120,8 @@ let body:.AuditServiceApiAuditServicePutDownloadActivityRecordRequest = {
   },
 };
 
-apiInstance.auditServicePutDownloadActivityRecord(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.auditServicePutDownloadActivityRecord(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

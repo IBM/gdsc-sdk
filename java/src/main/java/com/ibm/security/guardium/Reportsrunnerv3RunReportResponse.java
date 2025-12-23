@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,48 +43,54 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * RunReportResponse is the return type of RunReport API.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsrunnerv3RunReportResponse {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
+  @javax.annotation.Nullable
   private List<Reportsrunnerv3DataRow> data = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_FACETS = "facets";
   @SerializedName(SERIALIZED_NAME_FACETS)
+  @javax.annotation.Nullable
   private List<Reportsrunnerv3FilterHeaders> facets = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_FINAL_RESULT = "final_result";
   @SerializedName(SERIALIZED_NAME_FINAL_RESULT)
+  @javax.annotation.Nullable
   private Boolean finalResult;
 
   public static final String SERIALIZED_NAME_LIMIT_REACHED = "limit_reached";
   @SerializedName(SERIALIZED_NAME_LIMIT_REACHED)
+  @javax.annotation.Nullable
   private Boolean limitReached;
 
   public static final String SERIALIZED_NAME_REPORT_LAYOUT = "report_layout";
   @SerializedName(SERIALIZED_NAME_REPORT_LAYOUT)
+  @javax.annotation.Nullable
   private Reportsv3ReportDisplayLayout reportLayout;
 
   public static final String SERIALIZED_NAME_TOTAL_NUMBER_OF_ROWS = "total_number_of_rows";
   @SerializedName(SERIALIZED_NAME_TOTAL_NUMBER_OF_ROWS)
+  @javax.annotation.Nullable
   private Integer totalNumberOfRows;
 
   public Reportsrunnerv3RunReportResponse() {
   }
 
-  public Reportsrunnerv3RunReportResponse data(List<Reportsrunnerv3DataRow> data) {
+  public Reportsrunnerv3RunReportResponse data(@javax.annotation.Nullable List<Reportsrunnerv3DataRow> data) {
     this.data = data;
     return this;
   }
@@ -96,21 +103,21 @@ public class Reportsrunnerv3RunReportResponse {
     return this;
   }
 
-   /**
+  /**
    * Report data.
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsrunnerv3DataRow> getData() {
     return data;
   }
 
-  public void setData(List<Reportsrunnerv3DataRow> data) {
+  public void setData(@javax.annotation.Nullable List<Reportsrunnerv3DataRow> data) {
     this.data = data;
   }
 
 
-  public Reportsrunnerv3RunReportResponse facets(List<Reportsrunnerv3FilterHeaders> facets) {
+  public Reportsrunnerv3RunReportResponse facets(@javax.annotation.Nullable List<Reportsrunnerv3FilterHeaders> facets) {
     this.facets = facets;
     return this;
   }
@@ -123,92 +130,92 @@ public class Reportsrunnerv3RunReportResponse {
     return this;
   }
 
-   /**
+  /**
    * Facets.
    * @return facets
-  **/
+   */
   @javax.annotation.Nullable
   public List<Reportsrunnerv3FilterHeaders> getFacets() {
     return facets;
   }
 
-  public void setFacets(List<Reportsrunnerv3FilterHeaders> facets) {
+  public void setFacets(@javax.annotation.Nullable List<Reportsrunnerv3FilterHeaders> facets) {
     this.facets = facets;
   }
 
 
-  public Reportsrunnerv3RunReportResponse finalResult(Boolean finalResult) {
+  public Reportsrunnerv3RunReportResponse finalResult(@javax.annotation.Nullable Boolean finalResult) {
     this.finalResult = finalResult;
     return this;
   }
 
-   /**
+  /**
    * Final Result - signifies that the total count&amp;facts are final. When set to false, it means that the results are partial, there are more records but they were not read yet, or the limit was reached.
    * @return finalResult
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getFinalResult() {
     return finalResult;
   }
 
-  public void setFinalResult(Boolean finalResult) {
+  public void setFinalResult(@javax.annotation.Nullable Boolean finalResult) {
     this.finalResult = finalResult;
   }
 
 
-  public Reportsrunnerv3RunReportResponse limitReached(Boolean limitReached) {
+  public Reportsrunnerv3RunReportResponse limitReached(@javax.annotation.Nullable Boolean limitReached) {
     this.limitReached = limitReached;
     return this;
   }
 
-   /**
+  /**
    * limit_reached - signifies if the query limit reached. When set to true, it means that the limit was reached and there are more records on DB which were not read yet.
    * @return limitReached
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getLimitReached() {
     return limitReached;
   }
 
-  public void setLimitReached(Boolean limitReached) {
+  public void setLimitReached(@javax.annotation.Nullable Boolean limitReached) {
     this.limitReached = limitReached;
   }
 
 
-  public Reportsrunnerv3RunReportResponse reportLayout(Reportsv3ReportDisplayLayout reportLayout) {
+  public Reportsrunnerv3RunReportResponse reportLayout(@javax.annotation.Nullable Reportsv3ReportDisplayLayout reportLayout) {
     this.reportLayout = reportLayout;
     return this;
   }
 
-   /**
+  /**
    * Get reportLayout
    * @return reportLayout
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ReportDisplayLayout getReportLayout() {
     return reportLayout;
   }
 
-  public void setReportLayout(Reportsv3ReportDisplayLayout reportLayout) {
+  public void setReportLayout(@javax.annotation.Nullable Reportsv3ReportDisplayLayout reportLayout) {
     this.reportLayout = reportLayout;
   }
 
 
-  public Reportsrunnerv3RunReportResponse totalNumberOfRows(Integer totalNumberOfRows) {
+  public Reportsrunnerv3RunReportResponse totalNumberOfRows(@javax.annotation.Nullable Integer totalNumberOfRows) {
     this.totalNumberOfRows = totalNumberOfRows;
     return this;
   }
 
-   /**
+  /**
    * Total Rows Count.
    * @return totalNumberOfRows
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTotalNumberOfRows() {
     return totalNumberOfRows;
   }
 
-  public void setTotalNumberOfRows(Integer totalNumberOfRows) {
+  public void setTotalNumberOfRows(@javax.annotation.Nullable Integer totalNumberOfRows) {
     this.totalNumberOfRows = totalNumberOfRows;
   }
 
@@ -267,28 +274,22 @@ public class Reportsrunnerv3RunReportResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("data");
-    openapiFields.add("facets");
-    openapiFields.add("final_result");
-    openapiFields.add("limit_reached");
-    openapiFields.add("report_layout");
-    openapiFields.add("total_number_of_rows");
+    openapiFields = new HashSet<String>(Arrays.asList("data", "facets", "final_result", "limit_reached", "report_layout", "total_number_of_rows"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3RunReportResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsrunnerv3RunReportResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsrunnerv3RunReportResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsrunnerv3RunReportResponse is not found in the empty JSON string", Reportsrunnerv3RunReportResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsrunnerv3RunReportResponse is not found in the empty JSON string", Reportsrunnerv3RunReportResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -296,7 +297,7 @@ public class Reportsrunnerv3RunReportResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsrunnerv3RunReportResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsrunnerv3RunReportResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsrunnerv3RunReportResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -305,7 +306,7 @@ public class Reportsrunnerv3RunReportResponse {
         if (jsonArraydata != null) {
           // ensure the json data is an array
           if (!jsonObj.get("data").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
           }
 
           // validate the optional field `data` (array)
@@ -319,7 +320,7 @@ public class Reportsrunnerv3RunReportResponse {
         if (jsonArrayfacets != null) {
           // ensure the json data is an array
           if (!jsonObj.get("facets").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `facets` to be an array in the JSON string but got `%s`", jsonObj.get("facets").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `facets` to be an array in the JSON string but got `%s`", jsonObj.get("facets").toString()));
           }
 
           // validate the optional field `facets` (array)
@@ -363,22 +364,22 @@ public class Reportsrunnerv3RunReportResponse {
     }
   }
 
- /**
-  * Create an instance of Reportsrunnerv3RunReportResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsrunnerv3RunReportResponse
-  * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3RunReportResponse
-  */
+  /**
+   * Create an instance of Reportsrunnerv3RunReportResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsrunnerv3RunReportResponse
+   * @throws IOException if the JSON string is invalid with respect to Reportsrunnerv3RunReportResponse
+   */
   public static Reportsrunnerv3RunReportResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsrunnerv3RunReportResponse.class);
   }
 
- /**
-  * Convert an instance of Reportsrunnerv3RunReportResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsrunnerv3RunReportResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

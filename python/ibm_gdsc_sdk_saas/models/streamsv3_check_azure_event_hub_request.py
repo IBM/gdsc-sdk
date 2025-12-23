@@ -32,7 +32,7 @@ class Streamsv3CheckAzureEventHubRequest(BaseModel):
     namespace: Optional[StrictStr] = Field(default=None, description="Azure namespace.")
     secret_key_id: Optional[StrictStr] = Field(default=None, description="AWS secret key ID.")
     stream_name: Optional[StrictStr] = Field(default=None, description="Name of stream.")
-    stream_type: Optional[Streamsv3StreamType] = None
+    stream_type: Optional[Streamsv3StreamType] = Streamsv3StreamType.AWS_KINESIS
     __properties: ClassVar[List[str]] = ["access_key_id", "id", "namespace", "secret_key_id", "stream_name", "stream_type"]
 
     model_config = ConfigDict(
@@ -91,7 +91,7 @@ class Streamsv3CheckAzureEventHubRequest(BaseModel):
             "namespace": obj.get("namespace"),
             "secret_key_id": obj.get("secret_key_id"),
             "stream_name": obj.get("stream_name"),
-            "stream_type": obj.get("stream_type")
+            "stream_type": obj.get("stream_type") if obj.get("stream_type") is not None else Streamsv3StreamType.AWS_KINESIS
         })
         return _obj
 

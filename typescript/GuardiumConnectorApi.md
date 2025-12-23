@@ -49,14 +49,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorAddCMRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorAddCMRequest = {
-  // Guardiumconnectorv3AddCMRequest
+const request: GuardiumConnectorApiGuardiumConnectorAddCMRequest = {
+  
   guardiumconnectorv3AddCMRequest: {
     cm: {
       attributes: [
@@ -84,9 +84,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorAddCMRequest = {
   },
 };
 
-apiInstance.guardiumConnectorAddCM(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorAddCM(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -127,25 +126,24 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorAddDatamartsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorAddDatamartsRequest = {
-  // string | central manager
+const request: GuardiumConnectorApiGuardiumConnectorAddDatamartsRequest = {
+    // central manager
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3AddDatamartsRequest
+  
   guardiumconnectorv3AddDatamartsRequest: {
     centralManagerId: "centralManagerId_example",
     data: "data_example",
   },
 };
 
-apiInstance.guardiumConnectorAddDatamarts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorAddDatamarts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -187,22 +185,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorAddDmExclusionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorAddDmExclusionRequest = {
-  // Guardiumconnectorv3AddDmExclusionRequest
+const request: GuardiumConnectorApiGuardiumConnectorAddDmExclusionRequest = {
+  
   guardiumconnectorv3AddDmExclusionRequest: {
     datamart: "datamart_example",
   },
 };
 
-apiInstance.guardiumConnectorAddDmExclusion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorAddDmExclusion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -243,16 +240,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorAddTaskRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorAddTaskRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorAddTaskRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3AddTaskRequest
+  
   guardiumconnectorv3AddTaskRequest: {
     centralManagerId: "centralManagerId_example",
     interval: "interval_example",
@@ -267,9 +264,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorAddTaskRequest = {
   },
 };
 
-apiInstance.guardiumConnectorAddTask(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorAddTask(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -311,14 +307,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorBlockUserRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorBlockUserRequest = {
-  // Guardiumconnectorv3BlockUserRequest
+const request: GuardiumConnectorApiGuardiumConnectorBlockUserRequest = {
+  
   guardiumconnectorv3BlockUserRequest: {
     destination: {
       configId: "configId_example",
@@ -333,9 +329,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorBlockUserRequest = {
   },
 };
 
-apiInstance.guardiumConnectorBlockUser(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorBlockUser(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -376,16 +371,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3ConfigureAggregatorExportRequest
+  
   guardiumconnectorv3ConfigureAggregatorExportRequest: {
     centralManagerId: "centralManagerId_example",
     datamartEndDateAggregator: "datamartEndDateAggregator_example",
@@ -398,9 +393,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorConfigureAggregatorExportRequest 
   },
 };
 
-apiInstance.guardiumConnectorConfigureAggregatorExport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorConfigureAggregatorExport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -442,16 +436,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3ConfigureCollectorExportRequest
+  
   guardiumconnectorv3ConfigureCollectorExportRequest: {
     centralManagerId: "centralManagerId_example",
     collectors: [
@@ -461,9 +455,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorConfigureCollectorExportRequest =
   },
 };
 
-apiInstance.guardiumConnectorConfigureCollectorExport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorConfigureCollectorExport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -505,16 +498,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3ConfigureStreamingRequest
+  
   guardiumconnectorv3ConfigureStreamingRequest: {
     action: "action_example",
     centralManagerId: "centralManagerId_example",
@@ -525,9 +518,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorConfigureStreamingRequest = {
   },
 };
 
-apiInstance.guardiumConnectorConfigureStreaming(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorConfigureStreaming(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -569,25 +561,24 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckRequest = {
-  // string | Central manager
+const request: GuardiumConnectorApiGuardiumConnectorDatamartVersionCheckRequest = {
+    // Central manager
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3DatamartVersionRequest
+  
   guardiumconnectorv3DatamartVersionRequest: {
     centralManagerId: "centralManagerId_example",
     data: "data_example",
   },
 };
 
-apiInstance.guardiumConnectorDatamartVersionCheck(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorDatamartVersionCheck(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -629,22 +620,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorDeleteCMRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorDeleteCMRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorDeleteCMRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // number | Flag to force delete CM and associated tasks (0=validate CM is online before deleting, 1=force delete CM). (optional)
+    // Flag to force delete CM and associated tasks (0=validate CM is online before deleting, 1=force delete CM). (optional)
   force: 1,
 };
 
-apiInstance.guardiumConnectorDeleteCM(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorDeleteCM(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -686,20 +676,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest = {
-  // string | Datamart name. (optional)
+const request: GuardiumConnectorApiGuardiumConnectorDeleteDmExclusionRequest = {
+    // Datamart name. (optional)
   datamart: "datamart_example",
 };
 
-apiInstance.guardiumConnectorDeleteDmExclusion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorDeleteDmExclusion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -740,22 +729,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorDeleteTaskRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // string | ID of task being deleted.
+    // ID of task being deleted.
   taskId: "task_id_example",
 };
 
-apiInstance.guardiumConnectorDeleteTask(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorDeleteTask(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -797,20 +785,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorDeleteTasksRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorDeleteTasks(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorDeleteTasks(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -851,20 +838,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorGetAggregatorsConfigRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetAggregatorsConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetAggregatorsConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -905,20 +891,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetCMsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetCMsRequest = {
-  // boolean | Retrieve the streaming status for all Managed Units that are reporting to a particular Central Manager. (optional)
+const request: GuardiumConnectorApiGuardiumConnectorGetCMsRequest = {
+    // Retrieve the streaming status for all Managed Units that are reporting to a particular Central Manager. (optional)
   runAdditionalChecks: true,
 };
 
-apiInstance.guardiumConnectorGetCMs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetCMs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -959,17 +944,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.guardiumConnectorGetCMsConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetCMsConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1007,20 +990,19 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorGetCollectorsConfigRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetCollectorsConfig(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetCollectorsConfig(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1061,20 +1043,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetDatamartsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetDatamartsRequest = {
-  // string | central manager hostname
+const request: GuardiumConnectorApiGuardiumConnectorGetDatamartsRequest = {
+    // central manager hostname
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetDatamarts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetDatamarts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1115,17 +1096,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.guardiumConnectorGetDmExclusion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetDmExclusion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1163,22 +1142,21 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest = {
-  // string | Central manager hostname
+const request: GuardiumConnectorApiGuardiumConnectorGetGdpPolicyInfoRequest = {
+    // Central manager hostname
   centralManagerId: "central_manager_id_example",
-  // string | Policy name. (optional)
+    // Policy name. (optional)
   policyName: "policy_name_example",
 };
 
-apiInstance.guardiumConnectorGetGdpPolicyInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetGdpPolicyInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1220,20 +1198,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesRequest = {
-  // string | Central manager hostname
+const request: GuardiumConnectorApiGuardiumConnectorGetGdpPolicySummariesRequest = {
+    // Central manager hostname
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetGdpPolicySummaries(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetGdpPolicySummaries(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1274,22 +1251,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorGetHealthInfoRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // boolean | Flag indicating if the older GDP api is to be called in case it doesn\'t support new api. (optional)
+    // Flag indicating if the older GDP api is to be called in case it doesn\'t support new api. (optional)
   useFallback: true,
 };
 
-apiInstance.guardiumConnectorGetHealthInfo(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetHealthInfo(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1331,20 +1307,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfileRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfileRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorGetLatestDMExtractionProfileRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetLatestDMExtractionProfile(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetLatestDMExtractionProfile(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1385,20 +1360,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorGetStreamingStatusRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetStreamingStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetStreamingStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1439,20 +1413,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetSyncDMsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetSyncDMsRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorGetSyncDMsRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
 };
 
-apiInstance.guardiumConnectorGetSyncDMs(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetSyncDMs(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1493,17 +1466,15 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:any = {};
+const request = {};
 
-apiInstance.guardiumConnectorGetTaskTypes(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetTaskTypes(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1541,26 +1512,25 @@ This endpoint does not need any parameter.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorGetTasksRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorGetTasksRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorGetTasksRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // string | ID of task. (optional)
+    // ID of task. (optional)
   taskId: "task_id_example",
-  // string | Type of task. (optional)
+    // Type of task. (optional)
   taskType: "task_type_example",
-  // string | Key object. (optional)
+    // Key object. (optional)
   keyObject: "key_object_example",
 };
 
-apiInstance.guardiumConnectorGetTasks(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorGetTasks(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1604,16 +1574,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest = {
-  // string | Central Manager ID.
+const request: GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest = {
+    // Central Manager ID.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3RunGDPReportRequest
+  
   guardiumconnectorv3RunGDPReportRequest: {
     centralManagerId: "centralManagerId_example",
     maxFetchSize: 1,
@@ -1630,9 +1600,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorRunGDPReportRequest = {
   },
 };
 
-apiInstance.guardiumConnectorRunGDPReport(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorRunGDPReport(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1674,14 +1643,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorSetupCMRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorSetupCMRequest = {
-  // Guardiumconnectorv3SetupCMRequest
+const request: GuardiumConnectorApiGuardiumConnectorSetupCMRequest = {
+  
   guardiumconnectorv3SetupCMRequest: {
     attributes: [
       {
@@ -1696,9 +1665,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorSetupCMRequest = {
   },
 };
 
-apiInstance.guardiumConnectorSetupCM(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorSetupCM(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1739,16 +1707,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest = {
-  // string | central manager
+const request: GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest = {
+    // central manager
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3SetupDatamartsRequest
+  
   guardiumconnectorv3SetupDatamartsRequest: {
     centralManagerId: "centralManagerId_example",
     datamarts: [
@@ -1761,9 +1729,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorSetupDatamartsRequest = {
   },
 };
 
-apiInstance.guardiumConnectorSetupDatamarts(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorSetupDatamarts(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1805,16 +1772,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorTaskErrorRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorTaskErrorRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorTaskErrorRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3TaskErrorRequest
+  
   guardiumconnectorv3TaskErrorRequest: {
     centralManagerId: "centralManagerId_example",
     errorCode: "errorCode_example",
@@ -1832,9 +1799,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorTaskErrorRequest = {
   },
 };
 
-apiInstance.guardiumConnectorTaskError(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorTaskError(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1876,14 +1842,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest = {
-  // Guardiumconnectorv3DatabaseConnectionStringRequest
+const request: GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest = {
+  
   guardiumconnectorv3DatabaseConnectionStringRequest: {
     dbhost: "dbhost_example",
     dbname: "dbname_example",
@@ -1893,9 +1859,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorTestDatabaseConnectionRequest = {
   },
 };
 
-apiInstance.guardiumConnectorTestDatabaseConnection(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorTestDatabaseConnection(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1936,14 +1901,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest = {
-  // Guardiumconnectorv3UpdateDmExclusionRequest
+const request: GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest = {
+  
   guardiumconnectorv3UpdateDmExclusionRequest: {
     datamartList: [
       "datamartList_example",
@@ -1951,9 +1916,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorUpdateDmExclusionRequest = {
   },
 };
 
-apiInstance.guardiumConnectorUpdateDmExclusion(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorUpdateDmExclusion(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1994,16 +1958,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // Guardiumconnectorv3UpdateStreamingRequest
+  
   guardiumconnectorv3UpdateStreamingRequest: {
     centralManagerId: "centralManagerId_example",
     records: [
@@ -2024,9 +1988,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorUpdateStreamingRequest = {
   },
 };
 
-apiInstance.guardiumConnectorUpdateStreaming(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorUpdateStreaming(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -2068,18 +2031,18 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, GuardiumConnectorApi } from '';
+import type { GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .GuardiumConnectorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new GuardiumConnectorApi(configuration);
 
-let body:.GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest = {
-  // string | ID of central manager.
+const request: GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest = {
+    // ID of central manager.
   centralManagerId: "central_manager_id_example",
-  // string | ID of task being updated.
+    // ID of task being updated.
   taskId: "task_id_example",
-  // Guardiumconnectorv3UpdateTaskRequest
+  
   guardiumconnectorv3UpdateTaskRequest: {
     centralManagerId: "centralManagerId_example",
     interval: "interval_example",
@@ -2087,9 +2050,8 @@ let body:.GuardiumConnectorApiGuardiumConnectorUpdateTaskRequest = {
   },
 };
 
-apiInstance.guardiumConnectorUpdateTask(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.guardiumConnectorUpdateTask(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

@@ -30,8 +30,8 @@ class Notificationsv3UpdateNotificationRecordRequest(BaseModel):
     A request to update a specific notification with the specified fields. The ID field is required, all other fields are optional. Specified fields will be used to included in the persisted NotificationRecord.  If no fields are specified then the  notification record update is not performed.  If the ID is not specified an error is returned.
     """ # noqa: E501
     notification_id: Optional[List[StrictStr]] = Field(default=None, description="Unique IDs for notifications; required for update.")
-    severity: Optional[Notificationsv3NotificationSeverity] = None
-    state: Optional[Notificationsv3NotificationState] = None
+    severity: Optional[Notificationsv3NotificationSeverity] = Notificationsv3NotificationSeverity.UNDEFINED
+    state: Optional[Notificationsv3NotificationState] = Notificationsv3NotificationState.UNREAD
     template_data: Optional[List[Notificationsv3TemplateProperty]] = Field(default=None, description="Not required for update.")
     __properties: ClassVar[List[str]] = ["notification_id", "severity", "state", "template_data"]
 
@@ -77,9 +77,9 @@ class Notificationsv3UpdateNotificationRecordRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in template_data (list)
         _items = []
         if self.template_data:
-            for _item in self.template_data:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_template_data in self.template_data:
+                if _item_template_data:
+                    _items.append(_item_template_data.to_dict())
             _dict['template_data'] = _items
         return _dict
 
@@ -94,8 +94,8 @@ class Notificationsv3UpdateNotificationRecordRequest(BaseModel):
 
         _obj = cls.model_validate({
             "notification_id": obj.get("notification_id"),
-            "severity": obj.get("severity"),
-            "state": obj.get("state"),
+            "severity": obj.get("severity") if obj.get("severity") is not None else Notificationsv3NotificationSeverity.UNDEFINED,
+            "state": obj.get("state") if obj.get("state") is not None else Notificationsv3NotificationState.UNREAD,
             "template_data": [Notificationsv3TemplateProperty.from_dict(_item) for _item in obj["template_data"]] if obj.get("template_data") is not None else None
         })
         return _obj

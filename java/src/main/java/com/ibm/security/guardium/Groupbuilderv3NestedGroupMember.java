@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,88 +38,91 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * NestedGroupMember lists the group members in nested (hierarchical) groups.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Groupbuilderv3NestedGroupMember {
   public static final String SERIALIZED_NAME_GROUP_ID = "group_id";
   @SerializedName(SERIALIZED_NAME_GROUP_ID)
+  @javax.annotation.Nullable
   private Integer groupId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_NESTED_MEMBER_ID = "nested_member_id";
   @SerializedName(SERIALIZED_NAME_NESTED_MEMBER_ID)
+  @javax.annotation.Nullable
   private Integer nestedMemberId;
 
   public Groupbuilderv3NestedGroupMember() {
   }
 
-  public Groupbuilderv3NestedGroupMember groupId(Integer groupId) {
+  public Groupbuilderv3NestedGroupMember groupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
+  /**
    * Group ID.
    * @return groupId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getGroupId() {
     return groupId;
   }
 
-  public void setGroupId(Integer groupId) {
+  public void setGroupId(@javax.annotation.Nullable Integer groupId) {
     this.groupId = groupId;
   }
 
 
-  public Groupbuilderv3NestedGroupMember name(String name) {
+  public Groupbuilderv3NestedGroupMember name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Group member name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public Groupbuilderv3NestedGroupMember nestedMemberId(Integer nestedMemberId) {
+  public Groupbuilderv3NestedGroupMember nestedMemberId(@javax.annotation.Nullable Integer nestedMemberId) {
     this.nestedMemberId = nestedMemberId;
     return this;
   }
 
-   /**
+  /**
    * Group member ID.
    * @return nestedMemberId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getNestedMemberId() {
     return nestedMemberId;
   }
 
-  public void setNestedMemberId(Integer nestedMemberId) {
+  public void setNestedMemberId(@javax.annotation.Nullable Integer nestedMemberId) {
     this.nestedMemberId = nestedMemberId;
   }
 
@@ -171,25 +175,22 @@ public class Groupbuilderv3NestedGroupMember {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("group_id");
-    openapiFields.add("name");
-    openapiFields.add("nested_member_id");
+    openapiFields = new HashSet<String>(Arrays.asList("group_id", "name", "nested_member_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3NestedGroupMember
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Groupbuilderv3NestedGroupMember
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Groupbuilderv3NestedGroupMember.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Groupbuilderv3NestedGroupMember is not found in the empty JSON string", Groupbuilderv3NestedGroupMember.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Groupbuilderv3NestedGroupMember is not found in the empty JSON string", Groupbuilderv3NestedGroupMember.openapiRequiredFields.toString()));
         }
       }
 
@@ -197,12 +198,12 @@ public class Groupbuilderv3NestedGroupMember {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Groupbuilderv3NestedGroupMember.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Groupbuilderv3NestedGroupMember` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Groupbuilderv3NestedGroupMember` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
   }
 
@@ -235,22 +236,22 @@ public class Groupbuilderv3NestedGroupMember {
     }
   }
 
- /**
-  * Create an instance of Groupbuilderv3NestedGroupMember given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Groupbuilderv3NestedGroupMember
-  * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3NestedGroupMember
-  */
+  /**
+   * Create an instance of Groupbuilderv3NestedGroupMember given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Groupbuilderv3NestedGroupMember
+   * @throws IOException if the JSON string is invalid with respect to Groupbuilderv3NestedGroupMember
+   */
   public static Groupbuilderv3NestedGroupMember fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Groupbuilderv3NestedGroupMember.class);
   }
 
- /**
-  * Convert an instance of Groupbuilderv3NestedGroupMember to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Groupbuilderv3NestedGroupMember to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

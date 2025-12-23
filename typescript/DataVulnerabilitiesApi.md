@@ -23,26 +23,25 @@ Add or update the status comment of a vulnerability status to keep track of the 
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest = {
-  // string
+const request: DataVulnerabilitiesApiAddVulnerabilityStatusCommentRequest = {
+  
   vulnerabilityId: "384cd426-b187-438a-affc-e12b323f5890",
-  // string
+  
   statusId: "statusId_example",
-  // AddCommentBody
+  
   addCommentBody: {
     comment: "comment_example",
   },
 };
 
-apiInstance.addVulnerabilityStatusComment(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.addVulnerabilityStatusComment(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -86,20 +85,19 @@ Get a summary of all the vulnerabilities. You can also filter the results of the
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest = {
-  // VulnerabilitiesFilterOptions (optional)
+const request: DataVulnerabilitiesApiGetVulnerabilitiesSummaryRequest = {
+  
   filter: null,
 };
 
-apiInstance.getVulnerabilitiesSummary(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getVulnerabilitiesSummary(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -141,20 +139,19 @@ Get vulnerability details by providing its ID.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiGetVulnerabilityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiGetVulnerabilityRequest = {
-  // string
+const request: DataVulnerabilitiesApiGetVulnerabilityRequest = {
+  
   vulnerabilityId: "384cd426-b187-438a-affc-e12b323f5890",
 };
 
-apiInstance.getVulnerability(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.getVulnerability(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -196,29 +193,28 @@ Get a list of data vulnerabilities based on a filter applied. You can filter by 
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiListVulnerabilitiesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiListVulnerabilitiesRequest = {
-  // VulnerabilitiesFilterOptions (optional)
+const request: DataVulnerabilitiesApiListVulnerabilitiesRequest = {
+  
   filter: null,
-  // ListVulnerabilitiesSortParameter (optional)
+  
   sort: {
     sortBy: "criticality",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listVulnerabilities(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listVulnerabilities(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -263,29 +259,28 @@ Get a list of all the vulnerabilities of data stores.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest = {
-  // VulnerabilitiesByDataStoreFilterOptions (optional)
+const request: DataVulnerabilitiesApiListVulnerabilitiesByDataStoreRequest = {
+  
   filter: null,
-  // ListVulnerabilitiesByDataStoreSortParameter (optional)
+  
   sort: {
     sortBy: "vulnerabilitiesCount",
     sortOrder: 1,
   },
-  // number (optional)
+  
   pageSize: 3.14,
-  // string (optional)
+  
   nextToken: "nextToken_example",
 };
 
-apiInstance.listVulnerabilitiesByDataStore(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.listVulnerabilitiesByDataStore(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -330,24 +325,23 @@ Delete a status comment of a vulnerability status.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest = {
-  // string
+const request: DataVulnerabilitiesApiRemoveVulnerabilityStatusCommentRequest = {
+  
   vulnerabilityId: "384cd426-b187-438a-affc-e12b323f5890",
-  // string
+  
   statusId: "statusId_example",
-  // string
+  
   commentId: "commentId_example",
 };
 
-apiInstance.removeVulnerabilityStatusComment(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.removeVulnerabilityStatusComment(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -391,24 +385,23 @@ Add or update the status of a vulnerability to track its progress.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiSetVulnerabilityStatusRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiSetVulnerabilityStatusRequest = {
-  // string
+const request: DataVulnerabilitiesApiSetVulnerabilityStatusRequest = {
+  
   vulnerabilityId: "vulnerabilityId_example",
-  // SetVulnerabilityStatusRequest
+  
   setVulnerabilityStatusRequest: {
     status: "review",
   },
 };
 
-apiInstance.setVulnerabilityStatus(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.setVulnerabilityStatus(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -451,28 +444,27 @@ Set a vulnerability status of a vulnerability.
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, DataVulnerabilitiesApi } from '';
+import type { DataVulnerabilitiesApiUpdateVulnerabilityStatusCommentRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .DataVulnerabilitiesApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new DataVulnerabilitiesApi(configuration);
 
-let body:.DataVulnerabilitiesApiUpdateVulnerabilityStatusCommentRequest = {
-  // string
+const request: DataVulnerabilitiesApiUpdateVulnerabilityStatusCommentRequest = {
+  
   vulnerabilityId: "384cd426-b187-438a-affc-e12b323f5890",
-  // string
+  
   statusId: "statusId_example",
-  // string
+  
   commentId: "commentId_example",
-  // UpdateCommentBody
+  
   updateCommentBody: {
     comment: "comment_example",
   },
 };
 
-apiInstance.updateVulnerabilityStatusComment(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.updateVulnerabilityStatusComment(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

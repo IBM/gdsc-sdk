@@ -72,9 +72,9 @@ class Schedulerv3GetDependenciesResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in dependencies (list)
         _items = []
         if self.dependencies:
-            for _item in self.dependencies:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_dependencies in self.dependencies:
+                if _item_dependencies:
+                    _items.append(_item_dependencies.to_dict())
             _dict['dependencies'] = _items
         return _dict
 

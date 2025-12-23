@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **additional_data** | **Dict[str, str]** |  | [optional] 
 **contents** | **str** |  | [optional] 
 **integration_id** | **str** |  | [optional] 
-**severity** | [**Qspmpolicymanagerv3NotificationSeverity**](Qspmpolicymanagerv3NotificationSeverity.md) |  | [optional] 
+**severity** | [**Qspmpolicymanagerv3NotificationSeverity**](Qspmpolicymanagerv3NotificationSeverity.md) |  | [optional] [default to Qspmpolicymanagerv3NotificationSeverity.UNDEFINED]
 **title** | **str** |  | [optional] 
 
 ## Example

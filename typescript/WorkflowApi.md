@@ -34,14 +34,14 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowCreateCaseRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowCreateCaseRequest = {
-  // Workflowv3CreateCaseRequest
+const request: WorkflowApiWorkflowCreateCaseRequest = {
+  
   workflowv3CreateCaseRequest: {
     _case: {
       artifacts: [
@@ -66,9 +66,8 @@ let body:.WorkflowApiWorkflowCreateCaseRequest = {
   },
 };
 
-apiInstance.workflowCreateCase(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowCreateCase(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -109,14 +108,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowCreateProductEntityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowCreateProductEntityRequest = {
-  // Workflowv3ProductEntity
+const request: WorkflowApiWorkflowCreateProductEntityRequest = {
+  
   workflowv3ProductEntity: {
     entity: {
       disabled: true,
@@ -170,9 +169,8 @@ let body:.WorkflowApiWorkflowCreateProductEntityRequest = {
   },
 };
 
-apiInstance.workflowCreateProductEntity(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowCreateProductEntity(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -213,16 +211,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowCreateTaskRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowCreateTaskRequest = {
-  // string | Create tasks with common parent.
+const request: WorkflowApiWorkflowCreateTaskRequest = {
+    // Create tasks with common parent.
   caseId: "case_id_example",
-  // Workflowv3CreateTaskRequest
+  
   workflowv3CreateTaskRequest: {
     caseId: "caseId_example",
     task: {
@@ -286,9 +284,8 @@ let body:.WorkflowApiWorkflowCreateTaskRequest = {
   },
 };
 
-apiInstance.workflowCreateTask(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowCreateTask(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -330,14 +327,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowCreateWorkflowEventRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowCreateWorkflowEventRequest = {
-  // Workflowv3WorkflowEvent
+const request: WorkflowApiWorkflowCreateWorkflowEventRequest = {
+  
   workflowv3WorkflowEvent: {
     data: {
       "key": "key_example",
@@ -350,9 +347,8 @@ let body:.WorkflowApiWorkflowCreateWorkflowEventRequest = {
   },
 };
 
-apiInstance.workflowCreateWorkflowEvent(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowCreateWorkflowEvent(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -393,20 +389,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowDeleteProductEntityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowDeleteProductEntityRequest = {
-  // string | Unique id for the product entity
+const request: WorkflowApiWorkflowDeleteProductEntityRequest = {
+    // Unique id for the product entity
   entityId: "entity_id_example",
 };
 
-apiInstance.workflowDeleteProductEntity(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowDeleteProductEntity(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -447,26 +442,25 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetCasesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetCasesRequest = {
-  // string | Optional case_id to get a response of an array of one member. (optional)
+const request: WorkflowApiWorkflowGetCasesRequest = {
+    // Optional case_id to get a response of an array of one member. (optional)
   caseId: "case_id_example",
-  // string | Optional field to sort by | first character determines ascending (>) or descending (<). (optional)
+    // Optional field to sort by | first character determines ascending (>) or descending (<). (optional)
   sortBy: "sort_by_example",
-  // number | Optional starting point for the page of data. (optional)
+    // Optional starting point for the page of data. (optional)
   offset: 1,
-  // number | Optional page size. (optional)
+    // Optional page size. (optional)
   limit: 1,
 };
 
-apiInstance.workflowGetCases(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetCases(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -510,14 +504,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetCasesCountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetCasesCountRequest = {
-  // Workflowv3GetCasesCountRequest
+const request: WorkflowApiWorkflowGetCasesCountRequest = {
+  
   workflowv3GetCasesCountRequest: {
     filter: {
       assignedToMe: true,
@@ -553,9 +547,8 @@ let body:.WorkflowApiWorkflowGetCasesCountRequest = {
   },
 };
 
-apiInstance.workflowGetCasesCount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetCasesCount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -596,22 +589,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetFilenameRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetFilenameRequest = {
-  // string | Can be \"*\" if JWT token contains the case_id.
+const request: WorkflowApiWorkflowGetFilenameRequest = {
+    // Can be \"*\" if JWT token contains the case_id.
   caseId: "case_id_example",
-  // string | Can be \"*\" if JWT token contains the task_id.
+    // Can be \"*\" if JWT token contains the task_id.
   taskId: "task_id_example",
 };
 
-apiInstance.workflowGetFilename(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetFilename(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -653,16 +645,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetJobsCountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetJobsCountRequest = {
-  // string | Case ID - can be * for all
+const request: WorkflowApiWorkflowGetJobsCountRequest = {
+    // Case ID - can be * for all
   caseId: "case_id_example",
-  // Workflowv3GetJobsCountRequest
+  
   workflowv3GetJobsCountRequest: {
     caseId: "caseId_example",
     filter: {
@@ -699,9 +691,8 @@ let body:.WorkflowApiWorkflowGetJobsCountRequest = {
   },
 };
 
-apiInstance.workflowGetJobsCount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetJobsCount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -743,22 +734,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetProductEntitiesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetProductEntitiesRequest = {
-  // number | Optional starting point for the page of data. (optional)
+const request: WorkflowApiWorkflowGetProductEntitiesRequest = {
+    // Optional starting point for the page of data. (optional)
   offset: 1,
-  // number | Optional page size. (optional)
+    // Optional page size. (optional)
   limit: 1,
 };
 
-apiInstance.workflowGetProductEntities(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetProductEntities(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -800,20 +790,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetProductEntityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetProductEntityRequest = {
-  // string | Unique id for the product entity
+const request: WorkflowApiWorkflowGetProductEntityRequest = {
+    // Unique id for the product entity
   entityId: "entity_id_example",
 };
 
-apiInstance.workflowGetProductEntity(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetProductEntity(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -854,26 +843,25 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetReportResultRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetReportResultRequest = {
-  // string | ID to get the case  (read-only).
+const request: WorkflowApiWorkflowGetReportResultRequest = {
+    // ID to get the case  (read-only).
   caseId: "case_id_example",
-  // string | ID to get the task for case(read-only).
+    // ID to get the task for case(read-only).
   taskId: "task_id_example",
-  // number | Optional starting point for the page of data. (optional)
+    // Optional starting point for the page of data. (optional)
   offset: 1,
-  // number | Optional page size. (optional)
+    // Optional page size. (optional)
   limit: 1,
 };
 
-apiInstance.workflowGetReportResult(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetReportResult(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -917,22 +905,21 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetTasksRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetTasksRequest = {
-  // string | Mandaroty: The parent case which contains the tasks.
+const request: WorkflowApiWorkflowGetTasksRequest = {
+    // Mandaroty: The parent case which contains the tasks.
   caseId: "case_id_example",
-  // string | Optional: task_id to return an array of one. (optional)
+    // Optional: task_id to return an array of one. (optional)
   taskId: "task_id_example",
 };
 
-apiInstance.workflowGetTasks(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetTasks(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -974,16 +961,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowGetTasksCountRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowGetTasksCountRequest = {
-  // string | Case ID - can be * for all
+const request: WorkflowApiWorkflowGetTasksCountRequest = {
+    // Case ID - can be * for all
   caseId: "case_id_example",
-  // Workflowv3GetTasksCountRequest
+  
   workflowv3GetTasksCountRequest: {
     caseId: "caseId_example",
     filter: {
@@ -1020,9 +1007,8 @@ let body:.WorkflowApiWorkflowGetTasksCountRequest = {
   },
 };
 
-apiInstance.workflowGetTasksCount(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowGetTasksCount(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1064,14 +1050,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowSearchCasesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowSearchCasesRequest = {
-  // Workflowv3SearchCasesRequest
+const request: WorkflowApiWorkflowSearchCasesRequest = {
+  
   workflowv3SearchCasesRequest: {
     filter: {
       assignedToMe: true,
@@ -1110,9 +1096,8 @@ let body:.WorkflowApiWorkflowSearchCasesRequest = {
   },
 };
 
-apiInstance.workflowSearchCases(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowSearchCases(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1153,14 +1138,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowSearchReportsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowSearchReportsRequest = {
-  // Workflowv3SearchCasesRequest
+const request: WorkflowApiWorkflowSearchReportsRequest = {
+  
   workflowv3SearchCasesRequest: {
     filter: {
       assignedToMe: true,
@@ -1199,9 +1184,8 @@ let body:.WorkflowApiWorkflowSearchReportsRequest = {
   },
 };
 
-apiInstance.workflowSearchReports(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowSearchReports(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1242,16 +1226,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowSearchTasksRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowSearchTasksRequest = {
-  // string | Case ID - can be * for all
+const request: WorkflowApiWorkflowSearchTasksRequest = {
+    // Case ID - can be * for all
   caseId: "case_id_example",
-  // Workflowv3SearchTasksRequest
+  
   workflowv3SearchTasksRequest: {
     caseId: "caseId_example",
     filter: {
@@ -1293,9 +1277,8 @@ let body:.WorkflowApiWorkflowSearchTasksRequest = {
   },
 };
 
-apiInstance.workflowSearchTasks(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowSearchTasks(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1337,14 +1320,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowUpdateCasesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowUpdateCasesRequest = {
-  // Workflowv3UpdateCasesRequest
+const request: WorkflowApiWorkflowUpdateCasesRequest = {
+  
   workflowv3UpdateCasesRequest: {
     cases: [
       {
@@ -1374,9 +1357,8 @@ let body:.WorkflowApiWorkflowUpdateCasesRequest = {
   },
 };
 
-apiInstance.workflowUpdateCases(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowUpdateCases(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1417,16 +1399,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowUpdateProductEntityRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowUpdateProductEntityRequest = {
-  // string | Unique Entity id, required for update.
+const request: WorkflowApiWorkflowUpdateProductEntityRequest = {
+    // Unique Entity id, required for update.
   entityId: "entity_id_example",
-  // Workflowv3UpdateProductEntityRequest
+  
   workflowv3UpdateProductEntityRequest: {
     entityId: "entityId_example",
     productEntity: {
@@ -1483,9 +1465,8 @@ let body:.WorkflowApiWorkflowUpdateProductEntityRequest = {
   },
 };
 
-apiInstance.workflowUpdateProductEntity(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowUpdateProductEntity(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -1527,16 +1508,16 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, WorkflowApi } from '';
+import type { WorkflowApiWorkflowUpdateTasksRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .WorkflowApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new WorkflowApi(configuration);
 
-let body:.WorkflowApiWorkflowUpdateTasksRequest = {
-  // string | Update tasks belonging to common parent.
+const request: WorkflowApiWorkflowUpdateTasksRequest = {
+    // Update tasks belonging to common parent.
   caseId: "case_id_example",
-  // Workflowv3UpdateTasksRequest
+  
   workflowv3UpdateTasksRequest: {
     caseId: "caseId_example",
     tasks: [
@@ -1585,9 +1566,8 @@ let body:.WorkflowApiWorkflowUpdateTasksRequest = {
   },
 };
 
-apiInstance.workflowUpdateTasks(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.workflowUpdateTasks(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

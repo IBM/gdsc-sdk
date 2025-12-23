@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,44 +41,49 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * DatasetDetail provides the detail of the definition.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Ecosystemv3DatasetDetail {
   public static final String SERIALIZED_NAME_COLUMNS = "columns";
   @SerializedName(SERIALIZED_NAME_COLUMNS)
+  @javax.annotation.Nullable
   private List<Ecosystemv3ColumnDefinition> columns = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_DATA_COUNT = "data_count";
   @SerializedName(SERIALIZED_NAME_DATA_COUNT)
+  @javax.annotation.Nullable
   private Long dataCount;
 
   public static final String SERIALIZED_NAME_DATASET_NAME = "dataset_name";
   @SerializedName(SERIALIZED_NAME_DATASET_NAME)
+  @javax.annotation.Nullable
   private String datasetName;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_EDITABLE = "editable";
   @SerializedName(SERIALIZED_NAME_EDITABLE)
+  @javax.annotation.Nullable
   private Boolean editable;
 
   public Ecosystemv3DatasetDetail() {
   }
 
-  public Ecosystemv3DatasetDetail columns(List<Ecosystemv3ColumnDefinition> columns) {
+  public Ecosystemv3DatasetDetail columns(@javax.annotation.Nullable List<Ecosystemv3ColumnDefinition> columns) {
     this.columns = columns;
     return this;
   }
@@ -90,92 +96,92 @@ public class Ecosystemv3DatasetDetail {
     return this;
   }
 
-   /**
+  /**
    * Columns of the definition.
    * @return columns
-  **/
+   */
   @javax.annotation.Nullable
   public List<Ecosystemv3ColumnDefinition> getColumns() {
     return columns;
   }
 
-  public void setColumns(List<Ecosystemv3ColumnDefinition> columns) {
+  public void setColumns(@javax.annotation.Nullable List<Ecosystemv3ColumnDefinition> columns) {
     this.columns = columns;
   }
 
 
-  public Ecosystemv3DatasetDetail dataCount(Long dataCount) {
+  public Ecosystemv3DatasetDetail dataCount(@javax.annotation.Nullable Long dataCount) {
     this.dataCount = dataCount;
     return this;
   }
 
-   /**
+  /**
    * Row count on a dataset.
    * @return dataCount
-  **/
+   */
   @javax.annotation.Nullable
   public Long getDataCount() {
     return dataCount;
   }
 
-  public void setDataCount(Long dataCount) {
+  public void setDataCount(@javax.annotation.Nullable Long dataCount) {
     this.dataCount = dataCount;
   }
 
 
-  public Ecosystemv3DatasetDetail datasetName(String datasetName) {
+  public Ecosystemv3DatasetDetail datasetName(@javax.annotation.Nullable String datasetName) {
     this.datasetName = datasetName;
     return this;
   }
 
-   /**
+  /**
    * The name of the definition.
    * @return datasetName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDatasetName() {
     return datasetName;
   }
 
-  public void setDatasetName(String datasetName) {
+  public void setDatasetName(@javax.annotation.Nullable String datasetName) {
     this.datasetName = datasetName;
   }
 
 
-  public Ecosystemv3DatasetDetail description(String description) {
+  public Ecosystemv3DatasetDetail description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Description in detail.
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public Ecosystemv3DatasetDetail editable(Boolean editable) {
+  public Ecosystemv3DatasetDetail editable(@javax.annotation.Nullable Boolean editable) {
     this.editable = editable;
     return this;
   }
 
-   /**
+  /**
    * Can this data set schema be edited.
    * @return editable
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getEditable() {
     return editable;
   }
 
-  public void setEditable(Boolean editable) {
+  public void setEditable(@javax.annotation.Nullable Boolean editable) {
     this.editable = editable;
   }
 
@@ -232,27 +238,22 @@ public class Ecosystemv3DatasetDetail {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("columns");
-    openapiFields.add("data_count");
-    openapiFields.add("dataset_name");
-    openapiFields.add("description");
-    openapiFields.add("editable");
+    openapiFields = new HashSet<String>(Arrays.asList("columns", "data_count", "dataset_name", "description", "editable"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3DatasetDetail
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Ecosystemv3DatasetDetail
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Ecosystemv3DatasetDetail.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Ecosystemv3DatasetDetail is not found in the empty JSON string", Ecosystemv3DatasetDetail.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Ecosystemv3DatasetDetail is not found in the empty JSON string", Ecosystemv3DatasetDetail.openapiRequiredFields.toString()));
         }
       }
 
@@ -260,7 +261,7 @@ public class Ecosystemv3DatasetDetail {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Ecosystemv3DatasetDetail.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Ecosystemv3DatasetDetail` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Ecosystemv3DatasetDetail` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -269,7 +270,7 @@ public class Ecosystemv3DatasetDetail {
         if (jsonArraycolumns != null) {
           // ensure the json data is an array
           if (!jsonObj.get("columns").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `columns` to be an array in the JSON string but got `%s`", jsonObj.get("columns").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `columns` to be an array in the JSON string but got `%s`", jsonObj.get("columns").toString()));
           }
 
           // validate the optional field `columns` (array)
@@ -279,10 +280,10 @@ public class Ecosystemv3DatasetDetail {
         }
       }
       if ((jsonObj.get("dataset_name") != null && !jsonObj.get("dataset_name").isJsonNull()) && !jsonObj.get("dataset_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dataset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataset_name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dataset_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dataset_name").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
   }
 
@@ -315,22 +316,22 @@ public class Ecosystemv3DatasetDetail {
     }
   }
 
- /**
-  * Create an instance of Ecosystemv3DatasetDetail given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Ecosystemv3DatasetDetail
-  * @throws IOException if the JSON string is invalid with respect to Ecosystemv3DatasetDetail
-  */
+  /**
+   * Create an instance of Ecosystemv3DatasetDetail given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Ecosystemv3DatasetDetail
+   * @throws IOException if the JSON string is invalid with respect to Ecosystemv3DatasetDetail
+   */
   public static Ecosystemv3DatasetDetail fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Ecosystemv3DatasetDetail.class);
   }
 
- /**
-  * Convert an instance of Ecosystemv3DatasetDetail to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Ecosystemv3DatasetDetail to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

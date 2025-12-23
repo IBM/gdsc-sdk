@@ -6,9 +6,9 @@ GetRiskEventProcessStatusResponse is the request object for GetRiskEventProcessS
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**feedback_status** | [**Riskanalyticscontrollerv3ProcessStatus**](Riskanalyticscontrollerv3ProcessStatus.md) |  | [optional] 
+**feedback_status** | [**Riskanalyticscontrollerv3ProcessStatus**](Riskanalyticscontrollerv3ProcessStatus.md) |  | [optional] [default to Riskanalyticscontrollerv3ProcessStatus.UNDEFINED_PROCESS_STATUS_TYPE]
 **last_run_date** | **datetime** | Last run date in format YYYY-MM-DDTHH:mm:ssZ. | [optional] 
-**process_status** | [**Riskanalyticscontrollerv3ProcessStatus**](Riskanalyticscontrollerv3ProcessStatus.md) |  | [optional] 
+**process_status** | [**Riskanalyticscontrollerv3ProcessStatus**](Riskanalyticscontrollerv3ProcessStatus.md) |  | [optional] [default to Riskanalyticscontrollerv3ProcessStatus.UNDEFINED_PROCESS_STATUS_TYPE]
 
 ## Example
 

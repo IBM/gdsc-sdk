@@ -84,30 +84,30 @@ class DataStoresSummary(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in store_types (list)
         _items = []
         if self.store_types:
-            for _item in self.store_types:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_store_types in self.store_types:
+                if _item_store_types:
+                    _items.append(_item_store_types.to_dict())
             _dict['storeTypes'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in cloud_locations (list)
         _items = []
         if self.cloud_locations:
-            for _item in self.cloud_locations:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_cloud_locations in self.cloud_locations:
+                if _item_cloud_locations:
+                    _items.append(_item_cloud_locations.to_dict())
             _dict['cloudLocations'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in service_providers (list)
         _items = []
         if self.service_providers:
-            for _item in self.service_providers:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_service_providers in self.service_providers:
+                if _item_service_providers:
+                    _items.append(_item_service_providers.to_dict())
             _dict['serviceProviders'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in sensitivities (list)
         _items = []
         if self.sensitivities:
-            for _item in self.sensitivities:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_sensitivities in self.sensitivities:
+                if _item_sensitivities:
+                    _items.append(_item_sensitivities.to_dict())
             _dict['sensitivities'] = _items
         return _dict
 

@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,42 +39,43 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * CreateChartRequest is the argument type used to create a chart.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3CreateChartRequest {
   public static final String SERIALIZED_NAME_CHART_SETTINGS = "chart_settings";
   @SerializedName(SERIALIZED_NAME_CHART_SETTINGS)
+  @javax.annotation.Nullable
   private Reportsv3ChartSettings chartSettings;
 
   public Reportsv3CreateChartRequest() {
   }
 
-  public Reportsv3CreateChartRequest chartSettings(Reportsv3ChartSettings chartSettings) {
+  public Reportsv3CreateChartRequest chartSettings(@javax.annotation.Nullable Reportsv3ChartSettings chartSettings) {
     this.chartSettings = chartSettings;
     return this;
   }
 
-   /**
+  /**
    * Get chartSettings
    * @return chartSettings
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3ChartSettings getChartSettings() {
     return chartSettings;
   }
 
-  public void setChartSettings(Reportsv3ChartSettings chartSettings) {
+  public void setChartSettings(@javax.annotation.Nullable Reportsv3ChartSettings chartSettings) {
     this.chartSettings = chartSettings;
   }
 
@@ -122,23 +124,22 @@ public class Reportsv3CreateChartRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("chart_settings");
+    openapiFields = new HashSet<String>(Arrays.asList("chart_settings"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3CreateChartRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3CreateChartRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3CreateChartRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3CreateChartRequest is not found in the empty JSON string", Reportsv3CreateChartRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3CreateChartRequest is not found in the empty JSON string", Reportsv3CreateChartRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -146,7 +147,7 @@ public class Reportsv3CreateChartRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3CreateChartRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3CreateChartRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3CreateChartRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -185,22 +186,22 @@ public class Reportsv3CreateChartRequest {
     }
   }
 
- /**
-  * Create an instance of Reportsv3CreateChartRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3CreateChartRequest
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3CreateChartRequest
-  */
+  /**
+   * Create an instance of Reportsv3CreateChartRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3CreateChartRequest
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3CreateChartRequest
+   */
   public static Reportsv3CreateChartRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3CreateChartRequest.class);
   }
 
- /**
-  * Convert an instance of Reportsv3CreateChartRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3CreateChartRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -43,6 +43,8 @@ export class Policybuilderv3GetPolicyDetailsResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "activationStatus",
@@ -106,6 +108,5 @@ export class Policybuilderv3GetPolicyDetailsResponse {
     public constructor() {
     }
 }
-
 
 

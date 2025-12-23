@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,55 +40,58 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Vulmanagementv3FilterCategory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Vulmanagementv3FilterCategory {
   public static final String SERIALIZED_NAME_CATEGORY_ID = "category_id";
   @SerializedName(SERIALIZED_NAME_CATEGORY_ID)
+  @javax.annotation.Nullable
   private String categoryId;
 
   public static final String SERIALIZED_NAME_SUB_CATEGORY_IDS = "sub_category_ids";
   @SerializedName(SERIALIZED_NAME_SUB_CATEGORY_IDS)
+  @javax.annotation.Nullable
   private List<String> subCategoryIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SUB_CATEGORY_VALUES = "sub_category_values";
   @SerializedName(SERIALIZED_NAME_SUB_CATEGORY_VALUES)
+  @javax.annotation.Nullable
   private List<String> subCategoryValues = new ArrayList<>();
 
   public Vulmanagementv3FilterCategory() {
   }
 
-  public Vulmanagementv3FilterCategory categoryId(String categoryId) {
+  public Vulmanagementv3FilterCategory categoryId(@javax.annotation.Nullable String categoryId) {
     this.categoryId = categoryId;
     return this;
   }
 
-   /**
+  /**
    * ID of the filter category.
    * @return categoryId
-  **/
+   */
   @javax.annotation.Nullable
   public String getCategoryId() {
     return categoryId;
   }
 
-  public void setCategoryId(String categoryId) {
+  public void setCategoryId(@javax.annotation.Nullable String categoryId) {
     this.categoryId = categoryId;
   }
 
 
-  public Vulmanagementv3FilterCategory subCategoryIds(List<String> subCategoryIds) {
+  public Vulmanagementv3FilterCategory subCategoryIds(@javax.annotation.Nullable List<String> subCategoryIds) {
     this.subCategoryIds = subCategoryIds;
     return this;
   }
@@ -100,21 +104,21 @@ public class Vulmanagementv3FilterCategory {
     return this;
   }
 
-   /**
+  /**
    * List of subcategory.
    * @return subCategoryIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSubCategoryIds() {
     return subCategoryIds;
   }
 
-  public void setSubCategoryIds(List<String> subCategoryIds) {
+  public void setSubCategoryIds(@javax.annotation.Nullable List<String> subCategoryIds) {
     this.subCategoryIds = subCategoryIds;
   }
 
 
-  public Vulmanagementv3FilterCategory subCategoryValues(List<String> subCategoryValues) {
+  public Vulmanagementv3FilterCategory subCategoryValues(@javax.annotation.Nullable List<String> subCategoryValues) {
     this.subCategoryValues = subCategoryValues;
     return this;
   }
@@ -127,16 +131,16 @@ public class Vulmanagementv3FilterCategory {
     return this;
   }
 
-   /**
+  /**
    * List of subcategory values.
    * @return subCategoryValues
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getSubCategoryValues() {
     return subCategoryValues;
   }
 
-  public void setSubCategoryValues(List<String> subCategoryValues) {
+  public void setSubCategoryValues(@javax.annotation.Nullable List<String> subCategoryValues) {
     this.subCategoryValues = subCategoryValues;
   }
 
@@ -189,25 +193,22 @@ public class Vulmanagementv3FilterCategory {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("category_id");
-    openapiFields.add("sub_category_ids");
-    openapiFields.add("sub_category_values");
+    openapiFields = new HashSet<String>(Arrays.asList("category_id", "sub_category_ids", "sub_category_values"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Vulmanagementv3FilterCategory
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Vulmanagementv3FilterCategory
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Vulmanagementv3FilterCategory.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Vulmanagementv3FilterCategory is not found in the empty JSON string", Vulmanagementv3FilterCategory.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Vulmanagementv3FilterCategory is not found in the empty JSON string", Vulmanagementv3FilterCategory.openapiRequiredFields.toString()));
         }
       }
 
@@ -215,20 +216,20 @@ public class Vulmanagementv3FilterCategory {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Vulmanagementv3FilterCategory.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Vulmanagementv3FilterCategory` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Vulmanagementv3FilterCategory` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("category_id") != null && !jsonObj.get("category_id").isJsonNull()) && !jsonObj.get("category_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `category_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category_id").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sub_category_ids") != null && !jsonObj.get("sub_category_ids").isJsonNull() && !jsonObj.get("sub_category_ids").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sub_category_ids` to be an array in the JSON string but got `%s`", jsonObj.get("sub_category_ids").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sub_category_ids` to be an array in the JSON string but got `%s`", jsonObj.get("sub_category_ids").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("sub_category_values") != null && !jsonObj.get("sub_category_values").isJsonNull() && !jsonObj.get("sub_category_values").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sub_category_values` to be an array in the JSON string but got `%s`", jsonObj.get("sub_category_values").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sub_category_values` to be an array in the JSON string but got `%s`", jsonObj.get("sub_category_values").toString()));
       }
   }
 
@@ -261,22 +262,22 @@ public class Vulmanagementv3FilterCategory {
     }
   }
 
- /**
-  * Create an instance of Vulmanagementv3FilterCategory given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Vulmanagementv3FilterCategory
-  * @throws IOException if the JSON string is invalid with respect to Vulmanagementv3FilterCategory
-  */
+  /**
+   * Create an instance of Vulmanagementv3FilterCategory given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Vulmanagementv3FilterCategory
+   * @throws IOException if the JSON string is invalid with respect to Vulmanagementv3FilterCategory
+   */
   public static Vulmanagementv3FilterCategory fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Vulmanagementv3FilterCategory.class);
   }
 
- /**
-  * Convert an instance of Vulmanagementv3FilterCategory to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Vulmanagementv3FilterCategory to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

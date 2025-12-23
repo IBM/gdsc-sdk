@@ -74,9 +74,9 @@ class Assetsv3OverviewParameter(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in ip_host (list)
         _items = []
         if self.ip_host:
-            for _item in self.ip_host:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_ip_host in self.ip_host:
+                if _item_ip_host:
+                    _items.append(_item_ip_host.to_dict())
             _dict['ip_host'] = _items
         return _dict
 

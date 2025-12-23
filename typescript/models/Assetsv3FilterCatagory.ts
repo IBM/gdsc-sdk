@@ -24,6 +24,8 @@ export class Assetsv3FilterCatagory {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "catagoryId",
@@ -69,4 +71,3 @@ export class Assetsv3FilterCatagory {
     public constructor() {
     }
 }
-

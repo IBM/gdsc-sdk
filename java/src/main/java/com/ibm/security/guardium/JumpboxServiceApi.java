@@ -105,13 +105,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceAuthorizeCall(Jumpboxv3AuthorizeRequest jumpboxv3AuthorizeRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceAuthorizeCall(@javax.annotation.Nonnull Jumpboxv3AuthorizeRequest jumpboxv3AuthorizeRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -157,7 +158,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceAuthorizeValidateBeforeCall(Jumpboxv3AuthorizeRequest jumpboxv3AuthorizeRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceAuthorizeValidateBeforeCall(@javax.annotation.Nonnull Jumpboxv3AuthorizeRequest jumpboxv3AuthorizeRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'jumpboxv3AuthorizeRequest' is set
         if (jumpboxv3AuthorizeRequest == null) {
             throw new ApiException("Missing the required parameter 'jumpboxv3AuthorizeRequest' when calling jumpboxServiceAuthorize(Async)");
@@ -174,13 +175,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3AuthorizeResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3AuthorizeResponse jumpboxServiceAuthorize(Jumpboxv3AuthorizeRequest jumpboxv3AuthorizeRequest) throws ApiException {
+    public Jumpboxv3AuthorizeResponse jumpboxServiceAuthorize(@javax.annotation.Nonnull Jumpboxv3AuthorizeRequest jumpboxv3AuthorizeRequest) throws ApiException {
         ApiResponse<Jumpboxv3AuthorizeResponse> localVarResp = jumpboxServiceAuthorizeWithHttpInfo(jumpboxv3AuthorizeRequest);
         return localVarResp.getData();
     }
@@ -192,13 +194,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3AuthorizeResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3AuthorizeResponse> jumpboxServiceAuthorizeWithHttpInfo(Jumpboxv3AuthorizeRequest jumpboxv3AuthorizeRequest) throws ApiException {
+    public ApiResponse<Jumpboxv3AuthorizeResponse> jumpboxServiceAuthorizeWithHttpInfo(@javax.annotation.Nonnull Jumpboxv3AuthorizeRequest jumpboxv3AuthorizeRequest) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceAuthorizeValidateBeforeCall(jumpboxv3AuthorizeRequest, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3AuthorizeResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -212,13 +215,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceAuthorizeAsync(Jumpboxv3AuthorizeRequest jumpboxv3AuthorizeRequest, final ApiCallback<Jumpboxv3AuthorizeResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceAuthorizeAsync(@javax.annotation.Nonnull Jumpboxv3AuthorizeRequest jumpboxv3AuthorizeRequest, final ApiCallback<Jumpboxv3AuthorizeResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceAuthorizeValidateBeforeCall(jumpboxv3AuthorizeRequest, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3AuthorizeResponse>(){}.getType();
@@ -232,13 +236,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceDeleteAccountCall(String accountId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceDeleteAccountCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -284,7 +289,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceDeleteAccountValidateBeforeCall(String accountId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceDeleteAccountValidateBeforeCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'accountId' is set
         if (accountId == null) {
             throw new ApiException("Missing the required parameter 'accountId' when calling jumpboxServiceDeleteAccount(Async)");
@@ -301,13 +306,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3DeleteAccountResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3DeleteAccountResponse jumpboxServiceDeleteAccount(String accountId) throws ApiException {
+    public Jumpboxv3DeleteAccountResponse jumpboxServiceDeleteAccount(@javax.annotation.Nonnull String accountId) throws ApiException {
         ApiResponse<Jumpboxv3DeleteAccountResponse> localVarResp = jumpboxServiceDeleteAccountWithHttpInfo(accountId);
         return localVarResp.getData();
     }
@@ -319,13 +325,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3DeleteAccountResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3DeleteAccountResponse> jumpboxServiceDeleteAccountWithHttpInfo(String accountId) throws ApiException {
+    public ApiResponse<Jumpboxv3DeleteAccountResponse> jumpboxServiceDeleteAccountWithHttpInfo(@javax.annotation.Nonnull String accountId) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceDeleteAccountValidateBeforeCall(accountId, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3DeleteAccountResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -339,13 +346,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceDeleteAccountAsync(String accountId, final ApiCallback<Jumpboxv3DeleteAccountResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceDeleteAccountAsync(@javax.annotation.Nonnull String accountId, final ApiCallback<Jumpboxv3DeleteAccountResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceDeleteAccountValidateBeforeCall(accountId, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3DeleteAccountResponse>(){}.getType();
@@ -361,13 +369,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceDeleteTenantCall(String tenantId, Boolean isPermanentDelete, Boolean async, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceDeleteTenantCall(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nullable Boolean isPermanentDelete, @javax.annotation.Nullable Boolean async, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -421,7 +430,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceDeleteTenantValidateBeforeCall(String tenantId, Boolean isPermanentDelete, Boolean async, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceDeleteTenantValidateBeforeCall(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nullable Boolean isPermanentDelete, @javax.annotation.Nullable Boolean async, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tenantId' is set
         if (tenantId == null) {
             throw new ApiException("Missing the required parameter 'tenantId' when calling jumpboxServiceDeleteTenant(Async)");
@@ -440,13 +449,14 @@ public class JumpboxServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object jumpboxServiceDeleteTenant(String tenantId, Boolean isPermanentDelete, Boolean async) throws ApiException {
+    public Object jumpboxServiceDeleteTenant(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nullable Boolean isPermanentDelete, @javax.annotation.Nullable Boolean async) throws ApiException {
         ApiResponse<Object> localVarResp = jumpboxServiceDeleteTenantWithHttpInfo(tenantId, isPermanentDelete, async);
         return localVarResp.getData();
     }
@@ -460,13 +470,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> jumpboxServiceDeleteTenantWithHttpInfo(String tenantId, Boolean isPermanentDelete, Boolean async) throws ApiException {
+    public ApiResponse<Object> jumpboxServiceDeleteTenantWithHttpInfo(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nullable Boolean isPermanentDelete, @javax.annotation.Nullable Boolean async) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceDeleteTenantValidateBeforeCall(tenantId, isPermanentDelete, async, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -482,13 +493,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceDeleteTenantAsync(String tenantId, Boolean isPermanentDelete, Boolean async, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceDeleteTenantAsync(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nullable Boolean isPermanentDelete, @javax.annotation.Nullable Boolean async, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceDeleteTenantValidateBeforeCall(tenantId, isPermanentDelete, async, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -502,13 +514,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceDeleteUserCall(String userId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceDeleteUserCall(@javax.annotation.Nonnull String userId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -554,7 +567,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceDeleteUserValidateBeforeCall(String userId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceDeleteUserValidateBeforeCall(@javax.annotation.Nonnull String userId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'userId' is set
         if (userId == null) {
             throw new ApiException("Missing the required parameter 'userId' when calling jumpboxServiceDeleteUser(Async)");
@@ -571,13 +584,14 @@ public class JumpboxServiceApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Object jumpboxServiceDeleteUser(String userId) throws ApiException {
+    public Object jumpboxServiceDeleteUser(@javax.annotation.Nonnull String userId) throws ApiException {
         ApiResponse<Object> localVarResp = jumpboxServiceDeleteUserWithHttpInfo(userId);
         return localVarResp.getData();
     }
@@ -589,13 +603,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> jumpboxServiceDeleteUserWithHttpInfo(String userId) throws ApiException {
+    public ApiResponse<Object> jumpboxServiceDeleteUserWithHttpInfo(@javax.annotation.Nonnull String userId) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceDeleteUserValidateBeforeCall(userId, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -609,13 +624,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceDeleteUserAsync(String userId, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceDeleteUserAsync(@javax.annotation.Nonnull String userId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceDeleteUserValidateBeforeCall(userId, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -631,13 +647,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceGetAccountCall(String accountId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceGetAccountCall(@javax.annotation.Nonnull String accountId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -691,7 +708,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceGetAccountValidateBeforeCall(String accountId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceGetAccountValidateBeforeCall(@javax.annotation.Nonnull String accountId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'accountId' is set
         if (accountId == null) {
             throw new ApiException("Missing the required parameter 'accountId' when calling jumpboxServiceGetAccount(Async)");
@@ -710,13 +727,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3GetAccountResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3GetAccountResponse jumpboxServiceGetAccount(String accountId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+    public Jumpboxv3GetAccountResponse jumpboxServiceGetAccount(@javax.annotation.Nonnull String accountId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady) throws ApiException {
         ApiResponse<Jumpboxv3GetAccountResponse> localVarResp = jumpboxServiceGetAccountWithHttpInfo(accountId, includeInactive, includeNotReady);
         return localVarResp.getData();
     }
@@ -730,13 +748,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3GetAccountResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3GetAccountResponse> jumpboxServiceGetAccountWithHttpInfo(String accountId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+    public ApiResponse<Jumpboxv3GetAccountResponse> jumpboxServiceGetAccountWithHttpInfo(@javax.annotation.Nonnull String accountId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceGetAccountValidateBeforeCall(accountId, includeInactive, includeNotReady, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3GetAccountResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -752,13 +771,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceGetAccountAsync(String accountId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback<Jumpboxv3GetAccountResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceGetAccountAsync(@javax.annotation.Nonnull String accountId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback<Jumpboxv3GetAccountResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceGetAccountValidateBeforeCall(accountId, includeInactive, includeNotReady, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3GetAccountResponse>(){}.getType();
@@ -775,13 +795,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceGetAccountsCall(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceGetAccountsCall(@javax.annotation.Nullable String uid, @javax.annotation.Nullable String externalId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -842,7 +863,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceGetAccountsValidateBeforeCall(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceGetAccountsValidateBeforeCall(@javax.annotation.Nullable String uid, @javax.annotation.Nullable String externalId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
         return jumpboxServiceGetAccountsCall(uid, externalId, includeInactive, includeNotReady, _callback);
 
     }
@@ -857,13 +878,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3GetAccountsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3GetAccountsResponse jumpboxServiceGetAccounts(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+    public Jumpboxv3GetAccountsResponse jumpboxServiceGetAccounts(@javax.annotation.Nullable String uid, @javax.annotation.Nullable String externalId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady) throws ApiException {
         ApiResponse<Jumpboxv3GetAccountsResponse> localVarResp = jumpboxServiceGetAccountsWithHttpInfo(uid, externalId, includeInactive, includeNotReady);
         return localVarResp.getData();
     }
@@ -878,13 +900,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3GetAccountsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3GetAccountsResponse> jumpboxServiceGetAccountsWithHttpInfo(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+    public ApiResponse<Jumpboxv3GetAccountsResponse> jumpboxServiceGetAccountsWithHttpInfo(@javax.annotation.Nullable String uid, @javax.annotation.Nullable String externalId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceGetAccountsValidateBeforeCall(uid, externalId, includeInactive, includeNotReady, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3GetAccountsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -901,13 +924,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceGetAccountsAsync(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback<Jumpboxv3GetAccountsResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceGetAccountsAsync(@javax.annotation.Nullable String uid, @javax.annotation.Nullable String externalId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback<Jumpboxv3GetAccountsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceGetAccountsValidateBeforeCall(uid, externalId, includeInactive, includeNotReady, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3GetAccountsResponse>(){}.getType();
@@ -923,13 +947,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceGetTenantCall(String tenantId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceGetTenantCall(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -983,7 +1008,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceGetTenantValidateBeforeCall(String tenantId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceGetTenantValidateBeforeCall(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tenantId' is set
         if (tenantId == null) {
             throw new ApiException("Missing the required parameter 'tenantId' when calling jumpboxServiceGetTenant(Async)");
@@ -1002,13 +1027,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3GetTenantResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3GetTenantResponse jumpboxServiceGetTenant(String tenantId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+    public Jumpboxv3GetTenantResponse jumpboxServiceGetTenant(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady) throws ApiException {
         ApiResponse<Jumpboxv3GetTenantResponse> localVarResp = jumpboxServiceGetTenantWithHttpInfo(tenantId, includeInactive, includeNotReady);
         return localVarResp.getData();
     }
@@ -1022,13 +1048,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3GetTenantResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3GetTenantResponse> jumpboxServiceGetTenantWithHttpInfo(String tenantId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+    public ApiResponse<Jumpboxv3GetTenantResponse> jumpboxServiceGetTenantWithHttpInfo(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceGetTenantValidateBeforeCall(tenantId, includeInactive, includeNotReady, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3GetTenantResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1044,13 +1071,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceGetTenantAsync(String tenantId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback<Jumpboxv3GetTenantResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceGetTenantAsync(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback<Jumpboxv3GetTenantResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceGetTenantValidateBeforeCall(tenantId, includeInactive, includeNotReady, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3GetTenantResponse>(){}.getType();
@@ -1067,13 +1095,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceGetTenantsCall(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceGetTenantsCall(@javax.annotation.Nullable String uid, @javax.annotation.Nullable String externalId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1134,7 +1163,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceGetTenantsValidateBeforeCall(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceGetTenantsValidateBeforeCall(@javax.annotation.Nullable String uid, @javax.annotation.Nullable String externalId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback _callback) throws ApiException {
         return jumpboxServiceGetTenantsCall(uid, externalId, includeInactive, includeNotReady, _callback);
 
     }
@@ -1149,13 +1178,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3GetTenantsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3GetTenantsResponse jumpboxServiceGetTenants(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+    public Jumpboxv3GetTenantsResponse jumpboxServiceGetTenants(@javax.annotation.Nullable String uid, @javax.annotation.Nullable String externalId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady) throws ApiException {
         ApiResponse<Jumpboxv3GetTenantsResponse> localVarResp = jumpboxServiceGetTenantsWithHttpInfo(uid, externalId, includeInactive, includeNotReady);
         return localVarResp.getData();
     }
@@ -1170,13 +1200,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3GetTenantsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3GetTenantsResponse> jumpboxServiceGetTenantsWithHttpInfo(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady) throws ApiException {
+    public ApiResponse<Jumpboxv3GetTenantsResponse> jumpboxServiceGetTenantsWithHttpInfo(@javax.annotation.Nullable String uid, @javax.annotation.Nullable String externalId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceGetTenantsValidateBeforeCall(uid, externalId, includeInactive, includeNotReady, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3GetTenantsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1193,13 +1224,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceGetTenantsAsync(String uid, String externalId, Boolean includeInactive, Boolean includeNotReady, final ApiCallback<Jumpboxv3GetTenantsResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceGetTenantsAsync(@javax.annotation.Nullable String uid, @javax.annotation.Nullable String externalId, @javax.annotation.Nullable Boolean includeInactive, @javax.annotation.Nullable Boolean includeNotReady, final ApiCallback<Jumpboxv3GetTenantsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceGetTenantsValidateBeforeCall(uid, externalId, includeInactive, includeNotReady, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3GetTenantsResponse>(){}.getType();
@@ -1213,13 +1245,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceGetUsersCall(String uid, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceGetUsersCall(@javax.annotation.Nullable String uid, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1268,7 +1301,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceGetUsersValidateBeforeCall(String uid, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceGetUsersValidateBeforeCall(@javax.annotation.Nullable String uid, final ApiCallback _callback) throws ApiException {
         return jumpboxServiceGetUsersCall(uid, _callback);
 
     }
@@ -1280,13 +1313,14 @@ public class JumpboxServiceApi {
      * @return Tenantuserv3GetUsersResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Tenantuserv3GetUsersResponse jumpboxServiceGetUsers(String uid) throws ApiException {
+    public Tenantuserv3GetUsersResponse jumpboxServiceGetUsers(@javax.annotation.Nullable String uid) throws ApiException {
         ApiResponse<Tenantuserv3GetUsersResponse> localVarResp = jumpboxServiceGetUsersWithHttpInfo(uid);
         return localVarResp.getData();
     }
@@ -1298,13 +1332,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Tenantuserv3GetUsersResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Tenantuserv3GetUsersResponse> jumpboxServiceGetUsersWithHttpInfo(String uid) throws ApiException {
+    public ApiResponse<Tenantuserv3GetUsersResponse> jumpboxServiceGetUsersWithHttpInfo(@javax.annotation.Nullable String uid) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceGetUsersValidateBeforeCall(uid, null);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetUsersResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1318,13 +1353,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceGetUsersAsync(String uid, final ApiCallback<Tenantuserv3GetUsersResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceGetUsersAsync(@javax.annotation.Nullable String uid, final ApiCallback<Tenantuserv3GetUsersResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceGetUsersValidateBeforeCall(uid, _callback);
         Type localVarReturnType = new TypeToken<Tenantuserv3GetUsersResponse>(){}.getType();
@@ -1338,13 +1374,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServicePostAccountCall(Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServicePostAccountCall(@javax.annotation.Nonnull Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1390,7 +1427,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServicePostAccountValidateBeforeCall(Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServicePostAccountValidateBeforeCall(@javax.annotation.Nonnull Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'jumpboxv3PostAccountRequest' is set
         if (jumpboxv3PostAccountRequest == null) {
             throw new ApiException("Missing the required parameter 'jumpboxv3PostAccountRequest' when calling jumpboxServicePostAccount(Async)");
@@ -1407,13 +1444,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3PostAccountResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3PostAccountResponse jumpboxServicePostAccount(Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest) throws ApiException {
+    public Jumpboxv3PostAccountResponse jumpboxServicePostAccount(@javax.annotation.Nonnull Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest) throws ApiException {
         ApiResponse<Jumpboxv3PostAccountResponse> localVarResp = jumpboxServicePostAccountWithHttpInfo(jumpboxv3PostAccountRequest);
         return localVarResp.getData();
     }
@@ -1425,13 +1463,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3PostAccountResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3PostAccountResponse> jumpboxServicePostAccountWithHttpInfo(Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest) throws ApiException {
+    public ApiResponse<Jumpboxv3PostAccountResponse> jumpboxServicePostAccountWithHttpInfo(@javax.annotation.Nonnull Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServicePostAccountValidateBeforeCall(jumpboxv3PostAccountRequest, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3PostAccountResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1445,13 +1484,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServicePostAccountAsync(Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest, final ApiCallback<Jumpboxv3PostAccountResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServicePostAccountAsync(@javax.annotation.Nonnull Jumpboxv3PostAccountRequest jumpboxv3PostAccountRequest, final ApiCallback<Jumpboxv3PostAccountResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServicePostAccountValidateBeforeCall(jumpboxv3PostAccountRequest, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3PostAccountResponse>(){}.getType();
@@ -1465,13 +1505,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServicePostTenantsCall(Jumpboxv3PostTenantsRequest jumpboxv3PostTenantsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServicePostTenantsCall(@javax.annotation.Nonnull Jumpboxv3PostTenantsRequest jumpboxv3PostTenantsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1517,7 +1558,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServicePostTenantsValidateBeforeCall(Jumpboxv3PostTenantsRequest jumpboxv3PostTenantsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServicePostTenantsValidateBeforeCall(@javax.annotation.Nonnull Jumpboxv3PostTenantsRequest jumpboxv3PostTenantsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'jumpboxv3PostTenantsRequest' is set
         if (jumpboxv3PostTenantsRequest == null) {
             throw new ApiException("Missing the required parameter 'jumpboxv3PostTenantsRequest' when calling jumpboxServicePostTenants(Async)");
@@ -1534,13 +1575,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3PostTenantsResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3PostTenantsResponse jumpboxServicePostTenants(Jumpboxv3PostTenantsRequest jumpboxv3PostTenantsRequest) throws ApiException {
+    public Jumpboxv3PostTenantsResponse jumpboxServicePostTenants(@javax.annotation.Nonnull Jumpboxv3PostTenantsRequest jumpboxv3PostTenantsRequest) throws ApiException {
         ApiResponse<Jumpboxv3PostTenantsResponse> localVarResp = jumpboxServicePostTenantsWithHttpInfo(jumpboxv3PostTenantsRequest);
         return localVarResp.getData();
     }
@@ -1552,13 +1594,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3PostTenantsResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3PostTenantsResponse> jumpboxServicePostTenantsWithHttpInfo(Jumpboxv3PostTenantsRequest jumpboxv3PostTenantsRequest) throws ApiException {
+    public ApiResponse<Jumpboxv3PostTenantsResponse> jumpboxServicePostTenantsWithHttpInfo(@javax.annotation.Nonnull Jumpboxv3PostTenantsRequest jumpboxv3PostTenantsRequest) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServicePostTenantsValidateBeforeCall(jumpboxv3PostTenantsRequest, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3PostTenantsResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1572,13 +1615,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServicePostTenantsAsync(Jumpboxv3PostTenantsRequest jumpboxv3PostTenantsRequest, final ApiCallback<Jumpboxv3PostTenantsResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServicePostTenantsAsync(@javax.annotation.Nonnull Jumpboxv3PostTenantsRequest jumpboxv3PostTenantsRequest, final ApiCallback<Jumpboxv3PostTenantsResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServicePostTenantsValidateBeforeCall(jumpboxv3PostTenantsRequest, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3PostTenantsResponse>(){}.getType();
@@ -1592,13 +1636,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServicePostUsersCall(Jumpboxv3PostUsersBulkRequest jumpboxv3PostUsersBulkRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServicePostUsersCall(@javax.annotation.Nonnull Jumpboxv3PostUsersBulkRequest jumpboxv3PostUsersBulkRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1644,7 +1689,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServicePostUsersValidateBeforeCall(Jumpboxv3PostUsersBulkRequest jumpboxv3PostUsersBulkRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServicePostUsersValidateBeforeCall(@javax.annotation.Nonnull Jumpboxv3PostUsersBulkRequest jumpboxv3PostUsersBulkRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'jumpboxv3PostUsersBulkRequest' is set
         if (jumpboxv3PostUsersBulkRequest == null) {
             throw new ApiException("Missing the required parameter 'jumpboxv3PostUsersBulkRequest' when calling jumpboxServicePostUsers(Async)");
@@ -1661,13 +1706,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3PostUsersBulkResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3PostUsersBulkResponse jumpboxServicePostUsers(Jumpboxv3PostUsersBulkRequest jumpboxv3PostUsersBulkRequest) throws ApiException {
+    public Jumpboxv3PostUsersBulkResponse jumpboxServicePostUsers(@javax.annotation.Nonnull Jumpboxv3PostUsersBulkRequest jumpboxv3PostUsersBulkRequest) throws ApiException {
         ApiResponse<Jumpboxv3PostUsersBulkResponse> localVarResp = jumpboxServicePostUsersWithHttpInfo(jumpboxv3PostUsersBulkRequest);
         return localVarResp.getData();
     }
@@ -1679,13 +1725,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3PostUsersBulkResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3PostUsersBulkResponse> jumpboxServicePostUsersWithHttpInfo(Jumpboxv3PostUsersBulkRequest jumpboxv3PostUsersBulkRequest) throws ApiException {
+    public ApiResponse<Jumpboxv3PostUsersBulkResponse> jumpboxServicePostUsersWithHttpInfo(@javax.annotation.Nonnull Jumpboxv3PostUsersBulkRequest jumpboxv3PostUsersBulkRequest) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServicePostUsersValidateBeforeCall(jumpboxv3PostUsersBulkRequest, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3PostUsersBulkResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1699,13 +1746,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServicePostUsersAsync(Jumpboxv3PostUsersBulkRequest jumpboxv3PostUsersBulkRequest, final ApiCallback<Jumpboxv3PostUsersBulkResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServicePostUsersAsync(@javax.annotation.Nonnull Jumpboxv3PostUsersBulkRequest jumpboxv3PostUsersBulkRequest, final ApiCallback<Jumpboxv3PostUsersBulkResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServicePostUsersValidateBeforeCall(jumpboxv3PostUsersBulkRequest, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3PostUsersBulkResponse>(){}.getType();
@@ -1719,13 +1767,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceResumeAccountCall(String accountId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceResumeAccountCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1771,7 +1820,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceResumeAccountValidateBeforeCall(String accountId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceResumeAccountValidateBeforeCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'accountId' is set
         if (accountId == null) {
             throw new ApiException("Missing the required parameter 'accountId' when calling jumpboxServiceResumeAccount(Async)");
@@ -1788,13 +1837,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3ResumeAccountResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3ResumeAccountResponse jumpboxServiceResumeAccount(String accountId) throws ApiException {
+    public Jumpboxv3ResumeAccountResponse jumpboxServiceResumeAccount(@javax.annotation.Nonnull String accountId) throws ApiException {
         ApiResponse<Jumpboxv3ResumeAccountResponse> localVarResp = jumpboxServiceResumeAccountWithHttpInfo(accountId);
         return localVarResp.getData();
     }
@@ -1806,13 +1856,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3ResumeAccountResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3ResumeAccountResponse> jumpboxServiceResumeAccountWithHttpInfo(String accountId) throws ApiException {
+    public ApiResponse<Jumpboxv3ResumeAccountResponse> jumpboxServiceResumeAccountWithHttpInfo(@javax.annotation.Nonnull String accountId) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceResumeAccountValidateBeforeCall(accountId, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3ResumeAccountResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1826,13 +1877,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceResumeAccountAsync(String accountId, final ApiCallback<Jumpboxv3ResumeAccountResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceResumeAccountAsync(@javax.annotation.Nonnull String accountId, final ApiCallback<Jumpboxv3ResumeAccountResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceResumeAccountValidateBeforeCall(accountId, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3ResumeAccountResponse>(){}.getType();
@@ -1846,13 +1898,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceSearchUsersCall(Jumpboxv3SearchUsersRequest jumpboxv3SearchUsersRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceSearchUsersCall(@javax.annotation.Nonnull Jumpboxv3SearchUsersRequest jumpboxv3SearchUsersRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1898,7 +1951,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceSearchUsersValidateBeforeCall(Jumpboxv3SearchUsersRequest jumpboxv3SearchUsersRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceSearchUsersValidateBeforeCall(@javax.annotation.Nonnull Jumpboxv3SearchUsersRequest jumpboxv3SearchUsersRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'jumpboxv3SearchUsersRequest' is set
         if (jumpboxv3SearchUsersRequest == null) {
             throw new ApiException("Missing the required parameter 'jumpboxv3SearchUsersRequest' when calling jumpboxServiceSearchUsers(Async)");
@@ -1915,13 +1968,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3SearchUsersResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3SearchUsersResponse jumpboxServiceSearchUsers(Jumpboxv3SearchUsersRequest jumpboxv3SearchUsersRequest) throws ApiException {
+    public Jumpboxv3SearchUsersResponse jumpboxServiceSearchUsers(@javax.annotation.Nonnull Jumpboxv3SearchUsersRequest jumpboxv3SearchUsersRequest) throws ApiException {
         ApiResponse<Jumpboxv3SearchUsersResponse> localVarResp = jumpboxServiceSearchUsersWithHttpInfo(jumpboxv3SearchUsersRequest);
         return localVarResp.getData();
     }
@@ -1933,13 +1987,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3SearchUsersResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3SearchUsersResponse> jumpboxServiceSearchUsersWithHttpInfo(Jumpboxv3SearchUsersRequest jumpboxv3SearchUsersRequest) throws ApiException {
+    public ApiResponse<Jumpboxv3SearchUsersResponse> jumpboxServiceSearchUsersWithHttpInfo(@javax.annotation.Nonnull Jumpboxv3SearchUsersRequest jumpboxv3SearchUsersRequest) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceSearchUsersValidateBeforeCall(jumpboxv3SearchUsersRequest, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3SearchUsersResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1953,13 +2008,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceSearchUsersAsync(Jumpboxv3SearchUsersRequest jumpboxv3SearchUsersRequest, final ApiCallback<Jumpboxv3SearchUsersResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceSearchUsersAsync(@javax.annotation.Nonnull Jumpboxv3SearchUsersRequest jumpboxv3SearchUsersRequest, final ApiCallback<Jumpboxv3SearchUsersResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceSearchUsersValidateBeforeCall(jumpboxv3SearchUsersRequest, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3SearchUsersResponse>(){}.getType();
@@ -1973,13 +2029,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceSuspendAccountCall(String accountId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceSuspendAccountCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2025,7 +2082,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceSuspendAccountValidateBeforeCall(String accountId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceSuspendAccountValidateBeforeCall(@javax.annotation.Nonnull String accountId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'accountId' is set
         if (accountId == null) {
             throw new ApiException("Missing the required parameter 'accountId' when calling jumpboxServiceSuspendAccount(Async)");
@@ -2042,13 +2099,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3SuspendAccountResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3SuspendAccountResponse jumpboxServiceSuspendAccount(String accountId) throws ApiException {
+    public Jumpboxv3SuspendAccountResponse jumpboxServiceSuspendAccount(@javax.annotation.Nonnull String accountId) throws ApiException {
         ApiResponse<Jumpboxv3SuspendAccountResponse> localVarResp = jumpboxServiceSuspendAccountWithHttpInfo(accountId);
         return localVarResp.getData();
     }
@@ -2060,13 +2118,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3SuspendAccountResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3SuspendAccountResponse> jumpboxServiceSuspendAccountWithHttpInfo(String accountId) throws ApiException {
+    public ApiResponse<Jumpboxv3SuspendAccountResponse> jumpboxServiceSuspendAccountWithHttpInfo(@javax.annotation.Nonnull String accountId) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceSuspendAccountValidateBeforeCall(accountId, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3SuspendAccountResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2080,13 +2139,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceSuspendAccountAsync(String accountId, final ApiCallback<Jumpboxv3SuspendAccountResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceSuspendAccountAsync(@javax.annotation.Nonnull String accountId, final ApiCallback<Jumpboxv3SuspendAccountResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceSuspendAccountValidateBeforeCall(accountId, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3SuspendAccountResponse>(){}.getType();
@@ -2100,13 +2160,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceTestUserCall(Jumpboxv3TestUserRequest jumpboxv3TestUserRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceTestUserCall(@javax.annotation.Nonnull Jumpboxv3TestUserRequest jumpboxv3TestUserRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2152,7 +2213,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceTestUserValidateBeforeCall(Jumpboxv3TestUserRequest jumpboxv3TestUserRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceTestUserValidateBeforeCall(@javax.annotation.Nonnull Jumpboxv3TestUserRequest jumpboxv3TestUserRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'jumpboxv3TestUserRequest' is set
         if (jumpboxv3TestUserRequest == null) {
             throw new ApiException("Missing the required parameter 'jumpboxv3TestUserRequest' when calling jumpboxServiceTestUser(Async)");
@@ -2169,13 +2230,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3TestUserResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3TestUserResponse jumpboxServiceTestUser(Jumpboxv3TestUserRequest jumpboxv3TestUserRequest) throws ApiException {
+    public Jumpboxv3TestUserResponse jumpboxServiceTestUser(@javax.annotation.Nonnull Jumpboxv3TestUserRequest jumpboxv3TestUserRequest) throws ApiException {
         ApiResponse<Jumpboxv3TestUserResponse> localVarResp = jumpboxServiceTestUserWithHttpInfo(jumpboxv3TestUserRequest);
         return localVarResp.getData();
     }
@@ -2187,13 +2249,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3TestUserResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3TestUserResponse> jumpboxServiceTestUserWithHttpInfo(Jumpboxv3TestUserRequest jumpboxv3TestUserRequest) throws ApiException {
+    public ApiResponse<Jumpboxv3TestUserResponse> jumpboxServiceTestUserWithHttpInfo(@javax.annotation.Nonnull Jumpboxv3TestUserRequest jumpboxv3TestUserRequest) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceTestUserValidateBeforeCall(jumpboxv3TestUserRequest, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3TestUserResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2207,13 +2270,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceTestUserAsync(Jumpboxv3TestUserRequest jumpboxv3TestUserRequest, final ApiCallback<Jumpboxv3TestUserResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceTestUserAsync(@javax.annotation.Nonnull Jumpboxv3TestUserRequest jumpboxv3TestUserRequest, final ApiCallback<Jumpboxv3TestUserResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceTestUserValidateBeforeCall(jumpboxv3TestUserRequest, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3TestUserResponse>(){}.getType();
@@ -2228,13 +2292,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceUpdateAccountCall(String accountId, Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceUpdateAccountCall(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2281,7 +2346,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceUpdateAccountValidateBeforeCall(String accountId, Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceUpdateAccountValidateBeforeCall(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'accountId' is set
         if (accountId == null) {
             throw new ApiException("Missing the required parameter 'accountId' when calling jumpboxServiceUpdateAccount(Async)");
@@ -2304,13 +2369,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3UpdateAccountResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3UpdateAccountResponse jumpboxServiceUpdateAccount(String accountId, Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest) throws ApiException {
+    public Jumpboxv3UpdateAccountResponse jumpboxServiceUpdateAccount(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest) throws ApiException {
         ApiResponse<Jumpboxv3UpdateAccountResponse> localVarResp = jumpboxServiceUpdateAccountWithHttpInfo(accountId, jumpboxv3UpdateAccountRequest);
         return localVarResp.getData();
     }
@@ -2323,13 +2389,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3UpdateAccountResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3UpdateAccountResponse> jumpboxServiceUpdateAccountWithHttpInfo(String accountId, Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest) throws ApiException {
+    public ApiResponse<Jumpboxv3UpdateAccountResponse> jumpboxServiceUpdateAccountWithHttpInfo(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceUpdateAccountValidateBeforeCall(accountId, jumpboxv3UpdateAccountRequest, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3UpdateAccountResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2344,13 +2411,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceUpdateAccountAsync(String accountId, Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest, final ApiCallback<Jumpboxv3UpdateAccountResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceUpdateAccountAsync(@javax.annotation.Nonnull String accountId, @javax.annotation.Nonnull Jumpboxv3UpdateAccountRequest jumpboxv3UpdateAccountRequest, final ApiCallback<Jumpboxv3UpdateAccountResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceUpdateAccountValidateBeforeCall(accountId, jumpboxv3UpdateAccountRequest, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3UpdateAccountResponse>(){}.getType();
@@ -2365,13 +2433,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceUpdateTenantCall(String tenantId, Jumpboxv3UpdateTenantRequest jumpboxv3UpdateTenantRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceUpdateTenantCall(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nonnull Jumpboxv3UpdateTenantRequest jumpboxv3UpdateTenantRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2418,7 +2487,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceUpdateTenantValidateBeforeCall(String tenantId, Jumpboxv3UpdateTenantRequest jumpboxv3UpdateTenantRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceUpdateTenantValidateBeforeCall(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nonnull Jumpboxv3UpdateTenantRequest jumpboxv3UpdateTenantRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tenantId' is set
         if (tenantId == null) {
             throw new ApiException("Missing the required parameter 'tenantId' when calling jumpboxServiceUpdateTenant(Async)");
@@ -2441,13 +2510,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3UpdateTenantResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3UpdateTenantResponse jumpboxServiceUpdateTenant(String tenantId, Jumpboxv3UpdateTenantRequest jumpboxv3UpdateTenantRequest) throws ApiException {
+    public Jumpboxv3UpdateTenantResponse jumpboxServiceUpdateTenant(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nonnull Jumpboxv3UpdateTenantRequest jumpboxv3UpdateTenantRequest) throws ApiException {
         ApiResponse<Jumpboxv3UpdateTenantResponse> localVarResp = jumpboxServiceUpdateTenantWithHttpInfo(tenantId, jumpboxv3UpdateTenantRequest);
         return localVarResp.getData();
     }
@@ -2460,13 +2530,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3UpdateTenantResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3UpdateTenantResponse> jumpboxServiceUpdateTenantWithHttpInfo(String tenantId, Jumpboxv3UpdateTenantRequest jumpboxv3UpdateTenantRequest) throws ApiException {
+    public ApiResponse<Jumpboxv3UpdateTenantResponse> jumpboxServiceUpdateTenantWithHttpInfo(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nonnull Jumpboxv3UpdateTenantRequest jumpboxv3UpdateTenantRequest) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceUpdateTenantValidateBeforeCall(tenantId, jumpboxv3UpdateTenantRequest, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3UpdateTenantResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2481,13 +2552,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceUpdateTenantAsync(String tenantId, Jumpboxv3UpdateTenantRequest jumpboxv3UpdateTenantRequest, final ApiCallback<Jumpboxv3UpdateTenantResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceUpdateTenantAsync(@javax.annotation.Nonnull String tenantId, @javax.annotation.Nonnull Jumpboxv3UpdateTenantRequest jumpboxv3UpdateTenantRequest, final ApiCallback<Jumpboxv3UpdateTenantResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceUpdateTenantValidateBeforeCall(tenantId, jumpboxv3UpdateTenantRequest, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3UpdateTenantResponse>(){}.getType();
@@ -2501,13 +2573,14 @@ public class JumpboxServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceUpdateUsersCall(Jumpboxv3UpdateUsersBulkRequest jumpboxv3UpdateUsersBulkRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceUpdateUsersCall(@javax.annotation.Nonnull Jumpboxv3UpdateUsersBulkRequest jumpboxv3UpdateUsersBulkRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2553,7 +2626,7 @@ public class JumpboxServiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call jumpboxServiceUpdateUsersValidateBeforeCall(Jumpboxv3UpdateUsersBulkRequest jumpboxv3UpdateUsersBulkRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call jumpboxServiceUpdateUsersValidateBeforeCall(@javax.annotation.Nonnull Jumpboxv3UpdateUsersBulkRequest jumpboxv3UpdateUsersBulkRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'jumpboxv3UpdateUsersBulkRequest' is set
         if (jumpboxv3UpdateUsersBulkRequest == null) {
             throw new ApiException("Missing the required parameter 'jumpboxv3UpdateUsersBulkRequest' when calling jumpboxServiceUpdateUsers(Async)");
@@ -2570,13 +2643,14 @@ public class JumpboxServiceApi {
      * @return Jumpboxv3UpdateUsersBulkResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public Jumpboxv3UpdateUsersBulkResponse jumpboxServiceUpdateUsers(Jumpboxv3UpdateUsersBulkRequest jumpboxv3UpdateUsersBulkRequest) throws ApiException {
+    public Jumpboxv3UpdateUsersBulkResponse jumpboxServiceUpdateUsers(@javax.annotation.Nonnull Jumpboxv3UpdateUsersBulkRequest jumpboxv3UpdateUsersBulkRequest) throws ApiException {
         ApiResponse<Jumpboxv3UpdateUsersBulkResponse> localVarResp = jumpboxServiceUpdateUsersWithHttpInfo(jumpboxv3UpdateUsersBulkRequest);
         return localVarResp.getData();
     }
@@ -2588,13 +2662,14 @@ public class JumpboxServiceApi {
      * @return ApiResponse&lt;Jumpboxv3UpdateUsersBulkResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Jumpboxv3UpdateUsersBulkResponse> jumpboxServiceUpdateUsersWithHttpInfo(Jumpboxv3UpdateUsersBulkRequest jumpboxv3UpdateUsersBulkRequest) throws ApiException {
+    public ApiResponse<Jumpboxv3UpdateUsersBulkResponse> jumpboxServiceUpdateUsersWithHttpInfo(@javax.annotation.Nonnull Jumpboxv3UpdateUsersBulkRequest jumpboxv3UpdateUsersBulkRequest) throws ApiException {
         okhttp3.Call localVarCall = jumpboxServiceUpdateUsersValidateBeforeCall(jumpboxv3UpdateUsersBulkRequest, null);
         Type localVarReturnType = new TypeToken<Jumpboxv3UpdateUsersBulkResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2608,13 +2683,14 @@ public class JumpboxServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call jumpboxServiceUpdateUsersAsync(Jumpboxv3UpdateUsersBulkRequest jumpboxv3UpdateUsersBulkRequest, final ApiCallback<Jumpboxv3UpdateUsersBulkResponse> _callback) throws ApiException {
+    public okhttp3.Call jumpboxServiceUpdateUsersAsync(@javax.annotation.Nonnull Jumpboxv3UpdateUsersBulkRequest jumpboxv3UpdateUsersBulkRequest, final ApiCallback<Jumpboxv3UpdateUsersBulkResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = jumpboxServiceUpdateUsersValidateBeforeCall(jumpboxv3UpdateUsersBulkRequest, _callback);
         Type localVarReturnType = new TypeToken<Jumpboxv3UpdateUsersBulkResponse>(){}.getType();

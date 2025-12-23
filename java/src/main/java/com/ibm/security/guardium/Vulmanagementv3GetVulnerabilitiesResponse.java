@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,51 +41,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Vulmanagementv3GetVulnerabilitiesResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Vulmanagementv3GetVulnerabilitiesResponse {
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "total_count";
   @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
+  @javax.annotation.Nullable
   private String totalCount;
 
   public static final String SERIALIZED_NAME_VULNERABILITIES = "vulnerabilities";
   @SerializedName(SERIALIZED_NAME_VULNERABILITIES)
+  @javax.annotation.Nullable
   private List<Vulmanagementv3Vulnerability> vulnerabilities = new ArrayList<>();
 
   public Vulmanagementv3GetVulnerabilitiesResponse() {
   }
 
-  public Vulmanagementv3GetVulnerabilitiesResponse totalCount(String totalCount) {
+  public Vulmanagementv3GetVulnerabilitiesResponse totalCount(@javax.annotation.Nullable String totalCount) {
     this.totalCount = totalCount;
     return this;
   }
 
-   /**
+  /**
    * Total count of vulnerabilities.
    * @return totalCount
-  **/
+   */
   @javax.annotation.Nullable
   public String getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(String totalCount) {
+  public void setTotalCount(@javax.annotation.Nullable String totalCount) {
     this.totalCount = totalCount;
   }
 
 
-  public Vulmanagementv3GetVulnerabilitiesResponse vulnerabilities(List<Vulmanagementv3Vulnerability> vulnerabilities) {
+  public Vulmanagementv3GetVulnerabilitiesResponse vulnerabilities(@javax.annotation.Nullable List<Vulmanagementv3Vulnerability> vulnerabilities) {
     this.vulnerabilities = vulnerabilities;
     return this;
   }
@@ -97,16 +100,16 @@ public class Vulmanagementv3GetVulnerabilitiesResponse {
     return this;
   }
 
-   /**
+  /**
    * List of vulnerabalities.
    * @return vulnerabilities
-  **/
+   */
   @javax.annotation.Nullable
   public List<Vulmanagementv3Vulnerability> getVulnerabilities() {
     return vulnerabilities;
   }
 
-  public void setVulnerabilities(List<Vulmanagementv3Vulnerability> vulnerabilities) {
+  public void setVulnerabilities(@javax.annotation.Nullable List<Vulmanagementv3Vulnerability> vulnerabilities) {
     this.vulnerabilities = vulnerabilities;
   }
 
@@ -157,24 +160,22 @@ public class Vulmanagementv3GetVulnerabilitiesResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("total_count");
-    openapiFields.add("vulnerabilities");
+    openapiFields = new HashSet<String>(Arrays.asList("total_count", "vulnerabilities"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Vulmanagementv3GetVulnerabilitiesResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Vulmanagementv3GetVulnerabilitiesResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Vulmanagementv3GetVulnerabilitiesResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Vulmanagementv3GetVulnerabilitiesResponse is not found in the empty JSON string", Vulmanagementv3GetVulnerabilitiesResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Vulmanagementv3GetVulnerabilitiesResponse is not found in the empty JSON string", Vulmanagementv3GetVulnerabilitiesResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -182,19 +183,19 @@ public class Vulmanagementv3GetVulnerabilitiesResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Vulmanagementv3GetVulnerabilitiesResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Vulmanagementv3GetVulnerabilitiesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Vulmanagementv3GetVulnerabilitiesResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("total_count") != null && !jsonObj.get("total_count").isJsonNull()) && !jsonObj.get("total_count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `total_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_count").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `total_count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total_count").toString()));
       }
       if (jsonObj.get("vulnerabilities") != null && !jsonObj.get("vulnerabilities").isJsonNull()) {
         JsonArray jsonArrayvulnerabilities = jsonObj.getAsJsonArray("vulnerabilities");
         if (jsonArrayvulnerabilities != null) {
           // ensure the json data is an array
           if (!jsonObj.get("vulnerabilities").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `vulnerabilities` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerabilities").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `vulnerabilities` to be an array in the JSON string but got `%s`", jsonObj.get("vulnerabilities").toString()));
           }
 
           // validate the optional field `vulnerabilities` (array)
@@ -234,22 +235,22 @@ public class Vulmanagementv3GetVulnerabilitiesResponse {
     }
   }
 
- /**
-  * Create an instance of Vulmanagementv3GetVulnerabilitiesResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Vulmanagementv3GetVulnerabilitiesResponse
-  * @throws IOException if the JSON string is invalid with respect to Vulmanagementv3GetVulnerabilitiesResponse
-  */
+  /**
+   * Create an instance of Vulmanagementv3GetVulnerabilitiesResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Vulmanagementv3GetVulnerabilitiesResponse
+   * @throws IOException if the JSON string is invalid with respect to Vulmanagementv3GetVulnerabilitiesResponse
+   */
   public static Vulmanagementv3GetVulnerabilitiesResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Vulmanagementv3GetVulnerabilitiesResponse.class);
   }
 
- /**
-  * Convert an instance of Vulmanagementv3GetVulnerabilitiesResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Vulmanagementv3GetVulnerabilitiesResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

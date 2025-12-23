@@ -17,6 +17,8 @@ export class Reportsv3CreateVariantResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "variantId",
@@ -32,4 +34,3 @@ export class Reportsv3CreateVariantResponse {
     public constructor() {
     }
 }
-

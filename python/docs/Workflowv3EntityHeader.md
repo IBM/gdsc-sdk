@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **group_type_id** | **int** |  | [optional] 
 **hide_from_view** | **bool** |  | [optional] 
 **key** | **str** |  | [optional] 
-**type** | [**Workflowv3EntityHeaderType**](Workflowv3EntityHeaderType.md) |  | [optional] 
+**type** | [**Workflowv3EntityHeaderType**](Workflowv3EntityHeaderType.md) |  | [optional] [default to Workflowv3EntityHeaderType.STRING]
 **value** | **str** |  | [optional] 
 
 ## Example

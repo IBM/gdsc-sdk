@@ -73,9 +73,9 @@ class Riskanalyticscontrollerv3UserUISettings(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in card_settings (list)
         _items = []
         if self.card_settings:
-            for _item in self.card_settings:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_card_settings in self.card_settings:
+                if _item_card_settings:
+                    _items.append(_item_card_settings.to_dict())
             _dict['card_settings'] = _items
         return _dict
 

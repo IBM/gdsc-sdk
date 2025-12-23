@@ -34,7 +34,7 @@ class Schedulerv3ScheduledTask(BaseModel):
     """
     Scheduled Task for Post v3/schedules api.
     """ # noqa: E501
-    audit_type: Optional[Schedulerv3AuditType] = None
+    audit_type: Optional[Schedulerv3AuditType] = Schedulerv3AuditType.UNDEFINED_TYPE
     delivery_method: Optional[Schedulerv3DeliveryMethod] = None
     distribution_rule_ids: Optional[List[StrictStr]] = Field(default=None, description="Optional: Distribution rule IDs for a task. Will be populated by recipients on save.")
     email_subject: Optional[StrictStr] = Field(default=None, description="Optional: Email subject with replaceable variables.")
@@ -44,10 +44,10 @@ class Schedulerv3ScheduledTask(BaseModel):
     recipients: Optional[List[Schedulerv3Recipient]] = Field(default=None, description="Optional: Report result recipients.")
     report_filters: Optional[Reportsv3ReportFilterBrackets] = None
     scheduled_task_id: Optional[StrictStr] = Field(default=None, description="Optional: Id for the task.")
-    type: Optional[Schedulerv3TaskType] = None
+    type: Optional[Schedulerv3TaskType] = Schedulerv3TaskType.UNDEFINED_JOBTYPE
     workflow_investigation_links: Optional[List[Schedulerv3ConfigurationItem]] = None
     workflow_response_template: Optional[Schedulerv3ConfigurationItem] = None
-    workflow_type: Optional[Schedulerv3WorkflowType] = None
+    workflow_type: Optional[Schedulerv3WorkflowType] = Schedulerv3WorkflowType.REVIEW_NONE
     workflow_unique_fields: Optional[List[StrictStr]] = None
     __properties: ClassVar[List[str]] = ["audit_type", "delivery_method", "distribution_rule_ids", "email_subject", "instructions", "name", "parameter", "recipients", "report_filters", "scheduled_task_id", "type", "workflow_investigation_links", "workflow_response_template", "workflow_type", "workflow_unique_fields"]
 
@@ -99,9 +99,9 @@ class Schedulerv3ScheduledTask(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in recipients (list)
         _items = []
         if self.recipients:
-            for _item in self.recipients:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_recipients in self.recipients:
+                if _item_recipients:
+                    _items.append(_item_recipients.to_dict())
             _dict['recipients'] = _items
         # override the default output from pydantic by calling `to_dict()` of report_filters
         if self.report_filters:
@@ -109,9 +109,9 @@ class Schedulerv3ScheduledTask(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in workflow_investigation_links (list)
         _items = []
         if self.workflow_investigation_links:
-            for _item in self.workflow_investigation_links:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_workflow_investigation_links in self.workflow_investigation_links:
+                if _item_workflow_investigation_links:
+                    _items.append(_item_workflow_investigation_links.to_dict())
             _dict['workflow_investigation_links'] = _items
         # override the default output from pydantic by calling `to_dict()` of workflow_response_template
         if self.workflow_response_template:
@@ -128,7 +128,7 @@ class Schedulerv3ScheduledTask(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "audit_type": obj.get("audit_type"),
+            "audit_type": obj.get("audit_type") if obj.get("audit_type") is not None else Schedulerv3AuditType.UNDEFINED_TYPE,
             "delivery_method": Schedulerv3DeliveryMethod.from_dict(obj["delivery_method"]) if obj.get("delivery_method") is not None else None,
             "distribution_rule_ids": obj.get("distribution_rule_ids"),
             "email_subject": obj.get("email_subject"),
@@ -138,10 +138,10 @@ class Schedulerv3ScheduledTask(BaseModel):
             "recipients": [Schedulerv3Recipient.from_dict(_item) for _item in obj["recipients"]] if obj.get("recipients") is not None else None,
             "report_filters": Reportsv3ReportFilterBrackets.from_dict(obj["report_filters"]) if obj.get("report_filters") is not None else None,
             "scheduled_task_id": obj.get("scheduled_task_id"),
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Schedulerv3TaskType.UNDEFINED_JOBTYPE,
             "workflow_investigation_links": [Schedulerv3ConfigurationItem.from_dict(_item) for _item in obj["workflow_investigation_links"]] if obj.get("workflow_investigation_links") is not None else None,
             "workflow_response_template": Schedulerv3ConfigurationItem.from_dict(obj["workflow_response_template"]) if obj.get("workflow_response_template") is not None else None,
-            "workflow_type": obj.get("workflow_type"),
+            "workflow_type": obj.get("workflow_type") if obj.get("workflow_type") is not None else Schedulerv3WorkflowType.REVIEW_NONE,
             "workflow_unique_fields": obj.get("workflow_unique_fields")
         })
         return _obj

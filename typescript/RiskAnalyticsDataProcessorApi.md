@@ -16,22 +16,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsDataProcessorApi } from '';
+import type { RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskContextRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsDataProcessorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsDataProcessorApi(configuration);
 
-let body:.RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskContextRequest = {
-  // number | Risk id.
+const request: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskContextRequest = {
+    // Risk id.
   riskId: 1,
-  // string | Timezone in IANA format. (optional)
+    // Timezone in IANA format. (optional)
   timezone: "timezone_example",
 };
 
-apiInstance.riskAnalyticsDataProcessorGetRiskContext(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsDataProcessorGetRiskContext(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -73,20 +72,19 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, RiskAnalyticsDataProcessorApi } from '';
+import type { RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskPredefinedQuestionsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .RiskAnalyticsDataProcessorApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new RiskAnalyticsDataProcessorApi(configuration);
 
-let body:.RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskPredefinedQuestionsRequest = {
-  // number | Risk id.
+const request: RiskAnalyticsDataProcessorApiRiskAnalyticsDataProcessorGetRiskPredefinedQuestionsRequest = {
+    // Risk id.
   riskId: 1,
 };
 
-apiInstance.riskAnalyticsDataProcessorGetRiskPredefinedQuestions(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.riskAnalyticsDataProcessorGetRiskPredefinedQuestions(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

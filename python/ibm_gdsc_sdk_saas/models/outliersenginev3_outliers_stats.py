@@ -73,16 +73,16 @@ class Outliersenginev3OutliersStats(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in outlier_type_stats_1h (list)
         _items = []
         if self.outlier_type_stats_1h:
-            for _item in self.outlier_type_stats_1h:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_outlier_type_stats_1h in self.outlier_type_stats_1h:
+                if _item_outlier_type_stats_1h:
+                    _items.append(_item_outlier_type_stats_1h.to_dict())
             _dict['outlier_type_stats_1h'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in outlier_type_stats_24h (list)
         _items = []
         if self.outlier_type_stats_24h:
-            for _item in self.outlier_type_stats_24h:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_outlier_type_stats_24h in self.outlier_type_stats_24h:
+                if _item_outlier_type_stats_24h:
+                    _items.append(_item_outlier_type_stats_24h.to_dict())
             _dict['outlier_type_stats_24h'] = _items
         return _dict
 

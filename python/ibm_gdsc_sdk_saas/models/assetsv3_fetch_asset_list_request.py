@@ -36,7 +36,7 @@ class Assetsv3FetchAssetListRequest(BaseModel):
     search_key: Optional[StrictStr] = None
     sort: Optional[StrictStr] = None
     sort_by: Optional[StrictStr] = None
-    view_type: Optional[Assetsv3AssetView] = None
+    view_type: Optional[Assetsv3AssetView] = Assetsv3AssetView.DB
     __properties: ClassVar[List[str]] = ["columns", "filter", "page_number", "page_size", "parent_id", "search_key", "sort", "sort_by", "view_type"]
 
     model_config = ConfigDict(
@@ -81,9 +81,9 @@ class Assetsv3FetchAssetListRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in filter (list)
         _items = []
         if self.filter:
-            for _item in self.filter:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_filter in self.filter:
+                if _item_filter:
+                    _items.append(_item_filter.to_dict())
             _dict['filter'] = _items
         return _dict
 
@@ -105,7 +105,7 @@ class Assetsv3FetchAssetListRequest(BaseModel):
             "search_key": obj.get("search_key"),
             "sort": obj.get("sort"),
             "sort_by": obj.get("sort_by"),
-            "view_type": obj.get("view_type")
+            "view_type": obj.get("view_type") if obj.get("view_type") is not None else Assetsv3AssetView.DB
         })
         return _obj
 

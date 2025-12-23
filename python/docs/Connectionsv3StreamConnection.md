@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **provider** | **str** | Optional: the provider provided if the connection type is Azure. | [optional] 
 **region** | **str** | Optional: the region provided if the connection type is AWS. | [optional] 
 **start_monitor** | **str** | Connection Monitoring. | [optional] 
-**status** | [**Connectionsv3Status**](Connectionsv3Status.md) |  | [optional] 
+**status** | [**Connectionsv3Status**](Connectionsv3Status.md) |  | [optional] [default to Connectionsv3Status.UNDEFINED_STATUS]
 **status_text** | **str** | If status is not OK, details what&#39;s wrong (non-localized). | [optional] 
 **status_timestamp** | **str** | The time stamp of status. | [optional] 
 **storage_connection_string** | **str** | Optional: Storage connection string must be provided if the connection type is Azure. | [optional] 

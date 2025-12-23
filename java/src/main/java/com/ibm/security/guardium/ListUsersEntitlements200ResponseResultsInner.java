@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,105 +42,111 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ListUsersEntitlements200ResponseResultsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ListUsersEntitlements200ResponseResultsInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nonnull
   private String id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private String name;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nonnull
   private String type;
 
   public static final String SERIALIZED_NAME_PERMISSIONS = "permissions";
   @SerializedName(SERIALIZED_NAME_PERMISSIONS)
+  @javax.annotation.Nonnull
   private List<AccessType> permissions = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ACCOUNT_IDS = "accountIds";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_IDS)
+  @javax.annotation.Nonnull
   private List<String> accountIds = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_SENSITIVE_CATEGORIES = "sensitiveCategories";
   @SerializedName(SERIALIZED_NAME_SENSITIVE_CATEGORIES)
+  @javax.annotation.Nonnull
   private List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories = new ArrayList<>();
 
   public ListUsersEntitlements200ResponseResultsInner() {
   }
 
-  public ListUsersEntitlements200ResponseResultsInner id(String id) {
+  public ListUsersEntitlements200ResponseResultsInner id(@javax.annotation.Nonnull String id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nonnull String id) {
     this.id = id;
   }
 
 
-  public ListUsersEntitlements200ResponseResultsInner name(String name) {
+  public ListUsersEntitlements200ResponseResultsInner name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
 
-  public ListUsersEntitlements200ResponseResultsInner type(String type) {
+  public ListUsersEntitlements200ResponseResultsInner type(@javax.annotation.Nonnull String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @javax.annotation.Nonnull
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nonnull String type) {
     this.type = type;
   }
 
 
-  public ListUsersEntitlements200ResponseResultsInner permissions(List<AccessType> permissions) {
+  public ListUsersEntitlements200ResponseResultsInner permissions(@javax.annotation.Nonnull List<AccessType> permissions) {
     this.permissions = permissions;
     return this;
   }
@@ -152,21 +159,21 @@ public class ListUsersEntitlements200ResponseResultsInner {
     return this;
   }
 
-   /**
+  /**
    * Get permissions
    * @return permissions
-  **/
+   */
   @javax.annotation.Nonnull
   public List<AccessType> getPermissions() {
     return permissions;
   }
 
-  public void setPermissions(List<AccessType> permissions) {
+  public void setPermissions(@javax.annotation.Nonnull List<AccessType> permissions) {
     this.permissions = permissions;
   }
 
 
-  public ListUsersEntitlements200ResponseResultsInner accountIds(List<String> accountIds) {
+  public ListUsersEntitlements200ResponseResultsInner accountIds(@javax.annotation.Nonnull List<String> accountIds) {
     this.accountIds = accountIds;
     return this;
   }
@@ -179,21 +186,21 @@ public class ListUsersEntitlements200ResponseResultsInner {
     return this;
   }
 
-   /**
+  /**
    * Get accountIds
    * @return accountIds
-  **/
+   */
   @javax.annotation.Nonnull
   public List<String> getAccountIds() {
     return accountIds;
   }
 
-  public void setAccountIds(List<String> accountIds) {
+  public void setAccountIds(@javax.annotation.Nonnull List<String> accountIds) {
     this.accountIds = accountIds;
   }
 
 
-  public ListUsersEntitlements200ResponseResultsInner sensitiveCategories(List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
+  public ListUsersEntitlements200ResponseResultsInner sensitiveCategories(@javax.annotation.Nonnull List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
     this.sensitiveCategories = sensitiveCategories;
     return this;
   }
@@ -206,16 +213,16 @@ public class ListUsersEntitlements200ResponseResultsInner {
     return this;
   }
 
-   /**
+  /**
    * Get sensitiveCategories
    * @return sensitiveCategories
-  **/
+   */
   @javax.annotation.Nonnull
   public List<UserSensitiveCategoriesSensitiveCategoriesInner> getSensitiveCategories() {
     return sensitiveCategories;
   }
 
-  public void setSensitiveCategories(List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
+  public void setSensitiveCategories(@javax.annotation.Nonnull List<UserSensitiveCategoriesSensitiveCategoriesInner> sensitiveCategories) {
     this.sensitiveCategories = sensitiveCategories;
   }
 
@@ -274,34 +281,22 @@ public class ListUsersEntitlements200ResponseResultsInner {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("id");
-    openapiFields.add("name");
-    openapiFields.add("type");
-    openapiFields.add("permissions");
-    openapiFields.add("accountIds");
-    openapiFields.add("sensitiveCategories");
+    openapiFields = new HashSet<String>(Arrays.asList("id", "name", "type", "permissions", "accountIds", "sensitiveCategories"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("type");
-    openapiRequiredFields.add("permissions");
-    openapiRequiredFields.add("accountIds");
-    openapiRequiredFields.add("sensitiveCategories");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("id", "name", "type", "permissions", "accountIds", "sensitiveCategories"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ListUsersEntitlements200ResponseResultsInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ListUsersEntitlements200ResponseResultsInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ListUsersEntitlements200ResponseResultsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListUsersEntitlements200ResponseResultsInner is not found in the empty JSON string", ListUsersEntitlements200ResponseResultsInner.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ListUsersEntitlements200ResponseResultsInner is not found in the empty JSON string", ListUsersEntitlements200ResponseResultsInner.openapiRequiredFields.toString()));
         }
       }
 
@@ -309,41 +304,41 @@ public class ListUsersEntitlements200ResponseResultsInner {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ListUsersEntitlements200ResponseResultsInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListUsersEntitlements200ResponseResultsInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ListUsersEntitlements200ResponseResultsInner` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ListUsersEntitlements200ResponseResultsInner.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
       if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
       // ensure the required json array is present
       if (jsonObj.get("permissions") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("permissions").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `permissions` to be an array in the JSON string but got `%s`", jsonObj.get("permissions").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `permissions` to be an array in the JSON string but got `%s`", jsonObj.get("permissions").toString()));
       }
       // ensure the required json array is present
       if (jsonObj.get("accountIds") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("accountIds").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `accountIds` to be an array in the JSON string but got `%s`", jsonObj.get("accountIds").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `accountIds` to be an array in the JSON string but got `%s`", jsonObj.get("accountIds").toString()));
       }
       // ensure the json data is an array
       if (!jsonObj.get("sensitiveCategories").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitiveCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitiveCategories").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sensitiveCategories` to be an array in the JSON string but got `%s`", jsonObj.get("sensitiveCategories").toString()));
       }
 
       JsonArray jsonArraysensitiveCategories = jsonObj.getAsJsonArray("sensitiveCategories");
@@ -382,22 +377,22 @@ public class ListUsersEntitlements200ResponseResultsInner {
     }
   }
 
- /**
-  * Create an instance of ListUsersEntitlements200ResponseResultsInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListUsersEntitlements200ResponseResultsInner
-  * @throws IOException if the JSON string is invalid with respect to ListUsersEntitlements200ResponseResultsInner
-  */
+  /**
+   * Create an instance of ListUsersEntitlements200ResponseResultsInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ListUsersEntitlements200ResponseResultsInner
+   * @throws IOException if the JSON string is invalid with respect to ListUsersEntitlements200ResponseResultsInner
+   */
   public static ListUsersEntitlements200ResponseResultsInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ListUsersEntitlements200ResponseResultsInner.class);
   }
 
- /**
-  * Convert an instance of ListUsersEntitlements200ResponseResultsInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ListUsersEntitlements200ResponseResultsInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

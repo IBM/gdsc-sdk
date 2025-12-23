@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Excluded item.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3ExcludedItem {
   public static final String SERIALIZED_NAME_EXCLUDED_ITEM_TYPE = "excluded_item_type";
   @SerializedName(SERIALIZED_NAME_EXCLUDED_ITEM_TYPE)
+  @javax.annotation.Nullable
   private Riskanalyticscontrollerv3ExcludedItemType excludedItemType = Riskanalyticscontrollerv3ExcludedItemType.UNDEFINED_EXCLUDED_ITEM_TYPE;
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
+  @javax.annotation.Nullable
   private String key;
 
   public Riskanalyticscontrollerv3ExcludedItem() {
   }
 
-  public Riskanalyticscontrollerv3ExcludedItem excludedItemType(Riskanalyticscontrollerv3ExcludedItemType excludedItemType) {
+  public Riskanalyticscontrollerv3ExcludedItem excludedItemType(@javax.annotation.Nullable Riskanalyticscontrollerv3ExcludedItemType excludedItemType) {
     this.excludedItemType = excludedItemType;
     return this;
   }
 
-   /**
+  /**
    * Get excludedItemType
    * @return excludedItemType
-  **/
+   */
   @javax.annotation.Nullable
   public Riskanalyticscontrollerv3ExcludedItemType getExcludedItemType() {
     return excludedItemType;
   }
 
-  public void setExcludedItemType(Riskanalyticscontrollerv3ExcludedItemType excludedItemType) {
+  public void setExcludedItemType(@javax.annotation.Nullable Riskanalyticscontrollerv3ExcludedItemType excludedItemType) {
     this.excludedItemType = excludedItemType;
   }
 
 
-  public Riskanalyticscontrollerv3ExcludedItem key(String key) {
+  public Riskanalyticscontrollerv3ExcludedItem key(@javax.annotation.Nullable String key) {
     this.key = key;
     return this;
   }
 
-   /**
+  /**
    * Excluded key.
    * @return key
-  **/
+   */
   @javax.annotation.Nullable
   public String getKey() {
     return key;
   }
 
-  public void setKey(String key) {
+  public void setKey(@javax.annotation.Nullable String key) {
     this.key = key;
   }
 
@@ -147,24 +150,22 @@ public class Riskanalyticscontrollerv3ExcludedItem {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("excluded_item_type");
-    openapiFields.add("key");
+    openapiFields = new HashSet<String>(Arrays.asList("excluded_item_type", "key"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3ExcludedItem
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3ExcludedItem
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3ExcludedItem.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3ExcludedItem is not found in the empty JSON string", Riskanalyticscontrollerv3ExcludedItem.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3ExcludedItem is not found in the empty JSON string", Riskanalyticscontrollerv3ExcludedItem.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,7 +173,7 @@ public class Riskanalyticscontrollerv3ExcludedItem {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3ExcludedItem.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3ExcludedItem` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3ExcludedItem` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -181,7 +182,7 @@ public class Riskanalyticscontrollerv3ExcludedItem {
         Riskanalyticscontrollerv3ExcludedItemType.validateJsonElement(jsonObj.get("excluded_item_type"));
       }
       if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
       }
   }
 
@@ -214,22 +215,22 @@ public class Riskanalyticscontrollerv3ExcludedItem {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3ExcludedItem given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3ExcludedItem
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3ExcludedItem
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3ExcludedItem given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3ExcludedItem
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3ExcludedItem
+   */
   public static Riskanalyticscontrollerv3ExcludedItem fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3ExcludedItem.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3ExcludedItem to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3ExcludedItem to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

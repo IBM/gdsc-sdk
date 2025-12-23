@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,134 +38,139 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3RuleParameter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3RuleParameter {
   public static final String SERIALIZED_NAME_ASSET_ATTRIBUTE = "asset_attribute";
   @SerializedName(SERIALIZED_NAME_ASSET_ATTRIBUTE)
+  @javax.annotation.Nullable
   private String assetAttribute;
 
   public static final String SERIALIZED_NAME_ATTRIBUTE_ENUM = "attribute_enum";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTE_ENUM)
+  @javax.annotation.Nullable
   private String attributeEnum;
 
   public static final String SERIALIZED_NAME_CONDITION = "condition";
   @SerializedName(SERIALIZED_NAME_CONDITION)
+  @javax.annotation.Nullable
   private String condition;
 
   public static final String SERIALIZED_NAME_CONDITION_CATEGORY = "condition_category";
   @SerializedName(SERIALIZED_NAME_CONDITION_CATEGORY)
+  @javax.annotation.Nullable
   private String conditionCategory;
 
   public static final String SERIALIZED_NAME_CONDITION_VALUE = "condition_value";
   @SerializedName(SERIALIZED_NAME_CONDITION_VALUE)
+  @javax.annotation.Nullable
   private String conditionValue;
 
   public Assetsv3RuleParameter() {
   }
 
-  public Assetsv3RuleParameter assetAttribute(String assetAttribute) {
+  public Assetsv3RuleParameter assetAttribute(@javax.annotation.Nullable String assetAttribute) {
     this.assetAttribute = assetAttribute;
     return this;
   }
 
-   /**
+  /**
    * Attribute type of the rule.
    * @return assetAttribute
-  **/
+   */
   @javax.annotation.Nullable
   public String getAssetAttribute() {
     return assetAttribute;
   }
 
-  public void setAssetAttribute(String assetAttribute) {
+  public void setAssetAttribute(@javax.annotation.Nullable String assetAttribute) {
     this.assetAttribute = assetAttribute;
   }
 
 
-  public Assetsv3RuleParameter attributeEnum(String attributeEnum) {
+  public Assetsv3RuleParameter attributeEnum(@javax.annotation.Nullable String attributeEnum) {
     this.attributeEnum = attributeEnum;
     return this;
   }
 
-   /**
+  /**
    * Enum to indicate attribute type.
    * @return attributeEnum
-  **/
+   */
   @javax.annotation.Nullable
   public String getAttributeEnum() {
     return attributeEnum;
   }
 
-  public void setAttributeEnum(String attributeEnum) {
+  public void setAttributeEnum(@javax.annotation.Nullable String attributeEnum) {
     this.attributeEnum = attributeEnum;
   }
 
 
-  public Assetsv3RuleParameter condition(String condition) {
+  public Assetsv3RuleParameter condition(@javax.annotation.Nullable String condition) {
     this.condition = condition;
     return this;
   }
 
-   /**
+  /**
    * Attribute condition.
    * @return condition
-  **/
+   */
   @javax.annotation.Nullable
   public String getCondition() {
     return condition;
   }
 
-  public void setCondition(String condition) {
+  public void setCondition(@javax.annotation.Nullable String condition) {
     this.condition = condition;
   }
 
 
-  public Assetsv3RuleParameter conditionCategory(String conditionCategory) {
+  public Assetsv3RuleParameter conditionCategory(@javax.annotation.Nullable String conditionCategory) {
     this.conditionCategory = conditionCategory;
     return this;
   }
 
-   /**
+  /**
    * Category of the attribute.
    * @return conditionCategory
-  **/
+   */
   @javax.annotation.Nullable
   public String getConditionCategory() {
     return conditionCategory;
   }
 
-  public void setConditionCategory(String conditionCategory) {
+  public void setConditionCategory(@javax.annotation.Nullable String conditionCategory) {
     this.conditionCategory = conditionCategory;
   }
 
 
-  public Assetsv3RuleParameter conditionValue(String conditionValue) {
+  public Assetsv3RuleParameter conditionValue(@javax.annotation.Nullable String conditionValue) {
     this.conditionValue = conditionValue;
     return this;
   }
 
-   /**
+  /**
    * Value of the attribute.
    * @return conditionValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getConditionValue() {
     return conditionValue;
   }
 
-  public void setConditionValue(String conditionValue) {
+  public void setConditionValue(@javax.annotation.Nullable String conditionValue) {
     this.conditionValue = conditionValue;
   }
 
@@ -221,27 +227,22 @@ public class Assetsv3RuleParameter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("asset_attribute");
-    openapiFields.add("attribute_enum");
-    openapiFields.add("condition");
-    openapiFields.add("condition_category");
-    openapiFields.add("condition_value");
+    openapiFields = new HashSet<String>(Arrays.asList("asset_attribute", "attribute_enum", "condition", "condition_category", "condition_value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3RuleParameter
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3RuleParameter
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3RuleParameter.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3RuleParameter is not found in the empty JSON string", Assetsv3RuleParameter.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3RuleParameter is not found in the empty JSON string", Assetsv3RuleParameter.openapiRequiredFields.toString()));
         }
       }
 
@@ -249,24 +250,24 @@ public class Assetsv3RuleParameter {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3RuleParameter.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3RuleParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3RuleParameter` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("asset_attribute") != null && !jsonObj.get("asset_attribute").isJsonNull()) && !jsonObj.get("asset_attribute").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `asset_attribute` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_attribute").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `asset_attribute` to be a primitive type in the JSON string but got `%s`", jsonObj.get("asset_attribute").toString()));
       }
       if ((jsonObj.get("attribute_enum") != null && !jsonObj.get("attribute_enum").isJsonNull()) && !jsonObj.get("attribute_enum").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `attribute_enum` to be a primitive type in the JSON string but got `%s`", jsonObj.get("attribute_enum").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `attribute_enum` to be a primitive type in the JSON string but got `%s`", jsonObj.get("attribute_enum").toString()));
       }
       if ((jsonObj.get("condition") != null && !jsonObj.get("condition").isJsonNull()) && !jsonObj.get("condition").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `condition` to be a primitive type in the JSON string but got `%s`", jsonObj.get("condition").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `condition` to be a primitive type in the JSON string but got `%s`", jsonObj.get("condition").toString()));
       }
       if ((jsonObj.get("condition_category") != null && !jsonObj.get("condition_category").isJsonNull()) && !jsonObj.get("condition_category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `condition_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("condition_category").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `condition_category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("condition_category").toString()));
       }
       if ((jsonObj.get("condition_value") != null && !jsonObj.get("condition_value").isJsonNull()) && !jsonObj.get("condition_value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `condition_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("condition_value").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `condition_value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("condition_value").toString()));
       }
   }
 
@@ -299,22 +300,22 @@ public class Assetsv3RuleParameter {
     }
   }
 
- /**
-  * Create an instance of Assetsv3RuleParameter given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3RuleParameter
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3RuleParameter
-  */
+  /**
+   * Create an instance of Assetsv3RuleParameter given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3RuleParameter
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3RuleParameter
+   */
   public static Assetsv3RuleParameter fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3RuleParameter.class);
   }
 
- /**
-  * Convert an instance of Assetsv3RuleParameter to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3RuleParameter to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

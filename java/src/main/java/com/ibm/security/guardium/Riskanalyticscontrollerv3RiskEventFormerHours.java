@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,74 +41,77 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Riskanalyticscontrollerv3RiskEventFormerHours
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Riskanalyticscontrollerv3RiskEventFormerHours {
   public static final String SERIALIZED_NAME_DATE_FROM = "date_from";
   @SerializedName(SERIALIZED_NAME_DATE_FROM)
+  @javax.annotation.Nullable
   private OffsetDateTime dateFrom;
 
   public static final String SERIALIZED_NAME_DATE_TO = "date_to";
   @SerializedName(SERIALIZED_NAME_DATE_TO)
+  @javax.annotation.Nullable
   private OffsetDateTime dateTo;
 
   public static final String SERIALIZED_NAME_FORMER_HOURS_CATEGORIES = "former_hours_categories";
   @SerializedName(SERIALIZED_NAME_FORMER_HOURS_CATEGORIES)
+  @javax.annotation.Nullable
   private Map<String, Integer> formerHoursCategories = new HashMap<>();
 
   public Riskanalyticscontrollerv3RiskEventFormerHours() {
   }
 
-  public Riskanalyticscontrollerv3RiskEventFormerHours dateFrom(OffsetDateTime dateFrom) {
+  public Riskanalyticscontrollerv3RiskEventFormerHours dateFrom(@javax.annotation.Nullable OffsetDateTime dateFrom) {
     this.dateFrom = dateFrom;
     return this;
   }
 
-   /**
+  /**
    * Date and time of the first finding in format YYYY-MM-DDTHH:mm:ssZ.
    * @return dateFrom
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateFrom() {
     return dateFrom;
   }
 
-  public void setDateFrom(OffsetDateTime dateFrom) {
+  public void setDateFrom(@javax.annotation.Nullable OffsetDateTime dateFrom) {
     this.dateFrom = dateFrom;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEventFormerHours dateTo(OffsetDateTime dateTo) {
+  public Riskanalyticscontrollerv3RiskEventFormerHours dateTo(@javax.annotation.Nullable OffsetDateTime dateTo) {
     this.dateTo = dateTo;
     return this;
   }
 
-   /**
+  /**
    * Date and time of the last finding in format YYYY-MM-DDTHH:mm:ssZ.
    * @return dateTo
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getDateTo() {
     return dateTo;
   }
 
-  public void setDateTo(OffsetDateTime dateTo) {
+  public void setDateTo(@javax.annotation.Nullable OffsetDateTime dateTo) {
     this.dateTo = dateTo;
   }
 
 
-  public Riskanalyticscontrollerv3RiskEventFormerHours formerHoursCategories(Map<String, Integer> formerHoursCategories) {
+  public Riskanalyticscontrollerv3RiskEventFormerHours formerHoursCategories(@javax.annotation.Nullable Map<String, Integer> formerHoursCategories) {
     this.formerHoursCategories = formerHoursCategories;
     return this;
   }
@@ -120,16 +124,16 @@ public class Riskanalyticscontrollerv3RiskEventFormerHours {
     return this;
   }
 
-   /**
+  /**
    * The categories of the risk in former hours and the number of occurrences.
    * @return formerHoursCategories
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Integer> getFormerHoursCategories() {
     return formerHoursCategories;
   }
 
-  public void setFormerHoursCategories(Map<String, Integer> formerHoursCategories) {
+  public void setFormerHoursCategories(@javax.annotation.Nullable Map<String, Integer> formerHoursCategories) {
     this.formerHoursCategories = formerHoursCategories;
   }
 
@@ -182,25 +186,22 @@ public class Riskanalyticscontrollerv3RiskEventFormerHours {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("date_from");
-    openapiFields.add("date_to");
-    openapiFields.add("former_hours_categories");
+    openapiFields = new HashSet<String>(Arrays.asList("date_from", "date_to", "former_hours_categories"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3RiskEventFormerHours
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Riskanalyticscontrollerv3RiskEventFormerHours
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Riskanalyticscontrollerv3RiskEventFormerHours.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Riskanalyticscontrollerv3RiskEventFormerHours is not found in the empty JSON string", Riskanalyticscontrollerv3RiskEventFormerHours.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Riskanalyticscontrollerv3RiskEventFormerHours is not found in the empty JSON string", Riskanalyticscontrollerv3RiskEventFormerHours.openapiRequiredFields.toString()));
         }
       }
 
@@ -208,7 +209,7 @@ public class Riskanalyticscontrollerv3RiskEventFormerHours {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Riskanalyticscontrollerv3RiskEventFormerHours.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3RiskEventFormerHours` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Riskanalyticscontrollerv3RiskEventFormerHours` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -243,22 +244,22 @@ public class Riskanalyticscontrollerv3RiskEventFormerHours {
     }
   }
 
- /**
-  * Create an instance of Riskanalyticscontrollerv3RiskEventFormerHours given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Riskanalyticscontrollerv3RiskEventFormerHours
-  * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3RiskEventFormerHours
-  */
+  /**
+   * Create an instance of Riskanalyticscontrollerv3RiskEventFormerHours given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Riskanalyticscontrollerv3RiskEventFormerHours
+   * @throws IOException if the JSON string is invalid with respect to Riskanalyticscontrollerv3RiskEventFormerHours
+   */
   public static Riskanalyticscontrollerv3RiskEventFormerHours fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Riskanalyticscontrollerv3RiskEventFormerHours.class);
   }
 
- /**
-  * Convert an instance of Riskanalyticscontrollerv3RiskEventFormerHours to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Riskanalyticscontrollerv3RiskEventFormerHours to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

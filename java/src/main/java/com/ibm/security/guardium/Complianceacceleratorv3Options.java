@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -44,67 +45,73 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Complianceacceleratorv3Options
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Complianceacceleratorv3Options {
   public static final String SERIALIZED_NAME_EMAIL_CONFIG = "email_config";
   @SerializedName(SERIALIZED_NAME_EMAIL_CONFIG)
+  @javax.annotation.Nullable
   private Complianceacceleratorv3EmailConfig emailConfig;
 
   public static final String SERIALIZED_NAME_PARENT_GROUPS = "parent_groups";
   @SerializedName(SERIALIZED_NAME_PARENT_GROUPS)
+  @javax.annotation.Nullable
   private Map<String, Complianceacceleratorv3Group> parentGroups = new HashMap<>();
 
   public static final String SERIALIZED_NAME_POLICY_ID = "policy_id";
   @SerializedName(SERIALIZED_NAME_POLICY_ID)
+  @javax.annotation.Nullable
   private String policyId;
 
   public static final String SERIALIZED_NAME_RULES = "rules";
   @SerializedName(SERIALIZED_NAME_RULES)
+  @javax.annotation.Nullable
   private Map<String, Complianceacceleratorv3RuleAndAction> rules = new HashMap<>();
 
   public static final String SERIALIZED_NAME_SYSLOG_CONFIG = "syslog_config";
   @SerializedName(SERIALIZED_NAME_SYSLOG_CONFIG)
+  @javax.annotation.Nullable
   private Complianceacceleratorv3SyslogConfig syslogConfig;
 
   public static final String SERIALIZED_NAME_TASKS = "tasks";
   @SerializedName(SERIALIZED_NAME_TASKS)
+  @javax.annotation.Nullable
   private Map<String, Complianceacceleratorv3TaskStatus> tasks = new HashMap<>();
 
   public Complianceacceleratorv3Options() {
   }
 
-  public Complianceacceleratorv3Options emailConfig(Complianceacceleratorv3EmailConfig emailConfig) {
+  public Complianceacceleratorv3Options emailConfig(@javax.annotation.Nullable Complianceacceleratorv3EmailConfig emailConfig) {
     this.emailConfig = emailConfig;
     return this;
   }
 
-   /**
+  /**
    * Get emailConfig
    * @return emailConfig
-  **/
+   */
   @javax.annotation.Nullable
   public Complianceacceleratorv3EmailConfig getEmailConfig() {
     return emailConfig;
   }
 
-  public void setEmailConfig(Complianceacceleratorv3EmailConfig emailConfig) {
+  public void setEmailConfig(@javax.annotation.Nullable Complianceacceleratorv3EmailConfig emailConfig) {
     this.emailConfig = emailConfig;
   }
 
 
-  public Complianceacceleratorv3Options parentGroups(Map<String, Complianceacceleratorv3Group> parentGroups) {
+  public Complianceacceleratorv3Options parentGroups(@javax.annotation.Nullable Map<String, Complianceacceleratorv3Group> parentGroups) {
     this.parentGroups = parentGroups;
     return this;
   }
@@ -117,40 +124,40 @@ public class Complianceacceleratorv3Options {
     return this;
   }
 
-   /**
+  /**
    * Get parentGroups
    * @return parentGroups
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Complianceacceleratorv3Group> getParentGroups() {
     return parentGroups;
   }
 
-  public void setParentGroups(Map<String, Complianceacceleratorv3Group> parentGroups) {
+  public void setParentGroups(@javax.annotation.Nullable Map<String, Complianceacceleratorv3Group> parentGroups) {
     this.parentGroups = parentGroups;
   }
 
 
-  public Complianceacceleratorv3Options policyId(String policyId) {
+  public Complianceacceleratorv3Options policyId(@javax.annotation.Nullable String policyId) {
     this.policyId = policyId;
     return this;
   }
 
-   /**
+  /**
    * Get policyId
    * @return policyId
-  **/
+   */
   @javax.annotation.Nullable
   public String getPolicyId() {
     return policyId;
   }
 
-  public void setPolicyId(String policyId) {
+  public void setPolicyId(@javax.annotation.Nullable String policyId) {
     this.policyId = policyId;
   }
 
 
-  public Complianceacceleratorv3Options rules(Map<String, Complianceacceleratorv3RuleAndAction> rules) {
+  public Complianceacceleratorv3Options rules(@javax.annotation.Nullable Map<String, Complianceacceleratorv3RuleAndAction> rules) {
     this.rules = rules;
     return this;
   }
@@ -163,40 +170,40 @@ public class Complianceacceleratorv3Options {
     return this;
   }
 
-   /**
+  /**
    * Key is policy rule names for alerts.
    * @return rules
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Complianceacceleratorv3RuleAndAction> getRules() {
     return rules;
   }
 
-  public void setRules(Map<String, Complianceacceleratorv3RuleAndAction> rules) {
+  public void setRules(@javax.annotation.Nullable Map<String, Complianceacceleratorv3RuleAndAction> rules) {
     this.rules = rules;
   }
 
 
-  public Complianceacceleratorv3Options syslogConfig(Complianceacceleratorv3SyslogConfig syslogConfig) {
+  public Complianceacceleratorv3Options syslogConfig(@javax.annotation.Nullable Complianceacceleratorv3SyslogConfig syslogConfig) {
     this.syslogConfig = syslogConfig;
     return this;
   }
 
-   /**
+  /**
    * Get syslogConfig
    * @return syslogConfig
-  **/
+   */
   @javax.annotation.Nullable
   public Complianceacceleratorv3SyslogConfig getSyslogConfig() {
     return syslogConfig;
   }
 
-  public void setSyslogConfig(Complianceacceleratorv3SyslogConfig syslogConfig) {
+  public void setSyslogConfig(@javax.annotation.Nullable Complianceacceleratorv3SyslogConfig syslogConfig) {
     this.syslogConfig = syslogConfig;
   }
 
 
-  public Complianceacceleratorv3Options tasks(Map<String, Complianceacceleratorv3TaskStatus> tasks) {
+  public Complianceacceleratorv3Options tasks(@javax.annotation.Nullable Map<String, Complianceacceleratorv3TaskStatus> tasks) {
     this.tasks = tasks;
     return this;
   }
@@ -209,16 +216,16 @@ public class Complianceacceleratorv3Options {
     return this;
   }
 
-   /**
+  /**
    * Tasks that need to be completed.
    * @return tasks
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, Complianceacceleratorv3TaskStatus> getTasks() {
     return tasks;
   }
 
-  public void setTasks(Map<String, Complianceacceleratorv3TaskStatus> tasks) {
+  public void setTasks(@javax.annotation.Nullable Map<String, Complianceacceleratorv3TaskStatus> tasks) {
     this.tasks = tasks;
   }
 
@@ -277,28 +284,22 @@ public class Complianceacceleratorv3Options {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("email_config");
-    openapiFields.add("parent_groups");
-    openapiFields.add("policy_id");
-    openapiFields.add("rules");
-    openapiFields.add("syslog_config");
-    openapiFields.add("tasks");
+    openapiFields = new HashSet<String>(Arrays.asList("email_config", "parent_groups", "policy_id", "rules", "syslog_config", "tasks"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Options
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Complianceacceleratorv3Options
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Complianceacceleratorv3Options.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Complianceacceleratorv3Options is not found in the empty JSON string", Complianceacceleratorv3Options.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Complianceacceleratorv3Options is not found in the empty JSON string", Complianceacceleratorv3Options.openapiRequiredFields.toString()));
         }
       }
 
@@ -306,7 +307,7 @@ public class Complianceacceleratorv3Options {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Complianceacceleratorv3Options.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Options` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Complianceacceleratorv3Options` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -315,7 +316,7 @@ public class Complianceacceleratorv3Options {
         Complianceacceleratorv3EmailConfig.validateJsonElement(jsonObj.get("email_config"));
       }
       if ((jsonObj.get("policy_id") != null && !jsonObj.get("policy_id").isJsonNull()) && !jsonObj.get("policy_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `policy_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("policy_id").toString()));
       }
       // validate the optional field `syslog_config`
       if (jsonObj.get("syslog_config") != null && !jsonObj.get("syslog_config").isJsonNull()) {
@@ -352,22 +353,22 @@ public class Complianceacceleratorv3Options {
     }
   }
 
- /**
-  * Create an instance of Complianceacceleratorv3Options given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Complianceacceleratorv3Options
-  * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Options
-  */
+  /**
+   * Create an instance of Complianceacceleratorv3Options given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Complianceacceleratorv3Options
+   * @throws IOException if the JSON string is invalid with respect to Complianceacceleratorv3Options
+   */
   public static Complianceacceleratorv3Options fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Complianceacceleratorv3Options.class);
   }
 
- /**
-  * Convert an instance of Complianceacceleratorv3Options to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Complianceacceleratorv3Options to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

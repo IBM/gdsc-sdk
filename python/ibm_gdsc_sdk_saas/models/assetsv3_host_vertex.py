@@ -84,23 +84,23 @@ class Assetsv3HostVertex(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in extended_properties (list)
         _items = []
         if self.extended_properties:
-            for _item in self.extended_properties:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_extended_properties in self.extended_properties:
+                if _item_extended_properties:
+                    _items.append(_item_extended_properties.to_dict())
             _dict['extended_properties'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in host_ip (list)
         _items = []
         if self.host_ip:
-            for _item in self.host_ip:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_host_ip in self.host_ip:
+                if _item_host_ip:
+                    _items.append(_item_host_ip.to_dict())
             _dict['host_ip'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in host_port (list)
         _items = []
         if self.host_port:
-            for _item in self.host_port:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_host_port in self.host_port:
+                if _item_host_port:
+                    _items.append(_item_host_port.to_dict())
             _dict['host_port'] = _items
         return _dict
 

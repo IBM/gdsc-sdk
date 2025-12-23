@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -42,97 +43,101 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * ActualFlowsSummary
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class ActualFlowsSummary {
   public static final String SERIALIZED_NAME_FLOWS_COUNT = "flowsCount";
   @SerializedName(SERIALIZED_NAME_FLOWS_COUNT)
+  @javax.annotation.Nonnull
   private BigDecimal flowsCount;
 
   public static final String SERIALIZED_NAME_SOURCES_SUMMARY = "sourcesSummary";
   @SerializedName(SERIALIZED_NAME_SOURCES_SUMMARY)
+  @javax.annotation.Nonnull
   private FlowNodeSummary sourcesSummary;
 
   public static final String SERIALIZED_NAME_DESTINATIONS_SUMMARY = "destinationsSummary";
   @SerializedName(SERIALIZED_NAME_DESTINATIONS_SUMMARY)
+  @javax.annotation.Nonnull
   private FlowNodeSummary destinationsSummary;
 
   public static final String SERIALIZED_NAME_ACCESS_TYPES_COUNT = "accessTypesCount";
   @SerializedName(SERIALIZED_NAME_ACCESS_TYPES_COUNT)
+  @javax.annotation.Nonnull
   private List<AccessTypeCountInner> accessTypesCount = new ArrayList<>();
 
   public ActualFlowsSummary() {
   }
 
-  public ActualFlowsSummary flowsCount(BigDecimal flowsCount) {
+  public ActualFlowsSummary flowsCount(@javax.annotation.Nonnull BigDecimal flowsCount) {
     this.flowsCount = flowsCount;
     return this;
   }
 
-   /**
+  /**
    * Get flowsCount
    * @return flowsCount
-  **/
+   */
   @javax.annotation.Nonnull
   public BigDecimal getFlowsCount() {
     return flowsCount;
   }
 
-  public void setFlowsCount(BigDecimal flowsCount) {
+  public void setFlowsCount(@javax.annotation.Nonnull BigDecimal flowsCount) {
     this.flowsCount = flowsCount;
   }
 
 
-  public ActualFlowsSummary sourcesSummary(FlowNodeSummary sourcesSummary) {
+  public ActualFlowsSummary sourcesSummary(@javax.annotation.Nonnull FlowNodeSummary sourcesSummary) {
     this.sourcesSummary = sourcesSummary;
     return this;
   }
 
-   /**
+  /**
    * Get sourcesSummary
    * @return sourcesSummary
-  **/
+   */
   @javax.annotation.Nonnull
   public FlowNodeSummary getSourcesSummary() {
     return sourcesSummary;
   }
 
-  public void setSourcesSummary(FlowNodeSummary sourcesSummary) {
+  public void setSourcesSummary(@javax.annotation.Nonnull FlowNodeSummary sourcesSummary) {
     this.sourcesSummary = sourcesSummary;
   }
 
 
-  public ActualFlowsSummary destinationsSummary(FlowNodeSummary destinationsSummary) {
+  public ActualFlowsSummary destinationsSummary(@javax.annotation.Nonnull FlowNodeSummary destinationsSummary) {
     this.destinationsSummary = destinationsSummary;
     return this;
   }
 
-   /**
+  /**
    * Get destinationsSummary
    * @return destinationsSummary
-  **/
+   */
   @javax.annotation.Nonnull
   public FlowNodeSummary getDestinationsSummary() {
     return destinationsSummary;
   }
 
-  public void setDestinationsSummary(FlowNodeSummary destinationsSummary) {
+  public void setDestinationsSummary(@javax.annotation.Nonnull FlowNodeSummary destinationsSummary) {
     this.destinationsSummary = destinationsSummary;
   }
 
 
-  public ActualFlowsSummary accessTypesCount(List<AccessTypeCountInner> accessTypesCount) {
+  public ActualFlowsSummary accessTypesCount(@javax.annotation.Nonnull List<AccessTypeCountInner> accessTypesCount) {
     this.accessTypesCount = accessTypesCount;
     return this;
   }
@@ -145,16 +150,16 @@ public class ActualFlowsSummary {
     return this;
   }
 
-   /**
+  /**
    * Get accessTypesCount
    * @return accessTypesCount
-  **/
+   */
   @javax.annotation.Nonnull
   public List<AccessTypeCountInner> getAccessTypesCount() {
     return accessTypesCount;
   }
 
-  public void setAccessTypesCount(List<AccessTypeCountInner> accessTypesCount) {
+  public void setAccessTypesCount(@javax.annotation.Nonnull List<AccessTypeCountInner> accessTypesCount) {
     this.accessTypesCount = accessTypesCount;
   }
 
@@ -209,30 +214,22 @@ public class ActualFlowsSummary {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("flowsCount");
-    openapiFields.add("sourcesSummary");
-    openapiFields.add("destinationsSummary");
-    openapiFields.add("accessTypesCount");
+    openapiFields = new HashSet<String>(Arrays.asList("flowsCount", "sourcesSummary", "destinationsSummary", "accessTypesCount"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("flowsCount");
-    openapiRequiredFields.add("sourcesSummary");
-    openapiRequiredFields.add("destinationsSummary");
-    openapiRequiredFields.add("accessTypesCount");
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("flowsCount", "sourcesSummary", "destinationsSummary", "accessTypesCount"));
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ActualFlowsSummary
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ActualFlowsSummary
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ActualFlowsSummary.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ActualFlowsSummary is not found in the empty JSON string", ActualFlowsSummary.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ActualFlowsSummary is not found in the empty JSON string", ActualFlowsSummary.openapiRequiredFields.toString()));
         }
       }
 
@@ -240,14 +237,14 @@ public class ActualFlowsSummary {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ActualFlowsSummary.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ActualFlowsSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ActualFlowsSummary` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ActualFlowsSummary.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -257,7 +254,7 @@ public class ActualFlowsSummary {
       FlowNodeSummary.validateJsonElement(jsonObj.get("destinationsSummary"));
       // ensure the json data is an array
       if (!jsonObj.get("accessTypesCount").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `accessTypesCount` to be an array in the JSON string but got `%s`", jsonObj.get("accessTypesCount").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `accessTypesCount` to be an array in the JSON string but got `%s`", jsonObj.get("accessTypesCount").toString()));
       }
 
       JsonArray jsonArrayaccessTypesCount = jsonObj.getAsJsonArray("accessTypesCount");
@@ -296,22 +293,22 @@ public class ActualFlowsSummary {
     }
   }
 
- /**
-  * Create an instance of ActualFlowsSummary given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ActualFlowsSummary
-  * @throws IOException if the JSON string is invalid with respect to ActualFlowsSummary
-  */
+  /**
+   * Create an instance of ActualFlowsSummary given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ActualFlowsSummary
+   * @throws IOException if the JSON string is invalid with respect to ActualFlowsSummary
+   */
   public static ActualFlowsSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ActualFlowsSummary.class);
   }
 
- /**
-  * Convert an instance of ActualFlowsSummary to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ActualFlowsSummary to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

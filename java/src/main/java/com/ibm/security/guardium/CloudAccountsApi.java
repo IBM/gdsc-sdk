@@ -103,13 +103,14 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call addAnalyzedRegionCall(AddAnalyzedRegionRequest addAnalyzedRegionRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addAnalyzedRegionCall(@javax.annotation.Nonnull AddAnalyzedRegionRequest addAnalyzedRegionRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -155,7 +156,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addAnalyzedRegionValidateBeforeCall(AddAnalyzedRegionRequest addAnalyzedRegionRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addAnalyzedRegionValidateBeforeCall(@javax.annotation.Nonnull AddAnalyzedRegionRequest addAnalyzedRegionRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'addAnalyzedRegionRequest' is set
         if (addAnalyzedRegionRequest == null) {
             throw new ApiException("Missing the required parameter 'addAnalyzedRegionRequest' when calling addAnalyzedRegion(Async)");
@@ -172,13 +173,14 @@ public class CloudAccountsApi {
      * @return AddAnalyzedRegion200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public AddAnalyzedRegion200Response addAnalyzedRegion(AddAnalyzedRegionRequest addAnalyzedRegionRequest) throws ApiException {
+    public AddAnalyzedRegion200Response addAnalyzedRegion(@javax.annotation.Nonnull AddAnalyzedRegionRequest addAnalyzedRegionRequest) throws ApiException {
         ApiResponse<AddAnalyzedRegion200Response> localVarResp = addAnalyzedRegionWithHttpInfo(addAnalyzedRegionRequest);
         return localVarResp.getData();
     }
@@ -190,13 +192,14 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;AddAnalyzedRegion200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<AddAnalyzedRegion200Response> addAnalyzedRegionWithHttpInfo(AddAnalyzedRegionRequest addAnalyzedRegionRequest) throws ApiException {
+    public ApiResponse<AddAnalyzedRegion200Response> addAnalyzedRegionWithHttpInfo(@javax.annotation.Nonnull AddAnalyzedRegionRequest addAnalyzedRegionRequest) throws ApiException {
         okhttp3.Call localVarCall = addAnalyzedRegionValidateBeforeCall(addAnalyzedRegionRequest, null);
         Type localVarReturnType = new TypeToken<AddAnalyzedRegion200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -210,13 +213,14 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call addAnalyzedRegionAsync(AddAnalyzedRegionRequest addAnalyzedRegionRequest, final ApiCallback<AddAnalyzedRegion200Response> _callback) throws ApiException {
+    public okhttp3.Call addAnalyzedRegionAsync(@javax.annotation.Nonnull AddAnalyzedRegionRequest addAnalyzedRegionRequest, final ApiCallback<AddAnalyzedRegion200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = addAnalyzedRegionValidateBeforeCall(addAnalyzedRegionRequest, _callback);
         Type localVarReturnType = new TypeToken<AddAnalyzedRegion200Response>(){}.getType();
@@ -230,13 +234,14 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call addCloudAccountsCall(AddCloudAccountsRequest addCloudAccountsRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addCloudAccountsCall(@javax.annotation.Nonnull AddCloudAccountsRequest addCloudAccountsRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -282,7 +287,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addCloudAccountsValidateBeforeCall(AddCloudAccountsRequest addCloudAccountsRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addCloudAccountsValidateBeforeCall(@javax.annotation.Nonnull AddCloudAccountsRequest addCloudAccountsRequest, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'addCloudAccountsRequest' is set
         if (addCloudAccountsRequest == null) {
             throw new ApiException("Missing the required parameter 'addCloudAccountsRequest' when calling addCloudAccounts(Async)");
@@ -299,13 +304,14 @@ public class CloudAccountsApi {
      * @return AddCloudAccounts200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public AddCloudAccounts200Response addCloudAccounts(AddCloudAccountsRequest addCloudAccountsRequest) throws ApiException {
+    public AddCloudAccounts200Response addCloudAccounts(@javax.annotation.Nonnull AddCloudAccountsRequest addCloudAccountsRequest) throws ApiException {
         ApiResponse<AddCloudAccounts200Response> localVarResp = addCloudAccountsWithHttpInfo(addCloudAccountsRequest);
         return localVarResp.getData();
     }
@@ -317,13 +323,14 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;AddCloudAccounts200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<AddCloudAccounts200Response> addCloudAccountsWithHttpInfo(AddCloudAccountsRequest addCloudAccountsRequest) throws ApiException {
+    public ApiResponse<AddCloudAccounts200Response> addCloudAccountsWithHttpInfo(@javax.annotation.Nonnull AddCloudAccountsRequest addCloudAccountsRequest) throws ApiException {
         okhttp3.Call localVarCall = addCloudAccountsValidateBeforeCall(addCloudAccountsRequest, null);
         Type localVarReturnType = new TypeToken<AddCloudAccounts200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -337,13 +344,14 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call addCloudAccountsAsync(AddCloudAccountsRequest addCloudAccountsRequest, final ApiCallback<AddCloudAccounts200Response> _callback) throws ApiException {
+    public okhttp3.Call addCloudAccountsAsync(@javax.annotation.Nonnull AddCloudAccountsRequest addCloudAccountsRequest, final ApiCallback<AddCloudAccounts200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = addCloudAccountsValidateBeforeCall(addCloudAccountsRequest, _callback);
         Type localVarReturnType = new TypeToken<AddCloudAccounts200Response>(){}.getType();
@@ -356,7 +364,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -418,7 +427,8 @@ public class CloudAccountsApi {
      * @return AuthUrl
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -435,7 +445,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;AuthUrl&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -454,7 +465,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -473,7 +485,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -535,7 +548,8 @@ public class CloudAccountsApi {
      * @return AuthUrl
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -552,7 +566,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;AuthUrl&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -571,7 +586,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -591,13 +607,14 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call generateAzureAuthUrlCall(String tenantId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call generateAzureAuthUrlCall(@javax.annotation.Nullable String tenantId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -646,7 +663,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call generateAzureAuthUrlValidateBeforeCall(String tenantId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call generateAzureAuthUrlValidateBeforeCall(@javax.annotation.Nullable String tenantId, final ApiCallback _callback) throws ApiException {
         return generateAzureAuthUrlCall(tenantId, _callback);
 
     }
@@ -658,13 +675,14 @@ public class CloudAccountsApi {
      * @return AuthUrl
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public AuthUrl generateAzureAuthUrl(String tenantId) throws ApiException {
+    public AuthUrl generateAzureAuthUrl(@javax.annotation.Nullable String tenantId) throws ApiException {
         ApiResponse<AuthUrl> localVarResp = generateAzureAuthUrlWithHttpInfo(tenantId);
         return localVarResp.getData();
     }
@@ -676,13 +694,14 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;AuthUrl&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<AuthUrl> generateAzureAuthUrlWithHttpInfo(String tenantId) throws ApiException {
+    public ApiResponse<AuthUrl> generateAzureAuthUrlWithHttpInfo(@javax.annotation.Nullable String tenantId) throws ApiException {
         okhttp3.Call localVarCall = generateAzureAuthUrlValidateBeforeCall(tenantId, null);
         Type localVarReturnType = new TypeToken<AuthUrl>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -696,13 +715,14 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call generateAzureAuthUrlAsync(String tenantId, final ApiCallback<AuthUrl> _callback) throws ApiException {
+    public okhttp3.Call generateAzureAuthUrlAsync(@javax.annotation.Nullable String tenantId, final ApiCallback<AuthUrl> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = generateAzureAuthUrlValidateBeforeCall(tenantId, _callback);
         Type localVarReturnType = new TypeToken<AuthUrl>(){}.getType();
@@ -715,7 +735,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -777,7 +798,8 @@ public class CloudAccountsApi {
      * @return AuthUrl
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -794,7 +816,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;AuthUrl&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -813,7 +836,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -832,7 +856,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -894,7 +919,8 @@ public class CloudAccountsApi {
      * @return AuthUrl
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -911,7 +937,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;AuthUrl&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -930,7 +957,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -949,7 +977,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1011,7 +1040,8 @@ public class CloudAccountsApi {
      * @return AuthUrl
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1028,7 +1058,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;AuthUrl&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1047,7 +1078,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1067,13 +1099,14 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call generateSnowflakeAuthUrlCall(ClientInfo clientInfo, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call generateSnowflakeAuthUrlCall(@javax.annotation.Nonnull ClientInfo clientInfo, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1119,7 +1152,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call generateSnowflakeAuthUrlValidateBeforeCall(ClientInfo clientInfo, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call generateSnowflakeAuthUrlValidateBeforeCall(@javax.annotation.Nonnull ClientInfo clientInfo, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'clientInfo' is set
         if (clientInfo == null) {
             throw new ApiException("Missing the required parameter 'clientInfo' when calling generateSnowflakeAuthUrl(Async)");
@@ -1136,13 +1169,14 @@ public class CloudAccountsApi {
      * @return AuthUrl
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public AuthUrl generateSnowflakeAuthUrl(ClientInfo clientInfo) throws ApiException {
+    public AuthUrl generateSnowflakeAuthUrl(@javax.annotation.Nonnull ClientInfo clientInfo) throws ApiException {
         ApiResponse<AuthUrl> localVarResp = generateSnowflakeAuthUrlWithHttpInfo(clientInfo);
         return localVarResp.getData();
     }
@@ -1154,13 +1188,14 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;AuthUrl&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<AuthUrl> generateSnowflakeAuthUrlWithHttpInfo(ClientInfo clientInfo) throws ApiException {
+    public ApiResponse<AuthUrl> generateSnowflakeAuthUrlWithHttpInfo(@javax.annotation.Nonnull ClientInfo clientInfo) throws ApiException {
         okhttp3.Call localVarCall = generateSnowflakeAuthUrlValidateBeforeCall(clientInfo, null);
         Type localVarReturnType = new TypeToken<AuthUrl>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1174,13 +1209,14 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call generateSnowflakeAuthUrlAsync(ClientInfo clientInfo, final ApiCallback<AuthUrl> _callback) throws ApiException {
+    public okhttp3.Call generateSnowflakeAuthUrlAsync(@javax.annotation.Nonnull ClientInfo clientInfo, final ApiCallback<AuthUrl> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = generateSnowflakeAuthUrlValidateBeforeCall(clientInfo, _callback);
         Type localVarReturnType = new TypeToken<AuthUrl>(){}.getType();
@@ -1195,13 +1231,14 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyzedRegionStatusCall(CloudServiceProvider cloudProvider, String region, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAnalyzedRegionStatusCall(@javax.annotation.Nonnull CloudServiceProvider cloudProvider, @javax.annotation.Nonnull String region, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1254,7 +1291,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAnalyzedRegionStatusValidateBeforeCall(CloudServiceProvider cloudProvider, String region, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAnalyzedRegionStatusValidateBeforeCall(@javax.annotation.Nonnull CloudServiceProvider cloudProvider, @javax.annotation.Nonnull String region, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'cloudProvider' is set
         if (cloudProvider == null) {
             throw new ApiException("Missing the required parameter 'cloudProvider' when calling getAnalyzedRegionStatus(Async)");
@@ -1277,13 +1314,14 @@ public class CloudAccountsApi {
      * @return GetAnalyzedRegionStatus200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public GetAnalyzedRegionStatus200Response getAnalyzedRegionStatus(CloudServiceProvider cloudProvider, String region) throws ApiException {
+    public GetAnalyzedRegionStatus200Response getAnalyzedRegionStatus(@javax.annotation.Nonnull CloudServiceProvider cloudProvider, @javax.annotation.Nonnull String region) throws ApiException {
         ApiResponse<GetAnalyzedRegionStatus200Response> localVarResp = getAnalyzedRegionStatusWithHttpInfo(cloudProvider, region);
         return localVarResp.getData();
     }
@@ -1296,13 +1334,14 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;GetAnalyzedRegionStatus200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<GetAnalyzedRegionStatus200Response> getAnalyzedRegionStatusWithHttpInfo(CloudServiceProvider cloudProvider, String region) throws ApiException {
+    public ApiResponse<GetAnalyzedRegionStatus200Response> getAnalyzedRegionStatusWithHttpInfo(@javax.annotation.Nonnull CloudServiceProvider cloudProvider, @javax.annotation.Nonnull String region) throws ApiException {
         okhttp3.Call localVarCall = getAnalyzedRegionStatusValidateBeforeCall(cloudProvider, region, null);
         Type localVarReturnType = new TypeToken<GetAnalyzedRegionStatus200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1317,13 +1356,14 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getAnalyzedRegionStatusAsync(CloudServiceProvider cloudProvider, String region, final ApiCallback<GetAnalyzedRegionStatus200Response> _callback) throws ApiException {
+    public okhttp3.Call getAnalyzedRegionStatusAsync(@javax.annotation.Nonnull CloudServiceProvider cloudProvider, @javax.annotation.Nonnull String region, final ApiCallback<GetAnalyzedRegionStatus200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAnalyzedRegionStatusValidateBeforeCall(cloudProvider, region, _callback);
         Type localVarReturnType = new TypeToken<GetAnalyzedRegionStatus200Response>(){}.getType();
@@ -1336,7 +1376,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> true if the customer has granted admin permissions, false otherwise </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1398,7 +1439,8 @@ public class CloudAccountsApi {
      * @return Boolean
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> true if the customer has granted admin permissions, false otherwise </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1415,7 +1457,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;Boolean&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> true if the customer has granted admin permissions, false otherwise </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1434,7 +1477,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> true if the customer has granted admin permissions, false otherwise </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1455,13 +1499,14 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getCloudAccountInstallationStatusCall(CloudServiceProvider cloudProvider, String cloudAccountId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCloudAccountInstallationStatusCall(@javax.annotation.Nonnull CloudServiceProvider cloudProvider, @javax.annotation.Nonnull String cloudAccountId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1508,7 +1553,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCloudAccountInstallationStatusValidateBeforeCall(CloudServiceProvider cloudProvider, String cloudAccountId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getCloudAccountInstallationStatusValidateBeforeCall(@javax.annotation.Nonnull CloudServiceProvider cloudProvider, @javax.annotation.Nonnull String cloudAccountId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'cloudProvider' is set
         if (cloudProvider == null) {
             throw new ApiException("Missing the required parameter 'cloudProvider' when calling getCloudAccountInstallationStatus(Async)");
@@ -1531,13 +1576,14 @@ public class CloudAccountsApi {
      * @return CloudAccountInstallationStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public CloudAccountInstallationStatus getCloudAccountInstallationStatus(CloudServiceProvider cloudProvider, String cloudAccountId) throws ApiException {
+    public CloudAccountInstallationStatus getCloudAccountInstallationStatus(@javax.annotation.Nonnull CloudServiceProvider cloudProvider, @javax.annotation.Nonnull String cloudAccountId) throws ApiException {
         ApiResponse<CloudAccountInstallationStatus> localVarResp = getCloudAccountInstallationStatusWithHttpInfo(cloudProvider, cloudAccountId);
         return localVarResp.getData();
     }
@@ -1550,13 +1596,14 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;CloudAccountInstallationStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<CloudAccountInstallationStatus> getCloudAccountInstallationStatusWithHttpInfo(CloudServiceProvider cloudProvider, String cloudAccountId) throws ApiException {
+    public ApiResponse<CloudAccountInstallationStatus> getCloudAccountInstallationStatusWithHttpInfo(@javax.annotation.Nonnull CloudServiceProvider cloudProvider, @javax.annotation.Nonnull String cloudAccountId) throws ApiException {
         okhttp3.Call localVarCall = getCloudAccountInstallationStatusValidateBeforeCall(cloudProvider, cloudAccountId, null);
         Type localVarReturnType = new TypeToken<CloudAccountInstallationStatus>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1571,13 +1618,14 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getCloudAccountInstallationStatusAsync(CloudServiceProvider cloudProvider, String cloudAccountId, final ApiCallback<CloudAccountInstallationStatus> _callback) throws ApiException {
+    public okhttp3.Call getCloudAccountInstallationStatusAsync(@javax.annotation.Nonnull CloudServiceProvider cloudProvider, @javax.annotation.Nonnull String cloudAccountId, final ApiCallback<CloudAccountInstallationStatus> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getCloudAccountInstallationStatusValidateBeforeCall(cloudProvider, cloudAccountId, _callback);
         Type localVarReturnType = new TypeToken<CloudAccountInstallationStatus>(){}.getType();
@@ -1591,13 +1639,14 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getDatabaseMetadataCall(DbInfo dbInfo, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDatabaseMetadataCall(@javax.annotation.Nonnull DbInfo dbInfo, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1643,7 +1692,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDatabaseMetadataValidateBeforeCall(DbInfo dbInfo, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDatabaseMetadataValidateBeforeCall(@javax.annotation.Nonnull DbInfo dbInfo, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'dbInfo' is set
         if (dbInfo == null) {
             throw new ApiException("Missing the required parameter 'dbInfo' when calling getDatabaseMetadata(Async)");
@@ -1660,13 +1709,14 @@ public class CloudAccountsApi {
      * @return DBMetadataInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public DBMetadataInfo getDatabaseMetadata(DbInfo dbInfo) throws ApiException {
+    public DBMetadataInfo getDatabaseMetadata(@javax.annotation.Nonnull DbInfo dbInfo) throws ApiException {
         ApiResponse<DBMetadataInfo> localVarResp = getDatabaseMetadataWithHttpInfo(dbInfo);
         return localVarResp.getData();
     }
@@ -1678,13 +1728,14 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;DBMetadataInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<DBMetadataInfo> getDatabaseMetadataWithHttpInfo(DbInfo dbInfo) throws ApiException {
+    public ApiResponse<DBMetadataInfo> getDatabaseMetadataWithHttpInfo(@javax.annotation.Nonnull DbInfo dbInfo) throws ApiException {
         okhttp3.Call localVarCall = getDatabaseMetadataValidateBeforeCall(dbInfo, null);
         Type localVarReturnType = new TypeToken<DBMetadataInfo>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1698,13 +1749,14 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getDatabaseMetadataAsync(DbInfo dbInfo, final ApiCallback<DBMetadataInfo> _callback) throws ApiException {
+    public okhttp3.Call getDatabaseMetadataAsync(@javax.annotation.Nonnull DbInfo dbInfo, final ApiCallback<DBMetadataInfo> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getDatabaseMetadataValidateBeforeCall(dbInfo, _callback);
         Type localVarReturnType = new TypeToken<DBMetadataInfo>(){}.getType();
@@ -1718,13 +1770,14 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getRefreshTokenExpiryCall(String providerId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getRefreshTokenExpiryCall(@javax.annotation.Nonnull String providerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1770,7 +1823,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getRefreshTokenExpiryValidateBeforeCall(String providerId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getRefreshTokenExpiryValidateBeforeCall(@javax.annotation.Nonnull String providerId, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'providerId' is set
         if (providerId == null) {
             throw new ApiException("Missing the required parameter 'providerId' when calling getRefreshTokenExpiry(Async)");
@@ -1787,13 +1840,14 @@ public class CloudAccountsApi {
      * @return TokenExpiryInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public TokenExpiryInfo getRefreshTokenExpiry(String providerId) throws ApiException {
+    public TokenExpiryInfo getRefreshTokenExpiry(@javax.annotation.Nonnull String providerId) throws ApiException {
         ApiResponse<TokenExpiryInfo> localVarResp = getRefreshTokenExpiryWithHttpInfo(providerId);
         return localVarResp.getData();
     }
@@ -1805,13 +1859,14 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;TokenExpiryInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<TokenExpiryInfo> getRefreshTokenExpiryWithHttpInfo(String providerId) throws ApiException {
+    public ApiResponse<TokenExpiryInfo> getRefreshTokenExpiryWithHttpInfo(@javax.annotation.Nonnull String providerId) throws ApiException {
         okhttp3.Call localVarCall = getRefreshTokenExpiryValidateBeforeCall(providerId, null);
         Type localVarReturnType = new TypeToken<TokenExpiryInfo>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -1825,13 +1880,14 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getRefreshTokenExpiryAsync(String providerId, final ApiCallback<TokenExpiryInfo> _callback) throws ApiException {
+    public okhttp3.Call getRefreshTokenExpiryAsync(@javax.annotation.Nonnull String providerId, final ApiCallback<TokenExpiryInfo> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getRefreshTokenExpiryValidateBeforeCall(providerId, _callback);
         Type localVarReturnType = new TypeToken<TokenExpiryInfo>(){}.getType();
@@ -1844,7 +1900,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1906,7 +1963,8 @@ public class CloudAccountsApi {
      * @return List&lt;LinkedAccounts&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1923,7 +1981,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;List&lt;LinkedAccounts&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1942,7 +2001,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1963,7 +2023,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -1972,7 +2033,7 @@ public class CloudAccountsApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call removeAccountsCall(List<String> accountIds, ServiceProvider serviceProvider, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call removeAccountsCall(@javax.annotation.Nonnull List<String> accountIds, @javax.annotation.Nonnull ServiceProvider serviceProvider, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2025,7 +2086,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call removeAccountsValidateBeforeCall(List<String> accountIds, ServiceProvider serviceProvider, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call removeAccountsValidateBeforeCall(@javax.annotation.Nonnull List<String> accountIds, @javax.annotation.Nonnull ServiceProvider serviceProvider, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'accountIds' is set
         if (accountIds == null) {
             throw new ApiException("Missing the required parameter 'accountIds' when calling removeAccounts(Async)");
@@ -2047,7 +2108,8 @@ public class CloudAccountsApi {
      * @param serviceProvider  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2056,7 +2118,7 @@ public class CloudAccountsApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public void removeAccounts(List<String> accountIds, ServiceProvider serviceProvider) throws ApiException {
+    public void removeAccounts(@javax.annotation.Nonnull List<String> accountIds, @javax.annotation.Nonnull ServiceProvider serviceProvider) throws ApiException {
         removeAccountsWithHttpInfo(accountIds, serviceProvider);
     }
 
@@ -2068,7 +2130,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2077,7 +2140,7 @@ public class CloudAccountsApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<Void> removeAccountsWithHttpInfo(List<String> accountIds, ServiceProvider serviceProvider) throws ApiException {
+    public ApiResponse<Void> removeAccountsWithHttpInfo(@javax.annotation.Nonnull List<String> accountIds, @javax.annotation.Nonnull ServiceProvider serviceProvider) throws ApiException {
         okhttp3.Call localVarCall = removeAccountsValidateBeforeCall(accountIds, serviceProvider, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -2091,7 +2154,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2100,7 +2164,7 @@ public class CloudAccountsApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call removeAccountsAsync(List<String> accountIds, ServiceProvider serviceProvider, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call removeAccountsAsync(@javax.annotation.Nonnull List<String> accountIds, @javax.annotation.Nonnull ServiceProvider serviceProvider, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = removeAccountsValidateBeforeCall(accountIds, serviceProvider, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
@@ -2114,7 +2178,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> string </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2123,7 +2188,7 @@ public class CloudAccountsApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call removeAccountsInstructionsCall(List<String> accountIds, ServiceProvider serviceProvider, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call removeAccountsInstructionsCall(@javax.annotation.Nonnull List<String> accountIds, @javax.annotation.Nonnull ServiceProvider serviceProvider, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2176,7 +2241,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call removeAccountsInstructionsValidateBeforeCall(List<String> accountIds, ServiceProvider serviceProvider, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call removeAccountsInstructionsValidateBeforeCall(@javax.annotation.Nonnull List<String> accountIds, @javax.annotation.Nonnull ServiceProvider serviceProvider, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'accountIds' is set
         if (accountIds == null) {
             throw new ApiException("Missing the required parameter 'accountIds' when calling removeAccountsInstructions(Async)");
@@ -2199,7 +2264,8 @@ public class CloudAccountsApi {
      * @return RemoveAccountsInstructions200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> string </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2208,7 +2274,7 @@ public class CloudAccountsApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public RemoveAccountsInstructions200Response removeAccountsInstructions(List<String> accountIds, ServiceProvider serviceProvider) throws ApiException {
+    public RemoveAccountsInstructions200Response removeAccountsInstructions(@javax.annotation.Nonnull List<String> accountIds, @javax.annotation.Nonnull ServiceProvider serviceProvider) throws ApiException {
         ApiResponse<RemoveAccountsInstructions200Response> localVarResp = removeAccountsInstructionsWithHttpInfo(accountIds, serviceProvider);
         return localVarResp.getData();
     }
@@ -2221,7 +2287,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;RemoveAccountsInstructions200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> string </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2230,7 +2297,7 @@ public class CloudAccountsApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<RemoveAccountsInstructions200Response> removeAccountsInstructionsWithHttpInfo(List<String> accountIds, ServiceProvider serviceProvider) throws ApiException {
+    public ApiResponse<RemoveAccountsInstructions200Response> removeAccountsInstructionsWithHttpInfo(@javax.annotation.Nonnull List<String> accountIds, @javax.annotation.Nonnull ServiceProvider serviceProvider) throws ApiException {
         okhttp3.Call localVarCall = removeAccountsInstructionsValidateBeforeCall(accountIds, serviceProvider, null);
         Type localVarReturnType = new TypeToken<RemoveAccountsInstructions200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2245,7 +2312,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> string </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2254,7 +2322,7 @@ public class CloudAccountsApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call removeAccountsInstructionsAsync(List<String> accountIds, ServiceProvider serviceProvider, final ApiCallback<RemoveAccountsInstructions200Response> _callback) throws ApiException {
+    public okhttp3.Call removeAccountsInstructionsAsync(@javax.annotation.Nonnull List<String> accountIds, @javax.annotation.Nonnull ServiceProvider serviceProvider, final ApiCallback<RemoveAccountsInstructions200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = removeAccountsInstructionsValidateBeforeCall(accountIds, serviceProvider, _callback);
         Type localVarReturnType = new TypeToken<RemoveAccountsInstructions200Response>(){}.getType();
@@ -2267,7 +2335,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2329,7 +2398,8 @@ public class CloudAccountsApi {
      * @return ServiceAccountClientId
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2346,7 +2416,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;ServiceAccountClientId&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2365,7 +2436,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2384,7 +2456,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2446,7 +2519,8 @@ public class CloudAccountsApi {
      * @return Script
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2463,7 +2537,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;Script&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2482,7 +2557,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2502,13 +2578,14 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call submitGoogleWorkspaceAdminEmailCall(SubmitAdminEmailParams submitAdminEmailParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call submitGoogleWorkspaceAdminEmailCall(@javax.annotation.Nonnull SubmitAdminEmailParams submitAdminEmailParams, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2554,7 +2631,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call submitGoogleWorkspaceAdminEmailValidateBeforeCall(SubmitAdminEmailParams submitAdminEmailParams, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call submitGoogleWorkspaceAdminEmailValidateBeforeCall(@javax.annotation.Nonnull SubmitAdminEmailParams submitAdminEmailParams, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'submitAdminEmailParams' is set
         if (submitAdminEmailParams == null) {
             throw new ApiException("Missing the required parameter 'submitAdminEmailParams' when calling submitGoogleWorkspaceAdminEmail(Async)");
@@ -2571,13 +2648,14 @@ public class CloudAccountsApi {
      * @return ServiceAccountInstallationStatus
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ServiceAccountInstallationStatus submitGoogleWorkspaceAdminEmail(SubmitAdminEmailParams submitAdminEmailParams) throws ApiException {
+    public ServiceAccountInstallationStatus submitGoogleWorkspaceAdminEmail(@javax.annotation.Nonnull SubmitAdminEmailParams submitAdminEmailParams) throws ApiException {
         ApiResponse<ServiceAccountInstallationStatus> localVarResp = submitGoogleWorkspaceAdminEmailWithHttpInfo(submitAdminEmailParams);
         return localVarResp.getData();
     }
@@ -2589,13 +2667,14 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;ServiceAccountInstallationStatus&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ServiceAccountInstallationStatus> submitGoogleWorkspaceAdminEmailWithHttpInfo(SubmitAdminEmailParams submitAdminEmailParams) throws ApiException {
+    public ApiResponse<ServiceAccountInstallationStatus> submitGoogleWorkspaceAdminEmailWithHttpInfo(@javax.annotation.Nonnull SubmitAdminEmailParams submitAdminEmailParams) throws ApiException {
         okhttp3.Call localVarCall = submitGoogleWorkspaceAdminEmailValidateBeforeCall(submitAdminEmailParams, null);
         Type localVarReturnType = new TypeToken<ServiceAccountInstallationStatus>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2609,13 +2688,14 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call submitGoogleWorkspaceAdminEmailAsync(SubmitAdminEmailParams submitAdminEmailParams, final ApiCallback<ServiceAccountInstallationStatus> _callback) throws ApiException {
+    public okhttp3.Call submitGoogleWorkspaceAdminEmailAsync(@javax.annotation.Nonnull SubmitAdminEmailParams submitAdminEmailParams, final ApiCallback<ServiceAccountInstallationStatus> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = submitGoogleWorkspaceAdminEmailValidateBeforeCall(submitAdminEmailParams, _callback);
         Type localVarReturnType = new TypeToken<ServiceAccountInstallationStatus>(){}.getType();
@@ -2629,13 +2709,14 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call submitOffice365TenantInfoCall(TenantInfo tenantInfo, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call submitOffice365TenantInfoCall(@javax.annotation.Nonnull TenantInfo tenantInfo, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2681,7 +2762,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call submitOffice365TenantInfoValidateBeforeCall(TenantInfo tenantInfo, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call submitOffice365TenantInfoValidateBeforeCall(@javax.annotation.Nonnull TenantInfo tenantInfo, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'tenantInfo' is set
         if (tenantInfo == null) {
             throw new ApiException("Missing the required parameter 'tenantInfo' when calling submitOffice365TenantInfo(Async)");
@@ -2698,13 +2779,14 @@ public class CloudAccountsApi {
      * @return Office365TenantInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public Office365TenantInfo submitOffice365TenantInfo(TenantInfo tenantInfo) throws ApiException {
+    public Office365TenantInfo submitOffice365TenantInfo(@javax.annotation.Nonnull TenantInfo tenantInfo) throws ApiException {
         ApiResponse<Office365TenantInfo> localVarResp = submitOffice365TenantInfoWithHttpInfo(tenantInfo);
         return localVarResp.getData();
     }
@@ -2716,13 +2798,14 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;Office365TenantInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<Office365TenantInfo> submitOffice365TenantInfoWithHttpInfo(TenantInfo tenantInfo) throws ApiException {
+    public ApiResponse<Office365TenantInfo> submitOffice365TenantInfoWithHttpInfo(@javax.annotation.Nonnull TenantInfo tenantInfo) throws ApiException {
         okhttp3.Call localVarCall = submitOffice365TenantInfoValidateBeforeCall(tenantInfo, null);
         Type localVarReturnType = new TypeToken<Office365TenantInfo>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2736,13 +2819,14 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call submitOffice365TenantInfoAsync(TenantInfo tenantInfo, final ApiCallback<Office365TenantInfo> _callback) throws ApiException {
+    public okhttp3.Call submitOffice365TenantInfoAsync(@javax.annotation.Nonnull TenantInfo tenantInfo, final ApiCallback<Office365TenantInfo> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = submitOffice365TenantInfoValidateBeforeCall(tenantInfo, _callback);
         Type localVarReturnType = new TypeToken<Office365TenantInfo>(){}.getType();
@@ -2756,7 +2840,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2765,7 +2850,7 @@ public class CloudAccountsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call submitSalesforceAuthCodeCall(AuthCode authCode, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call submitSalesforceAuthCodeCall(@javax.annotation.Nonnull AuthCode authCode, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2811,7 +2896,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call submitSalesforceAuthCodeValidateBeforeCall(AuthCode authCode, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call submitSalesforceAuthCodeValidateBeforeCall(@javax.annotation.Nonnull AuthCode authCode, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'authCode' is set
         if (authCode == null) {
             throw new ApiException("Missing the required parameter 'authCode' when calling submitSalesforceAuthCode(Async)");
@@ -2827,7 +2912,8 @@ public class CloudAccountsApi {
      * @param authCode  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2836,7 +2922,7 @@ public class CloudAccountsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public void submitSalesforceAuthCode(AuthCode authCode) throws ApiException {
+    public void submitSalesforceAuthCode(@javax.annotation.Nonnull AuthCode authCode) throws ApiException {
         submitSalesforceAuthCodeWithHttpInfo(authCode);
     }
 
@@ -2847,7 +2933,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2856,7 +2943,7 @@ public class CloudAccountsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> submitSalesforceAuthCodeWithHttpInfo(AuthCode authCode) throws ApiException {
+    public ApiResponse<Void> submitSalesforceAuthCodeWithHttpInfo(@javax.annotation.Nonnull AuthCode authCode) throws ApiException {
         okhttp3.Call localVarCall = submitSalesforceAuthCodeValidateBeforeCall(authCode, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -2869,7 +2956,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -2878,7 +2966,7 @@ public class CloudAccountsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call submitSalesforceAuthCodeAsync(AuthCode authCode, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call submitSalesforceAuthCodeAsync(@javax.annotation.Nonnull AuthCode authCode, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = submitSalesforceAuthCodeValidateBeforeCall(authCode, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);
@@ -2891,13 +2979,14 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call submitSlackAuthCodeCall(SubmitAuthCode submitAuthCode, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call submitSlackAuthCodeCall(@javax.annotation.Nonnull SubmitAuthCode submitAuthCode, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2943,7 +3032,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call submitSlackAuthCodeValidateBeforeCall(SubmitAuthCode submitAuthCode, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call submitSlackAuthCodeValidateBeforeCall(@javax.annotation.Nonnull SubmitAuthCode submitAuthCode, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'submitAuthCode' is set
         if (submitAuthCode == null) {
             throw new ApiException("Missing the required parameter 'submitAuthCode' when calling submitSlackAuthCode(Async)");
@@ -2960,13 +3049,14 @@ public class CloudAccountsApi {
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public Object submitSlackAuthCode(SubmitAuthCode submitAuthCode) throws ApiException {
+    public Object submitSlackAuthCode(@javax.annotation.Nonnull SubmitAuthCode submitAuthCode) throws ApiException {
         ApiResponse<Object> localVarResp = submitSlackAuthCodeWithHttpInfo(submitAuthCode);
         return localVarResp.getData();
     }
@@ -2978,13 +3068,14 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<Object> submitSlackAuthCodeWithHttpInfo(SubmitAuthCode submitAuthCode) throws ApiException {
+    public ApiResponse<Object> submitSlackAuthCodeWithHttpInfo(@javax.annotation.Nonnull SubmitAuthCode submitAuthCode) throws ApiException {
         okhttp3.Call localVarCall = submitSlackAuthCodeValidateBeforeCall(submitAuthCode, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2998,13 +3089,14 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call submitSlackAuthCodeAsync(SubmitAuthCode submitAuthCode, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call submitSlackAuthCodeAsync(@javax.annotation.Nonnull SubmitAuthCode submitAuthCode, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = submitSlackAuthCodeValidateBeforeCall(submitAuthCode, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -3018,7 +3110,8 @@ public class CloudAccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -3027,7 +3120,7 @@ public class CloudAccountsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call submitSnowflakeAuthCodeCall(AuthInfo authInfo, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call submitSnowflakeAuthCodeCall(@javax.annotation.Nonnull AuthInfo authInfo, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3073,7 +3166,7 @@ public class CloudAccountsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call submitSnowflakeAuthCodeValidateBeforeCall(AuthInfo authInfo, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call submitSnowflakeAuthCodeValidateBeforeCall(@javax.annotation.Nonnull AuthInfo authInfo, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'authInfo' is set
         if (authInfo == null) {
             throw new ApiException("Missing the required parameter 'authInfo' when calling submitSnowflakeAuthCode(Async)");
@@ -3089,7 +3182,8 @@ public class CloudAccountsApi {
      * @param authInfo  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -3098,7 +3192,7 @@ public class CloudAccountsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public void submitSnowflakeAuthCode(AuthInfo authInfo) throws ApiException {
+    public void submitSnowflakeAuthCode(@javax.annotation.Nonnull AuthInfo authInfo) throws ApiException {
         submitSnowflakeAuthCodeWithHttpInfo(authInfo);
     }
 
@@ -3109,7 +3203,8 @@ public class CloudAccountsApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -3118,7 +3213,7 @@ public class CloudAccountsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> submitSnowflakeAuthCodeWithHttpInfo(AuthInfo authInfo) throws ApiException {
+    public ApiResponse<Void> submitSnowflakeAuthCodeWithHttpInfo(@javax.annotation.Nonnull AuthInfo authInfo) throws ApiException {
         okhttp3.Call localVarCall = submitSnowflakeAuthCodeValidateBeforeCall(authInfo, null);
         return localVarApiClient.execute(localVarCall);
     }
@@ -3131,7 +3226,8 @@ public class CloudAccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * Access-Control-Allow-Origin -  <br>  * Access-Control-Allow-Methods -  <br>  * Access-Control-Allow-Headers -  <br>  </td></tr>
@@ -3140,7 +3236,7 @@ public class CloudAccountsApi {
         <tr><td> 503 </td><td> Service Unavailable </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call submitSnowflakeAuthCodeAsync(AuthInfo authInfo, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call submitSnowflakeAuthCodeAsync(@javax.annotation.Nonnull AuthInfo authInfo, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = submitSnowflakeAuthCodeValidateBeforeCall(authInfo, _callback);
         localVarApiClient.executeAsync(localVarCall, _callback);

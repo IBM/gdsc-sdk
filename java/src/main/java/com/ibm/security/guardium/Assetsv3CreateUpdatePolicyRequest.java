@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -38,65 +39,67 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Assetsv3CreateUpdatePolicyRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Assetsv3CreateUpdatePolicyRequest {
   public static final String SERIALIZED_NAME_OPERATION = "operation";
   @SerializedName(SERIALIZED_NAME_OPERATION)
+  @javax.annotation.Nullable
   private Integer operation;
 
   public static final String SERIALIZED_NAME_POLICY = "policy";
   @SerializedName(SERIALIZED_NAME_POLICY)
+  @javax.annotation.Nullable
   private Assetsv3PolicyUpdate policy;
 
   public Assetsv3CreateUpdatePolicyRequest() {
   }
 
-  public Assetsv3CreateUpdatePolicyRequest operation(Integer operation) {
+  public Assetsv3CreateUpdatePolicyRequest operation(@javax.annotation.Nullable Integer operation) {
     this.operation = operation;
     return this;
   }
 
-   /**
+  /**
    * Operation to perform on the policy - Create,Update,Clone.
    * @return operation
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getOperation() {
     return operation;
   }
 
-  public void setOperation(Integer operation) {
+  public void setOperation(@javax.annotation.Nullable Integer operation) {
     this.operation = operation;
   }
 
 
-  public Assetsv3CreateUpdatePolicyRequest policy(Assetsv3PolicyUpdate policy) {
+  public Assetsv3CreateUpdatePolicyRequest policy(@javax.annotation.Nullable Assetsv3PolicyUpdate policy) {
     this.policy = policy;
     return this;
   }
 
-   /**
+  /**
    * Get policy
    * @return policy
-  **/
+   */
   @javax.annotation.Nullable
   public Assetsv3PolicyUpdate getPolicy() {
     return policy;
   }
 
-  public void setPolicy(Assetsv3PolicyUpdate policy) {
+  public void setPolicy(@javax.annotation.Nullable Assetsv3PolicyUpdate policy) {
     this.policy = policy;
   }
 
@@ -147,24 +150,22 @@ public class Assetsv3CreateUpdatePolicyRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("operation");
-    openapiFields.add("policy");
+    openapiFields = new HashSet<String>(Arrays.asList("operation", "policy"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Assetsv3CreateUpdatePolicyRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Assetsv3CreateUpdatePolicyRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Assetsv3CreateUpdatePolicyRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Assetsv3CreateUpdatePolicyRequest is not found in the empty JSON string", Assetsv3CreateUpdatePolicyRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Assetsv3CreateUpdatePolicyRequest is not found in the empty JSON string", Assetsv3CreateUpdatePolicyRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,7 +173,7 @@ public class Assetsv3CreateUpdatePolicyRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Assetsv3CreateUpdatePolicyRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Assetsv3CreateUpdatePolicyRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Assetsv3CreateUpdatePolicyRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -211,22 +212,22 @@ public class Assetsv3CreateUpdatePolicyRequest {
     }
   }
 
- /**
-  * Create an instance of Assetsv3CreateUpdatePolicyRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Assetsv3CreateUpdatePolicyRequest
-  * @throws IOException if the JSON string is invalid with respect to Assetsv3CreateUpdatePolicyRequest
-  */
+  /**
+   * Create an instance of Assetsv3CreateUpdatePolicyRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Assetsv3CreateUpdatePolicyRequest
+   * @throws IOException if the JSON string is invalid with respect to Assetsv3CreateUpdatePolicyRequest
+   */
   public static Assetsv3CreateUpdatePolicyRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Assetsv3CreateUpdatePolicyRequest.class);
   }
 
- /**
-  * Convert an instance of Assetsv3CreateUpdatePolicyRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Assetsv3CreateUpdatePolicyRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

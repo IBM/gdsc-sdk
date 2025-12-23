@@ -5,11 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**action_if_type** | [**Reportsv3VariantRuleCondition**](Reportsv3VariantRuleCondition.md) |  | [optional] 
+**action_if_type** | [**Reportsv3VariantRuleCondition**](Reportsv3VariantRuleCondition.md) |  | [optional] [default to Reportsv3VariantRuleCondition.UNDEFINED_VARIANT_ACTION_IF]
 **delimiter** | **str** |  | [optional] 
 **extract_value** | **str** |  | [optional] 
 **matcher** | **str** |  | [optional] 
-**type** | [**Reportsv3VariantRuleType**](Reportsv3VariantRuleType.md) |  | [optional] 
+**type** | [**Reportsv3VariantRuleType**](Reportsv3VariantRuleType.md) |  | [optional] [default to Reportsv3VariantRuleType.UNDEFINED_VARIANT_RULE_TYPE]
 
 ## Example
 

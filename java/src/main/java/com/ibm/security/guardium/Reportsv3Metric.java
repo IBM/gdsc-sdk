@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,157 +41,163 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * Reportsv3Metric
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Reportsv3Metric {
   public static final String SERIALIZED_NAME_COLUMN = "column";
   @SerializedName(SERIALIZED_NAME_COLUMN)
+  @javax.annotation.Nullable
   private Reportsv3MetricsColumn column;
 
   public static final String SERIALIZED_NAME_MEASURE_ID = "measure_id";
   @SerializedName(SERIALIZED_NAME_MEASURE_ID)
+  @javax.annotation.Nullable
   private Integer measureId;
 
   public static final String SERIALIZED_NAME_MEASURE_TYPE = "measure_type";
   @SerializedName(SERIALIZED_NAME_MEASURE_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3MeasureType measureType = Reportsv3MeasureType.SNAPSHOT;
 
   public static final String SERIALIZED_NAME_METRIC_ID = "metric_id";
   @SerializedName(SERIALIZED_NAME_METRIC_ID)
+  @javax.annotation.Nullable
   private Integer metricId;
 
   public static final String SERIALIZED_NAME_METRIC_TYPE = "metric_type";
   @SerializedName(SERIALIZED_NAME_METRIC_TYPE)
+  @javax.annotation.Nullable
   private Reportsv3MetricType metricType = Reportsv3MetricType.PERCENTAGE;
 
   public static final String SERIALIZED_NAME_REPORT_ID = "report_id";
   @SerializedName(SERIALIZED_NAME_REPORT_ID)
+  @javax.annotation.Nullable
   private String reportId;
 
   public Reportsv3Metric() {
   }
 
-  public Reportsv3Metric column(Reportsv3MetricsColumn column) {
+  public Reportsv3Metric column(@javax.annotation.Nullable Reportsv3MetricsColumn column) {
     this.column = column;
     return this;
   }
 
-   /**
+  /**
    * Get column
    * @return column
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3MetricsColumn getColumn() {
     return column;
   }
 
-  public void setColumn(Reportsv3MetricsColumn column) {
+  public void setColumn(@javax.annotation.Nullable Reportsv3MetricsColumn column) {
     this.column = column;
   }
 
 
-  public Reportsv3Metric measureId(Integer measureId) {
+  public Reportsv3Metric measureId(@javax.annotation.Nullable Integer measureId) {
     this.measureId = measureId;
     return this;
   }
 
-   /**
+  /**
    * Get measureId
    * @return measureId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getMeasureId() {
     return measureId;
   }
 
-  public void setMeasureId(Integer measureId) {
+  public void setMeasureId(@javax.annotation.Nullable Integer measureId) {
     this.measureId = measureId;
   }
 
 
-  public Reportsv3Metric measureType(Reportsv3MeasureType measureType) {
+  public Reportsv3Metric measureType(@javax.annotation.Nullable Reportsv3MeasureType measureType) {
     this.measureType = measureType;
     return this;
   }
 
-   /**
+  /**
    * Get measureType
    * @return measureType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3MeasureType getMeasureType() {
     return measureType;
   }
 
-  public void setMeasureType(Reportsv3MeasureType measureType) {
+  public void setMeasureType(@javax.annotation.Nullable Reportsv3MeasureType measureType) {
     this.measureType = measureType;
   }
 
 
-  public Reportsv3Metric metricId(Integer metricId) {
+  public Reportsv3Metric metricId(@javax.annotation.Nullable Integer metricId) {
     this.metricId = metricId;
     return this;
   }
 
-   /**
+  /**
    * Get metricId
    * @return metricId
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getMetricId() {
     return metricId;
   }
 
-  public void setMetricId(Integer metricId) {
+  public void setMetricId(@javax.annotation.Nullable Integer metricId) {
     this.metricId = metricId;
   }
 
 
-  public Reportsv3Metric metricType(Reportsv3MetricType metricType) {
+  public Reportsv3Metric metricType(@javax.annotation.Nullable Reportsv3MetricType metricType) {
     this.metricType = metricType;
     return this;
   }
 
-   /**
+  /**
    * Get metricType
    * @return metricType
-  **/
+   */
   @javax.annotation.Nullable
   public Reportsv3MetricType getMetricType() {
     return metricType;
   }
 
-  public void setMetricType(Reportsv3MetricType metricType) {
+  public void setMetricType(@javax.annotation.Nullable Reportsv3MetricType metricType) {
     this.metricType = metricType;
   }
 
 
-  public Reportsv3Metric reportId(String reportId) {
+  public Reportsv3Metric reportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
     return this;
   }
 
-   /**
+  /**
    * Get reportId
    * @return reportId
-  **/
+   */
   @javax.annotation.Nullable
   public String getReportId() {
     return reportId;
   }
 
-  public void setReportId(String reportId) {
+  public void setReportId(@javax.annotation.Nullable String reportId) {
     this.reportId = reportId;
   }
 
@@ -249,28 +256,22 @@ public class Reportsv3Metric {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("column");
-    openapiFields.add("measure_id");
-    openapiFields.add("measure_type");
-    openapiFields.add("metric_id");
-    openapiFields.add("metric_type");
-    openapiFields.add("report_id");
+    openapiFields = new HashSet<String>(Arrays.asList("column", "measure_id", "measure_type", "metric_id", "metric_type", "report_id"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Reportsv3Metric
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Reportsv3Metric
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Reportsv3Metric.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Reportsv3Metric is not found in the empty JSON string", Reportsv3Metric.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Reportsv3Metric is not found in the empty JSON string", Reportsv3Metric.openapiRequiredFields.toString()));
         }
       }
 
@@ -278,7 +279,7 @@ public class Reportsv3Metric {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Reportsv3Metric.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Reportsv3Metric` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Reportsv3Metric` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -295,7 +296,7 @@ public class Reportsv3Metric {
         Reportsv3MetricType.validateJsonElement(jsonObj.get("metric_type"));
       }
       if ((jsonObj.get("report_id") != null && !jsonObj.get("report_id").isJsonNull()) && !jsonObj.get("report_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
+        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `report_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("report_id").toString()));
       }
   }
 
@@ -328,22 +329,22 @@ public class Reportsv3Metric {
     }
   }
 
- /**
-  * Create an instance of Reportsv3Metric given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Reportsv3Metric
-  * @throws IOException if the JSON string is invalid with respect to Reportsv3Metric
-  */
+  /**
+   * Create an instance of Reportsv3Metric given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Reportsv3Metric
+   * @throws IOException if the JSON string is invalid with respect to Reportsv3Metric
+   */
   public static Reportsv3Metric fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Reportsv3Metric.class);
   }
 
- /**
-  * Convert an instance of Reportsv3Metric to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Reportsv3Metric to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

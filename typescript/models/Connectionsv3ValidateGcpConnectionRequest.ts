@@ -21,6 +21,8 @@ export class Connectionsv3ValidateGcpConnectionRequest {
 
     static readonly discriminator: string | undefined = undefined;
 
+    static readonly mapping: {[index: string]: string} | undefined = undefined;
+
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
             "name": "clientEmail",
@@ -60,4 +62,3 @@ export class Connectionsv3ValidateGcpConnectionRequest {
     public constructor() {
     }
 }
-

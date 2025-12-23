@@ -16,6 +16,6 @@ import { HttpFile } from '../http/http';
 * This defines STAP operation.   - STAP_REINITIALIZE_BUFFER: STAP operation to reinitialize buffer.  - STAP_CONSOLE_MESSAGE: STAP operation to run a console command.
 */
 export enum Snifassistv3StapOperation {
-    ReinitializeBuffer = 'STAP_REINITIALIZE_BUFFER',
-    ConsoleMessage = 'STAP_CONSOLE_MESSAGE'
+    StapReinitializeBuffer = 'STAP_REINITIALIZE_BUFFER',
+    StapConsoleMessage = 'STAP_CONSOLE_MESSAGE'
 }

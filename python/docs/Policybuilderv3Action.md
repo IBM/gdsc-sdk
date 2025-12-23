@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **order** | **int** | Order of the action being used in the rules. | [optional] 
 **parameters** | [**List[Policybuilderv3ActionParameter]**](Policybuilderv3ActionParameter.md) | Action parameters. | [optional] 
 **qr_defintion_id** | **int** | Query rewrite definition id. | [optional] 
-**type** | [**Policybuilderv3ActionType**](Policybuilderv3ActionType.md) |  | [optional] 
+**type** | [**Policybuilderv3ActionType**](Policybuilderv3ActionType.md) |  | [optional] [default to Policybuilderv3ActionType.UNDEFINED_ACTIONTYPE]
 **ui_label** | **str** | Ui label for the action. | [optional] 
 
 ## Example

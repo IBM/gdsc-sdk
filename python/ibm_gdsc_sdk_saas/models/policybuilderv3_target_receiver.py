@@ -29,7 +29,7 @@ class Policybuilderv3TargetReceiver(BaseModel):
     """ # noqa: E501
     integration_id: Optional[StrictStr] = Field(default=None, description="Integration id for policy builder UI to display integration name.")
     template_id: Optional[StrictStr] = Field(default=None, description="Template name.")
-    type: Optional[Policybuilderv3RecipientType] = None
+    type: Optional[Policybuilderv3RecipientType] = Policybuilderv3RecipientType.UNDEFINED_RECTYPE
     value: Optional[StrictStr] = Field(default=None, description="Receiver value.")
     __properties: ClassVar[List[str]] = ["integration_id", "template_id", "type", "value"]
 
@@ -86,7 +86,7 @@ class Policybuilderv3TargetReceiver(BaseModel):
         _obj = cls.model_validate({
             "integration_id": obj.get("integration_id"),
             "template_id": obj.get("template_id"),
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Policybuilderv3RecipientType.UNDEFINED_RECTYPE,
             "value": obj.get("value")
         })
         return _obj

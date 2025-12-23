@@ -29,7 +29,7 @@ class Snifassistv3Feedback(BaseModel):
     """ # noqa: E501
     batch_num: Optional[StrictStr] = Field(default=None, description="Specify batch number uniquely associated with a policy or group update message.")
     message: Optional[StrictStr] = Field(default=None, description="Description of the status.")
-    status: Optional[Snifassistv3FeedbackStatus] = None
+    status: Optional[Snifassistv3FeedbackStatus] = Snifassistv3FeedbackStatus.SUCCEEDED
     __properties: ClassVar[List[str]] = ["batch_num", "message", "status"]
 
     model_config = ConfigDict(
@@ -85,7 +85,7 @@ class Snifassistv3Feedback(BaseModel):
         _obj = cls.model_validate({
             "batch_num": obj.get("batch_num"),
             "message": obj.get("message"),
-            "status": obj.get("status")
+            "status": obj.get("status") if obj.get("status") is not None else Snifassistv3FeedbackStatus.SUCCEEDED
         })
         return _obj
 

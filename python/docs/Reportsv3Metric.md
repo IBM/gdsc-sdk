@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **column** | [**Reportsv3MetricsColumn**](Reportsv3MetricsColumn.md) |  | [optional] 
 **measure_id** | **int** |  | [optional] 
-**measure_type** | [**Reportsv3MeasureType**](Reportsv3MeasureType.md) |  | [optional] 
+**measure_type** | [**Reportsv3MeasureType**](Reportsv3MeasureType.md) |  | [optional] [default to Reportsv3MeasureType.SNAPSHOT]
 **metric_id** | **int** |  | [optional] 
-**metric_type** | [**Reportsv3MetricType**](Reportsv3MetricType.md) |  | [optional] 
+**metric_type** | [**Reportsv3MetricType**](Reportsv3MetricType.md) |  | [optional] [default to Reportsv3MetricType.PERCENTAGE]
 **report_id** | **str** |  | [optional] 
 
 ## Example

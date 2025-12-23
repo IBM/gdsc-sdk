@@ -72,9 +72,9 @@ class Streamsv3ListAWSStreamsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in streams_by_region (dict)
         _field_dict = {}
         if self.streams_by_region:
-            for _key in self.streams_by_region:
-                if self.streams_by_region[_key]:
-                    _field_dict[_key] = self.streams_by_region[_key].to_dict()
+            for _key_streams_by_region in self.streams_by_region:
+                if self.streams_by_region[_key_streams_by_region]:
+                    _field_dict[_key_streams_by_region] = self.streams_by_region[_key_streams_by_region].to_dict()
             _dict['streams_by_region'] = _field_dict
         return _dict
 

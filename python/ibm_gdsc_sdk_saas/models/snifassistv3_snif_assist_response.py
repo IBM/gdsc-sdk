@@ -32,9 +32,9 @@ class Snifassistv3SnifAssistResponse(BaseModel):
     data: Optional[Union[StrictBytes, StrictStr]] = Field(default=None, description="Data field if any.")
     data_crc: Optional[StrictInt] = Field(default=None, description="Provide CRC value of Response Data.")
     stap_id: Optional[StrictStr] = Field(default=None, description="Provide STAP identifer.")
-    stap_operation: Optional[Snifassistv3StapOperation] = None
+    stap_operation: Optional[Snifassistv3StapOperation] = Snifassistv3StapOperation.STAP_REINITIALIZE_BUFFER
     status_code: Optional[StrictInt] = Field(default=None, description="Status code: 0 = success; 1 = failure.")
-    type: Optional[Snifassistv3SnifAssistType] = None
+    type: Optional[Snifassistv3SnifAssistType] = Snifassistv3SnifAssistType.VERSION_NOT_SUPPORTED
     __properties: ClassVar[List[str]] = ["batch_num", "data", "data_crc", "stap_id", "stap_operation", "status_code", "type"]
 
     model_config = ConfigDict(
@@ -92,9 +92,9 @@ class Snifassistv3SnifAssistResponse(BaseModel):
             "data": obj.get("data"),
             "data_crc": obj.get("data_crc"),
             "stap_id": obj.get("stap_id"),
-            "stap_operation": obj.get("stap_operation"),
+            "stap_operation": obj.get("stap_operation") if obj.get("stap_operation") is not None else Snifassistv3StapOperation.STAP_REINITIALIZE_BUFFER,
             "status_code": obj.get("status_code"),
-            "type": obj.get("type")
+            "type": obj.get("type") if obj.get("type") is not None else Snifassistv3SnifAssistType.VERSION_NOT_SUPPORTED
         })
         return _obj
 

@@ -38,7 +38,7 @@ class Reportsv3Header(BaseModel):
     header_name: Optional[StrictStr] = Field(default=None, description="The header name.")
     is_recommended: Optional[StrictBool] = Field(default=None, description="If the header is recommended.")
     table_name: Optional[StrictStr] = Field(default=None, description="Table name.")
-    type: Optional[Reportsv3HeaderType] = None
+    type: Optional[Reportsv3HeaderType] = Reportsv3HeaderType.UNDEFINED_TYPE
     type_length: Optional[StrictInt] = Field(default=None, description="Header type length.")
     __properties: ClassVar[List[str]] = ["can_be_used_in_chart", "field_name", "group_type_id", "header_category", "header_description", "header_id", "header_name", "is_recommended", "table_name", "type", "type_length"]
 
@@ -108,7 +108,7 @@ class Reportsv3Header(BaseModel):
             "header_name": obj.get("header_name"),
             "is_recommended": obj.get("is_recommended"),
             "table_name": obj.get("table_name"),
-            "type": obj.get("type"),
+            "type": obj.get("type") if obj.get("type") is not None else Reportsv3HeaderType.UNDEFINED_TYPE,
             "type_length": obj.get("type_length")
         })
         return _obj

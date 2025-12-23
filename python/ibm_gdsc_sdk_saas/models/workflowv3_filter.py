@@ -34,17 +34,17 @@ class Workflowv3Filter(BaseModel):
     assigned_to_me: Optional[StrictBool] = Field(default=None, description="Optional: Cases and tasks that are assigned to Me.")
     assigned_to_my_roles: Optional[StrictBool] = Field(default=None, description="Optional: Cases and tasks that are assigned to My Roles.")
     date_created: Optional[datetime] = Field(default=None, description="Optional: where Date Created meets criteria.")
-    date_created_operator: Optional[Workflowv3FilterOperator] = None
+    date_created_operator: Optional[Workflowv3FilterOperator] = Workflowv3FilterOperator.IGNORE
     date_due: Optional[datetime] = Field(default=None, description="Optional: where Date Due meets criteria.")
-    date_due_operator: Optional[Workflowv3FilterOperator] = None
+    date_due_operator: Optional[Workflowv3FilterOperator] = Workflowv3FilterOperator.IGNORE
     filter_columns: Optional[List[Workflowv3FilterColumn]] = None
-    priority: Optional[Workflowv3Priority] = None
-    priority_operator: Optional[Workflowv3FilterOperator] = None
+    priority: Optional[Workflowv3Priority] = Workflowv3Priority.UNDEFINED_PRIORITY
+    priority_operator: Optional[Workflowv3FilterOperator] = Workflowv3FilterOperator.IGNORE
     report_id: Optional[StrictStr] = None
     scheduled_job_id: Optional[List[StrictStr]] = None
     scheduled_task_id: Optional[List[StrictStr]] = None
-    status: Optional[Workflowv3Status] = None
-    status_operator: Optional[Workflowv3FilterOperator] = None
+    status: Optional[Workflowv3Status] = Workflowv3Status.UNDEFINED_STATUS
+    status_operator: Optional[Workflowv3FilterOperator] = Workflowv3FilterOperator.IGNORE
     tags: Optional[List[StrictStr]] = None
     __properties: ClassVar[List[str]] = ["assigned_to_me", "assigned_to_my_roles", "date_created", "date_created_operator", "date_due", "date_due_operator", "filter_columns", "priority", "priority_operator", "report_id", "scheduled_job_id", "scheduled_task_id", "status", "status_operator", "tags"]
 
@@ -90,9 +90,9 @@ class Workflowv3Filter(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in filter_columns (list)
         _items = []
         if self.filter_columns:
-            for _item in self.filter_columns:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_filter_columns in self.filter_columns:
+                if _item_filter_columns:
+                    _items.append(_item_filter_columns.to_dict())
             _dict['filter_columns'] = _items
         return _dict
 
@@ -109,17 +109,17 @@ class Workflowv3Filter(BaseModel):
             "assigned_to_me": obj.get("assigned_to_me"),
             "assigned_to_my_roles": obj.get("assigned_to_my_roles"),
             "date_created": obj.get("date_created"),
-            "date_created_operator": obj.get("date_created_operator"),
+            "date_created_operator": obj.get("date_created_operator") if obj.get("date_created_operator") is not None else Workflowv3FilterOperator.IGNORE,
             "date_due": obj.get("date_due"),
-            "date_due_operator": obj.get("date_due_operator"),
+            "date_due_operator": obj.get("date_due_operator") if obj.get("date_due_operator") is not None else Workflowv3FilterOperator.IGNORE,
             "filter_columns": [Workflowv3FilterColumn.from_dict(_item) for _item in obj["filter_columns"]] if obj.get("filter_columns") is not None else None,
-            "priority": obj.get("priority"),
-            "priority_operator": obj.get("priority_operator"),
+            "priority": obj.get("priority") if obj.get("priority") is not None else Workflowv3Priority.UNDEFINED_PRIORITY,
+            "priority_operator": obj.get("priority_operator") if obj.get("priority_operator") is not None else Workflowv3FilterOperator.IGNORE,
             "report_id": obj.get("report_id"),
             "scheduled_job_id": obj.get("scheduled_job_id"),
             "scheduled_task_id": obj.get("scheduled_task_id"),
-            "status": obj.get("status"),
-            "status_operator": obj.get("status_operator"),
+            "status": obj.get("status") if obj.get("status") is not None else Workflowv3Status.UNDEFINED_STATUS,
+            "status_operator": obj.get("status_operator") if obj.get("status_operator") is not None else Workflowv3FilterOperator.IGNORE,
             "tags": obj.get("tags")
         })
         return _obj

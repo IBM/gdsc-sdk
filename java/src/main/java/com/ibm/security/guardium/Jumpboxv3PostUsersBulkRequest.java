@@ -14,6 +14,7 @@
 package com.ibm.security.guardium;
 
 import java.util.Objects;
+import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -40,28 +41,29 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Locale;
 
 import com.ibm.security.JSON;
 
 /**
  * PostUsersBulkRequest message for POST v3/users api.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-07-03T14:42:29.671482Z[UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-22T13:02:32.844253848-08:00[America/Los_Angeles]", comments = "Generator version: 7.16.0")
 public class Jumpboxv3PostUsersBulkRequest {
   public static final String SERIALIZED_NAME_USERS = "users";
   @SerializedName(SERIALIZED_NAME_USERS)
+  @javax.annotation.Nullable
   private List<Jumpboxv3User> users = new ArrayList<>();
 
   public Jumpboxv3PostUsersBulkRequest() {
   }
 
-  public Jumpboxv3PostUsersBulkRequest users(List<Jumpboxv3User> users) {
+  public Jumpboxv3PostUsersBulkRequest users(@javax.annotation.Nullable List<Jumpboxv3User> users) {
     this.users = users;
     return this;
   }
@@ -74,16 +76,16 @@ public class Jumpboxv3PostUsersBulkRequest {
     return this;
   }
 
-   /**
+  /**
    * Array of users to be imported into Insights.
    * @return users
-  **/
+   */
   @javax.annotation.Nullable
   public List<Jumpboxv3User> getUsers() {
     return users;
   }
 
-  public void setUsers(List<Jumpboxv3User> users) {
+  public void setUsers(@javax.annotation.Nullable List<Jumpboxv3User> users) {
     this.users = users;
   }
 
@@ -132,23 +134,22 @@ public class Jumpboxv3PostUsersBulkRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("users");
+    openapiFields = new HashSet<String>(Arrays.asList("users"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3PostUsersBulkRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Jumpboxv3PostUsersBulkRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Jumpboxv3PostUsersBulkRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Jumpboxv3PostUsersBulkRequest is not found in the empty JSON string", Jumpboxv3PostUsersBulkRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in Jumpboxv3PostUsersBulkRequest is not found in the empty JSON string", Jumpboxv3PostUsersBulkRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -156,7 +157,7 @@ public class Jumpboxv3PostUsersBulkRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Jumpboxv3PostUsersBulkRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Jumpboxv3PostUsersBulkRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `Jumpboxv3PostUsersBulkRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -165,7 +166,7 @@ public class Jumpboxv3PostUsersBulkRequest {
         if (jsonArrayusers != null) {
           // ensure the json data is an array
           if (!jsonObj.get("users").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `users` to be an array in the JSON string but got `%s`", jsonObj.get("users").toString()));
+            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `users` to be an array in the JSON string but got `%s`", jsonObj.get("users").toString()));
           }
 
           // validate the optional field `users` (array)
@@ -205,22 +206,22 @@ public class Jumpboxv3PostUsersBulkRequest {
     }
   }
 
- /**
-  * Create an instance of Jumpboxv3PostUsersBulkRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Jumpboxv3PostUsersBulkRequest
-  * @throws IOException if the JSON string is invalid with respect to Jumpboxv3PostUsersBulkRequest
-  */
+  /**
+   * Create an instance of Jumpboxv3PostUsersBulkRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Jumpboxv3PostUsersBulkRequest
+   * @throws IOException if the JSON string is invalid with respect to Jumpboxv3PostUsersBulkRequest
+   */
   public static Jumpboxv3PostUsersBulkRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Jumpboxv3PostUsersBulkRequest.class);
   }
 
- /**
-  * Convert an instance of Jumpboxv3PostUsersBulkRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Jumpboxv3PostUsersBulkRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -18,22 +18,21 @@ Method | HTTP request | Description
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, FeatureFlagsServiceApi } from '';
+import type { FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverridesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .FeatureFlagsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new FeatureFlagsServiceApi(configuration);
 
-let body:.FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverridesRequest = {
-  // string | Flag name. (optional)
+const request: FeatureFlagsServiceApiFeatureFlagsServiceDeleteFeatureFlagOverridesRequest = {
+    // Flag name. (optional)
   flagName: "flag_name_example",
-  // string | Optional tenant id. (optional)
+    // Optional tenant id. (optional)
   tenantId: "tenant_id_example",
 };
 
-apiInstance.featureFlagsServiceDeleteFeatureFlagOverrides(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.featureFlagsServiceDeleteFeatureFlagOverrides(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -75,24 +74,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, FeatureFlagsServiceApi } from '';
+import type { FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverridesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .FeatureFlagsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new FeatureFlagsServiceApi(configuration);
 
-let body:.FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverridesRequest = {
-  // string | Optional tenant id. (optional)
+const request: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagOverridesRequest = {
+    // Optional tenant id. (optional)
   tenantId: "tenant_id_example",
-  // Array<string> | Optional flag names; if empty then return all flag. (optional)
+    // Optional flag names; if empty then return all flag. (optional)
   flagNames: [
     "flag_names_example",
   ],
 };
 
-apiInstance.featureFlagsServiceGetFeatureFlagOverrides(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.featureFlagsServiceGetFeatureFlagOverrides(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -134,24 +132,23 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, FeatureFlagsServiceApi } from '';
+import type { FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagsRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .FeatureFlagsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new FeatureFlagsServiceApi(configuration);
 
-let body:.FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagsRequest = {
-  // string | Tenant id. (optional)
+const request: FeatureFlagsServiceApiFeatureFlagsServiceGetFeatureFlagsRequest = {
+    // Tenant id. (optional)
   tenantId: "tenant_id_example",
-  // Array<string> | Optional flag names; if empty then return all flag. (optional)
+    // Optional flag names; if empty then return all flag. (optional)
   flagNames: [
     "flag_names_example",
   ],
 };
 
-apiInstance.featureFlagsServiceGetFeatureFlags(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.featureFlagsServiceGetFeatureFlags(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 
@@ -193,14 +190,14 @@ Name | Type | Description  | Notes
 
 
 ```typescript
-import {  } from '';
-import * as fs from 'fs';
+import { createConfiguration, FeatureFlagsServiceApi } from '';
+import type { FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesRequest } from '';
 
-const configuration = .createConfiguration();
-const apiInstance = new .FeatureFlagsServiceApi(configuration);
+const configuration = createConfiguration();
+const apiInstance = new FeatureFlagsServiceApi(configuration);
 
-let body:.FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesRequest = {
-  // Featureflagsv3UpdateFeatureFlagOverridesRequest
+const request: FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesRequest = {
+  
   featureflagsv3UpdateFeatureFlagOverridesRequest: {
     featureFlag: {
       flagName: "flagName_example",
@@ -211,9 +208,8 @@ let body:.FeatureFlagsServiceApiFeatureFlagsServiceUpdateFeatureFlagOverridesReq
   },
 };
 
-apiInstance.featureFlagsServiceUpdateFeatureFlagOverrides(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
+const data = await apiInstance.featureFlagsServiceUpdateFeatureFlagOverrides(request);
+console.log('API called successfully. Returned data:', data);
 ```
 
 

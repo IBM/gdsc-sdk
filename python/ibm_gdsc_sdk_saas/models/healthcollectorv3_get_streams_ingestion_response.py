@@ -72,9 +72,9 @@ class Healthcollectorv3GetStreamsIngestionResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in streams_ingestion (list)
         _items = []
         if self.streams_ingestion:
-            for _item in self.streams_ingestion:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_streams_ingestion in self.streams_ingestion:
+                if _item_streams_ingestion:
+                    _items.append(_item_streams_ingestion.to_dict())
             _dict['streams_ingestion'] = _items
         return _dict
 

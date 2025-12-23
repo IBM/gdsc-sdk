@@ -33,10 +33,10 @@ class Policybuilderv3GetPolicyDetailsResponse(BaseModel):
     Policy details response message.
     """ # noqa: E501
     activation_status: Optional[StrictInt] = Field(default=None, description="activation_status identifier: 1001 -> install with no issues, 1002-> installed with issues, 1003 -> not installed.")
-    control_flow: Optional[Policybuilderv3ControlFlow] = None
+    control_flow: Optional[Policybuilderv3ControlFlow] = Policybuilderv3ControlFlow.STANDARD
     installed_flag: Optional[StrictBool] = Field(default=None, description="Flag to indicate whether policy is installed or not.")
-    policy_import_issue: Optional[Policybuilderv3ImportIssue] = None
-    policy_import_state: Optional[Policybuilderv3ImportState] = None
+    policy_import_issue: Optional[Policybuilderv3ImportIssue] = Policybuilderv3ImportIssue.NO_IMPORT_ISSUE
+    policy_import_state: Optional[Policybuilderv3ImportState] = Policybuilderv3ImportState.NO_IMPORT_STATUS
     policy_info: Optional[Policybuilderv3Policy] = None
     policy_name: Optional[StrictStr] = None
     rules: Optional[List[Policybuilderv3Rule]] = Field(default=None, description="Rules contained by the policy.")
@@ -88,9 +88,9 @@ class Policybuilderv3GetPolicyDetailsResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in rules (list)
         _items = []
         if self.rules:
-            for _item in self.rules:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_rules in self.rules:
+                if _item_rules:
+                    _items.append(_item_rules.to_dict())
             _dict['rules'] = _items
         # override the default output from pydantic by calling `to_dict()` of status
         if self.status:
@@ -108,10 +108,10 @@ class Policybuilderv3GetPolicyDetailsResponse(BaseModel):
 
         _obj = cls.model_validate({
             "activation_status": obj.get("activation_status"),
-            "control_flow": obj.get("control_flow"),
+            "control_flow": obj.get("control_flow") if obj.get("control_flow") is not None else Policybuilderv3ControlFlow.STANDARD,
             "installed_flag": obj.get("installed_flag"),
-            "policy_import_issue": obj.get("policy_import_issue"),
-            "policy_import_state": obj.get("policy_import_state"),
+            "policy_import_issue": obj.get("policy_import_issue") if obj.get("policy_import_issue") is not None else Policybuilderv3ImportIssue.NO_IMPORT_ISSUE,
+            "policy_import_state": obj.get("policy_import_state") if obj.get("policy_import_state") is not None else Policybuilderv3ImportState.NO_IMPORT_STATUS,
             "policy_info": Policybuilderv3Policy.from_dict(obj["policy_info"]) if obj.get("policy_info") is not None else None,
             "policy_name": obj.get("policy_name"),
             "rules": [Policybuilderv3Rule.from_dict(_item) for _item in obj["rules"]] if obj.get("rules") is not None else None,

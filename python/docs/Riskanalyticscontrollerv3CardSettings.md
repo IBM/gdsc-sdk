@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **headers** | **List[str]** | Headers - list of headers to view the risks. | [optional] 
 **id** | **str** | Id of the settings. | [optional] 
 **name** | **str** | Name of the view - nls value in case its first time for user. | [optional] 
-**order_by** | [**Riskanalyticscontrollerv3OrderBy**](Riskanalyticscontrollerv3OrderBy.md) |  | [optional] 
+**order_by** | [**Riskanalyticscontrollerv3OrderBy**](Riskanalyticscontrollerv3OrderBy.md) |  | [optional] [default to Riskanalyticscontrollerv3OrderBy.UNDEFINED_ORDER_BY]
 **sequence_order** | **int** | Sequence  order of the view(box) of the risks. | [optional] 
 **sorted_by** | **str** | Sorted by header_id to sort the risks in the view by. | [optional] 
 
